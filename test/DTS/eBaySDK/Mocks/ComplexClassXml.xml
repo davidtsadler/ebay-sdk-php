@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="http://davidtsadler.com">
+    <integer>123</integer>
+    <string>a string</string>
+    <double>123.45</double>
+    <booleanTrue>true</booleanTrue>
+    <booleanFalse>false</booleanFalse>
+    <DateTime>2000-01-01T00:00:00.000Z</DateTime>
+    <SimpleClass xmlns="http://davidtsadler.com">
+        <integer>321</integer>
+        <string>another string</string>
+    </SimpleClass>
+    <strings>foo</strings>
+    <strings>bar</strings>
+    <integers>1</integers>
+    <integers>2</integers>
+    <integers>3</integers>
+    <integers>4</integers>
+    <integers>5</integers>
+    <foo>foo</foo>
+    <AmountClass AttributeOne="one" xmlns="http://davidtsadler.com">543.21</AmountClass>
+    <simpleClasses xmlns="http://davidtsadler.com">
+        <integer>888</integer>
+    </simpleClasses>
+    <simpleClasses xmlns="http://davidtsadler.com">
+        <integer>999</integer>
+    </simpleClasses>
+</root>

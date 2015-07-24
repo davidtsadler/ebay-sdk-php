@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="http://davidtsadler.com">
+    <integer>123</integer>
+    <string>a string</string>
+    <foo>foo</foo>
+    <double>123.45</double>
+    <booleanTrue>TRUE</booleanTrue>
+    <booleanFalse>false</booleanFalse>
+    <DateTime>2000-01-01T16:15:30.123Z</DateTime>
+    <SimpleClass xmlns="http://davidtsadler.com" IntegerAttribute="123" doubleAttribute="123.45" BooleanTrueAttribute="TRUE" booleanFalseAttribute="false" DateTimeAttribute="2000-01-01T16:15:30.123Z">
+        <integer>321</integer>
+        <string>another string</string>
+    </SimpleClass>
+    <strings>foo</strings>
+    <strings>bar</strings>
+    <integers>1</integers>
+    <integers>2</integers>
+    <integers>3</integers>
+    <integers>4</integers>
+    <integers>5</integers>
+    <simpleClasses xmlns="http://davidtsadler.com">
+        <integer>888</integer>
+    </simpleClasses>
+    <simpleClasses xmlns="http://davidtsadler.com">
+        <integer>999</integer>
+    </simpleClasses>
+    <AmountClass AttributeOne="one" ATTRIBUTEBISH="two" xmlns="http://davidtsadler.com" NonExistent="nonexistent">543.21</AmountClass>
+    <base64BinaryType>binary type</base64BinaryType>
+    <booleanType>true</booleanType>
+    <decimalType>123</decimalType>
+    <doubleType>123.45</doubleType>
+    <integerType>123</integerType>
+    <stringType>string type</stringType>
+    <tokenType>token type</tokenType>
+    <uriType>uri type</uriType>
+    <nonexistent>
+      <nonexistent>nonexistent</nonexistent>
+    </nonexistent>
+    <BISH>foo</BISH>
+    <BishBash>foo</BishBash>
+</root>

@@ -1,0 +1,13 @@
+--MIME_boundary
+Content-Type: application/xop+xml;charset=UTF-8;type="text/xml"
+Content-Transfer-Encoding: 8bit
+Content-ID: <request.xml@devbay.net>
+
+<?xml version="1.0" encoding="UTF-8"?><root xmlns="http://davidtsadler.com"><integer>123</integer><string>a string</string><double>123.45</double></root>
+--MIME_boundary
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+Content-ID: <attachment.bin@devbay.net>
+
+ABC123
+--MIME_boundary--
