@@ -25,7 +25,6 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
     /**
      * @var string Current version of the SDK
      */
-    const VERSION = '0.2.1';
 
     /**
      * Constants for the various HTTP headers required by the API.

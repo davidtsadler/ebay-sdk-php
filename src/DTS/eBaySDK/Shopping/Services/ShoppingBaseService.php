@@ -25,7 +25,6 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
     /**
      * @var string Current version of the SDK
      */
-    const VERSION = '0.5.1';
 
     /**
      * Constants for the various HTTP headers required by the API.

@@ -26,7 +26,6 @@ class MerchantDataService
     /**
      * @var string Current version of the SDK
      */
-    const VERSION = '0.2.0';
 
     /**
      * @var \DTS\eBaySDK\Parser Xml Parser.
