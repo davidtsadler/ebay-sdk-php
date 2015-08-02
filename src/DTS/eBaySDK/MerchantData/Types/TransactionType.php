@@ -86,6 +86,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\UnpaidItemType $UnpaidItem
  * @property integer $VATPercent
  * @property \DTS\eBaySDK\MerchantData\Types\VariationType $Variation
+ * @property boolean $eBayPlusTransaction
  */
 class TransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -470,6 +471,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Variation'
+        ),
+        'eBayPlusTransaction' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'eBayPlusTransaction'
         )
     );
 

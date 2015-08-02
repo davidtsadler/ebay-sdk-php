@@ -35,6 +35,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property string $CancelReasonDetails
  * @property \DTS\eBaySDK\MerchantData\Enums\CancelStatusCodeType $CancelStatus
  * @property \DTS\eBaySDK\MerchantData\Types\CheckoutStatusType $CheckoutStatus
+ * @property boolean $ContainseBayPlusTransaction
  * @property \DateTime $CreatedTime
  * @property \DTS\eBaySDK\MerchantData\Enums\TradingRoleCodeType $CreatingUserRole
  * @property string $EIASToken
@@ -145,6 +146,12 @@ class OrderType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
+        ),
+        'ContainseBayPlusTransaction' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ContainseBayPlusTransaction'
         ),
         'CreatedTime' => array(
             'type' => 'DateTime',
