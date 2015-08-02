@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\PromotionMethodCodeType $PromotionMethod
- * @property integer $StoreCategoryID
  */
 class GetPromotionRulesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,24 +30,6 @@ class GetPromotionRulesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'PromotionMethod' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionMethod'
-        ),
-        'StoreCategoryID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategoryID'
-        )
     );
 
     /**

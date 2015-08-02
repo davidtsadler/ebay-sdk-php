@@ -39,6 +39,7 @@ class NotificationEventTypeCodeType
     const C_BID_PLACED = 'BidPlaced';
     const C_BID_RECEIVED = 'BidReceived';
     const C_BULK_DATA_EXCHANGE_JOB_COMPLETED = 'BulkDataExchangeJobCompleted';
+    const C_BUYER_CANCEL_REQUESTED = 'BuyerCancelRequested';
     const C_BUYER_RESPONSE_DISPUTE = 'BuyerResponseDispute';
     const C_CHECKOUT = 'Checkout';
     const C_CHECKOUT_BUYER_REQUESTS_TOTAL = 'CheckoutBuyerRequestsTotal';

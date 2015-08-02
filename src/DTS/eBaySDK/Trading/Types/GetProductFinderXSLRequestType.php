@@ -23,6 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $FileName
+ * @property string $FileVersion
  */
 class GetProductFinderXSLRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -30,6 +32,18 @@ class GetProductFinderXSLRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'FileName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FileName'
+        ),
+        'FileVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FileVersion'
+        )
     );
 
     /**

@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\PromotionMethodCodeType $PromotionMethod
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $PromotionViewMode
  */
 class GetCrossPromotionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,24 +30,6 @@ class GetCrossPromotionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'PromotionMethod' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionMethod'
-        ),
-        'PromotionViewMode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionViewMode'
-        )
     );
 
     /**
