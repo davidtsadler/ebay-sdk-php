@@ -257,7 +257,8 @@ class BaseType
     protected function setValues($class, array $values = array())
     {
         foreach ($values as $property => $value) {
-            $this->set($class, $property, $value);
+            $actualValue = self::determineActualValueToAssign($class, $property, $value);
+            $this->set($class, $property, $actualValue);
         }
     }
 
@@ -573,6 +574,54 @@ class BaseType
             return $value->format('Y-m-d\TH:i:s.000\Z');
         } else {
             return $value;
+        }
+    }
+
+    /**
+     * Helper function when assigning values via the ctor.
+     * Determines the actual value to assign to a property.
+     */
+    private static function determineActualValueToAssign($class, $property, $value)
+    {
+        if (!array_key_exists($property, self::$properties[$class])) {
+            return $value;
+        }
+
+        $info = self::propertyInfo($class, $property);
+
+        if ($info['unbound'] && is_array($value)) {
+            $values = array();
+            foreach($value as $val) {
+                $values[] = self::actualValue($info, $class, $property, $val);
+            }
+            return $values;
+        }
+
+        return self::actualValue($info, $class, $property, $value);
+    }
+
+    /**
+     * Helper function when assigning values via the ctor.
+     */
+    private static function actualValue($info, $class, $property, $value)
+    {
+        /**
+         * Shortcut. Objects can be assigned as is.
+         */
+        if (is_object($value)) {
+            return $value;
+        }
+
+        switch ($info['type']) {
+            case 'integer':
+            case 'string':
+            case 'double':
+            case 'boolean':
+                return $value;
+            case 'DateTime':
+                return new \DateTime($value, new \DateTimeZone('UTC'));
+            default:
+                return new $info['type']($value);
         }
     }
 }
