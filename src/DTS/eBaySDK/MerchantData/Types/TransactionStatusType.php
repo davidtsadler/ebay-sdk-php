@@ -26,6 +26,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property boolean $BuyerSelectedShipping
  * @property \DTS\eBaySDK\MerchantData\Enums\CheckoutStatusCodeType $CheckoutStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\CompleteStatusCodeType $CompleteStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\DigitalStatusCodeType $DigitalStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\InquiryStatusCodeType $InquiryStatus
  * @property boolean $IntegratedMerchantCreditCardEnabled
  * @property \DateTime $LastTimeModified
@@ -58,6 +59,12 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompleteStatus'
+        ),
+        'DigitalStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalStatus'
         ),
         'InquiryStatus' => array(
             'type' => 'string',

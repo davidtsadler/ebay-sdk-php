@@ -42,12 +42,15 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedTransactionPrice
  * @property \DateTime $CreatedDate
  * @property \DTS\eBaySDK\MerchantData\Enums\DepositTypeCodeType $DepositType
+ * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $DutchAuctionBid
  * @property string $ExtendedOrderID
  * @property \DTS\eBaySDK\MerchantData\Types\ExternalTransactionType[] $ExternalTransaction
  * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackLeft
  * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackReceived
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FinalValueFee
+ * @property boolean $Gift
+ * @property \DTS\eBaySDK\MerchantData\Types\GiftSummaryType $GiftSummary
  * @property boolean $IntangibleItem
  * @property string $InventoryReservationID
  * @property \DateTime $InvoiceSentTime
@@ -208,6 +211,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DepositType'
         ),
+        'DigitalDeliverySelected' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalDeliverySelected'
+        ),
         'DutchAuctionBid' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
@@ -243,6 +252,18 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FinalValueFee'
+        ),
+        'Gift' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Gift'
+        ),
+        'GiftSummary' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\GiftSummaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GiftSummary'
         ),
         'IntangibleItem' => array(
             'type' => 'boolean',

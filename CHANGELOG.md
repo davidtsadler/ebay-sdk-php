@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### API
+
+* Support Merchant Data API version 933.
+
 ## 0.1.1 - 2015-08-05
 
 ### Feature

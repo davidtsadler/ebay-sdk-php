@@ -31,7 +31,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property boolean $AvailableForPickupDropOff
  * @property \DTS\eBaySDK\MerchantData\Types\BestOfferDetailsType $BestOfferDetails
  * @property boolean $BestOfferEnabled
- * @property boolean $BidGroupItem
  * @property \DTS\eBaySDK\MerchantData\Types\BiddingDetailsType $BiddingDetails
  * @property \DTS\eBaySDK\MerchantData\Types\BusinessSellerDetailsType $BusinessSellerDetails
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BuyItNowPrice
@@ -54,6 +53,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\MerchantData\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
+ * @property \DTS\eBaySDK\MerchantData\Types\DigitalGoodInfoType $DigitalGoodInfo
  * @property boolean $DisableBuyerRequirements
  * @property \DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType $DiscountPriceInfo
  * @property integer $DispatchTimeMax
@@ -232,12 +232,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ),
-        'BidGroupItem' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidGroupItem'
-        ),
         'BiddingDetails' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\BiddingDetailsType',
             'unbound' => false,
@@ -369,6 +363,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DescriptionReviseMode'
+        ),
+        'DigitalGoodInfo' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalGoodInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalGoodInfo'
         ),
         'DisableBuyerRequirements' => array(
             'type' => 'boolean',

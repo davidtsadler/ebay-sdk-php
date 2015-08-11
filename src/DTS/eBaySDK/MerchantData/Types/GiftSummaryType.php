@@ -23,13 +23,20 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property string $Message
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class GiftSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Message' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Message'
+        )
     );
 
     /**

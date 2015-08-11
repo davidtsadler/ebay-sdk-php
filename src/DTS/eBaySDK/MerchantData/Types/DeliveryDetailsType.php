@@ -23,13 +23,27 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType $Recipient
+ * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType $Sender
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class DeliveryDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Recipient' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Recipient'
+        ),
+        'Sender' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Sender'
+        )
     );
 
     /**

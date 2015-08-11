@@ -23,13 +23,20 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property boolean $DigitalDelivery
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class DigitalGoodInfoType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'DigitalDelivery' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalDelivery'
+        )
     );
 
     /**
