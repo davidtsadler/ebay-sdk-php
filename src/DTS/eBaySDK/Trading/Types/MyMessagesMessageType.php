@@ -30,7 +30,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $ExternalMessageID
  * @property boolean $Flagged
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesFolderType $Folder
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesForwardDetailsType $ForwardDetails
  * @property boolean $HighPriority
  * @property \DateTime $ItemEndTime
  * @property string $ItemID
@@ -97,12 +96,6 @@ class MyMessagesMessageType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Folder'
-        ),
-        'ForwardDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesForwardDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ForwardDetails'
         ),
         'HighPriority' => array(
             'type' => 'boolean',

@@ -23,6 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
+ * @property boolean $ListingPreference
+ * @property boolean $OptInStatus
  */
 class EBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -30,6 +33,24 @@ class EBayPLUSPreferenceType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Country' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Country'
+        ),
+        'ListingPreference' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ListingPreference'
+        ),
+        'OptInStatus' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OptInStatus'
+        )
     );
 
     /**

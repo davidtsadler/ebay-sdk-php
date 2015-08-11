@@ -44,6 +44,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\SellerReturnPreferencesType $SellerReturnPreferences
  * @property boolean $SellerThirdPartyCheckoutDisabled
  * @property \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType $UnpaidItemAssistancePreferences
+ * @property \DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType[] $eBayPLUSPreference
  */
 class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -176,6 +177,12 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItemAssistancePreferences'
+        ),
+        'eBayPLUSPreference' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'eBayPLUSPreference'
         )
     );
 

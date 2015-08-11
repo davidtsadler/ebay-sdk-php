@@ -58,6 +58,7 @@ class FeatureIDCodeType
     const C_CUSTOM_CODE = 'CustomCode';
     const C_DEPOSIT_SUPPORTED = 'DepositSupported';
     const C_DIGITAL_DELIVERY_ENABLED = 'DigitalDeliveryEnabled';
+    const C_DIGITAL_GOOD_DELIVERY_ENABLED = 'DigitalGoodDeliveryEnabled';
     const C_DUTCHBIN_ENABLED = 'DutchBINEnabled';
     const C_EAN_ENABLED = 'EANEnabled';
     const C_EAN_IDENTIFIER_ENABLED = 'EANIdentifierEnabled';

@@ -24,7 +24,7 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class DigitalGoodDeliveryEnabledDefinitionType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.

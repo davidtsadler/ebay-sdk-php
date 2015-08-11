@@ -24,9 +24,8 @@ namespace DTS\eBaySDK\Trading\Enums;
 /**
  *
  */
-class LogisticsPlanCodeType
+class DeliveryMethodCodeType
 {
     const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIGITAL_DELIVERY = 'DigitalDelivery';
-    const C_PICK_UP_DROP_OFF = 'PickUpDropOff';
+    const C_EMAIL = 'Email';
 }

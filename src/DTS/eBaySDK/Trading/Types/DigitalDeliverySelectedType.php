@@ -23,13 +23,34 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\DeliveryDetailsType $DeliveryDetails
+ * @property string $DeliveryMethod
+ * @property \DTS\eBaySDK\Trading\Types\DeliveryStatusType $DeliveryStatus
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'DeliveryDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryDetails'
+        ),
+        'DeliveryMethod' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryMethod'
+        ),
+        'DeliveryStatus' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryStatusType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryStatus'
+        )
     );
 
     /**

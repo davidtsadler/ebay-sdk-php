@@ -53,6 +53,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $CrossBorderTradeGBEnabled
  * @property boolean $CrossBorderTradeNorthAmericaEnabled
  * @property boolean $DepositSupported
+ * @property boolean $DigitalGoodDeliveryEnabled
  * @property boolean $DutchBINEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $EANEnabled
  * @property boolean $EANIdentifierEnabled
@@ -336,6 +337,12 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DepositSupported'
+        ),
+        'DigitalGoodDeliveryEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalGoodDeliveryEnabled'
         ),
         'DutchBINEnabled' => array(
             'type' => 'boolean',

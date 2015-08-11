@@ -31,7 +31,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ItemSpecificDetailsType[] $ItemSpecificDetails
  * @property \DTS\eBaySDK\Trading\Types\ListingFeatureDetailsType[] $ListingFeatureDetails
  * @property \DTS\eBaySDK\Trading\Types\ListingStartPriceDetailsType[] $ListingStartPriceDetails
- * @property \DTS\eBaySDK\Trading\Types\PaymentOptionDetailsType[] $PaymentOptionDetails
  * @property \DTS\eBaySDK\Trading\Types\ProductDetailsType $ProductDetails
  * @property \DTS\eBaySDK\Trading\Types\RecoupmentPolicyDetailsType[] $RecoupmentPolicyDetails
  * @property \DTS\eBaySDK\Trading\Types\RegionDetailsType[] $RegionDetails
@@ -103,12 +102,6 @@ class GeteBayDetailsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResp
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ListingStartPriceDetails'
-        ),
-        'PaymentOptionDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaymentOptionDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentOptionDetails'
         ),
         'ProductDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ProductDetailsType',

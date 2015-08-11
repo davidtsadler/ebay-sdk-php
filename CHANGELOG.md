@@ -5,6 +5,7 @@
 ### API
 
 * Support Merchant Data API version 933.
+* Support Trading API version 933.
 
 ## 0.1.1 - 2015-08-05
 
@@ -26,7 +27,7 @@ $variation = new Types\VariationType(array(
 ));
 ```
 
-This feature is compatiable with the existing method and so you can mix and match as in the example below. 
+This feature is compatiable with the existing method and so you can mix and match as in the example below.
 
 ```
 $variation = new Types\VariationType(array(

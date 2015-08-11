@@ -42,12 +42,15 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedTransactionPrice
  * @property \DateTime $CreatedDate
  * @property \DTS\eBaySDK\Trading\Enums\DepositTypeCodeType $DepositType
+ * @property \DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
  * @property \DTS\eBaySDK\Trading\Types\AmountType $DutchAuctionBid
  * @property string $ExtendedOrderID
  * @property \DTS\eBaySDK\Trading\Types\ExternalTransactionType[] $ExternalTransaction
  * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackLeft
  * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackReceived
  * @property \DTS\eBaySDK\Trading\Types\AmountType $FinalValueFee
+ * @property boolean $Gift
+ * @property \DTS\eBaySDK\Trading\Types\GiftSummaryType $GiftSummary
  * @property boolean $IntangibleItem
  * @property string $InventoryReservationID
  * @property \DateTime $InvoiceSentTime
@@ -208,6 +211,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DepositType'
         ),
+        'DigitalDeliverySelected' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalDeliverySelected'
+        ),
         'DutchAuctionBid' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -243,6 +252,18 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FinalValueFee'
+        ),
+        'Gift' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Gift'
+        ),
+        'GiftSummary' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\GiftSummaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GiftSummary'
         ),
         'IntangibleItem' => array(
             'type' => 'boolean',

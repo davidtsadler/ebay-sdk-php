@@ -24,9 +24,11 @@ namespace DTS\eBaySDK\Trading\Enums;
 /**
  *
  */
-class LogisticsPlanCodeType
+class DigitalStatusCodeType
 {
+    const C_ACTIVATED = 'Activated';
     const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIGITAL_DELIVERY = 'DigitalDelivery';
-    const C_PICK_UP_DROP_OFF = 'PickUpDropOff';
+    const C_DEACTIVATED = 'Deactivated';
+    const C_DOWNLOADED = 'Downloaded';
+    const C_INACTIVE = 'Inactive';
 }

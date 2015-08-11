@@ -31,7 +31,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $AvailableForPickupDropOff
  * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
  * @property boolean $BestOfferEnabled
- * @property boolean $BidGroupItem
  * @property \DTS\eBaySDK\Trading\Types\BiddingDetailsType $BiddingDetails
  * @property \DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType $BusinessSellerDetails
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyItNowPrice
@@ -54,6 +53,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
+ * @property \DTS\eBaySDK\Trading\Types\DigitalGoodInfoType $DigitalGoodInfo
  * @property boolean $DisableBuyerRequirements
  * @property \DTS\eBaySDK\Trading\Types\DiscountPriceInfoType $DiscountPriceInfo
  * @property integer $DispatchTimeMax
@@ -232,12 +232,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ),
-        'BidGroupItem' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidGroupItem'
-        ),
         'BiddingDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\BiddingDetailsType',
             'unbound' => false,
@@ -369,6 +363,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DescriptionReviseMode'
+        ),
+        'DigitalGoodInfo' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DigitalGoodInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalGoodInfo'
         ),
         'DisableBuyerRequirements' => array(
             'type' => 'boolean',

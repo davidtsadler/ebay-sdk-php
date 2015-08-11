@@ -23,13 +23,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $Email
  */
-class CrossPromotionsType extends \DTS\eBaySDK\Types\BaseType
+class DeliveryStatusType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Email' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Email'
+        )
     );
 
     /**

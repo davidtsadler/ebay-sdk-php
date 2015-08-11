@@ -53,6 +53,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\CrossBorderTradeGBEnabledDefinitionType $CrossBorderTradeGBEnabled
  * @property \DTS\eBaySDK\Trading\Types\CrossBorderTradeNorthAmericaEnabledDefinitionType $CrossBorderTradeNorthAmericaEnabled
  * @property \DTS\eBaySDK\Trading\Types\DepositSupportedDefinitionType $DepositSupported
+ * @property \DTS\eBaySDK\Trading\Types\DigitalGoodDeliveryEnabledDefinitionType $DigitalGoodDeliveryEnabled
  * @property \DTS\eBaySDK\Trading\Types\DutchBINEnabledDefinitionType $DutchBINEnabled
  * @property \DTS\eBaySDK\Trading\Types\EANEnabledDefinitionType $EANEnabled
  * @property \DTS\eBaySDK\Trading\Types\EANIdentifierEnabledDefinitionType $EANIdentifierEnabled
@@ -335,6 +336,12 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DepositSupported'
+        ),
+        'DigitalGoodDeliveryEnabled' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DigitalGoodDeliveryEnabledDefinitionType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalGoodDeliveryEnabled'
         ),
         'DutchBINEnabled' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\DutchBINEnabledDefinitionType',

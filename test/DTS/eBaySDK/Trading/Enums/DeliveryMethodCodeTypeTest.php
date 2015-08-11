@@ -19,14 +19,21 @@
  * limitations under the License.
  */
 
-namespace DTS\eBaySDK\Trading\Enums;
+namespace DTS\eBaySDK\Trading\Enums\Test;
 
-/**
- *
- */
-class LogisticsPlanCodeType
+use DTS\eBaySDK\Trading\Enums\DeliveryMethodCodeType;
+
+class DeliveryMethodCodeTypeTest extends \PHPUnit_Framework_TestCase
 {
-    const C_CUSTOM_CODE = 'CustomCode';
-    const C_DIGITAL_DELIVERY = 'DigitalDelivery';
-    const C_PICK_UP_DROP_OFF = 'PickUpDropOff';
+    private $obj;
+
+    protected function setUp()
+    {
+        $this->obj = new DeliveryMethodCodeType();
+    }
+
+    public function testCanBeCreated()
+    {
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\DeliveryMethodCodeType', $this->obj);
+    }
 }

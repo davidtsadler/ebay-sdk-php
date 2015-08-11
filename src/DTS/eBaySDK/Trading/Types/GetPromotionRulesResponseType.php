@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PromotionRuleArrayType $PromotionRuleArray
  */
 class GetPromotionRulesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -31,12 +30,6 @@ class GetPromotionRulesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PromotionRuleArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PromotionRuleArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionRuleArray'
-        )
     );
 
     /**
