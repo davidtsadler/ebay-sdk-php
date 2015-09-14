@@ -27,11 +27,6 @@ use \DTS\eBaySDK\HttpClient\HttpClient;
 abstract class BaseService
 {
     /**
-     * @var string Current version of the SDK
-     */
-    const VERSION = '0.5.0';
-
-    /**
      * Helper constent when build requests that contain attachments.
      */
     const CRLF = "\r\n";
@@ -213,7 +208,8 @@ abstract class BaseService
      */
     private function buildXopDocument(\DTS\eBaySDK\Types\BaseType $request)
     {
-        return sprintf('%s%s%s%s%s',
+        return sprintf(
+            '%s%s%s%s%s',
             '--MIME_boundary'.self::CRLF,
             'Content-Type: application/xop+xml;charset=UTF-8;type="text/xml"'.self::CRLF,
             'Content-Transfer-Encoding: 8bit'.self::CRLF,
@@ -231,7 +227,8 @@ abstract class BaseService
      */
     private function buildAttachmentBody($attachment)
     {
-        return sprintf('%s%s%s%s%s%s',
+        return sprintf(
+            '%s%s%s%s%s%s',
             '--MIME_boundary'.self::CRLF,
             'Content-Type: '.$attachment['mimeType'].self::CRLF,
             'Content-Transfer-Encoding: binary'.self::CRLF,

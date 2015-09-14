@@ -36,8 +36,8 @@ check_tag:
 tag: check_tag
 	@echo Tagging $(TAG)
 	chag update $(TAG)
-	sed -i -e "s/const VERSION = '.*'/const VERSION = '$(TAG)'/" src/DTS/eBaySDK/Services/BaseService.php
-	php -l src/DTS/eBaySDK/Services/BaseService.php
+	sed -i -e "s/const VERSION = '.*'/const VERSION = '$(TAG)'/" src/DTS/eBaySDK/Sdk.php
+	php -l src/DTS/eBaySDK/Sdk.php
 	git commit -a -m '$(TAG) release'
 	chag tag
 	@echo "Release has been created. Push using 'make release'"
