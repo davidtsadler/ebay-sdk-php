@@ -21,3 +21,23 @@ Zip                 ``require '/path/to/ebay-sdk-php-autoloader.php';``
 
 Examples shown through out the guides will assume that you have used Composer to install the SDK. You can refer back to this section if you have used a different method.
 
+Usage Summary
+-------------
+
+To use the SDK you instaniate a **service** object for the eBay API service you are using. Service objects have methods that correspond to each of the operations that are available in the service's API. Each method accepts a **request** object that contains the parameters to be passed to the operation. Calling a method executes the corresponding operation and returns a **response** object.
+
+Creating a Service
+------------------
+
+You can create a service object by passing an associative array of configuration options to the service's constructor.
+
+.. code-block:: php
+
+    <?php
+    // Use the Composer autoloader to include the SDK.
+    require 'vendor/autoload.php';
+
+    $finding = new DTS\eBaySDK\Finding\Services\FindingService([
+        'apiVersion' => '1.13.0',
+        'globalId'   => DTS\eBaySDK\Constants\GlobalIds::US
+    ]);
