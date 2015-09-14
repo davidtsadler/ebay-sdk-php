@@ -7,6 +7,13 @@ test:
 
 clean:
 	rm -rf build/artifacts
+	cd docs && make clean
+
+guide:
+	cd docs && make html
+
+guide-show:
+	open docs/_build/html/index.html
 
 # Packages the phar and zip
 package: burgomaster
