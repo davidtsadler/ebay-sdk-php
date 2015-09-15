@@ -15,7 +15,7 @@ namespace DTS\eBaySDK;
  */
 class Sdk
 {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.0-beta';
 
     public function __construct()
     {
