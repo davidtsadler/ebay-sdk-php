@@ -16,7 +16,7 @@
         "issues": "https://github.com/davidtsadler/ebay-sdk-php/issues"
     },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.5",
         "guzzle/guzzle": "~3.7",
         "psr/log": "~1.0"
     },

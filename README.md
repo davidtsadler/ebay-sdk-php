@@ -6,7 +6,7 @@ This project enables PHP developers to use the [eBay API](https://go.developer.e
 
 ## Features
 
-  - Compatible with PHP 5.3.9 or greater.
+  - Compatible with PHP 5.5 or greater.
   - Easy to install with [Composer](http://getcomposer.org/).
   - Compliant with [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md), [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) and [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md).
 
@@ -20,7 +20,7 @@ This project enables PHP developers to use the [eBay API](https://go.developer.e
 
 ## Requirements
 
-  - PHP 5.3.3 or greater with the following extensions:
+  - PHP 5.5 or greater with the following extensions:
       - cURL
       - libxml
   - 64 bit version of PHP recommended as there are some [issues when using the SDK with 32 bit](http://devbay.net/sdk/guides/requirements/#issues).
