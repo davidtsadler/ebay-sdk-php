@@ -42,6 +42,6 @@ class HttpClientTest extends \PHPUnit_Framework_TestCase
 
     public function testGuzzle()
     {
-        $this->assertInstanceOf('\Guzzle\Http\Client', $this->obj->guzzle());
+        $this->assertInstanceOf('\GuzzleHttp\Client', $this->obj->guzzle());
     }
 }

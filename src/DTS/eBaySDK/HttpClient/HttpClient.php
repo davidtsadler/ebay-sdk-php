@@ -17,7 +17,7 @@
 
 namespace DTS\eBaySDK\HttpClient;
 
-use Guzzle\Http\Client;
+use GuzzleHttp\Client;
 
 /**
  * Implements the sending of a request to eBay.
@@ -29,7 +29,7 @@ use Guzzle\Http\Client;
 class HttpClient implements \DTS\eBaySDK\Interfaces\HttpClientInterface
 {
     /**
-     * @var Guzzle\Http\Client Client that will actualy send the POST request.
+     * @var GuzzleHttp\Client Client that will actualy send the POST request.
      */
     private $client;
 
