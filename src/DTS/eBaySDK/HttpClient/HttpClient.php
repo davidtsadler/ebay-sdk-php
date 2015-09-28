@@ -40,7 +40,12 @@ class HttpClient implements \DTS\eBaySDK\Interfaces\HttpClientInterface
 
     public function post($url, $headers, $body)
     {
-        return $this->client->post($url, $headers, $body)->send()->getBody(true);
+        $response = $this->client->post($url, [
+            'headers' => $headers,
+            'body' => $body
+        ]);
+
+        return $response->getBody()->getContents();
     }
 
     public function guzzle()
