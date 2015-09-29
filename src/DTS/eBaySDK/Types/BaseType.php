@@ -540,7 +540,7 @@ class BaseType
     }
 
     /**
-     * Helper function to convert a value into XML
+     * Helper function to convert a value into XML escaping special characters.
      *
      * @param mixed $value The value of the property.
      *
@@ -554,7 +554,7 @@ class BaseType
         else if (is_bool($value)){
             return $value ? 'true' : 'false';
         } else {
-            return $value;
+            return htmlspecialchars($value);
         }
     }
 
