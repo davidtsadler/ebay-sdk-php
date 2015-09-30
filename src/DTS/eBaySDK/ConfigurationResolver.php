@@ -37,7 +37,23 @@ class ConfigurationResolver
     public function resolve(array $configuration)
     {
         foreach($this->definitions as $key => $def) {
+            if (!isset($configuration[$key])) {
+                if (isset($def['default'])) {
+                    $configuration[$key] = is_callable($def['default'])
+                        ? $def['default']($configuration)
+                        : $def['default'];
+                } elseif (empty($def['required'])) {
+                    continue;
+                } else {
+                    $this->throwRequired($configuration);
+                }
+            }
+
             $this->checkType($def['valid'], $key, $configuration[$key]);
+
+            if (isset($def['fn'])) {
+                $configuration[$key] = $def['fn']($configuration[$key]);
+            }
         }
 
         return $configuration;
@@ -62,6 +78,25 @@ class ConfigurationResolver
             $expected,
             describe_type($provided)
         );
+        throw new \InvalidArgumentException($msg);
+    }
+
+    private function throwRequired($configuration)
+    {
+        $missing = [];
+
+        foreach($this->definitions as $key => $def) {
+            if (empty($def['required'])
+                || isset($def['default'])
+                || array_key_exists($key, $configuration)
+            ) {
+                continue;
+            }
+            $missing[] = $key;
+        }
+
+        $msg = "Missing required configuration options: \n\n";
+        $msg .= implode("\n\n", $missing);
         throw new \InvalidArgumentException($msg);
     }
 }
