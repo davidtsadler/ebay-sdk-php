@@ -22,9 +22,13 @@ namespace DTS\eBaySDK\Shopping\Services;
  */
 class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    /**
-     * @var string Current version of the SDK
-     */
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+        ];
+    }
 
     /**
      * Constants for the various HTTP headers required by the API.

@@ -24,10 +24,6 @@ namespace DTS\eBaySDK\MerchantData\Services;
 class MerchantDataService
 {
     /**
-     * @var string Current version of the SDK
-     */
-
-    /**
      * @var \DTS\eBaySDK\Parser Xml Parser.
      */
     private $xmlParser;

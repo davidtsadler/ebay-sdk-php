@@ -184,5 +184,4 @@ class ConfigurationResolverTest extends \PHPUnit_Framework_TestCase
         ]);
         $this->assertEquals($r->resolve(['foo' => 1]), ['foo' => 3]);
     }
-
 }

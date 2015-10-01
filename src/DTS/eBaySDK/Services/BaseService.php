@@ -20,6 +20,7 @@ namespace DTS\eBaySDK\Services;
 use DTS\eBaySDK\Parser\XmlParser;
 use \DTS\eBaySDK\Exceptions;
 use \DTS\eBaySDK\HttpClient\HttpClient;
+use \DTS\eBaySDK\ConfigurationResolver;
 
 /**
  * The base class for every eBay service class.
@@ -47,6 +48,11 @@ abstract class BaseService
     private $config;
 
     /**
+     * @var array Associative array storing the current configuration option values.
+     */
+    private $configuration;
+
+    /**
      * @var string The production URL for the service.
      */
     private $productionUrl;
@@ -62,6 +68,21 @@ abstract class BaseService
     private $logger;
 
     /**
+     * Get an array of service configuration option definitions. 
+     *
+     * @return array
+     */
+    public static function getConfigDefinitions()
+    {
+        return [
+            'sandbox' => [
+                'valid' => ['bool'],
+                'default' => false
+            ]
+        ];
+    }
+
+    /**
      * @param string $productionUrl The production URL.
      * @param string $sandboxUrl The sandbox URL.
      * @param array $config Optional configuration option values.
@@ -73,6 +94,9 @@ abstract class BaseService
         $config = array(),
         \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
     ) {
+        $resolver = new ConfigurationResolver(static::getConfigDefinitions());
+        $this->configuration = $resolver->resolve($config);
+
         // Inject a 'sandbox' option for every derived class.
         if (!array_key_exists('sandbox', self::$configOptions[get_called_class()])) {
             self::$configOptions[get_called_class()]['sandbox'] = array('required' => false);
@@ -90,6 +114,20 @@ abstract class BaseService
         $this->config = $config;
         $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
         $this->logger = null;
+    }
+
+    /**
+     * Method to get the service's configuration.
+     *
+     * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
+     */
+    public function getConfig($option = null)
+    {
+        return $option === null
+            ? $this->configuration
+            : (isset($this->configuration[$option])        
+                ? $this->configuration[$option]
+                : null);
     }
 
     /**
