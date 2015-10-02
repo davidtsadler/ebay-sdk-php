@@ -33,11 +33,6 @@ abstract class BaseService
     const CRLF = "\r\n";
 
     /**
-     * @var array A list of configuration options allowed for each service class.
-     */
-    protected static $configOptions = array();
-
-    /**
      * @var mixed The object that will handle the actual sending of the API request.
      */
     private $httpClient;
@@ -46,11 +41,6 @@ abstract class BaseService
      * @var array Associative array storing the current configuration option values.
      */
     private $config;
-
-    /**
-     * @var array Associative array storing the current configuration option values.
-     */
-    private $configuration;
 
     /**
      * @var string The production URL for the service.
@@ -75,6 +65,10 @@ abstract class BaseService
     public static function getConfigDefinitions()
     {
         return [
+            'debug' => [
+                'valid' => ['bool'],
+                'default' => false
+            ],
             'sandbox' => [
                 'valid' => ['bool'],
                 'default' => false
@@ -85,33 +79,19 @@ abstract class BaseService
     /**
      * @param string $productionUrl The production URL.
      * @param string $sandboxUrl The sandbox URL.
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
     public function __construct(
         $productionUrl,
         $sandboxUrl,
-        $config = array(),
+        $config,
         \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
     ) {
         $resolver = new ConfigurationResolver(static::getConfigDefinitions());
-        $this->configuration = $resolver->resolve($config);
-
-        // Inject a 'sandbox' option for every derived class.
-        if (!array_key_exists('sandbox', self::$configOptions[get_called_class()])) {
-            self::$configOptions[get_called_class()]['sandbox'] = array('required' => false);
-        }
-
-        // Inject a 'debug' option for every derived class.
-        if (!array_key_exists('debug', self::$configOptions[get_called_class()])) {
-            self::$configOptions[get_called_class()]['debug'] = array('required' => false);
-        }
-
-        self::ensureValidConfigOptions($config);
-
+        $this->config = $resolver->resolve($config);
         $this->productionUrl = $productionUrl;
         $this->sandboxUrl = $sandboxUrl;
-        $this->config = $config;
         $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
         $this->logger = null;
     }
@@ -121,38 +101,13 @@ abstract class BaseService
      *
      * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
      */
-    public function getConfig($option = null)
+    public function config($option = null)
     {
         return $option === null
-            ? $this->configuration
-            : (isset($this->configuration[$option])        
-                ? $this->configuration[$option]
+            ? $this->config
+            : (isset($this->config[$option])        
+                ? $this->config[$option]
                 : null);
-    }
-
-    /**
-     * Method to get or set the service's configuration.
-     *
-     * @param mixed Pass an associative array to set multiple configuration options. Pass a string to get or set a single configuration option.
-     * @param mixed Will be the value that is assigned when the name of a configuration option is passed in as the first parameter.
-     * @throws UnknownConfigurationOptionException if an unknown configuration option is passed as an argument or via the associative array.
-     *
-     * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
-     */
-    public function config($option = null, $value = null)
-    {
-        if ($option !== null) {
-            self::ensureValidConfigOptions($option);
-
-            if (!is_array($option)) {
-                if ($value !== null) {
-                    $this->config[$option] = $value;
-                }
-                return array_key_exists($option, $this->config) ? $this->config[$option] : null;
-            }
-            $this->config = $option;
-        }
-        return $this->config;
     }
 
     /**
@@ -344,39 +299,6 @@ abstract class BaseService
     private function getUrl()
     {
         return $this->config('sandbox') ? $this->sandboxUrl : $this->productionUrl;
-    }
-
-    /**
-     * Helper function to ensure that the passed configuration options exist.
-     *
-     * @param mixed $option Pass either the name of an option or an array of options.
-     * @throws UnknownConfigurationOptionException If an option does not exist.
-     */
-    private static function ensureValidConfigOptions($option)
-    {
-        $class = get_called_class();
-
-        if (!is_array($option)) {
-            self::ensureValidConfigOption($class, $option);
-        } else {
-            $keys = array_keys($option);
-            foreach ($keys as $key) {
-                self::ensureValidConfigOption($class, $key);
-            }
-        }
-    }
-
-    /**
-     * Helper function to ensure that the passed configuration option exists.
-     *
-     * @param string $option The name of the option.
-     * @throws UnknownConfigurationOptionException If the option does not exist.
-     */
-    private static function ensureValidConfigOption($class, $option)
-    {
-        if (!array_key_exists($option, self::$configOptions[$class])) {
-            throw new Exceptions\UnknownConfigurationOptionException($class, $option);
-        }
     }
 
     /**

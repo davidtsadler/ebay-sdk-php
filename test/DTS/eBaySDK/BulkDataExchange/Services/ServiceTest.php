@@ -27,39 +27,55 @@ use DTS\eBaySDK\Mocks\HttpClient;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    public function testConfigDefinitions()
     {
-        $this->httpClient = new HttpClient();
-        $this->service = new Service(array(), $this->httpClient);
+        $d = BulkDataExchangeBaseService::getConfigDefinitions();
+
+        $this->assertArrayHasKey('apiVersion', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['apiVersion']);
+
+        $this->assertArrayHasKey('authToken', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['authToken']);
     }
 
-    public function testCanBeCreated()
+    public function testRequiredEbayHeaders()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Mocks\Service', $this->service);
-    }
+        $h = new HttpClient();
 
-    public function testEbayHeaders()
-    {
-        $this->service->config('authToken', '321');
+        $s = new Service([
+            'authToken' => '321'
+        ], $h);
 
-        $this->service->testOperation();
+        $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_AUTH_TOKEN, $this->httpClient->headers);
-        $this->assertEquals('321', $this->httpClient->headers[BulkDataExchangeBaseService::HDR_AUTH_TOKEN]);
+        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_AUTH_TOKEN, $h->headers);
+        $this->assertEquals('321', $h->headers[BulkDataExchangeBaseService::HDR_AUTH_TOKEN]);
 
-        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_OPERATION_NAME, $this->httpClient->headers);
-        $this->assertEquals('testOperation', $this->httpClient->headers[BulkDataExchangeBaseService::HDR_OPERATION_NAME]);
+        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_OPERATION_NAME, $h->headers);
+        $this->assertEquals('testOperation', $h->headers[BulkDataExchangeBaseService::HDR_OPERATION_NAME]);
 
         // Test that optional headers have not been set until they have been configured.
-        $this->assertArrayNotHasKey(BulkDataExchangeBaseService::HDR_API_VERSION, $this->httpClient->headers);
+        $this->assertArrayNotHasKey(BulkDataExchangeBaseService::HDR_API_VERSION, $h->headers);
+    }
 
-        // Now configure optional headers.
-        $this->service->config('apiVersion', '123');
+    public function testOptionalEbayHeaders()
+    {
+        $h = new HttpClient();
 
-        $this->service->testOperation();
+        $s = new Service([
+            'apiVersion' => '123',
+            'authToken' => '321'
+        ], $h);
 
-        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_API_VERSION, $this->httpClient->headers);
-        $this->assertEquals('123', $this->httpClient->headers[BulkDataExchangeBaseService::HDR_API_VERSION]);
+        $s->testOperation();
+
+        $this->assertArrayHasKey(BulkDataExchangeBaseService::HDR_API_VERSION, $h->headers);
+        $this->assertEquals('123', $h->headers[BulkDataExchangeBaseService::HDR_API_VERSION]);
     }
 }

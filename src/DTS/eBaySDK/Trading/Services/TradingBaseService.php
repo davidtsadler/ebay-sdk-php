@@ -27,6 +27,15 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+        /**
+         * TODO
+         * apiVersion true
+         * appId false
+         * authToken false
+         * certId false
+         * devId false
+         * siteId true
+         */
         ];
     }
 
@@ -43,22 +52,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
     const HDR_SITE_ID = 'X-EBAY-API-SITEID';
 
     /**
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'apiVersion' => array('required' => true),
-                'appId' => array('required' => false),
-                'authToken' => array('required' => true),
-                'certId' => array('required' => false),
-                'devId' => array('required' => false),
-                'siteId' => array('required' => true)
-            );
-        }
-
         parent::__construct('https://api.ebay.com/ws/api.dll', 'https://api.sandbox.ebay.com/ws/api.dll', $config, $httpClient);
     }
 

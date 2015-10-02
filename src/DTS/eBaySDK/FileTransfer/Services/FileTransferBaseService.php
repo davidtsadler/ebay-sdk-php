@@ -27,6 +27,13 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
         ];
     }
 
@@ -41,18 +48,11 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
     const HDR_SERVICE_NAME = 'X-EBAY-SOA-SERVICE-NAME';
 
     /**
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'apiVersion' => array('required' => false),
-                'authToken' => array('required' => true)
-            );
-        }
-
         parent::__construct('https://storage.ebay.com/FileTransferService', 'https://storage.sandbox.ebay.com/FileTransferService', $config, $httpClient);
     }
 

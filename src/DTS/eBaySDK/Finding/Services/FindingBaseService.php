@@ -27,6 +27,12 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+        /**
+         * TODO
+         * apiVersion false
+         * appId true
+         * globalId false
+         */
         ];
     }
 
@@ -44,19 +50,11 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
     const HDR_RESPONSE_FORMAT = 'X-EBAY-SOA-RESPONSE-DATA-FORMAT';
 
     /**
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'apiVersion' => array('required' => false),
-                'appId' => array('required' => true),
-                'globalId' => array('required' => false)
-            );
-        }
-
         parent::__construct('http://svcs.ebay.com/services/search/FindingService/v1', 'http://svcs.sandbox.ebay.com/services/search/FindingService/v1', $config, $httpClient);
     }
 

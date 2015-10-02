@@ -27,6 +27,15 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+        /**
+         * TODO
+         * affiliateUserId false
+         * apiVersion false
+         * appId true
+         * siteId false
+         * trackingId false
+         * trackingPartnerCode false
+         */
         ];
     }
 
@@ -47,22 +56,11 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
     const HDR_VERSION_HANDLING = 'X-EBAY-API-VERSIONHANDLING';
 
     /**
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'affiliateUserId' => array('required' => false),
-                'apiVersion' => array('required' => true),
-                'appId' => array('required' => true),
-                'siteId' => array('required' => false),
-                'trackingId' => array('required' => false),
-                'trackingPartnerCode' => array('required' => false)
-            );
-        }
-
         parent::__construct('http://open.api.ebay.com/shopping', 'http://open.api.sandbox.ebay.com/shopping', $config, $httpClient);
     }
 

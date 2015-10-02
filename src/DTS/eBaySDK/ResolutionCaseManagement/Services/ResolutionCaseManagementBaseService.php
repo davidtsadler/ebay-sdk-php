@@ -27,6 +27,12 @@ class ResolutionCaseManagementBaseService extends \DTS\eBaySDK\Services\BaseServ
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+        /**
+         * TODO
+         * apiVersion false
+         * authToken true
+         * globalId false
+         */
         ];
     }
 
@@ -45,20 +51,12 @@ class ResolutionCaseManagementBaseService extends \DTS\eBaySDK\Services\BaseServ
     const HDR_SERVICE_NAME = 'X-EBAY-SOA-SERVICE-NAME';
 
     /**
-     * @param array $config Optional configuration option values.
+     * @param array $config Configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'apiVersion' => array('required' => false),
-                'authToken' => array('required' => true),
-                'globalId' => array('required' => false)
-            );
-        }
-
-        parent::__construct('https://svcs.ebay.com/services/resolution/v1/ResolutionCaseManagementService', 'https://svcs.sandbox.ebay.com/services/resolution/v1/ResolutionCaseManagementService', $config, $httpClient);
+        parent::__construct('http://svcs.ebay.com/services/resolution/v1/ResolutionCaseManagementService', 'https://svcs.sandbox.ebay.com/services/resolutionn/v1/ResolutionCaseManagement', $config, $httpClient);
     }
 
     /**
