@@ -535,7 +535,7 @@ class BaseType
         if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
             return $value->toXml($name);
         } else {
-            return sprintf('<%s>%s</%s>', $name, self::encodeValueXml($value), $name);
+            return sprintf('<%s>%s</%s>', $name, self::encodeValueXml($value), htmlspecialchars($name));
         }
     }
 
@@ -554,7 +554,7 @@ class BaseType
         else if (is_bool($value)){
             return $value ? 'true' : 'false';
         } else {
-            return htmlspecialchars($value);
+            return $value;
         }
     }
 
