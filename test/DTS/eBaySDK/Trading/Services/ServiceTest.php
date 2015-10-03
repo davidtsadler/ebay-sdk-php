@@ -27,53 +27,91 @@ use DTS\eBaySDK\Mocks\HttpClient;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    public function testConfigDefinitions()
     {
-        $this->httpClient = new HttpClient();
-        $this->service = new Service(array(), $this->httpClient);
+        $d = TradingBaseService::getConfigDefinitions();
+
+        $this->assertArrayHasKey('apiVersion', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['apiVersion']);
+
+        $this->assertArrayHasKey('appId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['appId']);
+
+        $this->assertArrayHasKey('authToken', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['authToken']);
+
+        $this->assertArrayHasKey('certId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['certId']);
+
+        $this->assertArrayHasKey('devId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['devId']);
+
+        $this->assertArrayHasKey('siteId', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['siteId']);
     }
 
-    public function testCanBeCreated()
+    public function testRequiredEbayHeaders()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Mocks\Service', $this->service);
-    }
+        $h = new HttpClient();
 
-    public function testEbayHeaders()
-    {
-        $this->service->config('apiVersion', '123');
-        $this->service->config('siteId', '999');
+        $s = new Service([
+            'apiVersion' => '123',
+            'siteId' => '999'
+        ], $h);
 
-        $this->service->testOperation();
+        $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(TradingBaseService::HDR_API_VERSION, $this->httpClient->headers);
-        $this->assertEquals('123', $this->httpClient->headers[TradingBaseService::HDR_API_VERSION]);
+        $this->assertArrayHasKey(TradingBaseService::HDR_API_VERSION, $h->headers);
+        $this->assertEquals('123', $h->headers[TradingBaseService::HDR_API_VERSION]);
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_SITE_ID , $this->httpClient->headers);
-        $this->assertEquals('999', $this->httpClient->headers[TradingBaseService::HDR_SITE_ID]);
+        $this->assertArrayHasKey(TradingBaseService::HDR_SITE_ID , $h->headers);
+        $this->assertEquals('999', $h->headers[TradingBaseService::HDR_SITE_ID]);
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_OPERATION_NAME, $this->httpClient->headers);
-        $this->assertEquals('testOperation', $this->httpClient->headers[TradingBaseService::HDR_OPERATION_NAME]);
+        $this->assertArrayHasKey(TradingBaseService::HDR_OPERATION_NAME, $h->headers);
+        $this->assertEquals('testOperation', $h->headers[TradingBaseService::HDR_OPERATION_NAME]);
 
         // Test that optional headers have not been set until they have been configured.
-        $this->assertArrayNotHasKey(TradingBaseService::HDR_APP_ID, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(TradingBaseService::HDR_CERT_ID, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(TradingBaseService::HDR_DEV_ID, $this->httpClient->headers);
+        $this->assertArrayNotHasKey(TradingBaseService::HDR_APP_ID, $h->headers);
+        $this->assertArrayNotHasKey(TradingBaseService::HDR_CERT_ID, $h->headers);
+        $this->assertArrayNotHasKey(TradingBaseService::HDR_DEV_ID, $h->headers);
+    }
 
-        // Now configure optional headers.
-        $this->service->config('appId', 'appId');
-        $this->service->config('certId', 'certId');
-        $this->service->config('devId', 'devId');
+    public function testOperationEbayHeaders()
+    {
+        $h = new HttpClient();
 
-        $this->service->testOperation();
+        $s = new Service([
+            'appId' => 'appId',
+            'apiVersion' => '123',
+            'certId' => 'certId',
+            'devId' => 'devId',
+            'siteId' => '999'
+        ], $h);
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_APP_ID, $this->httpClient->headers);
-        $this->assertEquals('appId', $this->httpClient->headers[TradingBaseService::HDR_APP_ID]);
+        $s->testOperation();
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_CERT_ID, $this->httpClient->headers);
-        $this->assertEquals('certId', $this->httpClient->headers[TradingBaseService::HDR_CERT_ID]);
+        $this->assertArrayHasKey(TradingBaseService::HDR_APP_ID, $h->headers);
+        $this->assertEquals('appId', $h->headers[TradingBaseService::HDR_APP_ID]);
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_DEV_ID, $this->httpClient->headers);
-        $this->assertEquals('devId', $this->httpClient->headers[TradingBaseService::HDR_DEV_ID]);
+        $this->assertArrayHasKey(TradingBaseService::HDR_CERT_ID, $h->headers);
+        $this->assertEquals('certId', $h->headers[TradingBaseService::HDR_CERT_ID]);
+
+        $this->assertArrayHasKey(TradingBaseService::HDR_DEV_ID, $h->headers);
+        $this->assertEquals('devId', $h->headers[TradingBaseService::HDR_DEV_ID]);
     }
 }

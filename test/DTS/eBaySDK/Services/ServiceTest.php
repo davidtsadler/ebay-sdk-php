@@ -1,53 +1,105 @@
 <?php
 use DTS\eBaySDK\Mocks\Service;
+use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
 use DTS\eBaySDK\Mocks\Logger;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    public function testProductionUrlIsUsed()
     {
-        // BaseService is abstract so use class that is derived from it for testing.
-        $this->service1 = new Service();
-        $this->service2 = new Service(array());
-        $this->service3 = new Service(array(), new HttpClient());
+        // By default sandbox will be false.
+        $h = new HttpClient();
+        $s = new Service([], $h);
+        $s->foo(new ComplexClass());
+
+        $this->assertEquals('http://production.com', $h->url);
     }
 
-    public function testCanBeCreated()
+    public function testSandboxUrlIsUsed()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\Service', $this->service1);
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\Service', $this->service2);
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\Service', $this->service3);
+        $h = new HttpClient();
+        $s = new Service([
+            'sandbox' => true
+        ], $h);
+        $s->foo(new ComplexClass());
+
+        $this->assertEquals('http://sandbox.com', $h->url);
     }
 
-    public function testExtendsMockBaseService()
+    public function testHttpHeadersAreCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\BaseService', $this->service1);
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\BaseService', $this->service2);
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\BaseService', $this->service3);
+        $h = new HttpClient();
+        $s = new Service([], $h);
+        $r = new ComplexClass();
+        $s->foo($r);
+
+        $this->assertEquals(array(
+            'fooHdr' => 'foo',
+            'Content-Type' => 'text/xml',
+            'Content-Length' => strlen($r->toRequestXml())
+        ), $h->headers);
     }
 
-    public function testExtendsBaseService()
+    public function testXmlIsCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Services\BaseService', $this->service1);
-        $this->assertInstanceOf('\DTS\eBaySDK\Services\BaseService', $this->service2);
-        $this->assertInstanceOf('\DTS\eBaySDK\Services\BaseService', $this->service3);
+        $h = new HttpClient();
+        $s = new Service([], $h);
+        $r = new ComplexClass();
+        $s->foo($r);
+
+        $this->assertEquals($r->toRequestXml(), $h->body);
     }
-  
-    public function testCanAssignALogger()
+
+    public function testResponseIsReturned()
     {
-        // By default no logger should be assigned.
-        $this->assertEquals(null, $this->service1->logger());
+        $s = new Service([], new HttpClient());
+        $r = $s->foo(new ComplexClass());
 
-        // Allows a logger to be assigned.
-        $this->service1->logger(new Logger());
+        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\ComplexClass', $r);
+    }
 
-        // Should return the assigned logger.
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\Logger', $this->service1->logger());
-    } 
+    public function testLogging()
+    {
+        // TODO Add debug configuration
+        if(0) {
+        // If no logger has been assigned there should be no debug messages.
+        $this->assertEquals(null, $this->service->logger());
+        $this->service->foo($this->request);
+        $this->assertEquals(0, count($this->logger->debugMessages));
+
+        // Even if the configuration is set to log debugging.
+        $this->assertEquals(null, $this->service->logger());
+        $this->service->config('debug', true);
+        $this->service->foo($this->request);
+        $this->assertEquals(0, count($this->logger->debugMessages));
+
+        // Now check that debugging information is logged.
+        $this->service->logger($this->logger);
+        $this->service->config('debug', true);
+        $this->service->foo($this->request);
+
+        $debugRequest = $this->logger->debugMessages[0];
+        $this->assertEquals('Request', $debugRequest['message']);
+        $this->assertEquals('http://production.com', $debugRequest['context']['url']);
+        $this->assertEquals('foo', $debugRequest['context']['name']);
+        $this->assertEquals(array(
+            'fooHdr' => 'foo',
+            'Content-Type' => 'text/xml',
+            'Content-Length' => strlen($this->request->toRequestXml())
+        ), $debugRequest['context']['headers']);
+        $this->assertEquals($this->request->toRequestXml(), $debugRequest['context']['body']);
+
+        $debugResponse = $this->logger->debugMessages[1];
+        $this->assertEquals('Response', $debugResponse['message']);
+        $this->assertEquals(file_get_contents(__DIR__.'/../Mocks/Response.xml'), $debugResponse['context']['body']);
+        }
+    }
 
     public function testHttpClient()
     {
+        // TODO - Rename to httpHandler
+        if(0) {
         $this->assertInstanceOf('\DTS\eBaySDK\Interfaces\HttpClientInterface', $this->service1->httpClient());
         $this->assertInstanceOf('\DTS\eBaySDK\HttpClient\HttpClient', $this->service1->httpClient());
 
@@ -56,5 +108,6 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('\DTS\eBaySDK\Interfaces\HttpClientInterface', $this->service3->httpClient());
         $this->assertInstanceOf('\DTS\eBaySDK\Mocks\HttpClient', $this->service3->httpClient());
+        }
     }
 }

@@ -27,15 +27,26 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
-        /**
-         * TODO
-         * apiVersion true
-         * appId false
-         * authToken false
-         * certId false
-         * devId false
-         * siteId true
-         */
+            'apiVersion' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'appId' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string']
+            ],
+            'certId' => [
+                'valid' => ['string']
+            ],
+            'devId' => [
+                'valid' => ['string']
+            ],
+            'siteId' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
         ];
     }
 
@@ -75,11 +86,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
     protected function callOperation($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
         /**
-            Modify the request object to include the auth token that was set up in the configuration.
+         * Modify the request object to include the auth token that was set up in the configuration.
          */
         if ($this->config('authToken') !== null) {
             /**
-                Don't modify a request if the token already exists.
+             * Don't modify a request if the token already exists.
              */
             if( !isset($request->RequesterCredentials)) {
                 $request->RequesterCredentials = new \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType();

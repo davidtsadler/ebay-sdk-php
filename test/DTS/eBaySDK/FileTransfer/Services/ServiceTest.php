@@ -62,14 +62,6 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         // Test that optional headers have not been set until they have been configured.
         $this->assertArrayNotHasKey(FileTransferBaseService::HDR_API_VERSION, $h->headers);
-
-        // Now configure optional headers.
-        $this->service->config('apiVersion', '123');
-
-        $this->service->testOperation();
-
-        $this->assertArrayHasKey(FileTransferBaseService::HDR_API_VERSION, $h->headers);
-        $this->assertEquals('123', $h->headers[FileTransferBaseService::HDR_API_VERSION]);
     }
 
     public function testOptionalEbayHeaders()

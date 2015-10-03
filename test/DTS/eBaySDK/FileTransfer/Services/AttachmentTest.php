@@ -36,40 +36,40 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         ], $h);
 
         // Calling the operation will not set the attachment field if there is no attachment.
-        $request = new Types\UploadFileRequest();
-        $this->assertEquals(null, $request->fileAttachment);
-        $s->uploadFile($request);
-        $this->assertEquals(null, $request->fileAttachment);
+        $r = new Types\UploadFileRequest();
+        $this->assertEquals(null, $r->fileAttachment);
+        $s->uploadFile($r);
+        $this->assertEquals(null, $r->fileAttachment);
 
         // Calling the operation results in the attachment field been set by the service if there is an attachment.
-        $request = new Types\UploadFileRequest();
-        $request->attachment('123ABC');
-        $this->assertEquals(null, $request->fileAttachment);
-        $s->uploadFile($request);
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $request->fileAttachment);
-        $this->assertEquals('<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:attachment.bin@devbay.net"/>', $request->fileAttachment->Data);
-        $this->assertEquals(6, $request->fileAttachment->Size);
+        $r = new Types\UploadFileRequest();
+        $r->attachment('123ABC');
+        $this->assertEquals(null, $r->fileAttachment);
+        $s->uploadFile($r);
+        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $r->fileAttachment);
+        $this->assertEquals('<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:attachment.bin@devbay.net"/>', $r->fileAttachment->Data);
+        $this->assertEquals(6, $r->fileAttachment->Size);
 
         // Calling the operation results in the attachment field been set by the service if there is an attachment.
-        $request = new Types\UploadFileRequest();
-        $request->attachment('123ABC');
-        $request->fileAttachment = new Types\FileAttachment();
-        $this->assertEquals(null, $request->fileAttachment->Data);
-        $this->assertEquals(null, $request->fileAttachment->Size);
-        $s->uploadFile($request);
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $request->fileAttachment);
-        $this->assertEquals('<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:attachment.bin@devbay.net"/>', $request->fileAttachment->Data);
-        $this->assertEquals(6, $request->fileAttachment->Size);
+        $r = new Types\UploadFileRequest();
+        $r->attachment('123ABC');
+        $r->fileAttachment = new Types\FileAttachment();
+        $this->assertEquals(null, $r->fileAttachment->Data);
+        $this->assertEquals(null, $r->fileAttachment->Size);
+        $s->uploadFile($r);
+        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $r->fileAttachment);
+        $this->assertEquals('<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:attachment.bin@devbay.net"/>', $r->fileAttachment->Data);
+        $this->assertEquals(6, $r->fileAttachment->Size);
 
         // Calling the operation shouldn't modify an existing file attachment.
-        $request = new Types\UploadFileRequest();
-        $request->attachment('123ABC');
-        $request->fileAttachment = new Types\FileAttachment();
-        $request->fileAttachment->Data = 'ABCD1234';
-        $request->fileAttachment->Size = 8;
-        $s->uploadFile($request);
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $request->fileAttachment);
-        $this->assertEquals('ABCD1234', $request->fileAttachment->Data);
-        $this->assertEquals(8, $request->fileAttachment->Size);
+        $r = new Types\UploadFileRequest();
+        $r->attachment('123ABC');
+        $r->fileAttachment = new Types\FileAttachment();
+        $r->fileAttachment->Data = 'ABCD1234';
+        $r->fileAttachment->Size = 8;
+        $s->uploadFile($r);
+        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\FileAttachment', $r->fileAttachment);
+        $this->assertEquals('ABCD1234', $r->fileAttachment->Data);
+        $this->assertEquals(8, $r->fileAttachment->Size);
     }
 }

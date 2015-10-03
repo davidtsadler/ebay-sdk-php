@@ -27,61 +27,98 @@ use DTS\eBaySDK\Mocks\HttpClient;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    public function testConfigDefinitions()
     {
-        $this->httpClient = new HttpClient();
-        $this->service = new Service(array(), $this->httpClient);
+        $d = ShoppingBaseService::getConfigDefinitions();
+
+        $this->assertArrayHasKey('affiliateUserId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['affiliateUserId']);
+
+        $this->assertArrayHasKey('apiVersion', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['apiVersion']);
+
+        $this->assertArrayHasKey('appId', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['appId']);
+
+        $this->assertArrayHasKey('siteId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['siteId']);
+
+        $this->assertArrayHasKey('trackingId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['trackingId']);
+
+        $this->assertArrayHasKey('trackingPartnerCode', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['trackingPartnerCode']);
     }
 
-    public function testCanBeCreated()
+    public function testRequiredEbayHeaders()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Mocks\Service', $this->service);
-    }
+        $h = new HttpClient();
 
-    public function testEbayHeaders()
-    {
-        $this->service->config('apiVersion', '123');
-        $this->service->config('appId', '321');
+        $s = new Service([
+            'apiVersion' => '123',
+            'appId' => '321'
+        ], $h);
 
-        $this->service->testOperation();
+        $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_API_VERSION, $this->httpClient->headers);
-        $this->assertEquals('123', $this->httpClient->headers[ShoppingBaseService::HDR_API_VERSION]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_API_VERSION, $h->headers);
+        $this->assertEquals('123', $h->headers[ShoppingBaseService::HDR_API_VERSION]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_APP_ID , $this->httpClient->headers);
-        $this->assertEquals('321', $this->httpClient->headers[ShoppingBaseService::HDR_APP_ID]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_APP_ID , $h->headers);
+        $this->assertEquals('321', $h->headers[ShoppingBaseService::HDR_APP_ID]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_OPERATION_NAME, $this->httpClient->headers);
-        $this->assertEquals('testOperation', $this->httpClient->headers[ShoppingBaseService::HDR_OPERATION_NAME]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_OPERATION_NAME, $h->headers);
+        $this->assertEquals('testOperation', $h->headers[ShoppingBaseService::HDR_OPERATION_NAME]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_REQUEST_FORMAT, $this->httpClient->headers);
-        $this->assertEquals('XML', $this->httpClient->headers[ShoppingBaseService::HDR_REQUEST_FORMAT]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_REQUEST_FORMAT, $h->headers);
+        $this->assertEquals('XML', $h->headers[ShoppingBaseService::HDR_REQUEST_FORMAT]);
 
         // Test that optional headers have not been set until they have been configured.
-        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_SITE_ID, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_TRACKING_ID, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_TRACKING_PARTNER_CODE, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_AFFILIATE_USER_ID, $this->httpClient->headers);
+        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_SITE_ID, $h->headers);
+        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_TRACKING_ID, $h->headers);
+        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_TRACKING_PARTNER_CODE, $h->headers);
+        $this->assertArrayNotHasKey(ShoppingBaseService::HDR_AFFILIATE_USER_ID, $h->headers);
+    }
+    public function testOptionalEbayHeaders()
+    {
+        $h = new HttpClient();
 
-        // Now configure optional headers.
-        $this->service->config('siteId', '999');
-        $this->service->config('trackingId', '888');
-        $this->service->config('trackingPartnerCode', '777');
-        $this->service->config('affiliateUserId', '666');
+        $s = new Service([
+            'affiliateUserId' => '666',
+            'apiVersion' => '123',
+            'appId' => '321',
+            'siteId' => '999',
+            'trackingId' => '888',
+            'trackingPartnerCode' => '777'
+        ], $h);
 
-        $this->service->testOperation();
+        $s->testOperation();
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_SITE_ID, $this->httpClient->headers);
-        $this->assertEquals('999', $this->httpClient->headers[ShoppingBaseService::HDR_SITE_ID]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_SITE_ID, $h->headers);
+        $this->assertEquals('999', $h->headers[ShoppingBaseService::HDR_SITE_ID]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_TRACKING_ID, $this->httpClient->headers);
-        $this->assertEquals('888', $this->httpClient->headers[ShoppingBaseService::HDR_TRACKING_ID]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_TRACKING_ID, $h->headers);
+        $this->assertEquals('888', $h->headers[ShoppingBaseService::HDR_TRACKING_ID]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_TRACKING_PARTNER_CODE, $this->httpClient->headers);
-        $this->assertEquals('777', $this->httpClient->headers[ShoppingBaseService::HDR_TRACKING_PARTNER_CODE]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_TRACKING_PARTNER_CODE, $h->headers);
+        $this->assertEquals('777', $h->headers[ShoppingBaseService::HDR_TRACKING_PARTNER_CODE]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_AFFILIATE_USER_ID, $this->httpClient->headers);
-        $this->assertEquals('666', $this->httpClient->headers[ShoppingBaseService::HDR_AFFILIATE_USER_ID]);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_AFFILIATE_USER_ID, $h->headers);
+        $this->assertEquals('666', $h->headers[ShoppingBaseService::HDR_AFFILIATE_USER_ID]);
     }
 }

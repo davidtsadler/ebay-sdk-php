@@ -27,12 +27,16 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
-        /**
-         * TODO
-         * apiVersion false
-         * appId true
-         * globalId false
-         */
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'appId' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'globalId' => [
+                'valid' => ['string']
+            ]
         ];
     }
 

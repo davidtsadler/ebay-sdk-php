@@ -27,44 +27,65 @@ use DTS\eBaySDK\Mocks\HttpClient;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
+    public function testConfigDefinitions()
     {
-        $this->httpClient = new HttpClient();
-        $this->service = new Service(array(), $this->httpClient);
+        $d = ResolutionCaseManagementBaseService::getConfigDefinitions();
+
+        $this->assertArrayHasKey('apiVersion', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['apiVersion']);
+
+        $this->assertArrayHasKey('authToken', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'required' => true
+        ], $d['authToken']);
+
+        $this->assertArrayHasKey('globalId', $d);
+        $this->assertEquals([
+            'valid' => ['string']
+        ], $d['globalId']);
     }
 
-    public function testCanBeCreated()
+    public function testRequiredEbayHeaders()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Mocks\Service', $this->service);
-    }
+        $h = new HttpClient();
 
-    public function testEbayHeaders()
-    {
-        $this->service->config('authToken', '321');
+        $s = new Service([
+            'authToken' => '321'
+        ], $h);
 
-        $this->service->testOperation();
+        $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN , $this->httpClient->headers);
-        $this->assertEquals('321', $this->httpClient->headers[ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN]);
+        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN , $h->headers);
+        $this->assertEquals('321', $h->headers[ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN]);
 
-        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_OPERATION_NAME, $this->httpClient->headers);
-        $this->assertEquals('testOperation', $this->httpClient->headers[ResolutionCaseManagementBaseService::HDR_OPERATION_NAME]);
+        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_OPERATION_NAME, $h->headers);
+        $this->assertEquals('testOperation', $h->headers[ResolutionCaseManagementBaseService::HDR_OPERATION_NAME]);
 
         // Test that optional headers have not been set until they have been configured.
-        $this->assertArrayNotHasKey(ResolutionCaseManagementBaseService::HDR_API_VERSION, $this->httpClient->headers);
-        $this->assertArrayNotHasKey(ResolutionCaseManagementBaseService::HDR_GLOBAL_ID, $this->httpClient->headers);
+        $this->assertArrayNotHasKey(ResolutionCaseManagementBaseService::HDR_API_VERSION, $h->headers);
+        $this->assertArrayNotHasKey(ResolutionCaseManagementBaseService::HDR_GLOBAL_ID, $h->headers);
+    }
 
-        // Now configure optional headers.
-        $this->service->config('apiVersion', '123');
-        $this->service->config('globalId', '999');
+    public function testOptionalEbayHeaders()
+    {
+        $h = new HttpClient();
 
-        $this->service->testOperation();
+        $s = new Service([
+            'apiVersion' => '123',
+            'authToken' => '321',
+            'globalId' => '999'
+        ], $h);
 
-        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_API_VERSION, $this->httpClient->headers);
-        $this->assertEquals('123', $this->httpClient->headers[ResolutionCaseManagementBaseService::HDR_API_VERSION]);
+        $s->testOperation();
 
-        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_GLOBAL_ID, $this->httpClient->headers);
-        $this->assertEquals('999', $this->httpClient->headers[ResolutionCaseManagementBaseService::HDR_GLOBAL_ID]);
+        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_API_VERSION, $h->headers);
+        $this->assertEquals('123', $h->headers[ResolutionCaseManagementBaseService::HDR_API_VERSION]);
+
+        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_GLOBAL_ID, $h->headers);
+        $this->assertEquals('999', $h->headers[ResolutionCaseManagementBaseService::HDR_GLOBAL_ID]);
     }
 }
