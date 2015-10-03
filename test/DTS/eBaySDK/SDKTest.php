@@ -7,12 +7,49 @@ class SdkTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->sdk = new Sdk();
+        $this->sdk = new Sdk([
+            'apiVersion' => '',
+            'appId' => '',
+            'authToken' => '',
+            'globalId' => '',
+            'siteId' => ''
+        ]);
     }
 
-    public function testCanBeCreated()
+    public function testCanCreateServices()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Sdk', $this->sdk);
+        $s = new Sdk([
+            'appId' => '123',
+            'apiVersion' => '999',
+            'Finding' => [
+                'appId' => '321'
+            ],
+            'Trading' => [
+                'siteId' => '99'
+            ]
+        ]);
+        $f = $s->createFinding();
+        $t = $s->createTrading();
+
+        $this->assertEquals('321', $f->config('appId'));
+        $this->assertEquals('999', $f->config('apiVersion'));
+
+        $this->assertEquals('123', $t->config('appId'));
+        $this->assertEquals('999', $t->config('apiVersion'));
+        $this->assertEquals('99', $t->config('siteId'));
+
+        /**
+         * Options passed in via the create methods overwrite existing.
+         */
+        $t = $s->createTrading([
+            'appId' => '111',
+            'apiVersion' => '222',
+            'siteId' => '333'
+        ]);
+
+        $this->assertEquals('111', $t->config('appId'));
+        $this->assertEquals('222', $t->config('apiVersion'));
+        $this->assertEquals('333', $t->config('siteId'));
     }
 
     public function testCallingUnknownMethod()
@@ -24,41 +61,41 @@ class SdkTest extends \PHPUnit_Framework_TestCase
 
     public function testCanCreateBulkDataExchange()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeService', $this->sdk->createBulkDataExchange(['authToken' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeService', $this->sdk->createBulkDataExchange());
     }
 
     public function testCanCreateBusinessPoliciesManagement()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Services\BusinessPoliciesManagementService', $this->sdk->createBusinessPoliciesManagement(['authToken' => '', 'globalId' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Services\BusinessPoliciesManagementService', $this->sdk->createBusinessPoliciesManagement());
     }
 
     public function testCanCreateFileTransfer()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Services\FileTransferService', $this->sdk->createFileTransfer(['authToken' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Services\FileTransferService', $this->sdk->createFileTransfer());
     }
 
     public function testCanCreateFinding()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Services\FindingService', $this->sdk->createFinding(['appId' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Services\FindingService', $this->sdk->createFinding());
     }
 
     public function testCanCreateHalfFinding()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Services\HalfFindingService', $this->sdk->createHalfFinding(['appId' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Services\HalfFindingService', $this->sdk->createHalfFinding());
     }
 
     public function testCanCreateResolutionCaseManagement()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementService', $this->sdk->createResolutionCaseManagement(['authToken' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementService', $this->sdk->createResolutionCaseManagement());
     }
 
     public function testCanCreateShopping()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Services\ShoppingService', $this->sdk->createShopping(['apiVersion' => '', 'appId' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Services\ShoppingService', $this->sdk->createShopping());
     }
 
     public function testCanCreateTrading()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Services\TradingService', $this->sdk->createTrading(['apiVersion' => '', 'siteId' => '']));
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Services\TradingService', $this->sdk->createTrading());
     }
 }

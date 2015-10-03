@@ -41,3 +41,59 @@ You can create a service object by passing an associative array of configuration
         'apiVersion' => '1.13.0',
         'globalId'   => DTS\eBaySDK\Constants\GlobalIds::US
     ]);
+
+Using the Sdk class
+-------------------
+
+The ``DTS\eBaySDK\Sdk`` class can be used as a factory for creating services. Configuration options passed to this class are shared with any services that it creates.
+
+.. code-block:: php
+
+    // Services will use the 903 version of the api and UK site (Site ID 3).
+    $config = [
+        'apiVersion' => '903',
+        'siteId'     => '3'
+    ];
+
+    // Create an SDK class used to share configuration across services.
+    $sdk = new DTS\eBaySDK\Sdk($config);
+
+    // Create two services that share the same configuration.
+    $trading = $sdk->createTrading();
+    $shopping = $sdk->createShopping();
+
+Configuration options that are in the root-level key-value pairs are shared across all services. You can provide service-specific options by providing a key that is the same name as the service (e.g "Finding", "Trading", etc.).
+
+.. code-block:: php
+
+    $sdk = new DTS\eBaySDK\Sdk([
+        'apiVersion' => '903',
+        'Finding'    => [
+            'apiVersion' => '1.13.0'
+        ]
+    ]);
+
+    // Trading service will use the 903 api version.
+    $trading = $sdk->createTrading();
+
+    // Finding service will instead use the 1.13.0 api version.
+    $finding = $sdk->createFinding();
+
+Service-specific configuration options are deep merged with those provided to the SDK object. Options passed to the various ``create`` methods are also deep merged.
+
+.. code-block:: php
+
+    $sdk = new DTS\eBaySDK\Sdk([
+        'apiVersion' => '903',
+        'siteId' => '3'
+    ]);
+
+    // Both services share options provide by the SDK.
+    $trading = $sdk->createTrading();
+    $shopping = $sdk->createShopping();
+
+    // Finding service will get additional options.
+    $finding = $sdk->createFinding([
+        'apiVersion' => '1.13.0',
+        'globalId' => 'EBAY-GB'
+    ]);

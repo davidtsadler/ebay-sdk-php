@@ -17,8 +17,12 @@ class Sdk
 {
     const VERSION = '1.0.0-beta';
 
-    public function __construct()
+    /** @var array Configuration options for all services. */
+    private $config;
+
+    public function __construct(array $config  = [])
     {
+        $this->config = $config;
     }
 
     public function __call($name, array $args)
@@ -43,7 +47,16 @@ class Sdk
      **/
     public function createService($namespace, array $config  = [])
     {
+        $configuration = $this->config;
+
+        if (isset($this->config[$namespace])) {
+            $configuration = array_merge_deep($configuration, $this->config[$namespace]);
+        }
+
+        $configuration = array_merge_deep($configuration, $config);
+        
         $service = "DTS\\eBaySDK\\{$namespace}\\Services\\{$namespace}Service";
-        return new $service($config);
+
+        return new $service($configuration);
     }
 }
