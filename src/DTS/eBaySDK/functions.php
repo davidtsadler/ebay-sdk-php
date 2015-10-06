@@ -1,6 +1,9 @@
 <?php
 namespace DTS\eBaySDK;
 
+use DTS\eBaySDK\Credentials\Credentials;
+use DTS\eBaySDK\Interfaces\CredentialsInterface;
+
 function describe_type($value)
 {
     switch (gettype($value)) {
@@ -46,3 +49,28 @@ function array_merge_deep_array($arrays) {
 
     return $result;
 }
+
+function apply_credentials($value, array &$configuration)
+{
+    if ($value instanceof CredentialsInterface) {
+        return;
+    } elseif (is_array($value)
+        && isset($value['appId'])      
+        && isset($value['certId'])      
+        && isset($value['devId'])      
+    ) {
+        $configuration['credentials'] = new Credentials(
+            $value['appId'],
+            $value['certId'],
+            $value['devId'],
+            isset($value['authToken']) ? $value['authToken'] : null
+        );
+    } else {
+        throw new \InvalidArgumentException('Credentials must be an instance of '
+            . 'DTS\eBaySDK\Interfaces\CredentialsInterface, an associative '
+            . 'array that contains "appId", "certId", "devId" and an optional "authToken", '
+            . 'or a credentials provider function.'
+        );
+    }
+}
+

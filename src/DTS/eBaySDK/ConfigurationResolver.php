@@ -52,7 +52,7 @@ class ConfigurationResolver
             $this->checkType($def['valid'], $key, $configuration[$key]);
 
             if (isset($def['fn'])) {
-                $configuration[$key] = $def['fn']($configuration[$key]);
+                $def['fn']($configuration[$key], $configuration);
             }
         }
 
@@ -100,3 +100,4 @@ class ConfigurationResolver
         throw new \InvalidArgumentException($msg);
     }
 }
+

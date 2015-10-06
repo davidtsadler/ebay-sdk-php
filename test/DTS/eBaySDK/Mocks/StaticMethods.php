@@ -8,8 +8,9 @@ class StaticMethods
         return -1;
     }
 
-    public static function applyConfigValue($value)
+    public static function applyConfigValue($value, array &$configuration)
     {
-        return $value * 3;
+        $configuration['foo'] = 3;
     }
 }
+

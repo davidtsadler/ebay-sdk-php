@@ -1,4 +1,5 @@
 <?php
+use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
@@ -110,4 +111,36 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\Mocks\HttpClient', $this->service3->httpClient());
         }
     }
+
+    public function testCredentialsInstanceCanBePassed()
+    {
+        $s = new Service([
+            'credentials' => new Credentials('111', '222', '333', '444')
+        ]);
+
+        $c = $s->getCredentials();
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+        $this->assertEquals('444', $c->getAuthToken());
+    }
+
+    public function testCredentialsCanBeHardCoded()
+    {
+        $s = new Service([
+            'credentials' => [
+                'appId' => '111',
+                'authToken' => '222',
+                'certId' => '333',
+                'devId' => '444'
+            ]
+        ]);
+
+        $c = $s->getCredentials();
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getAuthToken());
+        $this->assertEquals('333', $c->getCertId());
+        $this->assertEquals('444', $c->getDevId());
+    }
 }
+

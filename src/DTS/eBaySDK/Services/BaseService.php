@@ -18,9 +18,9 @@
 namespace DTS\eBaySDK\Services;
 
 use DTS\eBaySDK\Parser\XmlParser;
-use \DTS\eBaySDK\Exceptions;
-use \DTS\eBaySDK\HttpClient\HttpClient;
-use \DTS\eBaySDK\ConfigurationResolver;
+use DTS\eBaySDK\Exceptions;
+use DTS\eBaySDK\HttpClient\HttpClient;
+use DTS\eBaySDK\ConfigurationResolver;
 
 /**
  * The base class for every eBay service class.
@@ -65,12 +65,16 @@ abstract class BaseService
     public static function getConfigDefinitions()
     {
         return [
+            'credentials' => [
+                'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array'],
+                'fn'    => 'DTS\eBaySDK\apply_credentials'
+            ],
             'debug' => [
-                'valid' => ['bool'],
+                'valid'   => ['bool'],
                 'default' => false
             ],
             'sandbox' => [
-                'valid' => ['bool'],
+                'valid'   => ['bool'],
                 'default' => false
             ]
         ];
@@ -132,6 +136,14 @@ abstract class BaseService
     public function httpClient()
     {
         return $this->httpClient;
+    }
+
+    /**
+     * @return \DTS\eBaySDK\Interfaces\CredentialsInterface
+     */
+    public function getCredentials()
+    {
+        return $this->config['credentials'];
     }
 
     /**
@@ -335,3 +347,4 @@ abstract class BaseService
         }
     }
 }
+
