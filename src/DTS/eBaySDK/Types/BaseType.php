@@ -140,7 +140,7 @@ class BaseType
     private function toXml($elementName, $rootElement = false)
     {
         return sprintf('%s<%s%s%s>%s</%s>',
-            $rootElement ? '<?xml version="1.0" encoding="UTF-8"?>' : '',
+            $rootElement ? "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" : '',
             $elementName,
             $this->attributesToXml(),
             array_key_exists(get_class($this), self::$xmlNamespaces) ? sprintf(' xmlns="%s"', self::$xmlNamespaces[get_class($this)]) : '',
@@ -427,7 +427,7 @@ class BaseType
             }
         }
 
-        return join('', $properties);
+        return join("\n", $properties);
     }
 
     /**
