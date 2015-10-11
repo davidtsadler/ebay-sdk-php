@@ -25,7 +25,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  *
  * @property string $ProductID
  * @property boolean $IncludeStockPhotoURL
- * @property boolean $IncludePrefilledItemInformation
  * @property boolean $UseStockPhotoURLAsGallery
  * @property string $StockPhotoURL
  * @property string[] $Copyright
@@ -39,6 +38,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\BrandMPNType $BrandMPN
  * @property \DTS\eBaySDK\MerchantData\Types\TicketListingDetailsType $TicketListingDetails
  * @property boolean $UseFirstProduct
+ * @property boolean $IncludeeBayProductDetails
  */
 class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -57,12 +57,6 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeStockPhotoURL'
-        ),
-        'IncludePrefilledItemInformation' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludePrefilledItemInformation'
         ),
         'UseStockPhotoURLAsGallery' => array(
             'type' => 'boolean',
@@ -141,6 +135,12 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UseFirstProduct'
+        ),
+        'IncludeeBayProductDetails' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeeBayProductDetails'
         )
     );
 

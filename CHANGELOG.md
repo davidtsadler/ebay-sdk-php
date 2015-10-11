@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### API
+
+* Support Merchant Data API version 941.
+
 ### Fixes
 
 Order of object properties now matches the order specified in the service WSDL. Some operations require the elements in the XML to be in the correct order. Since the object properties were originally in alphabetical order the resulting XML would not be valid.
