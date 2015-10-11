@@ -64,7 +64,6 @@ namespace DTS\eBaySDK\Shopping\Types;
  * @property \DTS\eBaySDK\Shopping\Types\CharityType $Charity
  * @property \DTS\eBaySDK\Shopping\Types\StorefrontType $Storefront
  * @property \DTS\eBaySDK\Shopping\Enums\CountryCodeType $Country
- * @property integer $WatchCount
  * @property \DTS\eBaySDK\Shopping\Enums\HalfItemConditionCodeType $HalfItemCondition
  * @property string $SellerComments
  * @property \DTS\eBaySDK\Shopping\Types\ReturnPolicyType $ReturnPolicy
@@ -352,12 +351,6 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Country'
-        ),
-        'WatchCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WatchCount'
         ),
         'HalfItemCondition' => array(
             'type' => 'string',

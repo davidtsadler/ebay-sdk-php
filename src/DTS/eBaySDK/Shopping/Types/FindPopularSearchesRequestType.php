@@ -23,12 +23,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string[] $CategoryID
- * @property string[] $QueryKeywords
- * @property integer $MaxKeywords
- * @property integer $MaxResultsPerPage
- * @property integer $PageNumber
- * @property boolean $IncludeChildCategories
  */
 class FindPopularSearchesRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -36,42 +30,6 @@ class FindPopularSearchesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryID' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'QueryKeywords' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'QueryKeywords'
-        ),
-        'MaxKeywords' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxKeywords'
-        ),
-        'MaxResultsPerPage' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxResultsPerPage'
-        ),
-        'PageNumber' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ),
-        'IncludeChildCategories' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeChildCategories'
-        )
     );
 
     /**

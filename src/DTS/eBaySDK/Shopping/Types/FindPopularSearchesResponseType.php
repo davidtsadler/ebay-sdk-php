@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\PopularSearchesType[] $PopularSearchResult
- * @property integer $PageNumber
- * @property integer $TotalPages
  */
 class FindPopularSearchesResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -33,24 +30,6 @@ class FindPopularSearchesResponseType extends \DTS\eBaySDK\Shopping\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PopularSearchResult' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\PopularSearchesType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PopularSearchResult'
-        ),
-        'PageNumber' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ),
-        'TotalPages' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalPages'
-        )
     );
 
     /**

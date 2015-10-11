@@ -5,6 +5,7 @@
 ### API
 
 * Support Merchant Data API version 941.
+* Support Shopping API version 941.
 
 ### Fixes
 
