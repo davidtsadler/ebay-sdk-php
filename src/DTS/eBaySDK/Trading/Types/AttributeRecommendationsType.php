@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AttributeSetArrayType $AttributeSetArray
  */
 class AttributeRecommendationsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class AttributeRecommendationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AttributeSetArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AttributeSetArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeSetArray'
-        )
     );
 
     /**

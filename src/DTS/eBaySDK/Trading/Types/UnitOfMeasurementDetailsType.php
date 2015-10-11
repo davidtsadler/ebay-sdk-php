@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\UnitOfMeasurementType[] $UnitOfMeasurement
- * @property string $DetailVersion
- * @property \DateTime $UpdateTime
  */
 class UnitOfMeasurementDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,24 +30,6 @@ class UnitOfMeasurementDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'UnitOfMeasurement' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UnitOfMeasurementType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'UnitOfMeasurement'
-        ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateTime'
-        )
     );
 
     /**

@@ -44,13 +44,11 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $PostalCode
  * @property string $AddressID
  * @property \DTS\eBaySDK\Trading\Enums\AddressOwnerCodeType $AddressOwner
- * @property \DTS\eBaySDK\Trading\Enums\AddressStatusCodeType $AddressStatus
  * @property string $ExternalAddressID
  * @property string $InternationalName
  * @property string $InternationalStateAndCity
  * @property string $InternationalStreet
  * @property string $CompanyName
- * @property \DTS\eBaySDK\Trading\Enums\AddressRecordTypeCodeType $AddressRecordType
  * @property string $FirstName
  * @property string $LastName
  * @property string $Phone2
@@ -190,12 +188,6 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AddressOwner'
         ),
-        'AddressStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AddressStatus'
-        ),
         'ExternalAddressID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -225,12 +217,6 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompanyName'
-        ),
-        'AddressRecordType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AddressRecordType'
         ),
         'FirstName' => array(
             'type' => 'string',

@@ -34,7 +34,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\URLDetailsType[] $URLDetails
  * @property \DTS\eBaySDK\Trading\Types\TimeZoneDetailsType[] $TimeZoneDetails
  * @property \DTS\eBaySDK\Trading\Types\ItemSpecificDetailsType[] $ItemSpecificDetails
- * @property \DTS\eBaySDK\Trading\Types\UnitOfMeasurementDetailsType[] $UnitOfMeasurementDetails
  * @property \DTS\eBaySDK\Trading\Types\RegionOfOriginDetailsType[] $RegionOfOriginDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingPackageDetailsType[] $ShippingPackageDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingCarrierDetailsType[] $ShippingCarrierDetails
@@ -120,12 +119,6 @@ class GeteBayDetailsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResp
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ItemSpecificDetails'
-        ),
-        'UnitOfMeasurementDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UnitOfMeasurementDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'UnitOfMeasurementDetails'
         ),
         'RegionOfOriginDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\RegionOfOriginDetailsType',

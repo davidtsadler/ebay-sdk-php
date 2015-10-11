@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $currencyID
  */
 class BasicAmountType extends \DTS\eBaySDK\Types\StringType
 {
@@ -31,12 +30,6 @@ class BasicAmountType extends \DTS\eBaySDK\Types\StringType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'currencyID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'currencyID'
-        )
     );
 
     /**
