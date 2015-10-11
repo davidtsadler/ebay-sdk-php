@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property string $ItemID
- * @property string $OrderLineItemID
- * @property string $SKU
  * @property string $TransactionID
+ * @property string $SKU
+ * @property string $OrderLineItemID
  */
 class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,11 +40,11 @@ class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
+        'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'TransactionID'
         ),
         'SKU' => array(
             'type' => 'string',
@@ -52,11 +52,11 @@ class ItemTransactionIDType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SKU'
         ),
-        'TransactionID' => array(
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         )
     );
 

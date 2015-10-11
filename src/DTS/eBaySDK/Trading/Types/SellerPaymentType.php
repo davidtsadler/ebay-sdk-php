@@ -23,20 +23,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
- * @property \DTS\eBaySDK\Trading\Types\AmountType $Commission
- * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
  * @property string $ItemID
- * @property string $OrderID
- * @property string $OrderLineItemID
- * @property \DateTime $PaidTime
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTypeCodeType $PaymentType
- * @property string $PrivateNotes
- * @property string $SellerInventoryID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingReimbursement
- * @property string $Title
  * @property string $TransactionID
+ * @property string $OrderID
+ * @property string $SellerInventoryID
+ * @property string $PrivateNotes
+ * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
+ * @property string $Title
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentTypeCodeType $PaymentType
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TransactionPrice
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingReimbursement
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $Commission
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
+ * @property \DateTime $PaidTime
+ * @property string $OrderLineItemID
  */
 class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -44,77 +44,11 @@ class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AmountPaid' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AmountPaid'
-        ),
-        'Commission' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Commission'
-        ),
-        'ExternalProductID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalProductID'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'OrderID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderID'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'PaidTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaidTime'
-        ),
-        'PaymentType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentType'
-        ),
-        'PrivateNotes' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PrivateNotes'
-        ),
-        'SellerInventoryID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInventoryID'
-        ),
-        'ShippingReimbursement' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingReimbursement'
-        ),
-        'Title' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
         ),
         'TransactionID' => array(
             'type' => 'string',
@@ -122,11 +56,77 @@ class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TransactionID'
         ),
+        'OrderID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderID'
+        ),
+        'SellerInventoryID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerInventoryID'
+        ),
+        'PrivateNotes' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PrivateNotes'
+        ),
+        'ExternalProductID' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalProductID'
+        ),
+        'Title' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Title'
+        ),
+        'PaymentType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentType'
+        ),
         'TransactionPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionPrice'
+        ),
+        'ShippingReimbursement' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingReimbursement'
+        ),
+        'Commission' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Commission'
+        ),
+        'AmountPaid' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AmountPaid'
+        ),
+        'PaidTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaidTime'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $CompatibilityNotes
  * @property \DTS\eBaySDK\Shopping\Types\NameValueListType[] $NameValueList
+ * @property string $CompatibilityNotes
  */
 class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CompatibilityNotes' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CompatibilityNotes'
-        ),
         'NameValueList' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'NameValueList'
+        ),
+        'CompatibilityNotes' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CompatibilityNotes'
         )
     );
 

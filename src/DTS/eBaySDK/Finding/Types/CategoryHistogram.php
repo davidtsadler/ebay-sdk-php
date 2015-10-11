@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\CategoryHistogram[] $childCategoryHistogram
  * @property integer $count
+ * @property \DTS\eBaySDK\Finding\Types\CategoryHistogram[] $childCategoryHistogram
  */
 class CategoryHistogram extends \DTS\eBaySDK\Finding\Types\Category
 {
@@ -32,17 +32,17 @@ class CategoryHistogram extends \DTS\eBaySDK\Finding\Types\Category
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'childCategoryHistogram' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogram',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'childCategoryHistogram'
-        ),
         'count' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'count'
+        ),
+        'childCategoryHistogram' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogram',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'childCategoryHistogram'
         )
     );
 

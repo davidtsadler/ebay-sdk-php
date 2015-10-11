@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $LinkID
- * @property \DTS\eBaySDK\Trading\Enums\StoreCustomListingHeaderLinkCodeType $LinkType
  * @property integer $Order
+ * @property \DTS\eBaySDK\Trading\Enums\StoreCustomListingHeaderLinkCodeType $LinkType
  */
 class StoreCustomListingHeaderLinkType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class StoreCustomListingHeaderLinkType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LinkID'
         ),
-        'LinkType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LinkType'
-        ),
         'Order' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Order'
+        ),
+        'LinkType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LinkType'
         )
     );
 

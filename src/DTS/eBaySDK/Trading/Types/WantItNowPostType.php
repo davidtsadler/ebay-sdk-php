@@ -26,9 +26,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $CategoryID
  * @property string $Description
  * @property string $PostID
- * @property integer $ResponseCount
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
  * @property \DateTime $StartTime
+ * @property integer $ResponseCount
  * @property string $Title
  */
 class WantItNowPostType extends \DTS\eBaySDK\Types\BaseType
@@ -55,12 +55,6 @@ class WantItNowPostType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PostID'
         ),
-        'ResponseCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseCount'
-        ),
         'Site' => array(
             'type' => 'string',
             'unbound' => false,
@@ -72,6 +66,12 @@ class WantItNowPostType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
+        ),
+        'ResponseCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ResponseCount'
         ),
         'Title' => array(
             'type' => 'string',

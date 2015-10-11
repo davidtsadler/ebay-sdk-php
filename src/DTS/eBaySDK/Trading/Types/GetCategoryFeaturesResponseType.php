@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CategoryFeatureType[] $Category
  * @property string $CategoryVersion
- * @property \DTS\eBaySDK\Trading\Types\FeatureDefinitionsType $FeatureDefinitions
- * @property \DTS\eBaySDK\Trading\Types\SiteDefaultsType $SiteDefaults
  * @property \DateTime $UpdateTime
+ * @property \DTS\eBaySDK\Trading\Types\CategoryFeatureType[] $Category
+ * @property \DTS\eBaySDK\Trading\Types\SiteDefaultsType $SiteDefaults
+ * @property \DTS\eBaySDK\Trading\Types\FeatureDefinitionsType $FeatureDefinitions
  */
 class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -35,23 +35,23 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Category'
-        ),
         'CategoryVersion' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
         ),
-        'FeatureDefinitions' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
+        'UpdateTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeatureDefinitions'
+            'elementName' => 'UpdateTime'
+        ),
+        'Category' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Category'
         ),
         'SiteDefaults' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SiteDefaultsType',
@@ -59,11 +59,11 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'SiteDefaults'
         ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
+        'FeatureDefinitions' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UpdateTime'
+            'elementName' => 'FeatureDefinitions'
         )
     );
 

@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Comments
- * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $ListingDuration
- * @property \DTS\eBaySDK\Trading\Types\AmountType $NegotiatedPrice
- * @property string $RecipientPostalCode
- * @property \DTS\eBaySDK\Trading\Enums\RecipientRelationCodeType $RecipientRelationType
  * @property string $RecipientUserID
  * @property string $VerifyEligibilityOnly
+ * @property string $RecipientPostalCode
+ * @property \DTS\eBaySDK\Trading\Enums\RecipientRelationCodeType $RecipientRelationType
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $NegotiatedPrice
+ * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $ListingDuration
+ * @property string $ItemID
+ * @property string $Comments
  */
 class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,29 +38,17 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Comments' => array(
+        'RecipientUserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Comments'
+            'elementName' => 'RecipientUserID'
         ),
-        'ItemID' => array(
+        'VerifyEligibilityOnly' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'ListingDuration' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingDuration'
-        ),
-        'NegotiatedPrice' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NegotiatedPrice'
+            'elementName' => 'VerifyEligibilityOnly'
         ),
         'RecipientPostalCode' => array(
             'type' => 'string',
@@ -74,17 +62,29 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
             'attribute' => false,
             'elementName' => 'RecipientRelationType'
         ),
-        'RecipientUserID' => array(
-            'type' => 'string',
+        'NegotiatedPrice' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RecipientUserID'
+            'elementName' => 'NegotiatedPrice'
         ),
-        'VerifyEligibilityOnly' => array(
+        'ListingDuration' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VerifyEligibilityOnly'
+            'elementName' => 'ListingDuration'
+        ),
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
+        'Comments' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Comments'
         )
     );
 

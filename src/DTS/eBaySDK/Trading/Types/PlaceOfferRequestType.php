@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType $AffiliateTrackingDetails
- * @property boolean $BlockOnWarning
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\OfferType $Offer
+ * @property string $ItemID
+ * @property boolean $BlockOnWarning
+ * @property \DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType $AffiliateTrackingDetails
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
  */
 class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -35,17 +35,11 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AffiliateTrackingDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType',
+        'Offer' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AffiliateTrackingDetails'
-        ),
-        'BlockOnWarning' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BlockOnWarning'
+            'elementName' => 'Offer'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -53,11 +47,17 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'Offer' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
+        'BlockOnWarning' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Offer'
+            'elementName' => 'BlockOnWarning'
+        ),
+        'AffiliateTrackingDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AffiliateTrackingDetails'
         ),
         'VariationSpecifics' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',

@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $CaseGlobalId
- * @property string $CaseId
- * @property string $CaseStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseType $CaseType
- * @property \DateTime $CreationDate
- * @property string $ExternalUserData
- * @property string $ItemId
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\NotificationEventNameType $NotificationEventName
+ * @property string $RecipientUserID
+ * @property string $ExternalUserData
+ * @property string $CaseId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseType $CaseType
+ * @property string $ItemId
+ * @property string $TransactionId
+ * @property \DateTime $CreationDate
  * @property string $OtherPartyId
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseUserRoleType $OtherPartyRole
- * @property string $RecipientUserID
- * @property string $TransactionId
+ * @property string $CaseStatus
+ * @property string $CaseGlobalId
  */
 class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,35 +42,17 @@ class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CaseGlobalId' => array(
+        'NotificationEventName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CaseGlobalId'
+            'elementName' => 'NotificationEventName'
         ),
-        'CaseId' => array(
+        'RecipientUserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CaseId'
-        ),
-        'CaseStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CaseStatus'
-        ),
-        'CaseType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CaseType'
-        ),
-        'CreationDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreationDate'
+            'elementName' => 'RecipientUserID'
         ),
         'ExternalUserData' => array(
             'type' => 'string',
@@ -78,17 +60,35 @@ class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExternalUserData'
         ),
+        'CaseId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CaseId'
+        ),
+        'CaseType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CaseType'
+        ),
         'ItemId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemId'
         ),
-        'NotificationEventName' => array(
+        'TransactionId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'NotificationEventName'
+            'elementName' => 'TransactionId'
+        ),
+        'CreationDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationDate'
         ),
         'OtherPartyId' => array(
             'type' => 'string',
@@ -102,17 +102,17 @@ class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OtherPartyRole'
         ),
-        'RecipientUserID' => array(
+        'CaseStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RecipientUserID'
+            'elementName' => 'CaseStatus'
         ),
-        'TransactionId' => array(
+        'CaseGlobalId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionId'
+            'elementName' => 'CaseGlobalId'
         )
     );
 

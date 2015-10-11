@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\TaxIdentifierAttributeType[] $Attribute
- * @property string $ID
  * @property \DTS\eBaySDK\MerchantData\Enums\ValueTypeCodeType $Type
+ * @property string $ID
+ * @property \DTS\eBaySDK\MerchantData\Types\TaxIdentifierAttributeType[] $Attribute
  */
 class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Attribute' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxIdentifierAttributeType',
-            'unbound' => true,
+        'Type' => array(
+            'type' => 'string',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Attribute'
+            'elementName' => 'Type'
         ),
         'ID' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ID'
         ),
-        'Type' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'Attribute' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxIdentifierAttributeType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'Attribute'
         )
     );
 

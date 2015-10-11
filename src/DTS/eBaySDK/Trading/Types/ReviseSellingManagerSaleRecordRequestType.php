@@ -24,10 +24,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $OrderID
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType $SellingManagerSoldOrder
  * @property string $TransactionID
+ * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType $SellingManagerSoldOrder
+ * @property string $OrderLineItemID
  */
 class ReviseSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -41,17 +41,17 @@ class ReviseSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Typ
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
+        'TransactionID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
+        ),
         'OrderID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
         ),
         'SellingManagerSoldOrder' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
@@ -59,11 +59,11 @@ class ReviseSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Typ
             'attribute' => false,
             'elementName' => 'SellingManagerSoldOrder'
         ),
-        'TransactionID' => array(
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         )
     );
 

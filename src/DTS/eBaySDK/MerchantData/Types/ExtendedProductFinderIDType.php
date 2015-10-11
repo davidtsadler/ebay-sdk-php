@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $ProductFinderBuySide
  * @property integer $ProductFinderID
+ * @property boolean $ProductFinderBuySide
  */
 class ExtendedProductFinderIDType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ExtendedProductFinderIDType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ProductFinderBuySide' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductFinderBuySide'
-        ),
         'ProductFinderID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductFinderID'
+        ),
+        'ProductFinderBuySide' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductFinderBuySide'
         )
     );
 

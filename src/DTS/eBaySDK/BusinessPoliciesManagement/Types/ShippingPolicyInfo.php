@@ -23,26 +23,26 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $EligibleForPickupDropOff
- * @property boolean $GlobalShipping
+ * @property string $shippingPolicyName
+ * @property string $domesticShippingType
+ * @property string $intlShippingType
  * @property integer $dispatchTimeMax
  * @property string $dispatchTimeReason
- * @property string $domesticRateTable
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService[] $domesticShippingPolicyInfoService
- * @property string $domesticShippingType
- * @property string[] $excludeShipToLocation
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\FreightShipping $freightShipping
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Insurance $insurance
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $internationalPackagingHandlingCosts
- * @property string $intlRateTable
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService[] $intlShippingPolicyInfoService
- * @property string $intlShippingType
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $packagingHandlingCosts
- * @property string[] $shipToLocations
  * @property string $shippingOption
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\IsoCurrencyCode $shippingPolicyCurrency
- * @property string $shippingPolicyName
+ * @property string[] $excludeShipToLocation
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingProfileDiscountInfo $shippingProfileDiscountInfo
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\FreightShipping $freightShipping
+ * @property string[] $shipToLocations
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService[] $domesticShippingPolicyInfoService
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService[] $intlShippingPolicyInfoService
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Insurance $insurance
+ * @property string $intlRateTable
+ * @property string $domesticRateTable
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $packagingHandlingCosts
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $internationalPackagingHandlingCosts
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\IsoCurrencyCode $shippingPolicyCurrency
+ * @property boolean $GlobalShipping
+ * @property boolean $EligibleForPickupDropOff
  */
 class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -50,17 +50,23 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EligibleForPickupDropOff' => array(
-            'type' => 'boolean',
+        'shippingPolicyName' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EligibleForPickupDropOff'
+            'elementName' => 'shippingPolicyName'
         ),
-        'GlobalShipping' => array(
-            'type' => 'boolean',
+        'domesticShippingType' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'GlobalShipping'
+            'elementName' => 'domesticShippingType'
+        ),
+        'intlShippingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'intlShippingType'
         ),
         'dispatchTimeMax' => array(
             'type' => 'integer',
@@ -74,23 +80,11 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'dispatchTimeReason'
         ),
-        'domesticRateTable' => array(
+        'shippingOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'domesticRateTable'
-        ),
-        'domesticShippingPolicyInfoService' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'domesticShippingPolicyInfoService'
-        ),
-        'domesticShippingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'domesticShippingType'
+            'elementName' => 'shippingOption'
         ),
         'excludeShipToLocation' => array(
             'type' => 'string',
@@ -98,47 +92,17 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'excludeShipToLocation'
         ),
+        'shippingProfileDiscountInfo' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingProfileDiscountInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingProfileDiscountInfo'
+        ),
         'freightShipping' => array(
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\FreightShipping',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'freightShipping'
-        ),
-        'insurance' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Insurance',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'insurance'
-        ),
-        'internationalPackagingHandlingCosts' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'internationalPackagingHandlingCosts'
-        ),
-        'intlRateTable' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'intlRateTable'
-        ),
-        'intlShippingPolicyInfoService' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'intlShippingPolicyInfoService'
-        ),
-        'intlShippingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'intlShippingType'
-        ),
-        'packagingHandlingCosts' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'packagingHandlingCosts'
         ),
         'shipToLocations' => array(
             'type' => 'string',
@@ -146,11 +110,47 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shipToLocations'
         ),
-        'shippingOption' => array(
+        'domesticShippingPolicyInfoService' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'domesticShippingPolicyInfoService'
+        ),
+        'intlShippingPolicyInfoService' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'intlShippingPolicyInfoService'
+        ),
+        'insurance' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Insurance',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'insurance'
+        ),
+        'intlRateTable' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'shippingOption'
+            'elementName' => 'intlRateTable'
+        ),
+        'domesticRateTable' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'domesticRateTable'
+        ),
+        'packagingHandlingCosts' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'packagingHandlingCosts'
+        ),
+        'internationalPackagingHandlingCosts' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'internationalPackagingHandlingCosts'
         ),
         'shippingPolicyCurrency' => array(
             'type' => 'string',
@@ -158,17 +158,17 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingPolicyCurrency'
         ),
-        'shippingPolicyName' => array(
-            'type' => 'string',
+        'GlobalShipping' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'shippingPolicyName'
+            'elementName' => 'GlobalShipping'
         ),
-        'shippingProfileDiscountInfo' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingProfileDiscountInfo',
+        'EligibleForPickupDropOff' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'shippingProfileDiscountInfo'
+            'elementName' => 'EligibleForPickupDropOff'
         )
     );
 

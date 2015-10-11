@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $DeletedField
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType $SellingManagerFolderDetails
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType $SellingManagerFolderDetails
+ * @property string[] $DeletedField
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
  */
 class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -34,11 +34,11 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeletedField' => array(
-            'type' => 'string',
-            'unbound' => true,
+        'SellingManagerProductDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DeletedField'
+            'elementName' => 'SellingManagerProductDetails'
         ),
         'SellingManagerFolderDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
@@ -46,11 +46,11 @@ class ReviseSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'SellingManagerFolderDetails'
         ),
-        'SellingManagerProductDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'unbound' => false,
+        'DeletedField' => array(
+            'type' => 'string',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'SellingManagerProductDetails'
+            'elementName' => 'DeletedField'
         ),
         'SellingManagerProductSpecifics' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',

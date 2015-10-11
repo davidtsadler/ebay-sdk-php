@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailTypeCodeType $EmailType
  * @property string $CustomEmailName
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailSentStatusCodeType $EmailState
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerEmailTypeCodeType $EmailType
  * @property \DateTime $EventTime
  */
 class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
@@ -34,6 +34,12 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'EmailType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EmailType'
+        ),
         'CustomEmailName' => array(
             'type' => 'string',
             'unbound' => false,
@@ -45,12 +51,6 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailState'
-        ),
-        'EmailType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EmailType'
         ),
         'EventTime' => array(
             'type' => 'DateTime',

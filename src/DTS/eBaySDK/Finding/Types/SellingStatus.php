@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property integer $bidCount
- * @property \DTS\eBaySDK\Finding\Types\Amount $convertedCurrentPrice
  * @property \DTS\eBaySDK\Finding\Types\Amount $currentPrice
+ * @property \DTS\eBaySDK\Finding\Types\Amount $convertedCurrentPrice
+ * @property integer $bidCount
  * @property string $sellingState
  * @property string $timeLeft
  */
@@ -35,11 +35,11 @@ class SellingStatus extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'bidCount' => array(
-            'type' => 'integer',
+        'currentPrice' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'bidCount'
+            'elementName' => 'currentPrice'
         ),
         'convertedCurrentPrice' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
@@ -47,11 +47,11 @@ class SellingStatus extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'convertedCurrentPrice'
         ),
-        'currentPrice' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Amount',
+        'bidCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'currentPrice'
+            'elementName' => 'bidCount'
         ),
         'sellingState' => array(
             'type' => 'string',

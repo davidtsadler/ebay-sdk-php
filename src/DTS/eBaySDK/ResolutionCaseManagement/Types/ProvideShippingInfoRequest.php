@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $carrierUsed
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
- * @property string $comments
+ * @property string $carrierUsed
  * @property \DateTime $shippedDate
+ * @property string $comments
  */
 class ProvideShippingInfoRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
 {
@@ -34,29 +34,29 @@ class ProvideShippingInfoRequest extends \DTS\eBaySDK\ResolutionCaseManagement\T
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'carrierUsed' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'carrierUsed'
-        ),
         'caseId' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ),
-        'comments' => array(
+        'carrierUsed' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'comments'
+            'elementName' => 'carrierUsed'
         ),
         'shippedDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippedDate'
+        ),
+        'comments' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'comments'
         )
     );
 

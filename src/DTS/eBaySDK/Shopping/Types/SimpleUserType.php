@@ -23,28 +23,28 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $AboutMeURL
- * @property string $FeedbackDetailsURL
+ * @property string $UserID
  * @property boolean $FeedbackPrivate
  * @property \DTS\eBaySDK\Shopping\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
  * @property integer $FeedbackScore
- * @property string $MyWorldLargeImage
- * @property string $MyWorldSmallImage
- * @property string $MyWorldURL
+ * @property boolean $UserAnonymized
  * @property boolean $NewUser
- * @property double $PositiveFeedbackPercent
  * @property \DateTime $RegistrationDate
  * @property \DTS\eBaySDK\Shopping\Enums\SiteCodeType $RegistrationSite
- * @property string $ReviewsAndGuidesURL
- * @property \DTS\eBaySDK\Shopping\Enums\SellerBusinessCodeType $SellerBusinessType
- * @property string $SellerItemsURL
- * @property \DTS\eBaySDK\Shopping\Enums\SellerLevelCodeType $SellerLevel
  * @property \DTS\eBaySDK\Shopping\Enums\UserStatusCodeType $Status
- * @property string $StoreName
+ * @property \DTS\eBaySDK\Shopping\Enums\SellerBusinessCodeType $SellerBusinessType
  * @property string $StoreURL
+ * @property string $StoreName
+ * @property string $SellerItemsURL
+ * @property string $AboutMeURL
+ * @property string $MyWorldURL
+ * @property string $MyWorldSmallImage
+ * @property string $MyWorldLargeImage
+ * @property string $ReviewsAndGuidesURL
+ * @property string $FeedbackDetailsURL
+ * @property double $PositiveFeedbackPercent
+ * @property \DTS\eBaySDK\Shopping\Enums\SellerLevelCodeType $SellerLevel
  * @property boolean $TopRatedSeller
- * @property boolean $UserAnonymized
- * @property string $UserID
  */
 class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -52,17 +52,11 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AboutMeURL' => array(
+        'UserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AboutMeURL'
-        ),
-        'FeedbackDetailsURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackDetailsURL'
+            'elementName' => 'UserID'
         ),
         'FeedbackPrivate' => array(
             'type' => 'boolean',
@@ -82,35 +76,17 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackScore'
         ),
-        'MyWorldLargeImage' => array(
-            'type' => 'string',
+        'UserAnonymized' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'MyWorldLargeImage'
-        ),
-        'MyWorldSmallImage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MyWorldSmallImage'
-        ),
-        'MyWorldURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MyWorldURL'
+            'elementName' => 'UserAnonymized'
         ),
         'NewUser' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewUser'
-        ),
-        'PositiveFeedbackPercent' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PositiveFeedbackPercent'
         ),
         'RegistrationDate' => array(
             'type' => 'DateTime',
@@ -124,11 +100,11 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RegistrationSite'
         ),
-        'ReviewsAndGuidesURL' => array(
+        'Status' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ReviewsAndGuidesURL'
+            'elementName' => 'Status'
         ),
         'SellerBusinessType' => array(
             'type' => 'string',
@@ -136,23 +112,11 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerBusinessType'
         ),
-        'SellerItemsURL' => array(
+        'StoreURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SellerItemsURL'
-        ),
-        'SellerLevel' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerLevel'
-        ),
-        'Status' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'StoreURL'
         ),
         'StoreName' => array(
             'type' => 'string',
@@ -160,29 +124,65 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StoreName'
         ),
-        'StoreURL' => array(
+        'SellerItemsURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StoreURL'
+            'elementName' => 'SellerItemsURL'
+        ),
+        'AboutMeURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AboutMeURL'
+        ),
+        'MyWorldURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MyWorldURL'
+        ),
+        'MyWorldSmallImage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MyWorldSmallImage'
+        ),
+        'MyWorldLargeImage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MyWorldLargeImage'
+        ),
+        'ReviewsAndGuidesURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReviewsAndGuidesURL'
+        ),
+        'FeedbackDetailsURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackDetailsURL'
+        ),
+        'PositiveFeedbackPercent' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PositiveFeedbackPercent'
+        ),
+        'SellerLevel' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerLevel'
         ),
         'TopRatedSeller' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TopRatedSeller'
-        ),
-        'UserAnonymized' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserAnonymized'
-        ),
-        'UserID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
         )
     );
 

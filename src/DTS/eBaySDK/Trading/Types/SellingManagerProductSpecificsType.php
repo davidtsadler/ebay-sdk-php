@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
  * @property string $PrimaryCategoryID
  * @property \DTS\eBaySDK\Trading\Types\VariationsType $Variations
+ * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
  */
 class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemSpecifics' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSpecifics'
-        ),
         'PrimaryCategoryID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class SellingManagerProductSpecificsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Variations'
+        ),
+        'ItemSpecifics' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSpecifics'
         )
     );
 

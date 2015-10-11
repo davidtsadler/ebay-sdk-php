@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $CopyEmailToRightsOwner
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType[] $Country
- * @property string $DetailedMessage
  * @property string $ItemID
- * @property string $MessageToSeller
- * @property string $Patent
- * @property \DTS\eBaySDK\Trading\Enums\ShippingRegionCodeType[] $Region
  * @property integer $VeROReasonCodeID
+ * @property string $MessageToSeller
+ * @property boolean $CopyEmailToRightsOwner
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingRegionCodeType[] $Region
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType[] $Country
+ * @property string $Patent
+ * @property string $DetailedMessage
  */
 class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,29 +38,17 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CopyEmailToRightsOwner' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CopyEmailToRightsOwner'
-        ),
-        'Country' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Country'
-        ),
-        'DetailedMessage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailedMessage'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'VeROReasonCodeID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VeROReasonCodeID'
         ),
         'MessageToSeller' => array(
             'type' => 'string',
@@ -68,11 +56,11 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MessageToSeller'
         ),
-        'Patent' => array(
-            'type' => 'string',
+        'CopyEmailToRightsOwner' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Patent'
+            'elementName' => 'CopyEmailToRightsOwner'
         ),
         'Region' => array(
             'type' => 'string',
@@ -80,11 +68,23 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Region'
         ),
-        'VeROReasonCodeID' => array(
-            'type' => 'integer',
+        'Country' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Country'
+        ),
+        'Patent' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VeROReasonCodeID'
+            'elementName' => 'Patent'
+        ),
+        'DetailedMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailedMessage'
         )
     );
 

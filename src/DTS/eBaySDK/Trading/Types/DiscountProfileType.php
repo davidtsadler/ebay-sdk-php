@@ -28,8 +28,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $EachAdditionalAmountOff
  * @property double $EachAdditionalPercentOff
- * @property string $MappedDiscountProfileID
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $WeightOff
+ * @property string $MappedDiscountProfileID
  */
 class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -67,17 +67,17 @@ class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EachAdditionalPercentOff'
         ),
-        'MappedDiscountProfileID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MappedDiscountProfileID'
-        ),
         'WeightOff' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightOff'
+        ),
+        'MappedDiscountProfileID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MappedDiscountProfileID'
         )
     );
 

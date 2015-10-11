@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $CODCost
- * @property string[] $ExcludeShipToLocation
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $InsuranceCost
  * @property \DTS\eBaySDK\Shopping\Enums\InsuranceOptionCodeType $InsuranceOption
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $InternationalInsuranceCost
- * @property \DTS\eBaySDK\Shopping\Enums\InsuranceOptionCodeType $InternationalInsuranceOption
  * @property \DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType[] $InternationalShippingServiceOption
  * @property \DTS\eBaySDK\Shopping\Types\SalesTaxType $SalesTax
  * @property string $ShippingRateErrorMessage
  * @property \DTS\eBaySDK\Shopping\Types\ShippingServiceOptionType[] $ShippingServiceOption
  * @property \DTS\eBaySDK\Shopping\Types\TaxTableType $TaxTable
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $InternationalInsuranceCost
+ * @property \DTS\eBaySDK\Shopping\Enums\InsuranceOptionCodeType $InternationalInsuranceOption
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $CODCost
+ * @property string[] $ExcludeShipToLocation
  */
 class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,18 +41,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CODCost' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CODCost'
-        ),
-        'ExcludeShipToLocation' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExcludeShipToLocation'
-        ),
         'InsuranceCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
@@ -64,18 +52,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
-        ),
-        'InternationalInsuranceCost' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalInsuranceCost'
-        ),
-        'InternationalInsuranceOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalInsuranceOption'
         ),
         'InternationalShippingServiceOption' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType',
@@ -106,6 +82,30 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
+        ),
+        'InternationalInsuranceCost' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalInsuranceCost'
+        ),
+        'InternationalInsuranceOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalInsuranceOption'
+        ),
+        'CODCost' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CODCost'
+        ),
+        'ExcludeShipToLocation' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExcludeShipToLocation'
         )
     );
 

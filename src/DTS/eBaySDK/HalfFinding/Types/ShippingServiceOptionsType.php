@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\HalfFinding\Enums\Type $type
  * @property \DTS\eBaySDK\HalfFinding\Types\Amount $cost
  * @property boolean $expeditedService
- * @property \DTS\eBaySDK\HalfFinding\Enums\Type $type
  */
 class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'type' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'type'
+        ),
         'cost' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
             'unbound' => false,
@@ -44,12 +50,6 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'expeditedService'
-        ),
-        'type' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'type'
         )
     );
 

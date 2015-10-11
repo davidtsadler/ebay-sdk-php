@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\MerchantData\Types\FeesType $Fees
  * @property string $ItemID
- * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
- * @property \DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType $ProductSuggestions
  * @property string $SKU
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\MerchantData\Types\FeesType $Fees
+ * @property string $CategoryID
+ * @property string $Category2ID
+ * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
  */
 class AddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractResponseType
 {
@@ -40,23 +40,23 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Types\Abst
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'ItemID'
         ),
-        'CategoryID' => array(
+        'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'SKU'
         ),
-        'DiscountReason' => array(
-            'type' => 'string',
-            'unbound' => true,
+        'StartTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'StartTime'
         ),
         'EndTime' => array(
             'type' => 'DateTime',
@@ -70,17 +70,23 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Types\Abst
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'CategoryID'
         ),
-        'ListingRecommendations' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
+        'Category2ID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'Category2ID'
+        ),
+        'DiscountReason' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
         ),
         'ProductSuggestions' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType',
@@ -88,17 +94,11 @@ class AddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Types\Abst
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ),
-        'SKU' => array(
-            'type' => 'string',
+        'ListingRecommendations' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SKU'
-        ),
-        'StartTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'ListingRecommendations'
         )
     );
 

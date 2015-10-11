@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\Shopping\Types;
  *
  * @property \DTS\eBaySDK\Shopping\Types\CategoryArrayType $CategoryArray
  * @property integer $CategoryCount
- * @property string $CategoryVersion
  * @property \DateTime $UpdateTime
+ * @property string $CategoryVersion
  */
 class GetCategoryInfoResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -46,17 +46,17 @@ class GetCategoryInfoResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'CategoryCount'
         ),
-        'CategoryVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryVersion'
-        ),
         'UpdateTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
+        ),
+        'CategoryVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryVersion'
         )
     );
 

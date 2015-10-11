@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
+ * @property string $trackingId
+ * @property string $networkId
  * @property string $customId
  * @property boolean $geoTargeting
- * @property string $networkId
- * @property string $trackingId
  */
 class Affiliate extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,6 +34,18 @@ class Affiliate extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'trackingId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'trackingId'
+        ),
+        'networkId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'networkId'
+        ),
         'customId' => array(
             'type' => 'string',
             'unbound' => false,
@@ -45,18 +57,6 @@ class Affiliate extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'geoTargeting'
-        ),
-        'networkId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'networkId'
-        ),
-        'trackingId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'trackingId'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\TaxIdentifierType[] $BuyerTaxIdentifier
  * @property \DTS\eBaySDK\MerchantData\Types\AddressType $ShippingAddress
+ * @property \DTS\eBaySDK\MerchantData\Types\TaxIdentifierType[] $BuyerTaxIdentifier
  */
 class BuyerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class BuyerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BuyerTaxIdentifier' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxIdentifierType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'BuyerTaxIdentifier'
-        ),
         'ShippingAddress' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
+        ),
+        'BuyerTaxIdentifier' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxIdentifierType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'BuyerTaxIdentifier'
         )
     );
 

@@ -25,22 +25,22 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $AdditionalInformation
  * @property \DTS\eBaySDK\Trading\Types\AddressType $Address
- * @property boolean $Answer1
- * @property boolean $Answer2
  * @property string $BestTimeToCall
  * @property string $Email
- * @property string $ExternalEmail
- * @property boolean $FinancingAnswer
+ * @property \DateTime $SubmittedTime
  * @property string $ItemID
  * @property string $ItemTitle
+ * @property string $UserID
  * @property \DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType $MemberMessage
- * @property string $PurchaseTimeFrame
  * @property \DTS\eBaySDK\Trading\Enums\AdFormatLeadStatusCodeType $Status
- * @property \DateTime $SubmittedTime
+ * @property string $ExternalEmail
+ * @property string $PurchaseTimeFrame
+ * @property string $TradeInYear
  * @property string $TradeInMake
  * @property string $TradeInModel
- * @property string $TradeInYear
- * @property string $UserID
+ * @property boolean $FinancingAnswer
+ * @property boolean $Answer1
+ * @property boolean $Answer2
  */
 class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -60,18 +60,6 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Address'
         ),
-        'Answer1' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Answer1'
-        ),
-        'Answer2' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Answer2'
-        ),
         'BestTimeToCall' => array(
             'type' => 'string',
             'unbound' => false,
@@ -84,17 +72,11 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Email'
         ),
-        'ExternalEmail' => array(
-            'type' => 'string',
+        'SubmittedTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ExternalEmail'
-        ),
-        'FinancingAnswer' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FinancingAnswer'
+            'elementName' => 'SubmittedTime'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -108,17 +90,17 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemTitle'
         ),
+        'UserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
+        ),
         'MemberMessage' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        ),
-        'PurchaseTimeFrame' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PurchaseTimeFrame'
         ),
         'Status' => array(
             'type' => 'string',
@@ -126,11 +108,23 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Status'
         ),
-        'SubmittedTime' => array(
-            'type' => 'DateTime',
+        'ExternalEmail' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SubmittedTime'
+            'elementName' => 'ExternalEmail'
+        ),
+        'PurchaseTimeFrame' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PurchaseTimeFrame'
+        ),
+        'TradeInYear' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TradeInYear'
         ),
         'TradeInMake' => array(
             'type' => 'string',
@@ -144,17 +138,23 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TradeInModel'
         ),
-        'TradeInYear' => array(
-            'type' => 'string',
+        'FinancingAnswer' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TradeInYear'
+            'elementName' => 'FinancingAnswer'
         ),
-        'UserID' => array(
-            'type' => 'string',
+        'Answer1' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'Answer1'
+        ),
+        'Answer2' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Answer2'
         )
     );
 

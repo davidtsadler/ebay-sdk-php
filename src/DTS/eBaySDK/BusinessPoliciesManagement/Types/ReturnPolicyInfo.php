@@ -24,15 +24,15 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 /**
  *
  * @property string $description
- * @property string $holidayReturns
  * @property string $refundOption
- * @property string $restockingFeeValue
- * @property string $returnsAcceptedOption
- * @property string $returnsWithinOption
  * @property string $shippingCostPaidByOption
- * @property string $warrantyDurationOption
+ * @property string $returnsWithinOption
+ * @property string $returnsAcceptedOption
  * @property string $warrantyOfferedOption
  * @property string $warrantyTypeOption
+ * @property string $warrantyDurationOption
+ * @property string $restockingFeeValue
+ * @property string $holidayReturns
  */
 class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,35 +46,11 @@ class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'description'
         ),
-        'holidayReturns' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'holidayReturns'
-        ),
         'refundOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'refundOption'
-        ),
-        'restockingFeeValue' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'restockingFeeValue'
-        ),
-        'returnsAcceptedOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'returnsAcceptedOption'
-        ),
-        'returnsWithinOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'returnsWithinOption'
         ),
         'shippingCostPaidByOption' => array(
             'type' => 'string',
@@ -82,11 +58,17 @@ class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingCostPaidByOption'
         ),
-        'warrantyDurationOption' => array(
+        'returnsWithinOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'warrantyDurationOption'
+            'elementName' => 'returnsWithinOption'
+        ),
+        'returnsAcceptedOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'returnsAcceptedOption'
         ),
         'warrantyOfferedOption' => array(
             'type' => 'string',
@@ -99,6 +81,24 @@ class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'warrantyTypeOption'
+        ),
+        'warrantyDurationOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'warrantyDurationOption'
+        ),
+        'restockingFeeValue' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'restockingFeeValue'
+        ),
+        'holidayReturns' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'holidayReturns'
         )
     );
 

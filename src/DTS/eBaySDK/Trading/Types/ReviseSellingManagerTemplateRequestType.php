@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $DeletedField
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property integer $ProductID
  * @property integer $SaleTemplateID
+ * @property integer $ProductID
  * @property string $SaleTemplateName
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property string[] $DeletedField
  * @property boolean $VerifyOnly
  */
 class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -36,17 +36,11 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeletedField' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DeletedField'
-        ),
-        'Item' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+        'SaleTemplateID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Item'
+            'elementName' => 'SaleTemplateID'
         ),
         'ProductID' => array(
             'type' => 'integer',
@@ -54,17 +48,23 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
             'attribute' => false,
             'elementName' => 'ProductID'
         ),
-        'SaleTemplateID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateID'
-        ),
         'SaleTemplateName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
+        ),
+        'Item' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
+        ),
+        'DeletedField' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DeletedField'
         ),
         'VerifyOnly' => array(
             'type' => 'boolean',

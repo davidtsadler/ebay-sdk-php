@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $IncludeSelector
  * @property string $UserID
+ * @property string $IncludeSelector
  */
 class GetUserProfileRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class GetUserProfileRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeSelector' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeSelector'
-        ),
         'UserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
+        ),
+        'IncludeSelector' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeSelector'
         )
     );
 

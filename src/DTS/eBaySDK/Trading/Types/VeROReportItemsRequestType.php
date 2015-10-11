@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\VeROReportItemsType $ReportItems
  * @property string $RightsOwnerID
+ * @property \DTS\eBaySDK\Trading\Types\VeROReportItemsType $ReportItems
  */
 class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ReportItems' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\VeROReportItemsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReportItems'
-        ),
         'RightsOwnerID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RightsOwnerID'
+        ),
+        'ReportItems' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\VeROReportItemsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReportItems'
         )
     );
 

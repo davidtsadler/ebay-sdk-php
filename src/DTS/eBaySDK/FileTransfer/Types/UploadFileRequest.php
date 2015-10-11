@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\FileTransfer\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\FileTransfer\Types\FileAttachment $fileAttachment
- * @property string $fileFormat
- * @property string $fileReferenceId
  * @property string $taskReferenceId
+ * @property string $fileReferenceId
+ * @property string $fileFormat
+ * @property \DTS\eBaySDK\FileTransfer\Types\FileAttachment $fileAttachment
  */
 class UploadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceRequest
 {
@@ -34,17 +34,11 @@ class UploadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceReque
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'fileAttachment' => array(
-            'type' => 'DTS\eBaySDK\FileTransfer\Types\FileAttachment',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'fileAttachment'
-        ),
-        'fileFormat' => array(
+        'taskReferenceId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'fileFormat'
+            'elementName' => 'taskReferenceId'
         ),
         'fileReferenceId' => array(
             'type' => 'string',
@@ -52,11 +46,17 @@ class UploadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceReque
             'attribute' => false,
             'elementName' => 'fileReferenceId'
         ),
-        'taskReferenceId' => array(
+        'fileFormat' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'taskReferenceId'
+            'elementName' => 'fileFormat'
+        ),
+        'fileAttachment' => array(
+            'type' => 'DTS\eBaySDK\FileTransfer\Types\FileAttachment',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'fileAttachment'
         )
     );
 

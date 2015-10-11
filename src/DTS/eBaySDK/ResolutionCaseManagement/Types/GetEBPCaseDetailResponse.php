@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType $caseDetail
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseSummaryType $caseSummary
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType $caseDetail
  */
 class GetEBPCaseDetailResponse extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseResponse
 {
@@ -32,17 +32,17 @@ class GetEBPCaseDetailResponse extends \DTS\eBaySDK\ResolutionCaseManagement\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'caseDetail' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'caseDetail'
-        ),
         'caseSummary' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseSummary'
+        ),
+        'caseDetail' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'caseDetail'
         )
     );
 

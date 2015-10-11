@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Ack
- * @property \DTS\eBaySDK\MerchantData\Types\ErrorType[] $Errors
  * @property \DateTime $HardExpirationWarning
- * @property \DTS\eBaySDK\MerchantData\Types\OrderArrayType $OrderArray
+ * @property string $Ack
  * @property string $Version
+ * @property \DTS\eBaySDK\MerchantData\Types\ErrorType[] $Errors
+ * @property \DTS\eBaySDK\MerchantData\Types\OrderArrayType $OrderArray
  */
 class OrderReportResponseType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,11 +35,23 @@ class OrderReportResponseType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'HardExpirationWarning' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HardExpirationWarning'
+        ),
         'Ack' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
+        ),
+        'Version' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Version'
         ),
         'Errors' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ErrorType',
@@ -47,23 +59,11 @@ class OrderReportResponseType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Errors'
         ),
-        'HardExpirationWarning' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HardExpirationWarning'
-        ),
         'OrderArray' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderArray'
-        ),
-        'Version' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Version'
         )
     );
 

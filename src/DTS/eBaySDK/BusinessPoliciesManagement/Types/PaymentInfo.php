@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 /**
  *
  * @property string[] $acceptedPaymentMethod
- * @property integer $daysToFullPayment
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails $depositDetails
  * @property boolean $immediatePay
  * @property string $paymentInstructions
  * @property string $paypalEmailAddress
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails $depositDetails
+ * @property integer $daysToFullPayment
  */
 class PaymentInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,18 +41,6 @@ class PaymentInfo extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'acceptedPaymentMethod'
-        ),
-        'daysToFullPayment' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'daysToFullPayment'
-        ),
-        'depositDetails' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'depositDetails'
         ),
         'immediatePay' => array(
             'type' => 'boolean',
@@ -71,6 +59,18 @@ class PaymentInfo extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paypalEmailAddress'
+        ),
+        'depositDetails' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'depositDetails'
+        ),
+        'daysToFullPayment' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'daysToFullPayment'
         )
     );
 

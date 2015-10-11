@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\MyMessagesFolderOperationCodeType $Operation
  * @property integer[] $FolderID
  * @property string[] $FolderName
- * @property \DTS\eBaySDK\Trading\Enums\MyMessagesFolderOperationCodeType $Operation
  */
 class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,6 +33,12 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Operation' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Operation'
+        ),
         'FolderID' => array(
             'type' => 'integer',
             'unbound' => true,
@@ -44,12 +50,6 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FolderName'
-        ),
-        'Operation' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Operation'
         )
     );
 

@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payee
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payer
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType[] $PaymentReferenceID
  * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $PaymentStatus
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payer
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payee
  * @property \DateTime $PaymentTime
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentAmount
  * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
+ * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType[] $PaymentReferenceID
  */
 class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,17 +38,11 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeeOrCreditAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'PaymentStatus' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeOrCreditAmount'
-        ),
-        'Payee' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Payee'
+            'elementName' => 'PaymentStatus'
         ),
         'Payer' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
@@ -56,23 +50,11 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Payer'
         ),
-        'PaymentAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'Payee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PaymentAmount'
-        ),
-        'PaymentReferenceID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentReferenceID'
-        ),
-        'PaymentStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentStatus'
+            'elementName' => 'Payee'
         ),
         'PaymentTime' => array(
             'type' => 'DateTime',
@@ -80,11 +62,29 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentTime'
         ),
+        'PaymentAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentAmount'
+        ),
         'ReferenceID' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReferenceID'
+        ),
+        'FeeOrCreditAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeOrCreditAmount'
+        ),
+        'PaymentReferenceID' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'PaymentReferenceID'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Description
  * @property string $ReturnsAcceptedOption
+ * @property string $Description
  */
 class ReturnsAcceptedDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ReturnsAcceptedDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ),
         'ReturnsAcceptedOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsAcceptedOption'
+        ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
         )
     );
 

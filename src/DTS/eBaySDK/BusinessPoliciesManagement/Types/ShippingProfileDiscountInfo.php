@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $applyDomesticPromoShippingProfile
- * @property boolean $applyIntlPromoShippingProfile
  * @property integer $domesticFlatCalcDiscountProfileId
  * @property integer $intlFlatCalcDiscountProfileId
+ * @property boolean $applyDomesticPromoShippingProfile
+ * @property boolean $applyIntlPromoShippingProfile
  */
 class ShippingProfileDiscountInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,18 +34,6 @@ class ShippingProfileDiscountInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'applyDomesticPromoShippingProfile' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'applyDomesticPromoShippingProfile'
-        ),
-        'applyIntlPromoShippingProfile' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'applyIntlPromoShippingProfile'
-        ),
         'domesticFlatCalcDiscountProfileId' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -57,6 +45,18 @@ class ShippingProfileDiscountInfo extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intlFlatCalcDiscountProfileId'
+        ),
+        'applyDomesticPromoShippingProfile' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'applyDomesticPromoShippingProfile'
+        ),
+        'applyIntlPromoShippingProfile' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'applyIntlPromoShippingProfile'
         )
     );
 

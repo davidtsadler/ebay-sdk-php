@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $DeletedField
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property string[] $DeletedField
  * @property boolean $VerifyOnly
  */
 class ReviseItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -33,17 +33,17 @@ class ReviseItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeletedField' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DeletedField'
-        ),
         'Item' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
+        ),
+        'DeletedField' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DeletedField'
         ),
         'VerifyOnly' => array(
             'type' => 'boolean',

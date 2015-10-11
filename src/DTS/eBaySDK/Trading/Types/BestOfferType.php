@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\BestOfferTypeCodeType $BestOfferCodeType
  * @property string $BestOfferID
- * @property \DTS\eBaySDK\Trading\Types\UserType $Buyer
- * @property string $BuyerMessage
- * @property string $CallStatus
  * @property \DateTime $ExpirationTime
- * @property boolean $ImmediatePayEligible
- * @property boolean $NewBestOffer
+ * @property \DTS\eBaySDK\Trading\Types\UserType $Buyer
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Price
- * @property integer $Quantity
- * @property string $SellerMessage
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferStatusCodeType $Status
+ * @property integer $Quantity
+ * @property string $BuyerMessage
+ * @property string $SellerMessage
+ * @property \DTS\eBaySDK\Trading\Enums\BestOfferTypeCodeType $BestOfferCodeType
+ * @property string $CallStatus
+ * @property boolean $NewBestOffer
+ * @property boolean $ImmediatePayEligible
  */
 class BestOfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,35 +42,11 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOfferCodeType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferCodeType'
-        ),
         'BestOfferID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferID'
-        ),
-        'Buyer' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UserType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Buyer'
-        ),
-        'BuyerMessage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerMessage'
-        ),
-        'CallStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CallStatus'
         ),
         'ExpirationTime' => array(
             'type' => 'DateTime',
@@ -78,17 +54,11 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExpirationTime'
         ),
-        'ImmediatePayEligible' => array(
-            'type' => 'boolean',
+        'Buyer' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ImmediatePayEligible'
-        ),
-        'NewBestOffer' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewBestOffer'
+            'elementName' => 'Buyer'
         ),
         'Price' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -96,11 +66,23 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Price'
         ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
         'Quantity' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
+        ),
+        'BuyerMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerMessage'
         ),
         'SellerMessage' => array(
             'type' => 'string',
@@ -108,11 +90,29 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerMessage'
         ),
-        'Status' => array(
+        'BestOfferCodeType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'BestOfferCodeType'
+        ),
+        'CallStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CallStatus'
+        ),
+        'NewBestOffer' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NewBestOffer'
+        ),
+        'ImmediatePayEligible' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ImmediatePayEligible'
         )
     );
 

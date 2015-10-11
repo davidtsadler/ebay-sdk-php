@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\AckCodeType $Ack
  * @property string $CorrelationID
+ * @property \DTS\eBaySDK\Trading\Enums\AckCodeType $Ack
  */
 class AddMemberMessagesAAQToBidderResponseContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class AddMemberMessagesAAQToBidderResponseContainerType extends \DTS\eBaySDK\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Ack' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Ack'
-        ),
         'CorrelationID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
+        ),
+        'Ack' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Ack'
         )
     );
 

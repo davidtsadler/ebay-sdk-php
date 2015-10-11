@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property string $comments
- * @property \DTS\eBaySDK\HalfFinding\Enums\HalfItemConditionCodeType $condition
- * @property string $description
- * @property string $excludedShippingAreas
  * @property string $itemID
- * @property string $itemLocation
  * @property string $itemURL
- * @property \DTS\eBaySDK\HalfFinding\Types\Amount $price
  * @property integer $quantity
- * @property \DTS\eBaySDK\HalfFinding\Types\RentalAmount[] $rentalPrice
  * @property \DTS\eBaySDK\HalfFinding\Types\UserType $seller
+ * @property \DTS\eBaySDK\HalfFinding\Types\Amount $price
+ * @property \DTS\eBaySDK\HalfFinding\Types\RentalAmount[] $rentalPrice
  * @property \DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType[] $shippingService
+ * @property string $itemLocation
+ * @property string $excludedShippingAreas
+ * @property \DTS\eBaySDK\HalfFinding\Enums\HalfItemConditionCodeType $condition
+ * @property string $comments
+ * @property string $description
  * @property \DTS\eBaySDK\HalfFinding\Types\StorefrontType $storefront
  */
 class ItemType extends \DTS\eBaySDK\Types\BaseType
@@ -43,41 +43,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'comments' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'comments'
-        ),
-        'condition' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'condition'
-        ),
-        'description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'description'
-        ),
-        'excludedShippingAreas' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'excludedShippingAreas'
-        ),
         'itemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemID'
-        ),
-        'itemLocation' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'itemLocation'
         ),
         'itemURL' => array(
             'type' => 'string',
@@ -85,23 +55,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'itemURL'
         ),
-        'price' => array(
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'price'
-        ),
         'quantity' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'quantity'
-        ),
-        'rentalPrice' => array(
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\RentalAmount',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'rentalPrice'
         ),
         'seller' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\UserType',
@@ -109,11 +67,53 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'seller'
         ),
+        'price' => array(
+            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'price'
+        ),
+        'rentalPrice' => array(
+            'type' => 'DTS\eBaySDK\HalfFinding\Types\RentalAmount',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'rentalPrice'
+        ),
         'shippingService' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shippingService'
+        ),
+        'itemLocation' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'itemLocation'
+        ),
+        'excludedShippingAreas' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'excludedShippingAreas'
+        ),
+        'condition' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'condition'
+        ),
+        'comments' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'comments'
+        ),
+        'description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'description'
         ),
         'storefront' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\StorefrontType',

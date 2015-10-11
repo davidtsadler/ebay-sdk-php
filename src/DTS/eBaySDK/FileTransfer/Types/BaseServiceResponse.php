@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\FileTransfer\Types;
  *
  * @property \DTS\eBaySDK\FileTransfer\Enums\AckValue $ack
  * @property \DTS\eBaySDK\FileTransfer\Types\ErrorMessage $errorMessage
- * @property \DateTime $timestamp
  * @property string $version
+ * @property \DateTime $timestamp
  */
 class BaseServiceResponse extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,17 +46,17 @@ class BaseServiceResponse extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'errorMessage'
         ),
-        'timestamp' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'timestamp'
-        ),
         'version' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
+        ),
+        'timestamp' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'timestamp'
         )
     );
 

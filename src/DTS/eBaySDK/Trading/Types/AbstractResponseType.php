@@ -23,21 +23,21 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\AckCodeType $Ack
- * @property \DTS\eBaySDK\Trading\Types\BotBlockResponseType $BotBlock
- * @property string $Build
- * @property string $CorrelationID
- * @property \DTS\eBaySDK\Trading\Types\DuplicateInvocationDetailsType $DuplicateInvocationDetails
- * @property string $EIASToken
- * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
- * @property string $ExternalUserData
- * @property string $HardExpirationWarning
- * @property string $Message
- * @property string $NotificationEventName
- * @property string $NotificationSignature
- * @property string $RecipientUserID
  * @property \DateTime $Timestamp
+ * @property \DTS\eBaySDK\Trading\Enums\AckCodeType $Ack
+ * @property string $CorrelationID
+ * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
+ * @property string $Message
  * @property string $Version
+ * @property string $Build
+ * @property string $NotificationEventName
+ * @property \DTS\eBaySDK\Trading\Types\DuplicateInvocationDetailsType $DuplicateInvocationDetails
+ * @property string $RecipientUserID
+ * @property string $EIASToken
+ * @property string $NotificationSignature
+ * @property string $HardExpirationWarning
+ * @property \DTS\eBaySDK\Trading\Types\BotBlockResponseType $BotBlock
+ * @property string $ExternalUserData
  */
 class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -45,23 +45,17 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Timestamp' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Timestamp'
+        ),
         'Ack' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
-        ),
-        'BotBlock' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockResponseType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BotBlock'
-        ),
-        'Build' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Build'
         ),
         'CorrelationID' => array(
             'type' => 'string',
@@ -69,35 +63,11 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CorrelationID'
         ),
-        'DuplicateInvocationDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\DuplicateInvocationDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DuplicateInvocationDetails'
-        ),
-        'EIASToken' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EIASToken'
-        ),
         'Errors' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        ),
-        'ExternalUserData' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalUserData'
-        ),
-        'HardExpirationWarning' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HardExpirationWarning'
         ),
         'Message' => array(
             'type' => 'string',
@@ -105,17 +75,29 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Message'
         ),
+        'Version' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Version'
+        ),
+        'Build' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Build'
+        ),
         'NotificationEventName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationEventName'
         ),
-        'NotificationSignature' => array(
-            'type' => 'string',
+        'DuplicateInvocationDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DuplicateInvocationDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'NotificationSignature'
+            'elementName' => 'DuplicateInvocationDetails'
         ),
         'RecipientUserID' => array(
             'type' => 'string',
@@ -123,17 +105,35 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RecipientUserID'
         ),
-        'Timestamp' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Timestamp'
-        ),
-        'Version' => array(
+        'EIASToken' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Version'
+            'elementName' => 'EIASToken'
+        ),
+        'NotificationSignature' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NotificationSignature'
+        ),
+        'HardExpirationWarning' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HardExpirationWarning'
+        ),
+        'BotBlock' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockResponseType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BotBlock'
+        ),
+        'ExternalUserData' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalUserData'
         )
     );
 

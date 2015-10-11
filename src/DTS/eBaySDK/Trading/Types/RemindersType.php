@@ -23,25 +23,25 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $DeclinedRTERequestCount
- * @property integer $DocsForCCProcessingToSendCount
+ * @property integer $PaymentToSendCount
  * @property integer $FeedbackToReceiveCount
  * @property integer $FeedbackToSendCount
- * @property integer $ItemReceiptConfirmationToReceiveCount
- * @property integer $ItemReceiptToConfirmCount
  * @property integer $OutbidCount
  * @property integer $PaymentToReceiveCount
- * @property integer $PaymentToSendCount
- * @property integer $PendingRTERequestCount
- * @property integer $RTEToProcessCount
- * @property integer $RefundCancelledCount
- * @property integer $RefundInitiatedCount
- * @property integer $RefundOnHoldCount
- * @property integer $RelistingNeededCount
  * @property integer $SecondChanceOfferCount
- * @property integer $ShippingDetailsToBeProvidedCount
  * @property integer $ShippingNeededCount
+ * @property integer $RelistingNeededCount
  * @property integer $TotalNewLeadsCount
+ * @property integer $DocsForCCProcessingToSendCount
+ * @property integer $RTEToProcessCount
+ * @property integer $ItemReceiptToConfirmCount
+ * @property integer $RefundOnHoldCount
+ * @property integer $RefundCancelledCount
+ * @property integer $ShippingDetailsToBeProvidedCount
+ * @property integer $ItemReceiptConfirmationToReceiveCount
+ * @property integer $RefundInitiatedCount
+ * @property integer $PendingRTERequestCount
+ * @property integer $DeclinedRTERequestCount
  */
 class RemindersType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -49,17 +49,11 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeclinedRTERequestCount' => array(
+        'PaymentToSendCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DeclinedRTERequestCount'
-        ),
-        'DocsForCCProcessingToSendCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DocsForCCProcessingToSendCount'
+            'elementName' => 'PaymentToSendCount'
         ),
         'FeedbackToReceiveCount' => array(
             'type' => 'integer',
@@ -73,18 +67,6 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeedbackToSendCount'
         ),
-        'ItemReceiptConfirmationToReceiveCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemReceiptConfirmationToReceiveCount'
-        ),
-        'ItemReceiptToConfirmCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemReceiptToConfirmCount'
-        ),
         'OutbidCount' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -97,59 +79,11 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentToReceiveCount'
         ),
-        'PaymentToSendCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentToSendCount'
-        ),
-        'PendingRTERequestCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PendingRTERequestCount'
-        ),
-        'RTEToProcessCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RTEToProcessCount'
-        ),
-        'RefundCancelledCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundCancelledCount'
-        ),
-        'RefundInitiatedCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundInitiatedCount'
-        ),
-        'RefundOnHoldCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundOnHoldCount'
-        ),
-        'RelistingNeededCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RelistingNeededCount'
-        ),
         'SecondChanceOfferCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOfferCount'
-        ),
-        'ShippingDetailsToBeProvidedCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingDetailsToBeProvidedCount'
         ),
         'ShippingNeededCount' => array(
             'type' => 'integer',
@@ -157,11 +91,77 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingNeededCount'
         ),
+        'RelistingNeededCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RelistingNeededCount'
+        ),
         'TotalNewLeadsCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalNewLeadsCount'
+        ),
+        'DocsForCCProcessingToSendCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DocsForCCProcessingToSendCount'
+        ),
+        'RTEToProcessCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RTEToProcessCount'
+        ),
+        'ItemReceiptToConfirmCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemReceiptToConfirmCount'
+        ),
+        'RefundOnHoldCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundOnHoldCount'
+        ),
+        'RefundCancelledCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundCancelledCount'
+        ),
+        'ShippingDetailsToBeProvidedCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingDetailsToBeProvidedCount'
+        ),
+        'ItemReceiptConfirmationToReceiveCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemReceiptConfirmationToReceiveCount'
+        ),
+        'RefundInitiatedCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundInitiatedCount'
+        ),
+        'PendingRTERequestCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PendingRTERequestCount'
+        ),
+        'DeclinedRTERequestCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeclinedRTERequestCount'
         )
     );
 

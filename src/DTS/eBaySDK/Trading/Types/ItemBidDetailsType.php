@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $BidCount
- * @property string $CategoryID
  * @property string $ItemID
- * @property \DateTime $LastBidTime
+ * @property string $CategoryID
+ * @property integer $BidCount
  * @property string $SellerID
+ * @property \DateTime $LastBidTime
  */
 class ItemBidDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,11 +35,11 @@ class ItemBidDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidCount' => array(
-            'type' => 'integer',
+        'ItemID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BidCount'
+            'elementName' => 'ItemID'
         ),
         'CategoryID' => array(
             'type' => 'string',
@@ -47,23 +47,23 @@ class ItemBidDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'ItemID' => array(
-            'type' => 'string',
+        'BidCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'LastBidTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LastBidTime'
+            'elementName' => 'BidCount'
         ),
         'SellerID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
+        ),
+        'LastBidTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LastBidTime'
         )
     );
 

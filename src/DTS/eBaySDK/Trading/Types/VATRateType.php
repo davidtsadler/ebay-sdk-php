@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $OrderLineItemID
  * @property string $TransactionID
  * @property double $VATPercent
+ * @property string $OrderLineItemID
  */
 class VATRateType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,12 +40,6 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
         'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +51,12 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATPercent'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

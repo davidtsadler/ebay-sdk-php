@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property integer $BidCount
- * @property string $ItemID
+ * @property string $SKU
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $Price
  * @property integer $Quantity
+ * @property string $ItemID
+ * @property integer $BidCount
  * @property boolean $ReserveMet
- * @property string $SKU
  * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataVariationsType $Variations
  */
 class SKUDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -37,17 +37,11 @@ class SKUDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidCount'
-        ),
-        'ItemID' => array(
+        'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'SKU'
         ),
         'Price' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -61,17 +55,23 @@ class SKUDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Quantity'
         ),
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
+        'BidCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidCount'
+        ),
         'ReserveMet' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
-        ),
-        'SKU' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
         ),
         'Variations' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationsType',

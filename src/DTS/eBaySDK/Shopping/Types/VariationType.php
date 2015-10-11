@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType $DiscountPriceInfo
- * @property integer $Quantity
  * @property string $SKU
- * @property \DTS\eBaySDK\Shopping\Types\SellingStatusType $SellingStatus
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $StartPrice
+ * @property integer $Quantity
  * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType[] $VariationSpecifics
+ * @property \DTS\eBaySDK\Shopping\Types\SellingStatusType $SellingStatus
+ * @property \DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType $DiscountPriceInfo
  */
 class VariationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,29 +36,11 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DiscountPriceInfo' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DiscountPriceInfo'
-        ),
-        'Quantity' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
-        ),
         'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'SellingStatus' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SellingStatusType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingStatus'
         ),
         'StartPrice' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
@@ -66,11 +48,29 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartPrice'
         ),
+        'Quantity' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ),
         'VariationSpecifics' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
+        ),
+        'SellingStatus' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\SellingStatusType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingStatus'
+        ),
+        'DiscountPriceInfo' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DiscountPriceInfo'
         )
     );
 

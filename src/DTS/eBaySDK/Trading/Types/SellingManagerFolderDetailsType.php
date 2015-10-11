@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType[] $ChildFolder
- * @property \DateTime $CreationTime
- * @property string $FolderComment
  * @property integer $FolderID
+ * @property integer $ParentFolderID
  * @property integer $FolderLevel
  * @property string $FolderName
- * @property integer $ParentFolderID
+ * @property string $FolderComment
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType[] $ChildFolder
+ * @property \DateTime $CreationTime
  */
 class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,29 +37,17 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ChildFolder' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ChildFolder'
-        ),
-        'CreationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
-        ),
-        'FolderComment' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FolderComment'
-        ),
         'FolderID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
+        ),
+        'ParentFolderID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ParentFolderID'
         ),
         'FolderLevel' => array(
             'type' => 'integer',
@@ -73,11 +61,23 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FolderName'
         ),
-        'ParentFolderID' => array(
-            'type' => 'integer',
+        'FolderComment' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ParentFolderID'
+            'elementName' => 'FolderComment'
+        ),
+        'ChildFolder' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ChildFolder'
+        ),
+        'CreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationTime'
         )
     );
 

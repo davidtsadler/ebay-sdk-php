@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IncludeContainingOrder
- * @property boolean $IncludeFinalValueFee
- * @property boolean $IncludeVariations
  * @property string $ItemID
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
- * @property integer $NumberOfDays
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
  * @property string $TransactionID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property boolean $IncludeFinalValueFee
+ * @property boolean $IncludeContainingOrder
+ * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
+ * @property integer $NumberOfDays
+ * @property boolean $IncludeVariations
+ * @property string $OrderLineItemID
  */
 class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -41,24 +41,6 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeContainingOrder' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeContainingOrder'
-        ),
-        'IncludeFinalValueFee' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFee'
-        ),
-        'IncludeVariations' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeVariations'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -77,17 +59,11 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'ModTimeTo'
         ),
-        'NumberOfDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NumberOfDays'
-        ),
-        'OrderLineItemID' => array(
+        'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
+            'elementName' => 'TransactionID'
         ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
@@ -95,17 +71,41 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'Pagination'
         ),
+        'IncludeFinalValueFee' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFee'
+        ),
+        'IncludeContainingOrder' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeContainingOrder'
+        ),
         'Platform' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Platform'
         ),
-        'TransactionID' => array(
+        'NumberOfDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NumberOfDays'
+        ),
+        'IncludeVariations' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeVariations'
+        ),
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         )
     );
 

@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $Archived
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType[] $Filter
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $SaleDateRange
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
+ * @property integer $StoreCategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType[] $Filter
+ * @property boolean $Archived
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType $Sort
  * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
- * @property integer $StoreCategoryID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $SaleDateRange
  */
 class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,11 +38,17 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Archived' => array(
-            'type' => 'boolean',
+        'Search' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Archived'
+            'elementName' => 'Search'
+        ),
+        'StoreCategoryID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreCategoryID'
         ),
         'Filter' => array(
             'type' => 'string',
@@ -50,23 +56,11 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
             'attribute' => false,
             'elementName' => 'Filter'
         ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'Archived' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
-        ),
-        'SaleDateRange' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleDateRange'
-        ),
-        'Search' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Search'
+            'elementName' => 'Archived'
         ),
         'Sort' => array(
             'type' => 'string',
@@ -80,11 +74,17 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
             'attribute' => false,
             'elementName' => 'SortOrder'
         ),
-        'StoreCategoryID' => array(
-            'type' => 'integer',
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StoreCategoryID'
+            'elementName' => 'Pagination'
+        ),
+        'SaleDateRange' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleDateRange'
         )
     );
 

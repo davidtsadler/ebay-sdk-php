@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ItemID
  * @property string $CommentText
  * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType $CommentType
- * @property string $ItemID
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType $SellerItemRatingDetailArray
- * @property string $TargetUser
  * @property string $TransactionID
+ * @property string $TargetUser
+ * @property \DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType $SellerItemRatingDetailArray
+ * @property string $OrderLineItemID
  */
 class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -37,6 +37,12 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
         'CommentText' => array(
             'type' => 'string',
             'unbound' => false,
@@ -49,23 +55,11 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'CommentType'
         ),
-        'ItemID' => array(
+        'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'SellerItemRatingDetailArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerItemRatingDetailArray'
+            'elementName' => 'TransactionID'
         ),
         'TargetUser' => array(
             'type' => 'string',
@@ -73,11 +67,17 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'TargetUser'
         ),
-        'TransactionID' => array(
+        'SellerItemRatingDetailArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerItemRatingDetailArray'
+        ),
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
         )
     );
 

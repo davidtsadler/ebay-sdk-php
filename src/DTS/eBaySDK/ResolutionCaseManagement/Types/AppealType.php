@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DateTime $creationDate
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealDecisionType $decision
- * @property \DateTime $decisionDate
  * @property string $decisionReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\DecisionReasonDetailType $decisionReasonDetail
+ * @property \DateTime $decisionDate
+ * @property \DateTime $creationDate
  * @property string $id
  */
 class AppealType extends \DTS\eBaySDK\Types\BaseType
@@ -36,23 +36,11 @@ class AppealType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'creationDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'creationDate'
-        ),
         'decision' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decision'
-        ),
-        'decisionDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'decisionDate'
         ),
         'decisionReason' => array(
             'type' => 'string',
@@ -65,6 +53,18 @@ class AppealType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionReasonDetail'
+        ),
+        'decisionDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'decisionDate'
+        ),
+        'creationDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'creationDate'
         ),
         'id' => array(
             'type' => 'string',

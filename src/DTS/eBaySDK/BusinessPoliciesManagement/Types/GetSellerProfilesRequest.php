@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $includeDetails
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ProfileType[] $profileType
  * @property integer[] $profileId
  * @property string[] $profileName
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ProfileType[] $profileType
+ * @property boolean $includeDetails
  */
 class GetSellerProfilesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseRequest
 {
@@ -34,11 +34,11 @@ class GetSellerProfilesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\T
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'includeDetails' => array(
-            'type' => 'boolean',
-            'unbound' => false,
+        'profileType' => array(
+            'type' => 'string',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'includeDetails'
+            'elementName' => 'profileType'
         ),
         'profileId' => array(
             'type' => 'integer',
@@ -52,11 +52,11 @@ class GetSellerProfilesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\T
             'attribute' => false,
             'elementName' => 'profileName'
         ),
-        'profileType' => array(
-            'type' => 'string',
-            'unbound' => true,
+        'includeDetails' => array(
+            'type' => 'boolean',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'profileType'
+            'elementName' => 'includeDetails'
         )
     );
 

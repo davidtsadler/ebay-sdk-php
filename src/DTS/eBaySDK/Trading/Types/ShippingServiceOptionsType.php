@@ -23,20 +23,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $ExpeditedService
- * @property boolean $FreeShipping
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
- * @property boolean $LocalPickup
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
- * @property \DTS\eBaySDK\Trading\Types\ShippingPackageInfoType[] $ShippingPackageInfo
  * @property string $ShippingService
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
- * @property \DateTime $ShippingServiceCutOffTime
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
  * @property integer $ShippingServicePriority
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingSurcharge
- * @property integer $ShippingTimeMax
+ * @property boolean $ExpeditedService
  * @property integer $ShippingTimeMin
+ * @property integer $ShippingTimeMax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingSurcharge
+ * @property boolean $FreeShipping
+ * @property boolean $LocalPickup
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
+ * @property \DTS\eBaySDK\Trading\Types\ShippingPackageInfoType[] $ShippingPackageInfo
+ * @property \DateTime $ShippingServiceCutOffTime
  */
 class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -44,41 +44,11 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ExpeditedService' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpeditedService'
-        ),
-        'FreeShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FreeShipping'
-        ),
-        'ImportCharge' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ImportCharge'
-        ),
-        'LocalPickup' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LocalPickup'
-        ),
         'ShippingInsuranceCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
-        ),
-        'ShippingPackageInfo' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingPackageInfoType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingPackageInfo'
         ),
         'ShippingService' => array(
             'type' => 'string',
@@ -86,23 +56,17 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingService'
         ),
-        'ShippingServiceAdditionalCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
-        ),
         'ShippingServiceCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
         ),
-        'ShippingServiceCutOffTime' => array(
-            'type' => 'DateTime',
+        'ShippingServiceAdditionalCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingServiceCutOffTime'
+            'elementName' => 'ShippingServiceAdditionalCost'
         ),
         'ShippingServicePriority' => array(
             'type' => 'integer',
@@ -110,11 +74,17 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServicePriority'
         ),
-        'ShippingSurcharge' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'ExpeditedService' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingSurcharge'
+            'elementName' => 'ExpeditedService'
+        ),
+        'ShippingTimeMin' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTimeMin'
         ),
         'ShippingTimeMax' => array(
             'type' => 'integer',
@@ -122,11 +92,41 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingTimeMax'
         ),
-        'ShippingTimeMin' => array(
-            'type' => 'integer',
+        'ShippingSurcharge' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingTimeMin'
+            'elementName' => 'ShippingSurcharge'
+        ),
+        'FreeShipping' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FreeShipping'
+        ),
+        'LocalPickup' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LocalPickup'
+        ),
+        'ImportCharge' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ImportCharge'
+        ),
+        'ShippingPackageInfo' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingPackageInfoType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingPackageInfo'
+        ),
+        'ShippingServiceCutOffTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCutOffTime'
         )
     );
 

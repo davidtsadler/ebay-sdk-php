@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
  * @property \DateTime $TimeTo
+ * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
  */
 class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemArray'
-        ),
         'TimeTo' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TimeTo'
+        ),
+        'ItemArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemArray'
         )
     );
 

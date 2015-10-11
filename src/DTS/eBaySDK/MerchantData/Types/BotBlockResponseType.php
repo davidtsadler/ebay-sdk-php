@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $BotBlockAudioUrl
  * @property string $BotBlockToken
  * @property string $BotBlockUrl
+ * @property string $BotBlockAudioUrl
  */
 class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BotBlockAudioUrl' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BotBlockAudioUrl'
-        ),
         'BotBlockToken' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class BotBlockResponseType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BotBlockUrl'
+        ),
+        'BotBlockAudioUrl' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BotBlockAudioUrl'
         )
     );
 

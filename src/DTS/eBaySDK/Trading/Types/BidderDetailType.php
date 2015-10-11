@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $UserID
  * @property string $Email
  * @property integer $FeedbackScore
  * @property integer $UniqueNegativeFeedbackCount
- * @property integer $UniqueNeutralFeedbackCount
  * @property integer $UniquePositiveFeedbackCount
- * @property string $UserID
+ * @property integer $UniqueNeutralFeedbackCount
  */
 class BidderDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,6 +36,12 @@ class BidderDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'UserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
+        ),
         'Email' => array(
             'type' => 'string',
             'unbound' => false,
@@ -54,23 +60,17 @@ class BidderDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UniqueNegativeFeedbackCount'
         ),
-        'UniqueNeutralFeedbackCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UniqueNeutralFeedbackCount'
-        ),
         'UniquePositiveFeedbackCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniquePositiveFeedbackCount'
         ),
-        'UserID' => array(
-            'type' => 'string',
+        'UniqueNeutralFeedbackCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'UniqueNeutralFeedbackCount'
         )
     );
 

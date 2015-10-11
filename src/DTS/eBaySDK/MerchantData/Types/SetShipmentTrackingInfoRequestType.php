@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $IsPaid
- * @property boolean $IsShipped
  * @property string $OrderID
  * @property string $OrderLineItemID
  * @property \DTS\eBaySDK\MerchantData\Types\ShipmentType $Shipment
+ * @property boolean $IsShipped
+ * @property boolean $IsPaid
  */
 class SetShipmentTrackingInfoRequestType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,18 +35,6 @@ class SetShipmentTrackingInfoRequestType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IsPaid' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IsPaid'
-        ),
-        'IsShipped' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IsShipped'
-        ),
         'OrderID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -64,6 +52,18 @@ class SetShipmentTrackingInfoRequestType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Shipment'
+        ),
+        'IsShipped' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IsShipped'
+        ),
+        'IsPaid' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IsPaid'
         )
     );
 

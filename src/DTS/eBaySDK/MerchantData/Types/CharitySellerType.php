@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\CharityAffiliationType[] $CharityAffiliation
  * @property \DTS\eBaySDK\MerchantData\Enums\CharitySellerStatusCodeType $CharitySellerStatus
+ * @property \DTS\eBaySDK\MerchantData\Types\CharityAffiliationType[] $CharityAffiliation
  * @property boolean $TermsAndConditionsAccepted
  */
 class CharitySellerType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class CharitySellerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CharityAffiliation' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CharityAffiliationType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CharityAffiliation'
-        ),
         'CharitySellerStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharitySellerStatus'
+        ),
+        'CharityAffiliation' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\CharityAffiliationType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'CharityAffiliation'
         ),
         'TermsAndConditionsAccepted' => array(
             'type' => 'boolean',

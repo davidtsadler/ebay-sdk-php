@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $UserID
+ * @property \DateTime $StartTimeFrom
+ * @property \DateTime $StartTimeTo
  * @property \DateTime $EndTimeFrom
  * @property \DateTime $EndTimeTo
- * @property boolean $HideVariations
- * @property boolean $IncludeVariationSpecifics
- * @property boolean $IncludeWatchCount
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
  * @property boolean $NewItemFilter
- * @property \DateTime $StartTimeFrom
- * @property \DateTime $StartTimeTo
- * @property string $UserID
+ * @property boolean $IncludeWatchCount
+ * @property boolean $IncludeVariationSpecifics
+ * @property boolean $HideVariations
  */
 class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -41,6 +41,24 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'UserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
+        ),
+        'StartTimeFrom' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTimeFrom'
+        ),
+        'StartTimeTo' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTimeTo'
+        ),
         'EndTimeFrom' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -52,24 +70,6 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'HideVariations' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HideVariations'
-        ),
-        'IncludeVariationSpecifics' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeVariationSpecifics'
-        ),
-        'IncludeWatchCount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
         ),
         'ModTimeFrom' => array(
             'type' => 'DateTime',
@@ -89,23 +89,23 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'attribute' => false,
             'elementName' => 'NewItemFilter'
         ),
-        'StartTimeFrom' => array(
-            'type' => 'DateTime',
+        'IncludeWatchCount' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTimeFrom'
+            'elementName' => 'IncludeWatchCount'
         ),
-        'StartTimeTo' => array(
-            'type' => 'DateTime',
+        'IncludeVariationSpecifics' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTimeTo'
+            'elementName' => 'IncludeVariationSpecifics'
         ),
-        'UserID' => array(
-            'type' => 'string',
+        'HideVariations' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'HideVariations'
         )
     );
 

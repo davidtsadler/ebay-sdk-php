@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property string $conditionDisplayName
  * @property integer $conditionId
+ * @property string $conditionDisplayName
  */
 class Condition extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class Condition extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'conditionDisplayName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'conditionDisplayName'
-        ),
         'conditionId' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'conditionId'
+        ),
+        'conditionDisplayName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'conditionDisplayName'
         )
     );
 

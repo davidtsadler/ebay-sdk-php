@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $MinActiveItemCount
  * @property string $ListTimeFrom
  * @property string $ListTimeTo
- * @property integer $ListingHoldInventoryLevel
- * @property integer $MinActiveItemCount
  * @property integer $SpacingIntervalInMinutes
+ * @property integer $ListingHoldInventoryLevel
  */
 class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,6 +35,12 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'MinActiveItemCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MinActiveItemCount'
+        ),
         'ListTimeFrom' => array(
             'type' => 'string',
             'unbound' => false,
@@ -47,23 +53,17 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
             'attribute' => false,
             'elementName' => 'ListTimeTo'
         ),
-        'ListingHoldInventoryLevel' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingHoldInventoryLevel'
-        ),
-        'MinActiveItemCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MinActiveItemCount'
-        ),
         'SpacingIntervalInMinutes' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SpacingIntervalInMinutes'
+        ),
+        'ListingHoldInventoryLevel' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ListingHoldInventoryLevel'
         )
     );
 

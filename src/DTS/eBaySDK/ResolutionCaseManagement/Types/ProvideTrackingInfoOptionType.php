@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $carrierUsed
  * @property string $trackingNumber
+ * @property string $carrierUsed
  */
 class ProvideTrackingInfoOptionType extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseActivityOptionType
 {
@@ -32,17 +32,17 @@ class ProvideTrackingInfoOptionType extends \DTS\eBaySDK\ResolutionCaseManagemen
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'carrierUsed' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'carrierUsed'
-        ),
         'trackingNumber' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
+        ),
+        'carrierUsed' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'carrierUsed'
         )
     );
 

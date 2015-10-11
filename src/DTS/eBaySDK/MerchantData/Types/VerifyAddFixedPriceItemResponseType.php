@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DTS\eBaySDK\MerchantData\Types\FeesType $Fees
  * @property string $ItemID
- * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
  * @property string $SKU
+ * @property \DTS\eBaySDK\MerchantData\Types\FeesType $Fees
+ * @property string $CategoryID
+ * @property string $Category2ID
+ * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
  */
 class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractResponseType
 {
@@ -37,23 +37,17 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'ItemID'
         ),
-        'CategoryID' => array(
+        'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'DiscountReason' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'SKU'
         ),
         'Fees' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\FeesType',
@@ -61,23 +55,29 @@ class VerifyAddFixedPriceItemResponseType extends \DTS\eBaySDK\MerchantData\Type
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'CategoryID'
+        ),
+        'Category2ID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Category2ID'
+        ),
+        'DiscountReason' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
         ),
         'ListingRecommendations' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingRecommendations'
-        ),
-        'SKU' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
         )
     );
 

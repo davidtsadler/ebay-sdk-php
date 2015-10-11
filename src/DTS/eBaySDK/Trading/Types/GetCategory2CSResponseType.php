@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AttributeSystemVersion
  * @property \DTS\eBaySDK\Trading\Types\CategoryArrayType $MappedCategoryArray
- * @property \DTS\eBaySDK\Trading\Types\SiteWideCharacteristicsType[] $SiteWideCharacteristicSets
  * @property \DTS\eBaySDK\Trading\Types\CategoryArrayType $UnmappedCategoryArray
+ * @property string $AttributeSystemVersion
+ * @property \DTS\eBaySDK\Trading\Types\SiteWideCharacteristicsType[] $SiteWideCharacteristicSets
  */
 class GetCategory2CSResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -34,29 +34,29 @@ class GetCategory2CSResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AttributeSystemVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeSystemVersion'
-        ),
         'MappedCategoryArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MappedCategoryArray'
         ),
-        'SiteWideCharacteristicSets' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SiteWideCharacteristicsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'SiteWideCharacteristicSets'
-        ),
         'UnmappedCategoryArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnmappedCategoryArray'
+        ),
+        'AttributeSystemVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AttributeSystemVersion'
+        ),
+        'SiteWideCharacteristicSets' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SiteWideCharacteristicsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'SiteWideCharacteristicSets'
         )
     );
 

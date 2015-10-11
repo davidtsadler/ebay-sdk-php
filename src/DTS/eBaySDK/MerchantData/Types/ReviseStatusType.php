@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property boolean $ItemRevised
  * @property boolean $BuyItNowAdded
  * @property boolean $BuyItNowLowered
- * @property boolean $ItemRevised
  * @property boolean $ReserveLowered
  * @property boolean $ReserveRemoved
  */
@@ -35,6 +35,12 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemRevised' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemRevised'
+        ),
         'BuyItNowAdded' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -46,12 +52,6 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowLowered'
-        ),
-        'ItemRevised' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemRevised'
         ),
         'ReserveLowered' => array(
             'type' => 'boolean',

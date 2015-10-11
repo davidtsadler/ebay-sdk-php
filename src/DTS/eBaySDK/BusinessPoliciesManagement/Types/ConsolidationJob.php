@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 /**
  *
  * @property integer $JobId
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobStatus $JobStatus
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobType $JobType
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobStatus $JobStatus
  * @property integer $SiteId
  */
 class ConsolidationJob extends \DTS\eBaySDK\Types\BaseType
@@ -40,17 +40,17 @@ class ConsolidationJob extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'JobId'
         ),
-        'JobStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'JobStatus'
-        ),
         'JobType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'JobType'
+        ),
+        'JobStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'JobStatus'
         ),
         'SiteId' => array(
             'type' => 'integer',

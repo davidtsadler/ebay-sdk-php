@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IsDefault
  * @property string $Name
+ * @property boolean $IsDefault
  */
 class CategoryGroupType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class CategoryGroupType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IsDefault' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IsDefault'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'IsDefault' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IsDefault'
         )
     );
 

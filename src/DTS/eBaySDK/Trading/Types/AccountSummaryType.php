@@ -24,6 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\AccountStateCodeType $AccountState
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoicePayment
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceCredit
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceNewFee
  * @property \DTS\eBaySDK\Trading\Types\AdditionalAccountType[] $AdditionalAccount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPastDue
  * @property string $BankAccountInfo
@@ -35,10 +38,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CurrentBalance
  * @property string $Email
  * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceBalance
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceCredit
  * @property \DateTime $InvoiceDate
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoiceNewFee
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InvoicePayment
  * @property \DTS\eBaySDK\Trading\Types\AmountType $LastAmountPaid
  * @property \DateTime $LastPaymentDate
  * @property boolean $PastDue
@@ -55,6 +55,24 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountState'
+        ),
+        'InvoicePayment' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoicePayment'
+        ),
+        'InvoiceCredit' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceCredit'
+        ),
+        'InvoiceNewFee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceNewFee'
         ),
         'AdditionalAccount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AdditionalAccountType',
@@ -122,29 +140,11 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'InvoiceBalance'
         ),
-        'InvoiceCredit' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceCredit'
-        ),
         'InvoiceDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceDate'
-        ),
-        'InvoiceNewFee' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceNewFee'
-        ),
-        'InvoicePayment' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvoicePayment'
         ),
         'LastAmountPaid' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',

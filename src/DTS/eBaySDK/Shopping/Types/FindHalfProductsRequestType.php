@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
+ * @property string $IncludeSelector
  * @property boolean $AvailableItemsOnly
  * @property string[] $DomainName
- * @property string $IncludeSelector
- * @property integer $MaxEntries
- * @property integer $PageNumber
  * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
- * @property \DTS\eBaySDK\Shopping\Enums\ProductSortCodeType $ProductSort
  * @property string $QueryKeywords
  * @property string $SellerID
+ * @property \DTS\eBaySDK\Shopping\Enums\ProductSortCodeType $ProductSort
  * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
+ * @property integer $MaxEntries
+ * @property integer $PageNumber
  */
 class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -40,6 +40,12 @@ class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'IncludeSelector' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeSelector'
+        ),
         'AvailableItemsOnly' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -52,35 +58,11 @@ class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'DomainName'
         ),
-        'IncludeSelector' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeSelector'
-        ),
-        'MaxEntries' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxEntries'
-        ),
-        'PageNumber' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ),
         'ProductID' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'ProductSort' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductSort'
         ),
         'QueryKeywords' => array(
             'type' => 'string',
@@ -94,11 +76,29 @@ class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'SellerID'
         ),
+        'ProductSort' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductSort'
+        ),
         'SortOrder' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
+        ),
+        'MaxEntries' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaxEntries'
+        ),
+        'PageNumber' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PageNumber'
         )
     );
 

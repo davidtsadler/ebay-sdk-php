@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $id
  * @property string $oldID
+ * @property string $id
  */
 class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'id' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'id'
-        ),
         'oldID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'oldID'
+        ),
+        'id' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'id'
         )
     );
 

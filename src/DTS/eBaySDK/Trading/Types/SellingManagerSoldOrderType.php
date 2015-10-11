@@ -23,34 +23,34 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ActualShippingCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
- * @property string $BuyerEmail
- * @property string $BuyerID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CashOnDeliveryCost
- * @property \DateTime $CreationTime
- * @property integer $DaysSinceSale
- * @property integer $EmailsSent
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ItemCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $NetInsuranceFee
- * @property \DTS\eBaySDK\Trading\Types\AmountType $NetShippingFee
- * @property \DTS\eBaySDK\Trading\Types\AmountType $NetTotalAmount
- * @property string $NotesFromBuyer
- * @property string $NotesToBuyer
- * @property string $NotesToSeller
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType $OrderStatus
- * @property \DTS\eBaySDK\Trading\Types\AmountType $SalePrice
- * @property integer $SaleRecordID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldTransactionType[] $SellingManagerSoldTransaction
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property \DTS\eBaySDK\Trading\Types\ShippingDetailsType $ShippingDetails
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CashOnDeliveryCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAmount
  * @property integer $TotalQuantity
- * @property \DTS\eBaySDK\Trading\Enums\UnpaidItemStatusTypeCodeType $UnpaidItemStatus
- * @property \DTS\eBaySDK\Trading\Types\AmountType $VATInsuranceFee
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ItemCost
  * @property \DTS\eBaySDK\Trading\Types\VATRateType[] $VATRate
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $NetInsuranceFee
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $VATInsuranceFee
  * @property \DTS\eBaySDK\Trading\Types\AmountType $VATShippingFee
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $NetShippingFee
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $NetTotalAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $VATTotalAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ActualShippingCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property string $NotesToBuyer
+ * @property string $NotesFromBuyer
+ * @property string $NotesToSeller
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType $OrderStatus
+ * @property \DTS\eBaySDK\Trading\Enums\UnpaidItemStatusTypeCodeType $UnpaidItemStatus
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $SalePrice
+ * @property integer $EmailsSent
+ * @property integer $DaysSinceSale
+ * @property string $BuyerID
+ * @property string $BuyerEmail
+ * @property integer $SaleRecordID
+ * @property \DateTime $CreationTime
  */
 class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -58,114 +58,6 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ActualShippingCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ActualShippingCost'
-        ),
-        'AdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AdjustmentAmount'
-        ),
-        'BuyerEmail' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerEmail'
-        ),
-        'BuyerID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerID'
-        ),
-        'CashOnDeliveryCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CashOnDeliveryCost'
-        ),
-        'CreationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
-        ),
-        'DaysSinceSale' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DaysSinceSale'
-        ),
-        'EmailsSent' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EmailsSent'
-        ),
-        'ItemCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCost'
-        ),
-        'NetInsuranceFee' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NetInsuranceFee'
-        ),
-        'NetShippingFee' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NetShippingFee'
-        ),
-        'NetTotalAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NetTotalAmount'
-        ),
-        'NotesFromBuyer' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NotesFromBuyer'
-        ),
-        'NotesToBuyer' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NotesToBuyer'
-        ),
-        'NotesToSeller' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NotesToSeller'
-        ),
-        'OrderStatus' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderStatus'
-        ),
-        'SalePrice' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SalePrice'
-        ),
-        'SaleRecordID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleRecordID'
-        ),
         'SellingManagerSoldTransaction' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldTransactionType',
             'unbound' => true,
@@ -184,6 +76,12 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingDetails'
         ),
+        'CashOnDeliveryCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CashOnDeliveryCost'
+        ),
         'TotalAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -196,17 +94,11 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TotalQuantity'
         ),
-        'UnpaidItemStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UnpaidItemStatus'
-        ),
-        'VATInsuranceFee' => array(
+        'ItemCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VATInsuranceFee'
+            'elementName' => 'ItemCost'
         ),
         'VATRate' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\VATRateType',
@@ -214,17 +106,125 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VATRate'
         ),
+        'NetInsuranceFee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NetInsuranceFee'
+        ),
+        'VATInsuranceFee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VATInsuranceFee'
+        ),
         'VATShippingFee' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATShippingFee'
         ),
+        'NetShippingFee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NetShippingFee'
+        ),
+        'NetTotalAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NetTotalAmount'
+        ),
         'VATTotalAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATTotalAmount'
+        ),
+        'ActualShippingCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ActualShippingCost'
+        ),
+        'AdjustmentAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AdjustmentAmount'
+        ),
+        'NotesToBuyer' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NotesToBuyer'
+        ),
+        'NotesFromBuyer' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NotesFromBuyer'
+        ),
+        'NotesToSeller' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NotesToSeller'
+        ),
+        'OrderStatus' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderStatus'
+        ),
+        'UnpaidItemStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnpaidItemStatus'
+        ),
+        'SalePrice' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SalePrice'
+        ),
+        'EmailsSent' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EmailsSent'
+        ),
+        'DaysSinceSale' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DaysSinceSale'
+        ),
+        'BuyerID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerID'
+        ),
+        'BuyerEmail' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerEmail'
+        ),
+        'SaleRecordID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleRecordID'
+        ),
+        'CreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationTime'
         )
     );
 

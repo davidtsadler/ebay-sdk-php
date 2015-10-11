@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\Affiliate $affiliate
- * @property string $buyerPostalCode
  * @property \DTS\eBaySDK\Finding\Types\PaginationInput $paginationInput
+ * @property string $buyerPostalCode
+ * @property \DTS\eBaySDK\Finding\Types\Affiliate $affiliate
  */
 class BestMatchFindingServiceRequest extends \DTS\eBaySDK\Finding\Types\BaseServiceRequest
 {
@@ -33,11 +33,11 @@ class BestMatchFindingServiceRequest extends \DTS\eBaySDK\Finding\Types\BaseServ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'affiliate' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Affiliate',
+        'paginationInput' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\PaginationInput',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'affiliate'
+            'elementName' => 'paginationInput'
         ),
         'buyerPostalCode' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class BestMatchFindingServiceRequest extends \DTS\eBaySDK\Finding\Types\BaseServ
             'attribute' => false,
             'elementName' => 'buyerPostalCode'
         ),
-        'paginationInput' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\PaginationInput',
+        'affiliate' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Affiliate',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'paginationInput'
+            'elementName' => 'affiliate'
         )
     );
 

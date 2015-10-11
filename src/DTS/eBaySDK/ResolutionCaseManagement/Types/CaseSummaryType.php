@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $caseAmount
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
- * @property integer $caseQuantity
- * @property \DateTime $creationDate
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ItemType $item
- * @property \DateTime $lastModifiedDate
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $otherParty
- * @property \DateTime $respondByDate
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusType $status
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $user
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $otherParty
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusType $status
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ItemType $item
+ * @property integer $caseQuantity
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $caseAmount
+ * @property \DateTime $respondByDate
+ * @property \DateTime $creationDate
+ * @property \DateTime $lastModifiedDate
  */
 class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,41 +40,17 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'caseAmount' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'caseAmount'
-        ),
         'caseId' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ),
-        'caseQuantity' => array(
-            'type' => 'integer',
+        'user' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'caseQuantity'
-        ),
-        'creationDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'creationDate'
-        ),
-        'item' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'item'
-        ),
-        'lastModifiedDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'lastModifiedDate'
+            'elementName' => 'user'
         ),
         'otherParty' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
@@ -82,23 +58,47 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'otherParty'
         ),
-        'respondByDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'respondByDate'
-        ),
         'status' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'status'
         ),
-        'user' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
+        'item' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'user'
+            'elementName' => 'item'
+        ),
+        'caseQuantity' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'caseQuantity'
+        ),
+        'caseAmount' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'caseAmount'
+        ),
+        'respondByDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'respondByDate'
+        ),
+        'creationDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'creationDate'
+        ),
+        'lastModifiedDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'lastModifiedDate'
         )
     );
 

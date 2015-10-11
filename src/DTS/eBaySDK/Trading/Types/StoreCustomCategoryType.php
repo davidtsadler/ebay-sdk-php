@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryType[] $ChildCategory
  * @property string $Name
  * @property integer $Order
+ * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryType[] $ChildCategory
  */
 class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,12 +40,6 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'ChildCategory' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ChildCategory'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +51,12 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Order'
+        ),
+        'ChildCategory' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ChildCategory'
         )
     );
 

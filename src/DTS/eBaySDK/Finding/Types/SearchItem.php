@@ -23,40 +23,40 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\ItemAttribute[] $attribute
- * @property boolean $autoPay
- * @property string $charityId
- * @property string $compatibility
- * @property \DTS\eBaySDK\Finding\Types\Condition $condition
- * @property string $country
- * @property \DTS\eBaySDK\Finding\Types\DiscountPriceInfo $discountPriceInfo
- * @property \DTS\eBaySDK\Finding\Types\Distance $distance
- * @property string[] $eekStatus
- * @property \DTS\eBaySDK\Finding\Types\GalleryInfoContainer $galleryInfoContainer
- * @property string[] $galleryPlusPictureURL
- * @property string $galleryURL
- * @property string $globalId
- * @property boolean $isMultiVariationListing
  * @property string $itemId
- * @property \DTS\eBaySDK\Finding\Types\ListingInfo $listingInfo
- * @property string $location
- * @property string[] $paymentMethod
- * @property string $pictureURLLarge
- * @property string $pictureURLSuperSize
- * @property string $postalCode
- * @property \DTS\eBaySDK\Finding\Types\Category $primaryCategory
- * @property \DTS\eBaySDK\Finding\Types\ProductId $productId
- * @property boolean $returnsAccepted
- * @property \DTS\eBaySDK\Finding\Types\Category $secondaryCategory
- * @property \DTS\eBaySDK\Finding\Types\SellerInfo $sellerInfo
- * @property \DTS\eBaySDK\Finding\Types\SellingStatus $sellingStatus
- * @property \DTS\eBaySDK\Finding\Types\ShippingInfo $shippingInfo
- * @property \DTS\eBaySDK\Finding\Types\Storefront $storeInfo
- * @property string $subtitle
  * @property string $title
- * @property boolean $topRatedListing
- * @property \DTS\eBaySDK\Finding\Types\UnitPriceInfo $unitPrice
+ * @property string $globalId
+ * @property string $subtitle
+ * @property \DTS\eBaySDK\Finding\Types\Category $primaryCategory
+ * @property \DTS\eBaySDK\Finding\Types\Category $secondaryCategory
+ * @property string $galleryURL
+ * @property \DTS\eBaySDK\Finding\Types\GalleryInfoContainer $galleryInfoContainer
  * @property string $viewItemURL
+ * @property string $charityId
+ * @property \DTS\eBaySDK\Finding\Types\ProductId $productId
+ * @property string[] $paymentMethod
+ * @property boolean $autoPay
+ * @property string $postalCode
+ * @property string $location
+ * @property string $country
+ * @property \DTS\eBaySDK\Finding\Types\Storefront $storeInfo
+ * @property \DTS\eBaySDK\Finding\Types\SellerInfo $sellerInfo
+ * @property \DTS\eBaySDK\Finding\Types\ShippingInfo $shippingInfo
+ * @property \DTS\eBaySDK\Finding\Types\SellingStatus $sellingStatus
+ * @property \DTS\eBaySDK\Finding\Types\ListingInfo $listingInfo
+ * @property boolean $returnsAccepted
+ * @property string[] $galleryPlusPictureURL
+ * @property string $compatibility
+ * @property \DTS\eBaySDK\Finding\Types\Distance $distance
+ * @property \DTS\eBaySDK\Finding\Types\Condition $condition
+ * @property boolean $isMultiVariationListing
+ * @property \DTS\eBaySDK\Finding\Types\DiscountPriceInfo $discountPriceInfo
+ * @property string $pictureURLSuperSize
+ * @property string $pictureURLLarge
+ * @property \DTS\eBaySDK\Finding\Types\UnitPriceInfo $unitPrice
+ * @property \DTS\eBaySDK\Finding\Types\ItemAttribute[] $attribute
+ * @property boolean $topRatedListing
+ * @property string[] $eekStatus
  */
 class SearchItem extends \DTS\eBaySDK\Types\BaseType
 {
@@ -64,185 +64,11 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'attribute' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ItemAttribute',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'attribute'
-        ),
-        'autoPay' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'autoPay'
-        ),
-        'charityId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'charityId'
-        ),
-        'compatibility' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'compatibility'
-        ),
-        'condition' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Condition',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'condition'
-        ),
-        'country' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'country'
-        ),
-        'discountPriceInfo' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\DiscountPriceInfo',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'discountPriceInfo'
-        ),
-        'distance' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Distance',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'distance'
-        ),
-        'eekStatus' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'eekStatus'
-        ),
-        'galleryInfoContainer' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\GalleryInfoContainer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'galleryInfoContainer'
-        ),
-        'galleryPlusPictureURL' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'galleryPlusPictureURL'
-        ),
-        'galleryURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'galleryURL'
-        ),
-        'globalId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'globalId'
-        ),
-        'isMultiVariationListing' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'isMultiVariationListing'
-        ),
         'itemId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemId'
-        ),
-        'listingInfo' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ListingInfo',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'listingInfo'
-        ),
-        'location' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'location'
-        ),
-        'paymentMethod' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'paymentMethod'
-        ),
-        'pictureURLLarge' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'pictureURLLarge'
-        ),
-        'pictureURLSuperSize' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'pictureURLSuperSize'
-        ),
-        'postalCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'postalCode'
-        ),
-        'primaryCategory' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Category',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'primaryCategory'
-        ),
-        'productId' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'productId'
-        ),
-        'returnsAccepted' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'returnsAccepted'
-        ),
-        'secondaryCategory' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Category',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'secondaryCategory'
-        ),
-        'sellerInfo' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\SellerInfo',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'sellerInfo'
-        ),
-        'sellingStatus' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\SellingStatus',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'sellingStatus'
-        ),
-        'shippingInfo' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ShippingInfo',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingInfo'
-        ),
-        'storeInfo' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Storefront',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'storeInfo'
-        ),
-        'subtitle' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'subtitle'
         ),
         'title' => array(
             'type' => 'string',
@@ -250,11 +76,173 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'title'
         ),
-        'topRatedListing' => array(
+        'globalId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'globalId'
+        ),
+        'subtitle' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'subtitle'
+        ),
+        'primaryCategory' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Category',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'primaryCategory'
+        ),
+        'secondaryCategory' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Category',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'secondaryCategory'
+        ),
+        'galleryURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'galleryURL'
+        ),
+        'galleryInfoContainer' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\GalleryInfoContainer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'galleryInfoContainer'
+        ),
+        'viewItemURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'viewItemURL'
+        ),
+        'charityId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'charityId'
+        ),
+        'productId' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'productId'
+        ),
+        'paymentMethod' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'paymentMethod'
+        ),
+        'autoPay' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'topRatedListing'
+            'elementName' => 'autoPay'
+        ),
+        'postalCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'postalCode'
+        ),
+        'location' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'location'
+        ),
+        'country' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'country'
+        ),
+        'storeInfo' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Storefront',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'storeInfo'
+        ),
+        'sellerInfo' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\SellerInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'sellerInfo'
+        ),
+        'shippingInfo' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ShippingInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingInfo'
+        ),
+        'sellingStatus' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\SellingStatus',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'sellingStatus'
+        ),
+        'listingInfo' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ListingInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'listingInfo'
+        ),
+        'returnsAccepted' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'returnsAccepted'
+        ),
+        'galleryPlusPictureURL' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'galleryPlusPictureURL'
+        ),
+        'compatibility' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'compatibility'
+        ),
+        'distance' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Distance',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'distance'
+        ),
+        'condition' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Condition',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'condition'
+        ),
+        'isMultiVariationListing' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'isMultiVariationListing'
+        ),
+        'discountPriceInfo' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\DiscountPriceInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'discountPriceInfo'
+        ),
+        'pictureURLSuperSize' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'pictureURLSuperSize'
+        ),
+        'pictureURLLarge' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'pictureURLLarge'
         ),
         'unitPrice' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\UnitPriceInfo',
@@ -262,11 +250,23 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'unitPrice'
         ),
-        'viewItemURL' => array(
-            'type' => 'string',
+        'attribute' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ItemAttribute',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'attribute'
+        ),
+        'topRatedListing' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'viewItemURL'
+            'elementName' => 'topRatedListing'
+        ),
+        'eekStatus' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'eekStatus'
         )
     );
 

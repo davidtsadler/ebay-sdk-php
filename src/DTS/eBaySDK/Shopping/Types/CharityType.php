@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\Shopping\Types;
 /**
  *
  * @property string $CharityID
- * @property boolean $CharityListing
  * @property string $CharityName
  * @property integer $CharityNumber
  * @property double $DonationPercent
- * @property string $LogoURL
  * @property string $Mission
+ * @property string $LogoURL
+ * @property boolean $CharityListing
  * @property \DTS\eBaySDK\Shopping\Enums\CharityStatusCodeType $Status
  */
 class CharityType extends \DTS\eBaySDK\Types\BaseType
@@ -43,12 +43,6 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityID'
-        ),
-        'CharityListing' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CharityListing'
         ),
         'CharityName' => array(
             'type' => 'string',
@@ -68,17 +62,23 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DonationPercent'
         ),
+        'Mission' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Mission'
+        ),
         'LogoURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoURL'
         ),
-        'Mission' => array(
-            'type' => 'string',
+        'CharityListing' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Mission'
+            'elementName' => 'CharityListing'
         ),
         'Status' => array(
             'type' => 'string',

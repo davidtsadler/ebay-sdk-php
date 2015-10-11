@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $BidItemArray
  * @property \DTS\eBaySDK\Trading\Types\UserType $Bidder
+ * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $BidItemArray
  */
 class GetBidderListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetBidderListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidItemArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidItemArray'
-        ),
         'Bidder' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Bidder'
+        ),
+        'BidItemArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidItemArray'
         )
     );
 

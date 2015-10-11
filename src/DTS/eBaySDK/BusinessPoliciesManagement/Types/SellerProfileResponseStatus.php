@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
+ * @property integer $profileId
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\AckValue $ack
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ErrorMessage $errorMessage
- * @property integer $profileId
  */
 class SellerProfileResponseStatus extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class SellerProfileResponseStatus extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'profileId' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'profileId'
+        ),
         'ack' => array(
             'type' => 'string',
             'unbound' => false,
@@ -44,12 +50,6 @@ class SellerProfileResponseStatus extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'errorMessage'
-        ),
-        'profileId' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'profileId'
         )
     );
 

@@ -27,10 +27,10 @@ namespace DTS\eBaySDK\Finding\Types;
  * @property boolean $buyItNowAvailable
  * @property \DTS\eBaySDK\Finding\Types\Amount $buyItNowPrice
  * @property \DTS\eBaySDK\Finding\Types\Amount $convertedBuyItNowPrice
- * @property \DateTime $endTime
- * @property boolean $gift
- * @property string $listingType
  * @property \DateTime $startTime
+ * @property \DateTime $endTime
+ * @property string $listingType
+ * @property boolean $gift
  */
 class ListingInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -62,17 +62,17 @@ class ListingInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'convertedBuyItNowPrice'
         ),
+        'startTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'startTime'
+        ),
         'endTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'endTime'
-        ),
-        'gift' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'gift'
         ),
         'listingType' => array(
             'type' => 'string',
@@ -80,11 +80,11 @@ class ListingInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'listingType'
         ),
-        'startTime' => array(
-            'type' => 'DateTime',
+        'gift' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'startTime'
+            'elementName' => 'gift'
         )
     );
 

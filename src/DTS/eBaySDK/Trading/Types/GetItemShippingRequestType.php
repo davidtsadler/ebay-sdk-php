@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $DestinationCountryCode
- * @property string $DestinationPostalCode
  * @property string $ItemID
  * @property integer $QuantitySold
+ * @property string $DestinationPostalCode
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $DestinationCountryCode
  */
 class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,18 +34,6 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DestinationCountryCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationCountryCode'
-        ),
-        'DestinationPostalCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationPostalCode'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +45,18 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
+        ),
+        'DestinationPostalCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationPostalCode'
+        ),
+        'DestinationCountryCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationCountryCode'
         )
     );
 

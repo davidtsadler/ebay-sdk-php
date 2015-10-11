@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $SourceSaleTemplateID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoListMinActiveItemsType $KeepMinActive
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoListAccordingToScheduleType $ListAccordingToSchedule
- * @property integer $SourceSaleTemplateID
  */
 class SellingManagerAutoListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class SellingManagerAutoListType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SourceSaleTemplateID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SourceSaleTemplateID'
+        ),
         'KeepMinActive' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListMinActiveItemsType',
             'unbound' => false,
@@ -44,12 +50,6 @@ class SellingManagerAutoListType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListAccordingToSchedule'
-        ),
-        'SourceSaleTemplateID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SourceSaleTemplateID'
         )
     );
 

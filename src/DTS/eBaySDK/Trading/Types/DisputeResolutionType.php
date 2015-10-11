@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionReasonCodeType $DisputeResolutionReason
  * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionRecordTypeCodeType $DisputeResolutionRecordType
+ * @property \DTS\eBaySDK\Trading\Enums\DisputeResolutionReasonCodeType $DisputeResolutionReason
  * @property \DateTime $ResolutionTime
  */
 class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DisputeResolutionReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeResolutionReason'
-        ),
         'DisputeResolutionRecordType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeResolutionRecordType'
+        ),
+        'DisputeResolutionReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeResolutionReason'
         ),
         'ResolutionTime' => array(
             'type' => 'DateTime',

@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
+ * @property string $note
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $author
  * @property string $activity
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ActivityDetailType $activityDetail
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType $attributes
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $author
  * @property \DateTime $creationDate
- * @property string $note
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType $attributes
  */
 class EBPCaseResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,6 +36,18 @@ class EBPCaseResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'note' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'note'
+        ),
+        'author' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'author'
+        ),
         'activity' => array(
             'type' => 'string',
             'unbound' => false,
@@ -48,29 +60,17 @@ class EBPCaseResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'activityDetail'
         ),
-        'attributes' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'attributes'
-        ),
-        'author' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'author'
-        ),
         'creationDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
         ),
-        'note' => array(
-            'type' => 'string',
+        'attributes' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'note'
+            'elementName' => 'attributes'
         )
     );
 

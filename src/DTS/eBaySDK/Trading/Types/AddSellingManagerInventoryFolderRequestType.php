@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Comment
  * @property string $FolderName
  * @property integer $ParentFolderID
+ * @property string $Comment
  */
 class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,12 +33,6 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Comment' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Comment'
-        ),
         'FolderName' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ParentFolderID'
+        ),
+        'Comment' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Comment'
         )
     );
 

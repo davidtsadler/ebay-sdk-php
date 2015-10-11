@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $EmailCustomized
- * @property boolean $LogoCustomized
- * @property \DTS\eBaySDK\Trading\Enums\EndOfAuctionLogoTypeCodeType $LogoType
- * @property string $LogoURL
  * @property string $TemplateText
+ * @property string $LogoURL
+ * @property \DTS\eBaySDK\Trading\Enums\EndOfAuctionLogoTypeCodeType $LogoType
+ * @property boolean $EmailCustomized
  * @property boolean $TextCustomized
+ * @property boolean $LogoCustomized
  */
 class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,23 +36,11 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EmailCustomized' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EmailCustomized'
-        ),
-        'LogoCustomized' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LogoCustomized'
-        ),
-        'LogoType' => array(
+        'TemplateText' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LogoType'
+            'elementName' => 'TemplateText'
         ),
         'LogoURL' => array(
             'type' => 'string',
@@ -60,17 +48,29 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LogoURL'
         ),
-        'TemplateText' => array(
+        'LogoType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TemplateText'
+            'elementName' => 'LogoType'
+        ),
+        'EmailCustomized' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EmailCustomized'
         ),
         'TextCustomized' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TextCustomized'
+        ),
+        'LogoCustomized' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LogoCustomized'
         )
     );
 

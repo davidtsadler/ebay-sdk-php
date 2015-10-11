@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 /**
  *
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentInfoType[] $document
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ProofType $proofType
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentInfoType[] $document
  */
 class UploadDocumentsRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
 {
@@ -39,17 +39,17 @@ class UploadDocumentsRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types
             'attribute' => false,
             'elementName' => 'caseId'
         ),
-        'document' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentInfoType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'document'
-        ),
         'proofType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'proofType'
+        ),
+        'document' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentInfoType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'document'
         )
     );
 

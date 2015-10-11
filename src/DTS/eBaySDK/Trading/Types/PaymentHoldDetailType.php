@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DateTime $ExpectedReleaseDate
+ * @property \DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType $RequiredSellerActionArray
  * @property integer $NumOfReqSellerActions
  * @property \DTS\eBaySDK\Trading\Enums\PaymentHoldReasonCodeType $PaymentHoldReason
- * @property \DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType $RequiredSellerActionArray
  */
 class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,6 +40,12 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ExpectedReleaseDate'
         ),
+        'RequiredSellerActionArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RequiredSellerActionArray'
+        ),
         'NumOfReqSellerActions' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -51,12 +57,6 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldReason'
-        ),
-        'RequiredSellerActionArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\RequiredSellerActionArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RequiredSellerActionArray'
         )
     );
 

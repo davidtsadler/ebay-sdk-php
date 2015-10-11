@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $ClassifiedAdContactByEmailEnabled
  * @property \DTS\eBaySDK\MerchantData\Types\ContactHoursDetailsType $ContactHoursDetails
+ * @property boolean $ClassifiedAdContactByEmailEnabled
  */
 class ExtendedContactDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ExtendedContactDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ClassifiedAdContactByEmailEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdContactByEmailEnabled'
-        ),
         'ContactHoursDetails' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ContactHoursDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ContactHoursDetails'
+        ),
+        'ClassifiedAdContactByEmailEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdContactByEmailEnabled'
         )
     );
 

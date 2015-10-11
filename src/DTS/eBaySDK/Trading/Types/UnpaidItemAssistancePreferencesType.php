@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $AutoOptDonationRefund
- * @property boolean $AutoRelist
  * @property integer $DelayBeforeOpeningDispute
- * @property string[] $ExcludedUser
  * @property boolean $OptInStatus
+ * @property boolean $AutoRelist
  * @property boolean $RemoveAllExcludedUsers
+ * @property string[] $ExcludedUser
+ * @property boolean $AutoOptDonationRefund
  */
 class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,29 +36,11 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AutoOptDonationRefund' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AutoOptDonationRefund'
-        ),
-        'AutoRelist' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AutoRelist'
-        ),
         'DelayBeforeOpeningDispute' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DelayBeforeOpeningDispute'
-        ),
-        'ExcludedUser' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExcludedUser'
         ),
         'OptInStatus' => array(
             'type' => 'boolean',
@@ -66,11 +48,29 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OptInStatus'
         ),
+        'AutoRelist' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AutoRelist'
+        ),
         'RemoveAllExcludedUsers' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RemoveAllExcludedUsers'
+        ),
+        'ExcludedUser' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExcludedUser'
+        ),
+        'AutoOptDonationRefund' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AutoOptDonationRefund'
         )
     );
 

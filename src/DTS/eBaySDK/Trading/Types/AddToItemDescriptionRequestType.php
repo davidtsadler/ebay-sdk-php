@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Description
  * @property string $ItemID
+ * @property string $Description
  */
 class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
         )
     );
 

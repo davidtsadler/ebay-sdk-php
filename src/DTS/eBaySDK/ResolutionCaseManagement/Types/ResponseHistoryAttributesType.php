@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 /**
  *
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef $appealRef
- * @property string $idref
- * @property string $idref
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef $moneyMovementRef
  * @property string $onholdReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\OnHoldReasonDetailType $onholdReasonDetail
+ * @property string $idref
+ * @property string $idref
  */
 class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,18 +41,6 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'appealRef'
-        ),
-        'idref' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'idref'
-        ),
-        'idref' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'idref'
         ),
         'moneyMovementRef' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef',
@@ -71,6 +59,18 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'onholdReasonDetail'
+        ),
+        'idref' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'idref'
+        ),
+        'idref' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'idref'
         )
     );
 

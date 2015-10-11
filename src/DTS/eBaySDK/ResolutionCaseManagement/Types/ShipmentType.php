@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $carrierUsed
- * @property \DateTime $deliveryDate
- * @property string $deliveryStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Address $shippingAddress
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $shippingCost
  * @property string $trackingNumber
+ * @property string $carrierUsed
+ * @property string $deliveryStatus
+ * @property \DateTime $deliveryDate
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $shippingCost
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Address $shippingAddress
  */
 class ShipmentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,17 +36,17 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'trackingNumber' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'trackingNumber'
+        ),
         'carrierUsed' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
-        ),
-        'deliveryDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'deliveryDate'
         ),
         'deliveryStatus' => array(
             'type' => 'string',
@@ -54,11 +54,11 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'deliveryStatus'
         ),
-        'shippingAddress' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
+        'deliveryDate' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'shippingAddress'
+            'elementName' => 'deliveryDate'
         ),
         'shippingCost' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
@@ -66,11 +66,11 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingCost'
         ),
-        'trackingNumber' => array(
-            'type' => 'string',
+        'shippingAddress' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'trackingNumber'
+            'elementName' => 'shippingAddress'
         )
     );
 

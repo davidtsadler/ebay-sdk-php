@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Accent
  * @property string $Primary
  * @property string $Secondary
+ * @property string $Accent
  */
 class StoreColorType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class StoreColorType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Accent' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Accent'
-        ),
         'Primary' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class StoreColorType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Secondary'
+        ),
+        'Accent' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Accent'
         )
     );
 

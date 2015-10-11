@@ -23,73 +23,73 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualHandlingCost
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualShippingCost
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $AdjustmentAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $AmountPaid
- * @property boolean $BestOfferSale
- * @property boolean $BundlePurchase
- * @property \DTS\eBaySDK\MerchantData\Types\UserType $Buyer
- * @property string $BuyerCheckoutMessage
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BuyerGuaranteePrice
- * @property \DTS\eBaySDK\MerchantData\Types\BuyerPackageEnclosuresType $BuyerPackageEnclosures
- * @property \DTS\eBaySDK\MerchantData\Enums\PaidStatusCodeType $BuyerPaidStatus
- * @property string $CartID
- * @property string $CodiceFiscale
- * @property \DTS\eBaySDK\MerchantData\Types\OrderType $ContainingOrder
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $AdjustmentAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedAdjustmentAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\UserType $Buyer
+ * @property \DTS\eBaySDK\MerchantData\Types\ShippingDetailsType $ShippingDetails
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedAmountPaid
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedTransactionPrice
  * @property \DateTime $CreatedDate
  * @property \DTS\eBaySDK\MerchantData\Enums\DepositTypeCodeType $DepositType
- * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $DutchAuctionBid
- * @property string $ExtendedOrderID
- * @property \DTS\eBaySDK\MerchantData\Types\ExternalTransactionType[] $ExternalTransaction
- * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackLeft
- * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackReceived
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FinalValueFee
- * @property boolean $Gift
- * @property \DTS\eBaySDK\MerchantData\Types\GiftSummaryType $GiftSummary
- * @property boolean $IntangibleItem
- * @property string $InventoryReservationID
- * @property \DateTime $InvoiceSentTime
- * @property boolean $IsMultiLegShipping
  * @property \DTS\eBaySDK\MerchantData\Types\ItemType $Item
- * @property \DTS\eBaySDK\MerchantData\Types\ListingCheckoutRedirectPreferenceType $ListingCheckoutRedirectPreference
- * @property string $LogisticsPlanType
- * @property \DTS\eBaySDK\MerchantData\Types\PaymentsInformationType $MonetaryDetails
- * @property \DTS\eBaySDK\MerchantData\Types\MultiLegShippingDetailsType $MultiLegShippingDetails
- * @property string $OrderLineItemID
- * @property \DateTime $PaidTime
- * @property string $PaisaPayID
- * @property string $PayPalEmailAddress
- * @property \DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType $PaymentHoldDetails
- * @property \DTS\eBaySDK\MerchantData\Types\PickupDetailsType $PickupDetails
- * @property \DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType $PickupMethodSelected
- * @property \DTS\eBaySDK\MerchantData\Enums\TransactionPlatformCodeType $Platform
  * @property integer $QuantityPurchased
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundAmount
- * @property \DTS\eBaySDK\MerchantData\Types\RefundArrayType $RefundArray
- * @property string $RefundStatus
- * @property boolean $SellerContactBuyerByEmail
- * @property \DTS\eBaySDK\MerchantData\Types\SellerDiscountsType $SellerDiscounts
- * @property \DTS\eBaySDK\MerchantData\Enums\PaidStatusCodeType $SellerPaidStatus
- * @property \DTS\eBaySDK\MerchantData\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
- * @property \DateTime $ShippedTime
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingConvenienceCharge
- * @property \DTS\eBaySDK\MerchantData\Types\ShippingDetailsType $ShippingDetails
- * @property \DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType $ShippingServiceSelected
  * @property \DTS\eBaySDK\MerchantData\Types\TransactionStatusType $Status
- * @property \DTS\eBaySDK\MerchantData\Types\TaxesType $Taxes
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TotalPrice
  * @property string $TransactionID
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TransactionPrice
- * @property \DTS\eBaySDK\MerchantData\Enums\SiteCodeType $TransactionSiteID
- * @property \DTS\eBaySDK\MerchantData\Types\UnpaidItemType $UnpaidItem
+ * @property boolean $BestOfferSale
  * @property integer $VATPercent
+ * @property \DTS\eBaySDK\MerchantData\Types\ExternalTransactionType[] $ExternalTransaction
+ * @property \DTS\eBaySDK\MerchantData\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property \DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType $ShippingServiceSelected
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $DutchAuctionBid
+ * @property \DTS\eBaySDK\MerchantData\Enums\PaidStatusCodeType $BuyerPaidStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\PaidStatusCodeType $SellerPaidStatus
+ * @property \DateTime $PaidTime
+ * @property \DateTime $ShippedTime
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TotalPrice
+ * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackLeft
+ * @property \DTS\eBaySDK\MerchantData\Types\FeedbackInfoType $FeedbackReceived
+ * @property \DTS\eBaySDK\MerchantData\Types\OrderType $ContainingOrder
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FinalValueFee
+ * @property \DTS\eBaySDK\MerchantData\Types\ListingCheckoutRedirectPreferenceType $ListingCheckoutRedirectPreference
+ * @property \DTS\eBaySDK\MerchantData\Types\RefundArrayType $RefundArray
+ * @property \DTS\eBaySDK\MerchantData\Enums\SiteCodeType $TransactionSiteID
+ * @property \DTS\eBaySDK\MerchantData\Enums\TransactionPlatformCodeType $Platform
+ * @property string $CartID
+ * @property boolean $SellerContactBuyerByEmail
+ * @property string $PayPalEmailAddress
+ * @property string $PaisaPayID
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BuyerGuaranteePrice
  * @property \DTS\eBaySDK\MerchantData\Types\VariationType $Variation
+ * @property string $BuyerCheckoutMessage
+ * @property \DTS\eBaySDK\MerchantData\Types\TaxesType $Taxes
+ * @property boolean $BundlePurchase
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualShippingCost
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualHandlingCost
+ * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType $PaymentHoldDetails
+ * @property \DTS\eBaySDK\MerchantData\Types\SellerDiscountsType $SellerDiscounts
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundAmount
+ * @property string $RefundStatus
+ * @property string $CodiceFiscale
+ * @property boolean $IsMultiLegShipping
+ * @property \DTS\eBaySDK\MerchantData\Types\MultiLegShippingDetailsType $MultiLegShippingDetails
+ * @property \DateTime $InvoiceSentTime
+ * @property \DTS\eBaySDK\MerchantData\Types\UnpaidItemType $UnpaidItem
+ * @property boolean $IntangibleItem
+ * @property \DTS\eBaySDK\MerchantData\Types\PaymentsInformationType $MonetaryDetails
+ * @property \DTS\eBaySDK\MerchantData\Types\PickupDetailsType $PickupDetails
+ * @property \DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType $PickupMethodSelected
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingConvenienceCharge
+ * @property string $LogisticsPlanType
+ * @property \DTS\eBaySDK\MerchantData\Types\BuyerPackageEnclosuresType $BuyerPackageEnclosures
+ * @property string $InventoryReservationID
+ * @property string $ExtendedOrderID
  * @property boolean $eBayPlusTransaction
+ * @property \DTS\eBaySDK\MerchantData\Types\GiftSummaryType $GiftSummary
+ * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
+ * @property boolean $Gift
  */
 class TransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -97,17 +97,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ActualHandlingCost' => array(
+        'AmountPaid' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ActualHandlingCost'
-        ),
-        'ActualShippingCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ActualShippingCost'
+            'elementName' => 'AmountPaid'
         ),
         'AdjustmentAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -115,23 +109,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
         ),
-        'AmountPaid' => array(
+        'ConvertedAdjustmentAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AmountPaid'
-        ),
-        'BestOfferSale' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferSale'
-        ),
-        'BundlePurchase' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BundlePurchase'
+            'elementName' => 'ConvertedAdjustmentAmount'
         ),
         'Buyer' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\UserType',
@@ -139,53 +121,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Buyer'
         ),
-        'BuyerCheckoutMessage' => array(
-            'type' => 'string',
+        'ShippingDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BuyerCheckoutMessage'
-        ),
-        'BuyerGuaranteePrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerGuaranteePrice'
-        ),
-        'BuyerPackageEnclosures' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\BuyerPackageEnclosuresType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerPackageEnclosures'
-        ),
-        'BuyerPaidStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyerPaidStatus'
-        ),
-        'CartID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CartID'
-        ),
-        'CodiceFiscale' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CodiceFiscale'
-        ),
-        'ContainingOrder' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ContainingOrder'
-        ),
-        'ConvertedAdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedAdjustmentAmount'
+            'elementName' => 'ShippingDetails'
         ),
         'ConvertedAmountPaid' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -211,161 +151,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DepositType'
         ),
-        'DigitalDeliverySelected' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DigitalDeliverySelected'
-        ),
-        'DutchAuctionBid' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DutchAuctionBid'
-        ),
-        'ExtendedOrderID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExtendedOrderID'
-        ),
-        'ExternalTransaction' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ExternalTransactionType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExternalTransaction'
-        ),
-        'FeedbackLeft' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\FeedbackInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackLeft'
-        ),
-        'FeedbackReceived' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\FeedbackInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackReceived'
-        ),
-        'FinalValueFee' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FinalValueFee'
-        ),
-        'Gift' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Gift'
-        ),
-        'GiftSummary' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\GiftSummaryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GiftSummary'
-        ),
-        'IntangibleItem' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IntangibleItem'
-        ),
-        'InventoryReservationID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InventoryReservationID'
-        ),
-        'InvoiceSentTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceSentTime'
-        ),
-        'IsMultiLegShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IsMultiLegShipping'
-        ),
         'Item' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'ListingCheckoutRedirectPreference' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingCheckoutRedirectPreferenceType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingCheckoutRedirectPreference'
-        ),
-        'LogisticsPlanType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LogisticsPlanType'
-        ),
-        'MonetaryDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentsInformationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MonetaryDetails'
-        ),
-        'MultiLegShippingDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MultiLegShippingDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MultiLegShippingDetails'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'PaidTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaidTime'
-        ),
-        'PaisaPayID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaisaPayID'
-        ),
-        'PayPalEmailAddress' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalEmailAddress'
-        ),
-        'PaymentHoldDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentHoldDetails'
-        ),
-        'PickupDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PickupDetails'
-        ),
-        'PickupMethodSelected' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PickupMethodSelected'
-        ),
-        'Platform' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Platform'
         ),
         'QuantityPurchased' => array(
             'type' => 'integer',
@@ -373,89 +163,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QuantityPurchased'
         ),
-        'RefundAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ),
-        'RefundArray' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RefundArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundArray'
-        ),
-        'RefundStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundStatus'
-        ),
-        'SellerContactBuyerByEmail' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerContactBuyerByEmail'
-        ),
-        'SellerDiscounts' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerDiscountsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerDiscounts'
-        ),
-        'SellerPaidStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerPaidStatus'
-        ),
-        'SellingManagerProductDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerProductDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerProductDetails'
-        ),
-        'ShippedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippedTime'
-        ),
-        'ShippingConvenienceCharge' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingConvenienceCharge'
-        ),
-        'ShippingDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingDetails'
-        ),
-        'ShippingServiceSelected' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceSelected'
-        ),
         'Status' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'Taxes' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxesType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Taxes'
-        ),
-        'TotalPrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalPrice'
         ),
         'TransactionID' => array(
             'type' => 'string',
@@ -469,17 +181,11 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TransactionPrice'
         ),
-        'TransactionSiteID' => array(
-            'type' => 'string',
+        'BestOfferSale' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionSiteID'
-        ),
-        'UnpaidItem' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\UnpaidItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UnpaidItem'
+            'elementName' => 'BestOfferSale'
         ),
         'VATPercent' => array(
             'type' => 'integer',
@@ -487,17 +193,311 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VATPercent'
         ),
+        'ExternalTransaction' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ExternalTransactionType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExternalTransaction'
+        ),
+        'SellingManagerProductDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerProductDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerProductDetails'
+        ),
+        'ShippingServiceSelected' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceSelected'
+        ),
+        'DutchAuctionBid' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DutchAuctionBid'
+        ),
+        'BuyerPaidStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerPaidStatus'
+        ),
+        'SellerPaidStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerPaidStatus'
+        ),
+        'PaidTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaidTime'
+        ),
+        'ShippedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippedTime'
+        ),
+        'TotalPrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalPrice'
+        ),
+        'FeedbackLeft' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\FeedbackInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackLeft'
+        ),
+        'FeedbackReceived' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\FeedbackInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackReceived'
+        ),
+        'ContainingOrder' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ContainingOrder'
+        ),
+        'FinalValueFee' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FinalValueFee'
+        ),
+        'ListingCheckoutRedirectPreference' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingCheckoutRedirectPreferenceType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ListingCheckoutRedirectPreference'
+        ),
+        'RefundArray' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\RefundArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundArray'
+        ),
+        'TransactionSiteID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionSiteID'
+        ),
+        'Platform' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Platform'
+        ),
+        'CartID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CartID'
+        ),
+        'SellerContactBuyerByEmail' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerContactBuyerByEmail'
+        ),
+        'PayPalEmailAddress' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalEmailAddress'
+        ),
+        'PaisaPayID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaisaPayID'
+        ),
+        'BuyerGuaranteePrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerGuaranteePrice'
+        ),
         'Variation' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\VariationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Variation'
         ),
+        'BuyerCheckoutMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerCheckoutMessage'
+        ),
+        'Taxes' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxesType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Taxes'
+        ),
+        'BundlePurchase' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BundlePurchase'
+        ),
+        'ActualShippingCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ActualShippingCost'
+        ),
+        'ActualHandlingCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ActualHandlingCost'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
+        ),
+        'PaymentHoldDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentHoldDetails'
+        ),
+        'SellerDiscounts' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerDiscountsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerDiscounts'
+        ),
+        'RefundAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundAmount'
+        ),
+        'RefundStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundStatus'
+        ),
+        'CodiceFiscale' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CodiceFiscale'
+        ),
+        'IsMultiLegShipping' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IsMultiLegShipping'
+        ),
+        'MultiLegShippingDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MultiLegShippingDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MultiLegShippingDetails'
+        ),
+        'InvoiceSentTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceSentTime'
+        ),
+        'UnpaidItem' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\UnpaidItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnpaidItem'
+        ),
+        'IntangibleItem' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IntangibleItem'
+        ),
+        'MonetaryDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentsInformationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MonetaryDetails'
+        ),
+        'PickupDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PickupDetails'
+        ),
+        'PickupMethodSelected' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PickupMethodSelected'
+        ),
+        'ShippingConvenienceCharge' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingConvenienceCharge'
+        ),
+        'LogisticsPlanType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LogisticsPlanType'
+        ),
+        'BuyerPackageEnclosures' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\BuyerPackageEnclosuresType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerPackageEnclosures'
+        ),
+        'InventoryReservationID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InventoryReservationID'
+        ),
+        'ExtendedOrderID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExtendedOrderID'
+        ),
         'eBayPlusTransaction' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPlusTransaction'
+        ),
+        'GiftSummary' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\GiftSummaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GiftSummary'
+        ),
+        'DigitalDeliverySelected' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalDeliverySelected'
+        ),
+        'Gift' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Gift'
         )
     );
 

@@ -25,13 +25,13 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Enums\BoldTitleCodeType $BoldTitle
  * @property \DTS\eBaySDK\Trading\Enums\BorderCodeType $Border
- * @property string $DetailVersion
+ * @property \DTS\eBaySDK\Trading\Enums\HighlightCodeType $Highlight
+ * @property \DTS\eBaySDK\Trading\Enums\GiftIconCodeType $GiftIcon
+ * @property \DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType $HomePageFeatured
  * @property \DTS\eBaySDK\Trading\Enums\FeaturedFirstCodeType $FeaturedFirst
  * @property \DTS\eBaySDK\Trading\Enums\FeaturedPlusCodeType $FeaturedPlus
- * @property \DTS\eBaySDK\Trading\Enums\GiftIconCodeType $GiftIcon
- * @property \DTS\eBaySDK\Trading\Enums\HighlightCodeType $Highlight
- * @property \DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType $HomePageFeatured
  * @property \DTS\eBaySDK\Trading\Enums\ProPackCodeType $ProPack
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -52,11 +52,23 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Border'
         ),
-        'DetailVersion' => array(
+        'Highlight' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'Highlight'
+        ),
+        'GiftIcon' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GiftIcon'
+        ),
+        'HomePageFeatured' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HomePageFeatured'
         ),
         'FeaturedFirst' => array(
             'type' => 'string',
@@ -70,29 +82,17 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FeaturedPlus'
         ),
-        'GiftIcon' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GiftIcon'
-        ),
-        'Highlight' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Highlight'
-        ),
-        'HomePageFeatured' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HomePageFeatured'
-        ),
         'ProPack' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPack'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

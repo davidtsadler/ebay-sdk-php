@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AccountCode
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Balance
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
+ * @property string $AccountCode
  */
 class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AccountCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AccountCode'
-        ),
         'Balance' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -50,6 +44,12 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
+        ),
+        'AccountCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AccountCode'
         )
     );
 

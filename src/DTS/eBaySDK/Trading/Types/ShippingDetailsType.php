@@ -24,40 +24,40 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $AllowPaymentEdit
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
+ * @property boolean $GlobalShipping
  * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingRateType $CalculatedShippingRate
  * @property boolean $ChangePaymentInstructions
- * @property \DTS\eBaySDK\Trading\Types\AmountType $DefaultShippingCost
- * @property string[] $ExcludeShipToLocation
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
- * @property boolean $GlobalShipping
- * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InsuranceDetails
  * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuranceFee
  * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
  * @property boolean $InsuranceWanted
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $InternationalCalculatedShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $InternationalFlatShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InternationalInsuranceDetails
- * @property boolean $InternationalPromotionalShippingDiscount
- * @property string $InternationalShippingDiscountProfileID
- * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOption
  * @property boolean $PaymentEdited
  * @property string $PaymentInstructions
- * @property boolean $PromotionalShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
- * @property \DTS\eBaySDK\Trading\Types\RateTableDetailsType $RateTableDetails
  * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
- * @property boolean $SellerExcludeShipToLocationsPreference
- * @property integer $SellingManagerSalesRecordNumber
- * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
- * @property string $ShippingDiscountProfileID
  * @property string $ShippingRateErrorMessage
  * @property \DTS\eBaySDK\Trading\Enums\ShippingRateTypeCodeType $ShippingRateType
  * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
- * @property string $ShippingServiceUsed
+ * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOption
  * @property \DTS\eBaySDK\Trading\Enums\ShippingTypeCodeType $ShippingType
+ * @property integer $SellingManagerSalesRecordNumber
  * @property \DTS\eBaySDK\Trading\Types\TaxTableType $TaxTable
+ * @property string $ShippingServiceUsed
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $DefaultShippingCost
+ * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InsuranceDetails
+ * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InternationalInsuranceDetails
+ * @property string $ShippingDiscountProfileID
+ * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
+ * @property boolean $PromotionalShippingDiscount
+ * @property string $InternationalShippingDiscountProfileID
+ * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $InternationalFlatShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $InternationalCalculatedShippingDiscount
+ * @property boolean $InternationalPromotionalShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property string[] $ExcludeShipToLocation
+ * @property boolean $SellerExcludeShipToLocationsPreference
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
+ * @property \DTS\eBaySDK\Trading\Types\RateTableDetailsType $RateTableDetails
  */
 class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -71,17 +71,11 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AllowPaymentEdit'
         ),
-        'CODCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'GlobalShipping' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CODCost'
-        ),
-        'CalculatedShippingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CalculatedShippingDiscount'
+            'elementName' => 'GlobalShipping'
         ),
         'CalculatedShippingRate' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingRateType',
@@ -94,36 +88,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ChangePaymentInstructions'
-        ),
-        'DefaultShippingCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DefaultShippingCost'
-        ),
-        'ExcludeShipToLocation' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExcludeShipToLocation'
-        ),
-        'FlatShippingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FlatShippingDiscount'
-        ),
-        'GlobalShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GlobalShipping'
-        ),
-        'InsuranceDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceDetails'
         ),
         'InsuranceFee' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -143,42 +107,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'InsuranceWanted'
         ),
-        'InternationalCalculatedShippingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalCalculatedShippingDiscount'
-        ),
-        'InternationalFlatShippingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalFlatShippingDiscount'
-        ),
-        'InternationalInsuranceDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalInsuranceDetails'
-        ),
-        'InternationalPromotionalShippingDiscount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalPromotionalShippingDiscount'
-        ),
-        'InternationalShippingDiscountProfileID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingDiscountProfileID'
-        ),
-        'InternationalShippingServiceOption' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingServiceOption'
-        ),
         'PaymentEdited' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -191,53 +119,11 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentInstructions'
         ),
-        'PromotionalShippingDiscount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalShippingDiscount'
-        ),
-        'PromotionalShippingDiscountDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalShippingDiscountDetails'
-        ),
-        'RateTableDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\RateTableDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RateTableDetails'
-        ),
         'SalesTax' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
-        ),
-        'SellerExcludeShipToLocationsPreference' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerExcludeShipToLocationsPreference'
-        ),
-        'SellingManagerSalesRecordNumber' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerSalesRecordNumber'
-        ),
-        'ShipmentTrackingDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ShipmentTrackingDetails'
-        ),
-        'ShippingDiscountProfileID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingDiscountProfileID'
         ),
         'ShippingRateErrorMessage' => array(
             'type' => 'string',
@@ -257,11 +143,11 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
         ),
-        'ShippingServiceUsed' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'InternationalShippingServiceOption' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'ShippingServiceUsed'
+            'elementName' => 'InternationalShippingServiceOption'
         ),
         'ShippingType' => array(
             'type' => 'string',
@@ -269,11 +155,125 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingType'
         ),
+        'SellingManagerSalesRecordNumber' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerSalesRecordNumber'
+        ),
         'TaxTable' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\TaxTableType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
+        ),
+        'ShippingServiceUsed' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceUsed'
+        ),
+        'DefaultShippingCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DefaultShippingCost'
+        ),
+        'InsuranceDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InsuranceDetails'
+        ),
+        'InternationalInsuranceDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalInsuranceDetails'
+        ),
+        'ShippingDiscountProfileID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingDiscountProfileID'
+        ),
+        'FlatShippingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FlatShippingDiscount'
+        ),
+        'CalculatedShippingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CalculatedShippingDiscount'
+        ),
+        'PromotionalShippingDiscount' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalShippingDiscount'
+        ),
+        'InternationalShippingDiscountProfileID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalShippingDiscountProfileID'
+        ),
+        'InternationalFlatShippingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalFlatShippingDiscount'
+        ),
+        'InternationalCalculatedShippingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalCalculatedShippingDiscount'
+        ),
+        'InternationalPromotionalShippingDiscount' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalPromotionalShippingDiscount'
+        ),
+        'PromotionalShippingDiscountDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalShippingDiscountDetails'
+        ),
+        'CODCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CODCost'
+        ),
+        'ExcludeShipToLocation' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExcludeShipToLocation'
+        ),
+        'SellerExcludeShipToLocationsPreference' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerExcludeShipToLocationsPreference'
+        ),
+        'ShipmentTrackingDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ShipmentTrackingDetails'
+        ),
+        'RateTableDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\RateTableDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RateTableDetails'
         )
     );
 

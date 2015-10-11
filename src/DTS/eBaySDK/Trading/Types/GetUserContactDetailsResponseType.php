@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $UserID
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ContactAddress
  * @property \DateTime $RegistrationDate
- * @property string $UserID
  */
 class GetUserContactDetailsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -33,6 +33,12 @@ class GetUserContactDetailsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'UserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
+        ),
         'ContactAddress' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
@@ -44,12 +50,6 @@ class GetUserContactDetailsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationDate'
-        ),
-        'UserID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
         )
     );
 

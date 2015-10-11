@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\DisputeArrayType $DisputeArray
- * @property \DTS\eBaySDK\Trading\Types\DisputeFilterCountType[] $DisputeFilterCount
+ * @property string $StartingDisputeID
  * @property string $EndingDisputeID
+ * @property \DTS\eBaySDK\Trading\Types\DisputeArrayType $DisputeArray
  * @property integer $ItemsPerPage
  * @property integer $PageNumber
+ * @property \DTS\eBaySDK\Trading\Types\DisputeFilterCountType[] $DisputeFilterCount
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property string $StartingDisputeID
  */
 class GetUserDisputesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,23 +37,23 @@ class GetUserDisputesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DisputeArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\DisputeArrayType',
+        'StartingDisputeID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DisputeArray'
-        ),
-        'DisputeFilterCount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\DisputeFilterCountType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DisputeFilterCount'
+            'elementName' => 'StartingDisputeID'
         ),
         'EndingDisputeID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndingDisputeID'
+        ),
+        'DisputeArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DisputeArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeArray'
         ),
         'ItemsPerPage' => array(
             'type' => 'integer',
@@ -67,17 +67,17 @@ class GetUserDisputesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
+        'DisputeFilterCount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DisputeFilterCountType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DisputeFilterCount'
+        ),
         'PaginationResult' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'StartingDisputeID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartingDisputeID'
         )
     );
 

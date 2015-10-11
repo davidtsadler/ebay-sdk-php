@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $SaleTemplateID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoListType $AutomatedListingRule
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType $AutomatedRelistingRule
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerAutoSecondChanceOfferType $AutomatedSecondChanceOfferRule
- * @property integer $SaleTemplateID
  */
 class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,6 +34,12 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SaleTemplateID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateID'
+        ),
         'AutomatedListingRule' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListType',
             'unbound' => false,
@@ -51,12 +57,6 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AutomatedSecondChanceOfferRule'
-        ),
-        'SaleTemplateID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateID'
         )
     );
 

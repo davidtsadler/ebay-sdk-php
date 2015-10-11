@@ -23,83 +23,83 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property boolean $AutoPay
- * @property boolean $AvailableForPickupDropOff
  * @property boolean $BestOfferEnabled
- * @property integer $BidCount
- * @property \DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType $BusinessSellerDetails
- * @property boolean $BuyItNowAvailable
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $BuyItNowPrice
- * @property \DTS\eBaySDK\Shopping\Types\CharityType $Charity
- * @property string $ConditionDescription
- * @property string $ConditionDisplayName
- * @property integer $ConditionID
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ConvertedBuyItNowPrice
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ConvertedCurrentPrice
- * @property \DTS\eBaySDK\Shopping\Enums\CountryCodeType $Country
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $CurrentPrice
  * @property string $Description
- * @property \DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType $DiscountPriceInfo
- * @property boolean $EligibleForPickupDropOff
- * @property \DateTime $EndTime
- * @property string[] $ExcludeShipToLocation
- * @property string $GalleryURL
- * @property boolean $GlobalShipping
- * @property \DTS\eBaySDK\Shopping\Enums\HalfItemConditionCodeType $HalfItemCondition
- * @property integer $HandlingTime
- * @property \DTS\eBaySDK\Shopping\Types\SimpleUserType $HighBidder
- * @property integer $HitCount
- * @property boolean $IgnoreQuantity
- * @property boolean $IntegratedMerchantCreditCardEnabled
- * @property integer $ItemCompatibilityCount
- * @property \DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType $ItemCompatibilityList
  * @property string $ItemID
- * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $ItemSpecifics
- * @property \DTS\eBaySDK\Shopping\Enums\ListingStatusCodeType $ListingStatus
+ * @property boolean $BuyItNowAvailable
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ConvertedBuyItNowPrice
+ * @property \DateTime $EndTime
+ * @property \DateTime $StartTime
+ * @property string $ViewItemURLForNaturalSearch
  * @property \DTS\eBaySDK\Shopping\Enums\ListingTypeCodeType $ListingType
  * @property string $Location
- * @property integer $LotSize
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $MinimumToBid
- * @property boolean $NewBestOffer
- * @property \DTS\eBaySDK\Shopping\Enums\SiteCodeType[] $PaymentAllowedSite
  * @property \DTS\eBaySDK\Shopping\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
+ * @property string $GalleryURL
  * @property string[] $PictureURL
  * @property string $PostalCode
  * @property string $PrimaryCategoryID
- * @property string $PrimaryCategoryIDPath
  * @property string $PrimaryCategoryName
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
  * @property integer $Quantity
- * @property \DTS\eBaySDK\Shopping\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
- * @property \DTS\eBaySDK\Shopping\Types\QuantityInfo $QuantityInfo
- * @property integer $QuantitySold
- * @property integer $QuantitySoldByPickupInStore
- * @property integer $QuantityThreshold
- * @property boolean $ReserveMet
- * @property \DTS\eBaySDK\Shopping\Types\ReturnPolicyType $ReturnPolicy
- * @property string $SKU
- * @property string $SecondaryCategoryID
- * @property string $SecondaryCategoryIDPath
- * @property string $SecondaryCategoryName
  * @property \DTS\eBaySDK\Shopping\Types\SimpleUserType $Seller
- * @property string $SellerComments
+ * @property integer $BidCount
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ConvertedCurrentPrice
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $CurrentPrice
+ * @property \DTS\eBaySDK\Shopping\Types\SimpleUserType $HighBidder
+ * @property \DTS\eBaySDK\Shopping\Enums\ListingStatusCodeType $ListingStatus
+ * @property integer $QuantitySold
+ * @property boolean $ReserveMet
  * @property string[] $ShipToLocations
- * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
  * @property \DTS\eBaySDK\Shopping\Enums\SiteCodeType $Site
- * @property \DateTime $StartTime
- * @property \DTS\eBaySDK\Shopping\Types\StorefrontType $Storefront
- * @property string $Subtitle
  * @property string $TimeLeft
  * @property string $Title
- * @property boolean $TopRatedListing
- * @property \DTS\eBaySDK\Shopping\Types\UnitInfoType $UnitInfo
- * @property \DTS\eBaySDK\Shopping\Types\VariationsType $Variations
- * @property boolean $VhrAvailable
- * @property string $VhrUrl
- * @property string $ViewItemURLForNaturalSearch
+ * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
+ * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $ItemSpecifics
+ * @property integer $HitCount
+ * @property string $Subtitle
+ * @property string $PrimaryCategoryIDPath
+ * @property string $SecondaryCategoryID
+ * @property string $SecondaryCategoryName
+ * @property string $SecondaryCategoryIDPath
+ * @property \DTS\eBaySDK\Shopping\Types\CharityType $Charity
+ * @property \DTS\eBaySDK\Shopping\Types\StorefrontType $Storefront
+ * @property \DTS\eBaySDK\Shopping\Enums\CountryCodeType $Country
  * @property integer $WatchCount
- * @property boolean $eBayNowAvailable
+ * @property \DTS\eBaySDK\Shopping\Enums\HalfItemConditionCodeType $HalfItemCondition
+ * @property string $SellerComments
+ * @property \DTS\eBaySDK\Shopping\Types\ReturnPolicyType $ReturnPolicy
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $MinimumToBid
+ * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
+ * @property boolean $AutoPay
+ * @property \DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType $BusinessSellerDetails
+ * @property \DTS\eBaySDK\Shopping\Enums\SiteCodeType[] $PaymentAllowedSite
+ * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DTS\eBaySDK\Shopping\Types\VariationsType $Variations
+ * @property integer $HandlingTime
+ * @property integer $LotSize
+ * @property integer $ConditionID
+ * @property string $ConditionDisplayName
+ * @property \DTS\eBaySDK\Shopping\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
+ * @property integer $QuantityThreshold
+ * @property \DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType $DiscountPriceInfo
+ * @property string[] $ExcludeShipToLocation
+ * @property boolean $TopRatedListing
+ * @property string $VhrUrl
+ * @property boolean $VhrAvailable
+ * @property \DTS\eBaySDK\Shopping\Types\QuantityInfo $QuantityInfo
+ * @property \DTS\eBaySDK\Shopping\Types\UnitInfoType $UnitInfo
+ * @property boolean $GlobalShipping
+ * @property string $ConditionDescription
+ * @property integer $ItemCompatibilityCount
+ * @property \DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType $ItemCompatibilityList
+ * @property integer $QuantitySoldByPickupInStore
+ * @property string $SKU
+ * @property boolean $NewBestOffer
  * @property boolean $eBayNowEligible
+ * @property boolean $eBayNowAvailable
+ * @property boolean $IgnoreQuantity
+ * @property boolean $AvailableForPickupDropOff
+ * @property boolean $EligibleForPickupDropOff
  */
 class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -107,41 +107,11 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AutoPay' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AutoPay'
-        ),
-        'AvailableForPickupDropOff' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AvailableForPickupDropOff'
-        ),
         'BestOfferEnabled' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
-        ),
-        'BidCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidCount'
-        ),
-        'BusinessSellerDetails' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BusinessSellerDetails'
-        ),
-        'BuyItNowAvailable' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyItNowAvailable'
         ),
         'BuyItNowPrice' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
@@ -149,143 +119,11 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BuyItNowPrice'
         ),
-        'Charity' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\CharityType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Charity'
-        ),
-        'ConditionDescription' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDescription'
-        ),
-        'ConditionDisplayName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionDisplayName'
-        ),
-        'ConditionID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConditionID'
-        ),
-        'ConvertedBuyItNowPrice' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedBuyItNowPrice'
-        ),
-        'ConvertedCurrentPrice' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedCurrentPrice'
-        ),
-        'Country' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Country'
-        ),
-        'CurrentPrice' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CurrentPrice'
-        ),
         'Description' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'DiscountPriceInfo' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DiscountPriceInfo'
-        ),
-        'EligibleForPickupDropOff' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EligibleForPickupDropOff'
-        ),
-        'EndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ),
-        'ExcludeShipToLocation' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExcludeShipToLocation'
-        ),
-        'GalleryURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryURL'
-        ),
-        'GlobalShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GlobalShipping'
-        ),
-        'HalfItemCondition' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HalfItemCondition'
-        ),
-        'HandlingTime' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HandlingTime'
-        ),
-        'HighBidder' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HighBidder'
-        ),
-        'HitCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HitCount'
-        ),
-        'IgnoreQuantity' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IgnoreQuantity'
-        ),
-        'IntegratedMerchantCreditCardEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ),
-        'ItemCompatibilityCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCompatibilityCount'
-        ),
-        'ItemCompatibilityList' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCompatibilityList'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -293,17 +131,35 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'ItemSpecifics' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
+        'BuyItNowAvailable' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemSpecifics'
+            'elementName' => 'BuyItNowAvailable'
         ),
-        'ListingStatus' => array(
+        'ConvertedBuyItNowPrice' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConvertedBuyItNowPrice'
+        ),
+        'EndTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
+        ),
+        'StartTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
+        ),
+        'ViewItemURLForNaturalSearch' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingStatus'
+            'elementName' => 'ViewItemURLForNaturalSearch'
         ),
         'ListingType' => array(
             'type' => 'string',
@@ -317,35 +173,17 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Location'
         ),
-        'LotSize' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LotSize'
-        ),
-        'MinimumToBid' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MinimumToBid'
-        ),
-        'NewBestOffer' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewBestOffer'
-        ),
-        'PaymentAllowedSite' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentAllowedSite'
-        ),
         'PaymentMethods' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PaymentMethods'
+        ),
+        'GalleryURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GalleryURL'
         ),
         'PictureURL' => array(
             'type' => 'string',
@@ -365,23 +203,11 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PrimaryCategoryID'
         ),
-        'PrimaryCategoryIDPath' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PrimaryCategoryIDPath'
-        ),
         'PrimaryCategoryName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategoryName'
-        ),
-        'ProductID' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
         ),
         'Quantity' => array(
             'type' => 'integer',
@@ -389,17 +215,41 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Quantity'
         ),
-        'QuantityAvailableHint' => array(
+        'Seller' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Seller'
+        ),
+        'BidCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidCount'
+        ),
+        'ConvertedCurrentPrice' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConvertedCurrentPrice'
+        ),
+        'CurrentPrice' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CurrentPrice'
+        ),
+        'HighBidder' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HighBidder'
+        ),
+        'ListingStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'QuantityAvailableHint'
-        ),
-        'QuantityInfo' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\QuantityInfo',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityInfo'
+            'elementName' => 'ListingStatus'
         ),
         'QuantitySold' => array(
             'type' => 'integer',
@@ -407,65 +257,11 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QuantitySold'
         ),
-        'QuantitySoldByPickupInStore' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantitySoldByPickupInStore'
-        ),
-        'QuantityThreshold' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityThreshold'
-        ),
         'ReserveMet' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
-        ),
-        'ReturnPolicy' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ReturnPolicyType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnPolicy'
-        ),
-        'SKU' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
-        ),
-        'SecondaryCategoryID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SecondaryCategoryID'
-        ),
-        'SecondaryCategoryIDPath' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SecondaryCategoryIDPath'
-        ),
-        'SecondaryCategoryName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SecondaryCategoryName'
-        ),
-        'Seller' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Seller'
-        ),
-        'SellerComments' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerComments'
         ),
         'ShipToLocations' => array(
             'type' => 'string',
@@ -473,35 +269,11 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShipToLocations'
         ),
-        'ShippingCostSummary' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCostSummary'
-        ),
         'Site' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Site'
-        ),
-        'StartTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
-        ),
-        'Storefront' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\StorefrontType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Storefront'
-        ),
-        'Subtitle' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Subtitle'
         ),
         'TimeLeft' => array(
             'type' => 'string',
@@ -515,41 +287,71 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Title'
         ),
-        'TopRatedListing' => array(
-            'type' => 'boolean',
+        'ShippingCostSummary' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TopRatedListing'
+            'elementName' => 'ShippingCostSummary'
         ),
-        'UnitInfo' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\UnitInfoType',
+        'ItemSpecifics' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UnitInfo'
+            'elementName' => 'ItemSpecifics'
         ),
-        'Variations' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\VariationsType',
+        'HitCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Variations'
+            'elementName' => 'HitCount'
         ),
-        'VhrAvailable' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'VhrAvailable'
-        ),
-        'VhrUrl' => array(
+        'Subtitle' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VhrUrl'
+            'elementName' => 'Subtitle'
         ),
-        'ViewItemURLForNaturalSearch' => array(
+        'PrimaryCategoryIDPath' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ViewItemURLForNaturalSearch'
+            'elementName' => 'PrimaryCategoryIDPath'
+        ),
+        'SecondaryCategoryID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SecondaryCategoryID'
+        ),
+        'SecondaryCategoryName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SecondaryCategoryName'
+        ),
+        'SecondaryCategoryIDPath' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SecondaryCategoryIDPath'
+        ),
+        'Charity' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\CharityType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Charity'
+        ),
+        'Storefront' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\StorefrontType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Storefront'
+        ),
+        'Country' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Country'
         ),
         'WatchCount' => array(
             'type' => 'integer',
@@ -557,17 +359,215 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'WatchCount'
         ),
-        'eBayNowAvailable' => array(
+        'HalfItemCondition' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HalfItemCondition'
+        ),
+        'SellerComments' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerComments'
+        ),
+        'ReturnPolicy' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ReturnPolicyType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnPolicy'
+        ),
+        'MinimumToBid' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MinimumToBid'
+        ),
+        'ProductID' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductID'
+        ),
+        'AutoPay' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'eBayNowAvailable'
+            'elementName' => 'AutoPay'
+        ),
+        'BusinessSellerDetails' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BusinessSellerDetails'
+        ),
+        'PaymentAllowedSite' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'PaymentAllowedSite'
+        ),
+        'IntegratedMerchantCreditCardEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ),
+        'Variations' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\VariationsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Variations'
+        ),
+        'HandlingTime' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HandlingTime'
+        ),
+        'LotSize' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LotSize'
+        ),
+        'ConditionID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionID'
+        ),
+        'ConditionDisplayName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDisplayName'
+        ),
+        'QuantityAvailableHint' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityAvailableHint'
+        ),
+        'QuantityThreshold' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityThreshold'
+        ),
+        'DiscountPriceInfo' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DiscountPriceInfo'
+        ),
+        'ExcludeShipToLocation' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExcludeShipToLocation'
+        ),
+        'TopRatedListing' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TopRatedListing'
+        ),
+        'VhrUrl' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VhrUrl'
+        ),
+        'VhrAvailable' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VhrAvailable'
+        ),
+        'QuantityInfo' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\QuantityInfo',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityInfo'
+        ),
+        'UnitInfo' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\UnitInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnitInfo'
+        ),
+        'GlobalShipping' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GlobalShipping'
+        ),
+        'ConditionDescription' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConditionDescription'
+        ),
+        'ItemCompatibilityCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemCompatibilityCount'
+        ),
+        'ItemCompatibilityList' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemCompatibilityList'
+        ),
+        'QuantitySoldByPickupInStore' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantitySoldByPickupInStore'
+        ),
+        'SKU' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
+        ),
+        'NewBestOffer' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NewBestOffer'
         ),
         'eBayNowEligible' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayNowEligible'
+        ),
+        'eBayNowAvailable' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'eBayNowAvailable'
+        ),
+        'IgnoreQuantity' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IgnoreQuantity'
+        ),
+        'AvailableForPickupDropOff' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AvailableForPickupDropOff'
+        ),
+        'EligibleForPickupDropOff' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EligibleForPickupDropOff'
         )
     );
 

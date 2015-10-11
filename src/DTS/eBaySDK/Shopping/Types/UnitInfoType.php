@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property double $UnitQuantity
  * @property string $UnitType
+ * @property double $UnitQuantity
  */
 class UnitInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class UnitInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'UnitQuantity' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UnitQuantity'
-        ),
         'UnitType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnitType'
+        ),
+        'UnitQuantity' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnitQuantity'
         )
     );
 

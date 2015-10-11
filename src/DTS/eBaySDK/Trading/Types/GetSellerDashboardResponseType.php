@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType $BuyerSatisfaction
- * @property \DTS\eBaySDK\Trading\Types\PerformanceDashboardType[] $Performance
- * @property \DTS\eBaySDK\Trading\Types\PowerSellerDashboardType $PowerSellerStatus
  * @property \DTS\eBaySDK\Trading\Types\SearchStandingDashboardType $SearchStanding
- * @property \DTS\eBaySDK\Trading\Types\SellerAccountDashboardType $SellerAccount
  * @property \DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType $SellerFeeDiscount
+ * @property \DTS\eBaySDK\Trading\Types\PowerSellerDashboardType $PowerSellerStatus
+ * @property \DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType $BuyerSatisfaction
+ * @property \DTS\eBaySDK\Trading\Types\SellerAccountDashboardType $SellerAccount
+ * @property \DTS\eBaySDK\Trading\Types\PerformanceDashboardType[] $Performance
  */
 class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -36,17 +36,17 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BuyerSatisfaction' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
+        'SearchStanding' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BuyerSatisfaction'
+            'elementName' => 'SearchStanding'
         ),
-        'Performance' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
-            'unbound' => true,
+        'SellerFeeDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Performance'
+            'elementName' => 'SellerFeeDiscount'
         ),
         'PowerSellerStatus' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PowerSellerDashboardType',
@@ -54,11 +54,11 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'PowerSellerStatus'
         ),
-        'SearchStanding' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
+        'BuyerSatisfaction' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SearchStanding'
+            'elementName' => 'BuyerSatisfaction'
         ),
         'SellerAccount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellerAccountDashboardType',
@@ -66,11 +66,11 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'SellerAccount'
         ),
-        'SellerFeeDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
-            'unbound' => false,
+        'Performance' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'SellerFeeDiscount'
+            'elementName' => 'Performance'
         )
     );
 

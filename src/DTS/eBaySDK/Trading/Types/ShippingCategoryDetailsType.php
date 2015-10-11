@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ShippingCategory
  * @property string $Description
  * @property string $DetailVersion
- * @property string $ShippingCategory
  * @property \DateTime $UpdateTime
  */
 class ShippingCategoryDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -34,6 +34,12 @@ class ShippingCategoryDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ShippingCategory' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCategory'
+        ),
         'Description' => array(
             'type' => 'string',
             'unbound' => false,
@@ -45,12 +51,6 @@ class ShippingCategoryDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'ShippingCategory' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCategory'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

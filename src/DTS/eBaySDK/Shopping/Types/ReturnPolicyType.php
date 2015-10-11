@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $Description
- * @property string $EAN
  * @property string $Refund
- * @property string $RestockingFeeValue
- * @property string $RestockingFeeValueOption
- * @property string $ReturnsAccepted
  * @property string $ReturnsWithin
- * @property string $ShippingCostPaidBy
- * @property string $WarrantyDuration
+ * @property string $ReturnsAccepted
+ * @property string $Description
  * @property string $WarrantyOffered
  * @property string $WarrantyType
+ * @property string $WarrantyDuration
+ * @property string $EAN
+ * @property string $ShippingCostPaidBy
+ * @property string $RestockingFeeValue
+ * @property string $RestockingFeeValueOption
  */
 class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,41 +41,11 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ),
-        'EAN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ),
         'Refund' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Refund'
-        ),
-        'RestockingFeeValue' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RestockingFeeValue'
-        ),
-        'RestockingFeeValueOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RestockingFeeValueOption'
-        ),
-        'ReturnsAccepted' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnsAccepted'
         ),
         'ReturnsWithin' => array(
             'type' => 'string',
@@ -83,17 +53,17 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
         ),
-        'ShippingCostPaidBy' => array(
+        'ReturnsAccepted' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCostPaidBy'
+            'elementName' => 'ReturnsAccepted'
         ),
-        'WarrantyDuration' => array(
+        'Description' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'WarrantyDuration'
+            'elementName' => 'Description'
         ),
         'WarrantyOffered' => array(
             'type' => 'string',
@@ -106,6 +76,36 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyType'
+        ),
+        'WarrantyDuration' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyDuration'
+        ),
+        'EAN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
+        ),
+        'ShippingCostPaidBy' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCostPaidBy'
+        ),
+        'RestockingFeeValue' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RestockingFeeValue'
+        ),
+        'RestockingFeeValueOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RestockingFeeValueOption'
         )
     );
 

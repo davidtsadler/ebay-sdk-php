@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $Category2ID
  * @property integer $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
- * @property integer $SaleTemplateGroupID
+ * @property integer $Category2ID
  * @property integer $SaleTemplateID
+ * @property integer $SaleTemplateGroupID
  * @property string $SaleTemplateName
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  */
 class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,35 +37,29 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Category2ID'
-        ),
         'CategoryID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'Fees' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Fees'
-        ),
-        'SaleTemplateGroupID' => array(
+        'Category2ID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SaleTemplateGroupID'
+            'elementName' => 'Category2ID'
         ),
         'SaleTemplateID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
+        ),
+        'SaleTemplateGroupID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateGroupID'
         ),
         'SaleTemplateName' => array(
             'type' => 'string',
@@ -78,6 +72,12 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
+        ),
+        'Fees' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Fees'
         )
     );
 

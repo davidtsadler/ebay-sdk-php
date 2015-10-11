@@ -23,23 +23,23 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer[] $CharityDomain
- * @property integer $CharityRegion
- * @property string $Description
- * @property boolean $DisplayLogoSelling
- * @property string $EIN
- * @property string $ExternalID
- * @property string $ListingNPContactName
- * @property string $ListingNPEmail
- * @property boolean $ListingNPEmailNotifPref
- * @property string $LogoURL
- * @property string $LogoURLSelling
- * @property string $Mission
  * @property string $Name
- * @property \DTS\eBaySDK\Trading\Types\NonProfitAddressType[] $NonProfitAddress
- * @property string $NonProfitSecondName
- * @property \DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType[] $NonProfitSocialAddress
+ * @property boolean $ListingNPEmailNotifPref
+ * @property string $ListingNPEmail
+ * @property string $ListingNPContactName
+ * @property string $Mission
+ * @property string $LogoURL
+ * @property integer $CharityRegion
+ * @property integer[] $CharityDomain
+ * @property string $LogoURLSelling
+ * @property boolean $DisplayLogoSelling
+ * @property string $Description
+ * @property string $ExternalID
  * @property integer $PopularityIndex
+ * @property string $EIN
+ * @property string $NonProfitSecondName
+ * @property \DTS\eBaySDK\Trading\Types\NonProfitAddressType[] $NonProfitAddress
+ * @property \DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType[] $NonProfitSocialAddress
  * @property string $id
  */
 class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
@@ -48,53 +48,11 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CharityDomain' => array(
-            'type' => 'integer',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CharityDomain'
-        ),
-        'CharityRegion' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CharityRegion'
-        ),
-        'Description' => array(
+        'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Description'
-        ),
-        'DisplayLogoSelling' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayLogoSelling'
-        ),
-        'EIN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EIN'
-        ),
-        'ExternalID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalID'
-        ),
-        'ListingNPContactName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingNPContactName'
-        ),
-        'ListingNPEmail' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingNPEmail'
+            'elementName' => 'Name'
         ),
         'ListingNPEmailNotifPref' => array(
             'type' => 'boolean',
@@ -102,17 +60,17 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ListingNPEmailNotifPref'
         ),
-        'LogoURL' => array(
+        'ListingNPEmail' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LogoURL'
+            'elementName' => 'ListingNPEmail'
         ),
-        'LogoURLSelling' => array(
+        'ListingNPContactName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LogoURLSelling'
+            'elementName' => 'ListingNPContactName'
         ),
         'Mission' => array(
             'type' => 'string',
@@ -120,17 +78,59 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Mission'
         ),
-        'Name' => array(
+        'LogoURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Name'
+            'elementName' => 'LogoURL'
         ),
-        'NonProfitAddress' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NonProfitAddressType',
+        'CharityRegion' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CharityRegion'
+        ),
+        'CharityDomain' => array(
+            'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
-            'elementName' => 'NonProfitAddress'
+            'elementName' => 'CharityDomain'
+        ),
+        'LogoURLSelling' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LogoURLSelling'
+        ),
+        'DisplayLogoSelling' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayLogoSelling'
+        ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
+        ),
+        'ExternalID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalID'
+        ),
+        'PopularityIndex' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PopularityIndex'
+        ),
+        'EIN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EIN'
         ),
         'NonProfitSecondName' => array(
             'type' => 'string',
@@ -138,17 +138,17 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NonProfitSecondName'
         ),
+        'NonProfitAddress' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NonProfitAddressType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'NonProfitAddress'
+        ),
         'NonProfitSocialAddress' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'NonProfitSocialAddress'
-        ),
-        'PopularityIndex' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PopularityIndex'
         ),
         'id' => array(
             'type' => 'string',

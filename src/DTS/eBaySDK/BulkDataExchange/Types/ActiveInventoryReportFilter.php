@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails $auctionItemDetails
- * @property \DTS\eBaySDK\BulkDataExchange\Types\FixedPriceItemDetails $fixedPriceItemDetails
  * @property \DTS\eBaySDK\BulkDataExchange\Enums\IncludeListingType $includeListingType
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\FixedPriceItemDetails $fixedPriceItemDetails
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails $auctionItemDetails
  */
 class ActiveInventoryReportFilter extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class ActiveInventoryReportFilter extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'auctionItemDetails' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails',
+        'includeListingType' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'auctionItemDetails'
+            'elementName' => 'includeListingType'
         ),
         'fixedPriceItemDetails' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FixedPriceItemDetails',
@@ -45,11 +45,11 @@ class ActiveInventoryReportFilter extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'fixedPriceItemDetails'
         ),
-        'includeListingType' => array(
-            'type' => 'string',
+        'auctionItemDetails' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'includeListingType'
+            'elementName' => 'auctionItemDetails'
         )
     );
 

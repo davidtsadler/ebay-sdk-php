@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
  * @property integer $SiteID
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class SiteDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -34,12 +34,6 @@ class SiteDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'Site' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,6 +45,12 @@ class SiteDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteID'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

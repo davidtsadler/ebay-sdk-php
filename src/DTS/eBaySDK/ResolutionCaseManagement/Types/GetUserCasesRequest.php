@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType $caseStatusFilter
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType $caseTypeFilter
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\DateRangeFilterType $creationDateRangeFilter
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ItemFilterType $itemFilter
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\DateRangeFilterType $creationDateRangeFilter
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType $caseTypeFilter
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType $caseStatusFilter
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\PaginationInput $paginationInput
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseSortOrderType $sortOrder
  */
@@ -36,17 +36,11 @@ class GetUserCasesRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\Ba
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'caseStatusFilter' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType',
+        'itemFilter' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemFilterType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'caseStatusFilter'
-        ),
-        'caseTypeFilter' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'caseTypeFilter'
+            'elementName' => 'itemFilter'
         ),
         'creationDateRangeFilter' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DateRangeFilterType',
@@ -54,11 +48,17 @@ class GetUserCasesRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\Ba
             'attribute' => false,
             'elementName' => 'creationDateRangeFilter'
         ),
-        'itemFilter' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemFilterType',
+        'caseTypeFilter' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'itemFilter'
+            'elementName' => 'caseTypeFilter'
+        ),
+        'caseStatusFilter' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'caseStatusFilter'
         ),
         'paginationInput' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaginationInput',

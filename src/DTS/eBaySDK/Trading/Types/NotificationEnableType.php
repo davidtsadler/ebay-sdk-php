@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $EventEnable
  * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $EventType
+ * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $EventEnable
  */
 class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EventEnable' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EventEnable'
-        ),
         'EventType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EventType'
+        ),
+        'EventEnable' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EventEnable'
         )
     );
 

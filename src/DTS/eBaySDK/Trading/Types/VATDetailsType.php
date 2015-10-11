@@ -25,9 +25,9 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $BusinessSeller
  * @property boolean $RestrictedToBusiness
- * @property string $VATID
  * @property double $VATPercent
  * @property string $VATSite
+ * @property string $VATID
  */
 class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -47,12 +47,6 @@ class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RestrictedToBusiness'
         ),
-        'VATID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'VATID'
-        ),
         'VATPercent' => array(
             'type' => 'double',
             'unbound' => false,
@@ -64,6 +58,12 @@ class VATDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATSite'
+        ),
+        'VATID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VATID'
         )
     );
 

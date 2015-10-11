@@ -24,10 +24,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $DeliveredCount
- * @property integer $ErrorCount
- * @property integer $ExpiredCount
  * @property integer $QueuedNewCount
  * @property integer $QueuedPendingCount
+ * @property integer $ExpiredCount
+ * @property integer $ErrorCount
  */
 class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,18 +41,6 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DeliveredCount'
         ),
-        'ErrorCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ErrorCount'
-        ),
-        'ExpiredCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpiredCount'
-        ),
         'QueuedNewCount' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -64,6 +52,18 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QueuedPendingCount'
+        ),
+        'ExpiredCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExpiredCount'
+        ),
+        'ErrorCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorCount'
         )
     );
 

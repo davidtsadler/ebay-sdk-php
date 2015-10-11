@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property integer $SaleTemplateID
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $CategoryID
+ * @property string $Category2ID
+ * @property boolean $VerifyOnly
  * @property string $SaleTemplateName
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
- * @property boolean $VerifyOnly
  */
 class ReviseSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,17 +37,11 @@ class ReviseSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
-            'type' => 'string',
+        'SaleTemplateID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
-        ),
-        'CategoryID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'SaleTemplateID'
         ),
         'Fees' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
@@ -55,11 +49,23 @@ class ReviseSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Type
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'SaleTemplateID' => array(
-            'type' => 'integer',
+        'CategoryID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SaleTemplateID'
+            'elementName' => 'CategoryID'
+        ),
+        'Category2ID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Category2ID'
+        ),
+        'VerifyOnly' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VerifyOnly'
         ),
         'SaleTemplateName' => array(
             'type' => 'string',
@@ -72,12 +78,6 @@ class ReviseSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Type
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
-        ),
-        'VerifyOnly' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'VerifyOnly'
         )
     );
 

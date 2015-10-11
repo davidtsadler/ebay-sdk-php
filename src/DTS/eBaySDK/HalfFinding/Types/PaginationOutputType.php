@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property integer $entriesPerPage
  * @property integer $pageNumber
+ * @property integer $entriesPerPage
  * @property integer $totalEntries
  * @property integer $totalPages
  */
@@ -34,17 +34,17 @@ class PaginationOutputType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'entriesPerPage' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'entriesPerPage'
-        ),
         'pageNumber' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'pageNumber'
+        ),
+        'entriesPerPage' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'entriesPerPage'
         ),
         'totalEntries' => array(
             'type' => 'integer',

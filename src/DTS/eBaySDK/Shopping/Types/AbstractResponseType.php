@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Enums\AckCodeType $Ack
- * @property string $Build
- * @property string $CorrelationID
- * @property \DTS\eBaySDK\Shopping\Types\ErrorType[] $Errors
  * @property \DateTime $Timestamp
+ * @property \DTS\eBaySDK\Shopping\Enums\AckCodeType $Ack
+ * @property \DTS\eBaySDK\Shopping\Types\ErrorType[] $Errors
+ * @property string $Build
  * @property string $Version
+ * @property string $CorrelationID
  */
 class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,23 +36,17 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Timestamp' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Timestamp'
+        ),
         'Ack' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
-        ),
-        'Build' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Build'
-        ),
-        'CorrelationID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
         ),
         'Errors' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\ErrorType',
@@ -60,17 +54,23 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Errors'
         ),
-        'Timestamp' => array(
-            'type' => 'DateTime',
+        'Build' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Timestamp'
+            'elementName' => 'Build'
         ),
         'Version' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
+        ),
+        'CorrelationID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CorrelationID'
         )
     );
 

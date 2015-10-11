@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $CreatedTime
  * @property string $OrderID
+ * @property \DateTime $CreatedTime
  */
 class AddOrderResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class AddOrderResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CreatedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreatedTime'
-        ),
         'OrderID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
+        ),
+        'CreatedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreatedTime'
         )
     );
 

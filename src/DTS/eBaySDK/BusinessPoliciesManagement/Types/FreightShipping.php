@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property string $commodityType
- * @property boolean $destPickupInside
- * @property string $destPickupLocationType
- * @property double $freightShippingClass
- * @property boolean $originPickupInside
  * @property string $originPickupLocationType
+ * @property boolean $originPickupInside
  * @property boolean $packagingHelpRequired
+ * @property string $commodityType
+ * @property double $freightShippingClass
+ * @property string $destPickupLocationType
+ * @property boolean $destPickupInside
  */
 class FreightShipping extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,29 +37,11 @@ class FreightShipping extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'commodityType' => array(
+        'originPickupLocationType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'commodityType'
-        ),
-        'destPickupInside' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'destPickupInside'
-        ),
-        'destPickupLocationType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'destPickupLocationType'
-        ),
-        'freightShippingClass' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'freightShippingClass'
+            'elementName' => 'originPickupLocationType'
         ),
         'originPickupInside' => array(
             'type' => 'boolean',
@@ -67,17 +49,35 @@ class FreightShipping extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'originPickupInside'
         ),
-        'originPickupLocationType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'originPickupLocationType'
-        ),
         'packagingHelpRequired' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'packagingHelpRequired'
+        ),
+        'commodityType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'commodityType'
+        ),
+        'freightShippingClass' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'freightShippingClass'
+        ),
+        'destPickupLocationType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'destPickupLocationType'
+        ),
+        'destPickupInside' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'destPickupInside'
         )
     );
 

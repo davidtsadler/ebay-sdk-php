@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PictureManagerActionCodeType $Action
  * @property \DTS\eBaySDK\Trading\Types\PictureManagerDetailsType $PictureManagerDetails
+ * @property \DTS\eBaySDK\Trading\Enums\PictureManagerActionCodeType $Action
  */
 class SetPictureManagerDetailsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class SetPictureManagerDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Action' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Action'
-        ),
         'PictureManagerDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PictureManagerDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureManagerDetails'
+        ),
+        'Action' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Action'
         )
     );
 

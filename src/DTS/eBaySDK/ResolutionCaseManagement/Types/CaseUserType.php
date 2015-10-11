@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseUserRoleType $role
  * @property string $userId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseUserRoleType $role
  */
 class CaseUserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class CaseUserType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'role' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'role'
-        ),
         'userId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'userId'
+        ),
+        'role' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'role'
         )
     );
 

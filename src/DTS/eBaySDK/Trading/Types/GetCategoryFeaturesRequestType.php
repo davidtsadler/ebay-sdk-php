@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $AllFeaturesForCategory
  * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Enums\FeatureIDCodeType[] $FeatureID
  * @property integer $LevelLimit
  * @property boolean $ViewAllNodes
+ * @property \DTS\eBaySDK\Trading\Enums\FeatureIDCodeType[] $FeatureID
+ * @property boolean $AllFeaturesForCategory
  */
 class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -35,23 +35,11 @@ class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AllFeaturesForCategory' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AllFeaturesForCategory'
-        ),
         'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'FeatureID' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'FeatureID'
         ),
         'LevelLimit' => array(
             'type' => 'integer',
@@ -64,6 +52,18 @@ class GetCategoryFeaturesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ViewAllNodes'
+        ),
+        'FeatureID' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'FeatureID'
+        ),
+        'AllFeaturesForCategory' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AllFeaturesForCategory'
         )
     );
 

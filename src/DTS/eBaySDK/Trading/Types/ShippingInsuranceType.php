@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\FlatRateInsuranceRangeCostType[] $FlatRateInsuranceRangeCost
  * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
+ * @property \DTS\eBaySDK\Trading\Types\FlatRateInsuranceRangeCostType[] $FlatRateInsuranceRangeCost
  */
 class ShippingInsuranceType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ShippingInsuranceType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FlatRateInsuranceRangeCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatRateInsuranceRangeCostType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'FlatRateInsuranceRangeCost'
-        ),
         'InsuranceOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
+        ),
+        'FlatRateInsuranceRangeCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FlatRateInsuranceRangeCostType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'FlatRateInsuranceRangeCost'
         )
     );
 

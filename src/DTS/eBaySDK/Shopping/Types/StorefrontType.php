@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $StoreName
  * @property string $StoreURL
+ * @property string $StoreName
  */
 class StorefrontType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'StoreName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreName'
-        ),
         'StoreURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreURL'
+        ),
+        'StoreName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreName'
         )
     );
 

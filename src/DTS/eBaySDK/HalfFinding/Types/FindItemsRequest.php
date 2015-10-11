@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\HalfFinding\Types\ItemFilter[] $itemFilter
- * @property \DTS\eBaySDK\HalfFinding\Types\PaginationInputType $paginationInput
  * @property \DTS\eBaySDK\HalfFinding\Types\ProductIDType $productID
+ * @property \DTS\eBaySDK\HalfFinding\Types\PaginationInputType $paginationInput
+ * @property \DTS\eBaySDK\HalfFinding\Types\ItemFilter[] $itemFilter
  * @property \DTS\eBaySDK\HalfFinding\Types\SortByType $sortBy
  */
 class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
@@ -34,11 +34,11 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'itemFilter' => array(
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemFilter',
-            'unbound' => true,
+        'productID' => array(
+            'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'itemFilter'
+            'elementName' => 'productID'
         ),
         'paginationInput' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PaginationInputType',
@@ -46,11 +46,11 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
             'attribute' => false,
             'elementName' => 'paginationInput'
         ),
-        'productID' => array(
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
-            'unbound' => false,
+        'itemFilter' => array(
+            'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemFilter',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'productID'
+            'elementName' => 'itemFilter'
         ),
         'sortBy' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\SortByType',

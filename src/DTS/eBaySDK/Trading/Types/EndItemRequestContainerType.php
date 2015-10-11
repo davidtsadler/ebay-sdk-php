@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
  * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
  * @property string $MessageID
  * @property string $SellerInventoryID
  */
@@ -34,17 +34,17 @@ class EndItemRequestContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndingReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndingReason'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'EndingReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndingReason'
         ),
         'MessageID' => array(
             'type' => 'string',

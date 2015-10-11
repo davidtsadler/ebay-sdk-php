@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property \DTS\eBaySDK\MerchantData\Enums\DiscountNameCodeType $DiscountName
- * @property integer $ItemCount
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $OrderAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingCost
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $OrderAmount
+ * @property integer $ItemCount
  */
 class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,11 +40,11 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DiscountName'
         ),
-        'ItemCount' => array(
-            'type' => 'integer',
+        'ShippingCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemCount'
+            'elementName' => 'ShippingCost'
         ),
         'OrderAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -52,11 +52,11 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OrderAmount'
         ),
-        'ShippingCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'ItemCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCost'
+            'elementName' => 'ItemCount'
         )
     );
 

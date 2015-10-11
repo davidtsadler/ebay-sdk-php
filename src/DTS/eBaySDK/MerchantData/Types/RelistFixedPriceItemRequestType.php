@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string[] $DeletedField
  * @property \DTS\eBaySDK\MerchantData\Types\ItemType $Item
+ * @property string[] $DeletedField
  */
 class RelistFixedPriceItemRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class RelistFixedPriceItemRequestType extends \DTS\eBaySDK\MerchantData\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeletedField' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DeletedField'
-        ),
         'Item' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
+        ),
+        'DeletedField' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DeletedField'
         )
     );
 

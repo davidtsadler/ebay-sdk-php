@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CampaignDisplayName
  * @property integer $CampaignID
+ * @property string $CampaignDisplayName
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ItemDiscountAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingDiscountAmount
  */
@@ -34,17 +34,17 @@ class SellerDiscountType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CampaignDisplayName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CampaignDisplayName'
-        ),
         'CampaignID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CampaignID'
+        ),
+        'CampaignDisplayName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CampaignDisplayName'
         ),
         'ItemDiscountAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',

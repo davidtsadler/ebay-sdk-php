@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchType[] $FavoriteSearch
  * @property integer $TotalAvailable
+ * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchType[] $FavoriteSearch
  */
 class MyeBayFavoriteSearchListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class MyeBayFavoriteSearchListType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FavoriteSearch' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'FavoriteSearch'
-        ),
         'TotalAvailable' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAvailable'
+        ),
+        'FavoriteSearch' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'FavoriteSearch'
         )
     );
 

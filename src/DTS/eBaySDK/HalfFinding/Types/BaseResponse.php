@@ -25,9 +25,9 @@ namespace DTS\eBaySDK\HalfFinding\Types;
  *
  * @property \DTS\eBaySDK\HalfFinding\Enums\AckValue $ack
  * @property \DTS\eBaySDK\HalfFinding\Types\ErrorMessage $errorMessage
- * @property \DTS\eBaySDK\HalfFinding\Types\ExtensionType[] $extension
- * @property \DateTime $timestamp
  * @property string $version
+ * @property \DateTime $timestamp
+ * @property \DTS\eBaySDK\HalfFinding\Types\ExtensionType[] $extension
  */
 class BaseResponse extends \DTS\eBaySDK\Types\BaseType
 {
@@ -47,11 +47,11 @@ class BaseResponse extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'errorMessage'
         ),
-        'extension' => array(
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ExtensionType',
-            'unbound' => true,
+        'version' => array(
+            'type' => 'string',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'extension'
+            'elementName' => 'version'
         ),
         'timestamp' => array(
             'type' => 'DateTime',
@@ -59,11 +59,11 @@ class BaseResponse extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'timestamp'
         ),
-        'version' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'extension' => array(
+            'type' => 'DTS\eBaySDK\HalfFinding\Types\ExtensionType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'version'
+            'elementName' => 'extension'
         )
     );
 

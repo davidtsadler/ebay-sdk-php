@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailedMessage
  * @property string $ErrorCode
  * @property string $Severity
+ * @property string $DetailedMessage
  */
 class FaultDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class FaultDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailedMessage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailedMessage'
-        ),
         'ErrorCode' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class FaultDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Severity'
+        ),
+        'DetailedMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailedMessage'
         )
     );
 

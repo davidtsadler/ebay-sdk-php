@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $CrossPromotionEnabled
- * @property \DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType $CrossSellGallerySortFilter
  * @property \DTS\eBaySDK\Trading\Enums\ItemFormatSortFilterCodeType $CrossSellItemFormatSortFilter
+ * @property \DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType $CrossSellGallerySortFilter
  * @property \DTS\eBaySDK\Trading\Enums\ItemSortFilterCodeType $CrossSellItemSortFilter
- * @property \DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType $UpSellGallerySortFilter
  * @property \DTS\eBaySDK\Trading\Enums\ItemFormatSortFilterCodeType $UpSellItemFormatSortFilter
+ * @property \DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType $UpSellGallerySortFilter
  * @property \DTS\eBaySDK\Trading\Enums\ItemSortFilterCodeType $UpSellItemSortFilter
  */
 class CrossPromotionPreferencesType extends \DTS\eBaySDK\Types\BaseType
@@ -43,17 +43,17 @@ class CrossPromotionPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CrossPromotionEnabled'
         ),
-        'CrossSellGallerySortFilter' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CrossSellGallerySortFilter'
-        ),
         'CrossSellItemFormatSortFilter' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CrossSellItemFormatSortFilter'
+        ),
+        'CrossSellGallerySortFilter' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CrossSellGallerySortFilter'
         ),
         'CrossSellItemSortFilter' => array(
             'type' => 'string',
@@ -61,17 +61,17 @@ class CrossPromotionPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CrossSellItemSortFilter'
         ),
-        'UpSellGallerySortFilter' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UpSellGallerySortFilter'
-        ),
         'UpSellItemFormatSortFilter' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpSellItemFormatSortFilter'
+        ),
+        'UpSellGallerySortFilter' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UpSellGallerySortFilter'
         ),
         'UpSellItemSortFilter' => array(
             'type' => 'string',

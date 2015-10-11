@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Description
  * @property string $ShippingCostPaidByOption
+ * @property string $Description
  */
 class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ),
         'ShippingCostPaidByOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidByOption'
+        ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
         )
     );
 

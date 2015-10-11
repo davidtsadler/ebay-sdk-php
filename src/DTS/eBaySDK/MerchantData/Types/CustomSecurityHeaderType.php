@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\UserIdPasswordType $Credentials
- * @property string $HardExpirationWarning
- * @property string $NotificationSignature
  * @property string $eBayAuthToken
+ * @property string $HardExpirationWarning
+ * @property \DTS\eBaySDK\MerchantData\Types\UserIdPasswordType $Credentials
+ * @property string $NotificationSignature
  */
 class CustomSecurityHeaderType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,11 +34,11 @@ class CustomSecurityHeaderType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Credentials' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\UserIdPasswordType',
+        'eBayAuthToken' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Credentials'
+            'elementName' => 'eBayAuthToken'
         ),
         'HardExpirationWarning' => array(
             'type' => 'string',
@@ -46,17 +46,17 @@ class CustomSecurityHeaderType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
         ),
+        'Credentials' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\UserIdPasswordType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Credentials'
+        ),
         'NotificationSignature' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationSignature'
-        ),
-        'eBayAuthToken' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'eBayAuthToken'
         )
     );
 

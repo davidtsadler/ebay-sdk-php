@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $DefaultValue
- * @property string $Description
- * @property string $DetailVersion
- * @property boolean $DimensionsSupported
  * @property integer $PackageID
+ * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType $ShippingPackage
+ * @property boolean $DefaultValue
+ * @property boolean $DimensionsSupported
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -37,11 +37,11 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DefaultValue' => array(
-            'type' => 'boolean',
+        'PackageID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DefaultValue'
+            'elementName' => 'PackageID'
         ),
         'Description' => array(
             'type' => 'string',
@@ -49,11 +49,17 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ),
-        'DetailVersion' => array(
+        'ShippingPackage' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'ShippingPackage'
+        ),
+        'DefaultValue' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DefaultValue'
         ),
         'DimensionsSupported' => array(
             'type' => 'boolean',
@@ -61,17 +67,11 @@ class ShippingPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DimensionsSupported'
         ),
-        'PackageID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PackageID'
-        ),
-        'ShippingPackage' => array(
+        'DetailVersion' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingPackage'
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

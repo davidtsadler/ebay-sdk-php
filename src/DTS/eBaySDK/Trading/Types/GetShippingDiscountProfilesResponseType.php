@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType $CalculatedHandlingDiscount
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
- * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedDuration
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $CurrencyID
  * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
- * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $InternationalShippingInsurance
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
  * @property boolean $PromotionalShippingDiscount
+ * @property \DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType $CalculatedHandlingDiscount
  * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $ShippingInsurance
+ * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $InternationalShippingInsurance
+ * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedDuration
  */
 class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -39,24 +39,6 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CalculatedHandlingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CalculatedHandlingDiscount'
-        ),
-        'CalculatedShippingDiscount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CalculatedShippingDiscount'
-        ),
-        'CombinedDuration' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedDuration'
-        ),
         'CurrencyID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -69,17 +51,23 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
             'attribute' => false,
             'elementName' => 'FlatShippingDiscount'
         ),
-        'InternationalShippingInsurance' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
+        'CalculatedShippingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'InternationalShippingInsurance'
+            'elementName' => 'CalculatedShippingDiscount'
         ),
         'PromotionalShippingDiscount' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscount'
+        ),
+        'CalculatedHandlingDiscount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CalculatedHandlingDiscount'
         ),
         'PromotionalShippingDiscountDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
@@ -92,6 +80,18 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsurance'
+        ),
+        'InternationalShippingInsurance' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalShippingInsurance'
+        ),
+        'CombinedDuration' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CombinedDuration'
         )
     );
 

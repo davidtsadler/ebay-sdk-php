@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Enums\EndReasonCodeType $EndingReason
  * @property string $ItemID
+ * @property \DTS\eBaySDK\MerchantData\Enums\EndReasonCodeType $EndingReason
  * @property string $SellerInventoryID
  */
 class EndItemRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequestType
@@ -33,17 +33,17 @@ class EndItemRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndingReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndingReason'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'EndingReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndingReason'
         ),
         'SellerInventoryID' => array(
             'type' => 'string',

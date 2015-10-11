@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $CharityDomain
  * @property string $CharityID
  * @property string $CharityName
+ * @property string $Query
  * @property integer $CharityRegion
- * @property boolean $Featured
+ * @property integer $CharityDomain
  * @property boolean $IncludeDescription
  * @property \DTS\eBaySDK\Trading\Enums\StringMatchCodeType $MatchType
- * @property string $Query
+ * @property boolean $Featured
  */
 class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,12 +38,6 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CharityDomain' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CharityDomain'
-        ),
         'CharityID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -56,17 +50,23 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'attribute' => false,
             'elementName' => 'CharityName'
         ),
+        'Query' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Query'
+        ),
         'CharityRegion' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityRegion'
         ),
-        'Featured' => array(
-            'type' => 'boolean',
+        'CharityDomain' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Featured'
+            'elementName' => 'CharityDomain'
         ),
         'IncludeDescription' => array(
             'type' => 'boolean',
@@ -80,11 +80,11 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'attribute' => false,
             'elementName' => 'MatchType'
         ),
-        'Query' => array(
-            'type' => 'string',
+        'Featured' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Query'
+            'elementName' => 'Featured'
         )
     );
 

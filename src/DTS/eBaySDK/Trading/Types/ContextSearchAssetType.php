@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CategoryType $Category
  * @property string $Keyword
+ * @property \DTS\eBaySDK\Trading\Types\CategoryType $Category
  * @property integer $Ranking
  */
 class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Category'
-        ),
         'Keyword' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Keyword'
+        ),
+        'Category' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Category'
         ),
         'Ranking' => array(
             'type' => 'integer',

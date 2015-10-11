@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $Description
- * @property string $DetailVersion
- * @property boolean $EAN
  * @property \DTS\eBaySDK\Trading\Types\RefundDetailsType[] $Refund
- * @property \DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType[] $RestockingFeeValue
- * @property \DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType[] $ReturnsAccepted
  * @property \DTS\eBaySDK\Trading\Types\ReturnsWithinDetailsType[] $ReturnsWithin
- * @property \DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType[] $ShippingCostPaidBy
- * @property \DateTime $UpdateTime
- * @property \DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType[] $WarrantyDuration
+ * @property \DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType[] $ReturnsAccepted
+ * @property boolean $Description
  * @property \DTS\eBaySDK\Trading\Types\WarrantyOfferedDetailsType[] $WarrantyOffered
  * @property \DTS\eBaySDK\Trading\Types\WarrantyTypeDetailsType[] $WarrantyType
+ * @property \DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType[] $WarrantyDuration
+ * @property boolean $EAN
+ * @property \DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType[] $ShippingCostPaidBy
+ * @property \DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType[] $RestockingFeeValue
+ * @property string $DetailVersion
+ * @property \DateTime $UpdateTime
  */
 class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,41 +42,11 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
-        ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
-        'EAN' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ),
         'Refund' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\RefundDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Refund'
-        ),
-        'RestockingFeeValue' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'RestockingFeeValue'
-        ),
-        'ReturnsAccepted' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ReturnsAccepted'
         ),
         'ReturnsWithin' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ReturnsWithinDetailsType',
@@ -84,23 +54,17 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
         ),
-        'ShippingCostPaidBy' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType',
+        'ReturnsAccepted' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType',
             'unbound' => true,
             'attribute' => false,
-            'elementName' => 'ShippingCostPaidBy'
+            'elementName' => 'ReturnsAccepted'
         ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
+        'Description' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UpdateTime'
-        ),
-        'WarrantyDuration' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'WarrantyDuration'
+            'elementName' => 'Description'
         ),
         'WarrantyOffered' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\WarrantyOfferedDetailsType',
@@ -113,6 +77,42 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'WarrantyType'
+        ),
+        'WarrantyDuration' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'WarrantyDuration'
+        ),
+        'EAN' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
+        ),
+        'ShippingCostPaidBy' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingCostPaidBy'
+        ),
+        'RestockingFeeValue' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'RestockingFeeValue'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ),
+        'UpdateTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UpdateTime'
         )
     );
 

@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $BestOfferCount
  * @property integer $BiddingCount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWinningCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWonCost
  * @property integer $WinningCount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWinningCost
  * @property integer $WonCount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalWonCost
  * @property integer $WonDurationInDays
+ * @property integer $BestOfferCount
  */
 class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,29 +37,11 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOfferCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferCount'
-        ),
         'BiddingCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BiddingCount'
-        ),
-        'TotalWinningCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalWinningCost'
-        ),
-        'TotalWonCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalWonCost'
         ),
         'WinningCount' => array(
             'type' => 'integer',
@@ -67,17 +49,35 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'WinningCount'
         ),
+        'TotalWinningCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalWinningCost'
+        ),
         'WonCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WonCount'
         ),
+        'TotalWonCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalWonCost'
+        ),
         'WonDurationInDays' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WonDurationInDays'
+        ),
+        'BestOfferCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferCount'
         )
     );
 

@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Finding\Types\ProductId $productId
  * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
  * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
- * @property \DTS\eBaySDK\Finding\Types\ProductId $productId
  */
 class FindItemsByProductRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingServiceRequest
 {
@@ -33,6 +33,12 @@ class FindItemsByProductRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'productId' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'productId'
+        ),
         'itemFilter' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
             'unbound' => true,
@@ -44,12 +50,6 @@ class FindItemsByProductRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
-        ),
-        'productId' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'productId'
         )
     );
 

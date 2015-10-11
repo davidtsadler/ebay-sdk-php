@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\NotificationEventStateCodeType $DeliveryStatus
- * @property \DateTime $DeliveryTime
  * @property string $DeliveryURL
- * @property string $DeliveryURLName
- * @property string $ErrorMessage
- * @property \DateTime $ExpirationTime
- * @property \DateTime $NextRetryTime
  * @property string $ReferenceID
- * @property integer $Retries
+ * @property \DateTime $ExpirationTime
  * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $Type
+ * @property integer $Retries
+ * @property \DTS\eBaySDK\Trading\Enums\NotificationEventStateCodeType $DeliveryStatus
+ * @property \DateTime $NextRetryTime
+ * @property \DateTime $DeliveryTime
+ * @property string $ErrorMessage
+ * @property string $DeliveryURLName
  */
 class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,47 +40,11 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeliveryStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryStatus'
-        ),
-        'DeliveryTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryTime'
-        ),
         'DeliveryURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURL'
-        ),
-        'DeliveryURLName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryURLName'
-        ),
-        'ErrorMessage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ErrorMessage'
-        ),
-        'ExpirationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpirationTime'
-        ),
-        'NextRetryTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NextRetryTime'
         ),
         'ReferenceID' => array(
             'type' => 'string',
@@ -88,17 +52,53 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReferenceID'
         ),
-        'Retries' => array(
-            'type' => 'integer',
+        'ExpirationTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Retries'
+            'elementName' => 'ExpirationTime'
         ),
         'Type' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
+        ),
+        'Retries' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Retries'
+        ),
+        'DeliveryStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryStatus'
+        ),
+        'NextRetryTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NextRetryTime'
+        ),
+        'DeliveryTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryTime'
+        ),
+        'ErrorMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorMessage'
+        ),
+        'DeliveryURLName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryURLName'
         )
     );
 

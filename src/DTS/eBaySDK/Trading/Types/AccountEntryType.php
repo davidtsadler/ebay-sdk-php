@@ -24,20 +24,20 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\AccountDetailEntryCodeType $AccountDetailsEntryType
- * @property \DTS\eBaySDK\Trading\Types\AmountType $Balance
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ConversionRate
- * @property \DateTime $Date
  * @property string $Description
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $Balance
+ * @property \DateTime $Date
  * @property \DTS\eBaySDK\Trading\Types\AmountType $GrossDetailAmount
  * @property string $ItemID
  * @property string $Memo
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ConversionRate
  * @property \DTS\eBaySDK\Trading\Types\AmountType $NetDetailAmount
- * @property string $OrderLineItemID
- * @property boolean $ReceivedTopRatedDiscount
  * @property string $RefNumber
- * @property string $Title
- * @property string $TransactionID
  * @property integer $VATPercent
+ * @property string $Title
+ * @property string $OrderLineItemID
+ * @property string $TransactionID
+ * @property boolean $ReceivedTopRatedDiscount
  */
 class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -51,29 +51,23 @@ class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AccountDetailsEntryType'
         ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
+        ),
         'Balance' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Balance'
         ),
-        'ConversionRate' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConversionRate'
-        ),
         'Date' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Date'
-        ),
-        'Description' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Description'
         ),
         'GrossDetailAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -93,23 +87,17 @@ class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Memo'
         ),
+        'ConversionRate' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConversionRate'
+        ),
         'NetDetailAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NetDetailAmount'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'ReceivedTopRatedDiscount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReceivedTopRatedDiscount'
         ),
         'RefNumber' => array(
             'type' => 'string',
@@ -117,11 +105,23 @@ class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RefNumber'
         ),
+        'VATPercent' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VATPercent'
+        ),
         'Title' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         ),
         'TransactionID' => array(
             'type' => 'string',
@@ -129,11 +129,11 @@ class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TransactionID'
         ),
-        'VATPercent' => array(
-            'type' => 'integer',
+        'ReceivedTopRatedDiscount' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VATPercent'
+            'elementName' => 'ReceivedTopRatedDiscount'
         )
     );
 

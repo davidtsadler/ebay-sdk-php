@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Shopping\Types;
 /**
  *
  * @property string[] $CategoryID
+ * @property string $QueryKeywords
  * @property string[] $CategoryIDExclude
  * @property integer $MaxEntries
- * @property string $QueryKeywords
  */
 class FindPopularItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -40,6 +40,12 @@ class FindPopularItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
+        'QueryKeywords' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QueryKeywords'
+        ),
         'CategoryIDExclude' => array(
             'type' => 'string',
             'unbound' => true,
@@ -51,12 +57,6 @@ class FindPopularItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxEntries'
-        ),
-        'QueryKeywords' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QueryKeywords'
         )
     );
 

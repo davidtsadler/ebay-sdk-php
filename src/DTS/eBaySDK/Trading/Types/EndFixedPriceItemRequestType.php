@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
  * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
  * @property string $SKU
  */
 class EndFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -33,17 +33,17 @@ class EndFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndingReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndingReason'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'EndingReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndingReason'
         ),
         'SKU' => array(
             'type' => 'string',

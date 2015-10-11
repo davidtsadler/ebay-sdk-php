@@ -26,8 +26,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\DisputeExplanationCodeType $DisputeExplanation
  * @property \DTS\eBaySDK\Trading\Enums\DisputeReasonCodeType $DisputeReason
  * @property string $ItemID
- * @property string $OrderLineItemID
  * @property string $TransactionID
+ * @property string $OrderLineItemID
  */
 class AddDisputeRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -53,17 +53,17 @@ class AddDisputeRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
         'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

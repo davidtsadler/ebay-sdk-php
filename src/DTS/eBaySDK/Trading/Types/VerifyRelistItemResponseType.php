@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
- * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DTS\eBaySDK\Trading\Types\ProductSuggestionsType $ProductSuggestions
+ * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
  */
 class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,17 +37,11 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DiscountReason' => array(
+        'ItemID' => array(
             'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
-        ),
-        'EndTime' => array(
-            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EndTime'
+            'elementName' => 'ItemID'
         ),
         'Fees' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
@@ -55,17 +49,23 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
-            'type' => 'string',
+        'StartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'StartTime'
         ),
-        'ListingRecommendations' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'EndTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'EndTime'
+        ),
+        'DiscountReason' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
         ),
         'ProductSuggestions' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ProductSuggestionsType',
@@ -73,11 +73,11 @@ class VerifyRelistItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'ListingRecommendations' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'ListingRecommendations'
         )
     );
 

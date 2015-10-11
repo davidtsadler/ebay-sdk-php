@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DTS\eBaySDK\Trading\Enums\ItemSortTypeCodeType $Sort
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetItemsAwaitingFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class GetItemsAwaitingFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
-        ),
         'Sort' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sort'
+        ),
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         )
     );
 

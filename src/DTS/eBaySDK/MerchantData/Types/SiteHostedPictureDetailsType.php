@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $BaseURL
- * @property string $ExternalPictureURL
- * @property string $FullURL
- * @property \DTS\eBaySDK\MerchantData\Enums\PictureFormatCodeType $PictureFormat
  * @property string $PictureName
  * @property \DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType $PictureSet
+ * @property \DTS\eBaySDK\MerchantData\Enums\PictureFormatCodeType $PictureFormat
+ * @property string $FullURL
+ * @property string $BaseURL
  * @property \DTS\eBaySDK\MerchantData\Types\PictureSetMemberType[] $PictureSetMember
+ * @property string $ExternalPictureURL
  * @property \DateTime $UseByDate
  */
 class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -38,30 +38,6 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BaseURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BaseURL'
-        ),
-        'ExternalPictureURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
-        ),
-        'FullURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FullURL'
-        ),
-        'PictureFormat' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PictureFormat'
-        ),
         'PictureName' => array(
             'type' => 'string',
             'unbound' => false,
@@ -74,11 +50,35 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PictureSet'
         ),
+        'PictureFormat' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PictureFormat'
+        ),
+        'FullURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FullURL'
+        ),
+        'BaseURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BaseURL'
+        ),
         'PictureSetMember' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\PictureSetMemberType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureSetMember'
+        ),
+        'ExternalPictureURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
         ),
         'UseByDate' => array(
             'type' => 'DateTime',

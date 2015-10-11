@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property integer $StoreCategory2ID
- * @property string $StoreCategory2Name
  * @property integer $StoreCategoryID
+ * @property integer $StoreCategory2ID
  * @property string $StoreCategoryName
- * @property string $StoreName
+ * @property string $StoreCategory2Name
  * @property string $StoreURL
+ * @property string $StoreName
  */
 class StorefrontType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,23 +36,17 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'StoreCategory2ID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategory2ID'
-        ),
-        'StoreCategory2Name' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategory2Name'
-        ),
         'StoreCategoryID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
+        ),
+        'StoreCategory2ID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreCategory2ID'
         ),
         'StoreCategoryName' => array(
             'type' => 'string',
@@ -60,17 +54,23 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StoreCategoryName'
         ),
-        'StoreName' => array(
+        'StoreCategory2Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StoreName'
+            'elementName' => 'StoreCategory2Name'
         ),
         'StoreURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreURL'
+        ),
+        'StoreName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreName'
         )
     );
 

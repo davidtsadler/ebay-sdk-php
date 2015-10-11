@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property string $feedbackRatingStar
+ * @property string $sellerUserName
  * @property integer $feedbackScore
  * @property double $positiveFeedbackPercent
- * @property string $sellerUserName
+ * @property string $feedbackRatingStar
  * @property boolean $topRatedSeller
  */
 class SellerInfo extends \DTS\eBaySDK\Types\BaseType
@@ -35,11 +35,11 @@ class SellerInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'feedbackRatingStar' => array(
+        'sellerUserName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'feedbackRatingStar'
+            'elementName' => 'sellerUserName'
         ),
         'feedbackScore' => array(
             'type' => 'integer',
@@ -53,11 +53,11 @@ class SellerInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
         ),
-        'sellerUserName' => array(
+        'feedbackRatingStar' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'sellerUserName'
+            'elementName' => 'feedbackRatingStar'
         ),
         'topRatedSeller' => array(
             'type' => 'boolean',

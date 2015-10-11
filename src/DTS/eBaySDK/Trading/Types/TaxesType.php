@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\TaxDetailsType[] $TaxDetails
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalTaxAmount
+ * @property \DTS\eBaySDK\Trading\Types\TaxDetailsType[] $TaxDetails
  */
 class TaxesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class TaxesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'TaxDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TaxDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'TaxDetails'
-        ),
         'TotalTaxAmount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalTaxAmount'
+        ),
+        'TaxDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TaxDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'TaxDetails'
         )
     );
 

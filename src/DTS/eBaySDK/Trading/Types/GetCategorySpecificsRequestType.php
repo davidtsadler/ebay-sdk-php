@@ -24,14 +24,14 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string[] $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType[] $CategorySpecific
- * @property boolean $CategorySpecificsFileInfo
- * @property boolean $ExcludeRelationships
- * @property boolean $IncludeConfidence
  * @property \DateTime $LastUpdateTime
  * @property integer $MaxNames
  * @property integer $MaxValuesPerName
  * @property string $Name
+ * @property \DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType[] $CategorySpecific
+ * @property boolean $ExcludeRelationships
+ * @property boolean $IncludeConfidence
+ * @property boolean $CategorySpecificsFileInfo
  */
 class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -44,30 +44,6 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'CategorySpecific' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CategorySpecific'
-        ),
-        'CategorySpecificsFileInfo' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategorySpecificsFileInfo'
-        ),
-        'ExcludeRelationships' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExcludeRelationships'
-        ),
-        'IncludeConfidence' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeConfidence'
         ),
         'LastUpdateTime' => array(
             'type' => 'DateTime',
@@ -92,6 +68,30 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'CategorySpecific' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'CategorySpecific'
+        ),
+        'ExcludeRelationships' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExcludeRelationships'
+        ),
+        'IncludeConfidence' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeConfidence'
+        ),
+        'CategorySpecificsFileInfo' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategorySpecificsFileInfo'
         )
     );
 

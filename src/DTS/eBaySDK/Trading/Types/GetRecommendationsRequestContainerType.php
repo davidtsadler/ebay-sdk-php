@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\ListingFlowCodeType $ListingFlow
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property \DTS\eBaySDK\Trading\Enums\RecommendationEngineCodeType[] $RecommendationEngine
+ * @property string $Query
  * @property string $CorrelationID
  * @property string[] $DeletedField
  * @property boolean $ExcludeRelationships
  * @property boolean $IncludeConfidence
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Enums\ListingFlowCodeType $ListingFlow
- * @property string $Query
- * @property \DTS\eBaySDK\Trading\Enums\RecommendationEngineCodeType[] $RecommendationEngine
  */
 class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,6 +38,30 @@ class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ListingFlow' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ListingFlow'
+        ),
+        'Item' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
+        ),
+        'RecommendationEngine' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'RecommendationEngine'
+        ),
+        'Query' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Query'
+        ),
         'CorrelationID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -61,30 +85,6 @@ class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeConfidence'
-        ),
-        'Item' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ),
-        'ListingFlow' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingFlow'
-        ),
-        'Query' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Query'
-        ),
-        'RecommendationEngine' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'RecommendationEngine'
         )
     );
 

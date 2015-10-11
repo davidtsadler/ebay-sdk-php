@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property integer $BidActivityWithSeller
- * @property integer $BidRetractions
- * @property integer $BidsToUniqueCategories
- * @property integer $BidsToUniqueSellers
- * @property \DTS\eBaySDK\MerchantData\Types\ItemBidDetailsType[] $ItemBidDetails
  * @property integer $SummaryDays
  * @property integer $TotalBids
+ * @property integer $BidActivityWithSeller
+ * @property integer $BidsToUniqueSellers
+ * @property integer $BidsToUniqueCategories
+ * @property integer $BidRetractions
+ * @property \DTS\eBaySDK\MerchantData\Types\ItemBidDetailsType[] $ItemBidDetails
  */
 class BiddingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,36 +37,6 @@ class BiddingSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidActivityWithSeller' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidActivityWithSeller'
-        ),
-        'BidRetractions' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidRetractions'
-        ),
-        'BidsToUniqueCategories' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidsToUniqueCategories'
-        ),
-        'BidsToUniqueSellers' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidsToUniqueSellers'
-        ),
-        'ItemBidDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ItemBidDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ItemBidDetails'
-        ),
         'SummaryDays' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -78,6 +48,36 @@ class BiddingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalBids'
+        ),
+        'BidActivityWithSeller' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidActivityWithSeller'
+        ),
+        'BidsToUniqueSellers' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidsToUniqueSellers'
+        ),
+        'BidsToUniqueCategories' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidsToUniqueCategories'
+        ),
+        'BidRetractions' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidRetractions'
+        ),
+        'ItemBidDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ItemBidDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ItemBidDetails'
         )
     );
 

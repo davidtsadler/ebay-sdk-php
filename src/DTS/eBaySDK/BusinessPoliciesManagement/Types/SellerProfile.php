@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups $categoryGroups
- * @property \DateTime $deletedDate
- * @property string $profileDesc
- * @property integer $profileId
  * @property string $profileName
+ * @property integer $profileId
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\ProfileType $profileType
  * @property integer $profileVersion
+ * @property string $profileDesc
+ * @property \DateTime $deletedDate
  * @property integer $siteId
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups $categoryGroups
  */
 class SellerProfile extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,35 +38,17 @@ class SellerProfile extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'categoryGroups' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'categoryGroups'
-        ),
-        'deletedDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'deletedDate'
-        ),
-        'profileDesc' => array(
+        'profileName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'profileDesc'
+            'elementName' => 'profileName'
         ),
         'profileId' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileId'
-        ),
-        'profileName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'profileName'
         ),
         'profileType' => array(
             'type' => 'string',
@@ -80,11 +62,29 @@ class SellerProfile extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'profileVersion'
         ),
+        'profileDesc' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'profileDesc'
+        ),
+        'deletedDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'deletedDate'
+        ),
         'siteId' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'siteId'
+        ),
+        'categoryGroups' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'categoryGroups'
         )
     );
 

@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackInfo
  * @property string $ItemID
+ * @property string $TransactionID
+ * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackInfo
+ * @property boolean $Shipped
+ * @property boolean $Paid
  * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentType $Shipment
  * @property string $OrderID
  * @property string $OrderLineItemID
- * @property boolean $Paid
- * @property \DTS\eBaySDK\Trading\Types\ShipmentType $Shipment
- * @property boolean $Shipped
- * @property string $TransactionID
  */
 class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,23 +39,47 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeedbackInfo' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackInfo'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
+        'TransactionID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
+        ),
+        'FeedbackInfo' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackInfo'
+        ),
+        'Shipped' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Shipped'
+        ),
+        'Paid' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Paid'
+        ),
         'ListingType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
+        ),
+        'Shipment' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Shipment'
         ),
         'OrderID' => array(
             'type' => 'string',
@@ -68,30 +92,6 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'Paid' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Paid'
-        ),
-        'Shipment' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Shipment'
-        ),
-        'Shipped' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Shipped'
-        ),
-        'TransactionID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         )
     );
 

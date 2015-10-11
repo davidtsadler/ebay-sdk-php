@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\DayOfWeekCodeType[] $DayOfWeek
- * @property \DateTime $EndTime
- * @property string $ListAtSpecificTimeOfDay
- * @property integer $ListingHoldInventoryLevel
  * @property integer $ListingPeriodInWeeks
- * @property integer $MaxActiveItemCount
+ * @property string $ListAtSpecificTimeOfDay
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property integer $MaxActiveItemCount
+ * @property integer $ListingHoldInventoryLevel
  */
 class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -43,11 +43,11 @@ class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\B
             'attribute' => false,
             'elementName' => 'DayOfWeek'
         ),
-        'EndTime' => array(
-            'type' => 'DateTime',
+        'ListingPeriodInWeeks' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EndTime'
+            'elementName' => 'ListingPeriodInWeeks'
         ),
         'ListAtSpecificTimeOfDay' => array(
             'type' => 'string',
@@ -55,17 +55,17 @@ class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\B
             'attribute' => false,
             'elementName' => 'ListAtSpecificTimeOfDay'
         ),
-        'ListingHoldInventoryLevel' => array(
-            'type' => 'integer',
+        'StartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingHoldInventoryLevel'
+            'elementName' => 'StartTime'
         ),
-        'ListingPeriodInWeeks' => array(
-            'type' => 'integer',
+        'EndTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingPeriodInWeeks'
+            'elementName' => 'EndTime'
         ),
         'MaxActiveItemCount' => array(
             'type' => 'integer',
@@ -73,11 +73,11 @@ class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\B
             'attribute' => false,
             'elementName' => 'MaxActiveItemCount'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'ListingHoldInventoryLevel' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'ListingHoldInventoryLevel'
         )
     );
 

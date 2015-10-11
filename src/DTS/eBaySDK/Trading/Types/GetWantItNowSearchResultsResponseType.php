@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\WantItNowPostArrayType $WantItNowPostArray
  * @property boolean $HasMoreItems
  * @property integer $ItemsPerPage
  * @property integer $PageNumber
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property \DTS\eBaySDK\Trading\Types\WantItNowPostArrayType $WantItNowPostArray
  */
 class GetWantItNowSearchResultsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -35,6 +35,12 @@ class GetWantItNowSearchResultsResponseType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'WantItNowPostArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\WantItNowPostArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WantItNowPostArray'
+        ),
         'HasMoreItems' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -58,12 +64,6 @@ class GetWantItNowSearchResultsResponseType extends \DTS\eBaySDK\Trading\Types\A
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'WantItNowPostArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\WantItNowPostArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WantItNowPostArray'
         )
     );
 

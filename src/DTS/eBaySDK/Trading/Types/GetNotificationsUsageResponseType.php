@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType $MarkUpMarkDownHistory
- * @property \DTS\eBaySDK\Trading\Types\NotificationDetailsArrayType $NotificationDetailsArray
- * @property \DTS\eBaySDK\Trading\Types\NotificationStatisticsType $NotificationStatistics
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\NotificationDetailsArrayType $NotificationDetailsArray
+ * @property \DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType $MarkUpMarkDownHistory
+ * @property \DTS\eBaySDK\Trading\Types\NotificationStatisticsType $NotificationStatistics
  */
 class GetNotificationsUsageResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -35,17 +35,17 @@ class GetNotificationsUsageResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'StartTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
+        ),
         'EndTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'MarkUpMarkDownHistory' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MarkUpMarkDownHistory'
         ),
         'NotificationDetailsArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationDetailsArrayType',
@@ -53,17 +53,17 @@ class GetNotificationsUsageResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
             'attribute' => false,
             'elementName' => 'NotificationDetailsArray'
         ),
+        'MarkUpMarkDownHistory' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MarkUpMarkDownHistory'
+        ),
         'NotificationStatistics' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationStatisticsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationStatistics'
-        ),
-        'StartTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
         )
     );
 

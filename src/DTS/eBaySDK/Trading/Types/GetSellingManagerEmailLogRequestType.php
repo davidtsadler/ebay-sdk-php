@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $EmailDateRange
  * @property string $ItemID
- * @property string $OrderID
- * @property string $OrderLineItemID
  * @property integer $TransactionID
+ * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\TimeRangeType $EmailDateRange
+ * @property string $OrderLineItemID
  */
 class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -35,17 +35,17 @@ class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EmailDateRange' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EmailDateRange'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'TransactionID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
         ),
         'OrderID' => array(
             'type' => 'string',
@@ -53,17 +53,17 @@ class GetSellingManagerEmailLogRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'attribute' => false,
             'elementName' => 'OrderID'
         ),
+        'EmailDateRange' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EmailDateRange'
+        ),
         'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'TransactionID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         )
     );
 

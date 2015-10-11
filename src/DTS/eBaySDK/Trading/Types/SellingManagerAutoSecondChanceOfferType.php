@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoSecondChanceOfferTypeCodeType $SecondChanceOfferCondition
  * @property \DTS\eBaySDK\Trading\Types\AmountType $Amount
+ * @property double $ProfitPercent
  * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $Duration
  * @property integer $ListingHoldInventoryLevel
- * @property double $ProfitPercent
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoSecondChanceOfferTypeCodeType $SecondChanceOfferCondition
  */
 class SellingManagerAutoSecondChanceOfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,11 +35,23 @@ class SellingManagerAutoSecondChanceOfferType extends \DTS\eBaySDK\Types\BaseTyp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SecondChanceOfferCondition' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SecondChanceOfferCondition'
+        ),
         'Amount' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Amount'
+        ),
+        'ProfitPercent' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProfitPercent'
         ),
         'Duration' => array(
             'type' => 'string',
@@ -52,18 +64,6 @@ class SellingManagerAutoSecondChanceOfferType extends \DTS\eBaySDK\Types\BaseTyp
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
-        ),
-        'ProfitPercent' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProfitPercent'
-        ),
-        'SecondChanceOfferCondition' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SecondChanceOfferCondition'
         )
     );
 

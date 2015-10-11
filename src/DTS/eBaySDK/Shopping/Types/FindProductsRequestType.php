@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property boolean $AvailableItemsOnly
- * @property string $CategoryID
- * @property string[] $DomainName
- * @property boolean $HideDuplicateItems
  * @property string $IncludeSelector
+ * @property boolean $AvailableItemsOnly
+ * @property string[] $DomainName
+ * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
+ * @property string $QueryKeywords
+ * @property \DTS\eBaySDK\Shopping\Enums\ProductSortCodeType $ProductSort
+ * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
  * @property integer $MaxEntries
  * @property integer $PageNumber
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
- * @property \DTS\eBaySDK\Shopping\Enums\ProductSortCodeType $ProductSort
- * @property string $QueryKeywords
- * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
+ * @property string $CategoryID
+ * @property boolean $HideDuplicateItems
  */
 class FindProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -41,17 +41,17 @@ class FindProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'IncludeSelector' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeSelector'
+        ),
         'AvailableItemsOnly' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AvailableItemsOnly'
-        ),
-        'CategoryID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
         ),
         'DomainName' => array(
             'type' => 'string',
@@ -59,17 +59,29 @@ class FindProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'DomainName'
         ),
-        'HideDuplicateItems' => array(
-            'type' => 'boolean',
+        'ProductID' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'HideDuplicateItems'
+            'elementName' => 'ProductID'
         ),
-        'IncludeSelector' => array(
+        'QueryKeywords' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'IncludeSelector'
+            'elementName' => 'QueryKeywords'
+        ),
+        'ProductSort' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductSort'
+        ),
+        'SortOrder' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SortOrder'
         ),
         'MaxEntries' => array(
             'type' => 'integer',
@@ -83,29 +95,17 @@ class FindProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'ProductID' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
-        'ProductSort' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ProductSort'
+            'elementName' => 'CategoryID'
         ),
-        'QueryKeywords' => array(
-            'type' => 'string',
+        'HideDuplicateItems' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'QueryKeywords'
-        ),
-        'SortOrder' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SortOrder'
+            'elementName' => 'HideDuplicateItems'
         )
     );
 

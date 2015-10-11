@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType $ValidationRules
  * @property string $Value
+ * @property \DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType $ValidationRules
  */
 class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ValidationRules' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ValidationRules'
-        ),
         'Value' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Value'
+        ),
+        'ValidationRules' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ValidationRules'
         )
     );
 

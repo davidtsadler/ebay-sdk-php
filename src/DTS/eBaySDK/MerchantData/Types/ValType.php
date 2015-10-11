@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property string $ValueLiteral
  * @property string[] $SuggestedValueLiteral
  * @property integer $ValueID
- * @property string $ValueLiteral
  */
 class ValType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class ValType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ValueLiteral' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ValueLiteral'
+        ),
         'SuggestedValueLiteral' => array(
             'type' => 'string',
             'unbound' => true,
@@ -44,12 +50,6 @@ class ValType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueID'
-        ),
-        'ValueLiteral' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ValueLiteral'
         )
     );
 

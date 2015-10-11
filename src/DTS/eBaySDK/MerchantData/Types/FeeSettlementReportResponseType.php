@@ -23,22 +23,22 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $AccountID
- * @property \DTS\eBaySDK\MerchantData\Types\AccountTransactionType[] $AccountTransactionList
- * @property \DTS\eBaySDK\MerchantData\Types\AccountTransactionType[] $DiscountTransactionList
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeRoundingAdjustmentAmount
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeSettlementAmount
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeTotalUsageAdjustmentAmount
  * @property string $InvoiceID
+ * @property string $SellerID
+ * @property string $AccountID
+ * @property \DateTime $ReportStartTime
+ * @property \DateTime $ReportEndTime
  * @property \DateTime $InvoiceProcessingTime
+ * @property \DateTime $ReportProcessingTime
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeSettlementAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $LastInvoiceAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeRoundingAdjustmentAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeTotalUsageAdjustmentAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\OrderDetailsType[] $OrderTransactionList
  * @property \DTS\eBaySDK\MerchantData\Types\TransactionListType[] $ListingTransactionList
  * @property \DTS\eBaySDK\MerchantData\Types\OrderDetailsType[] $OrderAdjustmentList
- * @property \DTS\eBaySDK\MerchantData\Types\OrderDetailsType[] $OrderTransactionList
- * @property \DateTime $ReportEndTime
- * @property \DateTime $ReportProcessingTime
- * @property \DateTime $ReportStartTime
- * @property string $SellerID
+ * @property \DTS\eBaySDK\MerchantData\Types\AccountTransactionType[] $AccountTransactionList
+ * @property \DTS\eBaySDK\MerchantData\Types\AccountTransactionType[] $DiscountTransactionList
  */
 class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractResponseType
 {
@@ -46,47 +46,35 @@ class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'InvoiceID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceID'
+        ),
+        'SellerID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerID'
+        ),
         'AccountID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountID'
         ),
-        'AccountTransactionList' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'AccountTransactionList'
-        ),
-        'DiscountTransactionList' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountTransactionList'
-        ),
-        'FeeRoundingAdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'ReportStartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeRoundingAdjustmentAmount'
+            'elementName' => 'ReportStartTime'
         ),
-        'FeeSettlementAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'ReportEndTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeSettlementAmount'
-        ),
-        'FeeTotalUsageAdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeeTotalUsageAdjustmentAmount'
-        ),
-        'InvoiceID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvoiceID'
+            'elementName' => 'ReportEndTime'
         ),
         'InvoiceProcessingTime' => array(
             'type' => 'DateTime',
@@ -94,11 +82,41 @@ class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\Ab
             'attribute' => false,
             'elementName' => 'InvoiceProcessingTime'
         ),
+        'ReportProcessingTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReportProcessingTime'
+        ),
+        'FeeSettlementAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeSettlementAmount'
+        ),
         'LastInvoiceAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastInvoiceAmount'
+        ),
+        'FeeRoundingAdjustmentAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeRoundingAdjustmentAmount'
+        ),
+        'FeeTotalUsageAdjustmentAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeTotalUsageAdjustmentAmount'
+        ),
+        'OrderTransactionList' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'OrderTransactionList'
         ),
         'ListingTransactionList' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionListType',
@@ -112,35 +130,17 @@ class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\Ab
             'attribute' => false,
             'elementName' => 'OrderAdjustmentList'
         ),
-        'OrderTransactionList' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
+        'AccountTransactionList' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
             'unbound' => true,
             'attribute' => false,
-            'elementName' => 'OrderTransactionList'
+            'elementName' => 'AccountTransactionList'
         ),
-        'ReportEndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
+        'DiscountTransactionList' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'ReportEndTime'
-        ),
-        'ReportProcessingTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReportProcessingTime'
-        ),
-        'ReportStartTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReportStartTime'
-        ),
-        'SellerID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerID'
+            'elementName' => 'DiscountTransactionList'
         )
     );
 

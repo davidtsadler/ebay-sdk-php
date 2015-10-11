@@ -23,25 +23,25 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Description
- * @property string $EAN
- * @property boolean $ExtendedHolidayReturns
- * @property string $Refund
  * @property string $RefundOption
+ * @property string $Refund
+ * @property string $ReturnsWithinOption
+ * @property string $ReturnsWithin
+ * @property string $ReturnsAcceptedOption
+ * @property string $ReturnsAccepted
+ * @property string $Description
+ * @property string $WarrantyOfferedOption
+ * @property string $WarrantyOffered
+ * @property string $WarrantyTypeOption
+ * @property string $WarrantyType
+ * @property string $WarrantyDurationOption
+ * @property string $WarrantyDuration
+ * @property string $EAN
+ * @property string $ShippingCostPaidByOption
+ * @property string $ShippingCostPaidBy
  * @property string $RestockingFeeValue
  * @property string $RestockingFeeValueOption
- * @property string $ReturnsAccepted
- * @property string $ReturnsAcceptedOption
- * @property string $ReturnsWithin
- * @property string $ReturnsWithinOption
- * @property string $ShippingCostPaidBy
- * @property string $ShippingCostPaidByOption
- * @property string $WarrantyDuration
- * @property string $WarrantyDurationOption
- * @property string $WarrantyOffered
- * @property string $WarrantyOfferedOption
- * @property string $WarrantyType
- * @property string $WarrantyTypeOption
+ * @property boolean $ExtendedHolidayReturns
  */
 class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -49,23 +49,11 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Description' => array(
+        'RefundOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Description'
-        ),
-        'EAN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ),
-        'ExtendedHolidayReturns' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExtendedHolidayReturns'
+            'elementName' => 'RefundOption'
         ),
         'Refund' => array(
             'type' => 'string',
@@ -73,11 +61,89 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Refund'
         ),
-        'RefundOption' => array(
+        'ReturnsWithinOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RefundOption'
+            'elementName' => 'ReturnsWithinOption'
+        ),
+        'ReturnsWithin' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnsWithin'
+        ),
+        'ReturnsAcceptedOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnsAcceptedOption'
+        ),
+        'ReturnsAccepted' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnsAccepted'
+        ),
+        'Description' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Description'
+        ),
+        'WarrantyOfferedOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyOfferedOption'
+        ),
+        'WarrantyOffered' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyOffered'
+        ),
+        'WarrantyTypeOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyTypeOption'
+        ),
+        'WarrantyType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyType'
+        ),
+        'WarrantyDurationOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyDurationOption'
+        ),
+        'WarrantyDuration' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'WarrantyDuration'
+        ),
+        'EAN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
+        ),
+        'ShippingCostPaidByOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCostPaidByOption'
+        ),
+        'ShippingCostPaidBy' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCostPaidBy'
         ),
         'RestockingFeeValue' => array(
             'type' => 'string',
@@ -91,77 +157,11 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RestockingFeeValueOption'
         ),
-        'ReturnsAccepted' => array(
-            'type' => 'string',
+        'ExtendedHolidayReturns' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ReturnsAccepted'
-        ),
-        'ReturnsAcceptedOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnsAcceptedOption'
-        ),
-        'ReturnsWithin' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnsWithin'
-        ),
-        'ReturnsWithinOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnsWithinOption'
-        ),
-        'ShippingCostPaidBy' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCostPaidBy'
-        ),
-        'ShippingCostPaidByOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCostPaidByOption'
-        ),
-        'WarrantyDuration' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyDuration'
-        ),
-        'WarrantyDurationOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyDurationOption'
-        ),
-        'WarrantyOffered' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyOffered'
-        ),
-        'WarrantyOfferedOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyOfferedOption'
-        ),
-        'WarrantyType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyType'
-        ),
-        'WarrantyTypeOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WarrantyTypeOption'
+            'elementName' => 'ExtendedHolidayReturns'
         )
     );
 

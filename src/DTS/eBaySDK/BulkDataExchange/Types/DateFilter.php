@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property \DateTime $endTime
  * @property \DateTime $startTime
+ * @property \DateTime $endTime
  */
 class DateFilter extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class DateFilter extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'endTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'endTime'
-        ),
         'startTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'startTime'
+        ),
+        'endTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'endTime'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $DimensionsRequired
  * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType $Name
+ * @property boolean $DimensionsRequired
  */
 class ShippingServicePackageDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class ShippingServicePackageDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DimensionsRequired' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DimensionsRequired'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'DimensionsRequired' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DimensionsRequired'
         )
     );
 

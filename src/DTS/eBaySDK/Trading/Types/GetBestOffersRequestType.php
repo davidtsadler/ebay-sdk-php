@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ItemID
  * @property string $BestOfferID
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferStatusCodeType $BestOfferStatus
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetBestOffersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -34,6 +34,12 @@ class GetBestOffersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
         'BestOfferID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -45,12 +51,6 @@ class GetBestOffersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferStatus'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
         ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',

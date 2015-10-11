@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ListingTipFieldType $Field
  * @property string $ListingTipID
- * @property \DTS\eBaySDK\Trading\Types\ListingTipMessageType $Message
  * @property integer $Priority
+ * @property \DTS\eBaySDK\Trading\Types\ListingTipMessageType $Message
+ * @property \DTS\eBaySDK\Trading\Types\ListingTipFieldType $Field
  */
 class ListingTipType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,17 +34,17 @@ class ListingTipType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Field' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingTipFieldType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Field'
-        ),
         'ListingTipID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingTipID'
+        ),
+        'Priority' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Priority'
         ),
         'Message' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ListingTipMessageType',
@@ -52,11 +52,11 @@ class ListingTipType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Message'
         ),
-        'Priority' => array(
-            'type' => 'integer',
+        'Field' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingTipFieldType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Priority'
+            'elementName' => 'Field'
         )
     );
 

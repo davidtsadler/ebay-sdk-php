@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Password
  * @property string $Username
+ * @property string $Password
  * @property string $eBayAuthToken
  */
 class XMLRequesterCredentialsType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class XMLRequesterCredentialsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Password' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Password'
-        ),
         'Username' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Username'
+        ),
+        'Password' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Password'
         ),
         'eBayAuthToken' => array(
             'type' => 'string',

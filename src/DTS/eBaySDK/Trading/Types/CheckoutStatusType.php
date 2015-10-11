@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
  * @property \DateTime $LastModifiedTime
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethod
  * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $Status
+ * @property boolean $IntegratedMerchantCreditCardEnabled
  * @property \DTS\eBaySDK\Trading\Types\EBayPaymentMismatchDetailsType $eBayPaymentMismatchDetails
- * @property \DTS\eBaySDK\Trading\Enums\PaymentStatusCodeType $eBayPaymentStatus
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  */
 class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,23 +37,17 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IntegratedMerchantCreditCardEnabled' => array(
-            'type' => 'boolean',
+        'eBayPaymentStatus' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+            'elementName' => 'eBayPaymentStatus'
         ),
         'LastModifiedTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedTime'
-        ),
-        'PaymentInstrument' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentInstrument'
         ),
         'PaymentMethod' => array(
             'type' => 'string',
@@ -67,17 +61,23 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Status'
         ),
+        'IntegratedMerchantCreditCardEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ),
         'eBayPaymentMismatchDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\EBayPaymentMismatchDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentMismatchDetails'
         ),
-        'eBayPaymentStatus' => array(
+        'PaymentInstrument' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'eBayPaymentStatus'
+            'elementName' => 'PaymentInstrument'
         )
     );
 

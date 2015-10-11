@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAmount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalCartMerchandiseCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalCartShippingCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalTaxAmount
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAmount
  */
 class CheckoutOrderDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,12 +34,6 @@ class CheckoutOrderDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'TotalAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalAmount'
-        ),
         'TotalCartMerchandiseCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -57,6 +51,12 @@ class CheckoutOrderDetailType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalTaxAmount'
+        ),
+        'TotalAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalAmount'
         )
     );
 

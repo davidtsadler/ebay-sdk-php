@@ -23,21 +23,21 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $Delete
- * @property \DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType $DiscountPriceInfo
- * @property string $PrivateNotes
- * @property integer $Quantity
  * @property string $SKU
- * @property \DTS\eBaySDK\MerchantData\Types\SellingManagerProductInventoryStatusType $SellingManagerProductInventoryStatus
- * @property \DTS\eBaySDK\MerchantData\Types\SellingStatusType $SellingStatus
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $StartPrice
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $UnitCost
- * @property integer $UnitsAvailable
- * @property \DTS\eBaySDK\MerchantData\Types\VariationProductListingDetailsType $VariationProductListingDetails
+ * @property integer $Quantity
  * @property \DTS\eBaySDK\MerchantData\Types\NameValueListArrayType[] $VariationSpecifics
+ * @property integer $UnitsAvailable
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $UnitCost
+ * @property \DTS\eBaySDK\MerchantData\Types\SellingStatusType $SellingStatus
  * @property string $VariationTitle
  * @property string $VariationViewItemURL
+ * @property boolean $Delete
+ * @property \DTS\eBaySDK\MerchantData\Types\SellingManagerProductInventoryStatusType $SellingManagerProductInventoryStatus
  * @property integer $WatchCount
+ * @property string $PrivateNotes
+ * @property \DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType $DiscountPriceInfo
+ * @property \DTS\eBaySDK\MerchantData\Types\VariationProductListingDetailsType $VariationProductListingDetails
  */
 class VariationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -45,47 +45,11 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Delete' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Delete'
-        ),
-        'DiscountPriceInfo' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DiscountPriceInfo'
-        ),
-        'PrivateNotes' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PrivateNotes'
-        ),
-        'Quantity' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
-        ),
         'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'SellingManagerProductInventoryStatus' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerProductInventoryStatusType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerProductInventoryStatus'
-        ),
-        'SellingStatus' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingStatusType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingStatus'
         ),
         'StartPrice' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -93,11 +57,17 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartPrice'
         ),
-        'UnitCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'Quantity' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UnitCost'
+            'elementName' => 'Quantity'
+        ),
+        'VariationSpecifics' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListArrayType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'VariationSpecifics'
         ),
         'UnitsAvailable' => array(
             'type' => 'integer',
@@ -105,17 +75,17 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UnitsAvailable'
         ),
-        'VariationProductListingDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\VariationProductListingDetailsType',
+        'UnitCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VariationProductListingDetails'
+            'elementName' => 'UnitCost'
         ),
-        'VariationSpecifics' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListArrayType',
-            'unbound' => true,
+        'SellingStatus' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingStatusType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VariationSpecifics'
+            'elementName' => 'SellingStatus'
         ),
         'VariationTitle' => array(
             'type' => 'string',
@@ -129,11 +99,41 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VariationViewItemURL'
         ),
+        'Delete' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Delete'
+        ),
+        'SellingManagerProductInventoryStatus' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerProductInventoryStatusType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerProductInventoryStatus'
+        ),
         'WatchCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WatchCount'
+        ),
+        'PrivateNotes' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PrivateNotes'
+        ),
+        'DiscountPriceInfo' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DiscountPriceInfo'
+        ),
+        'VariationProductListingDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\VariationProductListingDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'VariationProductListingDetails'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $carrierUsed
  * @property string $shippedDate
+ * @property string $carrierUsed
  */
 class ProvideShippingInfoOptionType extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseActivityOptionType
 {
@@ -32,17 +32,17 @@ class ProvideShippingInfoOptionType extends \DTS\eBaySDK\ResolutionCaseManagemen
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'carrierUsed' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'carrierUsed'
-        ),
         'shippedDate' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippedDate'
+        ),
+        'carrierUsed' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'carrierUsed'
         )
     );
 

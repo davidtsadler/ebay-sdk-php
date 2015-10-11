@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\INRCaseStatusType $INRStatus
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\SNADCaseStatusType $SNADStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\EBPINRCaseStatusType $EBPINRStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\EBPSNADCaseStatusType $EBPSNADStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\INRCaseStatusType $INRStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\PaypalINRCaseStatusType $PaypalINRStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\PaypalSNADCaseStatusType $PaypalSNADStatus
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\SNADCaseStatusType $SNADStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\UPICaseStatusType $UPIStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CancelTransactionCaseStatusType $cancelTransactionStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ReturnCaseStatusType $returnStatus
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\PaypalINRCaseStatusType $PaypalINRStatus
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\PaypalSNADCaseStatusType $PaypalSNADStatus
  */
 class CaseStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,6 +39,18 @@ class CaseStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'INRStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'INRStatus'
+        ),
+        'SNADStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SNADStatus'
+        ),
         'EBPINRStatus' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,30 +62,6 @@ class CaseStatusType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EBPSNADStatus'
-        ),
-        'INRStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'INRStatus'
-        ),
-        'PaypalINRStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaypalINRStatus'
-        ),
-        'PaypalSNADStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaypalSNADStatus'
-        ),
-        'SNADStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SNADStatus'
         ),
         'UPIStatus' => array(
             'type' => 'string',
@@ -92,6 +80,18 @@ class CaseStatusType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnStatus'
+        ),
+        'PaypalINRStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaypalINRStatus'
+        ),
+        'PaypalSNADStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaypalSNADStatus'
         )
     );
 

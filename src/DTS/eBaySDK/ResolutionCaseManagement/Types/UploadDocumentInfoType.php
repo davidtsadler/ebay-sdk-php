@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $content
  * @property string $name
+ * @property string $content
  */
 class UploadDocumentInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class UploadDocumentInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'content' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'content'
-        ),
         'name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
+        ),
+        'content' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'content'
         )
     );
 

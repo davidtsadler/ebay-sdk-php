@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 /**
  *
  * @property integer $createTimeRange
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\ListingType $listingType
  * @property integer $modTimeRange
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\ListingType $listingType
  * @property integer $version
  */
 class OrderReportRecurringFilter extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
@@ -40,17 +40,17 @@ class OrderReportRecurringFilter extends \DTS\eBaySDK\BulkDataExchange\Types\Bas
             'attribute' => false,
             'elementName' => 'createTimeRange'
         ),
-        'listingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'listingType'
-        ),
         'modTimeRange' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'modTimeRange'
+        ),
+        'listingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'listingType'
         ),
         'version' => array(
             'type' => 'integer',

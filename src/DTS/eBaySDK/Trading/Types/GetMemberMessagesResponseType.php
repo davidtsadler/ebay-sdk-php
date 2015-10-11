@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $HasMoreItems
  * @property \DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType $MemberMessage
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property boolean $HasMoreItems
  */
 class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -33,12 +33,6 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'HasMoreItems' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HasMoreItems'
-        ),
         'MemberMessage' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'unbound' => false,
@@ -50,6 +44,12 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
+        ),
+        'HasMoreItems' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HasMoreItems'
         )
     );
 

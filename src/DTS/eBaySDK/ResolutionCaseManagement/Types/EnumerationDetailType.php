@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 /**
  *
  * @property string $code
- * @property string $content
  * @property string $description
+ * @property string $content
  */
 class EnumerationDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class EnumerationDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'code'
         ),
-        'content' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'content'
-        ),
         'description' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'description'
+        ),
+        'content' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'content'
         )
     );
 

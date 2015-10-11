@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $ExternalPictureURL
  * @property string[] $eBayPictureURL
+ * @property string $ExternalPictureURL
  */
 class PictureURLsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class PictureURLsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ExternalPictureURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
-        ),
         'eBayPictureURL' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'eBayPictureURL'
+        ),
+        'ExternalPictureURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
         )
     );
 

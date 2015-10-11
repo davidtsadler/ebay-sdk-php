@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
- * @property string[] $ExternalPictureURL
- * @property string $GalleryDuration
- * @property string $GalleryErrorInfo
- * @property \DTS\eBaySDK\MerchantData\Enums\GalleryStatusCodeType $GalleryStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\GalleryTypeCodeType $GalleryType
  * @property string $GalleryURL
  * @property \DTS\eBaySDK\MerchantData\Enums\PhotoDisplayCodeType $PhotoDisplay
- * @property \DTS\eBaySDK\MerchantData\Enums\PictureSourceCodeType $PictureSource
  * @property string[] $PictureURL
+ * @property \DTS\eBaySDK\MerchantData\Enums\PictureSourceCodeType $PictureSource
+ * @property string $GalleryDuration
+ * @property \DTS\eBaySDK\MerchantData\Enums\GalleryStatusCodeType $GalleryStatus
+ * @property string $GalleryErrorInfo
+ * @property string[] $ExternalPictureURL
+ * @property \DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
  */
 class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,36 +40,6 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ExtendedPictureDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExtendedPictureDetails'
-        ),
-        'ExternalPictureURL' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
-        ),
-        'GalleryDuration' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryDuration'
-        ),
-        'GalleryErrorInfo' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryErrorInfo'
-        ),
-        'GalleryStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryStatus'
-        ),
         'GalleryType' => array(
             'type' => 'string',
             'unbound' => false,
@@ -88,17 +58,47 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PhotoDisplay'
         ),
+        'PictureURL' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'PictureURL'
+        ),
         'PictureSource' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSource'
         ),
-        'PictureURL' => array(
+        'GalleryDuration' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GalleryDuration'
+        ),
+        'GalleryStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GalleryStatus'
+        ),
+        'GalleryErrorInfo' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'GalleryErrorInfo'
+        ),
+        'ExternalPictureURL' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
-            'elementName' => 'PictureURL'
+            'elementName' => 'ExternalPictureURL'
+        ),
+        'ExtendedPictureDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExtendedPictureDetails'
         )
     );
 

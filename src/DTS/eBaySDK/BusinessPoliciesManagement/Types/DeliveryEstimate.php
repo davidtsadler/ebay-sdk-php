@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
+ * @property integer $maxDelivery
+ * @property integer $minDelivery
+ * @property \DateTime $maxDeliveryDate
+ * @property \DateTime $minDeliveryDate
+ * @property integer $minConfidence
+ * @property integer $maxConfidence
  * @property string $estimateTreatment
  * @property integer $maxActualDelivery
- * @property integer $maxConfidence
- * @property integer $maxDelivery
- * @property \DateTime $maxDeliveryDate
  * @property integer $minActualDelivery
- * @property integer $minConfidence
- * @property integer $minDelivery
- * @property \DateTime $minDeliveryDate
  */
 class DeliveryEstimate extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,6 +39,42 @@ class DeliveryEstimate extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'maxDelivery' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'maxDelivery'
+        ),
+        'minDelivery' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'minDelivery'
+        ),
+        'maxDeliveryDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'maxDeliveryDate'
+        ),
+        'minDeliveryDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'minDeliveryDate'
+        ),
+        'minConfidence' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'minConfidence'
+        ),
+        'maxConfidence' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'maxConfidence'
+        ),
         'estimateTreatment' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,47 +87,11 @@ class DeliveryEstimate extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'maxActualDelivery'
         ),
-        'maxConfidence' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'maxConfidence'
-        ),
-        'maxDelivery' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'maxDelivery'
-        ),
-        'maxDeliveryDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'maxDeliveryDate'
-        ),
         'minActualDelivery' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minActualDelivery'
-        ),
-        'minConfidence' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'minConfidence'
-        ),
-        'minDelivery' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'minDelivery'
-        ),
-        'minDeliveryDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'minDeliveryDate'
         )
     );
 

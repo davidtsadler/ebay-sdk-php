@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AdditionalContactInformation
  * @property \DTS\eBaySDK\Trading\Types\AddressType $Address
- * @property string $Email
  * @property string $Fax
+ * @property string $Email
+ * @property string $AdditionalContactInformation
+ * @property string $TradeRegistrationNumber
  * @property boolean $LegalInvoice
  * @property string $TermsAndConditions
- * @property string $TradeRegistrationNumber
  * @property \DTS\eBaySDK\Trading\Types\VATDetailsType $VATDetails
  */
 class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -38,17 +38,17 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AdditionalContactInformation' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AdditionalContactInformation'
-        ),
         'Address' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Address'
+        ),
+        'Fax' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Fax'
         ),
         'Email' => array(
             'type' => 'string',
@@ -56,11 +56,17 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Email'
         ),
-        'Fax' => array(
+        'AdditionalContactInformation' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Fax'
+            'elementName' => 'AdditionalContactInformation'
+        ),
+        'TradeRegistrationNumber' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TradeRegistrationNumber'
         ),
         'LegalInvoice' => array(
             'type' => 'boolean',
@@ -73,12 +79,6 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TermsAndConditions'
-        ),
-        'TradeRegistrationNumber' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TradeRegistrationNumber'
         ),
         'VATDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',

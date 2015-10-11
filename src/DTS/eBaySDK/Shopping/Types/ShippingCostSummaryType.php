@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ImportCharge
+ * @property string $ShippingServiceName
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceCost
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $InsuranceCost
+ * @property \DTS\eBaySDK\Shopping\Enums\ShippingTypeCodeType $ShippingType
+ * @property boolean $LocalPickup
  * @property \DTS\eBaySDK\Shopping\Enums\InsuranceOptionCodeType $InsuranceOption
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $ListedShippingServiceCost
- * @property boolean $LocalPickup
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ImportCharge
  * @property string $LogisticPlanType
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceCost
- * @property string $ShippingServiceName
- * @property \DTS\eBaySDK\Shopping\Enums\ShippingTypeCodeType $ShippingType
  */
 class ShippingCostSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,35 @@ class ShippingCostSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ImportCharge' => array(
+        'ShippingServiceName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceName'
+        ),
+        'ShippingServiceCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ImportCharge'
+            'elementName' => 'ShippingServiceCost'
         ),
         'InsuranceCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
+        ),
+        'ShippingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingType'
+        ),
+        'LocalPickup' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LocalPickup'
         ),
         'InsuranceOption' => array(
             'type' => 'string',
@@ -63,35 +81,17 @@ class ShippingCostSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ListedShippingServiceCost'
         ),
-        'LocalPickup' => array(
-            'type' => 'boolean',
+        'ImportCharge' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LocalPickup'
+            'elementName' => 'ImportCharge'
         ),
         'LogisticPlanType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogisticPlanType'
-        ),
-        'ShippingServiceCost' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCost'
-        ),
-        'ShippingServiceName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceName'
-        ),
-        'ShippingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingType'
         )
     );
 

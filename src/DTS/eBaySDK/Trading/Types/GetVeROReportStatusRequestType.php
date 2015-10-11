@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IncludeReportedItemDetails
+ * @property integer $VeROReportPacketID
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property boolean $IncludeReportedItemDetails
  * @property \DateTime $TimeFrom
  * @property \DateTime $TimeTo
- * @property integer $VeROReportPacketID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -36,11 +36,11 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeReportedItemDetails' => array(
-            'type' => 'boolean',
+        'VeROReportPacketID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'IncludeReportedItemDetails'
+            'elementName' => 'VeROReportPacketID'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -48,11 +48,11 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+        'IncludeReportedItemDetails' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'IncludeReportedItemDetails'
         ),
         'TimeFrom' => array(
             'type' => 'DateTime',
@@ -66,11 +66,11 @@ class GetVeROReportStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'TimeTo'
         ),
-        'VeROReportPacketID' => array(
-            'type' => 'integer',
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VeROReportPacketID'
+            'elementName' => 'Pagination'
         )
     );
 

@@ -26,11 +26,11 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $FolderID
  * @property string $FolderName
  * @property integer $NewAlertCount
- * @property integer $NewHighPriorityCount
  * @property integer $NewMessageCount
  * @property integer $TotalAlertCount
- * @property integer $TotalHighPriorityCount
  * @property integer $TotalMessageCount
+ * @property integer $NewHighPriorityCount
+ * @property integer $TotalHighPriorityCount
  */
 class MyMessagesFolderSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -56,12 +56,6 @@ class MyMessagesFolderSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NewAlertCount'
         ),
-        'NewHighPriorityCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewHighPriorityCount'
-        ),
         'NewMessageCount' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -74,17 +68,23 @@ class MyMessagesFolderSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TotalAlertCount'
         ),
-        'TotalHighPriorityCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalHighPriorityCount'
-        ),
         'TotalMessageCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalMessageCount'
+        ),
+        'NewHighPriorityCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NewHighPriorityCount'
+        ),
+        'TotalHighPriorityCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalHighPriorityCount'
         )
     );
 

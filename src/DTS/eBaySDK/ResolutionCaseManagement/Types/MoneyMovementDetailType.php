@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $amount
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\MoneyMovementType $type
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $fromParty
- * @property string $id
- * @property string $parentId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $toParty
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $amount
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\PaymentMethodType $paymentMethod
  * @property string $paypalTransactionId
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\MoneyMovementStatusType $status
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType $toParty
  * @property \DateTime $transactionDate
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\MoneyMovementType $type
+ * @property string $id
+ * @property string $parentId
  */
 class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,11 +40,11 @@ class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'amount' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
+        'type' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'amount'
+            'elementName' => 'type'
         ),
         'fromParty' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
@@ -52,17 +52,17 @@ class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'fromParty'
         ),
-        'id' => array(
-            'type' => 'string',
+        'toParty' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'id'
+            'attribute' => false,
+            'elementName' => 'toParty'
         ),
-        'parentId' => array(
-            'type' => 'string',
+        'amount' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'parentId'
+            'attribute' => false,
+            'elementName' => 'amount'
         ),
         'paymentMethod' => array(
             'type' => 'string',
@@ -82,23 +82,23 @@ class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'status'
         ),
-        'toParty' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'toParty'
-        ),
         'transactionDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionDate'
         ),
-        'type' => array(
+        'id' => array(
             'type' => 'string',
             'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'type'
+            'attribute' => true,
+            'attributeName' => 'id'
+        ),
+        'parentId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'parentId'
         )
     );
 

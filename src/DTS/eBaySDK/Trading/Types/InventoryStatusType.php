@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property integer $Quantity
  * @property string $SKU
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
+ * @property integer $Quantity
  */
 class InventoryStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,29 +34,29 @@ class InventoryStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'Quantity' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
-        ),
         'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
         ),
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
         'StartPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
+        ),
+        'Quantity' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
         )
     );
 

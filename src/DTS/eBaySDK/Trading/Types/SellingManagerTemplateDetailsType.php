@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $SaleTemplateID
  * @property string $SaleTemplateName
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property double $SuccessPercent
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Template
  */
 class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -47,17 +47,17 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
         ),
-        'SellingManagerProductDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerProductDetails'
-        ),
         'SuccessPercent' => array(
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
+        ),
+        'SellingManagerProductDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerProductDetails'
         ),
         'Template' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',

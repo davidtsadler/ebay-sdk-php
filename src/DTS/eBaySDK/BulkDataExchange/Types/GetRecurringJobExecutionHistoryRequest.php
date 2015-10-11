@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property \DateTime $endTime
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus[] $jobStatus
- * @property string $recurringJobId
  * @property \DateTime $startTime
+ * @property \DateTime $endTime
+ * @property string $recurringJobId
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus[] $jobStatus
  */
 class GetRecurringJobExecutionHistoryRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
 {
@@ -34,17 +34,17 @@ class GetRecurringJobExecutionHistoryRequest extends \DTS\eBaySDK\BulkDataExchan
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'startTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'startTime'
+        ),
         'endTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'endTime'
-        ),
-        'jobStatus' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'jobStatus'
         ),
         'recurringJobId' => array(
             'type' => 'string',
@@ -52,11 +52,11 @@ class GetRecurringJobExecutionHistoryRequest extends \DTS\eBaySDK\BulkDataExchan
             'attribute' => false,
             'elementName' => 'recurringJobId'
         ),
-        'startTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
+        'jobStatus' => array(
+            'type' => 'string',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'startTime'
+            'elementName' => 'jobStatus'
         )
     );
 

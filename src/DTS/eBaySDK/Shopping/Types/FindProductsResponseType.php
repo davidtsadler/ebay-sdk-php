@@ -24,13 +24,13 @@ namespace DTS\eBaySDK\Shopping\Types;
 /**
  *
  * @property integer $ApproximatePages
- * @property \DTS\eBaySDK\Shopping\Types\DomainHistogramType $DomainHistogram
- * @property boolean $DuplicateItems
- * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
  * @property boolean $MoreResults
+ * @property \DTS\eBaySDK\Shopping\Types\DomainHistogramType $DomainHistogram
+ * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
  * @property integer $PageNumber
  * @property \DTS\eBaySDK\Shopping\Types\CatalogProductType[] $Product
  * @property integer $TotalProducts
+ * @property boolean $DuplicateItems
  */
 class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -44,29 +44,23 @@ class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRespo
             'attribute' => false,
             'elementName' => 'ApproximatePages'
         ),
+        'MoreResults' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MoreResults'
+        ),
         'DomainHistogram' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
         ),
-        'DuplicateItems' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DuplicateItems'
-        ),
         'ItemArray' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
-        ),
-        'MoreResults' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MoreResults'
         ),
         'PageNumber' => array(
             'type' => 'integer',
@@ -85,6 +79,12 @@ class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRespo
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalProducts'
+        ),
+        'DuplicateItems' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DuplicateItems'
         )
     );
 

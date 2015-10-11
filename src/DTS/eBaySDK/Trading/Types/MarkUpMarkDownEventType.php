@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Reason
- * @property \DateTime $Time
  * @property \DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType $Type
+ * @property \DateTime $Time
+ * @property string $Reason
  */
 class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Reason' => array(
+        'Type' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Reason'
+            'elementName' => 'Type'
         ),
         'Time' => array(
             'type' => 'DateTime',
@@ -45,11 +45,11 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Time'
         ),
-        'Type' => array(
+        'Reason' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'Reason'
         )
     );
 

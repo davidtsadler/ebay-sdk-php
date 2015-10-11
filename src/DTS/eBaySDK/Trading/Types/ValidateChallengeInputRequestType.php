@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ChallengeToken
- * @property boolean $KeepTokenValid
  * @property string $UserInput
+ * @property boolean $KeepTokenValid
  */
 class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,17 +39,17 @@ class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\Abstr
             'attribute' => false,
             'elementName' => 'ChallengeToken'
         ),
-        'KeepTokenValid' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'KeepTokenValid'
-        ),
         'UserInput' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserInput'
+        ),
+        'KeepTokenValid' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'KeepTokenValid'
         )
     );
 

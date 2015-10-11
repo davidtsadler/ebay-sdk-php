@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
  * @property \DateTime $PaymentTimeFrom
  * @property \DateTime $PaymentTimeTo
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetSellerPaymentsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,12 +34,6 @@ class GetSellerPaymentsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
-        ),
         'PaymentStatus' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +51,12 @@ class GetSellerPaymentsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentTimeTo'
+        ),
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         )
     );
 

@@ -23,9 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $InternationalPackagingHandlingCosts
- * @property \DTS\eBaySDK\MerchantData\Enums\MeasurementSystemCodeType $MeasurementUnit
  * @property string $OriginatingPostalCode
+ * @property \DTS\eBaySDK\MerchantData\Enums\MeasurementSystemCodeType $MeasurementUnit
  * @property \DTS\eBaySDK\MerchantData\Types\MeasureType $PackageDepth
  * @property \DTS\eBaySDK\MerchantData\Types\MeasureType $PackageLength
  * @property \DTS\eBaySDK\MerchantData\Types\MeasureType $PackageWidth
@@ -34,6 +33,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Enums\ShippingPackageCodeType $ShippingPackage
  * @property \DTS\eBaySDK\MerchantData\Types\MeasureType $WeightMajor
  * @property \DTS\eBaySDK\MerchantData\Types\MeasureType $WeightMinor
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $InternationalPackagingHandlingCosts
  */
 class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,23 +41,17 @@ class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'InternationalPackagingHandlingCosts' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'OriginatingPostalCode' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'InternationalPackagingHandlingCosts'
+            'elementName' => 'OriginatingPostalCode'
         ),
         'MeasurementUnit' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MeasurementUnit'
-        ),
-        'OriginatingPostalCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OriginatingPostalCode'
         ),
         'PackageDepth' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
@@ -106,6 +100,12 @@ class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
+        ),
+        'InternationalPackagingHandlingCosts' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InternationalPackagingHandlingCosts'
         )
     );
 

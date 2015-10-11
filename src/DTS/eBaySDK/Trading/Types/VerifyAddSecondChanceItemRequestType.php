@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $RecipientBidderUserID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyItNowPrice
  * @property \DTS\eBaySDK\Trading\Enums\SecondChanceOfferDurationCodeType $Duration
  * @property string $ItemID
- * @property string $RecipientBidderUserID
  * @property string $SellerMessage
  */
 class VerifyAddSecondChanceItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -35,6 +35,12 @@ class VerifyAddSecondChanceItemRequestType extends \DTS\eBaySDK\Trading\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'RecipientBidderUserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RecipientBidderUserID'
+        ),
         'BuyItNowPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -52,12 +58,6 @@ class VerifyAddSecondChanceItemRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'RecipientBidderUserID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RecipientBidderUserID'
         ),
         'SellerMessage' => array(
             'type' => 'string',

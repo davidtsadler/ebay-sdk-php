@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IncludeCodiceFiscale
- * @property boolean $IncludeContainingOrder
- * @property boolean $IncludeFinalValueFee
- * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
  * @property \DateTime $ModTimeFrom
  * @property \DateTime $ModTimeTo
- * @property integer $NumberOfDays
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
+ * @property boolean $IncludeFinalValueFee
+ * @property boolean $IncludeContainingOrder
  * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
+ * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
+ * @property integer $NumberOfDays
+ * @property \DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType $InventoryTrackingMethod
+ * @property boolean $IncludeCodiceFiscale
  */
 class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -40,30 +40,6 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeCodiceFiscale' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeCodiceFiscale'
-        ),
-        'IncludeContainingOrder' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeContainingOrder'
-        ),
-        'IncludeFinalValueFee' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFee'
-        ),
-        'InventoryTrackingMethod' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InventoryTrackingMethod'
-        ),
         'ModTimeFrom' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -76,17 +52,29 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'ModTimeTo'
         ),
-        'NumberOfDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NumberOfDays'
-        ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
+        ),
+        'IncludeFinalValueFee' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFee'
+        ),
+        'IncludeContainingOrder' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeContainingOrder'
+        ),
+        'SKUArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SKUArray'
         ),
         'Platform' => array(
             'type' => 'string',
@@ -94,11 +82,23 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'Platform'
         ),
-        'SKUArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
+        'NumberOfDays' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SKUArray'
+            'elementName' => 'NumberOfDays'
+        ),
+        'InventoryTrackingMethod' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InventoryTrackingMethod'
+        ),
+        'IncludeCodiceFiscale' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeCodiceFiscale'
         )
     );
 

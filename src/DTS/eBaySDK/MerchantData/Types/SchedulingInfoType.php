@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property integer $MaxScheduledItems
  * @property integer $MaxScheduledMinutes
  * @property integer $MinScheduledMinutes
+ * @property integer $MaxScheduledItems
  */
 class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'MaxScheduledItems' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxScheduledItems'
-        ),
         'MaxScheduledMinutes' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -50,6 +44,12 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinScheduledMinutes'
+        ),
+        'MaxScheduledItems' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaxScheduledItems'
         )
     );
 

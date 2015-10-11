@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
- * @property string $RefundMessage
+ * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Enums\RefundReasonCodeType $RefundReason
  * @property \DTS\eBaySDK\Trading\Enums\RefundTypeCodeType $RefundType
- * @property string $TransactionID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
+ * @property string $RefundMessage
+ * @property string $OrderLineItemID
  */
 class IssueRefundRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -43,23 +43,11 @@ class IssueRefundRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
+        'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'RefundAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ),
-        'RefundMessage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundMessage'
+            'elementName' => 'TransactionID'
         ),
         'RefundReason' => array(
             'type' => 'string',
@@ -73,11 +61,23 @@ class IssueRefundRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'RefundType'
         ),
-        'TransactionID' => array(
+        'RefundAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundAmount'
+        ),
+        'RefundMessage' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'RefundMessage'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

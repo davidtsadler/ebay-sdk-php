@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $BuyerSelectedShipping
- * @property \DTS\eBaySDK\MerchantData\Enums\CheckoutStatusCodeType $CheckoutStatus
- * @property \DTS\eBaySDK\MerchantData\Enums\CompleteStatusCodeType $CompleteStatus
- * @property \DTS\eBaySDK\MerchantData\Enums\DigitalStatusCodeType $DigitalStatus
- * @property \DTS\eBaySDK\MerchantData\Enums\InquiryStatusCodeType $InquiryStatus
- * @property boolean $IntegratedMerchantCreditCardEnabled
- * @property \DateTime $LastTimeModified
- * @property \DTS\eBaySDK\MerchantData\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
- * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
- * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
- * @property \DTS\eBaySDK\MerchantData\Enums\ReturnStatusCodeType $ReturnStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\PaymentStatusCodeType $eBayPaymentStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\CheckoutStatusCodeType $CheckoutStatus
+ * @property \DateTime $LastTimeModified
+ * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
+ * @property \DTS\eBaySDK\MerchantData\Enums\CompleteStatusCodeType $CompleteStatus
+ * @property boolean $BuyerSelectedShipping
+ * @property \DTS\eBaySDK\MerchantData\Enums\PaymentHoldStatusCodeType $PaymentHoldStatus
+ * @property boolean $IntegratedMerchantCreditCardEnabled
+ * @property \DTS\eBaySDK\MerchantData\Enums\InquiryStatusCodeType $InquiryStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\ReturnStatusCodeType $ReturnStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
+ * @property \DTS\eBaySDK\MerchantData\Enums\DigitalStatusCodeType $DigitalStatus
  */
 class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,11 +42,11 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BuyerSelectedShipping' => array(
-            'type' => 'boolean',
+        'eBayPaymentStatus' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BuyerSelectedShipping'
+            'elementName' => 'eBayPaymentStatus'
         ),
         'CheckoutStatus' => array(
             'type' => 'string',
@@ -54,47 +54,11 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
         ),
-        'CompleteStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CompleteStatus'
-        ),
-        'DigitalStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DigitalStatus'
-        ),
-        'InquiryStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InquiryStatus'
-        ),
-        'IntegratedMerchantCreditCardEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ),
         'LastTimeModified' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastTimeModified'
-        ),
-        'PaymentHoldStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentHoldStatus'
-        ),
-        'PaymentInstrument' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentInstrument'
         ),
         'PaymentMethodUsed' => array(
             'type' => 'string',
@@ -102,17 +66,53 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PaymentMethodUsed'
         ),
+        'CompleteStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CompleteStatus'
+        ),
+        'BuyerSelectedShipping' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerSelectedShipping'
+        ),
+        'PaymentHoldStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentHoldStatus'
+        ),
+        'IntegratedMerchantCreditCardEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IntegratedMerchantCreditCardEnabled'
+        ),
+        'InquiryStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InquiryStatus'
+        ),
         'ReturnStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnStatus'
         ),
-        'eBayPaymentStatus' => array(
+        'PaymentInstrument' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'eBayPaymentStatus'
+            'elementName' => 'PaymentInstrument'
+        ),
+        'DigitalStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DigitalStatus'
         )
     );
 

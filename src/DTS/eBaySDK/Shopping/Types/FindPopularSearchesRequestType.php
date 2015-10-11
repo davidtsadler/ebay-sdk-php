@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\Shopping\Types;
 /**
  *
  * @property string[] $CategoryID
- * @property boolean $IncludeChildCategories
+ * @property string[] $QueryKeywords
  * @property integer $MaxKeywords
  * @property integer $MaxResultsPerPage
  * @property integer $PageNumber
- * @property string[] $QueryKeywords
+ * @property boolean $IncludeChildCategories
  */
 class FindPopularSearchesRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -42,11 +42,11 @@ class FindPopularSearchesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstrac
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'IncludeChildCategories' => array(
-            'type' => 'boolean',
-            'unbound' => false,
+        'QueryKeywords' => array(
+            'type' => 'string',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'IncludeChildCategories'
+            'elementName' => 'QueryKeywords'
         ),
         'MaxKeywords' => array(
             'type' => 'integer',
@@ -66,11 +66,11 @@ class FindPopularSearchesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstrac
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'QueryKeywords' => array(
-            'type' => 'string',
-            'unbound' => true,
+        'IncludeChildCategories' => array(
+            'type' => 'boolean',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'QueryKeywords'
+            'elementName' => 'IncludeChildCategories'
         )
     );
 

@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $SellerThirdPartyUsername
- * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $Status
  * @property string $StoreName
+ * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $Status
  */
 class ProStoresDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class ProStoresDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerThirdPartyUsername'
         ),
-        'Status' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ),
         'StoreName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreName'
+        ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
         )
     );
 

@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $AttributeSetID
+ * @property string $Title
  * @property string $DetailsURL
+ * @property string $StockPhotoURL
  * @property boolean $DisplayStockPhotos
- * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
  * @property integer $ItemCount
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
+ * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
  * @property integer $ProductReferenceID
- * @property \DTS\eBaySDK\Trading\Enums\ProductStateCodeType $ProductState
+ * @property integer $AttributeSetID
+ * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
  * @property integer $ReviewCount
  * @property \DTS\eBaySDK\Trading\Types\ReviewDetailsType $ReviewDetails
- * @property string $StockPhotoURL
- * @property string $Title
+ * @property \DTS\eBaySDK\Trading\Enums\ProductStateCodeType $ProductState
  */
 class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,11 +42,11 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AttributeSetID' => array(
-            'type' => 'integer',
+        'Title' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AttributeSetID'
+            'elementName' => 'Title'
         ),
         'DetailsURL' => array(
             'type' => 'string',
@@ -54,17 +54,17 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DetailsURL'
         ),
+        'StockPhotoURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StockPhotoURL'
+        ),
         'DisplayStockPhotos' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayStockPhotos'
-        ),
-        'ExternalProductID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalProductID'
         ),
         'ItemCount' => array(
             'type' => 'integer',
@@ -72,11 +72,11 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemCount'
         ),
-        'ItemSpecifics' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+        'ExternalProductID' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemSpecifics'
+            'elementName' => 'ExternalProductID'
         ),
         'ProductReferenceID' => array(
             'type' => 'integer',
@@ -84,11 +84,17 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ProductReferenceID'
         ),
-        'ProductState' => array(
-            'type' => 'string',
+        'AttributeSetID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ProductState'
+            'elementName' => 'AttributeSetID'
+        ),
+        'ItemSpecifics' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSpecifics'
         ),
         'ReviewCount' => array(
             'type' => 'integer',
@@ -102,17 +108,11 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ReviewDetails'
         ),
-        'StockPhotoURL' => array(
+        'ProductState' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StockPhotoURL'
-        ),
-        'Title' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
+            'elementName' => 'ProductState'
         )
     );
 

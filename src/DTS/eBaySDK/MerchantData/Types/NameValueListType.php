@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property string $Name
- * @property \DTS\eBaySDK\MerchantData\Enums\ItemSpecificSourceCodeType $Source
  * @property string[] $Value
+ * @property \DTS\eBaySDK\MerchantData\Enums\ItemSpecificSourceCodeType $Source
  */
 class NameValueListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class NameValueListType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Name'
         ),
-        'Source' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Source'
-        ),
         'Value' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Value'
+        ),
+        'Source' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Source'
         )
     );
 

@@ -24,10 +24,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property string $ExternalTransactionID
- * @property \DTS\eBaySDK\MerchantData\Enums\PaymentTransactionStatusCodeType $ExternalTransactionStatus
  * @property \DateTime $ExternalTransactionTime
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeOrCreditAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $PaymentOrRefundAmount
+ * @property \DTS\eBaySDK\MerchantData\Enums\PaymentTransactionStatusCodeType $ExternalTransactionStatus
  */
 class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,12 +40,6 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransactionID'
-        ),
-        'ExternalTransactionStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalTransactionStatus'
         ),
         'ExternalTransactionTime' => array(
             'type' => 'DateTime',
@@ -64,6 +58,12 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentOrRefundAmount'
+        ),
+        'ExternalTransactionStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExternalTransactionStatus'
         )
     );
 

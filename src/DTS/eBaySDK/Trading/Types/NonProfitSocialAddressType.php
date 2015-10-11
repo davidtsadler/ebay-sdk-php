@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $SocialAddressId
  * @property \DTS\eBaySDK\Trading\Enums\SocialAddressTypeCodeType $SocialAddressType
+ * @property string $SocialAddressId
  */
 class NonProfitSocialAddressType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class NonProfitSocialAddressType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'SocialAddressId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SocialAddressId'
-        ),
         'SocialAddressType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SocialAddressType'
+        ),
+        'SocialAddressId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SocialAddressId'
         )
     );
 

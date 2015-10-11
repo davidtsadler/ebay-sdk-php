@@ -23,20 +23,20 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DateTime $EstimatedDeliveryMaxTime
- * @property \DateTime $EstimatedDeliveryMinTime
- * @property boolean $ExpeditedService
- * @property boolean $FastAndFree
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingInsuranceCost
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceAdditionalCost
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceCost
- * @property \DateTime $ShippingServiceCutOffTime
  * @property string $ShippingServiceName
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceCost
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceAdditionalCost
  * @property integer $ShippingServicePriority
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingSurcharge
- * @property integer $ShippingTimeMax
+ * @property boolean $ExpeditedService
  * @property integer $ShippingTimeMin
+ * @property integer $ShippingTimeMax
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingSurcharge
  * @property string[] $ShipsTo
+ * @property \DateTime $EstimatedDeliveryMinTime
+ * @property \DateTime $EstimatedDeliveryMaxTime
+ * @property boolean $FastAndFree
+ * @property \DateTime $ShippingServiceCutOffTime
  */
 class ShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -44,53 +44,11 @@ class ShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EstimatedDeliveryMaxTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryMaxTime'
-        ),
-        'EstimatedDeliveryMinTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryMinTime'
-        ),
-        'ExpeditedService' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpeditedService'
-        ),
-        'FastAndFree' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FastAndFree'
-        ),
         'ShippingInsuranceCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
-        ),
-        'ShippingServiceAdditionalCost' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingServiceCost' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCost'
-        ),
-        'ShippingServiceCutOffTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCutOffTime'
         ),
         'ShippingServiceName' => array(
             'type' => 'string',
@@ -98,23 +56,29 @@ class ShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceName'
         ),
+        'ShippingServiceCost' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCost'
+        ),
+        'ShippingServiceAdditionalCost' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceAdditionalCost'
+        ),
         'ShippingServicePriority' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServicePriority'
         ),
-        'ShippingSurcharge' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+        'ExpeditedService' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingSurcharge'
-        ),
-        'ShippingTimeMax' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingTimeMax'
+            'elementName' => 'ExpeditedService'
         ),
         'ShippingTimeMin' => array(
             'type' => 'integer',
@@ -122,11 +86,47 @@ class ShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
         ),
+        'ShippingTimeMax' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTimeMax'
+        ),
+        'ShippingSurcharge' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingSurcharge'
+        ),
         'ShipsTo' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShipsTo'
+        ),
+        'EstimatedDeliveryMinTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryMinTime'
+        ),
+        'EstimatedDeliveryMaxTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryMaxTime'
+        ),
+        'FastAndFree' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FastAndFree'
+        ),
+        'ShippingServiceCutOffTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCutOffTime'
         )
     );
 

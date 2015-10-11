@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property string $EventTitle
+ * @property string $Venue
  * @property string $PrintedDate
  * @property string $PrintedTime
- * @property string $Venue
  */
 class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,6 +40,12 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EventTitle'
         ),
+        'Venue' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Venue'
+        ),
         'PrintedDate' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,12 +57,6 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrintedTime'
-        ),
-        'Venue' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Venue'
         )
     );
 

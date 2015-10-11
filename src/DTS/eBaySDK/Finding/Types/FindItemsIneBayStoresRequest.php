@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
+ * @property string $keywords
+ * @property string $storeName
+ * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
+ * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
  * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
  * @property string[] $categoryId
- * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
- * @property string $keywords
- * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
- * @property string $storeName
  */
 class FindItemsIneBayStoresRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingServiceRequest
 {
@@ -36,6 +36,30 @@ class FindItemsIneBayStoresRequest extends \DTS\eBaySDK\Finding\Types\BaseFindin
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'keywords' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'keywords'
+        ),
+        'storeName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'storeName'
+        ),
+        'itemFilter' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'itemFilter'
+        ),
+        'outputSelector' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'outputSelector'
+        ),
         'aspectFilter' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
             'unbound' => true,
@@ -47,30 +71,6 @@ class FindItemsIneBayStoresRequest extends \DTS\eBaySDK\Finding\Types\BaseFindin
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'categoryId'
-        ),
-        'itemFilter' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'itemFilter'
-        ),
-        'keywords' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'keywords'
-        ),
-        'outputSelector' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'outputSelector'
-        ),
-        'storeName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'storeName'
         )
     );
 

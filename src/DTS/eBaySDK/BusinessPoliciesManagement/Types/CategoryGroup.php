@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $ETRS
  * @property boolean $default
  * @property string $name
+ * @property boolean $ETRS
  */
 class CategoryGroup extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class CategoryGroup extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ETRS' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ETRS'
-        ),
         'default' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -50,6 +44,12 @@ class CategoryGroup extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
+        ),
+        'ETRS' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ETRS'
         )
     );
 

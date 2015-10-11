@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $balanceDue
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementDetailType[] $moneyMovement
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $balanceDue
  */
 class PaymentDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class PaymentDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'balanceDue' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'balanceDue'
-        ),
         'moneyMovement' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementDetailType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'moneyMovement'
+        ),
+        'balanceDue' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'balanceDue'
         )
     );
 

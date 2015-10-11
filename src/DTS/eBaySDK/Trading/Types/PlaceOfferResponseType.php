@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BestOfferType $BestOffer
- * @property string $OrderLineItemID
  * @property \DTS\eBaySDK\Trading\Types\SellingStatusType $SellingStatus
  * @property string $TransactionID
+ * @property \DTS\eBaySDK\Trading\Types\BestOfferType $BestOffer
+ * @property string $OrderLineItemID
  */
 class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -34,18 +34,6 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOffer' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOffer'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
         'SellingStatus' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
             'unbound' => false,
@@ -57,6 +45,18 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
+        ),
+        'BestOffer' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOffer'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

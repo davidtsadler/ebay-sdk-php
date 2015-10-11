@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundFromSeller
- * @property string $RefundID
- * @property \DTS\eBaySDK\MerchantData\Enums\RefundStatusCodeType $RefundStatus
- * @property \DateTime $RefundTime
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TotalRefundToBuyer
+ * @property \DateTime $RefundTime
+ * @property string $RefundID
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundAmount
+ * @property \DTS\eBaySDK\MerchantData\Enums\RefundStatusCodeType $RefundStatus
  */
 class RefundType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,29 +36,17 @@ class RefundType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'RefundAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ),
         'RefundFromSeller' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundFromSeller'
         ),
-        'RefundID' => array(
-            'type' => 'string',
+        'TotalRefundToBuyer' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RefundID'
-        ),
-        'RefundStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundStatus'
+            'elementName' => 'TotalRefundToBuyer'
         ),
         'RefundTime' => array(
             'type' => 'DateTime',
@@ -66,11 +54,23 @@ class RefundType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RefundTime'
         ),
-        'TotalRefundToBuyer' => array(
+        'RefundID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundID'
+        ),
+        'RefundAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TotalRefundToBuyer'
+            'elementName' => 'RefundAmount'
+        ),
+        'RefundStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundStatus'
         )
     );
 

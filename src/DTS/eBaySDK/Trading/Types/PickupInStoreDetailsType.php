@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $EligibleForPickupDropOff
  * @property boolean $EligibleForPickupInStore
+ * @property boolean $EligibleForPickupDropOff
  */
 class PickupInStoreDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class PickupInStoreDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EligibleForPickupDropOff' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EligibleForPickupDropOff'
-        ),
         'EligibleForPickupInStore' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EligibleForPickupInStore'
+        ),
+        'EligibleForPickupDropOff' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EligibleForPickupDropOff'
         )
     );
 

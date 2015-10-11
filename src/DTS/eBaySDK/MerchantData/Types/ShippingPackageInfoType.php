@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DateTime $ActualDeliveryTime
- * @property \DateTime $EstimatedDeliveryTimeMax
- * @property \DateTime $EstimatedDeliveryTimeMin
- * @property \DateTime $ScheduledDeliveryTimeMax
- * @property \DateTime $ScheduledDeliveryTimeMin
- * @property string $ShippingTrackingEvent
  * @property string $StoreID
+ * @property string $ShippingTrackingEvent
+ * @property \DateTime $ScheduledDeliveryTimeMin
+ * @property \DateTime $ScheduledDeliveryTimeMax
+ * @property \DateTime $ActualDeliveryTime
+ * @property \DateTime $EstimatedDeliveryTimeMin
+ * @property \DateTime $EstimatedDeliveryTimeMax
  */
 class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,35 +37,11 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ActualDeliveryTime' => array(
-            'type' => 'DateTime',
+        'StoreID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ActualDeliveryTime'
-        ),
-        'EstimatedDeliveryTimeMax' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryTimeMax'
-        ),
-        'EstimatedDeliveryTimeMin' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryTimeMin'
-        ),
-        'ScheduledDeliveryTimeMax' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledDeliveryTimeMax'
-        ),
-        'ScheduledDeliveryTimeMin' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ScheduledDeliveryTimeMin'
+            'elementName' => 'StoreID'
         ),
         'ShippingTrackingEvent' => array(
             'type' => 'string',
@@ -73,11 +49,35 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingTrackingEvent'
         ),
-        'StoreID' => array(
-            'type' => 'string',
+        'ScheduledDeliveryTimeMin' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StoreID'
+            'elementName' => 'ScheduledDeliveryTimeMin'
+        ),
+        'ScheduledDeliveryTimeMax' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ScheduledDeliveryTimeMax'
+        ),
+        'ActualDeliveryTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ActualDeliveryTime'
+        ),
+        'EstimatedDeliveryTimeMin' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryTimeMin'
+        ),
+        'EstimatedDeliveryTimeMax' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryTimeMax'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AttributeSystemVersion
  * @property string $CategoryID
+ * @property string $AttributeSystemVersion
  */
 class GetCategory2CSRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class GetCategory2CSRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReque
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AttributeSystemVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeSystemVersion'
-        ),
         'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
+        ),
+        'AttributeSystemVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AttributeSystemVersion'
         )
     );
 

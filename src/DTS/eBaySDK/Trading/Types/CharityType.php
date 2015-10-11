@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CharityID
- * @property boolean $CharityListing
  * @property string $CharityName
  * @property integer $CharityNumber
  * @property double $DonationPercent
- * @property string $LogoURL
+ * @property string $CharityID
  * @property string $Mission
+ * @property string $LogoURL
  * @property \DTS\eBaySDK\Trading\Enums\CharityStatusCodeType $Status
+ * @property boolean $CharityListing
  */
 class CharityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,18 +38,6 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CharityID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CharityID'
-        ),
-        'CharityListing' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CharityListing'
-        ),
         'CharityName' => array(
             'type' => 'string',
             'unbound' => false,
@@ -68,11 +56,11 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DonationPercent'
         ),
-        'LogoURL' => array(
+        'CharityID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LogoURL'
+            'elementName' => 'CharityID'
         ),
         'Mission' => array(
             'type' => 'string',
@@ -80,11 +68,23 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Mission'
         ),
+        'LogoURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LogoURL'
+        ),
         'Status' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
+        ),
+        'CharityListing' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CharityListing'
         )
     );
 

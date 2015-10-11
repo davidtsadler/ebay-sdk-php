@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Enums\ItemFilterType $name
  * @property string $paramName
  * @property string $paramValue
+ * @property \DTS\eBaySDK\Finding\Enums\ItemFilterType $name
  * @property string[] $value
  */
 class ItemFilter extends \DTS\eBaySDK\Types\BaseType
@@ -34,12 +34,6 @@ class ItemFilter extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'name' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'name'
-        ),
         'paramName' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,6 +45,12 @@ class ItemFilter extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paramValue'
+        ),
+        'name' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'name'
         ),
         'value' => array(
             'type' => 'string',
