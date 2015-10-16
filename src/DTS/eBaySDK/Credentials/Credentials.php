@@ -45,14 +45,5 @@ class Credentials implements \DTS\eBaySDK\Interfaces\CredentialsInterface
     {
         return $this->devId;
     }
-    public function post($url, $headers, $body)
-    {
-        $response = $this->client->post($url, [
-            'headers' => $headers,
-            'body' => $body
-        ]);
-
-        return $response->getBody()->getContents();
-    }
 }
 
