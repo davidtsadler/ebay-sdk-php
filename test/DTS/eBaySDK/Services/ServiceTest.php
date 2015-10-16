@@ -142,5 +142,33 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('333', $c->getCertId());
         $this->assertEquals('444', $c->getDevId());
     }
+
+    public function testCredentialsCanBeProvided()
+    {
+        $s = new Service([
+            'credentials' => function () {
+                return new Credentials('111', '222', '333', '444');
+            }
+        ]);
+
+        $c = $s->getCredentials();
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+        $this->assertEquals('444', $c->getAuthToken());
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Cannot locate credentials
+     */
+    public function testCredentialsProviderThrowsIfCantProvide()
+    {
+        $s = new Service([
+            'credentials' => function () {
+                return new \InvalidArgumentException('Cannot locate credentials');
+            }
+        ]);
+    }
 }
 

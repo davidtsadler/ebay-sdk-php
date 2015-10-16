@@ -58,7 +58,7 @@ abstract class BaseService
     private $logger;
 
     /**
-     * Get an array of service configuration option definitions. 
+     * Get an array of service configuration option definitions.
      *
      * @return array
      */
@@ -66,7 +66,7 @@ abstract class BaseService
     {
         return [
             'credentials' => [
-                'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array'],
+                'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
                 'fn'    => 'DTS\eBaySDK\apply_credentials'
             ],
             'debug' => [
@@ -109,7 +109,7 @@ abstract class BaseService
     {
         return $option === null
             ? $this->config
-            : (isset($this->config[$option])        
+            : (isset($this->config[$option])
                 ? $this->config[$option]
                 : null);
     }

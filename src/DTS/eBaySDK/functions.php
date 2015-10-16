@@ -52,12 +52,19 @@ function array_merge_deep_array($arrays) {
 
 function apply_credentials($value, array &$configuration)
 {
-    if ($value instanceof CredentialsInterface) {
+    if (is_callable($value)) {
+        $c = $value();
+        if ($c instanceof \InvalidArgumentException) {
+            throw $c;
+        } else {
+            $configuration['credentials'] = $c;
+        }
+    } else if ($value instanceof CredentialsInterface) {
         return;
     } elseif (is_array($value)
-        && isset($value['appId'])      
-        && isset($value['certId'])      
-        && isset($value['devId'])      
+        && isset($value['appId'])
+        && isset($value['certId'])
+        && isset($value['devId'])
     ) {
         $configuration['credentials'] = new Credentials(
             $value['appId'],
