@@ -21,6 +21,7 @@ use DTS\eBaySDK\Parser\XmlParser;
 use DTS\eBaySDK\Exceptions;
 use DTS\eBaySDK\HttpClient\HttpClient;
 use DTS\eBaySDK\ConfigurationResolver;
+use DTS\eBaySDK\Credentials\CredentialsProvider;
 
 /**
  * The base class for every eBay service class.
@@ -67,7 +68,8 @@ abstract class BaseService
         return [
             'credentials' => [
                 'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
-                'fn'    => 'DTS\eBaySDK\apply_credentials'
+                'fn'    => 'DTS\eBaySDK\apply_credentials',
+                'default' => [CredentialsProvider::class, 'defaultProvider']
             ],
             'debug' => [
                 'valid'   => ['bool'],
