@@ -1,4 +1,6 @@
 <?php
+namespace DTS\eBaySDK\Services\Test;
+
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
