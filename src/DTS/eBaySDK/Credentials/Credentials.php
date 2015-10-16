@@ -8,20 +8,17 @@ namespace DTS\eBaySDK\Credentials;
 class Credentials implements \DTS\eBaySDK\Interfaces\CredentialsInterface
 {
     private $appId;
-    private $authToken;
     private $certId;
     private $devId;
 
     /**
-     * @param string $appId     Application ID
-     * @param string $certId    Certificate ID
-     * @param string $devId     Developer ID
-     * @param string $authToken Optional auth token
+     * @param string $appId  Application ID
+     * @param string $certId Certificate ID
+     * @param string $devId  Developer ID
      */
-    public function __construct($appId, $certId, $devId, $authToken = null)
+    public function __construct($appId, $certId, $devId)
     {
         $this->appId = trim($appId);
-        $this->authToken = trim($authToken);
         $this->certId = trim($certId);
         $this->devId = trim($devId);
     }
@@ -29,11 +26,6 @@ class Credentials implements \DTS\eBaySDK\Interfaces\CredentialsInterface
     public function getAppId()
     {
         return $this->appId;
-    }
-
-    public function getAuthToken()
-    {
-        return $this->authToken;
     }
 
     public function getCertId()

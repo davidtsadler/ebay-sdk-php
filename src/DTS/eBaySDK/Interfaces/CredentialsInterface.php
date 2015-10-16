@@ -14,13 +14,6 @@ interface CredentialsInterface
     public function getAppId();
 
     /**
-     * Returns the auth token.
-     *
-     * @return string
-     */
-    public function getAuthToken();
-
-    /**
      * Returns the certificate ID.
      *
      * @return string

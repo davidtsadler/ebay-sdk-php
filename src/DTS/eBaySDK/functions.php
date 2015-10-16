@@ -69,13 +69,12 @@ function apply_credentials($value, array &$configuration)
         $configuration['credentials'] = new Credentials(
             $value['appId'],
             $value['certId'],
-            $value['devId'],
-            isset($value['authToken']) ? $value['authToken'] : null
+            $value['devId']
         );
     } else {
         throw new \InvalidArgumentException('Credentials must be an instance of '
             . 'DTS\eBaySDK\Interfaces\CredentialsInterface, an associative '
-            . 'array that contains "appId", "certId", "devId" and an optional "authToken", '
+            . 'array that contains "appId", "certId", "devId", '
             . 'or a credentials provider function.'
         );
     }

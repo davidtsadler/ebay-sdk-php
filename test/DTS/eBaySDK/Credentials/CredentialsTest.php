@@ -12,6 +12,5 @@ class CredentialsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('111', $c->getAppId());
         $this->assertEquals('222', $c->getCertId());
         $this->assertEquals('333', $c->getDevId());
-        $this->assertEquals('444', $c->getAuthToken());
     }
 }

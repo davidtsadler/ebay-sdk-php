@@ -117,14 +117,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testCredentialsInstanceCanBePassed()
     {
         $s = new Service([
-            'credentials' => new Credentials('111', '222', '333', '444')
+            'credentials' => new Credentials('111', '222', '333')
         ]);
 
         $c = $s->getCredentials();
         $this->assertEquals('111', $c->getAppId());
         $this->assertEquals('222', $c->getCertId());
         $this->assertEquals('333', $c->getDevId());
-        $this->assertEquals('444', $c->getAuthToken());
     }
 
     public function testCredentialsCanBeHardCoded()
@@ -132,24 +131,22 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'credentials' => [
                 'appId' => '111',
-                'authToken' => '222',
-                'certId' => '333',
-                'devId' => '444'
+                'certId' => '222',
+                'devId' => '333'
             ]
         ]);
 
         $c = $s->getCredentials();
         $this->assertEquals('111', $c->getAppId());
-        $this->assertEquals('222', $c->getAuthToken());
-        $this->assertEquals('333', $c->getCertId());
-        $this->assertEquals('444', $c->getDevId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
     }
 
     public function testCredentialsCanBeProvided()
     {
         $s = new Service([
             'credentials' => function () {
-                return new Credentials('111', '222', '333', '444');
+                return new Credentials('111', '222', '333');
             }
         ]);
 
@@ -157,7 +154,6 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('111', $c->getAppId());
         $this->assertEquals('222', $c->getCertId());
         $this->assertEquals('333', $c->getDevId());
-        $this->assertEquals('444', $c->getAuthToken());
     }
 
     /**
