@@ -15,6 +15,7 @@ class CredentialsProvider
     const ENV_APP_ID = 'EBAY_SDK_APP_ID';
     const ENV_CERT_ID = 'EBAY_SDK_CERT_ID';
     const ENV_DEV_ID = 'EBAY_SDK_DEV_ID';
+    const ENV_PROFILE = 'EBAY_SDK_PROFILE';
 
     /**
      * Create a default credentials provider that first checks for environment
@@ -54,6 +55,64 @@ class CredentialsProvider
                 );
             }
         };
+    }
+
+    /**
+     * Provider that creates credentials using an ini file stored in the
+     * current user's home directory.
+     *
+     * @param string|null $profile  Profile to use. Defaults to "default".
+     * @param string|null $filename If provided, uses a custom filename rather than
+     *                              looking in the home directory for the current user.
+     *
+     * @reutrn callable
+     */
+    public static function ini($profile = null, $filename = null)
+    {
+        $filename = $filename ?: (self::getHomeDir() . '/.ebay_sdk/credentials');
+        $profile = $profile ?: (getenv(self::ENV_PROFILE) ?: 'default');
+
+        return function () use ($filename, $profile) {
+            if (!is_readable($filename)) {
+                return new \InvalidArgumentException("Cannot read credentials from $filename");
+            }
+            $data = parse_ini_file($filename, true);
+            if ($data === false) {
+                return new \InvalidArgumentException("Invalid credentials file $filename");
+            }
+            if (!isset($data[$profile])) {
+                return new \InvalidArgumentException("'$profile' not found in credentials file");
+            }
+            if (!isset($data[$profile]['ebay_app_id'])
+                || !isset($data[$profile]['ebay_cert_id'])
+                || !isset($data[$profile]['ebay_dev_id'])) {
+                return new \InvalidArgumentException("No credentials present in INI profile '$profile' ($filename)");
+            }
+
+            return new Credentials(
+                $data[$profile]['ebay_app_id'],
+                $data[$profile]['ebay_cert_id'],
+                $data[$profile]['ebay_dev_id']
+            );
+        };
+    }
+
+    /**
+     * Gets the environment's HOME directory if available.
+     *
+     * @return string|null
+     */
+    private static function getHomeDir()
+    {
+        // Linux/Unix-like systems.
+        if ($homeDir = getenv('HOME')) {
+            return $homeDir;
+        }
+
+        $homeDrive = getenv('HOMEDRIVE');
+        $homePath = getenv('HOMEPATH');
+
+        return ($homeDrive && homePath) ? $homeDrive . $homePath : null;
     }
 }
 
