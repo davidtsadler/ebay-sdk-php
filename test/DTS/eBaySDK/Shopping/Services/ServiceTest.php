@@ -42,12 +42,6 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'required' => true
         ], $d['apiVersion']);
 
-        $this->assertArrayHasKey('appId', $d);
-        $this->assertEquals([
-            'valid' => ['string'],
-            'required' => true
-        ], $d['appId']);
-
         $this->assertArrayHasKey('siteId', $d);
         $this->assertEquals([
             'valid' => ['string']
@@ -70,7 +64,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $s = new Service([
             'apiVersion' => '123',
-            'appId' => '321'
+            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => '']
         ], $h);
 
         $s->testOperation();
@@ -94,6 +88,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayNotHasKey(ShoppingBaseService::HDR_TRACKING_PARTNER_CODE, $h->headers);
         $this->assertArrayNotHasKey(ShoppingBaseService::HDR_AFFILIATE_USER_ID, $h->headers);
     }
+
     public function testOptionalEbayHeaders()
     {
         $h = new HttpClient();
@@ -101,7 +96,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'affiliateUserId' => '666',
             'apiVersion' => '123',
-            'appId' => '321',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'siteId' => '999',
             'trackingId' => '888',
             'trackingPartnerCode' => '777'
@@ -122,3 +117,4 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('666', $h->headers[ShoppingBaseService::HDR_AFFILIATE_USER_ID]);
     }
 }
+

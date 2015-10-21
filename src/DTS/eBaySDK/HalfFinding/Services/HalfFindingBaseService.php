@@ -30,10 +30,6 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
             'apiVersion' => [
                 'valid' => ['string']
             ],
-            'appId' => [
-                'valid' => ['string'],
-                'required' => true
-            ],
             'globalId' => [
                 'valid' => ['string']
             ]
@@ -73,7 +69,7 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers = array();
 
         // Add required headers first.
-        $headers[self::HDR_APP_ID] = $this->config('appId');
+        $headers[self::HDR_APP_ID] = $this->config('credentials')->getAppId();
         $headers[self::HDR_OPERATION_NAME] = $operationName;
 
         // Add optional headers.
@@ -88,3 +84,4 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
+

@@ -31,16 +31,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'valid' => ['string'],
                 'required' => true
             ],
-            'appId' => [
-                'valid' => ['string']
-            ],
             'authToken' => [
-                'valid' => ['string']
-            ],
-            'certId' => [
-                'valid' => ['string']
-            ],
-            'devId' => [
                 'valid' => ['string']
             ],
             'siteId' => [
@@ -112,6 +103,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     protected function getEbayHeaders($operationName)
     {
+        $credentials = $this->config('credentials');
+        $appId = $credentials->getAppId();
+        $certId = $credentials->getCertId();
+        $devId = $credentials->getDevId();
+
         $headers = array();
 
         // Add required headers first.
@@ -120,18 +116,19 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers[self::HDR_SITE_ID] = $this->config('siteId');
 
         // Add optional headers.
-        if ($this->config('appId')) {
-            $headers[self::HDR_APP_ID] = $this->config('appId');
+        if ($appId) {
+            $headers[self::HDR_APP_ID] = $credentials->getAppId();
         }
 
-        if ($this->config('certId')) {
-            $headers[self::HDR_CERT_ID] = $this->config('certId');
+        if ($certId) {
+            $headers[self::HDR_CERT_ID] = $credentials->getCertId();
         }
 
-        if ($this->config('devId')) {
-            $headers[self::HDR_DEV_ID] = $this->config('devId');
+        if ($devId) {
+            $headers[self::HDR_DEV_ID] = $credentials->getDevId();
         }
 
         return $headers;
     }
 }
+

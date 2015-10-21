@@ -34,10 +34,6 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'valid' => ['string'],
                 'required' => true
             ],
-            'appId' => [
-                'valid' => ['string'],
-                'required' => true
-            ],
             'siteId' => [
                 'valid' => ['string']
             ],
@@ -88,7 +84,7 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
 
         // Add required headers first.
         $headers[self::HDR_API_VERSION] = $this->config('apiVersion');
-        $headers[self::HDR_APP_ID] = $this->config('appId');
+        $headers[self::HDR_APP_ID] = $this->config('credentials')->getAppId();
         $headers[self::HDR_OPERATION_NAME] = $operationName;
         $headers[self::HDR_REQUEST_FORMAT] = 'XML';
 
@@ -112,3 +108,4 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
+

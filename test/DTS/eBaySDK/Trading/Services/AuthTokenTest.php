@@ -33,6 +33,7 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
         $s = new TradingService([
             'apiVersion' => '',
             'authToken' => '321',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'siteId' => ''
         ], new HttpClient());
 

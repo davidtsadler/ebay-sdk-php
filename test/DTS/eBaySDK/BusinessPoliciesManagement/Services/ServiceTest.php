@@ -55,6 +55,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $s = new Service([
             'authToken' => '321',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '999'
         ], $h);
 
@@ -81,6 +82,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'apiVersion' => '123',
             'authToken' => '321',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '999'
         ], $h);
 

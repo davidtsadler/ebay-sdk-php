@@ -36,12 +36,6 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'valid' => ['string']
         ], $d['apiVersion']);
 
-        $this->assertArrayHasKey('appId', $d);
-        $this->assertEquals([
-            'valid' => ['string'],
-            'required' => true
-        ], $d['appId']);
-
         $this->assertArrayHasKey('globalId', $d);
         $this->assertEquals([
             'valid' => ['string']
@@ -53,7 +47,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $h = new HttpClient();
 
         $s = new Service([
-            'appId' => '321'
+            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => '']
         ], $h);
 
         $s->testOperation();
@@ -76,7 +70,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $s = new Service([
             'apiVersion' => '123',
-            'appId' => '321',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '999'
         ], $h);
 
@@ -89,3 +83,4 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('999', $h->headers[HalfFindingBaseService::HDR_GLOBAL_ID]);
     }
 }
+

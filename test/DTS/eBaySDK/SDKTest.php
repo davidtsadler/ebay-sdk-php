@@ -11,6 +11,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
             'apiVersion' => '',
             'appId' => '',
             'authToken' => '',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '',
             'siteId' => ''
         ]);
@@ -21,6 +22,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $s = new Sdk([
             'appId' => '123',
             'apiVersion' => '999',
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'Finding' => [
                 'appId' => '321'
             ],
@@ -99,3 +101,4 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\Trading\Services\TradingService', $this->sdk->createTrading());
     }
 }
+
