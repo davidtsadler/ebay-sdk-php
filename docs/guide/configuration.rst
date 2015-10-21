@@ -68,7 +68,7 @@ You can also pass an instance of the ``DTS\eBaySDK\Interfaces\CredentialsInterfa
         'credentials' => $credentials
     ]);
 
-Pass a callable :ref:`credential provider <credential_provider>` function to create credentials using a function.
+Pass a callable :ref:`credentials provider <credentials_provider>` function to create credentials using a function.
 
 .. code-block:: php
 

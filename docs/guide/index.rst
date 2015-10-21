@@ -8,3 +8,4 @@ Each of the following guides describe the componets that make up the eBay SDK fo
     :maxdepth: 1
 
     configuration
+    credentials
