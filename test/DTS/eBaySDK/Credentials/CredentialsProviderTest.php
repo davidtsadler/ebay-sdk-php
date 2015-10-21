@@ -2,6 +2,7 @@
 namespace DTS\eBaySDK\Credentials\Test;
 
 use DTS\eBaySDK\Credentials\CredentialsProvider;
+use DTS\eBaySDK\Credentials\Credentials;
 
 class CredentialsProvideerTest extends \PHPUnit_Framework_TestCase
 {
@@ -174,6 +175,87 @@ EOT;
         unlink($dir . '/credentials');
 
         throw $c;
+    }
+
+    function testMemoize()
+    {
+        $called = 0;
+        $c = new Credentials('111', '222', '333');
+        $f = function () use (&$called, &$c) {
+            $called++;
+            return $c;
+        };
+        $p = CredentialsProvider::memoize($f);
+        $this->assertSame($c, $p());
+        $this->assertEquals(1, $called);
+        $this->assertSame($c, $p());
+        $this->assertEquals(1, $called);
+    }
+
+    function testChain()
+    {
+        $ini = <<<EOT
+[default]
+ebay_app_id = 111
+ebay_cert_id = 222
+ebay_dev_id = 333
+[foo]
+EOT;
+
+        $dir = $this->clearEnv();
+        file_put_contents($dir . '/credentials', $ini);
+        putenv('HOME=' . dirname($dir));
+
+        $a = CredentialsProvider::ini('foo');
+        $b = CredentialsProvider::ini();
+        $c = function () { throw new \InvalidArgumentException('Should not be called'); };
+
+        $p = CredentialsProvider::chain($a, $b, $c);
+        $c = $p();
+
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+
+        unlink($dir . '/credentials');
+    }
+
+    function testTrysEnvVarByDefault()
+    {
+        $this->clearEnv();
+        putenv(CredentialsProvider::ENV_APP_ID . '=111');
+        putenv(CredentialsProvider::ENV_CERT_ID . '=222');
+        putenv(CredentialsProvider::ENV_DEV_ID . '=333');
+
+        $p = CredentialsProvider::defaultProvider();
+        $c = $p();
+
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+    }
+
+    function testTrysIniByDefault()
+    {
+        $ini = <<<EOT
+[default]
+ebay_app_id = 111
+ebay_cert_id = 222
+ebay_dev_id = 333
+EOT;
+
+        $dir = $this->clearEnv();
+        file_put_contents($dir . '/credentials', $ini);
+        putenv('HOME=' . dirname($dir));
+
+        $p = CredentialsProvider::defaultProvider();
+        $c = $p();
+
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+
+        unlink($dir . '/credentials');
     }
 }
 

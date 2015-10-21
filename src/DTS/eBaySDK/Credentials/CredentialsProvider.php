@@ -28,8 +28,63 @@ class CredentialsProvider
      */
     public static function defaultProvider()
     {
-        // TODO Return actual default provider.
-        return function () {return new Credentials('111', '222', '333');};
+        return self::memoize(
+            self::chain(
+                self::env(),
+                self::ini()
+            )
+        );
+    }
+
+    /**
+     * Wraps a credentials provider and caches previously provided credentials.
+     *
+     * @param callable $provider Credentials provider to wrap.
+     *
+     * @return callable           Wrapped provider that returns cached credentials when called.
+     */
+    public static function memoize(callable $provider)
+    {
+        return function () use ($provider) {
+            static $result;
+            static $isConstant;
+
+            if ($isConstant) {
+                return $result;
+            }
+
+            $isConstant = true;
+
+            return $result = $provider();
+        };
+    }
+
+    /**
+     * Creates an aggregate credentials provider that invokes the provided
+     * variadic providers one after the other until a provider returns
+     * credentials
+     *
+     * @return callable
+     */
+    public static function chain()
+    {
+        $providers = func_get_args();
+        if (empty($providers)) {
+            throw new \InvalidArgumentException('No providers in chain');
+        }
+
+        return function () use ($providers) {
+            $provider = array_shift($providers);
+            $credentials = $provider();
+
+            while (
+                ($provider = array_shift($providers))
+                && !($credentials instanceof Credentials)
+            ) {
+                $credentials = $provider();
+            }
+            return $credentials;
+        };
     }
 
     /**
