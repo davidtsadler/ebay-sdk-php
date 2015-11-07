@@ -167,7 +167,7 @@ class CredentialsProvider
         $homeDrive = getenv('HOMEDRIVE');
         $homePath = getenv('HOMEPATH');
 
-        return ($homeDrive && homePath) ? $homeDrive . $homePath : null;
+        return ($homeDrive && $homePath) ? $homeDrive . $homePath : null;
     }
 }
 
