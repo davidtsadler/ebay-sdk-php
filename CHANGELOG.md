@@ -2,7 +2,7 @@
 
 ## 0.4.0 - 2015-11-07
 
-## Feature
+### Feature
 
 SDK now supports the Return Management service.
 
