@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Unreleased
+
+### API
+
+* Support Merchant Data API version 945.
+* Support Trading API version 945.
+
 ## 0.3.0 - 2015-10-11
 
 ### API
