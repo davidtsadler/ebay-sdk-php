@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fix
+
+SDK can now handle XML that is returned with namespaces.
+
 ### API
 
 * Support Merchant Data API version 945.
