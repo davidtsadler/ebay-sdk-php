@@ -56,7 +56,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'valid' => ['string']
             ],
             'siteId' => [
-                'valid' => ['string'],
+                'valid' => ['int'],
                 'required' => true
             ]
         ];

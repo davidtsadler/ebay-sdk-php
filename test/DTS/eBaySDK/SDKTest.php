@@ -13,7 +13,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
             'authToken' => '',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '',
-            'siteId' => ''
+            'siteId' => 0
         ]);
     }
 
@@ -27,7 +27,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
                 'appId' => '321'
             ],
             'Trading' => [
-                'siteId' => '99'
+                'siteId' => 0
             ]
         ]);
         $f = $s->createFinding();
@@ -38,7 +38,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('123', $t->config('appId'));
         $this->assertEquals('999', $t->config('apiVersion'));
-        $this->assertEquals('99', $t->config('siteId'));
+        $this->assertEquals(0, $t->config('siteId'));
 
         /**
          * Options passed in via the create methods overwrite existing.
@@ -46,12 +46,12 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $t = $s->createTrading([
             'appId' => '111',
             'apiVersion' => '222',
-            'siteId' => '333'
+            'siteId' => 333
         ]);
 
         $this->assertEquals('111', $t->config('appId'));
         $this->assertEquals('222', $t->config('apiVersion'));
-        $this->assertEquals('333', $t->config('siteId'));
+        $this->assertEquals(333, $t->config('siteId'));
     }
 
     public function testCallingUnknownMethod()

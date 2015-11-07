@@ -44,7 +44,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('siteId', $d);
         $this->assertEquals([
-            'valid' => ['string'],
+            'valid' => ['int'],
             'required' => true
         ], $d['siteId']);
     }
@@ -56,7 +56,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'apiVersion' => '123',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'siteId' => '999'
+            'siteId' => 0
         ], $h);
 
         $s->testOperation();
@@ -66,7 +66,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $h->headers[TradingBaseService::HDR_API_VERSION]);
 
         $this->assertArrayHasKey(TradingBaseService::HDR_SITE_ID , $h->headers);
-        $this->assertEquals('999', $h->headers[TradingBaseService::HDR_SITE_ID]);
+        $this->assertEquals(0, $h->headers[TradingBaseService::HDR_SITE_ID]);
 
         $this->assertArrayHasKey(TradingBaseService::HDR_OPERATION_NAME, $h->headers);
         $this->assertEquals('testOperation', $h->headers[TradingBaseService::HDR_OPERATION_NAME]);
@@ -84,7 +84,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'apiVersion' => '123',
             'credentials' => ['appId' => 'appId', 'certId' => 'certId', 'devId' => 'devId'],
-            'siteId' => '999'
+            'siteId' => 999
         ], $h);
 
         $s->testOperation();

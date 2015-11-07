@@ -34,7 +34,7 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
             'apiVersion' => '',
             'authToken' => '321',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'siteId' => ''
+            'siteId' => 0
         ], new HttpClient());
 
         // Calling the operation results in the auth token been set by the service.

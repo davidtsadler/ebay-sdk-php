@@ -60,7 +60,7 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'required' => true
             ],
             'siteId' => [
-                'valid' => ['string']
+                'valid' => ['int']
             ],
             'trackingId' => [
                 'valid' => ['string']
@@ -89,7 +89,8 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers[self::HDR_REQUEST_FORMAT] = 'XML';
 
         // Add optional headers.
-        if ($this->config('siteId')) {
+        // Take into account siteId is an integer that can be set to zero.
+        if ($this->config('siteId') !== null) {
             $headers[self::HDR_SITE_ID] = $this->config('siteId');
         }
 

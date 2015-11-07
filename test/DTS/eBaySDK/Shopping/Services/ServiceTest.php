@@ -44,7 +44,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('siteId', $d);
         $this->assertEquals([
-            'valid' => ['string']
+            'valid' => ['int']
         ], $d['siteId']);
 
         $this->assertArrayHasKey('trackingId', $d);
@@ -97,7 +97,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'affiliateUserId' => '666',
             'apiVersion' => '123',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'siteId' => '999',
+            'siteId' => 0,
             'trackingId' => '888',
             'trackingPartnerCode' => '777'
         ], $h);
@@ -105,7 +105,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s->testOperation();
 
         $this->assertArrayHasKey(ShoppingBaseService::HDR_SITE_ID, $h->headers);
-        $this->assertEquals('999', $h->headers[ShoppingBaseService::HDR_SITE_ID]);
+        $this->assertEquals('0', $h->headers[ShoppingBaseService::HDR_SITE_ID]);
 
         $this->assertArrayHasKey(ShoppingBaseService::HDR_TRACKING_ID, $h->headers);
         $this->assertEquals('888', $h->headers[ShoppingBaseService::HDR_TRACKING_ID]);
