@@ -56,7 +56,7 @@ class XmlParser
      */
     public function parse($xml)
     {
-        $parser = xml_parser_create('UTF-8');
+        $parser = xml_parser_create_ns('UTF-8', '@');
 
         xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, 0);
         xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, 1);
@@ -80,7 +80,7 @@ class XmlParser
      */
     private function startElement($parser, $name, array $attributes)
     {
-        $this->metaStack->push($this->getPhpMeta($name, $attributes));
+        $this->metaStack->push($this->getPhpMeta($this->normalizeElementName($name), $attributes));
     }
 
     /**
@@ -124,6 +124,25 @@ class XmlParser
             }
         } else {
             $this->rootObject = $meta->phpObject;
+        }
+    }
+
+    /**
+     * Handles element names that may have namespaces in them.
+     *
+     * @param string Element name.
+     *
+     * @return string The element name stripped of any namespaces.
+     */
+    private function normalizeElementName($name)
+    {
+        $nsElement = explode('@', $name);
+
+        if (count($nsElement) > 1) {
+            array_shift($nsElement);
+            return $nsElement[0];
+        } else {
+            return $name;
         }
     }
 

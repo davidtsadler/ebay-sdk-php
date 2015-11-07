@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:root xmlns:ns1="http://davidtsadler.com">
+    <ns1:integer>123</ns1:integer>
+    <ns1:string>a string</ns1:string>
+    <ns1:foo>foo</ns1:foo>
+    <ns1:double>123.45</ns1:double>
+    <ns1:booleanTrue>TRUE</ns1:booleanTrue>
+    <ns1:booleanFalse>false</ns1:booleanFalse>
+    <ns1:DateTime>2000-01-01T16:15:30.123Z</ns1:DateTime>
+    <ns1:SimpleClass xmlns:ns2="http://davidtsadler.com" IntegerAttribute="123" doubleAttribute="123.45" BooleanTrueAttribute="TRUE" booleanFalseAttribute="false" DateTimeAttribute="2000-01-01T16:15:30.123Z">
+        <ns2:integer>321</ns2:integer>
+        <ns2:string>another string</ns2:string>
+    </ns1:SimpleClass>
+    <ns1:strings>foo</ns1:strings>
+    <ns1:strings>bar</ns1:strings>
+    <ns1:integers>1</ns1:integers>
+    <ns1:integers>2</ns1:integers>
+    <ns1:integers>3</ns1:integers>
+    <ns1:integers>4</ns1:integers>
+    <ns1:integers>5</ns1:integers>
+    <ns1:simpleClasses xmlns:ns3="http://davidtsadler.com">
+        <ns3:integer>888</ns3:integer>
+    </ns1:simpleClasses>
+    <ns1:simpleClasses xmlns:ns4="http://davidtsadler.com">
+        <ns4:integer>999</ns4:integer>
+    </ns1:simpleClasses>
+    <ns1:AmountClass AttributeOne="one" ATTRIBUTEBISH="two" xmlns:ns5="http://davidtsadler.com" NonExistent="nonexistent">543.21</ns1:AmountClass>
+    <ns1:base64BinaryType>binary type</ns1:base64BinaryType>
+    <ns1:booleanType>true</ns1:booleanType>
+    <ns1:decimalType>123</ns1:decimalType>
+    <ns1:doubleType>123.45</ns1:doubleType>
+    <ns1:integerType>123</ns1:integerType>
+    <ns1:stringType>string type</ns1:stringType>
+    <ns1:tokenType>token type</ns1:tokenType>
+    <ns1:uriType>uri type</ns1:uriType>
+    <ns1:nonexistent>
+      <ns1:nonexistent>nonexistent</ns1:nonexistent>
+    </ns1:nonexistent>
+    <ns1:BISH>foo</ns1:BISH>
+    <ns1:BishBash>foo</ns1:BishBash>
+</ns1:root>
