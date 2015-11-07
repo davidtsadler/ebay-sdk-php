@@ -22,9 +22,23 @@ namespace DTS\eBaySDK\ReturnManagement\Services;
  */
 class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    /**
-     * @var string Current version of the SDK
-     */
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'globalId' => [
+                'valid' => ['string']
+            ]
+        ];
+    }
 
     /**
      * Constants for the various HTTP headers required by the API.
@@ -44,16 +58,8 @@ class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
      * @param array $config Optional configuration option values.
      * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
-        if (!array_key_exists(get_called_class(), self::$configOptions)) {
-            self::$configOptions[get_called_class()] = array(
-                'apiVersion' => array('required' => false),
-                'authToken' => array('required' => true),
-                'globalId' => array('required' => false)
-            );
-        }
-
         parent::__construct('https://svcs.ebay.com/services/returns/v1/ReturnManagementService', 'https://svcs.sandbox.ebay.com/services/returns/v1/ReturnManagementService', $config, $httpClient);
     }
 
@@ -71,7 +77,6 @@ class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
         // Add required headers first.
         $headers[self::HDR_AUTH_TOKEN] = $this->config('authToken');
         $headers[self::HDR_OPERATION_NAME] = $operationName;
-        $headers[self::HDR_SERVICE_NAME ] = 'ReturnManagementService';
 
         // Add optional headers.
         if ($this->config('apiVersion')) {
