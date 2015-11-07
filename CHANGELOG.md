@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 0.4.0 - 2015-11-07
 
 ## Feature
 
