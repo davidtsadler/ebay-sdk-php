@@ -22,24 +22,6 @@ namespace DTS\eBaySDK\ReturnManagement\Services;
  */
 class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string']
-            ],
-            'authToken' => [
-                'valid' => ['string'],
-                'required' => true
-            ],
-            'globalId' => [
-                'valid' => ['string']
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -61,6 +43,24 @@ class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('https://svcs.ebay.com/services/returns/v1/ReturnManagementService', 'https://svcs.sandbox.ebay.com/services/returns/v1/ReturnManagementService', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'globalId' => [
+                'valid' => ['string']
+            ]
+        ];
     }
 
     /**

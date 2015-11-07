@@ -22,21 +22,6 @@ namespace DTS\eBaySDK\BulkDataExchange\Services;
  */
 class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string']
-            ],
-            'authToken' => [
-                'valid' => ['string'],
-                'required' => true
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -54,6 +39,21 @@ class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('https://webservices.ebay.com/BulkDataExchangeService', 'https://webservices.sandbox.ebay.com/BulkDataExchangeService', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
+        ];
     }
 
     /**

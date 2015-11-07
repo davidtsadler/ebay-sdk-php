@@ -22,21 +22,6 @@ namespace DTS\eBaySDK\FileTransfer\Services;
  */
 class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string']
-            ],
-            'authToken' => [
-                'valid' => ['string'],
-                'required' => true
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -54,6 +39,21 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('https://storage.ebay.com/FileTransferService', 'https://storage.sandbox.ebay.com/FileTransferService', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
+        ];
     }
 
     /**

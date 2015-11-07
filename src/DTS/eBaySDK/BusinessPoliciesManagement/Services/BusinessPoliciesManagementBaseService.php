@@ -22,25 +22,6 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Services;
  */
 class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string']
-            ],
-            'authToken' => [
-                'valid' => ['string'],
-                'required' => true
-            ],
-            'globalId' => [
-                'valid' => ['string'],
-                'required' => true
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -62,6 +43,25 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('https://svcs.ebay.com/services/selling/v1/SellerProfilesManagementService', 'http://svcs.sandbox.ebay.com/services/selling/v1/SellerProfilesManagementService', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'authToken' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'globalId' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
+        ];
     }
 
     /**

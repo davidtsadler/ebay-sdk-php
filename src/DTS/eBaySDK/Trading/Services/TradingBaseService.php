@@ -22,25 +22,6 @@ namespace DTS\eBaySDK\Trading\Services;
  */
 class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string'],
-                'required' => true
-            ],
-            'authToken' => [
-                'valid' => ['string']
-            ],
-            'siteId' => [
-                'valid' => ['string'],
-                'required' => true
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -60,6 +41,25 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('https://api.ebay.com/ws/api.dll', 'https://api.sandbox.ebay.com/ws/api.dll', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string'],
+                'required' => true
+            ],
+            'authToken' => [
+                'valid' => ['string']
+            ],
+            'siteId' => [
+                'valid' => ['string'],
+                'required' => true
+            ]
+        ];
     }
 
     /**

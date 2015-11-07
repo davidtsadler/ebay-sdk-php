@@ -22,20 +22,6 @@ namespace DTS\eBaySDK\Finding\Services;
  */
 class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
-    public static function getConfigDefinitions()
-    {
-        $definitions = parent::getConfigDefinitions();
-
-        return $definitions + [
-            'apiVersion' => [
-                'valid' => ['string']
-            ],
-            'globalId' => [
-                'valid' => ['string']
-            ]
-        ];
-    }
-
     /**
      * Constants for the various HTTP headers required by the API.
      */
@@ -56,6 +42,20 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
     public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
     {
         parent::__construct('http://svcs.ebay.com/services/search/FindingService/v1', 'http://svcs.sandbox.ebay.com/services/search/FindingService/v1', $config, $httpClient);
+    }
+
+    public static function getConfigDefinitions()
+    {
+        $definitions = parent::getConfigDefinitions();
+
+        return $definitions + [
+            'apiVersion' => [
+                'valid' => ['string']
+            ],
+            'globalId' => [
+                'valid' => ['string']
+            ]
+        ];
     }
 
     /**
