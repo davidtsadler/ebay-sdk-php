@@ -25,13 +25,11 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType $BidderNoticePreferences
  * @property \DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType $CombinedPaymentPreferences
- * @property \DTS\eBaySDK\Trading\Types\CrossPromotionPreferencesType $CrossPromotionPreferences
  * @property \DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType $SellerPaymentPreferences
  * @property \DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType $SellerFavoriteItemPreferences
  * @property \DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType $EndOfAuctionEmailPreferences
  * @property boolean $EmailShipmentTrackingNumberPreference
  * @property boolean $RequiredShipPhoneNumberPreference
- * @property \DTS\eBaySDK\Trading\Types\ProStoresCheckoutPreferenceType $ProStoresPreference
  * @property \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType $UnpaidItemAssistancePreferences
  * @property \DTS\eBaySDK\Trading\Types\SellerExcludeShipToLocationPreferencesType $SellerExcludeShipToLocationPreferences
  * @property \DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType $PurchaseReminderEmailPreferences
@@ -64,12 +62,6 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'CombinedPaymentPreferences'
         ),
-        'CrossPromotionPreferences' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CrossPromotionPreferencesType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CrossPromotionPreferences'
-        ),
         'SellerPaymentPreferences' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
             'unbound' => false,
@@ -99,12 +91,6 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequiredShipPhoneNumberPreference'
-        ),
-        'ProStoresPreference' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ProStoresCheckoutPreferenceType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProStoresPreference'
         ),
         'UnpaidItemAssistancePreferences' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',

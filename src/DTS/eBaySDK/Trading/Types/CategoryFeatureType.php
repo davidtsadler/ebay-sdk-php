@@ -27,11 +27,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ListingDurationReferenceType[] $ListingDuration
  * @property boolean $ShippingTermsRequired
  * @property boolean $BestOfferEnabled
- * @property boolean $DutchBINEnabled
  * @property boolean $UserConsentRequired
  * @property boolean $HomePageFeaturedEnabled
  * @property boolean $ProPackEnabled
- * @property boolean $BasicUpgradePackEnabled
  * @property boolean $ValuePackEnabled
  * @property boolean $ProPackPlusEnabled
  * @property \DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType $AdFormatEnabled
@@ -41,12 +39,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $LocalMarketRegularSubscription
  * @property boolean $LocalMarketPremiumSubscription
  * @property boolean $LocalMarketNonSubscription
- * @property boolean $ExpressEnabled
- * @property boolean $ExpressPicturesRequired
  * @property double $MinimumReservePrice
  * @property boolean $SellerContactDetailsEnabled
  * @property boolean $TransactionConfirmationRequestEnabled
- * @property boolean $StoreInventoryEnabled
  * @property boolean $SkypeMeTransactionalEnabled
  * @property boolean $SkypeMeNonTransactionalEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ClassifiedAdPaymentMethodEnabledCodeType $ClassifiedAdPaymentMethodEnabled
@@ -68,7 +63,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $CrossBorderTradeAustraliaEnabled
  * @property boolean $PayPalBuyerProtectionEnabled
  * @property boolean $BuyerGuaranteeEnabled
- * @property boolean $CombinedFixedPriceTreatmentEnabled
  * @property \DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType $GalleryFeaturedDurations
  * @property boolean $PayPalRequired
  * @property \DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType $eBayMotorsProAdFormatEnabled
@@ -135,7 +129,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $UPCEnabled
  * @property integer $MaxGranularFitmentCount
  * @property string $CompatibleVehicleType
- * @property \DTS\eBaySDK\Trading\Enums\PaymentOptionsGroupEnabledCodeType $PaymentOptionsGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $ShippingProfileCategoryGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $PaymentProfileCategoryGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $ReturnPolicyProfileCategoryGroup
@@ -178,12 +171,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ),
-        'DutchBINEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DutchBINEnabled'
-        ),
         'UserConsentRequired' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -201,12 +188,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPackEnabled'
-        ),
-        'BasicUpgradePackEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BasicUpgradePackEnabled'
         ),
         'ValuePackEnabled' => array(
             'type' => 'boolean',
@@ -262,18 +243,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LocalMarketNonSubscription'
         ),
-        'ExpressEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpressEnabled'
-        ),
-        'ExpressPicturesRequired' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExpressPicturesRequired'
-        ),
         'MinimumReservePrice' => array(
             'type' => 'double',
             'unbound' => false,
@@ -291,12 +260,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionConfirmationRequestEnabled'
-        ),
-        'StoreInventoryEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreInventoryEnabled'
         ),
         'SkypeMeTransactionalEnabled' => array(
             'type' => 'boolean',
@@ -423,12 +386,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerGuaranteeEnabled'
-        ),
-        'CombinedFixedPriceTreatmentEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedFixedPriceTreatmentEnabled'
         ),
         'GalleryFeaturedDurations' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType',
@@ -825,12 +782,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompatibleVehicleType'
-        ),
-        'PaymentOptionsGroup' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentOptionsGroup'
         ),
         'ShippingProfileCategoryGroup' => array(
             'type' => 'string',

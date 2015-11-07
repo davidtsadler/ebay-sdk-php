@@ -28,7 +28,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $ShowSellerPaymentPreferences
  * @property boolean $ShowEndOfAuctionEmailPreferences
  * @property boolean $ShowSellerFavoriteItemPreferences
- * @property boolean $ShowProStoresPreferences
  * @property boolean $ShowEmailShipmentTrackingNumberPreference
  * @property boolean $ShowRequiredShipPhoneNumberPreference
  * @property boolean $ShowSellerExcludeShipToLocationPreference
@@ -80,12 +79,6 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerFavoriteItemPreferences'
-        ),
-        'ShowProStoresPreferences' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowProStoresPreferences'
         ),
         'ShowEmailShipmentTrackingNumberPreference' => array(
             'type' => 'boolean',

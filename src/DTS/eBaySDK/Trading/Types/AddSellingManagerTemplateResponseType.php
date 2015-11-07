@@ -26,7 +26,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $CategoryID
  * @property integer $Category2ID
  * @property integer $SaleTemplateID
- * @property integer $SaleTemplateGroupID
  * @property string $SaleTemplateName
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
@@ -54,12 +53,6 @@ class AddSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\A
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
-        ),
-        'SaleTemplateGroupID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateGroupID'
         ),
         'SaleTemplateName' => array(
             'type' => 'string',

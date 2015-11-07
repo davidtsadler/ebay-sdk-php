@@ -31,6 +31,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType $SellerItemRatingDetailArray
  * @property string $OrderLineItemID
  * @property \DTS\eBaySDK\Trading\Enums\ItemArrivedWithinEDDCodeType $ItemArrivedWithinEDDType
+ * @property boolean $ItemDeliveredWithinEDD
  */
 class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -85,6 +86,12 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArrivedWithinEDDType'
+        ),
+        'ItemDeliveredWithinEDD' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemDeliveredWithinEDD'
         )
     );
 
