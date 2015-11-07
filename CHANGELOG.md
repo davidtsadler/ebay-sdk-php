@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## Feature
+
+SDK now supports the Return Management service.
+
 ### Fix
 
 SDK can now handle XML that is returned with namespaces.

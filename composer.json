@@ -34,6 +34,7 @@
             "DTS\\eBaySDK\\HalfFinding\\Mocks\\": "test/",
             "DTS\\eBaySDK\\MerchantData\\Mocks\\": "test/",
             "DTS\\eBaySDK\\ResolutionCaseManagement\\Mocks\\": "test/",
+            "DTS\\eBaySDK\\ReturnManagement\\Mocks\\": "test/",
             "DTS\\eBaySDK\\Shopping\\Mocks\\": "test/",
             "DTS\\eBaySDK\\Trading\\Mocks\\": "test/"
         }
