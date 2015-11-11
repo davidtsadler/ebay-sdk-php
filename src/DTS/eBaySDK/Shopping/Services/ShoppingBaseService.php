@@ -60,7 +60,7 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'required' => true
             ],
             'siteId' => [
-                'valid' => ['int']
+                'valid' => ['int', 'string']
             ],
             'trackingId' => [
                 'valid' => ['string']

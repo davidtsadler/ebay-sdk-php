@@ -44,7 +44,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('siteId', $d);
         $this->assertEquals([
-            'valid' => ['int'],
+            'valid' => ['int', 'string'],
             'required' => true
         ], $d['siteId']);
     }
