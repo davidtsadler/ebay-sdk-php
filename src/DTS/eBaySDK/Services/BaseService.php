@@ -22,6 +22,7 @@ use DTS\eBaySDK\Exceptions;
 use DTS\eBaySDK\HttpClient\HttpClient;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
+use \DTS\eBaySDK as Functions;
 
 /**
  * The base class for every eBay service class.
@@ -32,6 +33,11 @@ abstract class BaseService
      * Helper constent when build requests that contain attachments.
      */
     const CRLF = "\r\n";
+
+    /**
+     * @var DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
+     */
+    private $resolver;
 
     /**
      * @var mixed The object that will handle the actual sending of the API request.
@@ -70,8 +76,8 @@ abstract class BaseService
         $config,
         \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
     ) {
-        $resolver = new ConfigurationResolver(static::getConfigDefinitions());
-        $this->config = $resolver->resolve($config);
+        $this->resolver = new ConfigurationResolver(static::getConfigDefinitions());
+        $this->config = $this->resolver->resolve($config);
         $this->productionUrl = $productionUrl;
         $this->sandboxUrl = $sandboxUrl;
         $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
@@ -114,6 +120,14 @@ abstract class BaseService
             : (isset($this->config[$option])
                 ? $this->config[$option]
                 : null);
+    }
+
+    public function setConfig($configuration)
+    {
+        $this->config = Functions\array_merge_deep(
+            $this->config,
+            $this->resolver->resolve_options($configuration)
+        );
     }
 
     /**

@@ -59,6 +59,34 @@ class ConfigurationResolver
         return $configuration;
     }
 
+    /**
+     * Resolve and validate the passed configuration options.
+     * The difference between this method and resolve is that
+     * this will only resolve options in the passed configuration.
+     * It will not use the definitions to resolve optional and required options.
+     *
+     * @param array $configuration Associative array of configuration options that will be resolved and validated.
+     *
+     * @return array Returns an associative array of the resolved and validated configuration options.
+     * @throws \InvalidArgumentException.
+     */
+    public function resolve_options(array $configuration)
+    {
+        foreach($configuration as $key => $value) {
+            if (isset($this->definitions[$key])) {
+                $def = $this->definitions[$key];
+
+                $this->checkType($def['valid'], $key, $value);
+
+                if (isset($def['fn'])) {
+                    $def['fn']($configuration[$key], $configuration);
+                }
+            }
+        }
+
+        return $configuration;
+    }
+
     private function checkType($valid, $name, $provided)
     {
         foreach ($valid as $check) {

@@ -168,5 +168,36 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             }
         ]);
     }
+
+    public function testCanSetConfigurationOptionsAfterInstaniation()
+    {
+        $s = new Service([
+            'sandbox' => true,
+            'credentials' => [
+                'appId' => '111',
+                'certId' => '222',
+                'devId' => '333'
+            ]
+        ]); 
+
+        $this->assertEquals([
+            'sandbox' => true,
+            'credentials' => new Credentials('111', '222', '333'),
+            'debug' => false
+        ], $s->config());
+
+        $s->setConfig([
+            'sandbox' => false,
+            'credentials' => function () {
+                return new Credentials('444', '555', '666');
+            }
+        ]);
+
+        $this->assertEquals([
+            'sandbox' => false,
+            'credentials' => new Credentials('444', '555', '666'),
+            'debug' => false
+        ], $s->config());
+    }
 }
 
