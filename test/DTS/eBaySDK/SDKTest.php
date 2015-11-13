@@ -33,12 +33,12 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $f = $s->createFinding();
         $t = $s->createTrading();
 
-        $this->assertEquals('321', $f->config('appId'));
-        $this->assertEquals('999', $f->config('apiVersion'));
+        $this->assertEquals('321', $f->getConfig('appId'));
+        $this->assertEquals('999', $f->getConfig('apiVersion'));
 
-        $this->assertEquals('123', $t->config('appId'));
-        $this->assertEquals('999', $t->config('apiVersion'));
-        $this->assertEquals(0, $t->config('siteId'));
+        $this->assertEquals('123', $t->getConfig('appId'));
+        $this->assertEquals('999', $t->getConfig('apiVersion'));
+        $this->assertEquals(0, $t->getConfig('siteId'));
 
         /**
          * Options passed in via the create methods overwrite existing.
@@ -49,9 +49,9 @@ class SdkTest extends \PHPUnit_Framework_TestCase
             'siteId' => 333
         ]);
 
-        $this->assertEquals('111', $t->config('appId'));
-        $this->assertEquals('222', $t->config('apiVersion'));
-        $this->assertEquals(333, $t->config('siteId'));
+        $this->assertEquals('111', $t->getConfig('appId'));
+        $this->assertEquals('222', $t->getConfig('apiVersion'));
+        $this->assertEquals(333, $t->getConfig('siteId'));
     }
 
     public function testCallingUnknownMethod()

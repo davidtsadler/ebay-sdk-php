@@ -70,16 +70,16 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers = array();
 
         // Add required headers first.
-        $headers[self::HDR_APP_ID] = $this->config('credentials')->getAppId();
+        $headers[self::HDR_APP_ID] = $this->getConfig('credentials')->getAppId();
         $headers[self::HDR_OPERATION_NAME] = $operationName;
 
         // Add optional headers.
-        if ($this->config('apiVersion')) {
-            $headers[self::HDR_API_VERSION] = $this->config('apiVersion');
+        if ($this->getConfig('apiVersion')) {
+            $headers[self::HDR_API_VERSION] = $this->getConfig('apiVersion');
         }
 
-        if ($this->config('globalId')) {
-            $headers[self::HDR_GLOBAL_ID] = $this->config('globalId');
+        if ($this->getConfig('globalId')) {
+            $headers[self::HDR_GLOBAL_ID] = $this->getConfig('globalId');
         }
 
         return $headers;

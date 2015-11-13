@@ -76,13 +76,13 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
         $headers = array();
 
         // Add required headers first.
-        $headers[self::HDR_AUTH_TOKEN] = $this->config('authToken');
-        $headers[self::HDR_GLOBAL_ID] = $this->config('globalId');
+        $headers[self::HDR_AUTH_TOKEN] = $this->getConfig('authToken');
+        $headers[self::HDR_GLOBAL_ID] = $this->getConfig('globalId');
         $headers[self::HDR_OPERATION_NAME] = $operationName;
 
         // Add optional headers.
-        if ($this->config('apiVersion')) {
-            $headers[self::HDR_API_VERSION] = $this->config('apiVersion');
+        if ($this->getConfig('apiVersion')) {
+            $headers[self::HDR_API_VERSION] = $this->getConfig('apiVersion');
         }
 
         return $headers;

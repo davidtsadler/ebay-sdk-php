@@ -79,7 +79,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         /**
          * Modify the request object to include the auth token that was set up in the configuration.
          */
-        if ($this->config('authToken') !== null) {
+        if ($this->getConfig('authToken') !== null) {
             /**
              * Don't modify a request if the token already exists.
              */
@@ -87,7 +87,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
                 $request->RequesterCredentials = new \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType();
             }
             if(!isset($request->RequesterCredentials->eBayAuthToken)) {
-                $request->RequesterCredentials->eBayAuthToken = $this->config('authToken');
+                $request->RequesterCredentials->eBayAuthToken = $this->getConfig('authToken');
             }
         }
 
@@ -103,7 +103,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     protected function getEbayHeaders($operationName)
     {
-        $credentials = $this->config('credentials');
+        $credentials = $this->getConfig('credentials');
         $appId = $credentials->getAppId();
         $certId = $credentials->getCertId();
         $devId = $credentials->getDevId();
@@ -111,9 +111,9 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers = array();
 
         // Add required headers first.
-        $headers[self::HDR_API_VERSION] = $this->config('apiVersion');
+        $headers[self::HDR_API_VERSION] = $this->getConfig('apiVersion');
         $headers[self::HDR_OPERATION_NAME] = $operationName;
-        $headers[self::HDR_SITE_ID] = $this->config('siteId');
+        $headers[self::HDR_SITE_ID] = $this->getConfig('siteId');
 
         // Add optional headers.
         if ($appId) {

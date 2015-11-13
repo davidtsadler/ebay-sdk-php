@@ -73,13 +73,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         // Even if the configuration is set to log debugging.
         $this->assertEquals(null, $this->service->logger());
-        $this->service->config('debug', true);
+        $this->service->getConfig('debug', true);
         $this->service->foo($this->request);
         $this->assertEquals(0, count($this->logger->debugMessages));
 
         // Now check that debugging information is logged.
         $this->service->logger($this->logger);
-        $this->service->config('debug', true);
+        $this->service->getConfig('debug', true);
         $this->service->foo($this->request);
 
         $debugRequest = $this->logger->debugMessages[0];
@@ -178,13 +178,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
                 'certId' => '222',
                 'devId' => '333'
             ]
-        ]); 
+        ]);
 
         $this->assertEquals([
             'sandbox' => true,
             'credentials' => new Credentials('111', '222', '333'),
             'debug' => false
-        ], $s->config());
+        ], $s->getConfig());
 
         $s->setConfig([
             'sandbox' => false,
@@ -197,7 +197,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'sandbox' => false,
             'credentials' => new Credentials('444', '555', '666'),
             'debug' => false
-        ], $s->config());
+        ], $s->getConfig());
     }
 }
 

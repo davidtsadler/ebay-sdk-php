@@ -83,27 +83,27 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         $headers = array();
 
         // Add required headers first.
-        $headers[self::HDR_API_VERSION] = $this->config('apiVersion');
-        $headers[self::HDR_APP_ID] = $this->config('credentials')->getAppId();
+        $headers[self::HDR_API_VERSION] = $this->getConfig('apiVersion');
+        $headers[self::HDR_APP_ID] = $this->getConfig('credentials')->getAppId();
         $headers[self::HDR_OPERATION_NAME] = $operationName;
         $headers[self::HDR_REQUEST_FORMAT] = 'XML';
 
         // Add optional headers.
         // Take into account siteId is an integer that can be set to zero.
-        if ($this->config('siteId') !== null) {
-            $headers[self::HDR_SITE_ID] = $this->config('siteId');
+        if ($this->getConfig('siteId') !== null) {
+            $headers[self::HDR_SITE_ID] = $this->getConfig('siteId');
         }
 
-        if ($this->config('affiliateUserId')) {
-            $headers[self::HDR_AFFILIATE_USER_ID] = $this->config('affiliateUserId');
+        if ($this->getConfig('affiliateUserId')) {
+            $headers[self::HDR_AFFILIATE_USER_ID] = $this->getConfig('affiliateUserId');
         }
 
-        if ($this->config('trackingId')) {
-            $headers[self::HDR_TRACKING_ID] = $this->config('trackingId');
+        if ($this->getConfig('trackingId')) {
+            $headers[self::HDR_TRACKING_ID] = $this->getConfig('trackingId');
         }
 
-        if ($this->config('trackingPartnerCode')) {
-            $headers[self::HDR_TRACKING_PARTNER_CODE] = $this->config('trackingPartnerCode');
+        if ($this->getConfig('trackingPartnerCode')) {
+            $headers[self::HDR_TRACKING_PARTNER_CODE] = $this->getConfig('trackingPartnerCode');
         }
 
         return $headers;

@@ -113,7 +113,7 @@ abstract class BaseService
      *
      * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
      */
-    public function config($option = null)
+    public function getConfig($option = null)
     {
         return $option === null
             ? $this->config
@@ -159,7 +159,7 @@ abstract class BaseService
      */
     public function getCredentials()
     {
-        return $this->config('credentials');
+        return $this->getConfig('credentials');
     }
 
     /**
@@ -173,7 +173,7 @@ abstract class BaseService
      */
     protected function callOperation($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
-        $debug = $this->config('debug');
+        $debug = $this->getConfig('debug');
 
         $url = $this->getUrl();
         $body = $this->buildRequestBody($request);
@@ -326,7 +326,7 @@ abstract class BaseService
      */
     private function getUrl()
     {
-        return $this->config('sandbox') ? $this->sandboxUrl : $this->productionUrl;
+        return $this->getConfig('sandbox') ? $this->sandboxUrl : $this->productionUrl;
     }
 
     /**
