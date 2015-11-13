@@ -59,6 +59,26 @@ abstract class BaseService
     private $logger;
 
     /**
+     * @param string $productionUrl The production URL.
+     * @param string $sandboxUrl The sandbox URL.
+     * @param array $config Configuration option values.
+     * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
+     */
+    public function __construct(
+        $productionUrl,
+        $sandboxUrl,
+        $config,
+        \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
+    ) {
+        $resolver = new ConfigurationResolver(static::getConfigDefinitions());
+        $this->config = $resolver->resolve($config);
+        $this->productionUrl = $productionUrl;
+        $this->sandboxUrl = $sandboxUrl;
+        $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
+        $this->logger = null;
+    }
+
+    /**
      * Get an array of service configuration option definitions.
      *
      * @return array
@@ -80,26 +100,6 @@ abstract class BaseService
                 'default' => false
             ]
         ];
-    }
-
-    /**
-     * @param string $productionUrl The production URL.
-     * @param string $sandboxUrl The sandbox URL.
-     * @param array $config Configuration option values.
-     * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
-     */
-    public function __construct(
-        $productionUrl,
-        $sandboxUrl,
-        $config,
-        \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
-    ) {
-        $resolver = new ConfigurationResolver(static::getConfigDefinitions());
-        $this->config = $resolver->resolve($config);
-        $this->productionUrl = $productionUrl;
-        $this->sandboxUrl = $sandboxUrl;
-        $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
-        $this->logger = null;
     }
 
     /**
@@ -145,7 +145,7 @@ abstract class BaseService
      */
     public function getCredentials()
     {
-        return $this->config['credentials'];
+        return $this->config('credentials');
     }
 
     /**
