@@ -4,9 +4,8 @@ Configuration
 
 This guide describes the service configuration options. These options can be provided in a service constructor or to the ``DTS\eBaySDK\Sdk`` class.
 
-.. contents:: Configuration Options
-    :depth: 1
-    :local:
+Options
+-------
 
 The following example shows how to pass options into the FindingService constructor.
 
@@ -73,11 +72,7 @@ Pass a callable :ref:`credentials provider <credentials_provider>` function to c
 .. code-block:: php
 
     $provider = function () {
-        return [
-            'appId'  => '111',
-            'certId' => '222',
-            'devId'  => '333'
-        ]
+        return new DTS\eBaySDK\Credentials\Credentials('111', '222', '333');
     };
 
     $service = new FindingService([
@@ -92,3 +87,39 @@ More information about providing credentials to a client can be found in the :do
 
     Credentials must be valid for the eBay environment that you are using. Sandbox and production credentials are not interchangeable.
 
+Managing the configuration
+--------------------------
+
+There are two methods available that allow you to manage the configuration during the lifetime of a service object.
+
+getConfig
+~~~~~~~~~
+
+You can get the value of any configuration option by just passing its name to the ``getConfig`` method.
+
+.. code-block:: php
+
+    $globalId = $service->getConfig('globalId');
+
+    assert('$globalId === "EBAY-US"');
+
+By passing no paramters all options are returned as an associative array.
+
+.. code-block:: php
+
+    $options = $service->getConfig();
+
+    assert('$options["globalId"] === "EBAY-US"');
+    assert('$options["sandbox"] === true');
+
+setConfig
+~~~~~~~~~
+
+You can pass an associative array to the ``setConfig`` method to set multiple configuration options.
+
+.. code-block:: php
+
+    $service->setConfig([
+        'apiVersion' => '1.13.0',
+        'globalId'   => 'EBAY-US'
+    ]);
