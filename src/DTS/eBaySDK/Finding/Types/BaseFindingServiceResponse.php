@@ -33,17 +33,11 @@ class BaseFindingServiceResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Ack' => array(
-            'type' => 'string',
+        'searchResult' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\SearchResult',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Ack'
-        ),
-        'itemSearchURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'itemSearchURL'
+            'elementName' => 'searchResult'
         ),
         'paginationOutput' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationOutput',
@@ -51,11 +45,11 @@ class BaseFindingServiceResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceR
             'attribute' => false,
             'elementName' => 'paginationOutput'
         ),
-        'searchResult' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\SearchResult',
+        'itemSearchURL' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'searchResult'
+            'elementName' => 'itemSearchURL'
         )
     );
 
