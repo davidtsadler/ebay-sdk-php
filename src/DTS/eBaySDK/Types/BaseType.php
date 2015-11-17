@@ -445,6 +445,22 @@ class BaseType
     }
 
     /**
+     * Determines if the property is a member of the class.
+     *
+     * @param string $class The name of the class that we are checking for.
+     * @param string $name The property name.
+     * @throws UnknownPropertyException If the property does not exist.
+     */
+    public static function propertyExists($class, $name)
+    {
+        if (!array_key_exists($name, self::$properties[$class])) {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    /**
      * Determines if the value is the correct type to assign to a property.
      *
      * @param string $class The name of the class that we are checking for.
