@@ -535,10 +535,29 @@ class BaseType
         if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
             return $value->toXml($name);
         } else {
-            return sprintf('<%s>%s</%s>', $name, self::encodeValueXml($value), htmlspecialchars($name));
+            return sprintf('<%s>%s</%s>', $name, self::encodeXMLEntities($value), $name);
         }
     }
 
+    /**
+     * Escapes the five "predefined entities" in XML.
+     * 
+     * @param string $string input string
+     * @return string escaped string
+     */
+    private static function encodeXMLEntities($string) {
+        return strtr(
+            $string, 
+            array(
+                "<" => "&lt;",
+                ">" => "&gt;",
+                "\"" => "&quot;",
+                "\'" => "&apos;",
+                "&" => "&amp;",
+            )
+        );
+    }
+    
     /**
      * Helper function to convert a value into XML escaping special characters.
      *
