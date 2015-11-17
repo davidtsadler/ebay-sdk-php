@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property integer $ExtensionInDays
- * @property string[] $ExternalPictureURL
- * @property \DTS\eBaySDK\MerchantData\Types\Base64BinaryType $PictureData
  * @property string $PictureName
- * @property \DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType $PictureSet
  * @property integer $PictureSystemVersion
+ * @property \DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType $PictureSet
+ * @property \DTS\eBaySDK\MerchantData\Types\Base64BinaryType $PictureData
  * @property \DTS\eBaySDK\MerchantData\Enums\PictureUploadPolicyCodeType $PictureUploadPolicy
+ * @property string[] $ExternalPictureURL
  * @property \DTS\eBaySDK\MerchantData\Enums\PictureWatermarkCodeType[] $PictureWatermark
+ * @property integer $ExtensionInDays
  */
 class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequestType
 {
@@ -38,35 +38,11 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\MerchantData\Type
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ExtensionInDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExtensionInDays'
-        ),
-        'ExternalPictureURL' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
-        ),
-        'PictureData' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\Base64BinaryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PictureData'
-        ),
         'PictureName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureName'
-        ),
-        'PictureSet' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PictureSet'
         ),
         'PictureSystemVersion' => array(
             'type' => 'integer',
@@ -74,17 +50,41 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\MerchantData\Type
             'attribute' => false,
             'elementName' => 'PictureSystemVersion'
         ),
+        'PictureSet' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PictureSet'
+        ),
+        'PictureData' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\Base64BinaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PictureData'
+        ),
         'PictureUploadPolicy' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureUploadPolicy'
         ),
+        'ExternalPictureURL' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
+        ),
         'PictureWatermark' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureWatermark'
+        ),
+        'ExtensionInDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ExtensionInDays'
         )
     );
 

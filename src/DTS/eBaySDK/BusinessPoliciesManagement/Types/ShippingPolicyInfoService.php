@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $buyerResponsibleForPickup
- * @property boolean $buyerResponsibleForShipping
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $codFee
- * @property boolean $fastShipping
- * @property boolean $freeShipping
  * @property string[] $shipToLocation
  * @property string $shippingService
+ * @property integer $sortOrderId
+ * @property boolean $freeShipping
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $codFee
+ * @property boolean $fastShipping
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingServiceAdditionalCost
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingServiceCost
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingSurcharge
- * @property integer $sortOrderId
+ * @property boolean $buyerResponsibleForShipping
+ * @property boolean $buyerResponsibleForPickup
  */
 class ShippingPolicyInfoService extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,17 +41,29 @@ class ShippingPolicyInfoService extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'buyerResponsibleForPickup' => array(
-            'type' => 'boolean',
-            'unbound' => false,
+        'shipToLocation' => array(
+            'type' => 'string',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'buyerResponsibleForPickup'
+            'elementName' => 'shipToLocation'
         ),
-        'buyerResponsibleForShipping' => array(
+        'shippingService' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingService'
+        ),
+        'sortOrderId' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'sortOrderId'
+        ),
+        'freeShipping' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'buyerResponsibleForShipping'
+            'elementName' => 'freeShipping'
         ),
         'codFee' => array(
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
@@ -64,24 +76,6 @@ class ShippingPolicyInfoService extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fastShipping'
-        ),
-        'freeShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'freeShipping'
-        ),
-        'shipToLocation' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'shipToLocation'
-        ),
-        'shippingService' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingService'
         ),
         'shippingServiceAdditionalCost' => array(
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
@@ -101,11 +95,17 @@ class ShippingPolicyInfoService extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingSurcharge'
         ),
-        'sortOrderId' => array(
-            'type' => 'integer',
+        'buyerResponsibleForShipping' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'sortOrderId'
+            'elementName' => 'buyerResponsibleForShipping'
+        ),
+        'buyerResponsibleForPickup' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'buyerResponsibleForPickup'
         )
     );
 

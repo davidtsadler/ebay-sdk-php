@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $Hours1AnyTime
+ * @property string $TimeZoneID
  * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours1Days
+ * @property boolean $Hours1AnyTime
  * @property string $Hours1From
  * @property string $Hours1To
- * @property boolean $Hours2AnyTime
  * @property \DTS\eBaySDK\Trading\Enums\DaysCodeType $Hours2Days
+ * @property boolean $Hours2AnyTime
  * @property string $Hours2From
  * @property string $Hours2To
- * @property string $TimeZoneID
  */
 class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,23 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Hours1AnyTime' => array(
-            'type' => 'boolean',
+        'TimeZoneID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Hours1AnyTime'
+            'elementName' => 'TimeZoneID'
         ),
         'Hours1Days' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours1Days'
+        ),
+        'Hours1AnyTime' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Hours1AnyTime'
         ),
         'Hours1From' => array(
             'type' => 'string',
@@ -63,17 +69,17 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Hours1To'
         ),
-        'Hours2AnyTime' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Hours2AnyTime'
-        ),
         'Hours2Days' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2Days'
+        ),
+        'Hours2AnyTime' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Hours2AnyTime'
         ),
         'Hours2From' => array(
             'type' => 'string',
@@ -86,12 +92,6 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2To'
-        ),
-        'TimeZoneID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TimeZoneID'
         )
     );
 

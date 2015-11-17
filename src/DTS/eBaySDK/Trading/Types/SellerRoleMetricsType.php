@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $CrossBorderTransactionCount
- * @property double $CrossBorderTransactionPercent
- * @property double $FeedbackLeftPercent
+ * @property integer $PositiveFeedbackLeftCount
  * @property integer $NegativeFeedbackLeftCount
  * @property integer $NeutralFeedbackLeftCount
- * @property integer $PositiveFeedbackLeftCount
+ * @property double $FeedbackLeftPercent
  * @property integer $RepeatBuyerCount
  * @property double $RepeatBuyerPercent
- * @property double $TransactionPercent
  * @property integer $UniqueBuyerCount
+ * @property double $TransactionPercent
+ * @property integer $CrossBorderTransactionCount
+ * @property double $CrossBorderTransactionPercent
  */
 class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,23 +40,11 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CrossBorderTransactionCount' => array(
+        'PositiveFeedbackLeftCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CrossBorderTransactionCount'
-        ),
-        'CrossBorderTransactionPercent' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CrossBorderTransactionPercent'
-        ),
-        'FeedbackLeftPercent' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackLeftPercent'
+            'elementName' => 'PositiveFeedbackLeftCount'
         ),
         'NegativeFeedbackLeftCount' => array(
             'type' => 'integer',
@@ -70,11 +58,11 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
         ),
-        'PositiveFeedbackLeftCount' => array(
-            'type' => 'integer',
+        'FeedbackLeftPercent' => array(
+            'type' => 'double',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PositiveFeedbackLeftCount'
+            'elementName' => 'FeedbackLeftPercent'
         ),
         'RepeatBuyerCount' => array(
             'type' => 'integer',
@@ -88,17 +76,29 @@ class SellerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RepeatBuyerPercent'
         ),
+        'UniqueBuyerCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UniqueBuyerCount'
+        ),
         'TransactionPercent' => array(
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionPercent'
         ),
-        'UniqueBuyerCount' => array(
+        'CrossBorderTransactionCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UniqueBuyerCount'
+            'elementName' => 'CrossBorderTransactionCount'
+        ),
+        'CrossBorderTransactionPercent' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CrossBorderTransactionPercent'
         )
     );
 

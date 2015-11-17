@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property integer $Quantity
  * @property string $CountryOfOrigin
  * @property string $Description
  * @property string $ItemID
- * @property integer $Quantity
  * @property string $TransactionID
  */
 class LineItemType extends \DTS\eBaySDK\Types\BaseType
@@ -35,6 +35,12 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Quantity' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ),
         'CountryOfOrigin' => array(
             'type' => 'string',
             'unbound' => false,
@@ -52,12 +58,6 @@ class LineItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Quantity' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Quantity'
         ),
         'TransactionID' => array(
             'type' => 'string',

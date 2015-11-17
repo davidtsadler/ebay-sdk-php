@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\InventoryFeesType[] $Fees
  * @property \DTS\eBaySDK\Trading\Types\InventoryStatusType[] $InventoryStatus
+ * @property \DTS\eBaySDK\Trading\Types\InventoryFeesType[] $Fees
  */
 class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Fees' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\InventoryFeesType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Fees'
-        ),
         'InventoryStatus' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\InventoryStatusType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'InventoryStatus'
+        ),
+        'Fees' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\InventoryFeesType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Fees'
         )
     );
 

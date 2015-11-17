@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $CustomLabel
- * @property integer $FolderID
- * @property string $Note
- * @property integer $ProductID
  * @property string $ProductName
+ * @property integer $ProductID
+ * @property string $CustomLabel
  * @property integer $QuantityAvailable
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $UnitCost
+ * @property integer $FolderID
  * @property boolean $RestockAlert
  * @property integer $RestockThreshold
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $UnitCost
  * @property \DTS\eBaySDK\MerchantData\Types\SellingManagerVendorDetailsType $VendorInfo
+ * @property string $Note
  */
 class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,23 +40,11 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CustomLabel' => array(
+        'ProductName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CustomLabel'
-        ),
-        'FolderID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
-        ),
-        'Note' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Note'
+            'elementName' => 'ProductName'
         ),
         'ProductID' => array(
             'type' => 'integer',
@@ -64,17 +52,29 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ProductID'
         ),
-        'ProductName' => array(
+        'CustomLabel' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ProductName'
+            'elementName' => 'CustomLabel'
         ),
         'QuantityAvailable' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityAvailable'
+        ),
+        'UnitCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnitCost'
+        ),
+        'FolderID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FolderID'
         ),
         'RestockAlert' => array(
             'type' => 'boolean',
@@ -88,17 +88,17 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RestockThreshold'
         ),
-        'UnitCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UnitCost'
-        ),
         'VendorInfo' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerVendorDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VendorInfo'
+        ),
+        'Note' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Note'
         )
     );
 

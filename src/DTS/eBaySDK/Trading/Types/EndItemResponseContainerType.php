@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CorrelationID
  * @property \DateTime $EndTime
+ * @property string $CorrelationID
  * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
  */
 class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CorrelationID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
-        ),
         'EndTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
+        ),
+        'CorrelationID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CorrelationID'
         ),
         'Errors' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',

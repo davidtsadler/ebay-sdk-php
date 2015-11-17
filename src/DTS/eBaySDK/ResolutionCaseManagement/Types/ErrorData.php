@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorCategory $category
- * @property string $domain
  * @property integer $errorId
- * @property string $exceptionId
- * @property string $message
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ErrorParameter[] $parameter
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorSeverity $severity
+ * @property string $domain
  * @property string $subdomain
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorSeverity $severity
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorCategory $category
+ * @property string $message
+ * @property string $exceptionId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ErrorParameter[] $parameter
  */
 class ErrorData extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,11 +38,11 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'category' => array(
-            'type' => 'string',
+        'errorId' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'category'
+            'elementName' => 'errorId'
         ),
         'domain' => array(
             'type' => 'string',
@@ -50,29 +50,11 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'domain'
         ),
-        'errorId' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'errorId'
-        ),
-        'exceptionId' => array(
+        'subdomain' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'exceptionId'
-        ),
-        'message' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'message'
-        ),
-        'parameter' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ErrorParameter',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'parameter'
+            'elementName' => 'subdomain'
         ),
         'severity' => array(
             'type' => 'string',
@@ -80,11 +62,29 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'severity'
         ),
-        'subdomain' => array(
+        'category' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'subdomain'
+            'elementName' => 'category'
+        ),
+        'message' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'message'
+        ),
+        'exceptionId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'exceptionId'
+        ),
+        'parameter' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ErrorParameter',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'parameter'
         )
     );
 

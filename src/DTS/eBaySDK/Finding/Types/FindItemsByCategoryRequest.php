@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
  * @property string[] $categoryId
  * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
+ * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
  * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
  */
 class FindItemsByCategoryRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingServiceRequest
@@ -34,12 +34,6 @@ class FindItemsByCategoryRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingS
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'aspectFilter' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'aspectFilter'
-        ),
         'categoryId' => array(
             'type' => 'string',
             'unbound' => true,
@@ -51,6 +45,12 @@ class FindItemsByCategoryRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingS
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
+        ),
+        'aspectFilter' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'aspectFilter'
         ),
         'outputSelector' => array(
             'type' => 'string',

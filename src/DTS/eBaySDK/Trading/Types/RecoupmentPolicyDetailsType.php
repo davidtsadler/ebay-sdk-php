@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
  * @property boolean $EnforcedOnListingSite
  * @property boolean $EnforcedOnRegistrationSite
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -34,12 +34,6 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'EnforcedOnListingSite' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -51,6 +45,12 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EnforcedOnRegistrationSite'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

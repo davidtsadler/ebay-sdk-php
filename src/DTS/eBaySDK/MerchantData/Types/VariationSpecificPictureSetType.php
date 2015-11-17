@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
- * @property string[] $ExternalPictureURL
- * @property string[] $PictureURL
  * @property string $VariationSpecificValue
+ * @property string[] $PictureURL
+ * @property string[] $ExternalPictureURL
+ * @property \DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType $ExtendedPictureDetails
  */
 class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,17 +34,11 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ExtendedPictureDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
+        'VariationSpecificValue' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ExtendedPictureDetails'
-        ),
-        'ExternalPictureURL' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ExternalPictureURL'
+            'elementName' => 'VariationSpecificValue'
         ),
         'PictureURL' => array(
             'type' => 'string',
@@ -52,11 +46,17 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PictureURL'
         ),
-        'VariationSpecificValue' => array(
+        'ExternalPictureURL' => array(
             'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ExternalPictureURL'
+        ),
+        'ExtendedPictureDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'VariationSpecificValue'
+            'elementName' => 'ExtendedPictureDetails'
         )
     );
 

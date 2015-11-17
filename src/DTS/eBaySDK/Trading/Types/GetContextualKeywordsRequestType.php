@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $CategoryID
- * @property string $Encoding
  * @property string $URL
+ * @property string $Encoding
+ * @property string[] $CategoryID
  */
 class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,11 +33,11 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryID' => array(
+        'URL' => array(
             'type' => 'string',
-            'unbound' => true,
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'URL'
         ),
         'Encoding' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'attribute' => false,
             'elementName' => 'Encoding'
         ),
-        'URL' => array(
+        'CategoryID' => array(
             'type' => 'string',
-            'unbound' => false,
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'URL'
+            'elementName' => 'CategoryID'
         )
     );
 

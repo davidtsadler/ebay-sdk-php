@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $MediaName
  * @property string $MediaURL
+ * @property string $MediaName
  */
 class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'MediaName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MediaName'
-        ),
         'MediaURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MediaURL'
+        ),
+        'MediaName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MediaName'
         )
     );
 

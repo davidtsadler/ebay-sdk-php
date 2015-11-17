@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $EndTime
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
  */
 class VerifyAddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class VerifyAddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ),
         'StartTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
+        ),
+        'EndTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
         )
     );
 

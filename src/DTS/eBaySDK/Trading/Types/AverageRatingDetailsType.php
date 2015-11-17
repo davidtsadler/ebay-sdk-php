@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingDetailCodeType $RatingDetail
  * @property double $Rating
  * @property integer $RatingCount
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackRatingDetailCodeType $RatingDetail
  */
 class AverageRatingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class AverageRatingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'RatingDetail' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RatingDetail'
+        ),
         'Rating' => array(
             'type' => 'double',
             'unbound' => false,
@@ -44,12 +50,6 @@ class AverageRatingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RatingCount'
-        ),
-        'RatingDetail' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RatingDetail'
         )
     );
 

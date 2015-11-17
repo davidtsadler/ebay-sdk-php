@@ -25,9 +25,9 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\ApplicationDeliveryPreferencesType $ApplicationDeliveryPreferences
  * @property string $DeliveryURLName
- * @property \DTS\eBaySDK\Trading\Types\NotificationEventPropertyType[] $EventProperty
- * @property \DTS\eBaySDK\Trading\Types\NotificationUserDataType $UserData
  * @property \DTS\eBaySDK\Trading\Types\NotificationEnableArrayType $UserDeliveryPreferenceArray
+ * @property \DTS\eBaySDK\Trading\Types\NotificationUserDataType $UserData
+ * @property \DTS\eBaySDK\Trading\Types\NotificationEventPropertyType[] $EventProperty
  */
 class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -47,11 +47,11 @@ class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
         ),
-        'EventProperty' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
-            'unbound' => true,
+        'UserDeliveryPreferenceArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EventProperty'
+            'elementName' => 'UserDeliveryPreferenceArray'
         ),
         'UserData' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationUserDataType',
@@ -59,11 +59,11 @@ class GetNotificationPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'UserData'
         ),
-        'UserDeliveryPreferenceArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
-            'unbound' => false,
+        'EventProperty' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'UserDeliveryPreferenceArray'
+            'elementName' => 'EventProperty'
         )
     );
 

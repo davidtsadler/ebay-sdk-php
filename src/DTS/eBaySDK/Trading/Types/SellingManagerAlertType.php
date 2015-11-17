@@ -24,13 +24,13 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAlertTypeCodeType $AlertType
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType $AutomationAlert
- * @property integer $Count
- * @property integer $DurationInDays
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerGeneralPropertyTypeCodeType $GeneralAlert
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType $InventoryAlert
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaisaPayPropertyTypeCodeType $PaisaPayAlert
  * @property \DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsPropertyTypeCodeType $SoldAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType $InventoryAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType $AutomationAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerPaisaPayPropertyTypeCodeType $PaisaPayAlert
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerGeneralPropertyTypeCodeType $GeneralAlert
+ * @property integer $DurationInDays
+ * @property integer $Count
  */
 class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -44,29 +44,11 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlertType'
         ),
-        'AutomationAlert' => array(
+        'SoldAlert' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AutomationAlert'
-        ),
-        'Count' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Count'
-        ),
-        'DurationInDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DurationInDays'
-        ),
-        'GeneralAlert' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GeneralAlert'
+            'elementName' => 'SoldAlert'
         ),
         'InventoryAlert' => array(
             'type' => 'string',
@@ -74,17 +56,35 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'InventoryAlert'
         ),
+        'AutomationAlert' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AutomationAlert'
+        ),
         'PaisaPayAlert' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaisaPayAlert'
         ),
-        'SoldAlert' => array(
+        'GeneralAlert' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SoldAlert'
+            'elementName' => 'GeneralAlert'
+        ),
+        'DurationInDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DurationInDays'
+        ),
+        'Count' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Count'
         )
     );
 

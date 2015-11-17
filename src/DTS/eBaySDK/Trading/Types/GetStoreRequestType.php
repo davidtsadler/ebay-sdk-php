@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $CategoryStructureOnly
- * @property integer $LevelLimit
  * @property integer $RootCategoryID
+ * @property integer $LevelLimit
  * @property string $UserID
  */
 class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -40,17 +40,17 @@ class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'attribute' => false,
             'elementName' => 'CategoryStructureOnly'
         ),
-        'LevelLimit' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LevelLimit'
-        ),
         'RootCategoryID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RootCategoryID'
+        ),
+        'LevelLimit' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LevelLimit'
         ),
         'UserID' => array(
             'type' => 'string',

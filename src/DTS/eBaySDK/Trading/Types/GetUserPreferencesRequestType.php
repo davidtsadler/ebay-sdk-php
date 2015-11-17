@@ -25,24 +25,23 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $ShowBidderNoticePreferences
  * @property boolean $ShowCombinedPaymentPreferences
- * @property boolean $ShowDispatchCutoffTimePreferences
- * @property boolean $ShowEmailShipmentTrackingNumberPreference
+ * @property boolean $ShowSellerPaymentPreferences
  * @property boolean $ShowEndOfAuctionEmailPreferences
- * @property boolean $ShowGlobalShippingProgramListingPreference
- * @property boolean $ShowGlobalShippingProgramPreference
- * @property boolean $ShowOutOfStockControlPreference
- * @property boolean $ShowOverrideGSPServiceWithIntlServicePreference
- * @property boolean $ShowPickupDropoffPreferences
- * @property boolean $ShowProStoresPreferences
- * @property boolean $ShowPurchaseReminderEmailPreferences
+ * @property boolean $ShowSellerFavoriteItemPreferences
+ * @property boolean $ShowEmailShipmentTrackingNumberPreference
  * @property boolean $ShowRequiredShipPhoneNumberPreference
  * @property boolean $ShowSellerExcludeShipToLocationPreference
- * @property boolean $ShowSellerFavoriteItemPreferences
- * @property boolean $ShowSellerPaymentPreferences
+ * @property boolean $ShowUnpaidItemAssistancePreference
+ * @property boolean $ShowPurchaseReminderEmailPreferences
+ * @property boolean $ShowUnpaidItemAssistanceExclusionList
  * @property boolean $ShowSellerProfilePreferences
  * @property boolean $ShowSellerReturnPreferences
- * @property boolean $ShowUnpaidItemAssistanceExclusionList
- * @property boolean $ShowUnpaidItemAssistancePreference
+ * @property boolean $ShowGlobalShippingProgramPreference
+ * @property boolean $ShowDispatchCutoffTimePreferences
+ * @property boolean $ShowGlobalShippingProgramListingPreference
+ * @property boolean $ShowOverrideGSPServiceWithIntlServicePreference
+ * @property boolean $ShowPickupDropoffPreferences
+ * @property boolean $ShowOutOfStockControlPreference
  * @property boolean $ShoweBayPLUSPreference
  */
 class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -63,17 +62,11 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ShowCombinedPaymentPreferences'
         ),
-        'ShowDispatchCutoffTimePreferences' => array(
+        'ShowSellerPaymentPreferences' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowDispatchCutoffTimePreferences'
-        ),
-        'ShowEmailShipmentTrackingNumberPreference' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowEmailShipmentTrackingNumberPreference'
+            'elementName' => 'ShowSellerPaymentPreferences'
         ),
         'ShowEndOfAuctionEmailPreferences' => array(
             'type' => 'boolean',
@@ -81,47 +74,17 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ShowEndOfAuctionEmailPreferences'
         ),
-        'ShowGlobalShippingProgramListingPreference' => array(
+        'ShowSellerFavoriteItemPreferences' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowGlobalShippingProgramListingPreference'
+            'elementName' => 'ShowSellerFavoriteItemPreferences'
         ),
-        'ShowGlobalShippingProgramPreference' => array(
+        'ShowEmailShipmentTrackingNumberPreference' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowGlobalShippingProgramPreference'
-        ),
-        'ShowOutOfStockControlPreference' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowOutOfStockControlPreference'
-        ),
-        'ShowOverrideGSPServiceWithIntlServicePreference' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowOverrideGSPServiceWithIntlServicePreference'
-        ),
-        'ShowPickupDropoffPreferences' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowPickupDropoffPreferences'
-        ),
-        'ShowProStoresPreferences' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowProStoresPreferences'
-        ),
-        'ShowPurchaseReminderEmailPreferences' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShowPurchaseReminderEmailPreferences'
+            'elementName' => 'ShowEmailShipmentTrackingNumberPreference'
         ),
         'ShowRequiredShipPhoneNumberPreference' => array(
             'type' => 'boolean',
@@ -135,17 +98,23 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ShowSellerExcludeShipToLocationPreference'
         ),
-        'ShowSellerFavoriteItemPreferences' => array(
+        'ShowUnpaidItemAssistancePreference' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowSellerFavoriteItemPreferences'
+            'elementName' => 'ShowUnpaidItemAssistancePreference'
         ),
-        'ShowSellerPaymentPreferences' => array(
+        'ShowPurchaseReminderEmailPreferences' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowSellerPaymentPreferences'
+            'elementName' => 'ShowPurchaseReminderEmailPreferences'
+        ),
+        'ShowUnpaidItemAssistanceExclusionList' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShowUnpaidItemAssistanceExclusionList'
         ),
         'ShowSellerProfilePreferences' => array(
             'type' => 'boolean',
@@ -159,17 +128,41 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ShowSellerReturnPreferences'
         ),
-        'ShowUnpaidItemAssistanceExclusionList' => array(
+        'ShowGlobalShippingProgramPreference' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowUnpaidItemAssistanceExclusionList'
+            'elementName' => 'ShowGlobalShippingProgramPreference'
         ),
-        'ShowUnpaidItemAssistancePreference' => array(
+        'ShowDispatchCutoffTimePreferences' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShowUnpaidItemAssistancePreference'
+            'elementName' => 'ShowDispatchCutoffTimePreferences'
+        ),
+        'ShowGlobalShippingProgramListingPreference' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShowGlobalShippingProgramListingPreference'
+        ),
+        'ShowOverrideGSPServiceWithIntlServicePreference' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShowOverrideGSPServiceWithIntlServicePreference'
+        ),
+        'ShowPickupDropoffPreferences' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShowPickupDropoffPreferences'
+        ),
+        'ShowOutOfStockControlPreference' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShowOutOfStockControlPreference'
         ),
         'ShoweBayPLUSPreference' => array(
             'type' => 'boolean',

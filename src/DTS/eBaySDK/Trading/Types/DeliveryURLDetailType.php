@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DeliveryURL
  * @property string $DeliveryURLName
+ * @property string $DeliveryURL
  * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $Status
  */
 class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class DeliveryURLDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeliveryURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryURL'
-        ),
         'DeliveryURLName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
+        ),
+        'DeliveryURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryURL'
         ),
         'Status' => array(
             'type' => 'string',

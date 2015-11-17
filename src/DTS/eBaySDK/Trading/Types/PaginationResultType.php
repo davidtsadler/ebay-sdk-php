@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $TotalNumberOfEntries
  * @property integer $TotalNumberOfPages
+ * @property integer $TotalNumberOfEntries
  */
 class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'TotalNumberOfEntries' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalNumberOfEntries'
-        ),
         'TotalNumberOfPages' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalNumberOfPages'
+        ),
+        'TotalNumberOfEntries' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalNumberOfEntries'
         )
     );
 

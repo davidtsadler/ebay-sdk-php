@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property string $storeName
  * @property string $storeURL
+ * @property string $storeName
  */
 class StorefrontType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'storeName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'storeName'
-        ),
         'storeURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'storeURL'
+        ),
+        'storeName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'storeName'
         )
     );
 

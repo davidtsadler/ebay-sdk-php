@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 /**
  *
  * @property string $UUID
- * @property \DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence $dailyRecurrence
  * @property \DTS\eBaySDK\BulkDataExchange\Types\DownloadJobRecurringFilter $downloadJobRecurringFilter
- * @property string $downloadJobType
  * @property integer $frequencyInMinutes
+ * @property string $downloadJobType
  * @property \DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence $monthlyRecurrence
  * @property \DTS\eBaySDK\BulkDataExchange\Types\WeeklyRecurrence $weeklyRecurrence
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence $dailyRecurrence
  */
 class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
 {
@@ -43,29 +43,23 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
             'attribute' => false,
             'elementName' => 'UUID'
         ),
-        'dailyRecurrence' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'dailyRecurrence'
-        ),
         'downloadJobRecurringFilter' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DownloadJobRecurringFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'downloadJobRecurringFilter'
         ),
-        'downloadJobType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'downloadJobType'
-        ),
         'frequencyInMinutes' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'frequencyInMinutes'
+        ),
+        'downloadJobType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'downloadJobType'
         ),
         'monthlyRecurrence' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence',
@@ -78,6 +72,12 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'weeklyRecurrence'
+        ),
+        'dailyRecurrence' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'dailyRecurrence'
         )
     );
 

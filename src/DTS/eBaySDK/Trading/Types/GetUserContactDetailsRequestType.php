@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ContactID
  * @property string $ItemID
+ * @property string $ContactID
  * @property string $RequesterID
  */
 class GetUserContactDetailsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -33,17 +33,17 @@ class GetUserContactDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ContactID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ContactID'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'ContactID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ContactID'
         ),
         'RequesterID' => array(
             'type' => 'string',

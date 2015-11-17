@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\AspectHistogramContainer $aspectHistogramContainer
  * @property \DTS\eBaySDK\Finding\Types\CategoryHistogramContainer $categoryHistogramContainer
+ * @property \DTS\eBaySDK\Finding\Types\AspectHistogramContainer $aspectHistogramContainer
  * @property \DTS\eBaySDK\Finding\Types\ConditionHistogramContainer $conditionHistogramContainer
  */
 class GetHistogramsResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceResponse
@@ -33,17 +33,17 @@ class GetHistogramsResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceRespon
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'aspectHistogramContainer' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\AspectHistogramContainer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'aspectHistogramContainer'
-        ),
         'categoryHistogramContainer' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'categoryHistogramContainer'
+        ),
+        'aspectHistogramContainer' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\AspectHistogramContainer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'aspectHistogramContainer'
         ),
         'conditionHistogramContainer' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\ConditionHistogramContainer',

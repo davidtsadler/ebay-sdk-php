@@ -23,27 +23,27 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property string $ItemID
+ * @property string $TransactionID
+ * @property string $OrderID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
- * @property string $BuyerID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
  * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CheckoutStatus
+ * @property string $ShippingService
+ * @property boolean $ShippingIncludedInTax
+ * @property \DTS\eBaySDK\Trading\Enums\InsuranceSelectedCodeType $InsuranceType
+ * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
+ * @property string $BuyerID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
  * @property string $EncryptedID
  * @property \DTS\eBaySDK\Trading\Types\ExternalTransactionType $ExternalTransaction
- * @property \DTS\eBaySDK\Trading\Enums\InsuranceSelectedCodeType $InsuranceType
- * @property string $ItemID
  * @property string $MultipleSellerPaymentID
- * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
  * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethodUsed
- * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
- * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
- * @property boolean $ShippingIncludedInTax
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
- * @property string $ShippingService
- * @property string $TransactionID
  */
 class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -51,11 +51,23 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'ItemID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AdjustmentAmount'
+            'elementName' => 'ItemID'
+        ),
+        'TransactionID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
+        ),
+        'OrderID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderID'
         ),
         'AmountPaid' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -63,23 +75,77 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'AmountPaid'
         ),
-        'BuyerID' => array(
+        'PaymentMethodUsed' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BuyerID'
-        ),
-        'CODCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CODCost'
+            'elementName' => 'PaymentMethodUsed'
         ),
         'CheckoutStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
+        ),
+        'ShippingService' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingService'
+        ),
+        'ShippingIncludedInTax' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingIncludedInTax'
+        ),
+        'InsuranceType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InsuranceType'
+        ),
+        'PaymentStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentStatus'
+        ),
+        'AdjustmentAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AdjustmentAmount'
+        ),
+        'ShippingAddress' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingAddress'
+        ),
+        'BuyerID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerID'
+        ),
+        'ShippingInsuranceCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingInsuranceCost'
+        ),
+        'SalesTax' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SalesTax'
+        ),
+        'ShippingCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCost'
         ),
         'EncryptedID' => array(
             'type' => 'string',
@@ -93,89 +159,23 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'ExternalTransaction'
         ),
-        'InsuranceType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceType'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
         'MultipleSellerPaymentID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MultipleSellerPaymentID'
         ),
-        'OrderID' => array(
-            'type' => 'string',
+        'CODCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderID'
+            'elementName' => 'CODCost'
         ),
         'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'PaymentMethodUsed' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentMethodUsed'
-        ),
-        'PaymentStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentStatus'
-        ),
-        'SalesTax' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SalesTax'
-        ),
-        'ShippingAddress' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingAddress'
-        ),
-        'ShippingCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCost'
-        ),
-        'ShippingIncludedInTax' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingIncludedInTax'
-        ),
-        'ShippingInsuranceCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsuranceCost'
-        ),
-        'ShippingService' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingService'
-        ),
-        'TransactionID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         )
     );
 

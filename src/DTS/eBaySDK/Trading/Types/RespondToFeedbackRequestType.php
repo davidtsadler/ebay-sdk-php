@@ -25,11 +25,11 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $FeedbackID
  * @property string $ItemID
- * @property string $OrderLineItemID
- * @property string $ResponseText
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackResponseCodeType $ResponseType
- * @property string $TargetUserID
  * @property string $TransactionID
+ * @property string $TargetUserID
+ * @property \DTS\eBaySDK\Trading\Enums\FeedbackResponseCodeType $ResponseType
+ * @property string $ResponseText
+ * @property string $OrderLineItemID
  */
 class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -49,23 +49,11 @@ class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
+        'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'ResponseText' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseText'
-        ),
-        'ResponseType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseType'
+            'elementName' => 'TransactionID'
         ),
         'TargetUserID' => array(
             'type' => 'string',
@@ -73,11 +61,23 @@ class RespondToFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'TargetUserID'
         ),
-        'TransactionID' => array(
+        'ResponseType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'ResponseType'
+        ),
+        'ResponseText' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ResponseText'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

@@ -24,22 +24,22 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\BidActionCodeType $Action
- * @property string $BestOfferID
- * @property integer $BidCount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedPrice
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
- * @property \DTS\eBaySDK\Trading\Types\AmountType $HighestBid
  * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MaxBid
- * @property string $Message
- * @property \DTS\eBaySDK\Trading\Types\AmountType $MyMaxBid
  * @property integer $Quantity
  * @property boolean $SecondChanceEnabled
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $SiteCurrency
  * @property \DateTime $TimeBid
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $HighestBid
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedPrice
  * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\UserType $User
  * @property boolean $UserConsent
+ * @property integer $BidCount
+ * @property string $Message
+ * @property string $BestOfferID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $MyMaxBid
  */
 class OfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -53,35 +53,11 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Action'
         ),
-        'BestOfferID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferID'
-        ),
-        'BidCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidCount'
-        ),
-        'ConvertedPrice' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedPrice'
-        ),
         'Currency' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ),
-        'HighestBid' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HighestBid'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -94,18 +70,6 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxBid'
-        ),
-        'Message' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Message'
-        ),
-        'MyMaxBid' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MyMaxBid'
         ),
         'Quantity' => array(
             'type' => 'integer',
@@ -131,6 +95,18 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TimeBid'
         ),
+        'HighestBid' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HighestBid'
+        ),
+        'ConvertedPrice' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ConvertedPrice'
+        ),
         'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -148,6 +124,30 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserConsent'
+        ),
+        'BidCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BidCount'
+        ),
+        'Message' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Message'
+        ),
+        'BestOfferID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferID'
+        ),
+        'MyMaxBid' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MyMaxBid'
         )
     );
 

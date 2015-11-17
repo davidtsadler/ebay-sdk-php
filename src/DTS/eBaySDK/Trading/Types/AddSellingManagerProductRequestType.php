@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $FolderID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property integer $FolderID
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
  */
 class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -33,17 +33,17 @@ class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\Abs
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FolderID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
-        ),
         'SellingManagerProductDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
+        ),
+        'FolderID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FolderID'
         ),
         'SellingManagerProductSpecifics' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',

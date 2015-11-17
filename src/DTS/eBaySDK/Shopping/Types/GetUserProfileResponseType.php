@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\FeedbackDetailType[] $FeedbackDetails
- * @property \DTS\eBaySDK\Shopping\Types\FeedbackHistoryType $FeedbackHistory
  * @property \DTS\eBaySDK\Shopping\Types\SimpleUserType $User
+ * @property \DTS\eBaySDK\Shopping\Types\FeedbackHistoryType $FeedbackHistory
+ * @property \DTS\eBaySDK\Shopping\Types\FeedbackDetailType[] $FeedbackDetails
  */
 class GetUserProfileResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -33,11 +33,11 @@ class GetUserProfileResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeedbackDetails' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackDetailType',
-            'unbound' => true,
+        'User' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackDetails'
+            'elementName' => 'User'
         ),
         'FeedbackHistory' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackHistoryType',
@@ -45,11 +45,11 @@ class GetUserProfileResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'FeedbackHistory'
         ),
-        'User' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
-            'unbound' => false,
+        'FeedbackDetails' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackDetailType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'User'
+            'elementName' => 'FeedbackDetails'
         )
     );
 

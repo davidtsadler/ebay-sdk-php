@@ -24,13 +24,13 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $Include
+ * @property boolean $IncludeItemCount
  * @property boolean $IncludeFavoriteSearcheCount
  * @property boolean $IncludeFavoriteSellerCount
- * @property boolean $IncludeItemCount
- * @property boolean $IncludeListContents
- * @property integer $MaxResults
  * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $Sort
+ * @property integer $MaxResults
  * @property string $UserDefinedListName
+ * @property boolean $IncludeListContents
  */
 class MyeBaySelectionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -44,6 +44,12 @@ class MyeBaySelectionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Include'
         ),
+        'IncludeItemCount' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeItemCount'
+        ),
         'IncludeFavoriteSearcheCount' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -56,17 +62,11 @@ class MyeBaySelectionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'IncludeFavoriteSellerCount'
         ),
-        'IncludeItemCount' => array(
-            'type' => 'boolean',
+        'Sort' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'IncludeItemCount'
-        ),
-        'IncludeListContents' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeListContents'
+            'elementName' => 'Sort'
         ),
         'MaxResults' => array(
             'type' => 'integer',
@@ -74,17 +74,17 @@ class MyeBaySelectionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MaxResults'
         ),
-        'Sort' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Sort'
-        ),
         'UserDefinedListName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserDefinedListName'
+        ),
+        'IncludeListContents' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeListContents'
         )
     );
 

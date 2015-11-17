@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $Action
- * @property boolean $AllAuctionItems
- * @property boolean $AllFixedPriceItems
- * @property boolean $AllStoreInventoryItems
- * @property integer $CategoryID
  * @property integer $PromotionalSaleID
+ * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $Action
  * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
  * @property integer $StoreCategoryID
+ * @property integer $CategoryID
+ * @property boolean $AllFixedPriceItems
+ * @property boolean $AllStoreInventoryItems
+ * @property boolean $AllAuctionItems
  */
 class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,17 +38,35 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PromotionalSaleID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleID'
+        ),
         'Action' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Action'
         ),
-        'AllAuctionItems' => array(
-            'type' => 'boolean',
+        'PromotionalSaleItemIDArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AllAuctionItems'
+            'elementName' => 'PromotionalSaleItemIDArray'
+        ),
+        'StoreCategoryID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreCategoryID'
+        ),
+        'CategoryID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryID'
         ),
         'AllFixedPriceItems' => array(
             'type' => 'boolean',
@@ -62,29 +80,11 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
             'attribute' => false,
             'elementName' => 'AllStoreInventoryItems'
         ),
-        'CategoryID' => array(
-            'type' => 'integer',
+        'AllAuctionItems' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'PromotionalSaleID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleID'
-        ),
-        'PromotionalSaleItemIDArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleItemIDArray'
-        ),
-        'StoreCategoryID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreCategoryID'
+            'elementName' => 'AllAuctionItems'
         )
     );
 

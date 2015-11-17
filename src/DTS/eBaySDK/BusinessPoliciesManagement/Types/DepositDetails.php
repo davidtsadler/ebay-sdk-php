@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 /**
  *
  * @property integer $daysToFullPayment
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $depositAmount
  * @property integer $hoursToDeposit
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $depositAmount
  */
 class DepositDetails extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class DepositDetails extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'daysToFullPayment'
         ),
-        'depositAmount' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'depositAmount'
-        ),
         'hoursToDeposit' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'hoursToDeposit'
+        ),
+        'depositAmount' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'depositAmount'
         )
     );
 

@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property string $contentType
  * @property \DTS\eBaySDK\HalfFinding\Types\PositiveInteger $id
- * @property string $value
  * @property string $version
+ * @property string $contentType
+ * @property string $value
  */
 class ExtensionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,29 +34,29 @@ class ExtensionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'contentType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'contentType'
-        ),
         'id' => array(
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PositiveInteger',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'id'
         ),
-        'value' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'value'
-        ),
         'version' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
+        ),
+        'contentType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'contentType'
+        ),
+        'value' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'value'
         )
     );
 

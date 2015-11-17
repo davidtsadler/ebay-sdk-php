@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DisputeID
  * @property string $ItemID
- * @property string $OrderLineItemID
  * @property string $TransactionID
+ * @property string $DisputeID
+ * @property string $OrderLineItemID
  */
 class DisableUnpaidItemAssistanceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,29 +34,29 @@ class DisableUnpaidItemAssistanceRequestType extends \DTS\eBaySDK\Trading\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DisputeID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisputeID'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
         'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
+        ),
+        'DisputeID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisputeID'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $Fee
  * @property \DTS\eBaySDK\Trading\Enums\StoreSubscriptionLevelCodeType $Level
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $Fee
  */
 class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Fee' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Fee'
-        ),
         'Level' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Level'
+        ),
+        'Fee' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Fee'
         )
     );
 

@@ -23,32 +23,32 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $DeliveryDate
- * @property \DTS\eBaySDK\Trading\Enums\ShipmentDeliveryStatusCodeType $DeliveryStatus
  * @property \DateTime $EstimatedDeliveryDate
  * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuredValue
- * @property \DTS\eBaySDK\Trading\Types\ItemTransactionIDType[] $ItemTransactionID
- * @property string $Notes
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $PackageDepth
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $PackageLength
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $PackageWidth
  * @property string $PayPalShipmentID
+ * @property integer $ShipmentID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $PostageTotal
  * @property \DateTime $PrintedTime
- * @property \DateTime $RefundGrantedTime
- * @property \DateTime $RefundRequestedTime
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ShipFromAddress
- * @property integer $ShipmentID
- * @property \DTS\eBaySDK\Trading\Types\ShipmentLineItemType $ShipmentLineItem
- * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
- * @property \DateTime $ShippedTime
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property \DTS\eBaySDK\Trading\Enums\ShippingFeatureCodeType[] $ShippingFeature
  * @property \DTS\eBaySDK\Trading\Enums\ShippingPackageCodeType $ShippingPackage
  * @property string $ShippingServiceUsed
- * @property \DTS\eBaySDK\Trading\Enums\ShipmentStatusCodeType $Status
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $WeightMajor
  * @property \DTS\eBaySDK\Trading\Types\MeasureType $WeightMinor
+ * @property \DTS\eBaySDK\Trading\Types\ItemTransactionIDType[] $ItemTransactionID
+ * @property \DateTime $DeliveryDate
+ * @property \DTS\eBaySDK\Trading\Enums\ShipmentDeliveryStatusCodeType $DeliveryStatus
+ * @property \DateTime $RefundGrantedTime
+ * @property \DateTime $RefundRequestedTime
+ * @property \DTS\eBaySDK\Trading\Enums\ShipmentStatusCodeType $Status
+ * @property \DateTime $ShippedTime
+ * @property string $Notes
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType[] $ShipmentTrackingDetails
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentLineItemType $ShipmentLineItem
  */
 class ShipmentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -56,18 +56,6 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeliveryDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryDate'
-        ),
-        'DeliveryStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryStatus'
-        ),
         'EstimatedDeliveryDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -79,18 +67,6 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuredValue'
-        ),
-        'ItemTransactionID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ItemTransactionID'
-        ),
-        'Notes' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Notes'
         ),
         'PackageDepth' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
@@ -116,6 +92,12 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PayPalShipmentID'
         ),
+        'ShipmentID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShipmentID'
+        ),
         'PostageTotal' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -128,47 +110,11 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PrintedTime'
         ),
-        'RefundGrantedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundGrantedTime'
-        ),
-        'RefundRequestedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundRequestedTime'
-        ),
         'ShipFromAddress' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipFromAddress'
-        ),
-        'ShipmentID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShipmentID'
-        ),
-        'ShipmentLineItem' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShipmentLineItem'
-        ),
-        'ShipmentTrackingDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ShipmentTrackingDetails'
-        ),
-        'ShippedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippedTime'
         ),
         'ShippingAddress' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
@@ -194,12 +140,6 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceUsed'
         ),
-        'Status' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
-        ),
         'WeightMajor' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
             'unbound' => false,
@@ -211,6 +151,66 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
+        ),
+        'ItemTransactionID' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ItemTransactionID'
+        ),
+        'DeliveryDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryDate'
+        ),
+        'DeliveryStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryStatus'
+        ),
+        'RefundGrantedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundGrantedTime'
+        ),
+        'RefundRequestedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundRequestedTime'
+        ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
+        'ShippedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippedTime'
+        ),
+        'Notes' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Notes'
+        ),
+        'ShipmentTrackingDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ShipmentTrackingDetails'
+        ),
+        'ShipmentLineItem' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShipmentLineItem'
         )
     );
 

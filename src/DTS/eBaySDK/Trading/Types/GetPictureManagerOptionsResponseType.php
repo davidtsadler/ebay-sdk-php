@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PictureManagerPictureDisplayType[] $PictureType
  * @property \DTS\eBaySDK\Trading\Types\PictureManagerSubscriptionType[] $Subscription
+ * @property \DTS\eBaySDK\Trading\Types\PictureManagerPictureDisplayType[] $PictureType
  */
 class GetPictureManagerOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetPictureManagerOptionsResponseType extends \DTS\eBaySDK\Trading\Types\Ab
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PictureType' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PictureManagerPictureDisplayType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PictureType'
-        ),
         'Subscription' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PictureManagerSubscriptionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Subscription'
+        ),
+        'PictureType' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PictureManagerPictureDisplayType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'PictureType'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Enums\MeasurementSystemCodeType $measurementSystem
  * @property string $unit
+ * @property \DTS\eBaySDK\MerchantData\Enums\MeasurementSystemCodeType $measurementSystem
  */
 class MeasureType extends \DTS\eBaySDK\Types\DecimalType
 {
@@ -32,17 +32,17 @@ class MeasureType extends \DTS\eBaySDK\Types\DecimalType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'measurementSystem' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'measurementSystem'
-        ),
         'unit' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'unit'
+        ),
+        'measurementSystem' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'measurementSystem'
         )
     );
 

@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType $DeliveryDetails
  * @property string $DeliveryMethod
  * @property \DTS\eBaySDK\MerchantData\Types\DeliveryStatusType $DeliveryStatus
+ * @property \DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType $DeliveryDetails
  */
 class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DeliveryDetails' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DeliveryDetails'
-        ),
         'DeliveryMethod' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
+        ),
+        'DeliveryDetails' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeliveryDetails'
         )
     );
 

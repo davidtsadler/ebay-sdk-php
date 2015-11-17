@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
  */
 class FindPopularItemsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -31,12 +30,6 @@ class FindPopularItemsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ItemArray' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemArray'
-        )
     );
 
     /**

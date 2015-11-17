@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShipToAddress
  * @property \DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType $ShippingServiceDetails
- * @property integer $ShippingTimeMax
+ * @property \DTS\eBaySDK\Trading\Types\AddressType $ShipToAddress
  * @property integer $ShippingTimeMin
+ * @property integer $ShippingTimeMax
  */
 class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,29 +34,29 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ShipToAddress' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShipToAddress'
-        ),
         'ShippingServiceDetails' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceDetails'
         ),
-        'ShippingTimeMax' => array(
-            'type' => 'integer',
+        'ShipToAddress' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingTimeMax'
+            'elementName' => 'ShipToAddress'
         ),
         'ShippingTimeMin' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
+        ),
+        'ShippingTimeMax' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingTimeMax'
         )
     );
 

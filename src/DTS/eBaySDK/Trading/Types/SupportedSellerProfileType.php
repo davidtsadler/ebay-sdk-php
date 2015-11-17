@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CategoryGroupType $CategoryGroup
  * @property integer $ProfileID
- * @property string $ProfileName
  * @property string $ProfileType
+ * @property string $ProfileName
  * @property string $ShortSummary
+ * @property \DTS\eBaySDK\Trading\Types\CategoryGroupType $CategoryGroup
  */
 class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,23 +35,11 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryGroup' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryGroup'
-        ),
         'ProfileID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProfileID'
-        ),
-        'ProfileName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProfileName'
         ),
         'ProfileType' => array(
             'type' => 'string',
@@ -59,11 +47,23 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ProfileType'
         ),
+        'ProfileName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProfileName'
+        ),
         'ShortSummary' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShortSummary'
+        ),
+        'CategoryGroup' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryGroup'
         )
     );
 

@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $EPID
- * @property boolean $Recommended
- * @property string $StockPhoto
  * @property string $Title
+ * @property string $EPID
+ * @property string $StockPhoto
+ * @property boolean $Recommended
  */
 class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,17 +34,17 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Title' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Title'
+        ),
         'EPID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EPID'
-        ),
-        'Recommended' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Recommended'
         ),
         'StockPhoto' => array(
             'type' => 'string',
@@ -52,11 +52,11 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StockPhoto'
         ),
-        'Title' => array(
-            'type' => 'string',
+        'Recommended' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Title'
+            'elementName' => 'Recommended'
         )
     );
 

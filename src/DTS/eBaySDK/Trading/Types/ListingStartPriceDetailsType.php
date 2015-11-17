@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $Description
- * @property string $DetailVersion
  * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property double $MinBuyItNowPricePercent
  * @property \DTS\eBaySDK\Trading\Types\AmountType $StartPrice
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
+ * @property double $MinBuyItNowPricePercent
  */
 class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,23 +42,11 @@ class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'ListingType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
-        ),
-        'MinBuyItNowPricePercent' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MinBuyItNowPricePercent'
         ),
         'StartPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -66,11 +54,23 @@ class ListingStartPriceDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartPrice'
         ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ),
         'UpdateTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
+        ),
+        'MinBuyItNowPricePercent' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MinBuyItNowPricePercent'
         )
     );
 

@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $Description
- * @property string $DetailVersion
  * @property string $Location
  * @property string $Region
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -41,12 +41,6 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Description'
         ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'Location' => array(
             'type' => 'string',
             'unbound' => false,
@@ -58,6 +52,12 @@ class ExcludeShippingLocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Region'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

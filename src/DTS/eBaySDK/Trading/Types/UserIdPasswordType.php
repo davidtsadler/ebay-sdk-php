@@ -24,10 +24,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $AppId
- * @property string $AuthCert
  * @property string $DevId
- * @property string $Password
+ * @property string $AuthCert
  * @property string $Username
+ * @property string $Password
  */
 class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,29 +41,29 @@ class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AppId'
         ),
-        'AuthCert' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AuthCert'
-        ),
         'DevId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DevId'
         ),
-        'Password' => array(
+        'AuthCert' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Password'
+            'elementName' => 'AuthCert'
         ),
         'Username' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Username'
+        ),
+        'Password' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Password'
         )
     );
 

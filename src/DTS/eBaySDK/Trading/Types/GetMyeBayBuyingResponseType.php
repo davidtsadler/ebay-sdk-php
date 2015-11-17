@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BestOfferList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BidList
  * @property \DTS\eBaySDK\Trading\Types\BuyingSummaryType $BuyingSummary
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromLostList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromWonList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $WatchList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BidList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BestOfferList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $WonList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $LostList
  * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType $FavoriteSearches
  * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType $FavoriteSellers
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $LostList
  * @property \DTS\eBaySDK\Trading\Types\ItemType[] $SecondChanceOffer
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromWonList
+ * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromLostList
  * @property \DTS\eBaySDK\Trading\Types\UserDefinedListType[] $UserDefinedList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $WatchList
- * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $WonList
  */
 class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -42,11 +42,17 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOfferList' => array(
+        'BuyingSummary' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BuyingSummaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyingSummary'
+        ),
+        'WatchList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferList'
+            'elementName' => 'WatchList'
         ),
         'BidList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
@@ -54,23 +60,23 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'BidList'
         ),
-        'BuyingSummary' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyingSummaryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingSummary'
-        ),
-        'DeletedFromLostList' => array(
+        'BestOfferList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DeletedFromLostList'
+            'elementName' => 'BestOfferList'
         ),
-        'DeletedFromWonList' => array(
+        'WonList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DeletedFromWonList'
+            'elementName' => 'WonList'
+        ),
+        'LostList' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LostList'
         ),
         'FavoriteSearches' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType',
@@ -84,35 +90,29 @@ class GetMyeBayBuyingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
         ),
-        'LostList' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LostList'
-        ),
         'SecondChanceOffer' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
         ),
+        'DeletedFromWonList' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeletedFromWonList'
+        ),
+        'DeletedFromLostList' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DeletedFromLostList'
+        ),
         'UserDefinedList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\UserDefinedListType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'UserDefinedList'
-        ),
-        'WatchList' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WatchList'
-        ),
-        'WonList' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'WonList'
         )
     );
 

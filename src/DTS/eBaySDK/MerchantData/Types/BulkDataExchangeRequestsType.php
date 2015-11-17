@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType $Header
  * @property \DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemRequestType[] $AddFixedPriceItemRequest
  * @property \DTS\eBaySDK\MerchantData\Types\AddItemRequestType[] $AddItemRequest
  * @property \DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemRequestType[] $EndFixedPriceItemRequest
  * @property \DTS\eBaySDK\MerchantData\Types\EndItemRequestType[] $EndItemRequest
- * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType $Header
  * @property \DTS\eBaySDK\MerchantData\Types\OrderAckRequestType[] $OrderAckRequest
  * @property \DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemRequestType[] $RelistFixedPriceItemRequest
  * @property \DTS\eBaySDK\MerchantData\Types\RelistItemRequestType[] $RelistItemRequest
@@ -45,6 +45,12 @@ class BulkDataExchangeRequestsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Header' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Header'
+        ),
         'AddFixedPriceItemRequest' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemRequestType',
             'unbound' => true,
@@ -68,12 +74,6 @@ class BulkDataExchangeRequestsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndItemRequest'
-        ),
-        'Header' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Header'
         ),
         'OrderAckRequest' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderAckRequestType',

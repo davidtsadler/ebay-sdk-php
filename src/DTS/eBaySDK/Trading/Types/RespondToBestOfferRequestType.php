@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\BestOfferActionCodeType $Action
+ * @property string $ItemID
  * @property string[] $BestOfferID
+ * @property \DTS\eBaySDK\Trading\Enums\BestOfferActionCodeType $Action
+ * @property string $SellerResponse
  * @property \DTS\eBaySDK\Trading\Types\AmountType $CounterOfferPrice
  * @property integer $CounterOfferQuantity
- * @property string $ItemID
- * @property string $SellerResponse
  */
 class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -36,17 +36,29 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Action' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Action'
+            'elementName' => 'ItemID'
         ),
         'BestOfferID' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'BestOfferID'
+        ),
+        'Action' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Action'
+        ),
+        'SellerResponse' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerResponse'
         ),
         'CounterOfferPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -59,18 +71,6 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CounterOfferQuantity'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'SellerResponse' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerResponse'
         )
     );
 

@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $ActiveAuctionCount
- * @property integer $AuctionBidCount
  * @property integer $AuctionSellingCount
- * @property integer $SoldDurationInDays
+ * @property integer $AuctionBidCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAuctionSellingValue
  * @property integer $TotalSoldCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalSoldValue
+ * @property integer $SoldDurationInDays
  */
 class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -43,23 +43,17 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ActiveAuctionCount'
         ),
-        'AuctionBidCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AuctionBidCount'
-        ),
         'AuctionSellingCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AuctionSellingCount'
         ),
-        'SoldDurationInDays' => array(
+        'AuctionBidCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SoldDurationInDays'
+            'elementName' => 'AuctionBidCount'
         ),
         'TotalAuctionSellingValue' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -78,6 +72,12 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldValue'
+        ),
+        'SoldDurationInDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SoldDurationInDays'
         )
     );
 

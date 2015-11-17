@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $EndCreationTime
- * @property boolean $IncludeMemberMessages
  * @property string $ItemID
- * @property \DateTime $StartCreationTime
  * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $Status
+ * @property boolean $IncludeMemberMessages
+ * @property \DateTime $StartCreationTime
+ * @property \DateTime $EndCreationTime
  */
 class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -35,11 +35,17 @@ class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndCreationTime' => array(
-            'type' => 'DateTime',
+        'ItemID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EndCreationTime'
+            'elementName' => 'ItemID'
+        ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
         ),
         'IncludeMemberMessages' => array(
             'type' => 'boolean',
@@ -47,23 +53,17 @@ class GetAdFormatLeadsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'attribute' => false,
             'elementName' => 'IncludeMemberMessages'
         ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
         'StartCreationTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartCreationTime'
         ),
-        'Status' => array(
-            'type' => 'string',
+        'EndCreationTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'EndCreationTime'
         )
     );
 

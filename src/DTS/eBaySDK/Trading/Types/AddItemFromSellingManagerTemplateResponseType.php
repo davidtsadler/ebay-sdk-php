@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property string $ItemID
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $CategoryID
+ * @property string $Category2ID
  */
 class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -36,17 +36,17 @@ class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'ItemID'
         ),
-        'CategoryID' => array(
-            'type' => 'string',
+        'StartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'StartTime'
         ),
         'EndTime' => array(
             'type' => 'DateTime',
@@ -60,17 +60,17 @@ class AddItemFromSellingManagerTemplateResponseType extends \DTS\eBaySDK\Trading
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'CategoryID'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'Category2ID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'Category2ID'
         )
     );
 

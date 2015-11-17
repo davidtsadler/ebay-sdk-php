@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\StoreColorSchemeType $ColorScheme
- * @property string $Name
  * @property integer $ThemeID
+ * @property string $Name
+ * @property \DTS\eBaySDK\Trading\Types\StoreColorSchemeType $ColorScheme
  */
 class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ColorScheme' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
+        'ThemeID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ColorScheme'
+            'elementName' => 'ThemeID'
         ),
         'Name' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Name'
         ),
-        'ThemeID' => array(
-            'type' => 'integer',
+        'ColorScheme' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ThemeID'
+            'elementName' => 'ColorScheme'
         )
     );
 

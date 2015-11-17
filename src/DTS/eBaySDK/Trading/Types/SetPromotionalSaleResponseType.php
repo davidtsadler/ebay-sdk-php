@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $PromotionalSaleID
  * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleStatusCodeType $Status
+ * @property integer $PromotionalSaleID
  */
 class SetPromotionalSaleResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class SetPromotionalSaleResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PromotionalSaleID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleID'
-        ),
         'Status' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
+        ),
+        'PromotionalSaleID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleID'
         )
     );
 

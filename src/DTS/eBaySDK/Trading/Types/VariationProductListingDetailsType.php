@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $EAN
  * @property string $ISBN
  * @property string $UPC
+ * @property string $EAN
  */
 class VariationProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class VariationProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EAN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ),
         'ISBN' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,6 +44,12 @@ class VariationProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPC'
+        ),
+        'EAN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
         )
     );
 

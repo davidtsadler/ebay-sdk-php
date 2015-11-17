@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $FileReferenceID
  * @property \DTS\eBaySDK\Trading\Types\RecommendationsType[] $Recommendations
  * @property string $TaskReferenceID
+ * @property string $FileReferenceID
  */
 class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -33,12 +33,6 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FileReferenceID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FileReferenceID'
-        ),
         'Recommendations' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
             'unbound' => true,
@@ -50,6 +44,12 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaskReferenceID'
+        ),
+        'FileReferenceID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FileReferenceID'
         )
     );
 

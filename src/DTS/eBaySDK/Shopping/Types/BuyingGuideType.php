@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $CategoryID
- * @property \DateTime $CreationTime
  * @property string $Name
- * @property string $Text
- * @property string $Title
  * @property string $URL
+ * @property string $CategoryID
+ * @property string $Title
+ * @property string $Text
+ * @property \DateTime $CreationTime
  * @property string $UserID
  */
 class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
@@ -37,29 +37,23 @@ class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'CreationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
         ),
-        'Text' => array(
+        'URL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Text'
+            'elementName' => 'URL'
+        ),
+        'CategoryID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryID'
         ),
         'Title' => array(
             'type' => 'string',
@@ -67,11 +61,17 @@ class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Title'
         ),
-        'URL' => array(
+        'Text' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'URL'
+            'elementName' => 'Text'
+        ),
+        'CreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationTime'
         ),
         'UserID' => array(
             'type' => 'string',

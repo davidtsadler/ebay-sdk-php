@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $FavoriteSearcheCount
- * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType $FavoriteSearches
- * @property integer $FavoriteSellerCount
- * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType $FavoriteSellers
- * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
- * @property integer $ItemCount
  * @property string $Name
+ * @property integer $ItemCount
+ * @property integer $FavoriteSearcheCount
+ * @property integer $FavoriteSellerCount
+ * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
+ * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType $FavoriteSearches
+ * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType $FavoriteSellers
  */
 class UserDefinedListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,35 +37,11 @@ class UserDefinedListType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FavoriteSearcheCount' => array(
-            'type' => 'integer',
+        'Name' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FavoriteSearcheCount'
-        ),
-        'FavoriteSearches' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FavoriteSearches'
-        ),
-        'FavoriteSellerCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FavoriteSellerCount'
-        ),
-        'FavoriteSellers' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FavoriteSellers'
-        ),
-        'ItemArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemArray'
+            'elementName' => 'Name'
         ),
         'ItemCount' => array(
             'type' => 'integer',
@@ -73,11 +49,35 @@ class UserDefinedListType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemCount'
         ),
-        'Name' => array(
-            'type' => 'string',
+        'FavoriteSearcheCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Name'
+            'elementName' => 'FavoriteSearcheCount'
+        ),
+        'FavoriteSellerCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FavoriteSellerCount'
+        ),
+        'ItemArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemArray'
+        ),
+        'FavoriteSearches' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FavoriteSearches'
+        ),
+        'FavoriteSellers' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FavoriteSellers'
         )
     );
 

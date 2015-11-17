@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DateTime $EstimatedDeliveryMaxTime
- * @property \DateTime $EstimatedDeliveryMinTime
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ImportCharge
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingInsuranceCost
+ * @property string $ShippingServiceName
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceAdditionalCost
  * @property \DTS\eBaySDK\Shopping\Types\AmountType $ShippingServiceCost
- * @property \DateTime $ShippingServiceCutOffTime
- * @property string $ShippingServiceName
  * @property integer $ShippingServicePriority
  * @property string[] $ShipsTo
+ * @property \DateTime $EstimatedDeliveryMinTime
+ * @property \DateTime $EstimatedDeliveryMaxTime
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ImportCharge
+ * @property \DateTime $ShippingServiceCutOffTime
  */
 class InternationalShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,29 +40,17 @@ class InternationalShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EstimatedDeliveryMaxTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryMaxTime'
-        ),
-        'EstimatedDeliveryMinTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EstimatedDeliveryMinTime'
-        ),
-        'ImportCharge' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ImportCharge'
-        ),
         'ShippingInsuranceCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
+        ),
+        'ShippingServiceName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceName'
         ),
         'ShippingServiceAdditionalCost' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
@@ -76,18 +64,6 @@ class InternationalShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
         ),
-        'ShippingServiceCutOffTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCutOffTime'
-        ),
-        'ShippingServiceName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceName'
-        ),
         'ShippingServicePriority' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -99,6 +75,30 @@ class InternationalShippingServiceOptionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShipsTo'
+        ),
+        'EstimatedDeliveryMinTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryMinTime'
+        ),
+        'EstimatedDeliveryMaxTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EstimatedDeliveryMaxTime'
+        ),
+        'ImportCharge' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ImportCharge'
+        ),
+        'ShippingServiceCutOffTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCutOffTime'
         )
     );
 

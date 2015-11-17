@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  * @property integer $SaleTemplateID
  * @property \DateTime $ScheduleTime
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
  */
 class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,12 +33,6 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Item' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ),
         'SaleTemplateID' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -50,6 +44,12 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ScheduleTime'
+        ),
+        'Item' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
         )
     );
 

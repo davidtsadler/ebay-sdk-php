@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
+ * @property integer $MaxVariationsPerItem
  * @property integer $MaxNamesPerVariationSpecificsSet
  * @property integer $MaxValuesPerVariationSpecificsSetName
- * @property integer $MaxVariationsPerItem
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class VariationDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -35,11 +35,11 @@ class VariationDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
+        'MaxVariationsPerItem' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'MaxVariationsPerItem'
         ),
         'MaxNamesPerVariationSpecificsSet' => array(
             'type' => 'integer',
@@ -53,11 +53,11 @@ class VariationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MaxValuesPerVariationSpecificsSetName'
         ),
-        'MaxVariationsPerItem' => array(
-            'type' => 'integer',
+        'DetailVersion' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'MaxVariationsPerItem'
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

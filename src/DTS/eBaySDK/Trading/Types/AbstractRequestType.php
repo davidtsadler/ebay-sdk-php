@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BotBlockRequestType $BotBlock
+ * @property \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType $RequesterCredentials
  * @property \DTS\eBaySDK\Trading\Enums\DetailLevelCodeType[] $DetailLevel
+ * @property string $ErrorLanguage
+ * @property string $MessageID
+ * @property string $Version
  * @property string $EndUserIP
  * @property \DTS\eBaySDK\Trading\Enums\ErrorHandlingCodeType $ErrorHandling
- * @property string $ErrorLanguage
  * @property string $InvocationID
- * @property string $MessageID
  * @property string[] $OutputSelector
- * @property \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType $RequesterCredentials
- * @property string $Version
  * @property \DTS\eBaySDK\Trading\Enums\WarningLevelCodeType $WarningLevel
+ * @property \DTS\eBaySDK\Trading\Types\BotBlockRequestType $BotBlock
  */
 class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,17 +41,35 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BotBlock' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockRequestType',
+        'RequesterCredentials' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BotBlock'
+            'elementName' => 'RequesterCredentials'
         ),
         'DetailLevel' => array(
             'type' => '\DTS\eBaySDK\Trading\Enums\DetailLevelCodeType[]',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DetailLevel'
+        ),
+        'ErrorLanguage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ErrorLanguage'
+        ),
+        'MessageID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MessageID'
+        ),
+        'Version' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Version'
         ),
         'EndUserIP' => array(
             'type' => 'string',
@@ -65,23 +83,11 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ErrorHandling'
         ),
-        'ErrorLanguage' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ErrorLanguage'
-        ),
         'InvocationID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvocationID'
-        ),
-        'MessageID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MessageID'
         ),
         'OutputSelector' => array(
             'type' => 'string',
@@ -89,23 +95,17 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OutputSelector'
         ),
-        'RequesterCredentials' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RequesterCredentials'
-        ),
-        'Version' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Version'
-        ),
         'WarningLevel' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarningLevel'
+        ),
+        'BotBlock' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BotBlockRequestType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BotBlock'
         )
     );
 

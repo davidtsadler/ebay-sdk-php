@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $FlaggedMessageCount
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType[] $FolderSummary
  * @property integer $NewAlertCount
- * @property integer $NewHighPriorityCount
  * @property integer $NewMessageCount
- * @property integer $TotalAlertCount
- * @property integer $TotalHighPriorityCount
- * @property integer $TotalMessageCount
  * @property integer $UnresolvedAlertCount
+ * @property integer $FlaggedMessageCount
+ * @property integer $TotalAlertCount
+ * @property integer $TotalMessageCount
+ * @property integer $NewHighPriorityCount
+ * @property integer $TotalHighPriorityCount
  */
 class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,12 +39,6 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FlaggedMessageCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FlaggedMessageCount'
-        ),
         'FolderSummary' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType',
             'unbound' => true,
@@ -57,17 +51,23 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NewAlertCount'
         ),
-        'NewHighPriorityCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewHighPriorityCount'
-        ),
         'NewMessageCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewMessageCount'
+        ),
+        'UnresolvedAlertCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UnresolvedAlertCount'
+        ),
+        'FlaggedMessageCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FlaggedMessageCount'
         ),
         'TotalAlertCount' => array(
             'type' => 'integer',
@@ -75,23 +75,23 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TotalAlertCount'
         ),
-        'TotalHighPriorityCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalHighPriorityCount'
-        ),
         'TotalMessageCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalMessageCount'
         ),
-        'UnresolvedAlertCount' => array(
+        'NewHighPriorityCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UnresolvedAlertCount'
+            'elementName' => 'NewHighPriorityCount'
+        ),
+        'TotalHighPriorityCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalHighPriorityCount'
         )
     );
 

@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\AccountEntrySortTypeCodeType $AccountEntrySortType
  * @property \DTS\eBaySDK\Trading\Enums\AccountHistorySelectionCodeType $AccountHistorySelection
+ * @property \DateTime $InvoiceDate
  * @property \DateTime $BeginDate
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property \DateTime $EndDate
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property boolean $ExcludeBalance
  * @property boolean $ExcludeSummary
  * @property boolean $IncludeConversionRate
- * @property \DateTime $InvoiceDate
+ * @property \DTS\eBaySDK\Trading\Enums\AccountEntrySortTypeCodeType $AccountEntrySortType
+ * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -41,17 +41,17 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AccountEntrySortType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AccountEntrySortType'
-        ),
         'AccountHistorySelection' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountHistorySelection'
+        ),
+        'InvoiceDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvoiceDate'
         ),
         'BeginDate' => array(
             'type' => 'DateTime',
@@ -59,17 +59,17 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'BeginDate'
         ),
-        'Currency' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Currency'
-        ),
         'EndDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndDate'
+        ),
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         ),
         'ExcludeBalance' => array(
             'type' => 'boolean',
@@ -89,23 +89,23 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
             'attribute' => false,
             'elementName' => 'IncludeConversionRate'
         ),
-        'InvoiceDate' => array(
-            'type' => 'DateTime',
+        'AccountEntrySortType' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'InvoiceDate'
+            'elementName' => 'AccountEntrySortType'
+        ),
+        'Currency' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Currency'
         ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
         )
     );
 

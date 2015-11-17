@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
+ * @property string $itemId
  * @property string[] $categoryId
  * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
- * @property string $itemId
+ * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
  * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
  */
 class FindItemsByImageRequest extends \DTS\eBaySDK\Finding\Types\BestMatchFindingServiceRequest
@@ -35,11 +35,11 @@ class FindItemsByImageRequest extends \DTS\eBaySDK\Finding\Types\BestMatchFindin
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'aspectFilter' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
-            'unbound' => true,
+        'itemId' => array(
+            'type' => 'string',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'aspectFilter'
+            'elementName' => 'itemId'
         ),
         'categoryId' => array(
             'type' => 'string',
@@ -53,11 +53,11 @@ class FindItemsByImageRequest extends \DTS\eBaySDK\Finding\Types\BestMatchFindin
             'attribute' => false,
             'elementName' => 'itemFilter'
         ),
-        'itemId' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'aspectFilter' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'itemId'
+            'elementName' => 'aspectFilter'
         ),
         'outputSelector' => array(
             'type' => 'string',

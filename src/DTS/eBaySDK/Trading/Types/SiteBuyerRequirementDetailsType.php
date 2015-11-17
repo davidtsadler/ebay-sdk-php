@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
  * @property boolean $LinkedPayPalAccount
  * @property \DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsDetailsType $MaximumBuyerPolicyViolations
  * @property \DTS\eBaySDK\Trading\Types\MaximumItemRequirementsDetailsType $MaximumItemRequirements
  * @property \DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoDetailsType $MaximumUnpaidItemStrikesInfo
  * @property \DTS\eBaySDK\Trading\Types\MinimumFeedbackScoreDetailsType $MinimumFeedbackScore
  * @property boolean $ShipToRegistrationCountry
- * @property \DateTime $UpdateTime
  * @property \DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType $VerifiedUserRequirements
+ * @property string $DetailVersion
+ * @property \DateTime $UpdateTime
  */
 class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,12 +39,6 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'LinkedPayPalAccount' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -81,17 +75,23 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShipToRegistrationCountry'
         ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateTime'
-        ),
         'VerifiedUserRequirements' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUserRequirements'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
+        ),
+        'UpdateTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UpdateTime'
         )
     );
 

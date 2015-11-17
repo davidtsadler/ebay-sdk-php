@@ -55,6 +55,7 @@ class BuyerPaymentMethodCodeType
     const C_PAYMENT_SEE_DESCRIPTION = 'PaymentSeeDescription';
     const C_PAY_ON_PICKUP = 'PayOnPickup';
     const C_PAY_PAL = 'PayPal';
+    const C_PAY_PAL_CREDIT = 'PayPalCredit';
     const C_PAY_UPON_INVOICE = 'PayUponInvoice';
     const C_PERSONAL_CHECK = 'PersonalCheck';
     const C_POSTAL_TRANSFER = 'PostalTransfer';

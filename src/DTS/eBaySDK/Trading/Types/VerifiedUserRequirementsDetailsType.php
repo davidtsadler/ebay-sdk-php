@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer[] $FeedbackScore
  * @property boolean $VerifiedUser
+ * @property integer[] $FeedbackScore
  */
 class VerifiedUserRequirementsDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class VerifiedUserRequirementsDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeedbackScore' => array(
-            'type' => 'integer',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'FeedbackScore'
-        ),
         'VerifiedUser' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUser'
+        ),
+        'FeedbackScore' => array(
+            'type' => 'integer',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'FeedbackScore'
         )
     );
 

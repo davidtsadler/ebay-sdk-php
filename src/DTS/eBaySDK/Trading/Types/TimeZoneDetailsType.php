@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $DaylightSavingsInEffect
- * @property string $DaylightSavingsLabel
- * @property string $DaylightSavingsOffset
- * @property string $DetailVersion
+ * @property string $TimeZoneID
  * @property string $StandardLabel
  * @property string $StandardOffset
- * @property string $TimeZoneID
+ * @property string $DaylightSavingsLabel
+ * @property string $DaylightSavingsOffset
+ * @property boolean $DaylightSavingsInEffect
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -38,29 +38,11 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DaylightSavingsInEffect' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DaylightSavingsInEffect'
-        ),
-        'DaylightSavingsLabel' => array(
+        'TimeZoneID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DaylightSavingsLabel'
-        ),
-        'DaylightSavingsOffset' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DaylightSavingsOffset'
-        ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'TimeZoneID'
         ),
         'StandardLabel' => array(
             'type' => 'string',
@@ -74,11 +56,29 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StandardOffset'
         ),
-        'TimeZoneID' => array(
+        'DaylightSavingsLabel' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TimeZoneID'
+            'elementName' => 'DaylightSavingsLabel'
+        ),
+        'DaylightSavingsOffset' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DaylightSavingsOffset'
+        ),
+        'DaylightSavingsInEffect' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DaylightSavingsInEffect'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

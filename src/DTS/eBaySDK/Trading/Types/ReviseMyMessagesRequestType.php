@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $Flagged
- * @property integer $FolderID
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
  * @property boolean $Read
+ * @property boolean $Flagged
+ * @property integer $FolderID
  */
 class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,18 +34,6 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Flagged' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Flagged'
-        ),
-        'FolderID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
-        ),
         'MessageIDs' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
             'unbound' => false,
@@ -57,6 +45,18 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Read'
+        ),
+        'Flagged' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Flagged'
+        ),
+        'FolderID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FolderID'
         )
     );
 

@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingServiceAdditionalCost
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingServiceCost
  * @property integer $ShippingServicePriority
  * @property \DTS\eBaySDK\MerchantData\Enums\ShippingServiceType $ShippingServiceType
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingServiceCost
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingServiceAdditionalCost
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingSurcharge
  */
 class ShippingServiceCostOverrideType extends \DTS\eBaySDK\Types\BaseType
@@ -35,18 +35,6 @@ class ShippingServiceCostOverrideType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ShippingServiceAdditionalCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingServiceCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCost'
-        ),
         'ShippingServicePriority' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -58,6 +46,18 @@ class ShippingServiceCostOverrideType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceType'
+        ),
+        'ShippingServiceCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceCost'
+        ),
+        'ShippingServiceAdditionalCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceAdditionalCost'
         ),
         'ShippingSurcharge' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',

@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType $Action
  * @property string $ItemID
+ * @property \DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType $Action
  * @property string $NoteText
- * @property string $OrderLineItemID
- * @property string $SKU
  * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
+ * @property string $SKU
+ * @property string $OrderLineItemID
  */
 class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -37,35 +37,23 @@ class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Action' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Action'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
+        'Action' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Action'
+        ),
         'NoteText' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NoteText'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'SKU' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SKU'
         ),
         'TransactionID' => array(
             'type' => 'string',
@@ -78,6 +66,18 @@ class SetUserNotesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
+        ),
+        'SKU' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property double $quantity
  * @property string $type
+ * @property double $quantity
  */
 class UnitPriceInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class UnitPriceInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'quantity' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'quantity'
-        ),
         'type' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'type'
+        ),
+        'quantity' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'quantity'
         )
     );
 

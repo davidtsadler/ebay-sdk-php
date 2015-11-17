@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $globalId
  * @property string $itemId
  * @property string $itemTitle
- * @property \DateTime $transactionDate
- * @property string $transactionId
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $transactionPrice
+ * @property \DateTime $transactionDate
+ * @property string $globalId
+ * @property string $transactionId
  */
 class ItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,12 +36,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'globalId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'globalId'
-        ),
         'itemId' => array(
             'type' => 'string',
             'unbound' => false,
@@ -54,23 +48,29 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'itemTitle'
         ),
+        'transactionPrice' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'transactionPrice'
+        ),
         'transactionDate' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionDate'
         ),
+        'globalId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'globalId'
+        ),
         'transactionId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
-        ),
-        'transactionPrice' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'transactionPrice'
         )
     );
 

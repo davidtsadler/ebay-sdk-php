@@ -23,23 +23,23 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property boolean $CommentReplaced
+ * @property string $CommentingUser
+ * @property integer $CommentingUserScore
  * @property string $CommentText
  * @property \DateTime $CommentTime
  * @property \DTS\eBaySDK\Shopping\Enums\CommentTypeCodeType $CommentType
- * @property string $CommentingUser
- * @property integer $CommentingUserScore
- * @property boolean $Countable
- * @property string $FeedbackID
  * @property string $FeedbackResponse
  * @property string $FollowUp
- * @property boolean $FollowUpReplaced
  * @property string $ItemID
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $ItemPrice
- * @property string $ItemTitle
- * @property boolean $ResponseReplaced
  * @property \DTS\eBaySDK\Shopping\Enums\TradingRoleCodeType $Role
+ * @property string $ItemTitle
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $ItemPrice
+ * @property string $FeedbackID
  * @property string $TransactionID
+ * @property boolean $CommentReplaced
+ * @property boolean $ResponseReplaced
+ * @property boolean $FollowUpReplaced
+ * @property boolean $Countable
  */
 class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -47,11 +47,17 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CommentReplaced' => array(
-            'type' => 'boolean',
+        'CommentingUser' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CommentReplaced'
+            'elementName' => 'CommentingUser'
+        ),
+        'CommentingUserScore' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CommentingUserScore'
         ),
         'CommentText' => array(
             'type' => 'string',
@@ -71,30 +77,6 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CommentType'
         ),
-        'CommentingUser' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CommentingUser'
-        ),
-        'CommentingUserScore' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CommentingUserScore'
-        ),
-        'Countable' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Countable'
-        ),
-        'FeedbackID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackID'
-        ),
         'FeedbackResponse' => array(
             'type' => 'string',
             'unbound' => false,
@@ -107,35 +89,11 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FollowUp'
         ),
-        'FollowUpReplaced' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FollowUpReplaced'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'ItemPrice' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemPrice'
-        ),
-        'ItemTitle' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemTitle'
-        ),
-        'ResponseReplaced' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ResponseReplaced'
         ),
         'Role' => array(
             'type' => 'string',
@@ -143,11 +101,53 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Role'
         ),
+        'ItemTitle' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemTitle'
+        ),
+        'ItemPrice' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemPrice'
+        ),
+        'FeedbackID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackID'
+        ),
         'TransactionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
+        ),
+        'CommentReplaced' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CommentReplaced'
+        ),
+        'ResponseReplaced' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ResponseReplaced'
+        ),
+        'FollowUpReplaced' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FollowUpReplaced'
+        ),
+        'Countable' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Countable'
         )
     );
 

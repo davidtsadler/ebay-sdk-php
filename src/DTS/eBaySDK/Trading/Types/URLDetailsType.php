@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
- * @property string $URL
  * @property \DTS\eBaySDK\Trading\Enums\URLTypeCodeType $URLType
+ * @property string $URL
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -34,11 +34,11 @@ class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
+        'URLType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DetailVersion'
+            'elementName' => 'URLType'
         ),
         'URL' => array(
             'type' => 'string',
@@ -46,11 +46,11 @@ class URLDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'URL'
         ),
-        'URLType' => array(
+        'DetailVersion' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'URLType'
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

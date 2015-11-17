@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property string $SKU
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $Price
  * @property integer $Quantity
- * @property string $SKU
- * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataSellingStatusType $SellingStatus
  * @property \DTS\eBaySDK\MerchantData\Types\NameValueListArrayType $VariationSpecifics
+ * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataSellingStatusType $SellingStatus
  */
 class MerchantDataVariationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,6 +35,12 @@ class MerchantDataVariationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SKU' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SKU'
+        ),
         'Price' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
@@ -47,23 +53,17 @@ class MerchantDataVariationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Quantity'
         ),
-        'SKU' => array(
-            'type' => 'string',
+        'VariationSpecifics' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SKU'
+            'elementName' => 'VariationSpecifics'
         ),
         'SellingStatus' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataSellingStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
-        ),
-        'VariationSpecifics' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'VariationSpecifics'
         )
     );
 

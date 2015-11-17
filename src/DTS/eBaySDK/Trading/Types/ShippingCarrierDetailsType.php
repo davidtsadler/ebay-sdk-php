@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Description
- * @property string $DetailVersion
- * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType $ShippingCarrier
  * @property integer $ShippingCarrierID
+ * @property string $Description
+ * @property \DTS\eBaySDK\Trading\Enums\ShippingCarrierCodeType $ShippingCarrier
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -35,17 +35,17 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ShippingCarrierID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCarrierID'
+        ),
         'Description' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
         ),
         'ShippingCarrier' => array(
             'type' => 'string',
@@ -53,11 +53,11 @@ class ShippingCarrierDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShippingCarrier'
         ),
-        'ShippingCarrierID' => array(
-            'type' => 'integer',
+        'DetailVersion' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCarrierID'
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

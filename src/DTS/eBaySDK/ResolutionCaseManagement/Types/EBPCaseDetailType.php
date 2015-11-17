@@ -23,26 +23,26 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property boolean $FVFCredited
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $agreedRefundAmount
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType[] $appeal
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType $buyerReturnShipment
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType[] $caseDocumentInfo
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseDecisionType $decision
- * @property \DateTime $decisionDate
+ * @property string $openReason
  * @property string $decisionReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\DecisionReasonDetailType $decisionReasonDetail
+ * @property \DateTime $decisionDate
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\CaseDecisionType $decision
+ * @property boolean $FVFCredited
+ * @property boolean $notCountedInBuyerProtectionCases
+ * @property string $globalId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType[] $appeal
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType[] $responseHistory
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Amount $agreedRefundAmount
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType $paymentDetail
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType $buyerReturnShipment
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType $sellerShipment
  * @property string $detailStatus
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\DetailStatusInfoType $detailStatusInfo
- * @property string $globalId
  * @property string $initialBuyerExpectation
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\InitialBuyerExpectationDetailType $initialBuyerExpectationDetail
- * @property boolean $notCountedInBuyerProtectionCases
- * @property string $openReason
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType $paymentDetail
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType[] $responseHistory
  * @property string $returnMerchandiseAuthorization
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType $sellerShipment
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType[] $caseDocumentInfo
  */
 class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -50,47 +50,11 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FVFCredited' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FVFCredited'
-        ),
-        'agreedRefundAmount' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'agreedRefundAmount'
-        ),
-        'appeal' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'appeal'
-        ),
-        'buyerReturnShipment' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'buyerReturnShipment'
-        ),
-        'caseDocumentInfo' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'caseDocumentInfo'
-        ),
-        'decision' => array(
+        'openReason' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'decision'
-        ),
-        'decisionDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'decisionDate'
+            'elementName' => 'openReason'
         ),
         'decisionReason' => array(
             'type' => 'string',
@@ -104,6 +68,72 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'decisionReasonDetail'
         ),
+        'decisionDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'decisionDate'
+        ),
+        'decision' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'decision'
+        ),
+        'FVFCredited' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FVFCredited'
+        ),
+        'notCountedInBuyerProtectionCases' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'notCountedInBuyerProtectionCases'
+        ),
+        'globalId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'globalId'
+        ),
+        'appeal' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'appeal'
+        ),
+        'responseHistory' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'responseHistory'
+        ),
+        'agreedRefundAmount' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'agreedRefundAmount'
+        ),
+        'paymentDetail' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'paymentDetail'
+        ),
+        'buyerReturnShipment' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'buyerReturnShipment'
+        ),
+        'sellerShipment' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'sellerShipment'
+        ),
         'detailStatus' => array(
             'type' => 'string',
             'unbound' => false,
@@ -115,12 +145,6 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'detailStatusInfo'
-        ),
-        'globalId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'globalId'
         ),
         'initialBuyerExpectation' => array(
             'type' => 'string',
@@ -134,41 +158,17 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'initialBuyerExpectationDetail'
         ),
-        'notCountedInBuyerProtectionCases' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'notCountedInBuyerProtectionCases'
-        ),
-        'openReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'openReason'
-        ),
-        'paymentDetail' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'paymentDetail'
-        ),
-        'responseHistory' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'responseHistory'
-        ),
         'returnMerchandiseAuthorization' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ),
-        'sellerShipment' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
-            'unbound' => false,
+        'caseDocumentInfo' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'sellerShipment'
+            'elementName' => 'caseDocumentInfo'
         )
     );
 

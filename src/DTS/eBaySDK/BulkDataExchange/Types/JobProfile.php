@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property \DateTime $completionTime
+ * @property string $jobId
+ * @property string $jobType
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus $jobStatus
  * @property \DateTime $creationTime
+ * @property \DateTime $completionTime
  * @property integer $errorCount
+ * @property double $percentComplete
  * @property string $fileReferenceId
  * @property string $inputFileReferenceId
- * @property string $jobId
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus $jobStatus
- * @property string $jobType
- * @property double $percentComplete
  */
 class JobProfile extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,11 +39,23 @@ class JobProfile extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'completionTime' => array(
-            'type' => 'DateTime',
+        'jobId' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'completionTime'
+            'elementName' => 'jobId'
+        ),
+        'jobType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'jobType'
+        ),
+        'jobStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'jobStatus'
         ),
         'creationTime' => array(
             'type' => 'DateTime',
@@ -51,11 +63,23 @@ class JobProfile extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'creationTime'
         ),
+        'completionTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'completionTime'
+        ),
         'errorCount' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'errorCount'
+        ),
+        'percentComplete' => array(
+            'type' => 'double',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'percentComplete'
         ),
         'fileReferenceId' => array(
             'type' => 'string',
@@ -68,30 +92,6 @@ class JobProfile extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'inputFileReferenceId'
-        ),
-        'jobId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'jobId'
-        ),
-        'jobStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'jobStatus'
-        ),
-        'jobType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'jobType'
-        ),
-        'percentComplete' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'percentComplete'
         )
     );
 

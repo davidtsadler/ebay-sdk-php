@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $QualifiedForAuctionOneDayDuration
- * @property boolean $QualifiedForFixedPriceOneDayDuration
  * @property boolean $QualifiesForBuyItNow
  * @property boolean $QualifiesForBuyItNowMultiple
+ * @property boolean $QualifiedForFixedPriceOneDayDuration
  * @property boolean $QualifiesForVariations
+ * @property boolean $QualifiedForAuctionOneDayDuration
  */
 class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,18 +35,6 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'QualifiedForAuctionOneDayDuration' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QualifiedForAuctionOneDayDuration'
-        ),
-        'QualifiedForFixedPriceOneDayDuration' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QualifiedForFixedPriceOneDayDuration'
-        ),
         'QualifiesForBuyItNow' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -59,11 +47,23 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNowMultiple'
         ),
+        'QualifiedForFixedPriceOneDayDuration' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QualifiedForFixedPriceOneDayDuration'
+        ),
         'QualifiesForVariations' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForVariations'
+        ),
+        'QualifiedForAuctionOneDayDuration' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QualifiedForAuctionOneDayDuration'
         )
     );
 

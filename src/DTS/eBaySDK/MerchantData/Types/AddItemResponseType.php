@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property string $ItemID
+ * @property \DateTime $StartTime
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\MerchantData\Types\FeesType $Fees
- * @property string $ItemID
- * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
+ * @property string $CategoryID
+ * @property string $Category2ID
+ * @property \DTS\eBaySDK\MerchantData\Enums\DiscountReasonCodeType[] $DiscountReason
  * @property \DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType $ProductSuggestions
- * @property \DateTime $StartTime
+ * @property \DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType $ListingRecommendations
  */
 class AddItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractResponseType
 {
@@ -39,23 +39,17 @@ class AddItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRespon
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'ItemID'
         ),
-        'CategoryID' => array(
-            'type' => 'string',
+        'StartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'DiscountReason' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'StartTime'
         ),
         'EndTime' => array(
             'type' => 'DateTime',
@@ -69,17 +63,23 @@ class AddItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRespon
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'CategoryID'
         ),
-        'ListingRecommendations' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
+        'Category2ID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'Category2ID'
+        ),
+        'DiscountReason' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
         ),
         'ProductSuggestions' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType',
@@ -87,11 +87,11 @@ class AddItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRespon
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'ListingRecommendations' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'ListingRecommendations'
         )
     );
 

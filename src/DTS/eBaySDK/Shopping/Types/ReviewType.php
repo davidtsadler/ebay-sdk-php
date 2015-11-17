@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DateTime $CreationTime
+ * @property string $URL
+ * @property string $Title
  * @property integer $Rating
  * @property string $Text
- * @property string $Title
- * @property string $URL
  * @property string $UserID
+ * @property \DateTime $CreationTime
  */
 class ReviewType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,11 +36,17 @@ class ReviewType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CreationTime' => array(
-            'type' => 'DateTime',
+        'URL' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CreationTime'
+            'elementName' => 'URL'
+        ),
+        'Title' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Title'
         ),
         'Rating' => array(
             'type' => 'integer',
@@ -54,23 +60,17 @@ class ReviewType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Text'
         ),
-        'Title' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ),
-        'URL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ),
         'UserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
+        ),
+        'CreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationTime'
         )
     );
 

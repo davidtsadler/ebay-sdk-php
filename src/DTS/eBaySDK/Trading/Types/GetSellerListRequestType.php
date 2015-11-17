@@ -23,20 +23,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $AdminEndedItemsOnly
- * @property integer $CategoryID
+ * @property string $UserID
+ * @property \DTS\eBaySDK\Trading\Types\UserIDArrayType $MotorsDealerUsers
  * @property \DateTime $EndTimeFrom
  * @property \DateTime $EndTimeTo
- * @property \DTS\eBaySDK\Trading\Enums\GranularityLevelCodeType $GranularityLevel
- * @property boolean $IncludeVariations
- * @property boolean $IncludeWatchCount
- * @property \DTS\eBaySDK\Trading\Types\UserIDArrayType $MotorsDealerUsers
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
  * @property integer $Sort
  * @property \DateTime $StartTimeFrom
  * @property \DateTime $StartTimeTo
- * @property string $UserID
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Enums\GranularityLevelCodeType $GranularityLevel
+ * @property \DTS\eBaySDK\Trading\Types\SKUArrayType $SKUArray
+ * @property boolean $IncludeWatchCount
+ * @property boolean $AdminEndedItemsOnly
+ * @property integer $CategoryID
+ * @property boolean $IncludeVariations
  */
 class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -44,17 +44,17 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AdminEndedItemsOnly' => array(
-            'type' => 'boolean',
+        'UserID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AdminEndedItemsOnly'
+            'elementName' => 'UserID'
         ),
-        'CategoryID' => array(
-            'type' => 'integer',
+        'MotorsDealerUsers' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
+            'elementName' => 'MotorsDealerUsers'
         ),
         'EndTimeFrom' => array(
             'type' => 'DateTime',
@@ -67,42 +67,6 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'GranularityLevel' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GranularityLevel'
-        ),
-        'IncludeVariations' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeVariations'
-        ),
-        'IncludeWatchCount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
-        ),
-        'MotorsDealerUsers' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MotorsDealerUsers'
-        ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
-        ),
-        'SKUArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SKUArray'
         ),
         'Sort' => array(
             'type' => 'integer',
@@ -122,11 +86,47 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'StartTimeTo'
         ),
-        'UserID' => array(
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
+        ),
+        'GranularityLevel' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'GranularityLevel'
+        ),
+        'SKUArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SKUArray'
+        ),
+        'IncludeWatchCount' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeWatchCount'
+        ),
+        'AdminEndedItemsOnly' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AdminEndedItemsOnly'
+        ),
+        'CategoryID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryID'
+        ),
+        'IncludeVariations' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeVariations'
         )
     );
 

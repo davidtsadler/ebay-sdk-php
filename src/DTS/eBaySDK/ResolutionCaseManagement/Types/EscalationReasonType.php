@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\BuyerINREscalationReasonType $buyerINRReason
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\BuyerSNADEscalationReasonType $buyerSNADReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\SellerINREscalationReasonType $sellerINRReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\SellerSNADEscalationReasonType $sellerSNADReason
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\BuyerINREscalationReasonType $buyerINRReason
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\BuyerSNADEscalationReasonType $buyerSNADReason
  */
 class EscalationReasonType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,18 +34,6 @@ class EscalationReasonType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'buyerINRReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'buyerINRReason'
-        ),
-        'buyerSNADReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'buyerSNADReason'
-        ),
         'sellerINRReason' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +45,18 @@ class EscalationReasonType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sellerSNADReason'
+        ),
+        'buyerINRReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'buyerINRReason'
+        ),
+        'buyerSNADReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'buyerSNADReason'
         )
     );
 

@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
  *
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $domesticInsuranceFee
  * @property string $domesticInsuranceOption
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $intlInsuranceFee
  * @property string $intlInsuranceOption
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $intlInsuranceFee
  */
 class Insurance extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,17 +46,17 @@ class Insurance extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'domesticInsuranceOption'
         ),
-        'intlInsuranceFee' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'intlInsuranceFee'
-        ),
         'intlInsuranceOption' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intlInsuranceOption'
+        ),
+        'intlInsuranceFee' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'intlInsuranceFee'
         )
     );
 

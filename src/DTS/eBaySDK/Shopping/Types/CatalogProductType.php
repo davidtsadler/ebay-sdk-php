@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
+ * @property string $DomainName
  * @property string $DetailsURL
  * @property boolean $DisplayStockPhotos
- * @property string $DomainName
+ * @property \DTS\eBaySDK\Shopping\Types\ProductIDType[] $ProductID
  * @property integer $ItemCount
  * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $ItemSpecifics
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType[] $ProductID
- * @property \DTS\eBaySDK\Shopping\Enums\ProductStateCodeType $ProductState
  * @property integer $ReviewCount
  * @property string $StockPhotoURL
  * @property string $Title
+ * @property \DTS\eBaySDK\Shopping\Enums\ProductStateCodeType $ProductState
  */
 class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,6 +40,12 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'DomainName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DomainName'
+        ),
         'DetailsURL' => array(
             'type' => 'string',
             'unbound' => false,
@@ -52,11 +58,11 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DisplayStockPhotos'
         ),
-        'DomainName' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'ProductID' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'DomainName'
+            'elementName' => 'ProductID'
         ),
         'ItemCount' => array(
             'type' => 'integer',
@@ -69,18 +75,6 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
-        ),
-        'ProductID' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
-        'ProductState' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductState'
         ),
         'ReviewCount' => array(
             'type' => 'integer',
@@ -99,6 +93,12 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
+        ),
+        'ProductState' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductState'
         )
     );
 

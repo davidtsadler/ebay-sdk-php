@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreItems
  * @property integer $ItemsPerPage
  * @property integer $PageNumber
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property \DTS\eBaySDK\Trading\Types\VeROReportedItemDetailsType $ReportedItemDetails
  * @property integer $VeROReportPacketID
  * @property \DTS\eBaySDK\Trading\Enums\VeROReportPacketStatusCodeType $VeROReportPacketStatus
+ * @property \DTS\eBaySDK\Trading\Types\VeROReportedItemDetailsType $ReportedItemDetails
  */
 class GetVeROReportStatusResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,6 +37,12 @@ class GetVeROReportStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ),
         'HasMoreItems' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -55,18 +61,6 @@ class GetVeROReportStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ),
-        'ReportedItemDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\VeROReportedItemDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReportedItemDetails'
-        ),
         'VeROReportPacketID' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -78,6 +72,12 @@ class GetVeROReportStatusResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VeROReportPacketStatus'
+        ),
+        'ReportedItemDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\VeROReportedItemDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReportedItemDetails'
         )
     );
 

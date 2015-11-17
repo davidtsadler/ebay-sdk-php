@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $AverageSellingPrice
- * @property integer $QuantityActive
  * @property integer $QuantityScheduled
+ * @property integer $QuantityActive
  * @property integer $QuantitySold
  * @property integer $QuantityUnsold
  * @property double $SuccessPercent
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $AverageSellingPrice
  */
 class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,23 +36,17 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AverageSellingPrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'QuantityScheduled' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AverageSellingPrice'
+            'elementName' => 'QuantityScheduled'
         ),
         'QuantityActive' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityActive'
-        ),
-        'QuantityScheduled' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityScheduled'
         ),
         'QuantitySold' => array(
             'type' => 'integer',
@@ -71,6 +65,12 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
+        ),
+        'AverageSellingPrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AverageSellingPrice'
         )
     );
 

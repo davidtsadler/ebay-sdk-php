@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string[] $AlternateValue
+ * @property string $Value
  * @property boolean $ReturnSearchResultOnDuplicates
  * @property \DTS\eBaySDK\Shopping\Enums\ExternalProductCodeType $Type
- * @property string $Value
+ * @property string[] $AlternateValue
  */
 class ExternalProductIDType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,11 +34,11 @@ class ExternalProductIDType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AlternateValue' => array(
+        'Value' => array(
             'type' => 'string',
-            'unbound' => true,
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AlternateValue'
+            'elementName' => 'Value'
         ),
         'ReturnSearchResultOnDuplicates' => array(
             'type' => 'boolean',
@@ -52,11 +52,11 @@ class ExternalProductIDType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Type'
         ),
-        'Value' => array(
+        'AlternateValue' => array(
             'type' => 'string',
-            'unbound' => false,
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'Value'
+            'elementName' => 'AlternateValue'
         )
     );
 

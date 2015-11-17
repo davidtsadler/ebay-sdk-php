@@ -23,22 +23,22 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BrandMPNType $BrandMPN
- * @property string[] $Copyright
- * @property string $DetailsURL
- * @property string $EAN
- * @property string $ISBN
- * @property boolean $IncludePrefilledItemInformation
- * @property boolean $IncludeStockPhotoURL
- * @property string $ProductDetailsURL
  * @property string $ProductID
- * @property string $ProductReferenceID
- * @property boolean $ReturnSearchResultOnDuplicates
- * @property string $StockPhotoURL
- * @property \DTS\eBaySDK\Trading\Types\TicketListingDetailsType $TicketListingDetails
- * @property string $UPC
- * @property boolean $UseFirstProduct
+ * @property boolean $IncludeStockPhotoURL
  * @property boolean $UseStockPhotoURLAsGallery
+ * @property string $StockPhotoURL
+ * @property string[] $Copyright
+ * @property string $ProductReferenceID
+ * @property string $DetailsURL
+ * @property string $ProductDetailsURL
+ * @property boolean $ReturnSearchResultOnDuplicates
+ * @property string $ISBN
+ * @property string $UPC
+ * @property string $EAN
+ * @property \DTS\eBaySDK\Trading\Types\BrandMPNType $BrandMPN
+ * @property \DTS\eBaySDK\Trading\Types\TicketListingDetailsType $TicketListingDetails
+ * @property boolean $UseFirstProduct
+ * @property boolean $IncludeeBayProductDetails
  */
 class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,41 +46,11 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BrandMPN' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BrandMPN'
-        ),
-        'Copyright' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Copyright'
-        ),
-        'DetailsURL' => array(
+        'ProductID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DetailsURL'
-        ),
-        'EAN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ),
-        'ISBN' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ISBN'
-        ),
-        'IncludePrefilledItemInformation' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludePrefilledItemInformation'
+            'elementName' => 'ProductID'
         ),
         'IncludeStockPhotoURL' => array(
             'type' => 'boolean',
@@ -88,29 +58,11 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'IncludeStockPhotoURL'
         ),
-        'ProductDetailsURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductDetailsURL'
-        ),
-        'ProductID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
-        'ProductReferenceID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductReferenceID'
-        ),
-        'ReturnSearchResultOnDuplicates' => array(
+        'UseStockPhotoURLAsGallery' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ReturnSearchResultOnDuplicates'
+            'elementName' => 'UseStockPhotoURLAsGallery'
         ),
         'StockPhotoURL' => array(
             'type' => 'string',
@@ -118,11 +70,41 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StockPhotoURL'
         ),
-        'TicketListingDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TicketListingDetailsType',
+        'Copyright' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Copyright'
+        ),
+        'ProductReferenceID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TicketListingDetails'
+            'elementName' => 'ProductReferenceID'
+        ),
+        'DetailsURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailsURL'
+        ),
+        'ProductDetailsURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductDetailsURL'
+        ),
+        'ReturnSearchResultOnDuplicates' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnSearchResultOnDuplicates'
+        ),
+        'ISBN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ISBN'
         ),
         'UPC' => array(
             'type' => 'string',
@@ -130,17 +112,35 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UPC'
         ),
+        'EAN' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EAN'
+        ),
+        'BrandMPN' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BrandMPN'
+        ),
+        'TicketListingDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TicketListingDetailsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TicketListingDetails'
+        ),
         'UseFirstProduct' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UseFirstProduct'
         ),
-        'UseStockPhotoURLAsGallery' => array(
+        'IncludeeBayProductDetails' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UseStockPhotoURLAsGallery'
+            'elementName' => 'IncludeeBayProductDetails'
         )
     );
 

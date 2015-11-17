@@ -24,11 +24,11 @@ namespace DTS\eBaySDK\Shopping\Types;
 /**
  *
  * @property string $CategoryID
- * @property string $CategoryIDPath
  * @property integer $CategoryLevel
  * @property string $CategoryName
- * @property string $CategoryNamePath
  * @property string $CategoryParentID
+ * @property string $CategoryNamePath
+ * @property string $CategoryIDPath
  * @property boolean $LeafCategory
  */
 class CategoryType extends \DTS\eBaySDK\Types\BaseType
@@ -43,12 +43,6 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'CategoryIDPath' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryIDPath'
-        ),
         'CategoryLevel' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -61,17 +55,23 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryName'
         ),
+        'CategoryParentID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryParentID'
+        ),
         'CategoryNamePath' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryNamePath'
         ),
-        'CategoryParentID' => array(
+        'CategoryIDPath' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryParentID'
+            'elementName' => 'CategoryIDPath'
         ),
         'LeafCategory' => array(
             'type' => 'boolean',

@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $DisplayToPublic
- * @property \DateTime $EndCreationTime
  * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\MessageTypeCodeType $MailMessageType
- * @property string $MemberMessageID
  * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $MessageStatus
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property string $SenderID
+ * @property boolean $DisplayToPublic
  * @property \DateTime $StartCreationTime
+ * @property \DateTime $EndCreationTime
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $MemberMessageID
+ * @property string $SenderID
  */
 class GetMemberMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,18 +39,6 @@ class GetMemberMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DisplayToPublic' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayToPublic'
-        ),
-        'EndCreationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndCreationTime'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -63,17 +51,29 @@ class GetMemberMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'MailMessageType'
         ),
-        'MemberMessageID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MemberMessageID'
-        ),
         'MessageStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStatus'
+        ),
+        'DisplayToPublic' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayToPublic'
+        ),
+        'StartCreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartCreationTime'
+        ),
+        'EndCreationTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndCreationTime'
         ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
@@ -81,17 +81,17 @@ class GetMemberMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'attribute' => false,
             'elementName' => 'Pagination'
         ),
+        'MemberMessageID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MemberMessageID'
+        ),
         'SenderID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SenderID'
-        ),
-        'StartCreationTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartCreationTime'
         )
     );
 

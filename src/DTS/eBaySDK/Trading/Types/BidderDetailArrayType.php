@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BidderDetailType[] $BidderDetail
  */
 class BidderDetailArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class BidderDetailArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidderDetail' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BidderDetailType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'BidderDetail'
-        )
     );
 
     /**

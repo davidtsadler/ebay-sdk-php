@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter $feeSettlementReportFilter
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\SiteFilter $siteFilter
  * @property \DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter $activeInventoryReportFilter
  * @property \DTS\eBaySDK\BulkDataExchange\Types\DateFilter $dateFilter
- * @property \DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter $feeSettlementReportFilter
- * @property \DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter $orderReportFilter
- * @property \DTS\eBaySDK\BulkDataExchange\Types\SiteFilter $siteFilter
  * @property \DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter $soldReportFilter
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter $orderReportFilter
  */
 class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,6 +36,18 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'feeSettlementReportFilter' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'feeSettlementReportFilter'
+        ),
+        'siteFilter' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SiteFilter',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'siteFilter'
+        ),
         'activeInventoryReportFilter' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter',
             'unbound' => false,
@@ -48,29 +60,17 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'dateFilter'
         ),
-        'feeSettlementReportFilter' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter',
+        'soldReportFilter' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'feeSettlementReportFilter'
+            'elementName' => 'soldReportFilter'
         ),
         'orderReportFilter' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'orderReportFilter'
-        ),
-        'siteFilter' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SiteFilter',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'siteFilter'
-        ),
-        'soldReportFilter' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'soldReportFilter'
         )
     );
 

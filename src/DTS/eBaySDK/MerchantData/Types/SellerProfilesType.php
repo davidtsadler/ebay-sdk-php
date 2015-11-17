@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\SellerPaymentProfileType $SellerPaymentProfile
- * @property \DTS\eBaySDK\MerchantData\Types\SellerReturnProfileType $SellerReturnProfile
  * @property \DTS\eBaySDK\MerchantData\Types\SellerShippingProfileType $SellerShippingProfile
+ * @property \DTS\eBaySDK\MerchantData\Types\SellerReturnProfileType $SellerReturnProfile
+ * @property \DTS\eBaySDK\MerchantData\Types\SellerPaymentProfileType $SellerPaymentProfile
  */
 class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'SellerPaymentProfile' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerPaymentProfileType',
+        'SellerShippingProfile' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerShippingProfileType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SellerPaymentProfile'
+            'elementName' => 'SellerShippingProfile'
         ),
         'SellerReturnProfile' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\SellerReturnProfileType',
@@ -45,11 +45,11 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerReturnProfile'
         ),
-        'SellerShippingProfile' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerShippingProfileType',
+        'SellerPaymentProfile' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\SellerPaymentProfileType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SellerShippingProfile'
+            'elementName' => 'SellerPaymentProfile'
         )
     );
 

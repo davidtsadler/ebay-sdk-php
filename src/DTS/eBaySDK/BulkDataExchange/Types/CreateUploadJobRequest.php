@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
+ * @property string $uploadJobType
  * @property string $UUID
  * @property \DTS\eBaySDK\BulkDataExchange\Enums\FileType $fileType
- * @property string $uploadJobType
  */
 class CreateUploadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
 {
@@ -33,6 +33,12 @@ class CreateUploadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSer
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'uploadJobType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'uploadJobType'
+        ),
         'UUID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -44,12 +50,6 @@ class CreateUploadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSer
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fileType'
-        ),
-        'uploadJobType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'uploadJobType'
         )
     );
 

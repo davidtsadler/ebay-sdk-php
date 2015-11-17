@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ShipmentLineItemType $ShipmentLineItem
- * @property string $ShipmentTrackingNumber
  * @property string $ShippingCarrierUsed
+ * @property string $ShipmentTrackingNumber
+ * @property \DTS\eBaySDK\Trading\Types\ShipmentLineItemType $ShipmentLineItem
  */
 class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,11 +33,11 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ShipmentLineItem' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
+        'ShippingCarrierUsed' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShipmentLineItem'
+            'elementName' => 'ShippingCarrierUsed'
         ),
         'ShipmentTrackingNumber' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ShipmentTrackingNumber'
         ),
-        'ShippingCarrierUsed' => array(
-            'type' => 'string',
+        'ShipmentLineItem' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingCarrierUsed'
+            'elementName' => 'ShipmentLineItem'
         )
     );
 

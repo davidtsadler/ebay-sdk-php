@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $Role
  * @property \DTS\eBaySDK\Trading\Types\BestOfferArrayType $BestOfferArray
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Enums\TradingRoleCodeType $Role
  */
 class ItemBestOffersType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class ItemBestOffersType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Role' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Role'
+        ),
         'BestOfferArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferArrayType',
             'unbound' => false,
@@ -44,12 +50,6 @@ class ItemBestOffersType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'Role' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Role'
         )
     );
 

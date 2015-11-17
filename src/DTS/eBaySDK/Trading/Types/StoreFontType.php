@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DescColor
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $DescFace
- * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $DescSize
- * @property string $NameColor
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $NameFace
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $NameSize
- * @property string $TitleColor
+ * @property string $NameColor
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $TitleFace
  * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $TitleSize
+ * @property string $TitleColor
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontFaceCodeType $DescFace
+ * @property \DTS\eBaySDK\Trading\Enums\StoreFontSizeCodeType $DescSize
+ * @property string $DescColor
  */
 class StoreFontType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,11 +39,41 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DescColor' => array(
+        'NameFace' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DescColor'
+            'elementName' => 'NameFace'
+        ),
+        'NameSize' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NameSize'
+        ),
+        'NameColor' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'NameColor'
+        ),
+        'TitleFace' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TitleFace'
+        ),
+        'TitleSize' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TitleSize'
+        ),
+        'TitleColor' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TitleColor'
         ),
         'DescFace' => array(
             'type' => 'string',
@@ -57,41 +87,11 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DescSize'
         ),
-        'NameColor' => array(
+        'DescColor' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'NameColor'
-        ),
-        'NameFace' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NameFace'
-        ),
-        'NameSize' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NameSize'
-        ),
-        'TitleColor' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TitleColor'
-        ),
-        'TitleFace' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TitleFace'
-        ),
-        'TitleSize' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TitleSize'
+            'elementName' => 'DescColor'
         )
     );
 

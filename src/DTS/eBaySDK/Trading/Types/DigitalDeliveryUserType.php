@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Email
  * @property string $Name
+ * @property string $Email
  */
 class DigitalDeliveryUserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class DigitalDeliveryUserType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Email' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Email'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'Email' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Email'
         )
     );
 

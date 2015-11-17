@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property double $FeedbackLeftPercent
+ * @property integer $PositiveFeedbackLeftCount
  * @property integer $NegativeFeedbackLeftCount
  * @property integer $NeutralFeedbackLeftCount
- * @property integer $PositiveFeedbackLeftCount
+ * @property double $FeedbackLeftPercent
  */
 class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,11 +34,11 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeedbackLeftPercent' => array(
-            'type' => 'double',
+        'PositiveFeedbackLeftCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeedbackLeftPercent'
+            'elementName' => 'PositiveFeedbackLeftCount'
         ),
         'NegativeFeedbackLeftCount' => array(
             'type' => 'integer',
@@ -52,11 +52,11 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
         ),
-        'PositiveFeedbackLeftCount' => array(
-            'type' => 'integer',
+        'FeedbackLeftPercent' => array(
+            'type' => 'double',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PositiveFeedbackLeftCount'
+            'elementName' => 'FeedbackLeftPercent'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\SellerDashboardAlertType[] $Alert
  * @property \DTS\eBaySDK\Trading\Enums\SellerAccountStatusCodeType $Status
+ * @property \DTS\eBaySDK\Trading\Types\SellerDashboardAlertType[] $Alert
  */
 class SellerAccountDashboardType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class SellerAccountDashboardType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Alert' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerDashboardAlertType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Alert'
-        ),
         'Status' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
+        ),
+        'Alert' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerDashboardAlertType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Alert'
         )
     );
 

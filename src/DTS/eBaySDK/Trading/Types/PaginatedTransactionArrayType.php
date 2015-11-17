@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  */
 class PaginatedTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class PaginatedTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ),
         'TransactionArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionArray'
+        ),
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         )
     );
 

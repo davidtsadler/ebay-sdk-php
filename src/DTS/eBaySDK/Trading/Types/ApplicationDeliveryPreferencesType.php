@@ -23,14 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ApplicationURL
+ * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $ApplicationEnable
  * @property string $AlertEmail
  * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $AlertEnable
- * @property \DTS\eBaySDK\Trading\Enums\EnableCodeType $ApplicationEnable
- * @property string $ApplicationURL
- * @property \DTS\eBaySDK\Trading\Types\DeliveryURLDetailType[] $DeliveryURLDetails
  * @property \DTS\eBaySDK\Trading\Enums\DeviceTypeCodeType $DeviceType
- * @property \DTS\eBaySDK\Trading\Enums\NotificationPayloadTypeCodeType $NotificationPayloadType
  * @property string $PayloadVersion
+ * @property \DTS\eBaySDK\Trading\Types\DeliveryURLDetailType[] $DeliveryURLDetails
  */
 class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,6 +37,18 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ApplicationURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationURL'
+        ),
+        'ApplicationEnable' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationEnable'
+        ),
         'AlertEmail' => array(
             'type' => 'string',
             'unbound' => false,
@@ -50,41 +61,23 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlertEnable'
         ),
-        'ApplicationEnable' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationEnable'
-        ),
-        'ApplicationURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationURL'
-        ),
-        'DeliveryURLDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryURLDetailType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DeliveryURLDetails'
-        ),
         'DeviceType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeviceType'
         ),
-        'NotificationPayloadType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NotificationPayloadType'
-        ),
         'PayloadVersion' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayloadVersion'
+        ),
+        'DeliveryURLDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\DeliveryURLDetailType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DeliveryURLDetails'
         )
     );
 

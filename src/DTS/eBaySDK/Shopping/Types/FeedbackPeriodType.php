@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property integer $Count
  * @property integer $PeriodInDays
+ * @property integer $Count
  */
 class FeedbackPeriodType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class FeedbackPeriodType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Count' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Count'
-        ),
         'PeriodInDays' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PeriodInDays'
+        ),
+        'Count' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Count'
         )
     );
 

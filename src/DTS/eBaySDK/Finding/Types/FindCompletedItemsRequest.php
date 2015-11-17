@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
+ * @property string $keywords
  * @property string[] $categoryId
  * @property \DTS\eBaySDK\Finding\Types\ItemFilter[] $itemFilter
- * @property string $keywords
+ * @property \DTS\eBaySDK\Finding\Types\AspectFilter[] $aspectFilter
  * @property \DTS\eBaySDK\Finding\Enums\OutputSelectorType[] $outputSelector
  * @property \DTS\eBaySDK\Finding\Types\ProductId $productId
  */
@@ -36,11 +36,11 @@ class FindCompletedItemsRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'aspectFilter' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
-            'unbound' => true,
+        'keywords' => array(
+            'type' => 'string',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'aspectFilter'
+            'elementName' => 'keywords'
         ),
         'categoryId' => array(
             'type' => 'string',
@@ -54,11 +54,11 @@ class FindCompletedItemsRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
             'attribute' => false,
             'elementName' => 'itemFilter'
         ),
-        'keywords' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'aspectFilter' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'keywords'
+            'elementName' => 'aspectFilter'
         ),
         'outputSelector' => array(
             'type' => 'string',

@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
- * @property integer $ListingHoldInventoryLevel
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistTypeCodeType $Type
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType $RelistCondition
  * @property integer $RelistAfterDays
  * @property integer $RelistAfterHours
  * @property string $RelistAtSpecificTimeOfDay
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType $RelistCondition
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistTypeCodeType $Type
+ * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
+ * @property integer $ListingHoldInventoryLevel
  */
 class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,17 +37,17 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOfferDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
+        'Type' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BestOfferDetails'
+            'elementName' => 'Type'
         ),
-        'ListingHoldInventoryLevel' => array(
-            'type' => 'integer',
+        'RelistCondition' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingHoldInventoryLevel'
+            'elementName' => 'RelistCondition'
         ),
         'RelistAfterDays' => array(
             'type' => 'integer',
@@ -67,17 +67,17 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RelistAtSpecificTimeOfDay'
         ),
-        'RelistCondition' => array(
-            'type' => 'string',
+        'BestOfferDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RelistCondition'
+            'elementName' => 'BestOfferDetails'
         ),
-        'Type' => array(
-            'type' => 'string',
+        'ListingHoldInventoryLevel' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Type'
+            'elementName' => 'ListingHoldInventoryLevel'
         )
     );
 

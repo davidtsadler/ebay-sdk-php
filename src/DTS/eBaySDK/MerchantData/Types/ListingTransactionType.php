@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
- * @property string $GlobalCategoryDescription
+ * @property \DateTime $TransactionTime
  * @property string $ItemID
  * @property string $ItemTitle
- * @property string $Memo
  * @property string $SerialNumber
+ * @property string $Memo
+ * @property string $GlobalCategoryDescription
  * @property string $SiteDescription
- * @property \DateTime $TransactionTime
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
  */
 class ListingTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,17 +38,11 @@ class ListingTransactionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeeAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'TransactionTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeAmount'
-        ),
-        'GlobalCategoryDescription' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GlobalCategoryDescription'
+            'elementName' => 'TransactionTime'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -62,17 +56,23 @@ class ListingTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemTitle'
         ),
+        'SerialNumber' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SerialNumber'
+        ),
         'Memo' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Memo'
         ),
-        'SerialNumber' => array(
+        'GlobalCategoryDescription' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SerialNumber'
+            'elementName' => 'GlobalCategoryDescription'
         ),
         'SiteDescription' => array(
             'type' => 'string',
@@ -80,11 +80,11 @@ class ListingTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SiteDescription'
         ),
-        'TransactionTime' => array(
-            'type' => 'DateTime',
+        'FeeAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionTime'
+            'elementName' => 'FeeAmount'
         )
     );
 

@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $LinkedPayPalAccount
- * @property \DTS\eBaySDK\MerchantData\Types\MaximumBuyerPolicyViolationsType $MaximumBuyerPolicyViolations
- * @property \DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType $MaximumItemRequirements
- * @property \DTS\eBaySDK\MerchantData\Types\MaximumUnpaidItemStrikesInfoType $MaximumUnpaidItemStrikesInfo
- * @property integer $MinimumFeedbackScore
  * @property boolean $ShipToRegistrationCountry
- * @property \DTS\eBaySDK\MerchantData\Types\VerifiedUserRequirementsType $VerifiedUserRequirements
  * @property boolean $ZeroFeedbackScore
+ * @property integer $MinimumFeedbackScore
+ * @property \DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType $MaximumItemRequirements
+ * @property boolean $LinkedPayPalAccount
+ * @property \DTS\eBaySDK\MerchantData\Types\VerifiedUserRequirementsType $VerifiedUserRequirements
+ * @property \DTS\eBaySDK\MerchantData\Types\MaximumUnpaidItemStrikesInfoType $MaximumUnpaidItemStrikesInfo
+ * @property \DTS\eBaySDK\MerchantData\Types\MaximumBuyerPolicyViolationsType $MaximumBuyerPolicyViolations
  */
 class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,29 +38,17 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'LinkedPayPalAccount' => array(
+        'ShipToRegistrationCountry' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'LinkedPayPalAccount'
+            'elementName' => 'ShipToRegistrationCountry'
         ),
-        'MaximumBuyerPolicyViolations' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumBuyerPolicyViolationsType',
+        'ZeroFeedbackScore' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'MaximumBuyerPolicyViolations'
-        ),
-        'MaximumItemRequirements' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaximumItemRequirements'
-        ),
-        'MaximumUnpaidItemStrikesInfo' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumUnpaidItemStrikesInfoType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaximumUnpaidItemStrikesInfo'
+            'elementName' => 'ZeroFeedbackScore'
         ),
         'MinimumFeedbackScore' => array(
             'type' => 'integer',
@@ -68,11 +56,17 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MinimumFeedbackScore'
         ),
-        'ShipToRegistrationCountry' => array(
+        'MaximumItemRequirements' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaximumItemRequirements'
+        ),
+        'LinkedPayPalAccount' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShipToRegistrationCountry'
+            'elementName' => 'LinkedPayPalAccount'
         ),
         'VerifiedUserRequirements' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\VerifiedUserRequirementsType',
@@ -80,11 +74,17 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VerifiedUserRequirements'
         ),
-        'ZeroFeedbackScore' => array(
-            'type' => 'boolean',
+        'MaximumUnpaidItemStrikesInfo' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumUnpaidItemStrikesInfoType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ZeroFeedbackScore'
+            'elementName' => 'MaximumUnpaidItemStrikesInfo'
+        ),
+        'MaximumBuyerPolicyViolations' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MaximumBuyerPolicyViolationsType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaximumBuyerPolicyViolations'
         )
     );
 

@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType[] $Filter
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerProductSortCodeType $Sort
  * @property integer $FolderID
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
- * @property \DTS\eBaySDK\Trading\Enums\SellingManagerProductSortCodeType $Sort
  * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerSearchType $Search
  * @property integer $StoreCategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType[] $Filter
  */
 class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -37,11 +37,11 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Filter' => array(
+        'Sort' => array(
             'type' => 'string',
-            'unbound' => true,
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Filter'
+            'elementName' => 'Sort'
         ),
         'FolderID' => array(
             'type' => 'integer',
@@ -55,29 +55,29 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
             'attribute' => false,
             'elementName' => 'Pagination'
         ),
-        'Search' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Search'
-        ),
-        'Sort' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Sort'
-        ),
         'SortOrder' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
         ),
+        'Search' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Search'
+        ),
         'StoreCategoryID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
+        ),
+        'Filter' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Filter'
         )
     );
 

@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType[] $CommentType
- * @property string $FeedbackID
- * @property \DTS\eBaySDK\Trading\Enums\FeedbackTypeCodeType $FeedbackType
- * @property string $ItemID
- * @property string $OrderLineItemID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property string $TransactionID
  * @property string $UserID
+ * @property string $FeedbackID
+ * @property string $ItemID
+ * @property string $TransactionID
+ * @property \DTS\eBaySDK\Trading\Enums\CommentTypeCodeType[] $CommentType
+ * @property \DTS\eBaySDK\Trading\Enums\FeedbackTypeCodeType $FeedbackType
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $OrderLineItemID
  */
 class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -38,11 +38,11 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CommentType' => array(
+        'UserID' => array(
             'type' => 'string',
-            'unbound' => true,
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CommentType'
+            'elementName' => 'UserID'
         ),
         'FeedbackID' => array(
             'type' => 'string',
@@ -50,29 +50,11 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'FeedbackID'
         ),
-        'FeedbackType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackType'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
         ),
         'TransactionID' => array(
             'type' => 'string',
@@ -80,11 +62,29 @@ class GetFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'TransactionID'
         ),
-        'UserID' => array(
+        'CommentType' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'CommentType'
+        ),
+        'FeedbackType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'UserID'
+            'elementName' => 'FeedbackType'
+        ),
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
+        ),
+        'OrderLineItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderLineItemID'
         )
     );
 

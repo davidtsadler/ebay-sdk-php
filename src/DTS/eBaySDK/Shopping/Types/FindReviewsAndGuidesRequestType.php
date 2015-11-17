@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
+ * @property string $UserID
  * @property string $CategoryID
  * @property integer $MaxResultsPerPage
  * @property integer $PageNumber
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
  * @property \DTS\eBaySDK\Shopping\Enums\ReviewSortCodeType $ReviewSort
  * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
- * @property string $UserID
  */
 class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -37,6 +37,18 @@ class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ProductID' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductID'
+        ),
+        'UserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserID'
+        ),
         'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -55,12 +67,6 @@ class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstra
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'ProductID' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
         'ReviewSort' => array(
             'type' => 'string',
             'unbound' => false,
@@ -72,12 +78,6 @@ class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstra
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
-        ),
-        'UserID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
         )
     );
 

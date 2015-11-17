@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $FolderID
- * @property \DTS\eBaySDK\Trading\Enums\PictureManagerDetailLevelCodeType $PictureManagerDetailLevel
  * @property string $PictureURL
+ * @property \DTS\eBaySDK\Trading\Enums\PictureManagerDetailLevelCodeType $PictureManagerDetailLevel
  */
 class GetPictureManagerDetailsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,17 +39,17 @@ class GetPictureManagerDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Abs
             'attribute' => false,
             'elementName' => 'FolderID'
         ),
-        'PictureManagerDetailLevel' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PictureManagerDetailLevel'
-        ),
         'PictureURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureURL'
+        ),
+        'PictureManagerDetailLevel' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PictureManagerDetailLevel'
         )
     );
 

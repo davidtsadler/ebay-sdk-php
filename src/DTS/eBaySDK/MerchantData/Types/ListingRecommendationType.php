@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $Code
- * @property string $FieldName
+ * @property string $Type
  * @property string $Group
+ * @property string $FieldName
+ * @property string $Code
+ * @property string[] $Value
  * @property string $Message
  * @property \DTS\eBaySDK\MerchantData\Types\MetadataType[] $Metadata
- * @property string $Type
- * @property string[] $Value
  */
 class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,11 +37,17 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Code' => array(
+        'Type' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Code'
+            'elementName' => 'Type'
+        ),
+        'Group' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Group'
         ),
         'FieldName' => array(
             'type' => 'string',
@@ -49,11 +55,17 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FieldName'
         ),
-        'Group' => array(
+        'Code' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Group'
+            'elementName' => 'Code'
+        ),
+        'Value' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Value'
         ),
         'Message' => array(
             'type' => 'string',
@@ -66,18 +78,6 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Metadata'
-        ),
-        'Type' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Type'
-        ),
-        'Value' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Value'
         )
     );
 

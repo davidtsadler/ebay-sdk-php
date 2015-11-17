@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\StoreColorType $Color
  * @property integer $ColorSchemeID
- * @property \DTS\eBaySDK\Trading\Types\StoreFontType $Font
  * @property string $Name
+ * @property \DTS\eBaySDK\Trading\Types\StoreColorType $Color
+ * @property \DTS\eBaySDK\Trading\Types\StoreFontType $Font
  */
 class StoreColorSchemeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,29 +34,29 @@ class StoreColorSchemeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Color' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Color'
-        ),
         'ColorSchemeID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ColorSchemeID'
         ),
-        'Font' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreFontType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Font'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'Color' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreColorType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Color'
+        ),
+        'Font' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreFontType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Font'
         )
     );
 

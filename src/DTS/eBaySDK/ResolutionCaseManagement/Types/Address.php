@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $city
- * @property string $country
  * @property string $name
- * @property string $postalCode
- * @property string $stateOrProvince
  * @property string $street1
  * @property string $street2
+ * @property string $city
+ * @property string $stateOrProvince
+ * @property string $country
+ * @property string $postalCode
  */
 class Address extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,35 +37,11 @@ class Address extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'city' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'city'
-        ),
-        'country' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'country'
-        ),
         'name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
-        ),
-        'postalCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'postalCode'
-        ),
-        'stateOrProvince' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'stateOrProvince'
         ),
         'street1' => array(
             'type' => 'string',
@@ -78,6 +54,30 @@ class Address extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'street2'
+        ),
+        'city' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'city'
+        ),
+        'stateOrProvince' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'stateOrProvince'
+        ),
+        'country' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'country'
+        ),
+        'postalCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'postalCode'
         )
     );
 

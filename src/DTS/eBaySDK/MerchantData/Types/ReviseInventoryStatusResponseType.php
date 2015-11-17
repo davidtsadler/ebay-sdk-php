@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\InventoryFeesType[] $Fees
  * @property \DTS\eBaySDK\MerchantData\Types\InventoryStatusType[] $InventoryStatus
+ * @property \DTS\eBaySDK\MerchantData\Types\InventoryFeesType[] $Fees
  */
 class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\MerchantData\Types\
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Fees' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryFeesType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Fees'
-        ),
         'InventoryStatus' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryStatusType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'InventoryStatus'
+        ),
+        'Fees' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryFeesType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Fees'
         )
     );
 

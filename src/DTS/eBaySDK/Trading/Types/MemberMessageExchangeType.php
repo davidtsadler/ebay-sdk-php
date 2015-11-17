@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $CreationDate
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DateTime $LastModifiedDate
- * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
- * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $MessageStatus
  * @property \DTS\eBaySDK\Trading\Types\MemberMessageType $Question
  * @property string[] $Response
+ * @property \DTS\eBaySDK\Trading\Enums\MessageStatusTypeCodeType $MessageStatus
+ * @property \DateTime $CreationDate
+ * @property \DateTime $LastModifiedDate
+ * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
  */
 class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,35 +37,11 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CreationDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CreationDate'
-        ),
         'Item' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'LastModifiedDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LastModifiedDate'
-        ),
-        'MessageMedia' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'MessageMedia'
-        ),
-        'MessageStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MessageStatus'
         ),
         'Question' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
@@ -78,6 +54,30 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Response'
+        ),
+        'MessageStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MessageStatus'
+        ),
+        'CreationDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CreationDate'
+        ),
+        'LastModifiedDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LastModifiedDate'
+        ),
+        'MessageMedia' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'MessageMedia'
         )
     );
 

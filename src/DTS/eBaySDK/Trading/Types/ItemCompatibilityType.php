@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $CompatibilityNotes
  * @property boolean $Delete
  * @property \DTS\eBaySDK\Trading\Types\NameValueListType[] $NameValueList
+ * @property string $CompatibilityNotes
  */
 class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CompatibilityNotes' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CompatibilityNotes'
-        ),
         'Delete' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -50,6 +44,12 @@ class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'NameValueList'
+        ),
+        'CompatibilityNotes' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CompatibilityNotes'
         )
     );
 

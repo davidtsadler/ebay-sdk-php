@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType[] $SecondChanceOffer
  * @property integer $TotalAvailable
+ * @property \DTS\eBaySDK\Trading\Types\ItemType[] $SecondChanceOffer
  */
 class MyeBaySecondChanceOfferListType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class MyeBaySecondChanceOfferListType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'SecondChanceOffer' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'SecondChanceOffer'
-        ),
         'TotalAvailable' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAvailable'
+        ),
+        'SecondChanceOffer' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'SecondChanceOffer'
         )
     );
 

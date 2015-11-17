@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $FolderID
- * @property boolean $FullRecursion
  * @property integer $MaxDepth
+ * @property boolean $FullRecursion
  */
 class GetSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,17 +39,17 @@ class GetSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
             'attribute' => false,
             'elementName' => 'FolderID'
         ),
-        'FullRecursion' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FullRecursion'
-        ),
         'MaxDepth' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxDepth'
+        ),
+        'FullRecursion' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FullRecursion'
         )
     );
 

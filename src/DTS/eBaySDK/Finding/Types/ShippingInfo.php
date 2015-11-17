@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property boolean $expeditedShipping
- * @property integer $handlingTime
- * @property boolean $intermediatedShipping
- * @property boolean $oneDayShippingAvailable
- * @property string[] $shipToLocations
  * @property \DTS\eBaySDK\Finding\Types\Amount $shippingServiceCost
  * @property string $shippingType
+ * @property string[] $shipToLocations
+ * @property boolean $expeditedShipping
+ * @property boolean $oneDayShippingAvailable
+ * @property integer $handlingTime
+ * @property boolean $intermediatedShipping
  */
 class ShippingInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,11 +37,35 @@ class ShippingInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'shippingServiceCost' => array(
+            'type' => 'DTS\eBaySDK\Finding\Types\Amount',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingServiceCost'
+        ),
+        'shippingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingType'
+        ),
+        'shipToLocations' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'shipToLocations'
+        ),
         'expeditedShipping' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'expeditedShipping'
+        ),
+        'oneDayShippingAvailable' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'oneDayShippingAvailable'
         ),
         'handlingTime' => array(
             'type' => 'integer',
@@ -54,30 +78,6 @@ class ShippingInfo extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intermediatedShipping'
-        ),
-        'oneDayShippingAvailable' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'oneDayShippingAvailable'
-        ),
-        'shipToLocations' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'shipToLocations'
-        ),
-        'shippingServiceCost' => array(
-            'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingServiceCost'
-        ),
-        'shippingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingType'
         )
     );
 

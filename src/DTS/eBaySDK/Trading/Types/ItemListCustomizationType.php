@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $DurationInDays
  * @property boolean $Include
- * @property boolean $IncludeNotes
  * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
- * @property \DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType $OrderStatusFilter
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property \DTS\eBaySDK\Trading\Enums\ItemSortTypeCodeType $Sort
+ * @property integer $DurationInDays
+ * @property boolean $IncludeNotes
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property \DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType $OrderStatusFilter
  */
 class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,23 +37,11 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DurationInDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DurationInDays'
-        ),
         'Include' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Include'
-        ),
-        'IncludeNotes' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeNotes'
         ),
         'ListingType' => array(
             'type' => 'string',
@@ -61,11 +49,23 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ListingType'
         ),
-        'OrderStatusFilter' => array(
+        'Sort' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'OrderStatusFilter'
+            'elementName' => 'Sort'
+        ),
+        'DurationInDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DurationInDays'
+        ),
+        'IncludeNotes' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeNotes'
         ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
@@ -73,11 +73,11 @@ class ItemListCustomizationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Pagination'
         ),
-        'Sort' => array(
+        'OrderStatusFilter' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Sort'
+            'elementName' => 'OrderStatusFilter'
         )
     );
 

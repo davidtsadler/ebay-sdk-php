@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $Fee
  * @property string $Name
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $Fee
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $PromotionalDiscount
  */
 class FeeType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class FeeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Fee' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Fee'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
+        ),
+        'Fee' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Fee'
         ),
         'PromotionalDiscount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',

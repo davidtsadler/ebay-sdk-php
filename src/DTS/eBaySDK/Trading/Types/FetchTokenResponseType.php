@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $eBayAuthToken
  * @property \DateTime $HardExpirationTime
  * @property string $RESTToken
- * @property string $eBayAuthToken
  */
 class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -33,6 +33,12 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'eBayAuthToken' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'eBayAuthToken'
+        ),
         'HardExpirationTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -44,12 +50,6 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RESTToken'
-        ),
-        'eBayAuthToken' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'eBayAuthToken'
         )
     );
 

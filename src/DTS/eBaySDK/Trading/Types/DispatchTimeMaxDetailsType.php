@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $DispatchTimeMax
  * @property string $Description
  * @property string $DetailVersion
- * @property integer $DispatchTimeMax
- * @property boolean $ExtendedHandling
  * @property \DateTime $UpdateTime
+ * @property boolean $ExtendedHandling
  */
 class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,6 +35,12 @@ class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'DispatchTimeMax' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DispatchTimeMax'
+        ),
         'Description' => array(
             'type' => 'string',
             'unbound' => false,
@@ -47,23 +53,17 @@ class DispatchTimeMaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DetailVersion'
         ),
-        'DispatchTimeMax' => array(
-            'type' => 'integer',
+        'UpdateTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DispatchTimeMax'
+            'elementName' => 'UpdateTime'
         ),
         'ExtendedHandling' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtendedHandling'
-        ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateTime'
         )
     );
 

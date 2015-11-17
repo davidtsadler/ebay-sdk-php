@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType[] $SaleRecord
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  */
 class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Typ
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ),
         'SaleRecord' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SaleRecord'
+        ),
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         )
     );
 

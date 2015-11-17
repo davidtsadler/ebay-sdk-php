@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\StoreCategoryUpdateActionCodeType $Action
- * @property integer $DestinationParentCategoryID
  * @property integer $ItemDestinationCategoryID
+ * @property integer $DestinationParentCategoryID
  * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $StoreCategories
  */
 class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -40,17 +40,17 @@ class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'Action'
         ),
-        'DestinationParentCategoryID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationParentCategoryID'
-        ),
         'ItemDestinationCategoryID' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemDestinationCategoryID'
+        ),
+        'DestinationParentCategoryID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationParentCategoryID'
         ),
         'StoreCategories' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',

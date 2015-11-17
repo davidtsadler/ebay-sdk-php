@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property string[] $changedFieldSelector
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType $jobAction
  * @property \DTS\eBaySDK\BulkDataExchange\Enums\ItemEventType $filterType
  * @property boolean $includeAttributes
  * @property boolean $includeDescription
- * @property \DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType $jobAction
  * @property \DateTime $reportDateFrom
  * @property \DateTime $reportDateTo
  * @property string[] $timeFrame
+ * @property string[] $changedFieldSelector
  */
 class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,11 +38,11 @@ class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'changedFieldSelector' => array(
-            'type' => 'string',
-            'unbound' => true,
+        'jobAction' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'changedFieldSelector'
+            'elementName' => 'jobAction'
         ),
         'filterType' => array(
             'type' => 'string',
@@ -62,12 +62,6 @@ class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'includeDescription'
         ),
-        'jobAction' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'jobAction'
-        ),
         'reportDateFrom' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -85,6 +79,12 @@ class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'timeFrame'
+        ),
+        'changedFieldSelector' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'changedFieldSelector'
         )
     );
 

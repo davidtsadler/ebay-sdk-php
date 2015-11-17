@@ -23,11 +23,10 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BestOffer
  * @property integer $BestOfferCount
  * @property boolean $BestOfferEnabled
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BestOffer
  * @property \DTS\eBaySDK\MerchantData\Enums\BestOfferStatusCodeType $BestOfferStatus
- * @property boolean $NewBestOffer
  */
 class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,12 +34,6 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BestOffer' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOffer'
-        ),
         'BestOfferCount' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -53,17 +46,17 @@ class BestOfferDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ),
+        'BestOffer' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOffer'
+        ),
         'BestOfferStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferStatus'
-        ),
-        'NewBestOffer' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewBestOffer'
         )
     );
 

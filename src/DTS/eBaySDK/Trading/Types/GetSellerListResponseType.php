@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreItems
  * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
  * @property integer $ItemsPerPage
  * @property integer $PageNumber
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property integer $ReturnedItemCountActual
  * @property \DTS\eBaySDK\Trading\Types\UserType $Seller
  */
@@ -37,6 +37,12 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ),
         'HasMoreItems' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -60,12 +66,6 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
         ),
         'ReturnedItemCountActual' => array(
             'type' => 'integer',

@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTaxAmount
  * @property double $SalesTaxPercent
  * @property string $SalesTaxState
  * @property boolean $ShippingIncludedInTax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTaxAmount
  */
 class SalesTaxType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,12 +34,6 @@ class SalesTaxType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'SalesTaxAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SalesTaxAmount'
-        ),
         'SalesTaxPercent' => array(
             'type' => 'double',
             'unbound' => false,
@@ -57,6 +51,12 @@ class SalesTaxType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
+        ),
+        'SalesTaxAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SalesTaxAmount'
         )
     );
 

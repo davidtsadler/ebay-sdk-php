@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
- * @property boolean $buyerResponsibleForShipping
+ * @property string[] $shipToLocation
+ * @property string $shippingService
+ * @property string $shippingType
+ * @property integer $sortOrderId
+ * @property boolean $freeShipping
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $codFee
  * @property boolean $fastShipping
- * @property boolean $freeShipping
- * @property string[] $shipToLocation
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingOverrideFee
- * @property string $shippingService
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingServiceAdditionalCost
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingServiceCost
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingSurcharge
- * @property string $shippingType
- * @property integer $sortOrderId
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount $shippingOverrideFee
+ * @property boolean $buyerResponsibleForShipping
  */
 class ShippingPolicyService extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,11 +42,35 @@ class ShippingPolicyService extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'buyerResponsibleForShipping' => array(
+        'shipToLocation' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'shipToLocation'
+        ),
+        'shippingService' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingService'
+        ),
+        'shippingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'shippingType'
+        ),
+        'sortOrderId' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'sortOrderId'
+        ),
+        'freeShipping' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'buyerResponsibleForShipping'
+            'elementName' => 'freeShipping'
         ),
         'codFee' => array(
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
@@ -59,30 +83,6 @@ class ShippingPolicyService extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fastShipping'
-        ),
-        'freeShipping' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'freeShipping'
-        ),
-        'shipToLocation' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'shipToLocation'
-        ),
-        'shippingOverrideFee' => array(
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingOverrideFee'
-        ),
-        'shippingService' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'shippingService'
         ),
         'shippingServiceAdditionalCost' => array(
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
@@ -102,17 +102,17 @@ class ShippingPolicyService extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingSurcharge'
         ),
-        'shippingType' => array(
-            'type' => 'string',
+        'shippingOverrideFee' => array(
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'shippingType'
+            'elementName' => 'shippingOverrideFee'
         ),
-        'sortOrderId' => array(
-            'type' => 'integer',
+        'buyerResponsibleForShipping' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'sortOrderId'
+            'elementName' => 'buyerResponsibleForShipping'
         )
     );
 

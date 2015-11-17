@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property boolean $HasMoreOrders
  * @property \DTS\eBaySDK\Trading\Types\OrderArrayType $OrderArray
  * @property integer $OrdersPerPage
  * @property integer $PageNumber
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property integer $ReturnedOrderCountActual
  */
 class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
@@ -36,6 +36,12 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ),
         'HasMoreOrders' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -59,12 +65,6 @@ class GetOrdersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseT
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
         ),
         'ReturnedOrderCountActual' => array(
             'type' => 'integer',

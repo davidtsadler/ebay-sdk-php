@@ -24,26 +24,26 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property boolean $Adult
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BestOfferAutoAcceptPrice
  * @property boolean $BindingAuction
- * @property boolean $BuyItNowAvailable
  * @property boolean $CheckoutEnabled
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedBuyItNowPrice
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedReservePrice
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedStartPrice
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\MerchantData\Enums\EndReasonCodeType $EndingReason
- * @property boolean $HasPublicMessages
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ConvertedReservePrice
  * @property boolean $HasReservePrice
- * @property boolean $HasUnansweredQuestions
- * @property string $LocalListingDistance
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $MinimumBestOfferPrice
  * @property string $RelistedItemID
  * @property string $SecondChanceOriginalItemID
  * @property \DateTime $StartTime
- * @property string $TCROriginalItemID
+ * @property \DateTime $EndTime
  * @property string $ViewItemURL
+ * @property boolean $HasUnansweredQuestions
+ * @property boolean $HasPublicMessages
+ * @property boolean $BuyItNowAvailable
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $MinimumBestOfferPrice
+ * @property string $LocalListingDistance
+ * @property string $TCROriginalItemID
  * @property string $ViewItemURLForNaturalSearch
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $BestOfferAutoAcceptPrice
+ * @property \DTS\eBaySDK\MerchantData\Enums\EndReasonCodeType $EndingReason
  */
 class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -57,23 +57,11 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Adult'
         ),
-        'BestOfferAutoAcceptPrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferAutoAcceptPrice'
-        ),
         'BindingAuction' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BindingAuction'
-        ),
-        'BuyItNowAvailable' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BuyItNowAvailable'
         ),
         'CheckoutEnabled' => array(
             'type' => 'boolean',
@@ -87,59 +75,23 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ConvertedBuyItNowPrice'
         ),
-        'ConvertedReservePrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ConvertedReservePrice'
-        ),
         'ConvertedStartPrice' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedStartPrice'
         ),
-        'EndTime' => array(
-            'type' => 'DateTime',
+        'ConvertedReservePrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'EndTime'
-        ),
-        'EndingReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndingReason'
-        ),
-        'HasPublicMessages' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HasPublicMessages'
+            'elementName' => 'ConvertedReservePrice'
         ),
         'HasReservePrice' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasReservePrice'
-        ),
-        'HasUnansweredQuestions' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HasUnansweredQuestions'
-        ),
-        'LocalListingDistance' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LocalListingDistance'
-        ),
-        'MinimumBestOfferPrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MinimumBestOfferPrice'
         ),
         'RelistedItemID' => array(
             'type' => 'string',
@@ -159,11 +111,11 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartTime'
         ),
-        'TCROriginalItemID' => array(
-            'type' => 'string',
+        'EndTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TCROriginalItemID'
+            'elementName' => 'EndTime'
         ),
         'ViewItemURL' => array(
             'type' => 'string',
@@ -171,11 +123,59 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ViewItemURL'
         ),
+        'HasUnansweredQuestions' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HasUnansweredQuestions'
+        ),
+        'HasPublicMessages' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HasPublicMessages'
+        ),
+        'BuyItNowAvailable' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyItNowAvailable'
+        ),
+        'MinimumBestOfferPrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MinimumBestOfferPrice'
+        ),
+        'LocalListingDistance' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'LocalListingDistance'
+        ),
+        'TCROriginalItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TCROriginalItemID'
+        ),
         'ViewItemURLForNaturalSearch' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ViewItemURLForNaturalSearch'
+        ),
+        'BestOfferAutoAcceptPrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferAutoAcceptPrice'
+        ),
+        'EndingReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndingReason'
         )
     );
 

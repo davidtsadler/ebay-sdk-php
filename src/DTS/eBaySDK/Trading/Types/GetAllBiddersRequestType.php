@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\GetAllBiddersModeCodeType $CallMode
  * @property boolean $IncludeBiddingSummary
- * @property string $ItemID
  */
 class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,6 +33,12 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
         'CallMode' => array(
             'type' => 'string',
             'unbound' => false,
@@ -44,12 +50,6 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeBiddingSummary'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
         )
     );
 

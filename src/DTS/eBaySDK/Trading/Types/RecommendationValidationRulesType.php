@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $Confidence
- * @property integer $MaxValues
- * @property integer $MinValues
- * @property \DTS\eBaySDK\Trading\Types\NameValueRelationshipType[] $Relationship
- * @property \DTS\eBaySDK\Trading\Enums\SelectionModeCodeType $SelectionMode
- * @property \DTS\eBaySDK\Trading\Enums\ValueFormatCodeType $ValueFormat
  * @property \DTS\eBaySDK\Trading\Enums\ValueTypeCodeType $ValueType
+ * @property integer $MinValues
+ * @property integer $MaxValues
+ * @property \DTS\eBaySDK\Trading\Enums\SelectionModeCodeType $SelectionMode
+ * @property integer $Confidence
+ * @property \DTS\eBaySDK\Trading\Types\NameValueRelationshipType[] $Relationship
  * @property \DTS\eBaySDK\Trading\Enums\VariationPictureRuleCodeType $VariationPicture
  * @property \DTS\eBaySDK\Trading\Enums\VariationSpecificsRuleCodeType $VariationSpecifics
+ * @property \DTS\eBaySDK\Trading\Enums\ValueFormatCodeType $ValueFormat
  */
 class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,11 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Confidence' => array(
-            'type' => 'integer',
+        'ValueType' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Confidence'
-        ),
-        'MaxValues' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxValues'
+            'elementName' => 'ValueType'
         ),
         'MinValues' => array(
             'type' => 'integer',
@@ -57,11 +51,11 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MinValues'
         ),
-        'Relationship' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueRelationshipType',
-            'unbound' => true,
+        'MaxValues' => array(
+            'type' => 'integer',
+            'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Relationship'
+            'elementName' => 'MaxValues'
         ),
         'SelectionMode' => array(
             'type' => 'string',
@@ -69,17 +63,17 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SelectionMode'
         ),
-        'ValueFormat' => array(
-            'type' => 'string',
+        'Confidence' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ValueFormat'
+            'elementName' => 'Confidence'
         ),
-        'ValueType' => array(
-            'type' => 'string',
-            'unbound' => false,
+        'Relationship' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\NameValueRelationshipType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'ValueType'
+            'elementName' => 'Relationship'
         ),
         'VariationPicture' => array(
             'type' => 'string',
@@ -92,6 +86,12 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
+        ),
+        'ValueFormat' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ValueFormat'
         )
     );
 

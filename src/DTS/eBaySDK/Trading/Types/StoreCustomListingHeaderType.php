@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $AddToFavoriteStores
  * @property \DTS\eBaySDK\Trading\Enums\StoreCustomListingHeaderDisplayCodeType $DisplayType
- * @property \DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType[] $LinkToInclude
  * @property boolean $Logo
  * @property boolean $SearchBox
+ * @property \DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType[] $LinkToInclude
+ * @property boolean $AddToFavoriteStores
  * @property boolean $SignUpForStoreNewsletter
  */
 class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
@@ -36,23 +36,11 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AddToFavoriteStores' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AddToFavoriteStores'
-        ),
         'DisplayType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayType'
-        ),
-        'LinkToInclude' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'LinkToInclude'
         ),
         'Logo' => array(
             'type' => 'boolean',
@@ -65,6 +53,18 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchBox'
+        ),
+        'LinkToInclude' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'LinkToInclude'
+        ),
+        'AddToFavoriteStores' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AddToFavoriteStores'
         ),
         'SignUpForStoreNewsletter' => array(
             'type' => 'boolean',

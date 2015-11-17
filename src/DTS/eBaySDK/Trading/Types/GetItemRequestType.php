@@ -23,16 +23,16 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ItemID
+ * @property boolean $IncludeWatchCount
  * @property boolean $IncludeCrossPromotion
- * @property boolean $IncludeItemCompatibilityList
  * @property boolean $IncludeItemSpecifics
  * @property boolean $IncludeTaxTable
- * @property boolean $IncludeWatchCount
- * @property string $ItemID
  * @property string $SKU
- * @property string $TransactionID
  * @property string $VariationSKU
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecifics
+ * @property string $TransactionID
+ * @property boolean $IncludeItemCompatibilityList
  */
 class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -40,17 +40,23 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
+        'IncludeWatchCount' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeWatchCount'
+        ),
         'IncludeCrossPromotion' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeCrossPromotion'
-        ),
-        'IncludeItemCompatibilityList' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeItemCompatibilityList'
         ),
         'IncludeItemSpecifics' => array(
             'type' => 'boolean',
@@ -64,29 +70,11 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'attribute' => false,
             'elementName' => 'IncludeTaxTable'
         ),
-        'IncludeWatchCount' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeWatchCount'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
         'SKU' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'TransactionID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         ),
         'VariationSKU' => array(
             'type' => 'string',
@@ -99,6 +87,18 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
+        ),
+        'TransactionID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
+        ),
+        'IncludeItemCompatibilityList' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeItemCompatibilityList'
         )
     );
 

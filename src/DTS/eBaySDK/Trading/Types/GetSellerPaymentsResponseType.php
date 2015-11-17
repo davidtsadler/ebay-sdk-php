@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $HasMorePayments
- * @property integer $PageNumber
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property integer $PaymentsPerPage
- * @property integer $ReturnedPaymentCountActual
+ * @property boolean $HasMorePayments
  * @property \DTS\eBaySDK\Trading\Types\SellerPaymentType[] $SellerPayment
+ * @property integer $PaymentsPerPage
+ * @property integer $PageNumber
+ * @property integer $ReturnedPaymentCountActual
  */
 class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -36,23 +36,23 @@ class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ),
         'HasMorePayments' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMorePayments'
         ),
-        'PageNumber' => array(
-            'type' => 'integer',
-            'unbound' => false,
+        'SellerPayment' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'PageNumber'
-        ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
+            'elementName' => 'SellerPayment'
         ),
         'PaymentsPerPage' => array(
             'type' => 'integer',
@@ -60,17 +60,17 @@ class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'attribute' => false,
             'elementName' => 'PaymentsPerPage'
         ),
+        'PageNumber' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PageNumber'
+        ),
         'ReturnedPaymentCountActual' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnedPaymentCountActual'
-        ),
-        'SellerPayment' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'SellerPayment'
         )
     );
 

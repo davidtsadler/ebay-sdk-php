@@ -23,33 +23,33 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $BidCountMax
- * @property integer $BidCountMin
- * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Enums\ItemConditionCodeType $Condition
- * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
- * @property \DateTime $EndTimeFrom
- * @property \DateTime $EndTimeTo
- * @property \DTS\eBaySDK\Trading\Enums\SimpleItemSortCodeType $ItemSort
- * @property \DTS\eBaySDK\Trading\Enums\ItemTypeCodeType $ItemType
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsAvailableTo
- * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsLocatedIn
- * @property integer $MaxDistance
- * @property \DTS\eBaySDK\Trading\Enums\PaymentMethodSearchCodeType $PaymentMethod
- * @property string $PostalCode
- * @property \DTS\eBaySDK\Trading\Enums\PreferredLocationCodeType $PreferredLocation
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMax
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMin
- * @property integer $Quantity
- * @property \DTS\eBaySDK\Trading\Enums\QuantityOperatorCodeType $QuantityOperator
- * @property string $QueryKeywords
- * @property \DTS\eBaySDK\Trading\Enums\SearchFlagCodeType[] $SearchFlag
  * @property string $SearchName
  * @property string $SearchQuery
- * @property \DTS\eBaySDK\Trading\Enums\SellerBusinessCodeType $SellerBusinessType
+ * @property string $QueryKeywords
+ * @property string $CategoryID
+ * @property \DTS\eBaySDK\Trading\Enums\SimpleItemSortCodeType $ItemSort
+ * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
+ * @property \DateTime $EndTimeFrom
+ * @property \DateTime $EndTimeTo
+ * @property integer $MaxDistance
+ * @property string $PostalCode
+ * @property \DTS\eBaySDK\Trading\Enums\ItemTypeCodeType $ItemType
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMax
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $PriceMin
+ * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
+ * @property integer $BidCountMax
+ * @property integer $BidCountMin
+ * @property \DTS\eBaySDK\Trading\Enums\SearchFlagCodeType[] $SearchFlag
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentMethodSearchCodeType $PaymentMethod
+ * @property \DTS\eBaySDK\Trading\Enums\PreferredLocationCodeType $PreferredLocation
  * @property string[] $SellerID
  * @property string[] $SellerIDExclude
- * @property \DTS\eBaySDK\Trading\Enums\SortOrderCodeType $SortOrder
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsAvailableTo
+ * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $ItemsLocatedIn
+ * @property \DTS\eBaySDK\Trading\Enums\SellerBusinessCodeType $SellerBusinessType
+ * @property \DTS\eBaySDK\Trading\Enums\ItemConditionCodeType $Condition
+ * @property integer $Quantity
+ * @property \DTS\eBaySDK\Trading\Enums\QuantityOperatorCodeType $QuantityOperator
  */
 class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -57,17 +57,23 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'BidCountMax' => array(
-            'type' => 'integer',
+        'SearchName' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BidCountMax'
+            'elementName' => 'SearchName'
         ),
-        'BidCountMin' => array(
-            'type' => 'integer',
+        'SearchQuery' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BidCountMin'
+            'elementName' => 'SearchQuery'
+        ),
+        'QueryKeywords' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QueryKeywords'
         ),
         'CategoryID' => array(
             'type' => 'string',
@@ -75,17 +81,17 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryID'
         ),
-        'Condition' => array(
+        'ItemSort' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Condition'
+            'elementName' => 'ItemSort'
         ),
-        'Currency' => array(
+        'SortOrder' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Currency'
+            'elementName' => 'SortOrder'
         ),
         'EndTimeFrom' => array(
             'type' => 'DateTime',
@@ -99,41 +105,11 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EndTimeTo'
         ),
-        'ItemSort' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSort'
-        ),
-        'ItemType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemType'
-        ),
-        'ItemsAvailableTo' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemsAvailableTo'
-        ),
-        'ItemsLocatedIn' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemsLocatedIn'
-        ),
         'MaxDistance' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxDistance'
-        ),
-        'PaymentMethod' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentMethod'
         ),
         'PostalCode' => array(
             'type' => 'string',
@@ -141,11 +117,11 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PostalCode'
         ),
-        'PreferredLocation' => array(
+        'ItemType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PreferredLocation'
+            'elementName' => 'ItemType'
         ),
         'PriceMax' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -159,23 +135,23 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PriceMin'
         ),
-        'Quantity' => array(
+        'Currency' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Currency'
+        ),
+        'BidCountMax' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Quantity'
+            'elementName' => 'BidCountMax'
         ),
-        'QuantityOperator' => array(
-            'type' => 'string',
+        'BidCountMin' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'QuantityOperator'
-        ),
-        'QueryKeywords' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QueryKeywords'
+            'elementName' => 'BidCountMin'
         ),
         'SearchFlag' => array(
             'type' => 'string',
@@ -183,23 +159,17 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SearchFlag'
         ),
-        'SearchName' => array(
+        'PaymentMethod' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SearchName'
+            'elementName' => 'PaymentMethod'
         ),
-        'SearchQuery' => array(
+        'PreferredLocation' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SearchQuery'
-        ),
-        'SellerBusinessType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellerBusinessType'
+            'elementName' => 'PreferredLocation'
         ),
         'SellerID' => array(
             'type' => 'string',
@@ -213,11 +183,41 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerIDExclude'
         ),
-        'SortOrder' => array(
+        'ItemsAvailableTo' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SortOrder'
+            'elementName' => 'ItemsAvailableTo'
+        ),
+        'ItemsLocatedIn' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemsLocatedIn'
+        ),
+        'SellerBusinessType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellerBusinessType'
+        ),
+        'Condition' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Condition'
+        ),
+        'Quantity' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Quantity'
+        ),
+        'QuantityOperator' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityOperator'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $StoreName
  * @property string $UserID
+ * @property string $StoreName
  */
 class MyeBayFavoriteSellerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class MyeBayFavoriteSellerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'StoreName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StoreName'
-        ),
         'UserID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
+        ),
+        'StoreName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StoreName'
         )
     );
 

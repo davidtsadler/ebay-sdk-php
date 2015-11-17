@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property string $DetailVersion
  * @property string $JurisdictionID
- * @property string $JurisdictionName
  * @property double $SalesTaxPercent
  * @property boolean $ShippingIncludedInTax
+ * @property string $JurisdictionName
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
@@ -36,23 +36,11 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
         'JurisdictionID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'JurisdictionID'
-        ),
-        'JurisdictionName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'JurisdictionName'
         ),
         'SalesTaxPercent' => array(
             'type' => 'double',
@@ -65,6 +53,18 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
+        ),
+        'JurisdictionName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'JurisdictionName'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

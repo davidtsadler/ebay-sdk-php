@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $DisplayMessageStoreCustomText
+ * @property boolean $OnVacation
+ * @property \DateTime $ReturnDate
  * @property boolean $HideFixedPriceStoreItems
  * @property boolean $MessageItem
  * @property boolean $MessageStore
+ * @property boolean $DisplayMessageStoreCustomText
  * @property string $MessageStoreCustomText
- * @property boolean $OnVacation
- * @property \DateTime $ReturnDate
  */
 class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,11 +37,17 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DisplayMessageStoreCustomText' => array(
+        'OnVacation' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'DisplayMessageStoreCustomText'
+            'elementName' => 'OnVacation'
+        ),
+        'ReturnDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReturnDate'
         ),
         'HideFixedPriceStoreItems' => array(
             'type' => 'boolean',
@@ -61,23 +67,17 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'MessageStore'
         ),
+        'DisplayMessageStoreCustomText' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayMessageStoreCustomText'
+        ),
         'MessageStoreCustomText' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStoreCustomText'
-        ),
-        'OnVacation' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OnVacation'
-        ),
-        'ReturnDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReturnDate'
         )
     );
 

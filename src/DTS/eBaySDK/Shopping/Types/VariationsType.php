@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\PicturesType[] $Pictures
  * @property \DTS\eBaySDK\Shopping\Types\VariationType[] $Variation
+ * @property \DTS\eBaySDK\Shopping\Types\PicturesType[] $Pictures
  * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $VariationSpecificsSet
  */
 class VariationsType extends \DTS\eBaySDK\Types\BaseType
@@ -33,17 +33,17 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Pictures' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\PicturesType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Pictures'
-        ),
         'Variation' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\VariationType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Variation'
+        ),
+        'Pictures' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\PicturesType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Pictures'
         ),
         'VariationSpecificsSet' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',

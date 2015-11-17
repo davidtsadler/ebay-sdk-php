@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $CustomCategory
- * @property \DTS\eBaySDK\Trading\Enums\TaskStatusCodeType $Status
  * @property integer $TaskID
+ * @property \DTS\eBaySDK\Trading\Enums\TaskStatusCodeType $Status
+ * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $CustomCategory
  */
 class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -33,11 +33,11 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CustomCategory' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
+        'TaskID' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CustomCategory'
+            'elementName' => 'TaskID'
         ),
         'Status' => array(
             'type' => 'string',
@@ -45,11 +45,11 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'attribute' => false,
             'elementName' => 'Status'
         ),
-        'TaskID' => array(
-            'type' => 'integer',
+        'CustomCategory' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TaskID'
+            'elementName' => 'CustomCategory'
         )
     );
 

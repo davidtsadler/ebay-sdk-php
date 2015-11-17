@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 /**
  *
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
- * @property string $comments
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\EscalationReasonType $escalationReason
+ * @property string $comments
  */
 class EscalateToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
 {
@@ -39,17 +39,17 @@ class EscalateToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManage
             'attribute' => false,
             'elementName' => 'caseId'
         ),
-        'comments' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'comments'
-        ),
         'escalationReason' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EscalationReasonType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'escalationReason'
+        ),
+        'comments' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'comments'
         )
     );
 

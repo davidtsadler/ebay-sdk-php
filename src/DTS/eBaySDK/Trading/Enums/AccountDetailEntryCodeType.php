@@ -78,6 +78,7 @@ class AccountDetailEntryCodeType
     const C_CREDITPSA = 'CreditPSA';
     const C_CREDITSM_BASIC = 'CreditSMBasic';
     const C_CREDITSM_BASIC_PRO = 'CreditSMBasicPro';
+    const C_CREDITUBI_SHIPPING_LABEL = 'CreditUBIShippingLabel';
     const C_CREDIT_AD = 'CreditAd';
     const C_CREDIT_AUCTION_END_EARLY = 'CreditAuctionEndEarly';
     const C_CREDIT_BOLD = 'CreditBold';
@@ -155,6 +156,7 @@ class AccountDetailEntryCodeType
     const C_FEEIPIX_PHOTO = 'FeeIPIXPhoto';
     const C_FEEIPIX_SLIDE_SHOW = 'FeeIPIXSlideShow';
     const C_FEENSF_CHECK = 'FeeNSFCheck';
+    const C_FEEUBI_SHIPPING_LABEL = 'FeeUBIShippingLabel';
     const C_FEE_AD = 'FeeAd';
     const C_FEE_AUCTION_END_EARLY = 'FeeAuctionEndEarly';
     const C_FEE_BOLD = 'FeeBold';

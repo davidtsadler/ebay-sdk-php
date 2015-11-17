@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property integer $ProductID
  * @property string $SaleTemplateName
+ * @property integer $ProductID
  */
 class AddSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -39,17 +39,17 @@ class AddSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'attribute' => false,
             'elementName' => 'Item'
         ),
-        'ProductID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
         'SaleTemplateName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
+        ),
+        'ProductID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ProductID'
         )
     );
 

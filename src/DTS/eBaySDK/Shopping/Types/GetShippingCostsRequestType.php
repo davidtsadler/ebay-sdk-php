@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Enums\CountryCodeType $DestinationCountryCode
- * @property string $DestinationPostalCode
- * @property boolean $IncludeDetails
  * @property string $ItemID
  * @property integer $QuantitySold
+ * @property string $DestinationPostalCode
+ * @property \DTS\eBaySDK\Shopping\Enums\CountryCodeType $DestinationCountryCode
+ * @property boolean $IncludeDetails
  */
 class GetShippingCostsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -35,24 +35,6 @@ class GetShippingCostsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DestinationCountryCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationCountryCode'
-        ),
-        'DestinationPostalCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DestinationPostalCode'
-        ),
-        'IncludeDetails' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeDetails'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -64,6 +46,24 @@ class GetShippingCostsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
+        ),
+        'DestinationPostalCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationPostalCode'
+        ),
+        'DestinationCountryCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DestinationCountryCode'
+        ),
+        'IncludeDetails' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeDetails'
         )
     );
 

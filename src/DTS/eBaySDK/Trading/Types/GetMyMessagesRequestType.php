@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
+ * @property integer $FolderID
+ * @property \DateTime $StartTime
  * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesExternalMessageIDArrayType $ExternalMessageIDs
- * @property integer $FolderID
- * @property boolean $IncludeHighPriorityMessageOnly
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType $MessageIDs
  * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
- * @property \DateTime $StartTime
+ * @property boolean $IncludeHighPriorityMessageOnly
  */
 class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -37,6 +37,24 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'MessageIDs' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MessageIDs'
+        ),
+        'FolderID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FolderID'
+        ),
+        'StartTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
+        ),
         'EndTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -49,35 +67,17 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
             'attribute' => false,
             'elementName' => 'ExternalMessageIDs'
         ),
-        'FolderID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FolderID'
-        ),
-        'IncludeHighPriorityMessageOnly' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeHighPriorityMessageOnly'
-        ),
-        'MessageIDs' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MessageIDs'
-        ),
         'Pagination' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'IncludeHighPriorityMessageOnly' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'IncludeHighPriorityMessageOnly'
         )
     );
 

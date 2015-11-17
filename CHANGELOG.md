@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 0.4.0 - 2015-11-07
+
+## Feature
+
+SDK now supports the Return Management service.
+
+### Fix
+
+SDK can now handle XML that is returned with namespaces.
+
+### API
+
+* Support Merchant Data API version 945.
+* Support Trading API version 945.
+
+## 0.3.0 - 2015-10-11
+
+### API
+
+* Support Merchant Data API version 941.
+* Support Shopping API version 941.
+* Support Trading API version 941.
+
+### Fixes
+
+Order of object properties now matches the order specified in the service WSDL. Some operations require the elements in the XML to be in the correct order. Since the object properties were originally in alphabetical order the resulting XML would not be valid.
+
+The generated XML is no longer a single string. It was possible to generate XML that was greater than the 20,000 character limit found in the LMS. Each element in the XML is now separated by a line-feed character.
+
 ## 0.2.0 - 2015-08-11
 
 ### API

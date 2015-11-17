@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property integer $entriesPerPage
  * @property integer $pageNumber
- * @property integer $totalEntries
+ * @property integer $entriesPerPage
  * @property integer $totalPages
+ * @property integer $totalEntries
  */
 class PaginationOutput extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,29 +34,29 @@ class PaginationOutput extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'entriesPerPage' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'entriesPerPage'
-        ),
         'pageNumber' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'pageNumber'
         ),
-        'totalEntries' => array(
+        'entriesPerPage' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'totalEntries'
+            'elementName' => 'entriesPerPage'
         ),
         'totalPages' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'totalPages'
+        ),
+        'totalEntries' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'totalEntries'
         )
     );
 

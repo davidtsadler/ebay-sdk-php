@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $HelpText
- * @property string $HelpURL
  * @property string $Name
  * @property \DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType $ValidationRules
  * @property \DTS\eBaySDK\Trading\Types\ValueRecommendationType[] $ValueRecommendation
+ * @property string $HelpURL
+ * @property string $HelpText
  */
 class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,18 +35,6 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'HelpText' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HelpText'
-        ),
-        'HelpURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HelpURL'
-        ),
         'Name' => array(
             'type' => 'string',
             'unbound' => false,
@@ -64,6 +52,18 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ValueRecommendation'
+        ),
+        'HelpURL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HelpURL'
+        ),
+        'HelpText' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'HelpText'
         )
     );
 

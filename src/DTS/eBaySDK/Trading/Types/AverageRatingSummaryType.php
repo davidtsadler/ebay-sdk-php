@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AverageRatingDetailsType[] $AverageRatingDetails
  * @property \DTS\eBaySDK\Trading\Enums\FeedbackSummaryPeriodCodeType $FeedbackSummaryPeriod
+ * @property \DTS\eBaySDK\Trading\Types\AverageRatingDetailsType[] $AverageRatingDetails
  */
 class AverageRatingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class AverageRatingSummaryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AverageRatingDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AverageRatingDetailsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'AverageRatingDetails'
-        ),
         'FeedbackSummaryPeriod' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSummaryPeriod'
+        ),
+        'AverageRatingDetails' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AverageRatingDetailsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'AverageRatingDetails'
         )
     );
 

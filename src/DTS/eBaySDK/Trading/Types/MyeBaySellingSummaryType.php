@@ -24,18 +24,18 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property integer $ActiveAuctionCount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountLimitRemaining
- * @property integer $AuctionBidCount
  * @property integer $AuctionSellingCount
- * @property integer $ClassifiedAdCount
- * @property integer $ClassifiedAdOfferCount
- * @property integer $QuantityLimitRemaining
- * @property integer $SoldDurationInDays
+ * @property integer $AuctionBidCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalAuctionSellingValue
- * @property integer $TotalLeadCount
- * @property integer $TotalListingsWithLeads
  * @property integer $TotalSoldCount
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalSoldValue
+ * @property integer $SoldDurationInDays
+ * @property integer $ClassifiedAdCount
+ * @property integer $TotalLeadCount
+ * @property integer $ClassifiedAdOfferCount
+ * @property integer $TotalListingsWithLeads
+ * @property integer $QuantityLimitRemaining
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountLimitRemaining
  */
 class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -49,11 +49,11 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ActiveAuctionCount'
         ),
-        'AmountLimitRemaining' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'AuctionSellingCount' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AmountLimitRemaining'
+            'elementName' => 'AuctionSellingCount'
         ),
         'AuctionBidCount' => array(
             'type' => 'integer',
@@ -61,53 +61,11 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AuctionBidCount'
         ),
-        'AuctionSellingCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AuctionSellingCount'
-        ),
-        'ClassifiedAdCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdCount'
-        ),
-        'ClassifiedAdOfferCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ClassifiedAdOfferCount'
-        ),
-        'QuantityLimitRemaining' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantityLimitRemaining'
-        ),
-        'SoldDurationInDays' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SoldDurationInDays'
-        ),
         'TotalAuctionSellingValue' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAuctionSellingValue'
-        ),
-        'TotalLeadCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalLeadCount'
-        ),
-        'TotalListingsWithLeads' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TotalListingsWithLeads'
         ),
         'TotalSoldCount' => array(
             'type' => 'integer',
@@ -120,6 +78,48 @@ class MyeBaySellingSummaryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldValue'
+        ),
+        'SoldDurationInDays' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SoldDurationInDays'
+        ),
+        'ClassifiedAdCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdCount'
+        ),
+        'TotalLeadCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalLeadCount'
+        ),
+        'ClassifiedAdOfferCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ClassifiedAdOfferCount'
+        ),
+        'TotalListingsWithLeads' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalListingsWithLeads'
+        ),
+        'QuantityLimitRemaining' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'QuantityLimitRemaining'
+        ),
+        'AmountLimitRemaining' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AmountLimitRemaining'
         )
     );
 

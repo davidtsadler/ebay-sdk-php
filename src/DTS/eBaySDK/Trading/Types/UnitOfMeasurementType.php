@@ -23,8 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $AlternateText
- * @property string $SuggestedText
  */
 class UnitOfMeasurementType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,18 +30,6 @@ class UnitOfMeasurementType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AlternateText' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'AlternateText'
-        ),
-        'SuggestedText' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SuggestedText'
-        )
     );
 
     /**

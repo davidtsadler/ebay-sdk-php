@@ -25,12 +25,12 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $AddressLine1
  * @property string $AddressLine2
- * @property \DTS\eBaySDK\Trading\Enums\AddressTypeCodeType $AddressType
  * @property string $City
- * @property integer $Latitude
- * @property integer $Longitude
  * @property string $State
  * @property string $ZipCode
+ * @property integer $Latitude
+ * @property integer $Longitude
+ * @property \DTS\eBaySDK\Trading\Enums\AddressTypeCodeType $AddressType
  */
 class NonProfitAddressType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -50,17 +50,23 @@ class NonProfitAddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AddressLine2'
         ),
-        'AddressType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AddressType'
-        ),
         'City' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'City'
+        ),
+        'State' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'State'
+        ),
+        'ZipCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ZipCode'
         ),
         'Latitude' => array(
             'type' => 'integer',
@@ -74,17 +80,11 @@ class NonProfitAddressType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Longitude'
         ),
-        'State' => array(
+        'AddressType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'State'
-        ),
-        'ZipCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ZipCode'
+            'elementName' => 'AddressType'
         )
     );
 

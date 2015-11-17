@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $IncludeFinalValueFees
  * @property \DTS\eBaySDK\Trading\Types\ItemTransactionIDArrayType $ItemTransactionIDArray
  * @property \DTS\eBaySDK\Trading\Types\OrderIDArrayType $OrderIDArray
  * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
+ * @property boolean $IncludeFinalValueFees
  */
 class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,12 +34,6 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeFinalValueFees' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeFinalValueFees'
-        ),
         'ItemTransactionIDArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDArrayType',
             'unbound' => false,
@@ -57,6 +51,12 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Platform'
+        ),
+        'IncludeFinalValueFees' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeFinalValueFees'
         )
     );
 

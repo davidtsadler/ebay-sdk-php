@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\FileTransfer\Types;
 
 /**
  *
- * @property string $fileReferenceId
  * @property string $taskReferenceId
+ * @property string $fileReferenceId
  */
 class DownloadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceRequest
 {
@@ -32,17 +32,17 @@ class DownloadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceReq
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'fileReferenceId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'fileReferenceId'
-        ),
         'taskReferenceId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'taskReferenceId'
+        ),
+        'fileReferenceId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'fileReferenceId'
         )
     );
 

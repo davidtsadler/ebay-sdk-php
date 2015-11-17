@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ReasonCodeDetailType[] $ReasonCodeDetail
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
+ * @property \DTS\eBaySDK\Trading\Types\ReasonCodeDetailType[] $ReasonCodeDetail
  */
 class VeROSiteDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,17 +32,17 @@ class VeROSiteDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ReasonCodeDetail' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ReasonCodeDetailType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ReasonCodeDetail'
-        ),
         'Site' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Site'
+        ),
+        'ReasonCodeDetail' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ReasonCodeDetailType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ReasonCodeDetail'
         )
     );
 

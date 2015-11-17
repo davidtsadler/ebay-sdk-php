@@ -25,9 +25,9 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $FieldGroup
  * @property string $FieldName
- * @property string $Message
  * @property string $RecommendationCode
  * @property string[] $RecommendedValue
+ * @property string $Message
  */
 class RecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -47,12 +47,6 @@ class RecommendationType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FieldName'
         ),
-        'Message' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Message'
-        ),
         'RecommendationCode' => array(
             'type' => 'string',
             'unbound' => false,
@@ -64,6 +58,12 @@ class RecommendationType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RecommendedValue'
+        ),
+        'Message' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Message'
         )
     );
 

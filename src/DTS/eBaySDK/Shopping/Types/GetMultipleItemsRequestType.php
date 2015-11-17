@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $IncludeSelector
  * @property string[] $ItemID
+ * @property string $IncludeSelector
  */
 class GetMultipleItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -32,17 +32,17 @@ class GetMultipleItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeSelector' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeSelector'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ItemID'
+        ),
+        'IncludeSelector' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeSelector'
         )
     );
 

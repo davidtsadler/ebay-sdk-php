@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ModifyNameArrayType $ModifyNameList
- * @property \DTS\eBaySDK\Trading\Types\PicturesType[] $Pictures
  * @property \DTS\eBaySDK\Trading\Types\VariationType[] $Variation
+ * @property \DTS\eBaySDK\Trading\Types\PicturesType[] $Pictures
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $VariationSpecificsSet
+ * @property \DTS\eBaySDK\Trading\Types\ModifyNameArrayType $ModifyNameList
  */
 class VariationsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,11 +34,11 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ModifyNameList' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameArrayType',
-            'unbound' => false,
+        'Variation' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
+            'unbound' => true,
             'attribute' => false,
-            'elementName' => 'ModifyNameList'
+            'elementName' => 'Variation'
         ),
         'Pictures' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PicturesType',
@@ -46,17 +46,17 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Pictures'
         ),
-        'Variation' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Variation'
-        ),
         'VariationSpecificsSet' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecificsSet'
+        ),
+        'ModifyNameList' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ModifyNameList'
         )
     );
 

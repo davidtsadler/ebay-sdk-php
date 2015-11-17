@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $SaleTemplateID
  * @property boolean $DeleteAutomatedListingRule
  * @property boolean $DeleteAutomatedRelistingRule
  * @property boolean $DeleteAutomatedSecondChanceOfferRule
- * @property integer $SaleTemplateID
  */
 class DeleteSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -34,6 +34,12 @@ class DeleteSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SaleTemplateID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTemplateID'
+        ),
         'DeleteAutomatedListingRule' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -51,12 +57,6 @@ class DeleteSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeleteAutomatedSecondChanceOfferRule'
-        ),
-        'SaleTemplateID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTemplateID'
         )
     );
 

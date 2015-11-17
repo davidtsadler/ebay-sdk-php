@@ -24,13 +24,13 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property boolean $AlwaysUseThisPaymentAddress
- * @property string $DefaultPayPalEmailAddress
  * @property \DTS\eBaySDK\Trading\Enums\DisplayPayNowButtonCodeType $DisplayPayNowButton
- * @property \DTS\eBaySDK\Trading\Enums\FedExRateOptionCodeType $FedExRateOption
- * @property boolean $PayPalAlwaysOn
  * @property boolean $PayPalPreferred
+ * @property string $DefaultPayPalEmailAddress
+ * @property boolean $PayPalAlwaysOn
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerPaymentAddress
  * @property \DTS\eBaySDK\Trading\Enums\UPSRateOptionCodeType $UPSRateOption
+ * @property \DTS\eBaySDK\Trading\Enums\FedExRateOptionCodeType $FedExRateOption
  * @property \DTS\eBaySDK\Trading\Enums\USPSRateOptionCodeType $USPSRateOption
  */
 class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
@@ -45,35 +45,29 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'AlwaysUseThisPaymentAddress'
         ),
-        'DefaultPayPalEmailAddress' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DefaultPayPalEmailAddress'
-        ),
         'DisplayPayNowButton' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayPayNowButton'
         ),
-        'FedExRateOption' => array(
+        'PayPalPreferred' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalPreferred'
+        ),
+        'DefaultPayPalEmailAddress' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FedExRateOption'
+            'elementName' => 'DefaultPayPalEmailAddress'
         ),
         'PayPalAlwaysOn' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalAlwaysOn'
-        ),
-        'PayPalPreferred' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalPreferred'
         ),
         'SellerPaymentAddress' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
@@ -86,6 +80,12 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPSRateOption'
+        ),
+        'FedExRateOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FedExRateOption'
         ),
         'USPSRateOption' => array(
             'type' => 'string',

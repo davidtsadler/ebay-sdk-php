@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $CategoryCount
  * @property \DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType $SuggestedCategoryArray
+ * @property integer $CategoryCount
  */
 class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abst
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryCount'
-        ),
         'SuggestedCategoryArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuggestedCategoryArray'
+        ),
+        'CategoryCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CategoryCount'
         )
     );
 

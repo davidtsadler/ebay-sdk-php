@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $CancelCompleteDate
- * @property \DateTime $CancelIntiationDate
- * @property string $CancelIntiator
  * @property string $CancelReason
  * @property string $CancelReasonDetails
+ * @property string $CancelIntiator
+ * @property \DateTime $CancelIntiationDate
+ * @property \DateTime $CancelCompleteDate
  */
 class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,24 +35,6 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CancelCompleteDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CancelCompleteDate'
-        ),
-        'CancelIntiationDate' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CancelIntiationDate'
-        ),
-        'CancelIntiator' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CancelIntiator'
-        ),
         'CancelReason' => array(
             'type' => 'string',
             'unbound' => false,
@@ -64,6 +46,24 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CancelReasonDetails'
+        ),
+        'CancelIntiator' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CancelIntiator'
+        ),
+        'CancelIntiationDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CancelIntiationDate'
+        ),
+        'CancelCompleteDate' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CancelCompleteDate'
         )
     );
 

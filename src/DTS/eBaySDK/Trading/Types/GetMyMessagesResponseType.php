@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType $Messages
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesSummaryType $Summary
+ * @property \DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType $Messages
  */
 class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -32,17 +32,17 @@ class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Messages' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Messages'
-        ),
         'Summary' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Summary'
+        ),
+        'Messages' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Messages'
         )
     );
 

@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
  *
+ * @property string $superscript
  * @property integer $maxDeliveryServiceDefinition
  * @property integer $minDeliveryServiceDefinition
  * @property string $name
- * @property string $superscript
  */
 class ServiceDefinition extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,6 +34,12 @@ class ServiceDefinition extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'superscript' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'superscript'
+        ),
         'maxDeliveryServiceDefinition' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -51,12 +57,6 @@ class ServiceDefinition extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
-        ),
-        'superscript' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'superscript'
         )
     );
 

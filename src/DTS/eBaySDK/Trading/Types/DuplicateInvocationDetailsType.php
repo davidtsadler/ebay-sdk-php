@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $DuplicateInvocationID
- * @property string $InvocationTrackingID
  * @property \DTS\eBaySDK\Trading\Enums\InvocationStatusType $Status
+ * @property string $InvocationTrackingID
  */
 class DuplicateInvocationDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class DuplicateInvocationDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DuplicateInvocationID'
         ),
-        'InvocationTrackingID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InvocationTrackingID'
-        ),
         'Status' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
+        ),
+        'InvocationTrackingID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InvocationTrackingID'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property string $currencyId
  * @property \DTS\eBaySDK\HalfFinding\Enums\RentalDurationType $duration
+ * @property string $currencyId
  */
 class RentalAmount extends \DTS\eBaySDK\Types\DoubleType
 {
@@ -32,17 +32,17 @@ class RentalAmount extends \DTS\eBaySDK\Types\DoubleType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'currencyId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'currencyId'
-        ),
         'duration' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'duration'
+        ),
+        'currencyId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => true,
+            'attributeName' => 'currencyId'
         )
     );
 

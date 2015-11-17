@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $DetailsURL
- * @property boolean $DisplayStockPhotos
- * @property string $DomainName
- * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
- * @property integer $ItemCount
- * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $ItemSpecifics
- * @property \DTS\eBaySDK\Shopping\Types\AmountType $MinPrice
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType[] $ProductID
- * @property integer $ReviewCount
- * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
- * @property string $StockPhotoURL
  * @property string $Title
+ * @property string $DetailsURL
+ * @property string $StockPhotoURL
+ * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
+ * @property boolean $DisplayStockPhotos
+ * @property integer $ItemCount
+ * @property \DTS\eBaySDK\Shopping\Types\ProductIDType[] $ProductID
+ * @property string $DomainName
+ * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $ItemSpecifics
+ * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
+ * @property integer $ReviewCount
+ * @property \DTS\eBaySDK\Shopping\Types\AmountType $MinPrice
  */
 class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,65 +42,17 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Title' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Title'
+        ),
         'DetailsURL' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailsURL'
-        ),
-        'DisplayStockPhotos' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayStockPhotos'
-        ),
-        'DomainName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DomainName'
-        ),
-        'ItemArray' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemArray'
-        ),
-        'ItemCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCount'
-        ),
-        'ItemSpecifics' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSpecifics'
-        ),
-        'MinPrice' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MinPrice'
-        ),
-        'ProductID' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ),
-        'ReviewCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewCount'
-        ),
-        'ShippingCostSummary' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCostSummary'
         ),
         'StockPhotoURL' => array(
             'type' => 'string',
@@ -108,11 +60,59 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StockPhotoURL'
         ),
-        'Title' => array(
+        'ShippingCostSummary' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCostSummary'
+        ),
+        'DisplayStockPhotos' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayStockPhotos'
+        ),
+        'ItemCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemCount'
+        ),
+        'ProductID' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ProductID'
+        ),
+        'DomainName' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Title'
+            'elementName' => 'DomainName'
+        ),
+        'ItemSpecifics' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemSpecifics'
+        ),
+        'ItemArray' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemArray'
+        ),
+        'ReviewCount' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReviewCount'
+        ),
+        'MinPrice' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MinPrice'
         )
     );
 

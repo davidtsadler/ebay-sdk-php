@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property boolean $HasMoreTransactions
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property integer $PageNumber
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property boolean $PayPalPreferred
- * @property integer $ReturnedTransactionCountActual
- * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
+ * @property boolean $HasMoreTransactions
  * @property integer $TransactionsPerPage
+ * @property integer $PageNumber
+ * @property integer $ReturnedTransactionCountActual
+ * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
+ * @property \DTS\eBaySDK\Trading\Types\TransactionArrayType $TransactionArray
+ * @property boolean $PayPalPreferred
  */
 class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -38,17 +38,23 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
+        ),
         'HasMoreTransactions' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMoreTransactions'
         ),
-        'Item' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+        'TransactionsPerPage' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Item'
+            'elementName' => 'TransactionsPerPage'
         ),
         'PageNumber' => array(
             'type' => 'integer',
@@ -56,23 +62,17 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ),
-        'PayPalPreferred' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalPreferred'
-        ),
         'ReturnedTransactionCountActual' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnedTransactionCountActual'
+        ),
+        'Item' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Item'
         ),
         'TransactionArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
@@ -80,11 +80,11 @@ class GetItemTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'TransactionArray'
         ),
-        'TransactionsPerPage' => array(
-            'type' => 'integer',
+        'PayPalPreferred' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionsPerPage'
+            'elementName' => 'PayPalPreferred'
         )
     );
 

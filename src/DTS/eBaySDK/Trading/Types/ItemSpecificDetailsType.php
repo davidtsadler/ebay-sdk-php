@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $DetailVersion
- * @property integer $MaxCharactersPerName
- * @property integer $MaxCharactersPerValue
  * @property integer $MaxItemSpecificsPerItem
  * @property integer $MaxValuesPerName
+ * @property integer $MaxCharactersPerValue
+ * @property integer $MaxCharactersPerName
+ * @property string $DetailVersion
  * @property \DateTime $UpdateTime
  */
 class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
@@ -36,24 +36,6 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'DetailVersion' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailVersion'
-        ),
-        'MaxCharactersPerName' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxCharactersPerName'
-        ),
-        'MaxCharactersPerValue' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MaxCharactersPerValue'
-        ),
         'MaxItemSpecificsPerItem' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -65,6 +47,24 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxValuesPerName'
+        ),
+        'MaxCharactersPerValue' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaxCharactersPerValue'
+        ),
+        'MaxCharactersPerName' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MaxCharactersPerName'
+        ),
+        'DetailVersion' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DetailVersion'
         ),
         'UpdateTime' => array(
             'type' => 'DateTime',

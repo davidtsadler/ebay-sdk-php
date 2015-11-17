@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\ErrorCategory $category
- * @property string $domain
  * @property integer $errorId
- * @property string $exceptionId
- * @property string $message
- * @property \DTS\eBaySDK\BulkDataExchange\Types\ErrorParameter[] $parameter
+ * @property string $domain
  * @property \DTS\eBaySDK\BulkDataExchange\Enums\ErrorSeverity $severity
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\ErrorCategory $category
+ * @property string $message
  * @property string $subdomain
+ * @property string $exceptionId
+ * @property \DTS\eBaySDK\BulkDataExchange\Types\ErrorParameter[] $parameter
  */
 class ErrorData extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,11 +38,11 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'category' => array(
-            'type' => 'string',
+        'errorId' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'category'
+            'elementName' => 'errorId'
         ),
         'domain' => array(
             'type' => 'string',
@@ -50,17 +50,17 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'domain'
         ),
-        'errorId' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'errorId'
-        ),
-        'exceptionId' => array(
+        'severity' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'exceptionId'
+            'elementName' => 'severity'
+        ),
+        'category' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'category'
         ),
         'message' => array(
             'type' => 'string',
@@ -68,23 +68,23 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'message'
         ),
-        'parameter' => array(
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ErrorParameter',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'parameter'
-        ),
-        'severity' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'severity'
-        ),
         'subdomain' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'subdomain'
+        ),
+        'exceptionId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'exceptionId'
+        ),
+        'parameter' => array(
+            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ErrorParameter',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'parameter'
         )
     );
 

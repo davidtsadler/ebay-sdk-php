@@ -25,10 +25,10 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
  *
  * @property \DateTime $createTimeFrom
  * @property \DateTime $createTimeTo
- * @property boolean $includeFinalValueFee
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\ListingType $listingType
  * @property \DateTime $modTimeFrom
  * @property \DateTime $modTimeTo
+ * @property boolean $includeFinalValueFee
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\ListingType $listingType
  * @property \DTS\eBaySDK\BulkDataExchange\Enums\OrderStatusTypes $orderStatus
  * @property integer $version
  */
@@ -50,18 +50,6 @@ class OrderReportFilter extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'createTimeTo'
         ),
-        'includeFinalValueFee' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'includeFinalValueFee'
-        ),
-        'listingType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'listingType'
-        ),
         'modTimeFrom' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -73,6 +61,18 @@ class OrderReportFilter extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'modTimeTo'
+        ),
+        'includeFinalValueFee' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'includeFinalValueFee'
+        ),
+        'listingType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'listingType'
         ),
         'orderStatus' => array(
             'type' => 'string',

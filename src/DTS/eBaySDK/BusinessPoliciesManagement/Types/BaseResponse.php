@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
  *
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Enums\AckValue $ack
  * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\ErrorMessage $errorMessage
- * @property \DateTime $timestamp
  * @property string $version
+ * @property \DateTime $timestamp
  */
 class BaseResponse extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,17 +46,17 @@ class BaseResponse extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'errorMessage'
         ),
-        'timestamp' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'timestamp'
-        ),
         'version' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
+        ),
+        'timestamp' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'timestamp'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string[] $CategoryParent
  * @property string $CategorySiteID
+ * @property string[] $CategoryParent
  * @property integer $LevelLimit
  * @property boolean $ViewAllNodes
  */
@@ -34,17 +34,17 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CategoryParent' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CategoryParent'
-        ),
         'CategorySiteID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategorySiteID'
+        ),
+        'CategoryParent' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'CategoryParent'
         ),
         'LevelLimit' => array(
             'type' => 'integer',

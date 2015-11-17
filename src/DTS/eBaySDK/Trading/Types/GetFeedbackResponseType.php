@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $EntriesPerPage
  * @property \DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType $FeedbackDetailArray
  * @property integer $FeedbackDetailItemTotal
- * @property integer $FeedbackScore
  * @property \DTS\eBaySDK\Trading\Types\FeedbackSummaryType $FeedbackSummary
- * @property integer $PageNumber
+ * @property integer $FeedbackScore
  * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
+ * @property integer $EntriesPerPage
+ * @property integer $PageNumber
  */
 class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -37,12 +37,6 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EntriesPerPage' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EntriesPerPage'
-        ),
         'FeedbackDetailArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType',
             'unbound' => false,
@@ -55,29 +49,35 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
             'attribute' => false,
             'elementName' => 'FeedbackDetailItemTotal'
         ),
-        'FeedbackScore' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeedbackScore'
-        ),
         'FeedbackSummary' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSummary'
         ),
-        'PageNumber' => array(
+        'FeedbackScore' => array(
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PageNumber'
+            'elementName' => 'FeedbackScore'
         ),
         'PaginationResult' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
+        ),
+        'EntriesPerPage' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EntriesPerPage'
+        ),
+        'PageNumber' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PageNumber'
         )
     );
 

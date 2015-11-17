@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ItemID
- * @property string $ItemReasonForFailure
  * @property \DTS\eBaySDK\Trading\Enums\VeROItemStatusCodeType $ItemStatus
+ * @property string $ItemReasonForFailure
  */
 class VeROReportedItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class VeROReportedItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemID'
         ),
-        'ItemReasonForFailure' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemReasonForFailure'
-        ),
         'ItemStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemStatus'
+        ),
+        'ItemReasonForFailure' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemReasonForFailure'
         )
     );
 

@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealReasonType $appealReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealReasonType $appealReason
  * @property string $comments
  */
 class AppealToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
@@ -33,17 +33,17 @@ class AppealToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManageme
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'appealReason' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'appealReason'
-        ),
         'caseId' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
+        ),
+        'appealReason' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'appealReason'
         ),
         'comments' => array(
             'type' => 'string',

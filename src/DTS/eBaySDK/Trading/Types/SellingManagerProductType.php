@@ -24,9 +24,9 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
+ * @property \DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType $SellingManagerTemplateDetailsArray
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductInventoryStatusType $SellingManagerProductInventoryStatus
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType $SellingManagerProductSpecifics
- * @property \DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType $SellingManagerTemplateDetailsArray
  */
 class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -40,6 +40,12 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
         ),
+        'SellingManagerTemplateDetailsArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerTemplateDetailsArray'
+        ),
         'SellingManagerProductInventoryStatus' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductInventoryStatusType',
             'unbound' => false,
@@ -51,12 +57,6 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductSpecifics'
-        ),
-        'SellingManagerTemplateDetailsArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerTemplateDetailsArray'
         )
     );
 

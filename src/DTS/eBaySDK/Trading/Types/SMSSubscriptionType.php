@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $SMSPhone
+ * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionUserStatusCodeType $UserStatus
  * @property \DTS\eBaySDK\Trading\Enums\WirelessCarrierIDCodeType $CarrierID
  * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionErrorCodeCodeType $ErrorCode
  * @property string $ItemToUnsubscribe
- * @property string $SMSPhone
- * @property \DTS\eBaySDK\Trading\Enums\SMSSubscriptionUserStatusCodeType $UserStatus
  */
 class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,6 +35,18 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'SMSPhone' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SMSPhone'
+        ),
+        'UserStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UserStatus'
+        ),
         'CarrierID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -52,18 +64,6 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemToUnsubscribe'
-        ),
-        'SMSPhone' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SMSPhone'
-        ),
-        'UserStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserStatus'
         )
     );
 

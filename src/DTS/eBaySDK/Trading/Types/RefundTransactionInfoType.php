@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
  * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $RefundStatus
- * @property \DateTime $RefundTime
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $RefundTo
  * @property \DTS\eBaySDK\Trading\Enums\RefundSourceTypeCodeType $RefundType
+ * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $RefundTo
+ * @property \DateTime $RefundTime
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
+ * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
  */
 class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,35 +37,17 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'FeeOrCreditAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeeOrCreditAmount'
-        ),
-        'ReferenceID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReferenceID'
-        ),
-        'RefundAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ),
         'RefundStatus' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundStatus'
         ),
-        'RefundTime' => array(
-            'type' => 'DateTime',
+        'RefundType' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RefundTime'
+            'elementName' => 'RefundType'
         ),
         'RefundTo' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
@@ -73,11 +55,29 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'RefundTo'
         ),
-        'RefundType' => array(
-            'type' => 'string',
+        'RefundTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'RefundType'
+            'elementName' => 'RefundTime'
+        ),
+        'RefundAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'RefundAmount'
+        ),
+        'ReferenceID' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReferenceID'
+        ),
+        'FeeOrCreditAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeOrCreditAmount'
         )
     );
 

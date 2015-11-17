@@ -23,36 +23,36 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualShippingCost
- * @property string $BuyerPaymentTransactionNumber
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
- * @property string $FeeDescription
- * @property string $GlobalCategoryDescription
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $InsuranceCost
+ * @property string $OrderLineItemID
+ * @property \DateTime $TransactionTime
+ * @property \DateTime $OriginalChargeTime
  * @property string $ItemID
  * @property string $ItemTitle
- * @property integer $ListingSiteID
- * @property string $Memo
- * @property string $OrderLineItemID
- * @property \DateTime $OriginalChargeTime
- * @property \DateTime $PaymentClearedTime
- * @property integer $QuantitySold
- * @property string $SKU
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $SalePrice
- * @property \DateTime $SaleTime
- * @property string $SecondDescription
- * @property integer $SellingManagerSaleRecordID
  * @property string $SerialNumber
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingCost
+ * @property string $SKU
+ * @property string $GlobalCategoryDescription
  * @property string $SiteDescription
- * @property \DTS\eBaySDK\MerchantData\Types\TransactionStatusType $Status
+ * @property integer $QuantitySold
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $SalePrice
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ShippingCost
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TotalCost
+ * @property \DateTime $PaymentClearedTime
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $InsuranceCost
+ * @property integer $ListingSiteID
+ * @property \DateTime $SaleTime
+ * @property string $Memo
+ * @property string $SecondDescription
+ * @property string $FeeDescription
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
+ * @property integer $SellingManagerSaleRecordID
+ * @property string $BuyerPaymentTransactionNumber
+ * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType $Variation
  * @property string $TaxCategory
  * @property \DTS\eBaySDK\MerchantData\Types\TaxesType $Taxes
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TotalCost
- * @property \DateTime $TransactionTime
+ * @property \DTS\eBaySDK\MerchantData\Types\TransactionStatusType $Status
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualShippingCost
  * @property \DTS\eBaySDK\MerchantData\Types\UnpaidItemType $UnpaidItem
- * @property \DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType $Variation
  */
 class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -60,41 +60,23 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ActualShippingCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ActualShippingCost'
-        ),
-        'BuyerPaymentTransactionNumber' => array(
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'BuyerPaymentTransactionNumber'
+            'elementName' => 'OrderLineItemID'
         ),
-        'FeeAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+        'TransactionTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeAmount'
+            'elementName' => 'TransactionTime'
         ),
-        'FeeDescription' => array(
-            'type' => 'string',
+        'OriginalChargeTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'FeeDescription'
-        ),
-        'GlobalCategoryDescription' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GlobalCategoryDescription'
-        ),
-        'InsuranceCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceCost'
+            'elementName' => 'OriginalChargeTime'
         ),
         'ItemID' => array(
             'type' => 'string',
@@ -108,41 +90,11 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ItemTitle'
         ),
-        'ListingSiteID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingSiteID'
-        ),
-        'Memo' => array(
+        'SerialNumber' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Memo'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'OriginalChargeTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OriginalChargeTime'
-        ),
-        'PaymentClearedTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentClearedTime'
-        ),
-        'QuantitySold' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'QuantitySold'
+            'elementName' => 'SerialNumber'
         ),
         'SKU' => array(
             'type' => 'string',
@@ -150,41 +102,11 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SKU'
         ),
-        'SalePrice' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SalePrice'
-        ),
-        'SaleTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SaleTime'
-        ),
-        'SecondDescription' => array(
+        'GlobalCategoryDescription' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SecondDescription'
-        ),
-        'SellingManagerSaleRecordID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SellingManagerSaleRecordID'
-        ),
-        'SerialNumber' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SerialNumber'
-        ),
-        'ShippingCost' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingCost'
+            'elementName' => 'GlobalCategoryDescription'
         ),
         'SiteDescription' => array(
             'type' => 'string',
@@ -192,17 +114,101 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SiteDescription'
         ),
-        'Status' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionStatusType',
+        'QuantitySold' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Status'
+            'elementName' => 'QuantitySold'
+        ),
+        'SalePrice' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SalePrice'
         ),
         'TaxAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxAmount'
+        ),
+        'ShippingCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingCost'
+        ),
+        'TotalCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalCost'
+        ),
+        'PaymentClearedTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentClearedTime'
+        ),
+        'InsuranceCost' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InsuranceCost'
+        ),
+        'ListingSiteID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ListingSiteID'
+        ),
+        'SaleTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SaleTime'
+        ),
+        'Memo' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Memo'
+        ),
+        'SecondDescription' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SecondDescription'
+        ),
+        'FeeDescription' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeDescription'
+        ),
+        'FeeAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeAmount'
+        ),
+        'SellingManagerSaleRecordID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SellingManagerSaleRecordID'
+        ),
+        'BuyerPaymentTransactionNumber' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BuyerPaymentTransactionNumber'
+        ),
+        'Variation' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Variation'
         ),
         'TaxCategory' => array(
             'type' => 'string',
@@ -216,29 +222,23 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Taxes'
         ),
-        'TotalCost' => array(
+        'Status' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionStatusType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
+        'ActualShippingCost' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TotalCost'
-        ),
-        'TransactionTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionTime'
+            'elementName' => 'ActualShippingCost'
         ),
         'UnpaidItem' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\UnpaidItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItem'
-        ),
-        'Variation' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Variation'
         )
     );
 

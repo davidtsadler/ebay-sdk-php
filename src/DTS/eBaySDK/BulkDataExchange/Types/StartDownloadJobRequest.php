@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property string $UUID
  * @property string $downloadJobType
+ * @property string $UUID
  * @property \DTS\eBaySDK\BulkDataExchange\Types\DownloadRequestFilter $downloadRequestFilter
  */
 class StartDownloadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
@@ -33,17 +33,17 @@ class StartDownloadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'UUID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UUID'
-        ),
         'downloadJobType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'downloadJobType'
+        ),
+        'UUID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UUID'
         ),
         'downloadRequestFilter' => array(
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DownloadRequestFilter',

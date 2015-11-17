@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DateTime $StartTime
  * @property \DateTime $EndTime
  * @property string $ItemID
- * @property \DateTime $StartTime
  */
 class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,6 +33,12 @@ class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'StartTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'StartTime'
+        ),
         'EndTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
@@ -44,12 +50,6 @@ class GetNotificationsUsageRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'StartTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StartTime'
         )
     );
 

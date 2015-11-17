@@ -25,8 +25,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
  *
  * @property \DateTime $creationTimeFrom
  * @property \DateTime $creationTimeTo
- * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus[] $jobStatus
  * @property string[] $jobType
+ * @property \DTS\eBaySDK\BulkDataExchange\Enums\JobStatus[] $jobStatus
  */
 class GetJobsRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest
 {
@@ -46,17 +46,17 @@ class GetJobsRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequ
             'attribute' => false,
             'elementName' => 'creationTimeTo'
         ),
-        'jobStatus' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'jobStatus'
-        ),
         'jobType' => array(
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'jobType'
+        ),
+        'jobStatus' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'jobStatus'
         )
     );
 

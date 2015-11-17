@@ -23,11 +23,11 @@ namespace DTS\eBaySDK\Finding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Finding\Enums\MapExposureEnum $minimumAdvertisedPriceExposure
  * @property \DTS\eBaySDK\Finding\Types\Amount $originalRetailPrice
+ * @property \DTS\eBaySDK\Finding\Enums\MapExposureEnum $minimumAdvertisedPriceExposure
  * @property \DTS\eBaySDK\Finding\Enums\PriceTreatmentEnum $pricingTreatment
- * @property boolean $soldOffEbay
  * @property boolean $soldOnEbay
+ * @property boolean $soldOffEbay
  */
 class DiscountPriceInfo extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,17 +35,17 @@ class DiscountPriceInfo extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'minimumAdvertisedPriceExposure' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'minimumAdvertisedPriceExposure'
-        ),
         'originalRetailPrice' => array(
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'originalRetailPrice'
+        ),
+        'minimumAdvertisedPriceExposure' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'minimumAdvertisedPriceExposure'
         ),
         'pricingTreatment' => array(
             'type' => 'string',
@@ -53,17 +53,17 @@ class DiscountPriceInfo extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'pricingTreatment'
         ),
-        'soldOffEbay' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'soldOffEbay'
-        ),
         'soldOnEbay' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'soldOnEbay'
+        ),
+        'soldOffEbay' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'soldOffEbay'
         )
     );
 

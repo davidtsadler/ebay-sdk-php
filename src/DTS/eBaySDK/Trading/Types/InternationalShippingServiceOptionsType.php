@@ -23,14 +23,14 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
+ * @property string $ShippingService
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
+ * @property integer $ShippingServicePriority
  * @property string[] $ShipToLocation
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
- * @property string $ShippingService
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceAdditionalCost
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingServiceCost
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $ImportCharge
  * @property \DateTime $ShippingServiceCutOffTime
- * @property integer $ShippingServicePriority
  */
 class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -38,11 +38,29 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ImportCharge' => array(
+        'ShippingService' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingService'
+        ),
+        'ShippingServiceCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ImportCharge'
+            'elementName' => 'ShippingServiceCost'
+        ),
+        'ShippingServiceAdditionalCost' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceAdditionalCost'
+        ),
+        'ShippingServicePriority' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShippingServicePriority'
         ),
         'ShipToLocation' => array(
             'type' => 'string',
@@ -56,35 +74,17 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
         ),
-        'ShippingService' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingService'
-        ),
-        'ShippingServiceAdditionalCost' => array(
+        'ImportCharge' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingServiceCost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceCost'
+            'elementName' => 'ImportCharge'
         ),
         'ShippingServiceCutOffTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCutOffTime'
-        ),
-        'ShippingServicePriority' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingServicePriority'
         )
     );
 

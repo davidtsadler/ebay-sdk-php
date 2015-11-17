@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $HelpURLPath
  * @property string $ListingTipMessageID
- * @property string $LongMessage
  * @property string $ShortMessage
+ * @property string $LongMessage
+ * @property string $HelpURLPath
  */
 class ListingTipMessageType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,17 +34,17 @@ class ListingTipMessageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'HelpURLPath' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'HelpURLPath'
-        ),
         'ListingTipMessageID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingTipMessageID'
+        ),
+        'ShortMessage' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ShortMessage'
         ),
         'LongMessage' => array(
             'type' => 'string',
@@ -52,11 +52,11 @@ class ListingTipMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LongMessage'
         ),
-        'ShortMessage' => array(
+        'HelpURLPath' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShortMessage'
+            'elementName' => 'HelpURLPath'
         )
     );
 

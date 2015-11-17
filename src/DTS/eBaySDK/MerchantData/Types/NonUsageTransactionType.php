@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property \DateTime $TransactionTime
  * @property string $Description
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
  * @property string $Memo
  * @property \DateTime $OriginalChargeTime
  * @property \DateTime $StartTime
- * @property \DateTime $TransactionTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $FeeAmount
  */
 class NonUsageTransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -37,23 +37,17 @@ class NonUsageTransactionType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'TransactionTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionTime'
+        ),
         'Description' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'EndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ),
-        'FeeAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FeeAmount'
         ),
         'Memo' => array(
             'type' => 'string',
@@ -73,11 +67,17 @@ class NonUsageTransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'StartTime'
         ),
-        'TransactionTime' => array(
+        'EndTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionTime'
+            'elementName' => 'EndTime'
+        ),
+        'FeeAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'FeeAmount'
         )
     );
 

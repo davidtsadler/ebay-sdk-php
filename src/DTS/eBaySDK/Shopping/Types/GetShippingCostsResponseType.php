@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\PickUpInStoreDetailsType $PickUpInStoreDetails
- * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
  * @property \DTS\eBaySDK\Shopping\Types\ShippingDetailsType $ShippingDetails
+ * @property \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType $ShippingCostSummary
+ * @property \DTS\eBaySDK\Shopping\Types\PickUpInStoreDetailsType $PickUpInStoreDetails
  */
 class GetShippingCostsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -33,11 +33,11 @@ class GetShippingCostsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'PickUpInStoreDetails' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\PickUpInStoreDetailsType',
+        'ShippingDetails' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'PickUpInStoreDetails'
+            'elementName' => 'ShippingDetails'
         ),
         'ShippingCostSummary' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
@@ -45,11 +45,11 @@ class GetShippingCostsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
             'attribute' => false,
             'elementName' => 'ShippingCostSummary'
         ),
-        'ShippingDetails' => array(
-            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingDetailsType',
+        'PickUpInStoreDetails' => array(
+            'type' => 'DTS\eBaySDK\Shopping\Types\PickUpInStoreDetailsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ShippingDetails'
+            'elementName' => 'PickUpInStoreDetails'
         )
     );
 

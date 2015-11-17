@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Money $amount
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Money $amount
  * @property string $comments
  */
 class OfferPartialRefundRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
@@ -33,17 +33,17 @@ class OfferPartialRefundRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Ty
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'amount' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Money',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'amount'
-        ),
         'caseId' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
+        ),
+        'amount' => array(
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Money',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'amount'
         ),
         'comments' => array(
             'type' => 'string',

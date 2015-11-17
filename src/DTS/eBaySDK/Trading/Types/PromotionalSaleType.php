@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property integer $PromotionalSaleID
+ * @property string $PromotionalSaleName
+ * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
+ * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleStatusCodeType $Status
  * @property \DTS\eBaySDK\Trading\Enums\DiscountCodeType $DiscountType
  * @property double $DiscountValue
- * @property \DateTime $PromotionalSaleEndTime
- * @property integer $PromotionalSaleID
- * @property \DTS\eBaySDK\Trading\Types\ItemIDArrayType $PromotionalSaleItemIDArray
- * @property string $PromotionalSaleName
  * @property \DateTime $PromotionalSaleStartTime
+ * @property \DateTime $PromotionalSaleEndTime
  * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleTypeCodeType $PromotionalSaleType
- * @property \DTS\eBaySDK\Trading\Enums\PromotionalSaleStatusCodeType $Status
  */
 class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,6 +39,30 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PromotionalSaleID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleID'
+        ),
+        'PromotionalSaleName' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleName'
+        ),
+        'PromotionalSaleItemIDArray' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleItemIDArray'
+        ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
         'DiscountType' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,47 +75,23 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DiscountValue'
         ),
-        'PromotionalSaleEndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleEndTime'
-        ),
-        'PromotionalSaleID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleID'
-        ),
-        'PromotionalSaleItemIDArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleItemIDArray'
-        ),
-        'PromotionalSaleName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PromotionalSaleName'
-        ),
         'PromotionalSaleStartTime' => array(
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleStartTime'
         ),
+        'PromotionalSaleEndTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PromotionalSaleEndTime'
+        ),
         'PromotionalSaleType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleType'
-        ),
-        'Status' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
         )
     );
 

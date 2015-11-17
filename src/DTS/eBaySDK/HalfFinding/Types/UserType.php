@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
+ * @property string $userID
  * @property integer $feedbackScore
  * @property double $positiveFeedbackPercent
- * @property string $userID
  */
 class UserType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,6 +33,12 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'userID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'userID'
+        ),
         'feedbackScore' => array(
             'type' => 'integer',
             'unbound' => false,
@@ -44,12 +50,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
-        ),
-        'userID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'userID'
         )
     );
 

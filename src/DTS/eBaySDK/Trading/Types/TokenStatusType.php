@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Enums\TokenStatusCodeType $Status
  * @property string $EIASToken
  * @property \DateTime $ExpirationTime
  * @property \DateTime $RevocationTime
- * @property \DTS\eBaySDK\Trading\Enums\TokenStatusCodeType $Status
  */
 class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,6 +34,12 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
         'EIASToken' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,12 +57,6 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RevocationTime'
-        ),
-        'Status' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Status'
         )
     );
 

@@ -25,11 +25,11 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Types\CategoryArrayType $CategoryArray
  * @property integer $CategoryCount
+ * @property \DateTime $UpdateTime
  * @property string $CategoryVersion
+ * @property boolean $ReservePriceAllowed
  * @property double $MinimumReservePrice
  * @property boolean $ReduceReserveAllowed
- * @property boolean $ReservePriceAllowed
- * @property \DateTime $UpdateTime
  */
 class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -49,11 +49,23 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'attribute' => false,
             'elementName' => 'CategoryCount'
         ),
+        'UpdateTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'UpdateTime'
+        ),
         'CategoryVersion' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
+        ),
+        'ReservePriceAllowed' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ReservePriceAllowed'
         ),
         'MinimumReservePrice' => array(
             'type' => 'double',
@@ -66,18 +78,6 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReduceReserveAllowed'
-        ),
-        'ReservePriceAllowed' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReservePriceAllowed'
-        ),
-        'UpdateTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UpdateTime'
         )
     );
 

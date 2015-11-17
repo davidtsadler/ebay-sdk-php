@@ -40,6 +40,7 @@ class ValueTypeCodeType
     const C_NIE = 'NIE';
     const C_NIF = 'NIF';
     const C_NIT = 'NIT';
+    const C_NUMERIC = 'Numeric';
     const C_RUSSIAN_PASSPORT = 'RussianPassport';
     const C_TEXT = 'Text';
     const C_TURKEYID = 'TurkeyID';

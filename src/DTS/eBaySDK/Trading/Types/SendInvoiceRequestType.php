@@ -23,22 +23,22 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
- * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
+ * @property string $ItemID
+ * @property string $TransactionID
+ * @property string $OrderID
+ * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOptions
+ * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
+ * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
+ * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuranceFee
+ * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
+ * @property string $PayPalEmailAddress
  * @property string $CheckoutInstructions
  * @property boolean $EmailCopyToSeller
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuranceFee
- * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
- * @property \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType[] $InternationalShippingServiceOptions
- * @property string $ItemID
- * @property string $OrderID
- * @property string $OrderLineItemID
- * @property string $PayPalEmailAddress
- * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $CODCost
  * @property string $SKU
- * @property \DTS\eBaySDK\Trading\Types\SalesTaxType $SalesTax
- * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType[] $ShippingServiceOptions
- * @property string $TransactionID
+ * @property string $OrderLineItemID
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
  */
 class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -46,17 +46,65 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AdjustmentAmount' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+        'ItemID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'AdjustmentAmount'
+            'elementName' => 'ItemID'
         ),
-        'CODCost' => array(
+        'TransactionID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TransactionID'
+        ),
+        'OrderID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'OrderID'
+        ),
+        'InternationalShippingServiceOptions' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'InternationalShippingServiceOptions'
+        ),
+        'ShippingServiceOptions' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'ShippingServiceOptions'
+        ),
+        'SalesTax' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SalesTax'
+        ),
+        'InsuranceOption' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'InsuranceOption'
+        ),
+        'InsuranceFee' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CODCost'
+            'elementName' => 'InsuranceFee'
+        ),
+        'PaymentMethods' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'PaymentMethods'
+        ),
+        'PayPalEmailAddress' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalEmailAddress'
         ),
         'CheckoutInstructions' => array(
             'type' => 'string',
@@ -70,53 +118,11 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'EmailCopyToSeller'
         ),
-        'InsuranceFee' => array(
+        'CODCost' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'InsuranceFee'
-        ),
-        'InsuranceOption' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceOption'
-        ),
-        'InternationalShippingServiceOptions' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingServiceOptions'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ),
-        'OrderID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderID'
-        ),
-        'OrderLineItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ),
-        'PayPalEmailAddress' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalEmailAddress'
-        ),
-        'PaymentMethods' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentMethods'
+            'elementName' => 'CODCost'
         ),
         'SKU' => array(
             'type' => 'string',
@@ -124,23 +130,17 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'attribute' => false,
             'elementName' => 'SKU'
         ),
-        'SalesTax' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'SalesTax'
-        ),
-        'ShippingServiceOptions' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ShippingServiceOptions'
-        ),
-        'TransactionID' => array(
+        'OrderLineItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TransactionID'
+            'elementName' => 'OrderLineItemID'
+        ),
+        'AdjustmentAmount' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AdjustmentAmount'
         )
     );
 

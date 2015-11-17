@@ -23,8 +23,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Types;
 
 /**
  *
- * @property string $fileReferenceId
  * @property string $jobId
+ * @property string $fileReferenceId
  * @property string $maxFileSize
  */
 class CreateUploadJobResponse extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse
@@ -33,17 +33,17 @@ class CreateUploadJobResponse extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'fileReferenceId' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'fileReferenceId'
-        ),
         'jobId' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobId'
+        ),
+        'fileReferenceId' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'fileReferenceId'
         ),
         'maxFileSize' => array(
             'type' => 'string',

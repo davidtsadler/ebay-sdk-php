@@ -23,18 +23,18 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Body
- * @property boolean $DisplayToPublic
- * @property boolean $EmailCopyToSender
- * @property string $MessageID
- * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
  * @property \DTS\eBaySDK\Trading\Enums\MessageTypeCodeType $MessageType
- * @property string $ParentMessageID
  * @property \DTS\eBaySDK\Trading\Enums\QuestionTypeCodeType $QuestionType
- * @property string[] $RecipientID
- * @property string $SenderEmail
+ * @property boolean $EmailCopyToSender
+ * @property boolean $DisplayToPublic
  * @property string $SenderID
+ * @property string $SenderEmail
+ * @property string[] $RecipientID
  * @property string $Subject
+ * @property string $Body
+ * @property string $MessageID
+ * @property string $ParentMessageID
+ * @property \DTS\eBaySDK\Trading\Types\MessageMediaType[] $MessageMedia
  */
 class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,47 +42,11 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Body' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Body'
-        ),
-        'DisplayToPublic' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayToPublic'
-        ),
-        'EmailCopyToSender' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EmailCopyToSender'
-        ),
-        'MessageID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MessageID'
-        ),
-        'MessageMedia' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'MessageMedia'
-        ),
         'MessageType' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageType'
-        ),
-        'ParentMessageID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ParentMessageID'
         ),
         'QuestionType' => array(
             'type' => 'string',
@@ -90,17 +54,17 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QuestionType'
         ),
-        'RecipientID' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'RecipientID'
-        ),
-        'SenderEmail' => array(
-            'type' => 'string',
+        'EmailCopyToSender' => array(
+            'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'SenderEmail'
+            'elementName' => 'EmailCopyToSender'
+        ),
+        'DisplayToPublic' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayToPublic'
         ),
         'SenderID' => array(
             'type' => 'string',
@@ -108,11 +72,47 @@ class MemberMessageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SenderID'
         ),
+        'SenderEmail' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'SenderEmail'
+        ),
+        'RecipientID' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'RecipientID'
+        ),
         'Subject' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Subject'
+        ),
+        'Body' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Body'
+        ),
+        'MessageID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MessageID'
+        ),
+        'ParentMessageID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ParentMessageID'
+        ),
+        'MessageMedia' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'MessageMedia'
         )
     );
 

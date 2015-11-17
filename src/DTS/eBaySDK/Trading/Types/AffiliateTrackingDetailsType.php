@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $AffiliateUserID
- * @property \DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType $ApplicationDeviceType
  * @property string $TrackingID
  * @property string $TrackingPartnerCode
+ * @property \DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType $ApplicationDeviceType
+ * @property string $AffiliateUserID
  */
 class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,18 +34,6 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AffiliateUserID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AffiliateUserID'
-        ),
-        'ApplicationDeviceType' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ApplicationDeviceType'
-        ),
         'TrackingID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +45,18 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TrackingPartnerCode'
+        ),
+        'ApplicationDeviceType' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ApplicationDeviceType'
+        ),
+        'AffiliateUserID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'AffiliateUserID'
         )
     );
 

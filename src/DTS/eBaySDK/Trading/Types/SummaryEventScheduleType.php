@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\NotificationEventTypeCodeType $EventType
- * @property \DTS\eBaySDK\Trading\Enums\SummaryFrequencyCodeType $Frequency
  * @property \DTS\eBaySDK\Trading\Enums\SummaryWindowPeriodCodeType $SummaryPeriod
+ * @property \DTS\eBaySDK\Trading\Enums\SummaryFrequencyCodeType $Frequency
  */
 class SummaryEventScheduleType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,17 +39,17 @@ class SummaryEventScheduleType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EventType'
         ),
-        'Frequency' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Frequency'
-        ),
         'SummaryPeriod' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SummaryPeriod'
+        ),
+        'Frequency' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Frequency'
         )
     );
 

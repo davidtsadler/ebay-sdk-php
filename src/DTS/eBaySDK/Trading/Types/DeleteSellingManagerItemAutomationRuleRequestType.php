@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $ItemID
  * @property boolean $DeleteAutomatedRelistingRule
  * @property boolean $DeleteAutomatedSecondChanceOfferRule
- * @property string $ItemID
  */
 class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,6 +33,12 @@ class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'ItemID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'ItemID'
+        ),
         'DeleteAutomatedRelistingRule' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -44,12 +50,6 @@ class DeleteSellingManagerItemAutomationRuleRequestType extends \DTS\eBaySDK\Tra
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeleteAutomatedSecondChanceOfferRule'
-        ),
-        'ItemID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
         )
     );
 

@@ -23,17 +23,17 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Category2ID
- * @property string $CategoryID
- * @property string $CorrelationID
- * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
- * @property \DateTime $EndTime
- * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
- * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
  * @property string $ItemID
- * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
- * @property string $Message
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
+ * @property \DTS\eBaySDK\Trading\Types\FeesType $Fees
+ * @property string $CategoryID
+ * @property string $Category2ID
+ * @property string $CorrelationID
+ * @property \DTS\eBaySDK\Trading\Types\ErrorType[] $Errors
+ * @property string $Message
+ * @property \DTS\eBaySDK\Trading\Enums\DiscountReasonCodeType[] $DiscountReason
+ * @property \DTS\eBaySDK\Trading\Types\ListingRecommendationsType $ListingRecommendations
  */
 class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -41,29 +41,17 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Category2ID' => array(
+        'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Category2ID'
+            'elementName' => 'ItemID'
         ),
-        'CategoryID' => array(
-            'type' => 'string',
+        'StartTime' => array(
+            'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'CategoryID'
-        ),
-        'CorrelationID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
-        ),
-        'DiscountReason' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'DiscountReason'
+            'elementName' => 'StartTime'
         ),
         'EndTime' => array(
             'type' => 'DateTime',
@@ -71,29 +59,35 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'EndTime'
         ),
-        'Errors' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Errors'
-        ),
         'Fees' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fees'
         ),
-        'ItemID' => array(
+        'CategoryID' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ItemID'
+            'elementName' => 'CategoryID'
         ),
-        'ListingRecommendations' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
+        'Category2ID' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ListingRecommendations'
+            'elementName' => 'Category2ID'
+        ),
+        'CorrelationID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'CorrelationID'
+        ),
+        'Errors' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'Errors'
         ),
         'Message' => array(
             'type' => 'string',
@@ -101,11 +95,17 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Message'
         ),
-        'StartTime' => array(
-            'type' => 'DateTime',
+        'DiscountReason' => array(
+            'type' => 'string',
+            'unbound' => true,
+            'attribute' => false,
+            'elementName' => 'DiscountReason'
+        ),
+        'ListingRecommendations' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'StartTime'
+            'elementName' => 'ListingRecommendations'
         )
     );
 

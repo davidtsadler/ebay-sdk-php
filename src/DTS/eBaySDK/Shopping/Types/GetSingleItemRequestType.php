@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $IncludeSelector
  * @property string $ItemID
  * @property string $VariationSKU
  * @property \DTS\eBaySDK\Shopping\Types\NameValueListArrayType $VariationSpecifics
+ * @property string $IncludeSelector
  */
 class GetSingleItemRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -34,12 +34,6 @@ class GetSingleItemRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReque
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'IncludeSelector' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeSelector'
-        ),
         'ItemID' => array(
             'type' => 'string',
             'unbound' => false,
@@ -57,6 +51,12 @@ class GetSingleItemRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReque
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
+        ),
+        'IncludeSelector' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'IncludeSelector'
         )
     );
 

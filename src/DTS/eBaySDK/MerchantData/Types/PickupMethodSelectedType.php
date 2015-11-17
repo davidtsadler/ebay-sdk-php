@@ -23,12 +23,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property string $PickupMethod
+ * @property string $PickupStoreID
+ * @property \DTS\eBaySDK\MerchantData\Enums\PickupStatusCodeType $PickupStatus
  * @property string $MerchantPickupCode
  * @property \DateTime $PickupFulfillmentTime
  * @property string $PickupLocationUUID
- * @property string $PickupMethod
- * @property \DTS\eBaySDK\MerchantData\Enums\PickupStatusCodeType $PickupStatus
- * @property string $PickupStoreID
  */
 class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,6 +36,24 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'PickupMethod' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PickupMethod'
+        ),
+        'PickupStoreID' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PickupStoreID'
+        ),
+        'PickupStatus' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PickupStatus'
+        ),
         'MerchantPickupCode' => array(
             'type' => 'string',
             'unbound' => false,
@@ -53,24 +71,6 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupLocationUUID'
-        ),
-        'PickupMethod' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PickupMethod'
-        ),
-        'PickupStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PickupStatus'
-        ),
-        'PickupStoreID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PickupStoreID'
         )
     );
 

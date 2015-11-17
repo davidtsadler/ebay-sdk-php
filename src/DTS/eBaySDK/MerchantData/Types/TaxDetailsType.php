@@ -24,12 +24,12 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property \DTS\eBaySDK\MerchantData\Enums\TaxTypeCodeType $Imposition
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxAmount
- * @property string $TaxCode
  * @property \DTS\eBaySDK\MerchantData\Enums\TaxDescriptionCodeType $TaxDescription
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxOnHandlingAmount
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxOnShippingAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxAmount
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxOnSubtotalAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxOnShippingAmount
+ * @property \DTS\eBaySDK\MerchantData\Types\AmountType $TaxOnHandlingAmount
+ * @property string $TaxCode
  */
 class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -43,29 +43,23 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'Imposition'
         ),
-        'TaxAmount' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TaxAmount'
-        ),
-        'TaxCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'TaxCode'
-        ),
         'TaxDescription' => array(
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxDescription'
         ),
-        'TaxOnHandlingAmount' => array(
+        'TaxAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TaxOnHandlingAmount'
+            'elementName' => 'TaxAmount'
+        ),
+        'TaxOnSubtotalAmount' => array(
+            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TaxOnSubtotalAmount'
         ),
         'TaxOnShippingAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
@@ -73,11 +67,17 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'TaxOnShippingAmount'
         ),
-        'TaxOnSubtotalAmount' => array(
+        'TaxOnHandlingAmount' => array(
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TaxOnSubtotalAmount'
+            'elementName' => 'TaxOnHandlingAmount'
+        ),
+        'TaxCode' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TaxCode'
         )
     );
 

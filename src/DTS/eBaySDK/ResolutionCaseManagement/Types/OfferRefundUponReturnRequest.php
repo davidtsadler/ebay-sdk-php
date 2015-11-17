@@ -23,10 +23,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property string $additionalReturnInstructions
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType $caseId
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Address $returnAddress
  * @property string $returnMerchandiseAuthorization
+ * @property string $additionalReturnInstructions
  */
 class OfferRefundUponReturnRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseRequest
 {
@@ -34,12 +34,6 @@ class OfferRefundUponReturnRequest extends \DTS\eBaySDK\ResolutionCaseManagement
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'additionalReturnInstructions' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'additionalReturnInstructions'
-        ),
         'caseId' => array(
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
@@ -57,6 +51,12 @@ class OfferRefundUponReturnRequest extends \DTS\eBaySDK\ResolutionCaseManagement
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
+        ),
+        'additionalReturnInstructions' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'additionalReturnInstructions'
         )
     );
 

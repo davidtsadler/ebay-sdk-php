@@ -23,13 +23,13 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property integer $ApproximatePages
  * @property \DTS\eBaySDK\Shopping\Types\DomainHistogramType $DomainHistogram
- * @property boolean $MoreResults
  * @property integer $PageNumber
- * @property string $ProductSearchURL
- * @property \DTS\eBaySDK\Shopping\Types\HalfProductsType[] $Products
+ * @property integer $ApproximatePages
+ * @property boolean $MoreResults
  * @property integer $TotalProducts
+ * @property \DTS\eBaySDK\Shopping\Types\HalfProductsType[] $Products
+ * @property string $ProductSearchURL
  */
 class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -37,23 +37,11 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ApproximatePages' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ApproximatePages'
-        ),
         'DomainHistogram' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
-        ),
-        'MoreResults' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MoreResults'
         ),
         'PageNumber' => array(
             'type' => 'integer',
@@ -61,11 +49,23 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
             'attribute' => false,
             'elementName' => 'PageNumber'
         ),
-        'ProductSearchURL' => array(
-            'type' => 'string',
+        'ApproximatePages' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'ProductSearchURL'
+            'elementName' => 'ApproximatePages'
+        ),
+        'MoreResults' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'MoreResults'
+        ),
+        'TotalProducts' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'TotalProducts'
         ),
         'Products' => array(
             'type' => 'DTS\eBaySDK\Shopping\Types\HalfProductsType',
@@ -73,11 +73,11 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
             'attribute' => false,
             'elementName' => 'Products'
         ),
-        'TotalProducts' => array(
-            'type' => 'integer',
+        'ProductSearchURL' => array(
+            'type' => 'string',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'TotalProducts'
+            'elementName' => 'ProductSearchURL'
         )
     );
 

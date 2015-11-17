@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
+ * @property boolean $BestOfferEnabled
  * @property boolean $AutoPayEnabled
  * @property boolean $B2BVATEnabled
- * @property boolean $BestOfferEnabled
  * @property boolean $CatalogEnabled
  * @property string $CategoryID
  * @property integer $CategoryLevel
@@ -34,11 +34,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property string[] $CategoryParentName
  * @property boolean $Expired
  * @property boolean $IntlAutosFixedCat
- * @property boolean $LSD
  * @property boolean $LeafCategory
+ * @property boolean $Virtual
  * @property boolean $ORPA
  * @property boolean $ORRA
- * @property boolean $Virtual
+ * @property boolean $LSD
  */
 class CategoryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -46,6 +46,12 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'BestOfferEnabled' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'BestOfferEnabled'
+        ),
         'AutoPayEnabled' => array(
             'type' => 'boolean',
             'unbound' => false,
@@ -57,12 +63,6 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'B2BVATEnabled'
-        ),
-        'BestOfferEnabled' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferEnabled'
         ),
         'CatalogEnabled' => array(
             'type' => 'boolean',
@@ -112,17 +112,17 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'IntlAutosFixedCat'
         ),
-        'LSD' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LSD'
-        ),
         'LeafCategory' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LeafCategory'
+        ),
+        'Virtual' => array(
+            'type' => 'boolean',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Virtual'
         ),
         'ORPA' => array(
             'type' => 'boolean',
@@ -136,11 +136,11 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ORRA'
         ),
-        'Virtual' => array(
+        'LSD' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Virtual'
+            'elementName' => 'LSD'
         )
     );
 

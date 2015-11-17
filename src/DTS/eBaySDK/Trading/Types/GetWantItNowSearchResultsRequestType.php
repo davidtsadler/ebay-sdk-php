@@ -24,10 +24,10 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  * @property string $Query
  * @property boolean $SearchInDescription
  * @property boolean $SearchWorldwide
+ * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
  */
 class GetWantItNowSearchResultsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -40,12 +40,6 @@ class GetWantItNowSearchResultsRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'Pagination' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
         ),
         'Query' => array(
             'type' => 'string',
@@ -64,6 +58,12 @@ class GetWantItNowSearchResultsRequestType extends \DTS\eBaySDK\Trading\Types\Ab
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchWorldwide'
+        ),
+        'Pagination' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Pagination'
         )
     );
 

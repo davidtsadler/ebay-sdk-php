@@ -23,9 +23,9 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DateTime $EndTime
  * @property \DTS\eBaySDK\Trading\Types\AmountType $OriginalPrice
  * @property \DateTime $StartTime
+ * @property \DateTime $EndTime
  */
 class PromotionalSaleDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,12 +33,6 @@ class PromotionalSaleDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'EndTime' => array(
-            'type' => 'DateTime',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EndTime'
-        ),
         'OriginalPrice' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
@@ -50,6 +44,12 @@ class PromotionalSaleDetailsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
+        ),
+        'EndTime' => array(
+            'type' => 'DateTime',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'EndTime'
         )
     );
 

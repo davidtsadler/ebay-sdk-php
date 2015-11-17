@@ -24,8 +24,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DateTime $InventoryCountLastCalculatedDate
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductType[] $SellingManagerProduct
+ * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
  */
 class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
 {
@@ -39,17 +39,17 @@ class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\
             'attribute' => false,
             'elementName' => 'InventoryCountLastCalculatedDate'
         ),
-        'PaginationResult' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PaginationResult'
-        ),
         'SellingManagerProduct' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellingManagerProduct'
+        ),
+        'PaginationResult' => array(
+            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PaginationResult'
         )
     );
 

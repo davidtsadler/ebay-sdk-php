@@ -23,15 +23,15 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property string $Name
+ * @property integer $PageID
+ * @property string $URLPath
+ * @property string $URL
+ * @property \DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType $Status
  * @property string $Content
  * @property boolean $LeftNav
- * @property string $Name
- * @property integer $Order
- * @property integer $PageID
  * @property boolean $PreviewEnabled
- * @property \DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType $Status
- * @property string $URL
- * @property string $URLPath
+ * @property integer $Order
  */
 class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,6 +39,36 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Name' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Name'
+        ),
+        'PageID' => array(
+            'type' => 'integer',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'PageID'
+        ),
+        'URLPath' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'URLPath'
+        ),
+        'URL' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'URL'
+        ),
+        'Status' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Status'
+        ),
         'Content' => array(
             'type' => 'string',
             'unbound' => false,
@@ -51,47 +81,17 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LeftNav'
         ),
-        'Name' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Name'
-        ),
-        'Order' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Order'
-        ),
-        'PageID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PageID'
-        ),
         'PreviewEnabled' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PreviewEnabled'
         ),
-        'Status' => array(
-            'type' => 'string',
+        'Order' => array(
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
-            'elementName' => 'Status'
-        ),
-        'URL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ),
-        'URLPath' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'URLPath'
+            'elementName' => 'Order'
         )
     );
 
