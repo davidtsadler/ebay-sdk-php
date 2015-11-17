@@ -57,7 +57,7 @@ class AddItemsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
         }
         
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'AddItemResponse';
+            self::$requestXmlRootElementNames[__CLASS__] = 'AddItemsResponse';
         }
         
         $this->setValues(__CLASS__, $childValues);
