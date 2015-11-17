@@ -562,16 +562,20 @@ class BaseType
      * @return string escaped string
      */
     private static function encodeXMLEntities($string) {
-        return strtr(
-            $string, 
-            array(
-                "<" => "&lt;",
-                ">" => "&gt;",
-                "\"" => "&quot;",
-                "\'" => "&apos;",
-                "&" => "&amp;",
-            )
-        );
+         if (is_string($value)) {
+            return strtr(
+                $value, 
+                array(
+                    "<" => "&lt;",
+                    ">" => "&gt;",
+                    "\"" => "&quot;",
+                    "\'" => "&apos;",
+                    "&" => "&amp;",
+                )
+            );
+        }
+        
+        return self::encodeValueXml($value);
     }
     
     /**
