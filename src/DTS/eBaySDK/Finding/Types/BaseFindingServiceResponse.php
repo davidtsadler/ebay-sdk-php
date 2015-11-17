@@ -33,6 +33,12 @@ class BaseFindingServiceResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
+        'Ack' => array(
+            'type' => 'string',
+            'unbound' => false,
+            'attribute' => false,
+            'elementName' => 'Ack'
+        ),
         'itemSearchURL' => array(
             'type' => 'string',
             'unbound' => false,
