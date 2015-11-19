@@ -71,7 +71,7 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
         }
 
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'GetCategorySpecificsRequest';
+            self::$requestXmlRootElementNames[__CLASS__] = 'GetCategorySpecificsResponse';
         }
         
         $this->setValues(__CLASS__, $childValues);
