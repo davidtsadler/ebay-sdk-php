@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 0.5.0 - 2015-11-20
 
 ### Fixes
 
