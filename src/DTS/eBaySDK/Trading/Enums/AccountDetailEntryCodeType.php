@@ -71,6 +71,7 @@ class AccountDetailEntryCodeType
     const C_CREDITEBP_REIMBURSEMENT = 'CreditEBPReimbursement';
     const C_CREDITE_BAY_MOTORS_PRO_FEATURE_FEE = 'CrediteBayMotorsProFeatureFee';
     const C_CREDITE_BAY_MOTORS_PRO_FEE = 'CrediteBayMotorsProFee';
+    const C_CREDITE_BAY_PLUS_SUBSCRIPTION = 'CrediteBayPlusSubscription';
     const C_CREDITE_BAY_STORES = 'CrediteBayStores';
     const C_CREDITIPIX_PHOTO = 'CreditIPIXPhoto';
     const C_CREDITIPIX_SLIDE_SHOW = 'CreditIPIXSlideShow';
@@ -153,6 +154,7 @@ class AccountDetailEntryCodeType
     const C_FEEAPAC_FED_EX_SHIPPING_LABEL = 'FeeAPACFedExShippingLabel';
     const C_FEEAU_POST_SHIPPING_LABEL = 'FeeAUPostShippingLabel';
     const C_FEEEBP_REIMBURSEMENT = 'FeeEBPReimbursement';
+    const C_FEEE_BAY_PLUS_SUBSCRIPTION = 'FeeeBayPlusSubscription';
     const C_FEEIPIX_PHOTO = 'FeeIPIXPhoto';
     const C_FEEIPIX_SLIDE_SHOW = 'FeeIPIXSlideShow';
     const C_FEENSF_CHECK = 'FeeNSFCheck';
