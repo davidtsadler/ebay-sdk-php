@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Fixes
+
+* Some properties where incorrectly declared as being `DTS\eBaySDK\ResolutionCaseManagement\Types\Integer` instead of `integer`.
+
 ## 0.4.0 - 2015-11-07
 
 ## Feature

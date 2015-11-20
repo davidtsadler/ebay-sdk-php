@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\Integer $customerSupportResponseTimeInHours
+ * @property integer $customerSupportResponseTimeInHours
  */
 class AppealToCustomerSupportOptionType extends \DTS\eBaySDK\ResolutionCaseManagement\Types\BaseActivityOptionType
 {
@@ -32,7 +32,7 @@ class AppealToCustomerSupportOptionType extends \DTS\eBaySDK\ResolutionCaseManag
      */
     private static $propertyTypes = array(
         'customerSupportResponseTimeInHours' => array(
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Integer',
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'customerSupportResponseTimeInHours'
