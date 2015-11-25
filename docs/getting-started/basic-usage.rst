@@ -85,7 +85,7 @@ Service-specific configuration options are deep merged with those provided to th
 
     $sdk = new DTS\eBaySDK\Sdk([
         'apiVersion' => '903',
-        'siteId' => '3'
+        'siteId'     => '3'
     ]);
 
     // Both services share options provide by the SDK.
@@ -95,5 +95,5 @@ Service-specific configuration options are deep merged with those provided to th
     // Finding service will get additional options.
     $finding = $sdk->createFinding([
         'apiVersion' => '1.13.0',
-        'globalId' => 'EBAY-GB'
+        'globalId'   => 'EBAY-GB'
     ]);

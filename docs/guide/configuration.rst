@@ -24,13 +24,6 @@ Refer to the :doc:`basic usage guide </getting-started/basic-usage>` for informa
 
     Some configuration options are only applicable to certain services. Where this is the case the services will be noted in the documentation for the configuration option.
 
-sandbox
-~~~~~~~
-
-:Type: ``bool``
-
-eBay provides a sandbox environment for testing your API calls. Pass ``true`` to tell the SDK to use this sandbox. By default the SDK will always use the production environment.
-
 credentials
 ~~~~~~~~~~~
 
@@ -44,6 +37,8 @@ Provide your "Application ID", "Certificate ID", and "Developer ID" credentials 
 You can :ref:`hardcode your credentials <hardcoded_credentials>` via an associative array of "appId", "certId", and "devId" key value pairs.
 
 .. code-block:: php
+
+    use \DTS\eBaySDK\Finding\Services\FindingService;
 
     $service = new FindingService([
         'apiVersion'  => '1.13.0',
@@ -59,7 +54,10 @@ You can also pass an instance of the ``DTS\eBaySDK\Interfaces\CredentialsInterfa
 
 .. code-block:: php
 
-    $credentials = new DTS\eBaySDK\Credentials\Credentials('111', '222', '333');
+    use \DTS\eBaySDK\Credentials\Credentials;
+    use \DTS\eBaySDK\Finding\Services\FindingService;
+
+    $credentials = new Credentials('111', '222', '333');
 
     $service = new FindingService([
         'apiVersion'  => '1.13.0',
@@ -71,8 +69,11 @@ Pass a callable :ref:`credentials provider <credentials_provider>` function to c
 
 .. code-block:: php
 
+    use \DTS\eBaySDK\Credentials\Credentials;
+    use \DTS\eBaySDK\Finding\Services\FindingService;
+
     $provider = function () {
-        return new DTS\eBaySDK\Credentials\Credentials('111', '222', '333');
+        return new Credentials('111', '222', '333');
     };
 
     $service = new FindingService([
@@ -86,6 +87,30 @@ More information about providing credentials to a client can be found in the :do
 .. note::
 
     Credentials must be valid for the eBay environment that you are using. Sandbox and production credentials are not interchangeable.
+
+profile
+~~~~~~~
+
+:Type: ``string``
+
+Specifies the name of a profile within the ini file that is located in your HOME directory. The SDK will attempt to load the credentials from this profile. Note that the ``credentials`` option and ``EBAY_SDK_PROFILE`` environment variable are both ignored if this option is specified.
+
+.. code-block:: php
+
+    use \DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion' => '1.13.0',
+        'globalId'   => 'EBAY-US',
+        'profile'    => 'production'
+    ]);
+
+sandbox
+~~~~~~~
+
+:Type: ``bool``
+
+eBay provides a sandbox environment for testing your API calls. Pass ``true`` to tell the SDK to use this sandbox. By default the SDK will always use the production environment.
 
 Managing the configuration
 --------------------------
@@ -123,3 +148,4 @@ You can pass an associative array to the ``setConfig`` method to set multiple co
         'apiVersion' => '1.13.0',
         'globalId'   => 'EBAY-US'
     ]);
+
