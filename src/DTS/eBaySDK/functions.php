@@ -2,6 +2,7 @@
 namespace DTS\eBaySDK;
 
 use DTS\eBaySDK\Credentials\Credentials;
+use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Interfaces\CredentialsInterface;
 
 function describe_type($value)
@@ -78,5 +79,10 @@ function apply_credentials($value, array &$configuration)
             . 'or a credentials provider function.'
         );
     }
+}
+
+function apply_profile($value, array &$configuration)
+{
+    $configuration['credentials'] = CredentialsProvider::ini($configuration['profile']);
 }
 

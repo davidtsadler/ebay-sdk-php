@@ -1,6 +1,7 @@
 <?php
 namespace DTS\eBaySDK\Services\Test;
 
+use DTS\eBaySDK\TestTraits\ManageEnv;
 use DTS\eBaySDK\Services\BaseService;
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
@@ -11,6 +12,8 @@ use DTS\eBaySDK\Mocks\Logger;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
+    use ManageEnv;
+
     public function testConfigDefinitions()
     {
         $d = BaseService::getConfigDefinitions();
@@ -27,6 +30,12 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'valid'   => ['bool'],
             'default' => false
         ], $d['debug']);
+
+        $this->assertArrayHasKey('profile', $d);
+        $this->assertEquals([
+            'valid' => ['string'],
+            'fn'    => 'DTS\eBaySDK\apply_profile',
+        ], $d['profile']);
 
         $this->assertArrayHasKey('sandbox', $d);
         $this->assertEquals([
@@ -180,6 +189,57 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('111', $c->getAppId());
         $this->assertEquals('222', $c->getCertId());
         $this->assertEquals('333', $c->getDevId());
+    }
+
+    public function testCredentialsCanBeLoadedFromIni()
+    {
+        $ini = <<<EOT
+[foo]
+ebay_app_id = 111
+ebay_cert_id = 222
+ebay_dev_id = 333
+EOT;
+
+        $dir = $this->clearEnv();
+        file_put_contents($dir . '/credentials', $ini);
+        putenv('HOME=' . dirname($dir));
+
+        $s = new Service([
+            'profile' => 'foo'
+        ]);
+        $c = $s->getCredentials();
+
+        $this->assertEquals('111', $c->getAppId());
+        $this->assertEquals('222', $c->getCertId());
+        $this->assertEquals('333', $c->getDevId());
+
+        unlink($dir . '/credentials');
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage No credentials present in INI profile
+     */
+    public function testCredentialsIniWillThrowException()
+    {
+        $ini = <<<EOT
+[foo]
+EOT;
+
+        $dir = $this->clearEnv();
+        file_put_contents($dir . '/credentials', $ini);
+        putenv('HOME=' . dirname($dir));
+
+        $s = new Service([
+            'profile' => 'foo'
+        ]);
+
+        try {
+            $c = $s->getCredentials();
+        } catch (Exception $e) {
+            unlink($dir . '/credentials');
+            throw $e;
+        }
     }
 
     /**

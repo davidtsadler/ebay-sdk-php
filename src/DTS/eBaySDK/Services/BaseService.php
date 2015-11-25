@@ -92,6 +92,10 @@ abstract class BaseService
     public static function getConfigDefinitions()
     {
         return [
+            'profile' => [
+                'valid' => ['string'],
+                'fn'    => 'DTS\eBaySDK\apply_profile',
+            ],
             'credentials' => [
                 'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
                 'fn'    => 'DTS\eBaySDK\apply_credentials',

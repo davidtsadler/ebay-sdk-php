@@ -26,6 +26,7 @@
     "autoload": {
         "psr-0": {
             "DTS\\eBaySDK\\": "src/",
+            "DTS\\eBaySDK\\TestTraits\\": "test/",
             "DTS\\eBaySDK\\Mocks\\": "test/",
             "DTS\\eBaySDK\\BulkDataExchange\\Mocks\\": "test/",
             "DTS\\eBaySDK\\BusinessPoliciesManagement\\Mocks\\": "test/",
