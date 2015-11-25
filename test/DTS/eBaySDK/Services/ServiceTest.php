@@ -1,7 +1,9 @@
 <?php
 namespace DTS\eBaySDK\Services\Test;
 
+use DTS\eBaySDK\Services\BaseService;
 use DTS\eBaySDK\Credentials\Credentials;
+use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
@@ -9,6 +11,30 @@ use DTS\eBaySDK\Mocks\Logger;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
+    public function testConfigDefinitions()
+    {
+        $d = BaseService::getConfigDefinitions();
+
+        $this->assertArrayHasKey('credentials', $d);
+        $this->assertEquals([
+            'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
+            'fn'    => 'DTS\eBaySDK\apply_credentials',
+            'default' => [CredentialsProvider::class, 'defaultProvider']
+        ], $d['credentials']);
+
+        $this->assertArrayHasKey('debug', $d);
+        $this->assertEquals([
+            'valid'   => ['bool'],
+            'default' => false
+        ], $d['debug']);
+
+        $this->assertArrayHasKey('sandbox', $d);
+        $this->assertEquals([
+            'valid'   => ['bool'],
+            'default' => false
+        ], $d['sandbox']);
+    }
+
     public function testProductionUrlIsUsed()
     {
         // By default sandbox will be false.
