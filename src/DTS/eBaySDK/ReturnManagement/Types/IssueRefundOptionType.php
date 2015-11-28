@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\ReturnManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ReturnManagement\Types\Integer $daysToRefundBuyer
+ * @property integer $daysToRefundBuyer
  */
 class IssueRefundOptionType extends \DTS\eBaySDK\ReturnManagement\Types\BaseActivityOptionType
 {
@@ -32,7 +32,7 @@ class IssueRefundOptionType extends \DTS\eBaySDK\ReturnManagement\Types\BaseActi
      */
     private static $propertyTypes = array(
         'daysToRefundBuyer' => array(
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\Integer',
+            'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'daysToRefundBuyer'

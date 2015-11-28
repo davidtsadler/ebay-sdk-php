@@ -33,8 +33,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $SellerMessage
  * @property \DTS\eBaySDK\Trading\Enums\BestOfferTypeCodeType $BestOfferCodeType
  * @property string $CallStatus
- * @property boolean $NewBestOffer
- * @property boolean $ImmediatePayEligible
  */
 class BestOfferType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -101,18 +99,6 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CallStatus'
-        ),
-        'NewBestOffer' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'NewBestOffer'
-        ),
-        'ImmediatePayEligible' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ImmediatePayEligible'
         )
     );
 

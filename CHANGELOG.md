@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 0.5.0 - 2015-11-20
+
+### Fixes
+
+* Some properties where incorrectly declared as being `DTS\eBaySDK\ResolutionCaseManagement\Types\Integer` instead of `integer`.
+* Correct URLs for Resolution Case Management service.
+
+### API
+
+* Support Trading API version 947.
+
 ## 0.4.0 - 2015-11-07
 
 ### Feature
