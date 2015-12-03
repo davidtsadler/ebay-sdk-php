@@ -128,7 +128,7 @@ class BaseType
     {
         return $this->toXml(self::$requestXmlRootElementNames[get_class($this)], true);
     }
-
+    
     /**
      * Converts the object to a XML string.
      *
@@ -149,6 +149,37 @@ class BaseType
         );
     }
 
+    /**
+     * Converts the object to a JSON request string.
+     *
+     * @returns string The JSON request string.
+     */
+    public function toRequestJSON()
+    {
+        return $this->toJSON(self::$requestXmlRootElementNames[get_class($this)], true);
+    }
+    
+    /**
+     * Converts the object to a JSON string.
+     *
+     * @param string $elementName The JSON element that the object's properties will be a children of.
+     * @param boolean $rootElement Indicates if the JSON will be the root element.
+     *
+     * @returns string The JSON.
+     */
+    private function toJSON($elementName, $rootElement = false)
+    {
+        $attribute = $this->attributesToJSON();
+        $properties = $this->propertiesToJSON();
+        $content = "\"$elementName\":{".$attribute.$properties."},";
+        
+        if ($rootElement) {
+            return str_replace(",}", "}", "{". $content ."}");
+        }
+
+        return $content;
+    }
+    
     /**
      * Returns the meta data for a property.
      *
@@ -174,7 +205,6 @@ class BaseType
                     $meta->attribute = $info['attribute'];
                     $meta->elementName = $info[$nameKey];
                     $meta->strData = '';
-
                     return $meta;
                 }
             }
@@ -430,6 +460,65 @@ class BaseType
         return join("\n", $properties);
     }
 
+        /**
+     * Returns an JSON string of the object's attributes.
+     *
+     * @returns string The JSON.
+     */
+    private function attributesToJSON() {
+        $attributes = array();
+
+        foreach (self::$properties[get_class($this)] as $name => $info) {
+            if(!$info['attribute']) {
+                continue;
+            }
+
+            if (!array_key_exists($name, $this->values)) {
+                continue;
+            }
+
+            $attributes[] = self::attributeToJSON($info['attributeName'], $this->values[$name]);
+        }
+
+        return join('', $attributes);
+    }
+    
+    /**
+     * Returns an JSON string of the object's properties.
+     *
+     * @returns string The JSON.
+     */
+    private function propertiesToJSON() {
+        $properties = array();
+
+        foreach (self::$properties[get_class($this)] as $name => $info) {
+            if($info['attribute']) {
+                continue;
+            }
+
+            if (!array_key_exists($name, $this->values)) {
+                continue;
+            }
+
+            $value = $this->values[$name];
+
+            if(!array_key_exists('elementName', $info) && !array_key_exists('attributeName', $info)) {
+                $properties[] = self::encodeValueJSON($value);
+            }
+            else {
+                if ($info['unbound']) {
+                    foreach($value as $property) {
+                        $properties[] = self::propertyToJSON($info['elementName'], $property);
+                    }
+                } else {
+                    $properties[] = self::propertyToJSON($info['elementName'], $value);
+                }
+            }
+        }
+
+        return join("\n", $properties);
+    }
+    
     /**
      * Determines if the property is a member of the class.
      *
@@ -443,7 +532,7 @@ class BaseType
             throw new Exceptions\UnknownPropertyException(get_called_class(), $name);
         }
     }
-
+    
     /**
      * Determines if the property is a member of the class.
      *
@@ -474,8 +563,9 @@ class BaseType
 
         $expectedType = $info['type'];
         $actualType = self::getActualType($value);
-
-        if ($expectedType !== $actualType && 'array' !== $actualType) {
+//        var_dump($value);
+        if (($expectedType !== $actualType && 'array' !== $actualType) 
+                && ('double' === $expectedType &&  !is_numeric($value))) {
             throw new Exceptions\InvalidPropertyTypeException(get_called_class(), $name, $expectedType, $actualType);
         }
     }
@@ -490,7 +580,7 @@ class BaseType
     private static function getActualType($value)
     {
         $actualType = gettype($value);
-
+        
         if ('object' === $actualType) {
             $actualType = get_class($value);
         }
@@ -554,15 +644,45 @@ class BaseType
             return sprintf('<%s>%s</%s>', $name, self::encodeXMLEntities($value), $name);
         }
     }
-
+    
     /**
-     * Escapes the five "predefined entities" in XML.
-     * 
-     * @param string $string input string
-     * @return string escaped string
+     * Helper function to convert an attribute property into JSON
+     *
+     * @param string $class The name of the class the property belongs to.
+     * @param string $name The of the attribute property.
+     *
+     * @returns string The JSON.
      */
-    private static function encodeXMLEntities($string) {
-         if (is_string($value)) {
+    private static function attributeToJSON($name, $value)
+    {
+        return sprintf("\"%s\":%s,", $name, self::encodeValueJSON($value));
+    }
+    
+        /**
+     * Helper function to convert an property into JSON
+     *
+     * @param string $name The of the property.
+     * @param mixed $value The value of the property.
+     *
+     * @returns string The JSON.
+     */
+    private static function propertyToJSON($name, $value)
+    {
+        if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
+            return $value->toJSON($name);
+        } else {
+            return sprintf("\"%s\":%s,", $name, self::encodeJSONEntities($value));
+        }
+    }
+    
+    /**
+     * Escapes the five predefined entities in XML.
+     * 
+     * @param type $value
+     * @return mixed escaped string or original value
+     */
+    private static function encodeXMLEntities($value) {
+        if (is_string($value)) {
             return strtr(
                 $value, 
                 array(
@@ -579,6 +699,16 @@ class BaseType
     }
     
     /**
+     * Escapes the five predefined entities in JSON.
+     * 
+     * @param type $value
+     * @return mixed escaped string or original value
+     */
+    private static function encodeJSONEntities($value) {
+        return self::encodeValueJSON($value);
+    }
+    
+    /**
      * Helper function to convert a value into XML escaping special characters.
      *
      * @param mixed $value The value of the property.
@@ -592,11 +722,26 @@ class BaseType
         }
         else if (is_bool($value)){
             return $value ? 'true' : 'false';
+        }
+        else if (is_string($value)){
+            return "'". $value ."'";
         } else {
             return $value;
         }
     }
 
+    /**
+     * Helper function to convert a value into JSON escaping special characters.
+     *
+     * @param mixed $value The value of the property.
+     *
+     * @returns string The JSON.
+     */
+    private static function encodeValueJSON($value)
+    {
+        return json_encode($value);
+    }
+    
     /**
      * Helper function to convert a property in a value that we want in an array.
      *
