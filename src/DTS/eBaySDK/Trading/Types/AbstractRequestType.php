@@ -48,7 +48,7 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'RequesterCredentials'
         ),
         'DetailLevel' => array(
-            'type' => 'string',
+            'type' => '\DTS\eBaySDK\Trading\Enums\DetailLevelCodeType[]',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DetailLevel'
