@@ -156,7 +156,12 @@ class BaseType
      */
     public function toRequestJSON()
     {
-        return $this->toJSON(self::$requestXmlRootElementNames[get_class($this)], true);
+        return  json_encode(
+                    json_decode(
+                        $this->toJSON(self::$requestXmlRootElementNames[get_class($this)], true)
+                    ), 
+                    JSON_PRETTY_PRINT
+                );
     }
     
     /**
@@ -503,7 +508,7 @@ class BaseType
             $value = $this->values[$name];
 
             if(!array_key_exists('elementName', $info) && !array_key_exists('attributeName', $info)) {
-                $properties[] = self::encodeValueJSON($value);
+                $properties[] = self::propertyToJSON("value", self::encodeValueJSON($value));
             }
             else {
                 if ($info['unbound']) {
@@ -563,7 +568,7 @@ class BaseType
 
         $expectedType = $info['type'];
         $actualType = self::getActualType($value);
-//        var_dump($value);
+
         if (($expectedType !== $actualType && 'array' !== $actualType) 
                 && ('double' === $expectedType &&  !is_numeric($value))) {
             throw new Exceptions\InvalidPropertyTypeException(get_called_class(), $name, $expectedType, $actualType);
@@ -669,7 +674,7 @@ class BaseType
     private static function propertyToJSON($name, $value)
     {
         if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
-            return $value->toJSON($name);
+            return sprintf("%s", $value->toJSON($name));
         } else {
             return sprintf("\"%s\":%s,", $name, self::encodeJSONEntities($value));
         }
