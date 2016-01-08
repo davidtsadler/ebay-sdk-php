@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root xmlns="http://davidtsadler.com">
     <integer>123</integer>
-    <string>a string</string>
+    <string>&lt;h1&gt;Bits &amp;amp; Bobs&lt;/h1&gt;&lt;p&gt;Just some &amp;lt;stuff&amp;gt; I found.&amp;nbsp;&amp;copy;&lt;/p&gt;</string>
     <double>123.45</double>
     <booleanTrue>true</booleanTrue>
     <booleanFalse>false</booleanFalse>

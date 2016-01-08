@@ -48,7 +48,7 @@ class XmlTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(false, isset($this->obj->foo));
 
         $this->assertEquals(123, $obj->integer);
-        $this->assertEquals('a string', $obj->string);
+        $this->assertEquals('<h1>Bits &amp; Bobs ©</h1><p>Just some &lt;stuff&gt; I found.&nbsp;&copy;</p>', $obj->string);
         $this->assertEquals('foo', $obj->foo);
         $this->assertEquals(123.45, $obj->double);
         $this->assertEquals(true, $obj->booleanTrue);

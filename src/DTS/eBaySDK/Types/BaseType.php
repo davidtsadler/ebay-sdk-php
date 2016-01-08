@@ -554,7 +554,7 @@ class BaseType
         else if (is_bool($value)){
             return $value ? 'true' : 'false';
         } else {
-            return $value;
+            return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', true);
         }
     }
 

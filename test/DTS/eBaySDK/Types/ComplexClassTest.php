@@ -106,7 +106,7 @@ class ComplexClassTest extends \PHPUnit_Framework_TestCase
     {
         $this->obj->foo = 'foo';
         $this->obj->integer = 123;
-        $this->obj->string = 'a string';
+        $this->obj->string = '<h1>Bits &amp; Bobs</h1><p>Just some &lt;stuff&gt; I found.&nbsp;&copy;</p>';
         $this->obj->double = 123.45;
         $this->obj->DateTime = new \DateTime('2000-01-01', new \DateTimeZone("UTC"));
         $this->obj->booleanTrue = true;
