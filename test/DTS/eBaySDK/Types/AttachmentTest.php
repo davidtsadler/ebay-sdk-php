@@ -24,7 +24,6 @@ namespace DTS\eBaySDK\Types\Test;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
-use DTS\eBaySDK\Mocks\Logger;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
@@ -101,3 +100,4 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array('data' => 'ABC123', 'mimeType' => 'image/jpeg'), $response->attachment());
     }
 }
+

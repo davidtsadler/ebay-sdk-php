@@ -60,11 +60,6 @@ abstract class BaseService
     private $sandboxUrl;
 
     /**
-     * @var \Psr\Log\LoggerInterface The logger for the service.
-     */
-    private $logger;
-
-    /**
      * @param string $productionUrl The production URL.
      * @param string $sandboxUrl The sandbox URL.
      * @param array $config Configuration option values.
@@ -81,7 +76,6 @@ abstract class BaseService
         $this->productionUrl = $productionUrl;
         $this->sandboxUrl = $sandboxUrl;
         $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
-        $this->logger = null;
     }
 
     /**
@@ -97,12 +91,13 @@ abstract class BaseService
                 'fn'    => 'DTS\eBaySDK\apply_profile',
             ],
             'credentials' => [
-                'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
-                'fn'    => 'DTS\eBaySDK\apply_credentials',
+                'valid'   => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
+                'fn'      => 'DTS\eBaySDK\apply_credentials',
                 'default' => [CredentialsProvider::class, 'defaultProvider']
             ],
             'debug' => [
-                'valid'   => ['bool'],
+                'valid'   => ['bool', 'array'],
+                'fn'      => 'DTS\eBaySDK\apply_debug',
                 'default' => false
             ],
             'sandbox' => [
@@ -132,21 +127,6 @@ abstract class BaseService
             $this->config,
             $this->resolver->resolve_options($configuration)
         );
-    }
-
-    /**
-     *
-     * @param $logger \Psr\Log\LoggerInterface The logger instance the service will use.
-     *
-     * @return \Psr\Log\LoggerInterface The logger instance or null if one hasn't been assigned.
-     */
-    public function logger(\Psr\Log\LoggerInterface $logger = null)
-    {
-        if ($logger) {
-            $this->logger = $logger;
-        }
-
-        return $this->logger;
     }
 
     /**
@@ -190,14 +170,14 @@ abstract class BaseService
         }
         $headers['Content-Length'] = strlen($body);
 
-        if ($debug) {
-            $this->logRequest($url, $name, $headers, $body);
+        if ($debug !== false) {
+            $this->debugRequest($url, $name, $headers, $body);
         }
 
         list($xmlResponse, $attachment) = $this->extractXml($this->httpClient->post($url, $headers, $body));
 
-        if ($debug) {
-            $this->logResponse($xmlResponse);
+        if ($debug !== false) {
+            $this->debugResponse($xmlResponse);
         }
 
         $xmlParser = new XmlParser($responseClass);
@@ -334,37 +314,44 @@ abstract class BaseService
     }
 
     /**
-     * Logs the request details.
+     * Sends a debug string of the request details.
      *
      * @param string $name The name of the operation.
      * @param string $url API endpoint.
      * @param array  $headers Associative array of HTTP headers.
      * @param string $body The XML body of the POST request.
       */
-    private function logRequest($url, $name, $headers, $body)
+    private function debugRequest($url, $name, $headers, $body)
     {
-        if ($this->logger) {
-            $this->logger->debug('Request', array(
-                'url' => $url,
-                'name' => $name,
-                'headers' => $headers,
-                'body' => $body
-            ));
-        }
+        $str = $url.self::CRLF;
+
+        $str .= array_reduce(array_keys($headers), function ($str, $key) use ($headers) {
+            $str .= $key.': '.$headers[$key].self::CRLF;
+            return $str;
+        }, '');
+
+        $str .= self::CRLF.$body.self::CRLF.self::CRLF;
+
+        $this->debug($str);
     }
 
     /**
-     * Logs the response details.
+     * Sends a debug string of the response details.
      *
      * @param string $body The XML body of the response.
       */
-    private function logResponse($body)
+    private function debugResponse($body)
     {
-        if ($this->logger) {
-            $this->logger->debug('Response', array(
-                'body' => $body
-            ));
-        }
+        $this->debug($body);
+    }
+
+    /**
+     * Sends a debug string via the attach debugger.
+     */
+    private function debug($str)
+    {
+        $debugger = $this->getConfig('debug');
+        $debugger($str);
     }
 }
 

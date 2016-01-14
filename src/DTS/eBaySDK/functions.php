@@ -4,6 +4,7 @@ namespace DTS\eBaySDK;
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Interfaces\CredentialsInterface;
+use DTS\eBaySDK\Debugger;
 
 function describe_type($value)
 {
@@ -84,5 +85,14 @@ function apply_credentials($value, array &$configuration)
 function apply_profile($value, array &$configuration)
 {
     $configuration['credentials'] = CredentialsProvider::ini($configuration['profile']);
+}
+
+function apply_debug($value, array &$configuration)
+{
+    if ($value !== false) {
+        $configuration['debug'] = new Debugger($value === true ? [] : $value);
+    } else {
+        $configuration['debug'] = false;
+    }
 }
 

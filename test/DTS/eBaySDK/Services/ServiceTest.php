@@ -8,7 +8,6 @@ use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
-use DTS\eBaySDK\Mocks\Logger;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,14 +19,15 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('credentials', $d);
         $this->assertEquals([
-            'valid' => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
-            'fn'    => 'DTS\eBaySDK\apply_credentials',
+            'valid'   => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
+            'fn'      => 'DTS\eBaySDK\apply_credentials',
             'default' => [CredentialsProvider::class, 'defaultProvider']
         ], $d['credentials']);
 
         $this->assertArrayHasKey('debug', $d);
         $this->assertEquals([
-            'valid'   => ['bool'],
+            'valid'   => ['bool', 'array'],
+            'fn'      => 'DTS\eBaySDK\apply_debug',
             'default' => false
         ], $d['debug']);
 
@@ -97,41 +97,21 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\Mocks\ComplexClass', $r);
     }
 
-    public function testLogging()
+    public function testDebugging()
     {
-        // TODO Add debug configuration
-        if(0) {
-        // If no logger has been assigned there should be no debug messages.
-        $this->assertEquals(null, $this->service->logger());
-        $this->service->foo($this->request);
-        $this->assertEquals(0, count($this->logger->debugMessages));
+        $str = '';
+        $logfn = function ($value) use (&$str) { $str .= $value; };
 
-        // Even if the configuration is set to log debugging.
-        $this->assertEquals(null, $this->service->logger());
-        $this->service->getConfig('debug', true);
-        $this->service->foo($this->request);
-        $this->assertEquals(0, count($this->logger->debugMessages));
+        $s = new Service([
+            'debug' => ['logfn' => $logfn]
+        ], new HttpClient());
+        $r = new ComplexClass();
+        $s->foo($r);
 
-        // Now check that debugging information is logged.
-        $this->service->logger($this->logger);
-        $this->service->getConfig('debug', true);
-        $this->service->foo($this->request);
-
-        $debugRequest = $this->logger->debugMessages[0];
-        $this->assertEquals('Request', $debugRequest['message']);
-        $this->assertEquals('http://production.com', $debugRequest['context']['url']);
-        $this->assertEquals('foo', $debugRequest['context']['name']);
-        $this->assertEquals(array(
-            'fooHdr' => 'foo',
-            'Content-Type' => 'text/xml',
-            'Content-Length' => strlen($this->request->toRequestXml())
-        ), $debugRequest['context']['headers']);
-        $this->assertEquals($this->request->toRequestXml(), $debugRequest['context']['body']);
-
-        $debugResponse = $this->logger->debugMessages[1];
-        $this->assertEquals('Response', $debugResponse['message']);
-        $this->assertEquals(file_get_contents(__DIR__.'/../Mocks/Response.xml'), $debugResponse['context']['body']);
-        }
+        $this->assertContains('fooHdr: foo', $str);
+        $this->assertContains('Content-Type: text/xml', $str);
+        $this->assertContains('Content-Length: '.strlen($r->toRequestXml()), $str);
+        $this->assertContains('<?xml version="1.0" encoding="UTF-8"?>', $str);
     }
 
     public function testHttpClient()
