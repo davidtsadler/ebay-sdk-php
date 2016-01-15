@@ -100,6 +100,10 @@ abstract class BaseService
                 'fn'      => 'DTS\eBaySDK\apply_debug',
                 'default' => false
             ],
+            'handler' => [
+                'valid'   => ['callable'],
+                'default' => 'DTS\eBaySDK\default_handler'
+            ],
             'sandbox' => [
                 'valid'   => ['bool'],
                 'default' => false

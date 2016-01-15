@@ -5,6 +5,7 @@ use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Interfaces\CredentialsInterface;
 use DTS\eBaySDK\Debugger;
+use DTS\eBaySDK\Handler;
 
 function describe_type($value)
 {
@@ -96,3 +97,7 @@ function apply_debug($value, array &$configuration)
     }
 }
 
+function default_handler(array &$configuration)
+{
+    return new Handler();
+}

@@ -8,6 +8,7 @@ use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
 use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -30,6 +31,12 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'fn'      => 'DTS\eBaySDK\apply_debug',
             'default' => false
         ], $d['debug']);
+
+        $this->assertArrayHasKey('handler', $d);
+        $this->assertEquals([
+            'valid'   => ['callable'],
+            'default' => 'DTS\eBaySDK\default_handler'
+        ], $d['handler']);
 
         $this->assertArrayHasKey('profile', $d);
         $this->assertEquals([
@@ -237,19 +244,22 @@ EOT;
 
     public function testCanSetConfigurationOptionsAfterInstaniation()
     {
+        $h = new Handler();
         $s = new Service([
             'sandbox' => true,
             'credentials' => [
                 'appId' => '111',
                 'certId' => '222',
                 'devId' => '333'
-            ]
+            ],
+            'handler' => $h
         ]);
 
         $this->assertEquals([
             'sandbox' => true,
             'credentials' => new Credentials('111', '222', '333'),
-            'debug' => false
+            'debug' => false,
+            'handler' => $h
         ], $s->getConfig());
 
         $s->setConfig([
@@ -262,7 +272,8 @@ EOT;
         $this->assertEquals([
             'sandbox' => false,
             'credentials' => new Credentials('444', '555', '666'),
-            'debug' => false
+            'debug' => false,
+            'handler' => $h
         ], $s->getConfig());
     }
 }

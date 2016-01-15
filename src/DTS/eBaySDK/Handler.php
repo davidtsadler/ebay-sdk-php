@@ -2,6 +2,7 @@
 namespace DTS\eBaySDK;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use Psr\Http\Message\RequestInterface as Psr7Request;
 
 /**
@@ -17,7 +18,7 @@ class Handler
     /**
      * @param ClientInterface $client
      */
-    public function __construct($client)
+    public function __construct(ClientInterface $client = null)
     {
         $this->client = $client ?: new Client();
     }
