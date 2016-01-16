@@ -34,11 +34,10 @@ class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
 
     /**
      * @param array $config Configuration option values.
-     * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
-    public function __construct($config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct(array $config)
     {
-        parent::__construct('https://webservices.ebay.com/BulkDataExchangeService', 'https://webservices.sandbox.ebay.com/BulkDataExchangeService', $config, $httpClient);
+        parent::__construct('https://webservices.ebay.com/BulkDataExchangeService', 'https://webservices.sandbox.ebay.com/BulkDataExchangeService', $config);
     }
 
     public static function getConfigDefinitions()

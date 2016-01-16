@@ -24,12 +24,11 @@ namespace DTS\eBaySDK\Shopping\Services;
 class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
 {
     /**
-     * @param array $config Optional configuration option values.
-     * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
+     * @param array $config Configuration option values.
      */
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct(array $config)
     {
-        parent::__construct($config, $httpClient);
+        parent::__construct($config);
     }
 
     /**
@@ -188,3 +187,4 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
         );
     }
 }
+

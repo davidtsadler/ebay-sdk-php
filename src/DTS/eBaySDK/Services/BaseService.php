@@ -19,7 +19,6 @@ namespace DTS\eBaySDK\Services;
 
 use DTS\eBaySDK\Parser\XmlParser;
 use DTS\eBaySDK\Exceptions;
-use DTS\eBaySDK\HttpClient\HttpClient;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use \DTS\eBaySDK as Functions;
@@ -41,11 +40,6 @@ abstract class BaseService
     private $resolver;
 
     /**
-     * @var mixed The object that will handle the actual sending of the API request.
-     */
-    private $httpClient;
-
-    /**
      * @var array Associative array storing the current configuration option values.
      */
     private $config;
@@ -64,19 +58,16 @@ abstract class BaseService
      * @param string $productionUrl The production URL.
      * @param string $sandboxUrl The sandbox URL.
      * @param array $config Configuration option values.
-     * @param \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient The object that will handle sending requests to the API.
      */
     public function __construct(
         $productionUrl,
         $sandboxUrl,
-        $config,
-        \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null
+        array $config
     ) {
         $this->resolver = new ConfigurationResolver(static::getConfigDefinitions());
         $this->config = $this->resolver->resolve($config);
         $this->productionUrl = $productionUrl;
         $this->sandboxUrl = $sandboxUrl;
-        $this->httpClient = $httpClient ? $httpClient : new \DTS\eBaySDK\HttpClient\HttpClient();
     }
 
     /**
@@ -132,15 +123,6 @@ abstract class BaseService
             $this->config,
             $this->resolver->resolve_options($configuration)
         );
-    }
-
-    /**
-     *
-     * @return \DTS\eBaySDK\Interfaces\HttpClientInterface
-     */
-    public function httpClient()
-    {
-        return $this->httpClient;
     }
 
     /**

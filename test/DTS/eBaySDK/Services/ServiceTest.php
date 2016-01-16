@@ -7,7 +7,6 @@ use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
-use DTS\eBaySDK\Mocks\HttpClient;
 use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase

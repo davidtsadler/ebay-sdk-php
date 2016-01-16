@@ -3,7 +3,7 @@ namespace DTS\eBaySDK\Mocks;
 
 class Service extends \DTS\eBaySDK\Mocks\BaseService
 {
-    public function __construct(array $config, \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct(array $config)
     {
         parent::__construct(
             $config + [
@@ -12,8 +12,7 @@ class Service extends \DTS\eBaySDK\Mocks\BaseService
                     'certId' => '',
                     'devId' => ''
                 ]
-            ],
-            $httpClient
+            ]
         );
     }
 

@@ -5,9 +5,9 @@ use DTS\eBaySDK\Mocks\ComplexClass;
 
 class Service extends \DTS\eBaySDK\BusinessPoliciesManagement\Services\BusinessPoliciesManagementBaseService
 {
-    public function __construct($config = array(), \DTS\eBaySDK\Interfaces\HttpClientInterface $httpClient = null)
+    public function __construct(array $config)
     {
-        parent::__construct($config, $httpClient);
+        parent::__construct($config);
     }
 
     public function testOperation()
@@ -19,3 +19,4 @@ class Service extends \DTS\eBaySDK\BusinessPoliciesManagement\Services\BusinessP
         );
     }
 }
+
