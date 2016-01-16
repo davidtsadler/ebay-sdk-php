@@ -5,7 +5,7 @@ use DTS\eBaySDK\Credentials\Credentials;
 
 /**
  * Credentials providers are functions that accept no arguments and return an
- * instance that implements DTS\eBaySDK\Interfaces\CredentialsInterface. If they
+ * instance that implements DTS\eBaySDK\Credentials\CredentialsInterface. If they
  * are unable to provide the credentials an instance of \InvalidArgumentException
  * must be returned. The function can supply a message via the returned exception
  * object to explain why no credentials are available.

@@ -83,7 +83,7 @@ abstract class BaseService
                 'fn'    => 'DTS\eBaySDK\apply_profile',
             ],
             'credentials' => [
-                'valid'   => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
+                'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
                 'fn'      => 'DTS\eBaySDK\apply_credentials',
                 'default' => [CredentialsProvider::class, 'defaultProvider']
             ],
@@ -126,7 +126,7 @@ abstract class BaseService
     }
 
     /**
-     * @return \DTS\eBaySDK\Interfaces\CredentialsInterface
+     * @return \DTS\eBaySDK\Credentials\CredentialsInterface
      */
     public function getCredentials()
     {

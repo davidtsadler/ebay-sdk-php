@@ -3,7 +3,7 @@ namespace DTS\eBaySDK;
 
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
-use DTS\eBaySDK\Interfaces\CredentialsInterface;
+use DTS\eBaySDK\Credentials\CredentialsInterface;
 use DTS\eBaySDK\Debugger;
 use DTS\eBaySDK\Handler;
 
@@ -76,7 +76,7 @@ function apply_credentials($value, array &$configuration)
         );
     } else {
         throw new \InvalidArgumentException('Credentials must be an instance of '
-            . 'DTS\eBaySDK\Interfaces\CredentialsInterface, an associative '
+            . 'DTS\eBaySDK\Credentials\CredentialsInterface, an associative '
             . 'array that contains "appId", "certId", "devId", '
             . 'or a credentials provider function.'
         );

@@ -19,7 +19,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('credentials', $d);
         $this->assertEquals([
-            'valid'   => ['DTS\eBaySDK\Interfaces\CredentialsInterface', 'array', 'callable'],
+            'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
             'fn'      => 'DTS\eBaySDK\apply_credentials',
             'default' => [CredentialsProvider::class, 'defaultProvider']
         ], $d['credentials']);
