@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\HalfFinding\Services\Test;
 
 use DTS\eBaySDK\HalfFinding\Services\HalfFindingBaseService;
 use DTS\eBaySDK\HalfFinding\Mocks\Service;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -44,11 +44,12 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
-            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -66,13 +67,14 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'apiVersion' => '123',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'globalId' => '999'
-        ], $h);
+            'globalId' => '999',
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 

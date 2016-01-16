@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\BulkDataExchange\Services\Test;
 
 use DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeBaseService;
 use DTS\eBaySDK\BulkDataExchange\Mocks\Service;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -45,12 +45,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'authToken' => '321',
-            'credentials' => ['appId' => '', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -67,13 +68,14 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'apiVersion' => '123',
             'authToken' => '321',
-            'credentials' => ['appId' => '', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -81,3 +83,4 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $h->headers[BulkDataExchangeBaseService::HDR_API_VERSION]);
     }
 }
+

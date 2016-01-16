@@ -23,18 +23,19 @@ namespace DTS\eBaySDK\FileTransfer\Services\Test;
 
 use DTS\eBaySDK\FileTransfer\Services\FileTransferService;
 use DTS\eBaySDK\FileTransfer\Types;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
     public function testAttachmentFieldIsSetCorrectlyInRequest()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new FileTransferService([
             'authToken' => '321',
-            'credentials' => ['appId' => '', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         // Calling the operation will not set the attachment field if there is no attachment.
         $r = new Types\UploadFileRequest();
@@ -74,3 +75,4 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(8, $r->fileAttachment->Size);
     }
 }
+

@@ -23,6 +23,7 @@ use DTS\eBaySDK\HttpClient\HttpClient;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use \DTS\eBaySDK as Functions;
+use GuzzleHttp\Psr7\Request;
 
 /**
  * The base class for every eBay service class.
@@ -161,24 +162,17 @@ abstract class BaseService
      */
     protected function callOperation($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
-        $debug = $this->getConfig('debug');
-
         $url = $this->getUrl();
         $body = $this->buildRequestBody($request);
-        $headers = $this->getEbayHeaders($name);
+        $headers = $this->buildRequestHeaders($name, $request, $body);
 
-        if ($request->hasAttachment()) {
-            $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"';
-        } else {
-            $headers['Content-Type'] = 'text/xml';
-        }
-        $headers['Content-Length'] = strlen($body);
+        $debug = $this->getConfig('debug');
 
         if ($debug !== false) {
             $this->debugRequest($url, $name, $headers, $body);
         }
 
-        list($xmlResponse, $attachment) = $this->extractXml($this->httpClient->post($url, $headers, $body));
+        list($xmlResponse, $attachment) = $this->extractXml($this->sendRequest('POST', $url, $headers, $body));
 
         if ($debug !== false) {
             $this->debugResponse($xmlResponse);
@@ -190,6 +184,16 @@ abstract class BaseService
         $response->attachment($attachment);
 
         return $response;
+    }
+
+    /**
+     * Helper function to return the URL as determined by the sandbox configuration option.
+     *
+     * @return string Either the production or sandbox URL.
+     */
+    private function getUrl()
+    {
+        return $this->getConfig('sandbox') ? $this->sandboxUrl : $this->productionUrl;
     }
 
     /**
@@ -245,6 +249,44 @@ abstract class BaseService
             $attachment['data'].self::CRLF,
             '--MIME_boundary--'
         );
+    }
+
+    /**
+     * Helper function that builds the HTTP request headers.
+     *
+     * @param string $name The name of the operation.
+     * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
+     * @param string $body The request body.
+     *
+     * @return array An associative array of HTTP headers.
+     */
+    private function buildRequestHeaders($name, $request, $body)
+    {
+        $headers = $this->getEbayHeaders($name);
+
+        if ($request->hasAttachment()) {
+            $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"';
+        } else {
+            $headers['Content-Type'] = 'text/xml';
+        }
+
+        $headers['Content-Length'] = strlen($body);
+
+        return $headers;
+    }
+
+    /**
+     * @param string $method The HTTP method.
+     * @param string $url The URL where the request is to be sent.
+     * @param array $headers Associative array of HTTP headers
+     * @param string $body The request body.
+     *
+     * @return string The XML response.
+     */
+    private function sendRequest($method, $url, $headers, $body)
+    {
+        $handler = $this->getConfig('handler');
+        return $handler(new Request($method, $url, $headers, $body));
     }
 
     /**
@@ -306,16 +348,6 @@ abstract class BaseService
      * @return array An associative array of eBay http headers.
      */
     abstract protected function getEbayHeaders($operationName);
-
-    /**
-     * Helper function to return the URL as determined by the sandbox configuration option.
-     *
-     * @returns string Either the production or sandbox URL.
-     */
-    private function getUrl()
-    {
-        return $this->getConfig('sandbox') ? $this->sandboxUrl : $this->productionUrl;
-    }
 
     /**
      * Sends a debug string of the request details.

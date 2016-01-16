@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\Trading\Services\Test;
 
 use DTS\eBaySDK\Trading\Services\TradingService;
 use DTS\eBaySDK\Trading\Types;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class AuthTokenTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,8 +34,9 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
             'apiVersion' => '',
             'authToken' => '321',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'siteId' => 0
-        ], new HttpClient());
+            'siteId' => 0,
+            'handler' => new Handler()
+        ]);
 
         // Calling the operation results in the auth token been set by the service.
         $r = new Types\GeteBayOfficialTimeRequestType();
@@ -61,3 +62,4 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $r->RequesterCredentials->eBayAuthToken);
     }
 }
+

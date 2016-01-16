@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\Types\Test;
 
 use DTS\eBaySDK\Mocks\Service;
 use DTS\eBaySDK\Mocks\ComplexClass;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
@@ -35,12 +35,12 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
          * passed to the client by the service. What we want to test is that the
          * is actualy passed correctly. We are not testing the sending of the request
          * over the internet.
-         * The HttpClient contains properties that will be set when the service
+         * The Handler contains properties that will be set when the service
          * makes the request. We can test these properties to check what the service is passing.
          */
-        $this->httpClient = new HttpClient();
+        $this->handler = new Handler();
         // BaseService is abstract so use class that is derived from it for testing.
-        $this->service = new Service([], $this->httpClient);
+        $this->service = new Service(['handler' => $this->handler]);
         $this->request = new ComplexClass();
         $this->request->integer = 123;
         $this->request->string = 'a string';
@@ -74,23 +74,24 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
     {
         $this->request->attachment('ABC123', 'image/jpeg');
         $this->service->foo($this->request);
-        $this->assertEquals(array(
-            'fooHdr' => 'foo',
-            'Content-Type' => 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"',
-            'Content-Length' => strlen($this->requestXml)
-        ), $this->httpClient->headers);
+        $this->assertArrayHasKey('fooHdr', $this->handler->headers);
+        $this->assertEquals('foo', $this->handler->headers['fooHdr']);
+        $this->assertArrayHasKey('Content-Type', $this->handler->headers);
+        $this->assertEquals('multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"', $this->handler->headers['Content-Type']);
+        $this->assertArrayHasKey('Content-Length', $this->handler->headers);
+        $this->assertEquals(strlen($this->requestXml), $this->handler->headers['Content-Length']);
     }
 
     public function testXmlIsCreated()
     {
         $this->request->attachment('ABC123', 'image/jpeg');
         $this->service->foo($this->request);
-        $this->assertEquals($this->requestXml, $this->httpClient->body);
+        $this->assertEquals($this->requestXml, $this->handler->body);
     }
 
     public function testResponseIsReturned()
     {
-        $this->httpClient->returnAttachment = true;
+        $this->handler->returnAttachment = true;
         $response = $this->service->bar($this->request);
         $this->assertInstanceOf('\DTS\eBaySDK\Mocks\ComplexClass', $response);
         $this->assertEquals(123, $response->integer);

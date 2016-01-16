@@ -54,8 +54,8 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testProductionUrlIsUsed()
     {
         // By default sandbox will be false.
-        $h = new HttpClient();
-        $s = new Service([], $h);
+        $h = new Handler();
+        $s = new Service(['handler' => $h]);
         $s->foo(new ComplexClass());
 
         $this->assertEquals('http://production.com', $h->url);
@@ -63,10 +63,11 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testSandboxUrlIsUsed()
     {
-        $h = new HttpClient();
+        $h = new Handler();
         $s = new Service([
-            'sandbox' => true
-        ], $h);
+            'sandbox' => true,
+            'handler' => $h
+        ]);
         $s->foo(new ComplexClass());
 
         $this->assertEquals('http://sandbox.com', $h->url);
@@ -74,22 +75,23 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testHttpHeadersAreCreated()
     {
-        $h = new HttpClient();
-        $s = new Service([], $h);
+        $h = new Handler();
+        $s = new Service(['handler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
 
-        $this->assertEquals(array(
-            'fooHdr' => 'foo',
-            'Content-Type' => 'text/xml',
-            'Content-Length' => strlen($r->toRequestXml())
-        ), $h->headers);
+        $this->assertArrayHasKey('fooHdr', $h->headers);
+        $this->assertEquals('foo', $h->headers['fooHdr']);
+        $this->assertArrayHasKey('Content-Type', $h->headers);
+        $this->assertEquals('text/xml', $h->headers['Content-Type']);
+        $this->assertArrayHasKey('Content-Length', $h->headers);
+        $this->assertEquals(strlen($r->toRequestXml()), $h->headers['Content-Length']);
     }
 
     public function testXmlIsCreated()
     {
-        $h = new HttpClient();
-        $s = new Service([], $h);
+        $h = new Handler();
+        $s = new Service(['handler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
 
@@ -98,7 +100,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testResponseIsReturned()
     {
-        $s = new Service([], new HttpClient());
+        $s = new Service(['handler' => new Handler()]);
         $r = $s->foo(new ComplexClass());
 
         $this->assertInstanceOf('\DTS\eBaySDK\Mocks\ComplexClass', $r);
@@ -110,8 +112,9 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $logfn = function ($value) use (&$str) { $str .= $value; };
 
         $s = new Service([
-            'debug' => ['logfn' => $logfn]
-        ], new HttpClient());
+            'debug' => ['logfn' => $logfn],
+            'handler' => new Handler()
+        ]);
         $r = new ComplexClass();
         $s->foo($r);
 
@@ -121,25 +124,11 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertContains('<?xml version="1.0" encoding="UTF-8"?>', $str);
     }
 
-    public function testHttpClient()
-    {
-        // TODO - Rename to httpHandler
-        if(0) {
-        $this->assertInstanceOf('\DTS\eBaySDK\Interfaces\HttpClientInterface', $this->service1->httpClient());
-        $this->assertInstanceOf('\DTS\eBaySDK\HttpClient\HttpClient', $this->service1->httpClient());
-
-        $this->assertInstanceOf('\DTS\eBaySDK\Interfaces\HttpClientInterface', $this->service2->httpClient());
-        $this->assertInstanceOf('\DTS\eBaySDK\HttpClient\HttpClient', $this->service2->httpClient());
-
-        $this->assertInstanceOf('\DTS\eBaySDK\Interfaces\HttpClientInterface', $this->service3->httpClient());
-        $this->assertInstanceOf('\DTS\eBaySDK\Mocks\HttpClient', $this->service3->httpClient());
-        }
-    }
-
     public function testCredentialsInstanceCanBePassed()
     {
         $s = new Service([
-            'credentials' => new Credentials('111', '222', '333')
+            'credentials' => new Credentials('111', '222', '333'),
+            'handler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -155,7 +144,8 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
                 'appId' => '111',
                 'certId' => '222',
                 'devId' => '333'
-            ]
+            ],
+            'handler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -169,7 +159,8 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'credentials' => function () {
                 return new Credentials('111', '222', '333');
-            }
+            },
+            'handler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -192,7 +183,8 @@ EOT;
         putenv('HOME=' . dirname($dir));
 
         $s = new Service([
-            'profile' => 'foo'
+            'profile' => 'foo',
+            'handler' => new Handler()
         ]);
         $c = $s->getCredentials();
 
@@ -218,7 +210,8 @@ EOT;
         putenv('HOME=' . dirname($dir));
 
         $s = new Service([
-            'profile' => 'foo'
+            'profile' => 'foo',
+            'handler' => new Handler()
         ]);
 
         try {
@@ -238,7 +231,8 @@ EOT;
         $s = new Service([
             'credentials' => function () {
                 return new \InvalidArgumentException('Cannot locate credentials');
-            }
+            },
+            'handler' => new Handler()
         ]);
     }
 

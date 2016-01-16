@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\Shopping\Services\Test;
 
 use DTS\eBaySDK\Shopping\Services\ShoppingBaseService;
 use DTS\eBaySDK\Shopping\Mocks\Service;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -60,12 +60,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'apiVersion' => '123',
-            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '321', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -91,7 +92,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'affiliateUserId' => '666',
@@ -99,8 +100,9 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'siteId' => 0,
             'trackingId' => '888',
-            'trackingPartnerCode' => '777'
-        ], $h);
+            'trackingPartnerCode' => '777',
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 

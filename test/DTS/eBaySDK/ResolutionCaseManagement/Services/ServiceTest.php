@@ -23,7 +23,7 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Services\Test;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementBaseService;
 use DTS\eBaySDK\ResolutionCaseManagement\Mocks\Service;
-use DTS\eBaySDK\Mocks\HttpClient;
+use DTS\eBaySDK\Mocks\Handler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -50,12 +50,13 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'authToken' => '321',
-            'credentials' => ['appId' => '', 'certId' => '', 'devId' => '']
-        ], $h);
+            'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -73,14 +74,15 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new HttpClient();
+        $h = new Handler();
 
         $s = new Service([
             'apiVersion' => '123',
             'authToken' => '321',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'globalId' => '999'
-        ], $h);
+            'globalId' => '999',
+            'handler' => $h
+        ]);
 
         $s->testOperation();
 
@@ -91,3 +93,4 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('999', $h->headers[ResolutionCaseManagementBaseService::HDR_GLOBAL_ID]);
     }
 }
+
