@@ -50,5 +50,33 @@ EOT;
         $this->assertNotContains('devname', $str);
         $this->assertNotContains('authtoken', $str);
     }
+
+    public function testScrubsCustom()
+    {
+        $msg = <<<EOT
+X-EBAY-SOA-SECURITY-TOKEN: token
+<email>email@example.com</email>
+<itemId>123456789</itemId>
+EOT;
+
+        $str = '';
+        $logfn = function ($value) use (&$str) { $str .= $value; };
+
+        $d = new Debugger([
+            'logfn' => $logfn,
+            'scrub_strings' => [
+                '/email@example.com/' => 'REDACTED_EMAIL',
+                '/<itemId>\d+<\/itemId>/' => 'REDACTED_ITEM_ID'
+            ]
+        ]);
+
+        $d($msg);
+
+        $this->assertNotContains('token', $str);
+        $this->assertNotContains('email@example.com', $str);
+        $this->assertContains('REDACTED_EMAIL', $str);
+        $this->assertNotContains('<itemId>123456789</itemId>', $str);
+        $this->assertContains('REDACTED_ITEM_ID', $str);
+    }
 }
 

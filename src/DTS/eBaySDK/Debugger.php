@@ -29,16 +29,16 @@ class Debugger
         $this->config = $config + [
             'logfn' => function ($value) { echo $value; },
             'scrub_credentials' => true,
-            'credentials_strings' => []
+            'scrub_strings' => []
         ];
 
-        $this->config['credentials_strings'] += self::$credentialsStrings;
+        $this->config['scrub_strings'] += self::$credentialsStrings;
     }
 
     public function __invoke($info)
     {
         if ($this->config['scrub_credentials']) {
-            foreach ($this->config['credentials_strings'] as $pattern => $replacement) {
+            foreach ($this->config['scrub_strings'] as $pattern => $replacement) {
                 $info = preg_replace($pattern, $replacement, $info);
             }
         }
