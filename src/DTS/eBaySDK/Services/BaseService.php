@@ -341,14 +341,14 @@ abstract class BaseService
       */
     private function debugRequest($url, $name, $headers, $body)
     {
-        $str = $url.self::CRLF;
+        $str = $url.PHP_EOL;
 
         $str .= array_reduce(array_keys($headers), function ($str, $key) use ($headers) {
-            $str .= $key.': '.$headers[$key].self::CRLF;
+            $str .= $key.': '.$headers[$key].PHP_EOL;
             return $str;
         }, '');
 
-        $str .= self::CRLF.$body.self::CRLF.self::CRLF;
+        $str .= $body;
 
         $this->debug($str);
     }
