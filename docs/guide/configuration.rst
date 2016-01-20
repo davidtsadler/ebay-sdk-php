@@ -88,6 +88,39 @@ More information about providing credentials to a client can be found in the :do
 
     Credentials must be valid for the eBay environment that you are using. Sandbox and production credentials are not interchangeable.
 
+debug
+~~~~~
+
+:Type: ``bool|array``
+
+Pass ``true`` to have the SDK output debug information about the request and response. Alternatively an associative array can be provided with the following keys:
+
+logfn (callable)
+    Pass a function that takes a single string parameter. This function is called every time the SDK wishes to output some debug information. By default the SDK uses PHP's ``echo`` function.
+
+scrub_credentials (bool)
+    Before passing any information to ``logfn`` the SDK removes any references to your API credentials. This is to prevent sensitive information from been accidently exposed. Set this to ``false`` to disable this scrubbing.
+
+scrub_strings (array)
+    Associative array of regular expressions mapped to replacement strings. If ``scrub_credentials`` is ``true`` these additional strings will be used to remove senestive information from the debug messages.
+
+.. code-block:: php
+
+    use \DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion' => '1.13.0',
+        'globalId'   => 'EBAY-US',
+        'debug'      => [
+            'logfn'             => function ($msg) { echo $msg."\n"; },
+            'scrub_credentials' => true
+            'scrub_strings'     => [
+                '/email@example.com/'      => 'REDACTED_EMAIL',
+                '/Secret=[A-Za-z0-9]{9}/i' => 'Secret=XXXXXXXXX',
+            ]
+        ]
+    ]);
+
 profile
 ~~~~~~~
 
