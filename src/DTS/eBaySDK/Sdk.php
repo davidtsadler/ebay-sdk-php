@@ -17,6 +17,8 @@ class Sdk
 {
     const VERSION = '1.0.0-beta';
 
+    static $STRICT_PROPERTY_TYPES = true;
+
     /** @var array Configuration options for all services. */
     private $config;
 
@@ -54,9 +56,10 @@ class Sdk
         }
 
         $configuration = array_merge_deep($configuration, $config);
-        
+
         $service = "DTS\\eBaySDK\\{$namespace}\\Services\\{$namespace}Service";
 
         return new $service($configuration);
     }
 }
+

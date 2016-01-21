@@ -455,12 +455,14 @@ class BaseType
     private static function ensurePropertyType($class, $name, $value)
     {
         $info = self::propertyInfo($class, $name);
-
         $expectedType = $info['type'];
-        $actualType = self::getActualType($value);
 
-        if ($expectedType !== $actualType && 'array' !== $actualType) {
-            throw new Exceptions\InvalidPropertyTypeException(get_called_class(), $name, $expectedType, $actualType);
+        if (\DTS\eBaySDK\check_property_type($expectedType)) {
+            $actualType = self::getActualType($value);
+
+            if ($expectedType !== $actualType && 'array' !== $actualType) {
+                throw new Exceptions\InvalidPropertyTypeException(get_called_class(), $name, $expectedType, $actualType);
+            }
         }
     }
 
@@ -625,3 +627,4 @@ class BaseType
         }
     }
 }
+

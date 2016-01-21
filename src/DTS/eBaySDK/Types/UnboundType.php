@@ -92,7 +92,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
      * Sets a value for the given offset.
      *
      * @param mixed $offset The array index or null to add the value to the end of the array.
-     * @throws InvalidPropertyTypeException  If the value is the wrong type for the property. 
+     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
      */
     public function offsetSet($offset, $value)
     {
@@ -124,7 +124,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns mixed The value of the current array index. 
+     * @returns mixed The value of the current array index.
      */
     public function current()
     {
@@ -132,7 +132,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns index The current array index. 
+     * @returns index The current array index.
      */
     public function key()
     {
@@ -140,7 +140,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * Move onto the next array index. 
+     * Move onto the next array index.
      */
     public function next()
     {
@@ -167,17 +167,20 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
      * Determines if the value is the correct type to assign to a property.
      *
      * @param mixed $name The value to check the type of.
-     * @throws InvalidPropertyTypeException  If the value is the wrong type for the property. 
+     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
      */
     private function ensurePropertyType($value)
     {
-        $actualType = gettype($value);
-        if ('object' === $actualType) {
-            $actualType = get_class($value);
-        }
+        if (\DTS\eBaySDK\check_property_type($this->expectedType)) {
+            $actualType = gettype($value);
+            if ('object' === $actualType) {
+                $actualType = get_class($value);
+            }
 
-        if ($this->expectedType !== $actualType) {
-            throw new Exceptions\InvalidPropertyTypeException($this->class, $this->property, $this->expectedType, $actualType);
+            if ($this->expectedType !== $actualType) {
+                throw new Exceptions\InvalidPropertyTypeException($this->class, $this->property, $this->expectedType, $actualType);
+            }
         }
     }
 }
+

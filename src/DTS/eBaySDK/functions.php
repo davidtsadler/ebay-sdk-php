@@ -101,3 +101,25 @@ function default_handler(array &$configuration)
 {
     return new Handler();
 }
+
+/**
+ * Helper function that returns true if the property type should be checked.
+ */
+function check_property_type($type)
+{
+    if (\DTS\eBaySDK\Sdk::$STRICT_PROPERTY_TYPES) {
+        return true;
+    }
+
+    switch ($type) {
+        case 'integer':
+        case 'string':
+        case 'double':
+        case 'boolean':
+        case 'DateTime':
+            return false;
+        default:
+            return true;
+    }
+}
+
