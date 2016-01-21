@@ -7,7 +7,7 @@ php:
   - hhvm
 
 install:
-  - \[ "$TRAVIS_PHP_VERSION" == "7.0" \] && echo "xdebug.overload_var_dump = 0" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini'
+  - echo "xdebug.overload_var_dump = 0" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 before_script:
   - travis_retry composer self-update
