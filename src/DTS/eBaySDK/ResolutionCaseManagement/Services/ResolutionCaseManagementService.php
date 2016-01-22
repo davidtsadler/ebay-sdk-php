@@ -23,6 +23,8 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Services;
 
 class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementBaseService
 {
+    const API_VERSION = '1.3.0';
+
     /**
      * @param array $config Configuration option values.
      */

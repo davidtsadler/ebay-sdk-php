@@ -23,6 +23,8 @@ namespace DTS\eBaySDK\ReturnManagement\Services;
 
 class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\ReturnManagementBaseService
 {
+    const API_VERSION = '1.1.0';
+
     /**
      * @param array $config Configuration option values.
      */

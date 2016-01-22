@@ -23,6 +23,8 @@ namespace DTS\eBaySDK\BulkDataExchange\Services;
 
 class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeBaseService
 {
+    const API_VERSION = '1.5.0';
+
     /**
      * @param array $config Configuration option values.
      */
