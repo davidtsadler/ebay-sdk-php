@@ -47,32 +47,6 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindPopularItemsRequestType $request
-     * @return \DTS\eBaySDK\Shopping\Types\FindPopularItemsResponseType
-     */
-    public function findPopularItems(\DTS\eBaySDK\Shopping\Types\FindPopularItemsRequestType $request)
-    {
-        return $this->callOperation(
-            'FindPopularItems',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindPopularItemsResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindPopularSearchesRequestType $request
-     * @return \DTS\eBaySDK\Shopping\Types\FindPopularSearchesResponseType
-     */
-    public function findPopularSearches(\DTS\eBaySDK\Shopping\Types\FindPopularSearchesRequestType $request)
-    {
-        return $this->callOperation(
-            'FindPopularSearches',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindPopularSearchesResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Shopping\Types\FindProductsRequestType $request
      * @return \DTS\eBaySDK\Shopping\Types\FindProductsResponseType
      */
