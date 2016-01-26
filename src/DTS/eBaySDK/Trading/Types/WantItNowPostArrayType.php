@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\WantItNowPostType[] $WantItNowPost
  */
 class WantItNowPostArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class WantItNowPostArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'WantItNowPost' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\WantItNowPostType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'WantItNowPost'
-        )
     );
 
     /**

@@ -33,7 +33,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string[] $CategoryParentID
  * @property string[] $CategoryParentName
  * @property boolean $Expired
- * @property boolean $IntlAutosFixedCat
  * @property boolean $LeafCategory
  * @property boolean $Virtual
  * @property boolean $ORPA
@@ -105,12 +104,6 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Expired'
-        ),
-        'IntlAutosFixedCat' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IntlAutosFixedCat'
         ),
         'LeafCategory' => array(
             'type' => 'boolean',

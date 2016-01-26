@@ -23,18 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $Title
- * @property string $DetailsURL
- * @property string $StockPhotoURL
- * @property boolean $DisplayStockPhotos
- * @property integer $ItemCount
- * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
- * @property integer $ProductReferenceID
- * @property integer $AttributeSetID
- * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
- * @property integer $ReviewCount
- * @property \DTS\eBaySDK\Trading\Types\ReviewDetailsType $ReviewDetails
- * @property \DTS\eBaySDK\Trading\Enums\ProductStateCodeType $ProductState
  */
 class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -42,78 +30,6 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Title' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ),
-        'DetailsURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DetailsURL'
-        ),
-        'StockPhotoURL' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'StockPhotoURL'
-        ),
-        'DisplayStockPhotos' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DisplayStockPhotos'
-        ),
-        'ItemCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemCount'
-        ),
-        'ExternalProductID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalProductID'
-        ),
-        'ProductReferenceID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductReferenceID'
-        ),
-        'AttributeSetID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeSetID'
-        ),
-        'ItemSpecifics' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ItemSpecifics'
-        ),
-        'ReviewCount' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewCount'
-        ),
-        'ReviewDetails' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ReviewDetailsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewDetails'
-        ),
-        'ProductState' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductState'
-        )
     );
 
     /**

@@ -29,7 +29,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\Base64BinaryType $PictureData
  * @property \DTS\eBaySDK\Trading\Enums\PictureUploadPolicyCodeType $PictureUploadPolicy
  * @property string[] $ExternalPictureURL
- * @property \DTS\eBaySDK\Trading\Enums\PictureWatermarkCodeType[] $PictureWatermark
  * @property integer $ExtensionInDays
  */
 class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -73,12 +72,6 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
-        ),
-        'PictureWatermark' => array(
-            'type' => 'string',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'PictureWatermark'
         ),
         'ExtensionInDays' => array(
             'type' => 'integer',

@@ -41,7 +41,6 @@ class NotificationEventTypeCodeType
     const C_BULK_DATA_EXCHANGE_JOB_COMPLETED = 'BulkDataExchangeJobCompleted';
     const C_BUYER_CANCEL_REQUESTED = 'BuyerCancelRequested';
     const C_BUYER_RESPONSE_DISPUTE = 'BuyerResponseDispute';
-    const C_CHECKOUT = 'Checkout';
     const C_CHECKOUT_BUYER_REQUESTS_TOTAL = 'CheckoutBuyerRequestsTotal';
     const C_COUNTER_OFFER_RECEIVED = 'CounterOfferReceived';
     const C_CUSTOM_CODE = 'CustomCode';
@@ -68,7 +67,6 @@ class NotificationEventTypeCodeType
     const C_INR_BUYER_RESPONDED_TO_DISPUTE = 'INRBuyerRespondedToDispute';
     const C_INR_SELLER_RESPONDED_TO_DISPUTE = 'INRSellerRespondedToDispute';
     const C_ITEMS_CANCELED = 'ItemsCanceled';
-    const C_ITEM_ADDED_TO_BID_GROUP = 'ItemAddedToBidGroup';
     const C_ITEM_ADDED_TO_WATCH_LIST = 'ItemAddedToWatchList';
     const C_ITEM_CLOSED = 'ItemClosed';
     const C_ITEM_EXTENDED = 'ItemExtended';
@@ -76,7 +74,6 @@ class NotificationEventTypeCodeType
     const C_ITEM_LOST = 'ItemLost';
     const C_ITEM_MARKED_PAID = 'ItemMarkedPaid';
     const C_ITEM_MARKED_SHIPPED = 'ItemMarkedShipped';
-    const C_ITEM_REMOVED_FROM_BID_GROUP = 'ItemRemovedFromBidGroup';
     const C_ITEM_REMOVED_FROM_WATCH_LIST = 'ItemRemovedFromWatchList';
     const C_ITEM_REVISED = 'ItemRevised';
     const C_ITEM_REVISED_ADD_CHARITY = 'ItemRevisedAddCharity';
@@ -89,8 +86,6 @@ class NotificationEventTypeCodeType
     const C_MY_MESSAGESE_BAY_MESSAGE_HEADER = 'MyMessageseBayMessageHeader';
     const C_MY_MESSAGESM2M_MESSAGE = 'MyMessagesM2MMessage';
     const C_MY_MESSAGESM2M_MESSAGE_HEADER = 'MyMessagesM2MMessageHeader';
-    const C_MY_MESSAGES_ALERT = 'MyMessagesAlert';
-    const C_MY_MESSAGES_ALERT_HEADER = 'MyMessagesAlertHeader';
     const C_MY_MESSAGES_HIGH_PRIORITY_MESSAGE = 'MyMessagesHighPriorityMessage';
     const C_MY_MESSAGES_HIGH_PRIORITY_MESSAGE_HEADER = 'MyMessagesHighPriorityMessageHeader';
     const C_NONE = 'None';

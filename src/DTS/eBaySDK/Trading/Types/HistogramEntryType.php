@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property integer $Count
- * @property string $id
- * @property string $name
  */
 class HistogramEntryType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,24 +30,6 @@ class HistogramEntryType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Count' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Count'
-        ),
-        'id' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'id'
-        ),
-        'name' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'name'
-        )
     );
 
     /**

@@ -42,7 +42,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ExternalTransactionType[] $ExternalTransaction
  * @property \DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType $SellingManagerProductDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType $ShippingServiceSelected
- * @property \DTS\eBaySDK\Trading\Types\AmountType $DutchAuctionBid
  * @property \DTS\eBaySDK\Trading\Enums\PaidStatusCodeType $BuyerPaidStatus
  * @property \DTS\eBaySDK\Trading\Enums\PaidStatusCodeType $SellerPaidStatus
  * @property \DateTime $PaidTime
@@ -210,12 +209,6 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceSelected'
-        ),
-        'DutchAuctionBid' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DutchAuctionBid'
         ),
         'BuyerPaidStatus' => array(
             'type' => 'string',

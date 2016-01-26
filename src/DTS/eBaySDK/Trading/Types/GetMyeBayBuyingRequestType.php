@@ -31,7 +31,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $FavoriteSearches
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $FavoriteSellers
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySelectionType $SecondChanceOffer
- * @property \DTS\eBaySDK\Trading\Types\BidAssistantListType $BidAssistantList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromWonList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromLostList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BuyingSummary
@@ -91,12 +90,6 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
-        ),
-        'BidAssistantList' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BidAssistantListType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BidAssistantList'
         ),
         'DeletedFromWonList' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',

@@ -23,8 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property double $AverageRating
- * @property \DTS\eBaySDK\Trading\Types\ReviewType[] $Review
  */
 class ReviewDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,18 +30,6 @@ class ReviewDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AverageRating' => array(
-            'type' => 'double',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AverageRating'
-        ),
-        'Review' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ReviewType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Review'
-        )
     );
 
     /**

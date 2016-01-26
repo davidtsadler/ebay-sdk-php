@@ -28,7 +28,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DateTime $RefundTime
  * @property string $RefundID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
- * @property \DTS\eBaySDK\Trading\Enums\RefundStatusCodeType $RefundStatus
  */
 class RefundType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -65,12 +64,6 @@ class RefundType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundAmount'
-        ),
-        'RefundStatus' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'RefundStatus'
         )
     );
 

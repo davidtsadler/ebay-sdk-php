@@ -24,9 +24,7 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ApplicationData
- * @property \DTS\eBaySDK\Trading\Types\AttributeSetArrayType $AttributeSetArray
  * @property \DTS\eBaySDK\Trading\Types\AttributeArrayType $AttributeArray
- * @property \DTS\eBaySDK\Trading\Types\LookupAttributeArrayType $LookupAttributeArray
  * @property boolean $AutoPay
  * @property \DTS\eBaySDK\Trading\Types\PaymentDetailsType $PaymentDetails
  * @property \DTS\eBaySDK\Trading\Types\BiddingDetailsType $BiddingDetails
@@ -36,7 +34,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $CategoryMappingAllowed
  * @property \DTS\eBaySDK\Trading\Types\CharityType $Charity
  * @property \DTS\eBaySDK\Trading\Enums\CountryCodeType $Country
- * @property \DTS\eBaySDK\Trading\Types\CrossPromotionsType $CrossPromotion
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
@@ -52,8 +49,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\ListingTypeCodeType $ListingType
  * @property string $Location
  * @property integer $LotSize
- * @property string $PartnerCode
- * @property string $PartnerName
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
  * @property string $PayPalEmailAddress
  * @property \DTS\eBaySDK\Trading\Types\CategoryType $PrimaryCategory
@@ -88,9 +83,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $LocationDefaulted
  * @property boolean $ThirdPartyCheckout
  * @property boolean $UseTaxTable
- * @property boolean $GetItFast
  * @property boolean $BuyerResponsibleForShipping
- * @property boolean $LimitedWarrantyEligible
  * @property string $eBayNotes
  * @property integer $QuestionCount
  * @property boolean $Relisted
@@ -100,7 +93,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\SearchDetailsType $SearchDetails
  * @property string $PostalCode
  * @property boolean $ShippingTermsInDescription
- * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
  * @property string $SellerInventoryID
  * @property \DTS\eBaySDK\Trading\Types\PictureDetailsType $PictureDetails
  * @property integer $DispatchTimeMax
@@ -190,23 +182,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'ApplicationData'
         ),
-        'AttributeSetArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AttributeSetArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeSetArray'
-        ),
         'AttributeArray' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\AttributeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AttributeArray'
-        ),
-        'LookupAttributeArray' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\LookupAttributeArrayType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LookupAttributeArray'
         ),
         'AutoPay' => array(
             'type' => 'boolean',
@@ -261,12 +241,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Country'
-        ),
-        'CrossPromotion' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\CrossPromotionsType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CrossPromotion'
         ),
         'Currency' => array(
             'type' => 'string',
@@ -357,18 +331,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LotSize'
-        ),
-        'PartnerCode' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PartnerCode'
-        ),
-        'PartnerName' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'PartnerName'
         ),
         'PaymentMethods' => array(
             'type' => 'string',
@@ -574,23 +536,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UseTaxTable'
         ),
-        'GetItFast' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'GetItFast'
-        ),
         'BuyerResponsibleForShipping' => array(
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerResponsibleForShipping'
-        ),
-        'LimitedWarrantyEligible' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'LimitedWarrantyEligible'
         ),
         'eBayNotes' => array(
             'type' => 'string',
@@ -645,12 +595,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTermsInDescription'
-        ),
-        'ExternalProductID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalProductID'
         ),
         'SellerInventoryID' => array(
             'type' => 'string',

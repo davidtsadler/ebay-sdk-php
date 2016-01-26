@@ -29,7 +29,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $CheckoutEnabled
  * @property boolean $CIPBankAccountStored
  * @property boolean $GoodStanding
- * @property \DTS\eBaySDK\Trading\Enums\MerchandizingPrefCodeType $MerchandizingPref
  * @property boolean $QualifiesForB2BVAT
  * @property \DTS\eBaySDK\Trading\Enums\SellerLevelCodeType $SellerLevel
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerPaymentAddress
@@ -93,12 +92,6 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GoodStanding'
-        ),
-        'MerchandizingPref' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MerchandizingPref'
         ),
         'QualifiesForB2BVAT' => array(
             'type' => 'boolean',

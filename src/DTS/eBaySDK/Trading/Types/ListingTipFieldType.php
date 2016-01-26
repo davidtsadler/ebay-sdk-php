@@ -23,10 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ListingTipFieldID
- * @property string $FieldTip
- * @property string $CurrentFieldText
- * @property string $CurrentFieldValue
  */
 class ListingTipFieldType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -34,30 +30,6 @@ class ListingTipFieldType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ListingTipFieldID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ListingTipFieldID'
-        ),
-        'FieldTip' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'FieldTip'
-        ),
-        'CurrentFieldText' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CurrentFieldText'
-        ),
-        'CurrentFieldValue' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'CurrentFieldValue'
-        )
     );
 
     /**

@@ -23,11 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AverageStartPrice
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AverageSoldPrice
- * @property string $Title
- * @property \DTS\eBaySDK\Trading\Enums\ProductStateCodeType $ProductState
- * @property string $productInfoID
  */
 class ProductInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -35,36 +30,6 @@ class ProductInfoType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AverageStartPrice' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AverageStartPrice'
-        ),
-        'AverageSoldPrice' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AverageSoldPrice'
-        ),
-        'Title' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ),
-        'ProductState' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ProductState'
-        ),
-        'productInfoID' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => true,
-            'attributeName' => 'productInfoID'
-        )
     );
 
     /**

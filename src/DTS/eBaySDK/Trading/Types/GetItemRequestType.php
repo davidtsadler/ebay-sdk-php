@@ -25,7 +25,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $ItemID
  * @property boolean $IncludeWatchCount
- * @property boolean $IncludeCrossPromotion
  * @property boolean $IncludeItemSpecifics
  * @property boolean $IncludeTaxTable
  * @property string $SKU
@@ -51,12 +50,6 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeWatchCount'
-        ),
-        'IncludeCrossPromotion' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeCrossPromotion'
         ),
         'IncludeItemSpecifics' => array(
             'type' => 'boolean',

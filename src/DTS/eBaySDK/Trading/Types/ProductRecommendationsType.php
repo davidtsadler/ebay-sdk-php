@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ProductInfoType[] $Product
  */
 class ProductRecommendationsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class ProductRecommendationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Product' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductInfoType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'Product'
-        )
     );
 
     /**

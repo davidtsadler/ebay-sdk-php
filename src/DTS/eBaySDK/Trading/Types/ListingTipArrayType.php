@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ListingTipType[] $ListingTip
  */
 class ListingTipArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class ListingTipArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'ListingTip' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingTipType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'ListingTip'
-        )
     );
 
     /**

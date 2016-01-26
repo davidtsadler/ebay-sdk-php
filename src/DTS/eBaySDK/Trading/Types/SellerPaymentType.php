@@ -28,7 +28,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $OrderID
  * @property string $SellerInventoryID
  * @property string $PrivateNotes
- * @property \DTS\eBaySDK\Trading\Types\ExternalProductIDType $ExternalProductID
  * @property string $Title
  * @property \DTS\eBaySDK\Trading\Enums\PaymentTypeCodeType $PaymentType
  * @property \DTS\eBaySDK\Trading\Types\AmountType $TransactionPrice
@@ -73,12 +72,6 @@ class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrivateNotes'
-        ),
-        'ExternalProductID' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ExternalProductIDType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ExternalProductID'
         ),
         'Title' => array(
             'type' => 'string',

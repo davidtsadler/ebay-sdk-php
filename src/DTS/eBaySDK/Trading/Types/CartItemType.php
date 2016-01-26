@@ -23,9 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property integer $ReferenceID
- * @property \DTS\eBaySDK\Trading\Enums\ModifyActionCodeType $Action
  */
 class CartItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -33,24 +30,6 @@ class CartItemType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Item' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ),
-        'ReferenceID' => array(
-            'type' => 'integer',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ReferenceID'
-        ),
-        'Action' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Action'
-        )
     );
 
     /**

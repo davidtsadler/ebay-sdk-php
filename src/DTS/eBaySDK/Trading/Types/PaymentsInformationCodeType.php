@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaymentInformationCodeType $Payments
  */
 class PaymentsInformationCodeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class PaymentsInformationCodeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'Payments' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\PaymentInformationCodeType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'Payments'
-        )
     );
 
     /**

@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\HistogramEntryType[] $HistogramEntry
  */
 class CharacteristicsSetProductHistogramType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class CharacteristicsSetProductHistogramType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'HistogramEntry' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\HistogramEntryType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'HistogramEntry'
-        )
     );
 
     /**

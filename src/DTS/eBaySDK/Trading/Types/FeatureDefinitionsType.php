@@ -26,11 +26,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ListingDurationDefinitionsType $ListingDurations
  * @property \DTS\eBaySDK\Trading\Types\ShippingTermRequiredDefinitionType $ShippingTermsRequired
  * @property \DTS\eBaySDK\Trading\Types\BestOfferEnabledDefinitionType $BestOfferEnabled
- * @property \DTS\eBaySDK\Trading\Types\DutchBINEnabledDefinitionType $DutchBINEnabled
- * @property \DTS\eBaySDK\Trading\Types\UserConsentRequiredDefinitionType $UserConsentRequired
  * @property \DTS\eBaySDK\Trading\Types\HomePageFeaturedEnabledDefinitionType $HomePageFeaturedEnabled
  * @property \DTS\eBaySDK\Trading\Types\ProPackEnabledDefinitionType $ProPackEnabled
- * @property \DTS\eBaySDK\Trading\Types\BasicUpgradePackEnabledDefinitionType $BasicUpgradePackEnabled
  * @property \DTS\eBaySDK\Trading\Types\ValuePackEnabledDefinitionType $ValuePackEnabled
  * @property \DTS\eBaySDK\Trading\Types\ProPackPlusEnabledDefinitionType $ProPackPlusEnabled
  * @property \DTS\eBaySDK\Trading\Types\AdFormatEnabledDefinitionType $AdFormatEnabled
@@ -60,9 +57,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ClassifiedAdPayPerLeadEnabledDefinitionType $ClassifiedAdPayPerLeadEnabled
  * @property \DTS\eBaySDK\Trading\Types\ItemSpecificsEnabledDefinitionType $ItemSpecificsEnabled
  * @property \DTS\eBaySDK\Trading\Types\PaisaPayFullEscrowEnabledDefinitionType $PaisaPayFullEscrowEnabled
- * @property \DTS\eBaySDK\Trading\Types\ISBNIdentifierEnabledDefinitionType $ISBNIdentifierEnabled
- * @property \DTS\eBaySDK\Trading\Types\UPCIdentifierEnabledDefinitionType $UPCIdentifierEnabled
- * @property \DTS\eBaySDK\Trading\Types\EANIdentifierEnabledDefinitionType $EANIdentifierEnabled
  * @property \DTS\eBaySDK\Trading\Types\BrandMPNIdentifierEnabledDefinitionType $BrandMPNIdentifierEnabled
  * @property \DTS\eBaySDK\Trading\Types\BestOfferAutoAcceptEnabledDefinitionType $BestOfferAutoAcceptEnabled
  * @property \DTS\eBaySDK\Trading\Types\ClassifiedAdAutoAcceptEnabledDefinitionType $ClassifiedAdAutoAcceptEnabled
@@ -175,18 +169,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ),
-        'DutchBINEnabled' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\DutchBINEnabledDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'DutchBINEnabled'
-        ),
-        'UserConsentRequired' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UserConsentRequiredDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UserConsentRequired'
-        ),
         'HomePageFeaturedEnabled' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\HomePageFeaturedEnabledDefinitionType',
             'unbound' => false,
@@ -198,12 +180,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPackEnabled'
-        ),
-        'BasicUpgradePackEnabled' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\BasicUpgradePackEnabledDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'BasicUpgradePackEnabled'
         ),
         'ValuePackEnabled' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\ValuePackEnabledDefinitionType',
@@ -378,24 +354,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaisaPayFullEscrowEnabled'
-        ),
-        'ISBNIdentifierEnabled' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\ISBNIdentifierEnabledDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'ISBNIdentifierEnabled'
-        ),
-        'UPCIdentifierEnabled' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\UPCIdentifierEnabledDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'UPCIdentifierEnabled'
-        ),
-        'EANIdentifierEnabled' => array(
-            'type' => 'DTS\eBaySDK\Trading\Types\EANIdentifierEnabledDefinitionType',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'EANIdentifierEnabled'
         ),
         'BrandMPNIdentifierEnabled' => array(
             'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNIdentifierEnabledDefinitionType',

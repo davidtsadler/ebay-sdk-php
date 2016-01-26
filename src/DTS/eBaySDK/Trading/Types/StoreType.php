@@ -39,7 +39,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $ExportListings
  * @property \DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType $CustomCategories
  * @property \DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderType $CustomListingHeader
- * @property \DTS\eBaySDK\Trading\Enums\MerchDisplayCodeType $MerchDisplay
  * @property \DateTime $LastOpenedTime
  * @property boolean $TitleWithCompatibility
  */
@@ -144,12 +143,6 @@ class StoreType extends \DTS\eBaySDK\Types\BaseType
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomListingHeader'
-        ),
-        'MerchDisplay' => array(
-            'type' => 'string',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'MerchDisplay'
         ),
         'LastOpenedTime' => array(
             'type' => 'DateTime',

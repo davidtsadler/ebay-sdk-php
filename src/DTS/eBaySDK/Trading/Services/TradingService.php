@@ -489,32 +489,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetAttributesCSRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetAttributesCSResponseType
-     */
-    public function getAttributesCS(\DTS\eBaySDK\Trading\Types\GetAttributesCSRequestType $request)
-    {
-        return $this->callOperation(
-            'GetAttributesCS',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetAttributesCSResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetAttributesXSLRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetAttributesXSLResponseType
-     */
-    public function getAttributesXSL(\DTS\eBaySDK\Trading\Types\GetAttributesXSLRequestType $request)
-    {
-        return $this->callOperation(
-            'GetAttributesXSL',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetAttributesXSLResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GetBestOffersRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GetBestOffersResponseType
      */
@@ -550,19 +524,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'GetCategories',
             $request,
             '\DTS\eBaySDK\Trading\Types\GetCategoriesResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetCategory2CSRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetCategory2CSResponseType
-     */
-    public function getCategory2CS(\DTS\eBaySDK\Trading\Types\GetCategory2CSRequestType $request)
-    {
-        return $this->callOperation(
-            'GetCategory2CS',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCategory2CSResponseType'
         );
     }
 
@@ -658,19 +619,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetCrossPromotionsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetCrossPromotionsResponseType
-     */
-    public function getCrossPromotions(\DTS\eBaySDK\Trading\Types\GetCrossPromotionsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetCrossPromotions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCrossPromotionsResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GetDescriptionTemplatesRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GetDescriptionTemplatesResponseType
      */
@@ -710,19 +658,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetHighBiddersRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetHighBiddersResponseType
-     */
-    public function getHighBidders(\DTS\eBaySDK\Trading\Types\GetHighBiddersRequestType $request)
-    {
-        return $this->callOperation(
-            'GetHighBidders',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetHighBiddersResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GetItemRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GetItemResponseType
      */
@@ -732,19 +667,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'GetItem',
             $request,
             '\DTS\eBaySDK\Trading\Types\GetItemResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetItemRecommendationsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetItemRecommendationsResponseType
-     */
-    public function getItemRecommendations(\DTS\eBaySDK\Trading\Types\GetItemRecommendationsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetItemRecommendations',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetItemRecommendationsResponseType'
         );
     }
 
@@ -918,97 +840,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetPictureManagerDetailsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetPictureManagerDetailsResponseType
-     */
-    public function getPictureManagerDetails(\DTS\eBaySDK\Trading\Types\GetPictureManagerDetailsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetPictureManagerDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetPictureManagerDetailsResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetPictureManagerOptionsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetPictureManagerOptionsResponseType
-     */
-    public function getPictureManagerOptions(\DTS\eBaySDK\Trading\Types\GetPictureManagerOptionsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetPictureManagerOptions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetPictureManagerOptionsResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductFamilyMembersRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductFamilyMembersResponseType
-     */
-    public function getProductFamilyMembers(\DTS\eBaySDK\Trading\Types\GetProductFamilyMembersRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductFamilyMembers',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductFamilyMembersResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductFinderRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductFinderResponseType
-     */
-    public function getProductFinder(\DTS\eBaySDK\Trading\Types\GetProductFinderRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductFinder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductFinderResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductFinderXSLRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductFinderXSLResponseType
-     */
-    public function getProductFinderXSL(\DTS\eBaySDK\Trading\Types\GetProductFinderXSLRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductFinderXSL',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductFinderXSLResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductSearchPageRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductSearchPageResponseType
-     */
-    public function getProductSearchPage(\DTS\eBaySDK\Trading\Types\GetProductSearchPageRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductSearchPage',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductSearchPageResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductSearchResultsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductSearchResultsResponseType
-     */
-    public function getProductSearchResults(\DTS\eBaySDK\Trading\Types\GetProductSearchResultsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductSearchResults',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductSearchResultsResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GetProductSellingPagesRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GetProductSellingPagesResponseType
      */
@@ -1018,19 +849,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'GetProductSellingPages',
             $request,
             '\DTS\eBaySDK\Trading\Types\GetProductSellingPagesResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetPromotionRulesRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetPromotionRulesResponseType
-     */
-    public function getPromotionRules(\DTS\eBaySDK\Trading\Types\GetPromotionRulesRequestType $request)
-    {
-        return $this->callOperation(
-            'GetPromotionRules',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetPromotionRulesResponseType'
         );
     }
 
@@ -1438,32 +1256,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetWantItNowPostRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetWantItNowPostResponseType
-     */
-    public function getWantItNowPost(\DTS\eBaySDK\Trading\Types\GetWantItNowPostRequestType $request)
-    {
-        return $this->callOperation(
-            'GetWantItNowPost',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetWantItNowPostResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetWantItNowSearchResultsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetWantItNowSearchResultsResponseType
-     */
-    public function getWantItNowSearchResults(\DTS\eBaySDK\Trading\Types\GetWantItNowSearchResultsRequestType $request)
-    {
-        return $this->callOperation(
-            'GetWantItNowSearchResults',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetWantItNowSearchResultsResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GeteBayDetailsRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GeteBayDetailsResponseType
      */
@@ -1603,19 +1395,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'RespondToFeedback',
             $request,
             '\DTS\eBaySDK\Trading\Types\RespondToFeedbackResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\RespondToWantItNowPostRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\RespondToWantItNowPostResponseType
-     */
-    public function respondToWantItNowPost(\DTS\eBaySDK\Trading\Types\RespondToWantItNowPostRequestType $request)
-    {
-        return $this->callOperation(
-            'RespondToWantItNowPost',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RespondToWantItNowPostResponseType'
         );
     }
 
@@ -1828,19 +1607,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\SetPictureManagerDetailsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\SetPictureManagerDetailsResponseType
-     */
-    public function setPictureManagerDetails(\DTS\eBaySDK\Trading\Types\SetPictureManagerDetailsRequestType $request)
-    {
-        return $this->callOperation(
-            'SetPictureManagerDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetPictureManagerDetailsResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\SetPromotionalSaleRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\SetPromotionalSaleResponseType
      */
@@ -1993,19 +1759,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'SetUserNotes',
             $request,
             '\DTS\eBaySDK\Trading\Types\SetUserNotesResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\SetUserPreferencesResponseType
-     */
-    public function setUserPreferences(\DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType $request)
-    {
-        return $this->callOperation(
-            'SetUserPreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetUserPreferencesResponseType'
         );
     }
 
