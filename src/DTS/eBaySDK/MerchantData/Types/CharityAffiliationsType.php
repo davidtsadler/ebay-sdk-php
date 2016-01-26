@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\MerchantData\Types\CharityIDType[] $CharityID
  */
 class CharityAffiliationsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -31,12 +30,6 @@ class CharityAffiliationsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'CharityID' => array(
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CharityIDType',
-            'unbound' => true,
-            'attribute' => false,
-            'elementName' => 'CharityID'
-        )
     );
 
     /**

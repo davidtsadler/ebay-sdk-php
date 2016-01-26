@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
 
 /**
  *
- * @property boolean $AllowPaymentEdit
  * @property boolean $GlobalShipping
  * @property \DTS\eBaySDK\MerchantData\Types\CalculatedShippingRateType $CalculatedShippingRate
  * @property boolean $ChangePaymentInstructions
@@ -65,12 +64,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = array(
-        'AllowPaymentEdit' => array(
-            'type' => 'boolean',
-            'unbound' => false,
-            'attribute' => false,
-            'elementName' => 'AllowPaymentEdit'
-        ),
         'GlobalShipping' => array(
             'type' => 'boolean',
             'unbound' => false,
