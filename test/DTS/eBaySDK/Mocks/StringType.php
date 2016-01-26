@@ -16,7 +16,7 @@ class StringType extends \DTS\eBaySDK\Types\StringType
         }
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'http://davidtsadler.com';
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://davidtsadler.com"';
         }
 
         $this->setValues(__CLASS__, $childValues);

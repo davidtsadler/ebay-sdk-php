@@ -53,7 +53,7 @@ class ActivateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Ba
         }
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'http://www.ebay.com/marketplace/services';
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/services"';
         }
 
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {

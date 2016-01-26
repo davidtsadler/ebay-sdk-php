@@ -143,7 +143,7 @@ class BaseType
             $rootElement ? "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" : '',
             $elementName,
             $this->attributesToXml(),
-            array_key_exists(get_class($this), self::$xmlNamespaces) ? sprintf(' xmlns="%s"', self::$xmlNamespaces[get_class($this)]) : '',
+            array_key_exists(get_class($this), self::$xmlNamespaces) ? sprintf(' %s', self::$xmlNamespaces[get_class($this)]) : '',
             $this->propertiesToXml(),
             $elementName
         );

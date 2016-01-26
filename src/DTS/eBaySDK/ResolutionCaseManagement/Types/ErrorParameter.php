@@ -53,7 +53,7 @@ class ErrorParameter extends \DTS\eBaySDK\Types\StringType
         }
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'http://www.ebay.com/marketplace/resolution/v1/services';
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/resolution/v1/services"';
         }
 
         $this->setValues(__CLASS__, $childValues);

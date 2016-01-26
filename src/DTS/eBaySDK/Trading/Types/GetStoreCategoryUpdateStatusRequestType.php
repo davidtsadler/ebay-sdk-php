@@ -53,7 +53,7 @@ class GetStoreCategoryUpdateStatusRequestType extends \DTS\eBaySDK\Trading\Types
         }
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'urn:ebay:apis:eBLBaseComponents';
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {

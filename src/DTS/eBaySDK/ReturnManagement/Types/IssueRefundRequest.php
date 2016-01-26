@@ -67,7 +67,7 @@ class IssueRefundRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseRequest
         }
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'http://www.ebay.com/marketplace/returns/v1/services';
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/returns/v1/services"';
         }
 
         if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
