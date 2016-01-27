@@ -24,7 +24,7 @@ namespace DTS\eBaySDK\FileTransfer\Types;
 /**
  *
  * @property integer $Size
- * @property string $Data
+ * @property \DTS\eBaySDK\FileTransfer\Types\Data $Data
  */
 class FileAttachment extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,7 +39,7 @@ class FileAttachment extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Size'
         ),
         'Data' => array(
-            'type' => 'string',
+            'type' => 'DTS\eBaySDK\FileTransfer\Types\Data',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Data'

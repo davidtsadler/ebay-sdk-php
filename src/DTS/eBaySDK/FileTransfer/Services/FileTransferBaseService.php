@@ -66,7 +66,11 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
             }
 
             if(!isset($request->fileAttachment->Data)) {
-                $request->fileAttachment->Data = '<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:attachment.bin@devbay.net"/>';
+                $request->fileAttachment->Data = new \DTS\eBaySDK\FileTransfer\Types\Data([
+                    'xopInclude' => new \DTS\eBaySDK\FileTransfer\Types\XopInclude([
+                        'href' => 'cid:attachment.bin@devbay.net'
+                    ])
+                ]);
             }
 
             if(!isset($request->fileAttachment->Size)) {
