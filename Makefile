@@ -67,35 +67,37 @@ sync_bus:
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/test/DTS/eBaySDK/BusinessPoliciesManagement/ test/DTS/eBaySDK/BusinessPoliciesManagement/
 
 sync_file:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/FileTransfer/src/DTS/eBaySDK/FileTransfer/ src/DTS/eBaySDK/FileTransfer/
+	rsync -rtvu --delete --exclude *BaseService.php --exclude Data.php --exclude XopInclude.php ../ebay-api-sdk-php/dist/FileTransfer/src/DTS/eBaySDK/FileTransfer/ src/DTS/eBaySDK/FileTransfer/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/FileTransfer/test/DTS/eBaySDK/FileTransfer/ test/DTS/eBaySDK/FileTransfer/
+	sed -i -e "s/@property string/@property \\\DTS\\\eBaySDK\\\FileTransfer\\\Types\\\Data/" src/DTS/eBaySDK/FileTransfer/Types/FileAttachment.php
+	sed -i -e "s/'string'/'DTS\\\eBaySDK\\\FileTransfer\\\Types\\\Data'/" src/DTS/eBaySDK/FileTransfer/Types/FileAttachment.php
 
 sync_finding:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/Finding/src/DTS/eBaySDK/Finding/ src/DTS/eBaySDK/Finding/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Finding/src/DTS/eBaySDK/Finding/ src/DTS/eBaySDK/Finding/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Finding/test/DTS/eBaySDK/Finding/ test/DTS/eBaySDK/Finding/
 
 sync_half:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/HalfFinding/src/DTS/eBaySDK/HalfFinding/ src/DTS/eBaySDK/HalfFinding/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/HalfFinding/src/DTS/eBaySDK/HalfFinding/ src/DTS/eBaySDK/HalfFinding/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/HalfFinding/test/DTS/eBaySDK/HalfFinding/ test/DTS/eBaySDK/HalfFinding/
 
 sync_merc:
-	rsync -rtvu --delete --exclude MerchantDataService.php  ../ebay-api-sdk-php/dist/MerchantData/src/DTS/eBaySDK/MerchantData/ src/DTS/eBaySDK/MerchantData/
+	rsync -rtvu --delete --exclude MerchantDataService.php ../ebay-api-sdk-php/dist/MerchantData/src/DTS/eBaySDK/MerchantData/ src/DTS/eBaySDK/MerchantData/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/MerchantData/test/DTS/eBaySDK/MerchantData/ test/DTS/eBaySDK/MerchantData/
 
 sync_res:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/ResolutionCaseManagement/src/DTS/eBaySDK/ResolutionCaseManagement/ src/DTS/eBaySDK/ResolutionCaseManagement/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ResolutionCaseManagement/src/DTS/eBaySDK/ResolutionCaseManagement/ src/DTS/eBaySDK/ResolutionCaseManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/ResolutionCaseManagement/test/DTS/eBaySDK/ResolutionCaseManagement/ test/DTS/eBaySDK/ResolutionCaseManagement/
 
 sync_return:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/ReturnManagement/src/DTS/eBaySDK/ReturnManagement/ src/DTS/eBaySDK/ReturnManagement/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ReturnManagement/src/DTS/eBaySDK/ReturnManagement/ src/DTS/eBaySDK/ReturnManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/ReturnManagement/test/DTS/eBaySDK/ReturnManagement/ test/DTS/eBaySDK/ReturnManagement/
 
 sync_shop:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/Shopping/src/DTS/eBaySDK/Shopping/ src/DTS/eBaySDK/Shopping/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Shopping/src/DTS/eBaySDK/Shopping/ src/DTS/eBaySDK/Shopping/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Shopping/test/DTS/eBaySDK/Shopping/ test/DTS/eBaySDK/Shopping/
 
 sync_trade:
-	rsync -rtvu --delete --exclude *BaseService.php  ../ebay-api-sdk-php/dist/Trading/src/DTS/eBaySDK/Trading/ src/DTS/eBaySDK/Trading/
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Trading/src/DTS/eBaySDK/Trading/ src/DTS/eBaySDK/Trading/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Trading/test/DTS/eBaySDK/Trading/ test/DTS/eBaySDK/Trading/
 
 sync_all: sync_bulk sync_bus sync_file sync_finding sync_half sync_merc sync_res sync_return sync_shop sync_trade
