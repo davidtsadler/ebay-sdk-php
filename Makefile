@@ -2,17 +2,14 @@
 #
 # https://github.com/aws/aws-sdk-php/blob/2.7.19/Makefile
 #
-cs-report:
-	@php phpcs.phar $(DIR) --standard=PSR2 --report=summary -n
+phpcs-report:
+	@vendor/bin/phpcs $(DIR) --standard=PSR2 --report=summary -n
 
-cs:
-	@php phpcs.phar $(DIR) --standard=PSR2 -n -a
+phpcs:
+	@vendor/bin/phpcs $(DIR) --standard=PSR2 -n -a
 
-cs-fixer-dry-run:
-	@php php-cs-fixer.phar fix $(DIR) --level=psr2 --dry-run --verbose
-
-cs-fixer:
-	@php php-cs-fixer.phar fix $(DIR) --level=psr2 --verbose
+phpcbf:
+	@vendor/bin/phpcbf $(DIR) --standard=PSR2 -n
 
 test:
 	vendor/bin/phpunit $(TEST)
