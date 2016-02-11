@@ -83,4 +83,3 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(8, $r->fileAttachment->Size);
     }
 }
-

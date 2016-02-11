@@ -103,4 +103,3 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('666', $h->headers[ShoppingBaseService::HDR_AFFILIATE_USER_ID]);
     }
 }
-

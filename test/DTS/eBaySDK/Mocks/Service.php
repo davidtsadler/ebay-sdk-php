@@ -34,4 +34,3 @@ class Service extends \DTS\eBaySDK\Mocks\BaseService
         );
     }
 }
-

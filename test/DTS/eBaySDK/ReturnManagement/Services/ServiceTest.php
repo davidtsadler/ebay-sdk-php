@@ -77,4 +77,3 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('999', $h->headers[ReturnManagementBaseService::HDR_GLOBAL_ID]);
     }
 }
-

@@ -85,4 +85,3 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('devId', $h->headers[TradingBaseService::HDR_DEV_ID]);
     }
 }
-

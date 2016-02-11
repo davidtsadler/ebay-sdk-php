@@ -101,4 +101,3 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array('data' => 'ABC123', 'mimeType' => 'image/jpeg'), $response->attachment());
     }
 }
-

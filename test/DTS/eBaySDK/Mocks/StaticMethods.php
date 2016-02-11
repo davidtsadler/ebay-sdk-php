@@ -13,4 +13,3 @@ class StaticMethods
         $configuration['foo'] = 3;
     }
 }
-

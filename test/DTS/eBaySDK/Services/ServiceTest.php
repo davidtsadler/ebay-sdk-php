@@ -270,4 +270,3 @@ EOT;
         ], $s->getConfig());
     }
 }
-

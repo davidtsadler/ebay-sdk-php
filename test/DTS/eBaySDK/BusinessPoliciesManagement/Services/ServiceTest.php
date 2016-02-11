@@ -77,4 +77,3 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $h->headers[BusinessPoliciesManagementBaseService::HDR_API_VERSION]);
     }
 }
-

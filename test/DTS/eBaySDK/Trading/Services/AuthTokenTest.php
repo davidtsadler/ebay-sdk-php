@@ -62,4 +62,3 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $r->RequesterCredentials->eBayAuthToken);
     }
 }
-

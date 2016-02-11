@@ -66,4 +66,3 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('123', $h->headers[FileTransferBaseService::HDR_API_VERSION]);
     }
 }
-

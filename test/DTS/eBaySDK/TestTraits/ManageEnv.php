@@ -47,4 +47,3 @@ trait ManageEnv
         putenv('HOMEPATH=' . $this->homepath);
     }
 }
-

@@ -51,4 +51,3 @@ class StrictPropertyTypesTest extends \PHPUnit_Framework_TestCase
         $this->obj->simpleClasses[] = 'foo';
     }
 }
-

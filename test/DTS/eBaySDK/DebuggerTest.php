@@ -79,4 +79,3 @@ EOT;
         $this->assertContains('REDACTED_ITEM_ID', $str);
     }
 }
-

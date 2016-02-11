@@ -26,4 +26,3 @@ class Handler
         return file_get_contents($this->returnAttachment ? __DIR__.'/../Mocks/AttachmentRequestResponse.xml' : __DIR__.'/../Mocks/Response.xml');
     }
 }
-

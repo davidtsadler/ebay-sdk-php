@@ -21,4 +21,3 @@ class HandlerTest extends \PHPUnit_Framework_TestCase
         $this->assertContains('OK', $response);
     }
 }
-

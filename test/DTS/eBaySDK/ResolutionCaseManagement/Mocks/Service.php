@@ -19,4 +19,3 @@ class Service extends \DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionC
         );
     }
 }
-

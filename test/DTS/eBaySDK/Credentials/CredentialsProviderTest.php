@@ -219,4 +219,3 @@ EOT;
         unlink($dir . '/credentials');
     }
 }
-
