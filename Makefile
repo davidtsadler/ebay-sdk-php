@@ -1,6 +1,15 @@
 # This Makefile was taken from the AWS for PHP project with some modifications.
 #
 # https://github.com/aws/aws-sdk-php/blob/2.7.19/Makefile
+#
+cs:
+	@php phpcs.phar $(DIR) --standard=PSR2 -a
+
+cs-fixer-dry-run:
+	@php php-cs-fixer.phar fix $(DIR) --level=psr2 --dry-run --verbose
+
+cs-fixer:
+	@php php-cs-fixer.phar fix $(DIR) --level=psr2 --verbose
 
 test:
 	vendor/bin/phpunit $(TEST)
