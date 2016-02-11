@@ -115,4 +115,3 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

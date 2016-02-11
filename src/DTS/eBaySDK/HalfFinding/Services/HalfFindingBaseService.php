@@ -68,4 +68,3 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

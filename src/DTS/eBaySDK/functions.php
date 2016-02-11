@@ -122,4 +122,3 @@ function check_property_type($type)
             return true;
     }
 }
-

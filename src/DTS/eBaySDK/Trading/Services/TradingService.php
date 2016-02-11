@@ -1852,4 +1852,3 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
         );
     }
 }
-

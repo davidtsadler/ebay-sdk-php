@@ -162,4 +162,3 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         );
     }
 }
-

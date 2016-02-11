@@ -39,4 +39,3 @@ class Data extends \DTS\eBaySDK\Types\BaseType
         $this->setValues(__CLASS__, $childValues);
     }
 }
-

@@ -74,4 +74,3 @@ class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

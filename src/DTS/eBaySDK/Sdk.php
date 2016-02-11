@@ -62,4 +62,3 @@ class Sdk
         return new $service($configuration);
     }
 }
-

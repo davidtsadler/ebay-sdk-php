@@ -45,4 +45,3 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
         );
     }
 }
-

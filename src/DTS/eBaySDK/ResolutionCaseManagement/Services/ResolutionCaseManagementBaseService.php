@@ -74,4 +74,3 @@ class ResolutionCaseManagementBaseService extends \DTS\eBaySDK\Services\BaseServ
         return $headers;
     }
 }
-

@@ -45,4 +45,3 @@ class Debugger
         $this->config['logfn']($info);
     }
 }
-

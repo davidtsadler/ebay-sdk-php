@@ -170,4 +170,3 @@ class CredentialsProvider
         return ($homeDrive && $homePath) ? $homeDrive . $homePath : null;
     }
 }
-

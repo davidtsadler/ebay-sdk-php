@@ -69,4 +69,3 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

@@ -201,4 +201,3 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
         );
     }
 }
-

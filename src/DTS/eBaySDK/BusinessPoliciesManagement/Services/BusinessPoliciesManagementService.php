@@ -136,4 +136,3 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         );
     }
 }
-

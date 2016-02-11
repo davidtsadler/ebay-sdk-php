@@ -45,4 +45,3 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
         );
     }
 }
-

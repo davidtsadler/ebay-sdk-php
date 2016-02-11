@@ -33,4 +33,3 @@ class Handler
         return $this->client->send($request)->getBody()->getContents();
     }
 }
-

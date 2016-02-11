@@ -72,4 +72,3 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
         return $headers;
     }
 }
-

@@ -128,4 +128,3 @@ class ConfigurationResolver
         throw new \InvalidArgumentException($msg);
     }
 }
-

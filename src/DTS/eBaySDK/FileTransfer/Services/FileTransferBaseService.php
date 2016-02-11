@@ -105,4 +105,3 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

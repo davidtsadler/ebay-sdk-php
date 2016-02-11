@@ -27,4 +27,3 @@ interface CredentialsInterface
      */
     public function getDevId();
 }
-

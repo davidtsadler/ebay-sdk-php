@@ -38,4 +38,3 @@ class Credentials implements \DTS\eBaySDK\Credentials\CredentialsInterface
         return $this->devId;
     }
 }
-

@@ -93,4 +93,3 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

@@ -136,4 +136,3 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         );
     }
 }
-

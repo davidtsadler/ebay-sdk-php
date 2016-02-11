@@ -63,4 +63,3 @@ class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
         return $headers;
     }
 }
-

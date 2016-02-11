@@ -227,4 +227,3 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         );
     }
 }
-

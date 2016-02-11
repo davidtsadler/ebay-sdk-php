@@ -627,4 +627,3 @@ class BaseType
         }
     }
 }
-
