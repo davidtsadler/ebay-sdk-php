@@ -3,13 +3,13 @@
 # https://github.com/aws/aws-sdk-php/blob/2.7.19/Makefile
 #
 phpcs-report:
-	@vendor/bin/phpcs $(DIR) --standard=PSR2 --report=summary -n
+	@vendor/bin/phpcs $(DIR) --extensions=php --standard=PSR2 --report=summary -n
 
 phpcs:
-	@vendor/bin/phpcs $(DIR) --standard=PSR2 -n -a
+	@vendor/bin/phpcs $(DIR) --extensions=php --standard=PSR2 -n -a
 
 phpcbf:
-	@vendor/bin/phpcbf $(DIR) --standard=PSR2 -n
+	@vendor/bin/phpcbf $(DIR) --extensions=php --standard=PSR2 -n
 
 test:
 	vendor/bin/phpunit $(TEST)
