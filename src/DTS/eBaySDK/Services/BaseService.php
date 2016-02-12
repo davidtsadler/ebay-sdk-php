@@ -105,7 +105,7 @@ abstract class BaseService
     {
         $this->config = Functions\array_merge_deep(
             $this->config,
-            $this->resolver->resolve_options($configuration)
+            $this->resolver->resolveOptions($configuration)
         );
     }
 

@@ -48,7 +48,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey(TradingBaseService::HDR_API_VERSION, $h->headers);
         $this->assertEquals('123', $h->headers[TradingBaseService::HDR_API_VERSION]);
 
-        $this->assertArrayHasKey(TradingBaseService::HDR_SITE_ID , $h->headers);
+        $this->assertArrayHasKey(TradingBaseService::HDR_SITE_ID, $h->headers);
         $this->assertEquals(0, $h->headers[TradingBaseService::HDR_SITE_ID]);
 
         $this->assertArrayHasKey(TradingBaseService::HDR_OPERATION_NAME, $h->headers);

@@ -108,7 +108,9 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testDebugging()
     {
         $str = '';
-        $logfn = function ($value) use (&$str) { $str .= $value; };
+        $logfn = function ($value) use (&$str) {
+            $str .= $value;
+        };
 
         $s = new Service([
             'debug' => ['logfn' => $logfn],

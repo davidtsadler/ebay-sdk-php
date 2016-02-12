@@ -27,7 +27,9 @@ class Debugger
     public function __construct($config)
     {
         $this->config = $config + [
-            'logfn' => function ($msg) { echo $msg.PHP_EOL; },
+            'logfn' => function ($msg) {
+                echo $msg.PHP_EOL;
+            },
             'scrub_credentials' => true,
             'scrub_strings' => []
         ];

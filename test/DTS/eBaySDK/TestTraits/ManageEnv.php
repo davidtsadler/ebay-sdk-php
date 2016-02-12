@@ -5,9 +5,14 @@ use DTS\eBaySDK\Credentials\CredentialsProvider;
 
 trait ManageEnv
 {
-    private $appId, $certId, $devId, $profile;
+    private $appId;
+    private $certId;
+    private $devId;
+    private $profile;
 
-    private $home, $homedrive, $homepath;
+    private $home;
+    private $homedrive;
+    private $homepath;
 
     private function clearEnv()
     {

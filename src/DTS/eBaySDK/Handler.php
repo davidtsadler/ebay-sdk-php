@@ -10,8 +10,8 @@ use Psr\Http\Message\RequestInterface as Psr7Request;
  */
 class Handler
 {
-    /** 
-     * @var ClientInterface 
+    /**
+     * @var ClientInterface
      */
     private $client;
 

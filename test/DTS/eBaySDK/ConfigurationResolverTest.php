@@ -42,7 +42,7 @@ class ConfigurationResolverTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Missing required configuration options 
+     * @expectedExceptionMessage Missing required configuration options
      */
     public function testRequired()
     {
@@ -165,7 +165,8 @@ class ConfigurationResolverTest extends \PHPUnit_Framework_TestCase
         $options = [
             'array' => [],
             'bool' => true,
-            'callable' => function () {},
+            'callable' => function () {
+            },
             'int' => 1,
             'stdClass' => new \StdClass(),
             'string' => 'foo'

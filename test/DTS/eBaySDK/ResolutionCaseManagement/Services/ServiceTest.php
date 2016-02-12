@@ -43,7 +43,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN , $h->headers);
+        $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN, $h->headers);
         $this->assertEquals('321', $h->headers[ResolutionCaseManagementBaseService::HDR_AUTH_TOKEN]);
 
         $this->assertArrayHasKey(ResolutionCaseManagementBaseService::HDR_OPERATION_NAME, $h->headers);

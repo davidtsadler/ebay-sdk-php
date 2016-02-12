@@ -56,7 +56,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey(ShoppingBaseService::HDR_API_VERSION, $h->headers);
         $this->assertEquals('123', $h->headers[ShoppingBaseService::HDR_API_VERSION]);
 
-        $this->assertArrayHasKey(ShoppingBaseService::HDR_APP_ID , $h->headers);
+        $this->assertArrayHasKey(ShoppingBaseService::HDR_APP_ID, $h->headers);
         $this->assertEquals('321', $h->headers[ShoppingBaseService::HDR_APP_ID]);
 
         $this->assertArrayHasKey(ShoppingBaseService::HDR_OPERATION_NAME, $h->headers);

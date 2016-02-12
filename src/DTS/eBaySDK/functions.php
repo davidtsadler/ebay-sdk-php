@@ -25,12 +25,14 @@ function describe_type($value)
  * Code taken from
  * https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/drupal_array_merge_deep/7
  */
-function array_merge_deep() {
+function array_merge_deep()
+{
     $args = func_get_args();
     return array_merge_deep_array($args);
 }
 
-function array_merge_deep_array($arrays) {
+function array_merge_deep_array($arrays)
+{
     $result = array();
 
     foreach ($arrays as $array) {
@@ -75,7 +77,8 @@ function apply_credentials($value, array &$configuration)
             $value['devId']
         );
     } else {
-        throw new \InvalidArgumentException('Credentials must be an instance of '
+        throw new \InvalidArgumentException(
+            'Credentials must be an instance of '
             . 'DTS\eBaySDK\Credentials\CredentialsInterface, an associative '
             . 'array that contains "appId", "certId", "devId", '
             . 'or a credentials provider function.'

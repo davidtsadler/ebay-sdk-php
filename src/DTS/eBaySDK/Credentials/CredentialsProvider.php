@@ -77,8 +77,7 @@ class CredentialsProvider
             $provider = array_shift($providers);
             $credentials = $provider();
 
-            while (
-                ($provider = array_shift($providers))
+            while (($provider = array_shift($providers))
                 && !($credentials instanceof Credentials)
             ) {
                 $credentials = $provider();
@@ -103,7 +102,8 @@ class CredentialsProvider
             if ($appId && $certId && $devId) {
                 return new Credentials($appId, $certId, $devId);
             } else {
-                return new \InvalidArgumentException('Could not find environment variable '
+                return new \InvalidArgumentException(
+                    'Could not find environment variable '
                     . 'credentials in '. self::ENV_APP_ID . '/'
                     . self::ENV_CERT_ID . '/'
                     . self::ENV_DEV_ID

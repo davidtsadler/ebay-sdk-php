@@ -138,7 +138,7 @@ EOT;
         throw $c;
     }
 
-    function testMemoize()
+    public function testMemoize()
     {
         $called = 0;
         $c = new Credentials('111', '222', '333');
@@ -153,7 +153,7 @@ EOT;
         $this->assertEquals(1, $called);
     }
 
-    function testChain()
+    public function testChain()
     {
         $ini = <<<EOT
 [default]
@@ -169,7 +169,9 @@ EOT;
 
         $a = CredentialsProvider::ini('foo');
         $b = CredentialsProvider::ini();
-        $c = function () { throw new \InvalidArgumentException('Should not be called'); };
+        $c = function () {
+            throw new \InvalidArgumentException('Should not be called');
+        };
 
         $p = CredentialsProvider::chain($a, $b, $c);
         $c = $p();
@@ -181,7 +183,7 @@ EOT;
         unlink($dir . '/credentials');
     }
 
-    function testTrysEnvVarByDefault()
+    public function testTrysEnvVarByDefault()
     {
         $this->clearEnv();
         putenv(CredentialsProvider::ENV_APP_ID . '=111');
@@ -196,7 +198,7 @@ EOT;
         $this->assertEquals('333', $c->getDevId());
     }
 
-    function testTrysIniByDefault()
+    public function testTrysIniByDefault()
     {
         $ini = <<<EOT
 [default]

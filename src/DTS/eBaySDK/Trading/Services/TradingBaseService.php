@@ -67,10 +67,10 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
             /**
              * Don't modify a request if the token already exists.
              */
-            if( !isset($request->RequesterCredentials)) {
+            if (!isset($request->RequesterCredentials)) {
                 $request->RequesterCredentials = new \DTS\eBaySDK\Trading\Types\CustomSecurityHeaderType();
             }
-            if(!isset($request->RequesterCredentials->eBayAuthToken)) {
+            if (!isset($request->RequesterCredentials->eBayAuthToken)) {
                 $request->RequesterCredentials->eBayAuthToken = $this->getConfig('authToken');
             }
         }

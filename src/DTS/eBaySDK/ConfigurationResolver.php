@@ -36,7 +36,7 @@ class ConfigurationResolver
      */
     public function resolve(array $configuration)
     {
-        foreach($this->definitions as $key => $def) {
+        foreach ($this->definitions as $key => $def) {
             if (!isset($configuration[$key])) {
                 if (isset($def['default'])) {
                     $configuration[$key] = is_callable($def['default'])
@@ -70,9 +70,9 @@ class ConfigurationResolver
      * @return array Returns an associative array of the resolved and validated configuration options.
      * @throws \InvalidArgumentException.
      */
-    public function resolve_options(array $configuration)
+    public function resolveOptions(array $configuration)
     {
-        foreach($configuration as $key => $value) {
+        foreach ($configuration as $key => $value) {
             if (isset($this->definitions[$key])) {
                 $def = $this->definitions[$key];
 
@@ -101,7 +101,8 @@ class ConfigurationResolver
         }
 
         $expected = implode('|', $valid);
-        $msg = sprintf('Invalid configuration value provided for "%s". Expected %s, but got %s',
+        $msg = sprintf(
+            'Invalid configuration value provided for "%s". Expected %s, but got %s',
             $name,
             $expected,
             describe_type($provided)
@@ -113,7 +114,7 @@ class ConfigurationResolver
     {
         $missing = [];
 
-        foreach($this->definitions as $key => $def) {
+        foreach ($this->definitions as $key => $def) {
             if (empty($def['required'])
                 || isset($def['default'])
                 || array_key_exists($key, $configuration)

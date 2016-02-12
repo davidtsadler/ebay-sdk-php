@@ -36,7 +36,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s->testOperation();
 
         // Test required headers first.
-        $this->assertArrayHasKey(HalfFindingBaseService::HDR_APP_ID , $h->headers);
+        $this->assertArrayHasKey(HalfFindingBaseService::HDR_APP_ID, $h->headers);
         $this->assertEquals('321', $h->headers[HalfFindingBaseService::HDR_APP_ID]);
 
         $this->assertArrayHasKey(HalfFindingBaseService::HDR_OPERATION_NAME, $h->headers);

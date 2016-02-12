@@ -17,12 +17,12 @@ class Sdk
 {
     const VERSION = '1.0.0-beta';
 
-    static $STRICT_PROPERTY_TYPES = true;
+    public static $STRICT_PROPERTY_TYPES = true;
 
     /** @var array Configuration options for all services. */
     private $config;
 
-    public function __construct(array $config  = [])
+    public function __construct(array $config = [])
     {
         $this->config = $config;
     }
@@ -47,7 +47,7 @@ class Sdk
      *
      * @return \DTS\eBaySDK\Services\BaseService
      **/
-    public function createService($namespace, array $config  = [])
+    public function createService($namespace, array $config = [])
     {
         $configuration = $this->config;
 

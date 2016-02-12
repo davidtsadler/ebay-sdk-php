@@ -123,7 +123,8 @@ class BaseType
      */
     private function toXml($elementName, $rootElement = false)
     {
-        return sprintf('%s<%s%s%s>%s</%s>',
+        return sprintf(
+            '%s<%s%s%s>%s</%s>',
             $rootElement ? "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" : '',
             $elementName,
             $this->attributesToXml(),
@@ -179,7 +180,7 @@ class BaseType
     public function attachment($data = null, $mimeType = 'application/octet-stream')
     {
         if ($data !== null) {
-            if(is_array($data)) {
+            if (is_array($data)) {
                 $this->attachment['data'] = array_key_exists('data', $data) ? $data['data'] : null;
                 $this->attachment['mimeType'] = array_key_exists('mimeType', $data) ? $data['mimeType'] : 'application/octet-stream';
             } else {
@@ -217,10 +218,10 @@ class BaseType
 
             if ($info['unbound']) {
                 if (count($value)) {
-                  $array[$name] = array();
-                  foreach($value as $property) {
-                      $array[$name][] = self::propertyToArrayValue($property);
-                  }
+                    $array[$name] = array();
+                    foreach ($value as $property) {
+                        $array[$name][] = self::propertyToArrayValue($property);
+                    }
                 }
             } else {
                 $array[$name] = self::propertyToArrayValue($value);
@@ -360,11 +361,12 @@ class BaseType
      *
      * @returns string The XML.
      */
-    private function attributesToXml() {
+    private function attributesToXml()
+    {
         $attributes = array();
 
         foreach (self::$properties[get_class($this)] as $name => $info) {
-            if(!$info['attribute']) {
+            if (!$info['attribute']) {
                 continue;
             }
 
@@ -383,11 +385,12 @@ class BaseType
      *
      * @returns string The XML.
      */
-    private function propertiesToXml() {
+    private function propertiesToXml()
+    {
         $properties = array();
 
         foreach (self::$properties[get_class($this)] as $name => $info) {
-            if($info['attribute']) {
+            if ($info['attribute']) {
                 continue;
             }
 
@@ -397,12 +400,11 @@ class BaseType
 
             $value = $this->values[$name];
 
-            if(!array_key_exists('elementName', $info) && !array_key_exists('attributeName', $info)) {
+            if (!array_key_exists('elementName', $info) && !array_key_exists('attributeName', $info)) {
                 $properties[] = self::encodeValueXml($value);
-            }
-            else {
+            } else {
                 if ($info['unbound']) {
-                    foreach($value as $property) {
+                    foreach ($value as $property) {
                         $properties[] = self::propertyToXml($info['elementName'], $property);
                     }
                 } else {
@@ -536,8 +538,7 @@ class BaseType
     {
         if ($value instanceof \DateTime) {
             return $value->format('Y-m-d\TH:i:s.000\Z');
-        }
-        else if (is_bool($value)){
+        } else if (is_bool($value)) {
             return $value ? 'true' : 'false';
         } else {
             return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', true);
@@ -555,8 +556,7 @@ class BaseType
     {
         if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
             return $value->toArray();
-        }
-        else if ($value instanceof \DateTime) {
+        } else if ($value instanceof \DateTime) {
             return $value->format('Y-m-d\TH:i:s.000\Z');
         } else {
             return $value;
@@ -577,7 +577,7 @@ class BaseType
 
         if ($info['unbound'] && is_array($value)) {
             $values = array();
-            foreach($value as $val) {
+            foreach ($value as $val) {
                 $values[] = self::actualValue($info, $class, $property, $val);
             }
             return $values;

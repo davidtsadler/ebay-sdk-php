@@ -1,4 +1,6 @@
 <?php
+namespace Requirements;
+
 class RequirementsCheck
 {
     private $isCli;
@@ -9,7 +11,8 @@ class RequirementsCheck
         $this->isCli = php_sapi_name() === 'cli';
 
         if (!$this->isCli) {
-            $this->lines[] = sprintf('<style type="text/css">%s %s %s %s</style>',
+            $this->lines[] = sprintf(
+                '<style type="text/css">%s %s %s %s</style>',
                 'html {font-family:verdana;}',
                 'div {margin: 0.5em 0 2em; padding: 1em;}',
                 '.ok {background:#dfffdf;border: 2px solid #0bo;color:#264409;}',
@@ -101,7 +104,6 @@ class RequirementsCheck
         $text = implode("\n", $this->lines);
         echo $this->isCli ? $text."\n\n" : "<!doctype html><html><body>$text</body></html>";
     }
-
 }
 
 $check = new RequirementsCheck();
@@ -110,7 +112,7 @@ $check->title('eBay SDK for PHP Requirements Check');
 $check->header('System Requirements');
 $check->checkPhpVersion('5.3.9.');
 
-foreach(array('curl', 'libxml') as $ext) {
+foreach (array('curl', 'libxml') as $ext) {
     $check->checkExt($ext);
 }
 

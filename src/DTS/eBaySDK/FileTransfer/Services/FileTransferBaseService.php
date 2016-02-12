@@ -61,11 +61,11 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
             /**
                 Don't modify a request if the file attachment already exists.
              */
-            if( !isset($request->fileAttachment)) {
+            if (!isset($request->fileAttachment)) {
                 $request->fileAttachment = new \DTS\eBaySDK\FileTransfer\Types\FileAttachment();
             }
 
-            if(!isset($request->fileAttachment->Data)) {
+            if (!isset($request->fileAttachment->Data)) {
                 $request->fileAttachment->Data = new \DTS\eBaySDK\FileTransfer\Types\Data([
                     'xopInclude' => new \DTS\eBaySDK\FileTransfer\Types\XopInclude([
                         'href' => 'cid:attachment.bin@devbay.net'
@@ -73,7 +73,7 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
                 ]);
             }
 
-            if(!isset($request->fileAttachment->Size)) {
+            if (!isset($request->fileAttachment->Size)) {
                 $attachment = $request->attachment();
                 $request->fileAttachment->Size = strlen($attachment['data']);
             }

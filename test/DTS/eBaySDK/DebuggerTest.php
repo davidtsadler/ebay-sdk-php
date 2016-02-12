@@ -8,7 +8,9 @@ class DebuggerTest extends \PHPUnit_Framework_TestCase
     public function testOutputsDebugInformation()
     {
         $str = '';
-        $logfn = function ($value) use (&$str) { $str .= $value; };
+        $logfn = function ($value) use (&$str) {
+            $str .= $value;
+        };
 
         $d = new Debugger(['logfn' => $logfn]);
 
@@ -33,7 +35,9 @@ X-EBAY-API-DEV-NAME: devname
 EOT;
 
         $str = '';
-        $logfn = function ($value) use (&$str) { $str .= $value; };
+        $logfn = function ($value) use (&$str) {
+            $str .= $value;
+        };
 
         $d = new Debugger(['logfn' => $logfn]);
 
@@ -60,7 +64,9 @@ X-EBAY-SOA-SECURITY-TOKEN: token
 EOT;
 
         $str = '';
-        $logfn = function ($value) use (&$str) { $str .= $value; };
+        $logfn = function ($value) use (&$str) {
+            $str .= $value;
+        };
 
         $d = new Debugger([
             'logfn' => $logfn,
