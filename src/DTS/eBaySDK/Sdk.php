@@ -52,10 +52,10 @@ class Sdk
         $configuration = $this->config;
 
         if (isset($this->config[$namespace])) {
-            $configuration = array_merge_deep($configuration, $this->config[$namespace]);
+            $configuration = arrayMergeDeep($configuration, $this->config[$namespace]);
         }
 
-        $configuration = array_merge_deep($configuration, $config);
+        $configuration = arrayMergeDeep($configuration, $config);
 
         $service = "DTS\\eBaySDK\\{$namespace}\\Services\\{$namespace}Service";
 

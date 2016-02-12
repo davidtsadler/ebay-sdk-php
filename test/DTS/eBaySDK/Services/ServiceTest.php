@@ -20,27 +20,27 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('credentials', $d);
         $this->assertEquals([
             'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
-            'fn'      => 'DTS\eBaySDK\apply_credentials',
+            'fn'      => 'DTS\eBaySDK\applyCredentials',
             'default' => [CredentialsProvider::class, 'defaultProvider']
         ], $d['credentials']);
 
         $this->assertArrayHasKey('debug', $d);
         $this->assertEquals([
             'valid'   => ['bool', 'array'],
-            'fn'      => 'DTS\eBaySDK\apply_debug',
+            'fn'      => 'DTS\eBaySDK\applyDebug',
             'default' => false
         ], $d['debug']);
 
         $this->assertArrayHasKey('handler', $d);
         $this->assertEquals([
             'valid'   => ['callable'],
-            'default' => 'DTS\eBaySDK\default_handler'
+            'default' => 'DTS\eBaySDK\defaultHandler'
         ], $d['handler']);
 
         $this->assertArrayHasKey('profile', $d);
         $this->assertEquals([
             'valid' => ['string'],
-            'fn'    => 'DTS\eBaySDK\apply_profile',
+            'fn'    => 'DTS\eBaySDK\applyProfile',
         ], $d['profile']);
 
         $this->assertArrayHasKey('sandbox', $d);

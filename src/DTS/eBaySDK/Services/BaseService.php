@@ -64,21 +64,21 @@ abstract class BaseService
         return [
             'profile' => [
                 'valid' => ['string'],
-                'fn'    => 'DTS\eBaySDK\apply_profile',
+                'fn'    => 'DTS\eBaySDK\applyProfile',
             ],
             'credentials' => [
                 'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
-                'fn'      => 'DTS\eBaySDK\apply_credentials',
+                'fn'      => 'DTS\eBaySDK\applyCredentials',
                 'default' => [CredentialsProvider::class, 'defaultProvider']
             ],
             'debug' => [
                 'valid'   => ['bool', 'array'],
-                'fn'      => 'DTS\eBaySDK\apply_debug',
+                'fn'      => 'DTS\eBaySDK\applyDebug',
                 'default' => false
             ],
             'handler' => [
                 'valid'   => ['callable'],
-                'default' => 'DTS\eBaySDK\default_handler'
+                'default' => 'DTS\eBaySDK\defaultHandler'
             ],
             'sandbox' => [
                 'valid'   => ['bool'],
@@ -103,7 +103,7 @@ abstract class BaseService
 
     public function setConfig($configuration)
     {
-        $this->config = Functions\array_merge_deep(
+        $this->config = Functions\arrayMergeDeep(
             $this->config,
             $this->resolver->resolveOptions($configuration)
         );

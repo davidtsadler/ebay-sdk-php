@@ -443,7 +443,7 @@ class BaseType
         $info = self::propertyInfo($class, $name);
         $expectedType = $info['type'];
 
-        if (\DTS\eBaySDK\check_property_type($expectedType)) {
+        if (\DTS\eBaySDK\checkPropertyType($expectedType)) {
             $actualType = self::getActualType($value);
 
             if ($expectedType !== $actualType && 'array' !== $actualType) {

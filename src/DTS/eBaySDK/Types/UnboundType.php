@@ -155,7 +155,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
      */
     private function ensurePropertyType($value)
     {
-        if (\DTS\eBaySDK\check_property_type($this->expectedType)) {
+        if (\DTS\eBaySDK\checkPropertyType($this->expectedType)) {
             $actualType = gettype($value);
             if ('object' === $actualType) {
                 $actualType = get_class($value);

@@ -105,7 +105,7 @@ class ConfigurationResolver
             'Invalid configuration value provided for "%s". Expected %s, but got %s',
             $name,
             $expected,
-            describe_type($provided)
+            describeType($provided)
         );
         throw new \InvalidArgumentException($msg);
     }

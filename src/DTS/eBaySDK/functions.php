@@ -7,7 +7,7 @@ use DTS\eBaySDK\Credentials\CredentialsInterface;
 use DTS\eBaySDK\Debugger;
 use DTS\eBaySDK\Handler;
 
-function describe_type($value)
+function describeType($value)
 {
     switch (gettype($value)) {
         case 'object':
@@ -25,13 +25,13 @@ function describe_type($value)
  * Code taken from
  * https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/drupal_array_merge_deep/7
  */
-function array_merge_deep()
+function arrayMergeDeep()
 {
     $args = func_get_args();
-    return array_merge_deep_array($args);
+    return arrayMergeDeepArray($args);
 }
 
-function array_merge_deep_array($arrays)
+function arrayMergeDeepArray($arrays)
 {
     $result = [];
 
@@ -55,7 +55,7 @@ function array_merge_deep_array($arrays)
     return $result;
 }
 
-function apply_credentials($value, array &$configuration)
+function applyCredentials($value, array &$configuration)
 {
     if (is_callable($value)) {
         $c = $value();
@@ -86,12 +86,12 @@ function apply_credentials($value, array &$configuration)
     }
 }
 
-function apply_profile($value, array &$configuration)
+function applyProfile($value, array &$configuration)
 {
     $configuration['credentials'] = CredentialsProvider::ini($configuration['profile']);
 }
 
-function apply_debug($value, array &$configuration)
+function applyDebug($value, array &$configuration)
 {
     if ($value !== false) {
         $configuration['debug'] = new Debugger($value === true ? [] : $value);
@@ -100,7 +100,7 @@ function apply_debug($value, array &$configuration)
     }
 }
 
-function default_handler(array &$configuration)
+function defaultHandler(array &$configuration)
 {
     return new Handler();
 }
@@ -108,7 +108,7 @@ function default_handler(array &$configuration)
 /**
  * Helper function that returns true if the property type should be checked.
  */
-function check_property_type($type)
+function checkPropertyType($type)
 {
     if (\DTS\eBaySDK\Sdk::$STRICT_PROPERTY_TYPES) {
         return true;
