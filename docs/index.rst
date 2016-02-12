@@ -27,3 +27,4 @@ SDK Guides
 ----------
 
 * :doc:`guide/configuration`
+* :doc:`guide/credentials`

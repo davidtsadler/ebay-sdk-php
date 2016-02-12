@@ -24,6 +24,83 @@ Refer to the :doc:`basic usage guide </getting-started/basic-usage>` for informa
 
     Some configuration options are only applicable to certain services. Where this is the case the services will be noted in the documentation for the configuration option.
 
+affiliateUserId
+~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Shopping``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
+apiVersion
+~~~~~~~~~~
+
+:Type: ``string``
+
+Each of the services offered by eBay have a version number. Use this optional configuration to specify the API version that is supported by your application.
+
+.. code-block:: php
+
+    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use \DTS\eBaySDK\Trading\Services\TradingService;
+
+    /**
+     * Use the 1.13.0 version of the finding service.
+     */
+    $finding = new FindingService([
+        'apiVersion' => '1.13.0'
+    ]);
+
+    /**
+     * For the trading service use its 951 version.
+     */
+    $trading = new TradingService([
+        'apiVersion' => '951'
+    ]);
+
+If you do not provide a version number the SDK will default to the value that is currently specified in the class constant ``<SERVICE CLASS>::API_VERSION``.
+
+.. code-block:: php
+
+    use \DTS\eBaySDK\Shopping\Services\ShoppingService;
+
+    /**
+     * apiVerion will default to the value in ShoppingService::API_VERSION.
+     */
+    $shopping = new ShoppingService([]);
+
+.. warning::
+
+    You should specify an apiVerion in your production code and not leave it to the default value that is provided by the SDK as you code will be dependant upon a value that will changed when the SDK is updated.
+
+authToken
+~~~~~~~~~
+
+:Type: ``string``
+:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``FileTransfer``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Trading``.
+:Required: true, except for the Trading service.
+
+Some services require an authentication token before you can perfrom operations on behalf of an eBay user. This token can be provided via the ``authToken`` option.
+
+The Trading service is different to other services in that the auth token can be passed as a configuration option or via the actual request object. Use which ever method is suitable for your project requirements.
+
+.. code-block:: php
+
+    use \DTS\eBaySDK\Trading\Types;
+    use \DTS\eBaySDK\Trading\Services;
+
+    /**
+     * No auth token provided.
+     */
+    $trading = new Services\TradingService([]);
+
+    $request = new Types\GeteBayOfficialTimeRequestType();
+    /**
+     * Provide an auth token via the request object.
+     */
+    $request->RequesterCredentials = new Types\CustomSecurityHeaderType();
+    $request->RequesterCredentials->eBayAuthToken = '<AUTH TOKEN>';
+
 credentials
 ~~~~~~~~~~~
 
@@ -121,6 +198,15 @@ scrub_strings (array)
         ]
     ]);
 
+globalId
+~~~~~~~~
+
+:Type: ``string``
+:Services: ``BusinessPoliciesManagement``, ``Finding``, ``HalfFinding``, ``ResolutionCaseManagement``, ``ReturnManagement``.
+:Required For: ``BusinessPoliciesManagement``
+
+The unique string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value EBAY-US to specify the eBay US site. A `complete list of eBay global IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
+
 handler
 ~~~~~~~
 
@@ -169,6 +255,29 @@ sandbox
 
 eBay provides a sandbox environment for testing your API calls. Pass ``true`` to tell the SDK to use this sandbox. By default the SDK will always use the production environment.
 
+siteId
+~~~~~~
+:Type: ``string|integer``
+:Services: ``Shopping``, ``Trading``.
+:Required: true
+
+The unique numerical identifier for the eBay site your API requests are to be sent to. For example, you would pass the value 3 to specify the eBay UK site. A `complete list of eBay site IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
+
+trackingId
+~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Shopping``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
+trackingPartnerCode
+~~~~~~~~~~~~~~~~~~~
+:Type: ``string``
+:Services: ``Shopping``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
 Managing the configuration
 --------------------------
 
@@ -205,4 +314,3 @@ You can pass an associative array to the ``setConfig`` method to set multiple co
         'apiVersion' => '1.13.0',
         'globalId'   => 'EBAY-US'
     ]);
-
