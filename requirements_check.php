@@ -92,6 +92,15 @@ class RequirementsCheck
         }
     }
 
+    public function check64Bit()
+    {
+        if (PHP_INT_MAX === 9223372036854775807) {
+            $this->pass('You are running a 64-bit version of PHP');
+        } else {
+            $this->fail('You are not running a 64-bit version of PHP. You may run into issues with integer values been to long for object properties.');
+        }
+    }
+
     public function phpInfo()
     {
         ob_start();
@@ -110,13 +119,15 @@ $check = new RequirementsCheck();
 $check->title('eBay SDK for PHP Requirements Check');
 
 $check->header('System Requirements');
-$check->checkPhpVersion('5.3.9.');
+$check->checkPhpVersion('5.5.0');
 
 foreach (array('curl', 'libxml') as $ext) {
     $check->checkExt($ext);
 }
 
 $check->checkCurl();
+
+$check->check64Bit();
 
 $check->title('PHP information');
 
