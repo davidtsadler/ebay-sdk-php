@@ -20,43 +20,43 @@ class SellingStatus extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'currentPrice' => array(
+    private static $propertyTypes = [
+        'currentPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'currentPrice'
-        ),
-        'convertedCurrentPrice' => array(
+        ],
+        'convertedCurrentPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'convertedCurrentPrice'
-        ),
-        'bidCount' => array(
+        ],
+        'bidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'bidCount'
-        ),
-        'sellingState' => array(
+        ],
+        'sellingState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sellingState'
-        ),
-        'timeLeft' => array(
+        ],
+        'timeLeft' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'timeLeft'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

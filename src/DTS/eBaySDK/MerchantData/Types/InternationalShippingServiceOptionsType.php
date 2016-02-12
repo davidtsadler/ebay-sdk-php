@@ -23,61 +23,61 @@ class InternationalShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingService' => array(
+    private static $propertyTypes = [
+        'ShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
-        ),
-        'ShippingServiceCost' => array(
+        ],
+        'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
-        ),
-        'ShippingServiceAdditionalCost' => array(
+        ],
+        'ShippingServiceAdditionalCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingServicePriority' => array(
+        ],
+        'ShippingServicePriority' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServicePriority'
-        ),
-        'ShipToLocation' => array(
+        ],
+        'ShipToLocation' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShipToLocation'
-        ),
-        'ShippingInsuranceCost' => array(
+        ],
+        'ShippingInsuranceCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
-        ),
-        'ImportCharge' => array(
+        ],
+        'ImportCharge' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
-        ),
-        'ShippingServiceCutOffTime' => array(
+        ],
+        'ShippingServiceCutOffTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCutOffTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

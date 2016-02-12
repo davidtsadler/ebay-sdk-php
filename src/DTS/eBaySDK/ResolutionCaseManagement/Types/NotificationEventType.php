@@ -27,85 +27,85 @@ class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'NotificationEventName' => array(
+    private static $propertyTypes = [
+        'NotificationEventName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationEventName'
-        ),
-        'RecipientUserID' => array(
+        ],
+        'RecipientUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientUserID'
-        ),
-        'ExternalUserData' => array(
+        ],
+        'ExternalUserData' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalUserData'
-        ),
-        'CaseId' => array(
+        ],
+        'CaseId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CaseId'
-        ),
-        'CaseType' => array(
+        ],
+        'CaseType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CaseType'
-        ),
-        'ItemId' => array(
+        ],
+        'ItemId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemId'
-        ),
-        'TransactionId' => array(
+        ],
+        'TransactionId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionId'
-        ),
-        'CreationDate' => array(
+        ],
+        'CreationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationDate'
-        ),
-        'OtherPartyId' => array(
+        ],
+        'OtherPartyId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyId'
-        ),
-        'OtherPartyRole' => array(
+        ],
+        'OtherPartyRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyRole'
-        ),
-        'CaseStatus' => array(
+        ],
+        'CaseStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CaseStatus'
-        ),
-        'CaseGlobalId' => array(
+        ],
+        'CaseGlobalId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CaseGlobalId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

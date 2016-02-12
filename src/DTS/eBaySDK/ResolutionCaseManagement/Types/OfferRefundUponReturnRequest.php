@@ -19,37 +19,37 @@ class OfferRefundUponReturnRequest extends \DTS\eBaySDK\ResolutionCaseManagement
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'caseId' => array(
+    private static $propertyTypes = [
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        ),
-        'returnAddress' => array(
+        ],
+        'returnAddress' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnAddress'
-        ),
-        'returnMerchandiseAuthorization' => array(
+        ],
+        'returnMerchandiseAuthorization' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
-        ),
-        'additionalReturnInstructions' => array(
+        ],
+        'additionalReturnInstructions' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'additionalReturnInstructions'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

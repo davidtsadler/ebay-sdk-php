@@ -35,133 +35,133 @@ class ShippingPolicyInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'shippingPolicyName' => array(
+    private static $propertyTypes = [
+        'shippingPolicyName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyName'
-        ),
-        'domesticShippingType' => array(
+        ],
+        'domesticShippingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'domesticShippingType'
-        ),
-        'intlShippingType' => array(
+        ],
+        'intlShippingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intlShippingType'
-        ),
-        'dispatchTimeMax' => array(
+        ],
+        'dispatchTimeMax' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'dispatchTimeMax'
-        ),
-        'dispatchTimeReason' => array(
+        ],
+        'dispatchTimeReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'dispatchTimeReason'
-        ),
-        'shippingOption' => array(
+        ],
+        'shippingOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingOption'
-        ),
-        'excludeShipToLocation' => array(
+        ],
+        'excludeShipToLocation' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'excludeShipToLocation'
-        ),
-        'shippingProfileDiscountInfo' => array(
+        ],
+        'shippingProfileDiscountInfo' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingProfileDiscountInfo',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingProfileDiscountInfo'
-        ),
-        'freightShipping' => array(
+        ],
+        'freightShipping' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\FreightShipping',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'freightShipping'
-        ),
-        'shipToLocations' => array(
+        ],
+        'shipToLocations' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shipToLocations'
-        ),
-        'domesticShippingPolicyInfoService' => array(
+        ],
+        'domesticShippingPolicyInfoService' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'domesticShippingPolicyInfoService'
-        ),
-        'intlShippingPolicyInfoService' => array(
+        ],
+        'intlShippingPolicyInfoService' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyInfoService',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'intlShippingPolicyInfoService'
-        ),
-        'insurance' => array(
+        ],
+        'insurance' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Insurance',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'insurance'
-        ),
-        'intlRateTable' => array(
+        ],
+        'intlRateTable' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intlRateTable'
-        ),
-        'domesticRateTable' => array(
+        ],
+        'domesticRateTable' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'domesticRateTable'
-        ),
-        'packagingHandlingCosts' => array(
+        ],
+        'packagingHandlingCosts' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'packagingHandlingCosts'
-        ),
-        'internationalPackagingHandlingCosts' => array(
+        ],
+        'internationalPackagingHandlingCosts' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'internationalPackagingHandlingCosts'
-        ),
-        'shippingPolicyCurrency' => array(
+        ],
+        'shippingPolicyCurrency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyCurrency'
-        ),
-        'GlobalShipping' => array(
+        ],
+        'GlobalShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GlobalShipping'
-        ),
-        'EligibleForPickupDropOff' => array(
+        ],
+        'EligibleForPickupDropOff' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EligibleForPickupDropOff'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

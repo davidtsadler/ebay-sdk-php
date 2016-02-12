@@ -26,79 +26,79 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'title' => array(
+    private static $propertyTypes = [
+        'title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'title'
-        ),
-        'detailsURL' => array(
+        ],
+        'detailsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'detailsURL'
-        ),
-        'stockPhotoURL' => array(
+        ],
+        'stockPhotoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'stockPhotoURL'
-        ),
-        'productID' => array(
+        ],
+        'productID' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'productID'
-        ),
-        'categoryName' => array(
+        ],
+        'categoryName' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'categoryName'
-        ),
-        'itemSpecifics' => array(
+        ],
+        'itemSpecifics' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemSpecifics'
-        ),
-        'item' => array(
+        ],
+        'item' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'item'
-        ),
-        'listPrice' => array(
+        ],
+        'listPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'listPrice'
-        ),
-        'reviewCount' => array(
+        ],
+        'reviewCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'reviewCount'
-        ),
-        'BestFixedPrice' => array(
+        ],
+        'BestFixedPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestFixedPrice'
-        ),
-        'BestRentalPrice' => array(
+        ],
+        'BestRentalPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestRentalPrice'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

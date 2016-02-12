@@ -21,49 +21,49 @@ class ReviseSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SaleTemplateID' => array(
+    private static $propertyTypes = [
+        'SaleTemplateID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
-        ),
-        'ProductID' => array(
+        ],
+        'ProductID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'SaleTemplateName' => array(
+        ],
+        'SaleTemplateName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
-        ),
-        'Item' => array(
+        ],
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'DeletedField' => array(
+        ],
+        'DeletedField' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
-        ),
-        'VerifyOnly' => array(
+        ],
+        'VerifyOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifyOnly'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

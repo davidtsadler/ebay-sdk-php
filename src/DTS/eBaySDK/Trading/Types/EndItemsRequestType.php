@@ -16,19 +16,19 @@ class EndItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EndItemRequestContainer' => array(
+    private static $propertyTypes = [
+        'EndItemRequestContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EndItemRequestContainerType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndItemRequestContainer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

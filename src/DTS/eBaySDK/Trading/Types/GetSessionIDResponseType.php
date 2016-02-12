@@ -16,19 +16,19 @@ class GetSessionIDResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespon
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SessionID' => array(
+    private static $propertyTypes = [
+        'SessionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SessionID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

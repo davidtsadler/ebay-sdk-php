@@ -21,49 +21,49 @@ class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BasicThemeArray' => array(
+    private static $propertyTypes = [
+        'BasicThemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BasicThemeArray'
-        ),
-        'AdvancedThemeArray' => array(
+        ],
+        'AdvancedThemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdvancedThemeArray'
-        ),
-        'LogoArray' => array(
+        ],
+        'LogoArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreLogoArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoArray'
-        ),
-        'SubscriptionArray' => array(
+        ],
+        'SubscriptionArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscriptionArray'
-        ),
-        'MaxCategories' => array(
+        ],
+        'MaxCategories' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxCategories'
-        ),
-        'MaxCategoryLevels' => array(
+        ],
+        'MaxCategoryLevels' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxCategoryLevels'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

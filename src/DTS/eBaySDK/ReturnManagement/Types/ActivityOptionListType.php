@@ -17,25 +17,25 @@ class ActivityOptionListType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'issueRefund' => array(
+    private static $propertyTypes = [
+        'issueRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\IssueRefundOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'issueRefund'
-        ),
-        'provideSellerInfo' => array(
+        ],
+        'provideSellerInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'provideSellerInfo'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

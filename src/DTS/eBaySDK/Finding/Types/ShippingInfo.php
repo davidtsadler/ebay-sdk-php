@@ -22,55 +22,55 @@ class ShippingInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'shippingServiceCost' => array(
+    private static $propertyTypes = [
+        'shippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingServiceCost'
-        ),
-        'shippingType' => array(
+        ],
+        'shippingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingType'
-        ),
-        'shipToLocations' => array(
+        ],
+        'shipToLocations' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shipToLocations'
-        ),
-        'expeditedShipping' => array(
+        ],
+        'expeditedShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'expeditedShipping'
-        ),
-        'oneDayShippingAvailable' => array(
+        ],
+        'oneDayShippingAvailable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'oneDayShippingAvailable'
-        ),
-        'handlingTime' => array(
+        ],
+        'handlingTime' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'handlingTime'
-        ),
-        'intermediatedShipping' => array(
+        ],
+        'intermediatedShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'intermediatedShipping'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

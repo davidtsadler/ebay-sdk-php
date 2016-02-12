@@ -22,55 +22,55 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BiddingCount' => array(
+    private static $propertyTypes = [
+        'BiddingCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BiddingCount'
-        ),
-        'WinningCount' => array(
+        ],
+        'WinningCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WinningCount'
-        ),
-        'TotalWinningCost' => array(
+        ],
+        'TotalWinningCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalWinningCost'
-        ),
-        'WonCount' => array(
+        ],
+        'WonCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WonCount'
-        ),
-        'TotalWonCost' => array(
+        ],
+        'TotalWonCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalWonCost'
-        ),
-        'WonDurationInDays' => array(
+        ],
+        'WonDurationInDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WonDurationInDays'
-        ),
-        'BestOfferCount' => array(
+        ],
+        'BestOfferCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

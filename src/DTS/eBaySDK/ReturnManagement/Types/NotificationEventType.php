@@ -24,67 +24,67 @@ class NotificationEventType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'NotificationEventName' => array(
+    private static $propertyTypes = [
+        'NotificationEventName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationEventName'
-        ),
-        'RecipientUserID' => array(
+        ],
+        'RecipientUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientUserID'
-        ),
-        'ExternalUserData' => array(
+        ],
+        'ExternalUserData' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalUserData'
-        ),
-        'ReturnId' => array(
+        ],
+        'ReturnId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnId'
-        ),
-        'CreationDate' => array(
+        ],
+        'CreationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationDate'
-        ),
-        'OtherPartyId' => array(
+        ],
+        'OtherPartyId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyId'
-        ),
-        'OtherPartyRole' => array(
+        ],
+        'OtherPartyRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyRole'
-        ),
-        'ReturnStatus' => array(
+        ],
+        'ReturnStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnStatus'
-        ),
-        'ReturnGlobalId' => array(
+        ],
+        'ReturnGlobalId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnGlobalId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

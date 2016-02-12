@@ -26,79 +26,79 @@ class GetItemTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'ModTimeFrom' => array(
+        ],
+        'ModTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeFrom'
-        ),
-        'ModTimeTo' => array(
+        ],
+        'ModTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeTo'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'IncludeFinalValueFee' => array(
+        ],
+        'IncludeFinalValueFee' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFinalValueFee'
-        ),
-        'IncludeContainingOrder' => array(
+        ],
+        'IncludeContainingOrder' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeContainingOrder'
-        ),
-        'Platform' => array(
+        ],
+        'Platform' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Platform'
-        ),
-        'NumberOfDays' => array(
+        ],
+        'NumberOfDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NumberOfDays'
-        ),
-        'IncludeVariations' => array(
+        ],
+        'IncludeVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeVariations'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

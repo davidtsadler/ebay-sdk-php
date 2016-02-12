@@ -18,31 +18,31 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'eBayAuthToken' => array(
+    private static $propertyTypes = [
+        'eBayAuthToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
-        ),
-        'HardExpirationTime' => array(
+        ],
+        'HardExpirationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationTime'
-        ),
-        'RESTToken' => array(
+        ],
+        'RESTToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RESTToken'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

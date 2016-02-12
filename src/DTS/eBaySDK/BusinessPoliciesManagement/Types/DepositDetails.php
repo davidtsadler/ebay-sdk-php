@@ -18,31 +18,31 @@ class DepositDetails extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'daysToFullPayment' => array(
+    private static $propertyTypes = [
+        'daysToFullPayment' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'daysToFullPayment'
-        ),
-        'hoursToDeposit' => array(
+        ],
+        'hoursToDeposit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'hoursToDeposit'
-        ),
-        'depositAmount' => array(
+        ],
+        'depositAmount' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'depositAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

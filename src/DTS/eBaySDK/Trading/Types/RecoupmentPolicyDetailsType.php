@@ -19,37 +19,37 @@ class RecoupmentPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EnforcedOnListingSite' => array(
+    private static $propertyTypes = [
+        'EnforcedOnListingSite' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EnforcedOnListingSite'
-        ),
-        'EnforcedOnRegistrationSite' => array(
+        ],
+        'EnforcedOnRegistrationSite' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EnforcedOnRegistrationSite'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

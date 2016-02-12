@@ -17,25 +17,25 @@ class EstimatedRefundDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'estimatedRefund' => array(
+    private static $propertyTypes = [
+        'estimatedRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\RefundDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'estimatedRefund'
-        ),
-        'itemizedOptionalRefund' => array(
+        ],
+        'itemizedOptionalRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ItemizedRefundDetailType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemizedOptionalRefund'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

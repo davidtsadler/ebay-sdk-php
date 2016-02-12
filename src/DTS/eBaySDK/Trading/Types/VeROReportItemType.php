@@ -23,61 +23,61 @@ class VeROReportItemType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'VeROReasonCodeID' => array(
+        ],
+        'VeROReasonCodeID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VeROReasonCodeID'
-        ),
-        'MessageToSeller' => array(
+        ],
+        'MessageToSeller' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageToSeller'
-        ),
-        'CopyEmailToRightsOwner' => array(
+        ],
+        'CopyEmailToRightsOwner' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CopyEmailToRightsOwner'
-        ),
-        'Region' => array(
+        ],
+        'Region' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Region'
-        ),
-        'Country' => array(
+        ],
+        'Country' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Country'
-        ),
-        'Patent' => array(
+        ],
+        'Patent' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Patent'
-        ),
-        'DetailedMessage' => array(
+        ],
+        'DetailedMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailedMessage'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

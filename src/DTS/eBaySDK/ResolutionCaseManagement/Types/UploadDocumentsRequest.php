@@ -18,31 +18,31 @@ class UploadDocumentsRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'caseId' => array(
+    private static $propertyTypes = [
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        ),
-        'proofType' => array(
+        ],
+        'proofType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'proofType'
-        ),
-        'document' => array(
+        ],
+        'document' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentInfoType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'document'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

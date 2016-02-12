@@ -19,37 +19,37 @@ class GetCategoryInfoResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryArray' => array(
+    private static $propertyTypes = [
+        'CategoryArray' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\CategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryArray'
-        ),
-        'CategoryCount' => array(
+        ],
+        'CategoryCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryCount'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        ),
-        'CategoryVersion' => array(
+        ],
+        'CategoryVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

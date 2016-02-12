@@ -23,61 +23,61 @@ class TimeZoneDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TimeZoneID' => array(
+    private static $propertyTypes = [
+        'TimeZoneID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TimeZoneID'
-        ),
-        'StandardLabel' => array(
+        ],
+        'StandardLabel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StandardLabel'
-        ),
-        'StandardOffset' => array(
+        ],
+        'StandardOffset' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StandardOffset'
-        ),
-        'DaylightSavingsLabel' => array(
+        ],
+        'DaylightSavingsLabel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DaylightSavingsLabel'
-        ),
-        'DaylightSavingsOffset' => array(
+        ],
+        'DaylightSavingsOffset' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DaylightSavingsOffset'
-        ),
-        'DaylightSavingsInEffect' => array(
+        ],
+        'DaylightSavingsInEffect' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DaylightSavingsInEffect'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

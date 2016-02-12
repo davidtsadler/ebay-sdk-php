@@ -21,49 +21,49 @@ class AppealType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'decision' => array(
+    private static $propertyTypes = [
+        'decision' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decision'
-        ),
-        'decisionReason' => array(
+        ],
+        'decisionReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionReason'
-        ),
-        'decisionReasonDetail' => array(
+        ],
+        'decisionReasonDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DecisionReasonDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionReasonDetail'
-        ),
-        'decisionDate' => array(
+        ],
+        'decisionDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionDate'
-        ),
-        'creationDate' => array(
+        ],
+        'creationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
-        ),
-        'id' => array(
+        ],
+        'id' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'id'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

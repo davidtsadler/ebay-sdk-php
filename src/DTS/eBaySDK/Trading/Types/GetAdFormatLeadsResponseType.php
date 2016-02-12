@@ -17,25 +17,25 @@ class GetAdFormatLeadsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AdFormatLead' => array(
+    private static $propertyTypes = [
+        'AdFormatLead' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AdFormatLeadType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AdFormatLead'
-        ),
-        'AdFormatLeadCount' => array(
+        ],
+        'AdFormatLeadCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdFormatLeadCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

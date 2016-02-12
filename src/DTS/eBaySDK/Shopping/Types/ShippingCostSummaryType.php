@@ -24,67 +24,67 @@ class ShippingCostSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingServiceName' => array(
+    private static $propertyTypes = [
+        'ShippingServiceName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceName'
-        ),
-        'ShippingServiceCost' => array(
+        ],
+        'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
-        ),
-        'InsuranceCost' => array(
+        ],
+        'InsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
-        ),
-        'ShippingType' => array(
+        ],
+        'ShippingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingType'
-        ),
-        'LocalPickup' => array(
+        ],
+        'LocalPickup' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalPickup'
-        ),
-        'InsuranceOption' => array(
+        ],
+        'InsuranceOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
-        ),
-        'ListedShippingServiceCost' => array(
+        ],
+        'ListedShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListedShippingServiceCost'
-        ),
-        'ImportCharge' => array(
+        ],
+        'ImportCharge' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
-        ),
-        'LogisticPlanType' => array(
+        ],
+        'LogisticPlanType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogisticPlanType'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

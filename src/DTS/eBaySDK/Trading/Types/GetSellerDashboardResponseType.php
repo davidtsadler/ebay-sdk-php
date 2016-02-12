@@ -21,49 +21,49 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SearchStanding' => array(
+    private static $propertyTypes = [
+        'SearchStanding' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchStanding'
-        ),
-        'SellerFeeDiscount' => array(
+        ],
+        'SellerFeeDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerFeeDiscount'
-        ),
-        'PowerSellerStatus' => array(
+        ],
+        'PowerSellerStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PowerSellerDashboardType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PowerSellerStatus'
-        ),
-        'BuyerSatisfaction' => array(
+        ],
+        'BuyerSatisfaction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerSatisfaction'
-        ),
-        'SellerAccount' => array(
+        ],
+        'SellerAccount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerAccountDashboardType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerAccount'
-        ),
-        'Performance' => array(
+        ],
+        'Performance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Performance'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

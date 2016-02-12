@@ -19,37 +19,37 @@ class GetJobsRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'creationTimeFrom' => array(
+    private static $propertyTypes = [
+        'creationTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationTimeFrom'
-        ),
-        'creationTimeTo' => array(
+        ],
+        'creationTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationTimeTo'
-        ),
-        'jobType' => array(
+        ],
+        'jobType' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'jobType'
-        ),
-        'jobStatus' => array(
+        ],
+        'jobStatus' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'jobStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

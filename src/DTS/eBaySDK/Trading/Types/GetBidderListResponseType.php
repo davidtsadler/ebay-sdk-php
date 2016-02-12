@@ -17,25 +17,25 @@ class GetBidderListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Bidder' => array(
+    private static $propertyTypes = [
+        'Bidder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Bidder'
-        ),
-        'BidItemArray' => array(
+        ],
+        'BidItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidItemArray'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

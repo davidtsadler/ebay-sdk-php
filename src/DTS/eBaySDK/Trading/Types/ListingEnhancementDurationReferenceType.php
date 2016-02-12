@@ -16,19 +16,19 @@ class ListingEnhancementDurationReferenceType extends \DTS\eBaySDK\Types\BaseTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Duration' => array(
+    private static $propertyTypes = [
+        'Duration' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Duration'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

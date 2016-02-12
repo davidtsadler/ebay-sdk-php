@@ -18,31 +18,31 @@ class ItemBestOffersType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Role' => array(
+    private static $propertyTypes = [
+        'Role' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Role'
-        ),
-        'BestOfferArray' => array(
+        ],
+        'BestOfferArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferArray'
-        ),
-        'Item' => array(
+        ],
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

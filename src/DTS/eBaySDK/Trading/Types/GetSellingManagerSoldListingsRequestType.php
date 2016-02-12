@@ -23,61 +23,61 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Search' => array(
+    private static $propertyTypes = [
+        'Search' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Search'
-        ),
-        'StoreCategoryID' => array(
+        ],
+        'StoreCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ),
-        'Filter' => array(
+        ],
+        'Filter' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Filter'
-        ),
-        'Archived' => array(
+        ],
+        'Archived' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Archived'
-        ),
-        'Sort' => array(
+        ],
+        'Sort' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sort'
-        ),
-        'SortOrder' => array(
+        ],
+        'SortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'SaleDateRange' => array(
+        ],
+        'SaleDateRange' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleDateRange'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

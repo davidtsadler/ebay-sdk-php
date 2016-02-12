@@ -20,43 +20,43 @@ class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AppId' => array(
+    private static $propertyTypes = [
+        'AppId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AppId'
-        ),
-        'DevId' => array(
+        ],
+        'DevId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DevId'
-        ),
-        'AuthCert' => array(
+        ],
+        'AuthCert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AuthCert'
-        ),
-        'Username' => array(
+        ],
+        'Username' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Username'
-        ),
-        'Password' => array(
+        ],
+        'Password' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Password'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

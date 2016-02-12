@@ -20,43 +20,43 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MinActiveItemCount' => array(
+    private static $propertyTypes = [
+        'MinActiveItemCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinActiveItemCount'
-        ),
-        'ListTimeFrom' => array(
+        ],
+        'ListTimeFrom' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListTimeFrom'
-        ),
-        'ListTimeTo' => array(
+        ],
+        'ListTimeTo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListTimeTo'
-        ),
-        'SpacingIntervalInMinutes' => array(
+        ],
+        'SpacingIntervalInMinutes' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SpacingIntervalInMinutes'
-        ),
-        'ListingHoldInventoryLevel' => array(
+        ],
+        'ListingHoldInventoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -41,169 +41,169 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EstimatedDeliveryDate' => array(
+    private static $propertyTypes = [
+        'EstimatedDeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EstimatedDeliveryDate'
-        ),
-        'InsuredValue' => array(
+        ],
+        'InsuredValue' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuredValue'
-        ),
-        'PackageDepth' => array(
+        ],
+        'PackageDepth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageDepth'
-        ),
-        'PackageLength' => array(
+        ],
+        'PackageLength' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageLength'
-        ),
-        'PackageWidth' => array(
+        ],
+        'PackageWidth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageWidth'
-        ),
-        'PayPalShipmentID' => array(
+        ],
+        'PayPalShipmentID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalShipmentID'
-        ),
-        'ShipmentID' => array(
+        ],
+        'ShipmentID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipmentID'
-        ),
-        'PostageTotal' => array(
+        ],
+        'PostageTotal' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PostageTotal'
-        ),
-        'PrintedTime' => array(
+        ],
+        'PrintedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrintedTime'
-        ),
-        'ShipFromAddress' => array(
+        ],
+        'ShipFromAddress' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipFromAddress'
-        ),
-        'ShippingAddress' => array(
+        ],
+        'ShippingAddress' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
-        ),
-        'ShippingFeature' => array(
+        ],
+        'ShippingFeature' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingFeature'
-        ),
-        'ShippingPackage' => array(
+        ],
+        'ShippingPackage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingPackage'
-        ),
-        'ShippingServiceUsed' => array(
+        ],
+        'ShippingServiceUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceUsed'
-        ),
-        'WeightMajor' => array(
+        ],
+        'WeightMajor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMajor'
-        ),
-        'WeightMinor' => array(
+        ],
+        'WeightMinor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
-        ),
-        'ItemTransactionID' => array(
+        ],
+        'ItemTransactionID' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemTransactionIDType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ItemTransactionID'
-        ),
-        'DeliveryDate' => array(
+        ],
+        'DeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryDate'
-        ),
-        'DeliveryStatus' => array(
+        ],
+        'DeliveryStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
-        ),
-        'RefundGrantedTime' => array(
+        ],
+        'RefundGrantedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundGrantedTime'
-        ),
-        'RefundRequestedTime' => array(
+        ],
+        'RefundRequestedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundRequestedTime'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'ShippedTime' => array(
+        ],
+        'ShippedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippedTime'
-        ),
-        'Notes' => array(
+        ],
+        'Notes' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Notes'
-        ),
-        'ShipmentTrackingDetails' => array(
+        ],
+        'ShipmentTrackingDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ShipmentTrackingDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShipmentTrackingDetails'
-        ),
-        'ShipmentLineItem' => array(
+        ],
+        'ShipmentLineItem' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ShipmentLineItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipmentLineItem'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

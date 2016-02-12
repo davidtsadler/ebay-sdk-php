@@ -24,67 +24,67 @@ class GetMemberMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'MailMessageType' => array(
+        ],
+        'MailMessageType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MailMessageType'
-        ),
-        'MessageStatus' => array(
+        ],
+        'MessageStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStatus'
-        ),
-        'DisplayToPublic' => array(
+        ],
+        'DisplayToPublic' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayToPublic'
-        ),
-        'StartCreationTime' => array(
+        ],
+        'StartCreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartCreationTime'
-        ),
-        'EndCreationTime' => array(
+        ],
+        'EndCreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndCreationTime'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'MemberMessageID' => array(
+        ],
+        'MemberMessageID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessageID'
-        ),
-        'SenderID' => array(
+        ],
+        'SenderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SenderID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

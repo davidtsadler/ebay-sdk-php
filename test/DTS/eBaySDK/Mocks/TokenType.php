@@ -3,9 +3,9 @@ namespace DTS\eBaySDK\Mocks;
 
 class TokenType extends \DTS\eBaySDK\Types\TokenType
 {
-    private static $propertyTypes = array();
+    private static $propertyTypes = [];
 
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

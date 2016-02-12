@@ -20,43 +20,43 @@ class SMSSubscriptionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SMSPhone' => array(
+    private static $propertyTypes = [
+        'SMSPhone' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SMSPhone'
-        ),
-        'UserStatus' => array(
+        ],
+        'UserStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserStatus'
-        ),
-        'CarrierID' => array(
+        ],
+        'CarrierID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CarrierID'
-        ),
-        'ErrorCode' => array(
+        ],
+        'ErrorCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorCode'
-        ),
-        'ItemToUnsubscribe' => array(
+        ],
+        'ItemToUnsubscribe' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemToUnsubscribe'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

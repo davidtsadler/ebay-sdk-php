@@ -18,31 +18,31 @@ class DisputeResolutionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DisputeResolutionRecordType' => array(
+    private static $propertyTypes = [
+        'DisputeResolutionRecordType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeResolutionRecordType'
-        ),
-        'DisputeResolutionReason' => array(
+        ],
+        'DisputeResolutionReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeResolutionReason'
-        ),
-        'ResolutionTime' => array(
+        ],
+        'ResolutionTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ResolutionTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

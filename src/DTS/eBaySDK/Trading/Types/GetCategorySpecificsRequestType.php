@@ -24,67 +24,67 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryID' => array(
+    private static $propertyTypes = [
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'LastUpdateTime' => array(
+        ],
+        'LastUpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastUpdateTime'
-        ),
-        'MaxNames' => array(
+        ],
+        'MaxNames' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxNames'
-        ),
-        'MaxValuesPerName' => array(
+        ],
+        'MaxValuesPerName' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxValuesPerName'
-        ),
-        'Name' => array(
+        ],
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'CategorySpecific' => array(
+        ],
+        'CategorySpecific' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategorySpecific'
-        ),
-        'ExcludeRelationships' => array(
+        ],
+        'ExcludeRelationships' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExcludeRelationships'
-        ),
-        'IncludeConfidence' => array(
+        ],
+        'IncludeConfidence' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeConfidence'
-        ),
-        'CategorySpecificsFileInfo' => array(
+        ],
+        'CategorySpecificsFileInfo' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategorySpecificsFileInfo'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

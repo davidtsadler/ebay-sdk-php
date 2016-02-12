@@ -21,49 +21,49 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'StoreCategoryID' => array(
+    private static $propertyTypes = [
+        'StoreCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ),
-        'StoreCategory2ID' => array(
+        ],
+        'StoreCategory2ID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategory2ID'
-        ),
-        'StoreCategoryName' => array(
+        ],
+        'StoreCategoryName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryName'
-        ),
-        'StoreCategory2Name' => array(
+        ],
+        'StoreCategory2Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategory2Name'
-        ),
-        'StoreURL' => array(
+        ],
+        'StoreURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreURL'
-        ),
-        'StoreName' => array(
+        ],
+        'StoreName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

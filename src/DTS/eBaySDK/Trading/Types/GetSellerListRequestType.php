@@ -29,97 +29,97 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UserID' => array(
+    private static $propertyTypes = [
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'MotorsDealerUsers' => array(
+        ],
+        'MotorsDealerUsers' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MotorsDealerUsers'
-        ),
-        'EndTimeFrom' => array(
+        ],
+        'EndTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeFrom'
-        ),
-        'EndTimeTo' => array(
+        ],
+        'EndTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'Sort' => array(
+        ],
+        'Sort' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sort'
-        ),
-        'StartTimeFrom' => array(
+        ],
+        'StartTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTimeFrom'
-        ),
-        'StartTimeTo' => array(
+        ],
+        'StartTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTimeTo'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'GranularityLevel' => array(
+        ],
+        'GranularityLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GranularityLevel'
-        ),
-        'SKUArray' => array(
+        ],
+        'SKUArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKUArray'
-        ),
-        'IncludeWatchCount' => array(
+        ],
+        'IncludeWatchCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeWatchCount'
-        ),
-        'AdminEndedItemsOnly' => array(
+        ],
+        'AdminEndedItemsOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdminEndedItemsOnly'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'IncludeVariations' => array(
+        ],
+        'IncludeVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeVariations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

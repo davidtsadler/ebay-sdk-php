@@ -19,37 +19,37 @@ class GetAllBiddersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BidArray' => array(
+    private static $propertyTypes = [
+        'BidArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OfferArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidArray'
-        ),
-        'HighBidder' => array(
+        ],
+        'HighBidder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HighBidder'
-        ),
-        'HighestBid' => array(
+        ],
+        'HighestBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HighestBid'
-        ),
-        'ListingStatus' => array(
+        ],
+        'ListingStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

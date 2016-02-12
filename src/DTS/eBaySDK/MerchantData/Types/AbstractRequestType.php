@@ -28,91 +28,91 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RequesterCredentials' => array(
+    private static $propertyTypes = [
+        'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\CustomSecurityHeaderType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
-        ),
-        'RequesterCredentials' => array(
+        ],
+        'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
-        ),
-        'DetailLevel' => array(
+        ],
+        'DetailLevel' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DetailLevel'
-        ),
-        'ErrorLanguage' => array(
+        ],
+        'ErrorLanguage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorLanguage'
-        ),
-        'MessageID' => array(
+        ],
+        'MessageID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
-        ),
-        'EndUserIP' => array(
+        ],
+        'EndUserIP' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndUserIP'
-        ),
-        'RequesterCredentials' => array(
+        ],
+        'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
-        ),
-        'ErrorHandling' => array(
+        ],
+        'ErrorHandling' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorHandling'
-        ),
-        'InvocationID' => array(
+        ],
+        'InvocationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvocationID'
-        ),
-        'OutputSelector' => array(
+        ],
+        'OutputSelector' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OutputSelector'
-        ),
-        'WarningLevel' => array(
+        ],
+        'WarningLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarningLevel'
-        ),
-        'BotBlock' => array(
+        ],
+        'BotBlock' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\BotBlockRequestType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BotBlock'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

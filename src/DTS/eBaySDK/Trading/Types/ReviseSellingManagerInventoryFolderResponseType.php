@@ -16,19 +16,19 @@ class ReviseSellingManagerInventoryFolderResponseType extends \DTS\eBaySDK\Tradi
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Folder' => array(
+    private static $propertyTypes = [
+        'Folder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Folder'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

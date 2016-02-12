@@ -16,19 +16,19 @@ class AddItemsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AddItemResponseContainer' => array(
+    private static $propertyTypes = [
+        'AddItemResponseContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddItemResponseContainerType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddItemResponseContainer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

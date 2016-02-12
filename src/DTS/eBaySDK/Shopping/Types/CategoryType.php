@@ -22,55 +22,55 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryID' => array(
+    private static $propertyTypes = [
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'CategoryLevel' => array(
+        ],
+        'CategoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryLevel'
-        ),
-        'CategoryName' => array(
+        ],
+        'CategoryName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryName'
-        ),
-        'CategoryParentID' => array(
+        ],
+        'CategoryParentID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryParentID'
-        ),
-        'CategoryNamePath' => array(
+        ],
+        'CategoryNamePath' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryNamePath'
-        ),
-        'CategoryIDPath' => array(
+        ],
+        'CategoryIDPath' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryIDPath'
-        ),
-        'LeafCategory' => array(
+        ],
+        'LeafCategory' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LeafCategory'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

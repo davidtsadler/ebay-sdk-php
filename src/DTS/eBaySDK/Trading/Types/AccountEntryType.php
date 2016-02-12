@@ -30,103 +30,103 @@ class AccountEntryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AccountDetailsEntryType' => array(
+    private static $propertyTypes = [
+        'AccountDetailsEntryType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountDetailsEntryType'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'Balance' => array(
+        ],
+        'Balance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Balance'
-        ),
-        'Date' => array(
+        ],
+        'Date' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Date'
-        ),
-        'GrossDetailAmount' => array(
+        ],
+        'GrossDetailAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GrossDetailAmount'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Memo' => array(
+        ],
+        'Memo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Memo'
-        ),
-        'ConversionRate' => array(
+        ],
+        'ConversionRate' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConversionRate'
-        ),
-        'NetDetailAmount' => array(
+        ],
+        'NetDetailAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NetDetailAmount'
-        ),
-        'RefNumber' => array(
+        ],
+        'RefNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefNumber'
-        ),
-        'VATPercent' => array(
+        ],
+        'VATPercent' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATPercent'
-        ),
-        'Title' => array(
+        ],
+        'Title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'ReceivedTopRatedDiscount' => array(
+        ],
+        'ReceivedTopRatedDiscount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReceivedTopRatedDiscount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -22,55 +22,55 @@ class TaxDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Imposition' => array(
+    private static $propertyTypes = [
+        'Imposition' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Imposition'
-        ),
-        'TaxDescription' => array(
+        ],
+        'TaxDescription' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxDescription'
-        ),
-        'TaxAmount' => array(
+        ],
+        'TaxAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxAmount'
-        ),
-        'TaxOnSubtotalAmount' => array(
+        ],
+        'TaxOnSubtotalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxOnSubtotalAmount'
-        ),
-        'TaxOnShippingAmount' => array(
+        ],
+        'TaxOnShippingAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxOnShippingAmount'
-        ),
-        'TaxOnHandlingAmount' => array(
+        ],
+        'TaxOnHandlingAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxOnHandlingAmount'
-        ),
-        'TaxCode' => array(
+        ],
+        'TaxCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxCode'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

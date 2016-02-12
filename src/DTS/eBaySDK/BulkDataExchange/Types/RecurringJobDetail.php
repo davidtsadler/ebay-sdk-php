@@ -23,61 +23,61 @@ class RecurringJobDetail extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'recurringJobId' => array(
+    private static $propertyTypes = [
+        'recurringJobId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'recurringJobId'
-        ),
-        'creationTime' => array(
+        ],
+        'creationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationTime'
-        ),
-        'frequencyInMinutes' => array(
+        ],
+        'frequencyInMinutes' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'frequencyInMinutes'
-        ),
-        'downloadJobType' => array(
+        ],
+        'downloadJobType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'downloadJobType'
-        ),
-        'jobStatus' => array(
+        ],
+        'jobStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobStatus'
-        ),
-        'monthlyRecurrence' => array(
+        ],
+        'monthlyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'monthlyRecurrence'
-        ),
-        'weeklyRecurrence' => array(
+        ],
+        'weeklyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\WeeklyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'weeklyRecurrence'
-        ),
-        'dailyRecurrence' => array(
+        ],
+        'dailyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'dailyRecurrence'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

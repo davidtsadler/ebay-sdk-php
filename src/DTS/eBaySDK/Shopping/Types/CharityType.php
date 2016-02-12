@@ -23,61 +23,61 @@ class CharityType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CharityID' => array(
+    private static $propertyTypes = [
+        'CharityID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityID'
-        ),
-        'CharityName' => array(
+        ],
+        'CharityName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityName'
-        ),
-        'CharityNumber' => array(
+        ],
+        'CharityNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityNumber'
-        ),
-        'DonationPercent' => array(
+        ],
+        'DonationPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DonationPercent'
-        ),
-        'Mission' => array(
+        ],
+        'Mission' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Mission'
-        ),
-        'LogoURL' => array(
+        ],
+        'LogoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoURL'
-        ),
-        'CharityListing' => array(
+        ],
+        'CharityListing' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityListing'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

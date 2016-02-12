@@ -18,31 +18,31 @@ class GetUserContactDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'ContactID' => array(
+        ],
+        'ContactID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ContactID'
-        ),
-        'RequesterID' => array(
+        ],
+        'RequesterID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequesterID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

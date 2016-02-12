@@ -19,37 +19,37 @@ class ThemeGroupType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'GroupID' => array(
+    private static $propertyTypes = [
+        'GroupID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GroupID'
-        ),
-        'GroupName' => array(
+        ],
+        'GroupName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GroupName'
-        ),
-        'ThemeID' => array(
+        ],
+        'ThemeID' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ThemeID'
-        ),
-        'ThemeTotal' => array(
+        ],
+        'ThemeTotal' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ThemeTotal'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

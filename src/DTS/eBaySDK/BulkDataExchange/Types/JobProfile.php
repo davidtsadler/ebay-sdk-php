@@ -24,67 +24,67 @@ class JobProfile extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'jobId' => array(
+    private static $propertyTypes = [
+        'jobId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobId'
-        ),
-        'jobType' => array(
+        ],
+        'jobType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobType'
-        ),
-        'jobStatus' => array(
+        ],
+        'jobStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobStatus'
-        ),
-        'creationTime' => array(
+        ],
+        'creationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationTime'
-        ),
-        'completionTime' => array(
+        ],
+        'completionTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'completionTime'
-        ),
-        'errorCount' => array(
+        ],
+        'errorCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'errorCount'
-        ),
-        'percentComplete' => array(
+        ],
+        'percentComplete' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'percentComplete'
-        ),
-        'fileReferenceId' => array(
+        ],
+        'fileReferenceId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fileReferenceId'
-        ),
-        'inputFileReferenceId' => array(
+        ],
+        'inputFileReferenceId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'inputFileReferenceId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

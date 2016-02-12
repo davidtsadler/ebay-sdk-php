@@ -20,43 +20,43 @@ class GetUserDisputesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DisputeFilterType' => array(
+    private static $propertyTypes = [
+        'DisputeFilterType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeFilterType'
-        ),
-        'DisputeSortType' => array(
+        ],
+        'DisputeSortType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeSortType'
-        ),
-        'ModTimeFrom' => array(
+        ],
+        'ModTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeFrom'
-        ),
-        'ModTimeTo' => array(
+        ],
+        'ModTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeTo'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

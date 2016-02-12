@@ -16,19 +16,19 @@ class GetSellingManagerAlertsResponseType extends \DTS\eBaySDK\Trading\Types\Abs
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Alert' => array(
+    private static $propertyTypes = [
+        'Alert' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAlertType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Alert'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

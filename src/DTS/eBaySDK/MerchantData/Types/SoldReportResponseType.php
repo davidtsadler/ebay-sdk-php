@@ -16,19 +16,19 @@ class SoldReportResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OrderDetails' => array(
+    private static $propertyTypes = [
+        'OrderDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OrderDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

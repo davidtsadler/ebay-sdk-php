@@ -18,31 +18,31 @@ class FeeType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'Fee' => array(
+        ],
+        'Fee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fee'
-        ),
-        'PromotionalDiscount' => array(
+        ],
+        'PromotionalDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalDiscount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

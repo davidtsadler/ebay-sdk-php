@@ -19,37 +19,37 @@ class PaginationOutputType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'pageNumber' => array(
+    private static $propertyTypes = [
+        'pageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'pageNumber'
-        ),
-        'entriesPerPage' => array(
+        ],
+        'entriesPerPage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'entriesPerPage'
-        ),
-        'totalEntries' => array(
+        ],
+        'totalEntries' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'totalEntries'
-        ),
-        'totalPages' => array(
+        ],
+        'totalPages' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'totalPages'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -17,25 +17,25 @@ class MaximumUnpaidItemStrikesInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Count' => array(
+    private static $propertyTypes = [
+        'Count' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Count'
-        ),
-        'Period' => array(
+        ],
+        'Period' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Period'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

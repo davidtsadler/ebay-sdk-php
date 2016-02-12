@@ -18,31 +18,31 @@ class ValidateChallengeInputRequestType extends \DTS\eBaySDK\Trading\Types\Abstr
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ChallengeToken' => array(
+    private static $propertyTypes = [
+        'ChallengeToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ChallengeToken'
-        ),
-        'UserInput' => array(
+        ],
+        'UserInput' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserInput'
-        ),
-        'KeepTokenValid' => array(
+        ],
+        'KeepTokenValid' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'KeepTokenValid'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

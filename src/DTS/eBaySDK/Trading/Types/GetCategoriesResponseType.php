@@ -22,55 +22,55 @@ class GetCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryArray' => array(
+    private static $propertyTypes = [
+        'CategoryArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryArray'
-        ),
-        'CategoryCount' => array(
+        ],
+        'CategoryCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryCount'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        ),
-        'CategoryVersion' => array(
+        ],
+        'CategoryVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
-        ),
-        'ReservePriceAllowed' => array(
+        ],
+        'ReservePriceAllowed' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReservePriceAllowed'
-        ),
-        'MinimumReservePrice' => array(
+        ],
+        'MinimumReservePrice' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumReservePrice'
-        ),
-        'ReduceReserveAllowed' => array(
+        ],
+        'ReduceReserveAllowed' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReduceReserveAllowed'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -16,19 +16,19 @@ class GetRecurringJobsResponse extends \DTS\eBaySDK\BulkDataExchange\Types\BaseS
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'recurringJobDetail' => array(
+    private static $propertyTypes = [
+        'recurringJobDetail' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\RecurringJobDetail',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'recurringJobDetail'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

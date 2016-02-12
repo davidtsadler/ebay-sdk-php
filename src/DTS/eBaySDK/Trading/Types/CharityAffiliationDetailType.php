@@ -18,31 +18,31 @@ class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CharityID' => array(
+    private static $propertyTypes = [
+        'CharityID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityID'
-        ),
-        'AffiliationType' => array(
+        ],
+        'AffiliationType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AffiliationType'
-        ),
-        'LastUsedTime' => array(
+        ],
+        'LastUsedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastUsedTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

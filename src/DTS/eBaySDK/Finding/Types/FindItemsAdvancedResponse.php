@@ -18,31 +18,31 @@ class FindItemsAdvancedResponse extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'categoryHistogramContainer' => array(
+    private static $propertyTypes = [
+        'categoryHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'categoryHistogramContainer'
-        ),
-        'aspectHistogramContainer' => array(
+        ],
+        'aspectHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'aspectHistogramContainer'
-        ),
-        'conditionHistogramContainer' => array(
+        ],
+        'conditionHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ConditionHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'conditionHistogramContainer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

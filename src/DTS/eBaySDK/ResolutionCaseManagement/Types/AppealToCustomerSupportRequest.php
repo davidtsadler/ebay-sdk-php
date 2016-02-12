@@ -18,31 +18,31 @@ class AppealToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManageme
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'caseId' => array(
+    private static $propertyTypes = [
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        ),
-        'appealReason' => array(
+        ],
+        'appealReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'appealReason'
-        ),
-        'comments' => array(
+        ],
+        'comments' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'comments'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

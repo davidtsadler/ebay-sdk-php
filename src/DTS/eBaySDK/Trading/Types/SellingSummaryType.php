@@ -22,55 +22,55 @@ class SellingSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ActiveAuctionCount' => array(
+    private static $propertyTypes = [
+        'ActiveAuctionCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActiveAuctionCount'
-        ),
-        'AuctionSellingCount' => array(
+        ],
+        'AuctionSellingCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AuctionSellingCount'
-        ),
-        'AuctionBidCount' => array(
+        ],
+        'AuctionBidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AuctionBidCount'
-        ),
-        'TotalAuctionSellingValue' => array(
+        ],
+        'TotalAuctionSellingValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAuctionSellingValue'
-        ),
-        'TotalSoldCount' => array(
+        ],
+        'TotalSoldCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldCount'
-        ),
-        'TotalSoldValue' => array(
+        ],
+        'TotalSoldValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalSoldValue'
-        ),
-        'SoldDurationInDays' => array(
+        ],
+        'SoldDurationInDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldDurationInDays'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

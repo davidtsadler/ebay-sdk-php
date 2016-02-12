@@ -23,61 +23,61 @@ class AddTransactionConfirmationItemRequestType extends \DTS\eBaySDK\Trading\Typ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RecipientUserID' => array(
+    private static $propertyTypes = [
+        'RecipientUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientUserID'
-        ),
-        'VerifyEligibilityOnly' => array(
+        ],
+        'VerifyEligibilityOnly' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifyEligibilityOnly'
-        ),
-        'RecipientPostalCode' => array(
+        ],
+        'RecipientPostalCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientPostalCode'
-        ),
-        'RecipientRelationType' => array(
+        ],
+        'RecipientRelationType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientRelationType'
-        ),
-        'NegotiatedPrice' => array(
+        ],
+        'NegotiatedPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NegotiatedPrice'
-        ),
-        'ListingDuration' => array(
+        ],
+        'ListingDuration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingDuration'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Comments' => array(
+        ],
+        'Comments' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Comments'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

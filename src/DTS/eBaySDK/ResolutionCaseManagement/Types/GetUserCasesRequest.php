@@ -21,49 +21,49 @@ class GetUserCasesRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\Ba
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'itemFilter' => array(
+    private static $propertyTypes = [
+        'itemFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemFilter'
-        ),
-        'creationDateRangeFilter' => array(
+        ],
+        'creationDateRangeFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DateRangeFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDateRangeFilter'
-        ),
-        'caseTypeFilter' => array(
+        ],
+        'caseTypeFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseTypeFilter'
-        ),
-        'caseStatusFilter' => array(
+        ],
+        'caseStatusFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseStatusFilter'
-        ),
-        'paginationInput' => array(
+        ],
+        'paginationInput' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaginationInput',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
-        ),
-        'sortOrder' => array(
+        ],
+        'sortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sortOrder'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

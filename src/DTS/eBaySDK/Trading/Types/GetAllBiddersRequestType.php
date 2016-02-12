@@ -18,31 +18,31 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'CallMode' => array(
+        ],
+        'CallMode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CallMode'
-        ),
-        'IncludeBiddingSummary' => array(
+        ],
+        'IncludeBiddingSummary' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeBiddingSummary'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

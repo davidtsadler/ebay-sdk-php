@@ -18,30 +18,30 @@ class BaseType
      *            The array key is the name that client code will use to access the property.
      *            The value is an associative array which is the meta data for the property.
      *
-     *            'subject' => array(             The name of the property.
+     *            'subject' => [                  The name of the property.
      *                'type' => 'string',         The data type or class name.
      *                'unbound' => false,         Indicates if the property is unbound, I.e is an array.
      *                'attribute' => false,       Indicates if the proeprty is an attribute in the XML.
      *                'elementName' => 'Subject'  The corressponding element in the XML.
-     *            )
+     *            ]
      *
      */
-    protected static $properties = array();
+    protected static $properties = [];
 
     /**
      * @var array Associative array. Key is the class name and the value is the xml namespace.
      */
-    protected static $xmlNamespaces = array();
+    protected static $xmlNamespaces = [];
 
     /**
      * @var array Associative array. Key is the name of the XML root element used in the request.
      */
-    protected static $requestXmlRootElementNames = array();
+    protected static $requestXmlRootElementNames = [];
 
     /**
      * @var array When a property is set the value will be stored in this array.
      */
-    private $values = array();
+    private $values = [];
 
     /**
      * @var array Associative array storing an attachment.
@@ -51,15 +51,15 @@ class BaseType
     /**
      * @param array $values Can pass an associative array that will set the objects properties.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array();
+            self::$properties[__CLASS__] = [];
         }
 
         $this->setValues(__CLASS__, $values);
 
-        $this->attachment = array('data' => null, 'mimeType' => null);
+        $this->attachment = ['data' => null, 'mimeType' => null];
     }
 
     /**
@@ -207,7 +207,7 @@ class BaseType
      */
     public function toArray()
     {
-        $array = array();
+        $array = [];
 
         foreach (self::$properties[get_class($this)] as $name => $info) {
             if (!array_key_exists($name, $this->values)) {
@@ -218,7 +218,7 @@ class BaseType
 
             if ($info['unbound']) {
                 if (count($value)) {
-                    $array[$name] = array();
+                    $array[$name] = [];
                     foreach ($value as $property) {
                         $array[$name][] = self::propertyToArrayValue($property);
                     }
@@ -239,7 +239,7 @@ class BaseType
      * @throws UnknownPropertyException If the property does not exist.
      * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
      */
-    protected function setValues($class, array $values = array())
+    protected function setValues($class, array $values = [])
     {
         foreach ($values as $property => $value) {
             $actualValue = self::determineActualValueToAssign($class, $property, $value);
@@ -363,7 +363,7 @@ class BaseType
      */
     private function attributesToXml()
     {
-        $attributes = array();
+        $attributes = [];
 
         foreach (self::$properties[get_class($this)] as $name => $info) {
             if (!$info['attribute']) {
@@ -387,7 +387,7 @@ class BaseType
      */
     private function propertiesToXml()
     {
-        $properties = array();
+        $properties = [];
 
         foreach (self::$properties[get_class($this)] as $name => $info) {
             if ($info['attribute']) {
@@ -491,10 +491,10 @@ class BaseType
      */
     protected static function getParentValues(array $properties, array $values)
     {
-        return array(
+        return [
             array_diff_key($values, $properties),
             array_intersect_key($values, $properties)
-        );
+        ];
     }
 
     /**
@@ -576,7 +576,7 @@ class BaseType
         $info = self::propertyInfo($class, $property);
 
         if ($info['unbound'] && is_array($value)) {
-            $values = array();
+            $values = [];
             foreach ($value as $val) {
                 $values[] = self::actualValue($info, $class, $property, $val);
             }

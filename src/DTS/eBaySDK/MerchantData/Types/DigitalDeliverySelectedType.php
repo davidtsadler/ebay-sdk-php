@@ -18,31 +18,31 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DeliveryMethod' => array(
+    private static $propertyTypes = [
+        'DeliveryMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryMethod'
-        ),
-        'DeliveryStatus' => array(
+        ],
+        'DeliveryStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
-        ),
-        'DeliveryDetails' => array(
+        ],
+        'DeliveryDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

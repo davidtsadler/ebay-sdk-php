@@ -34,127 +34,127 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CommentingUser' => array(
+    private static $propertyTypes = [
+        'CommentingUser' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentingUser'
-        ),
-        'CommentingUserScore' => array(
+        ],
+        'CommentingUserScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentingUserScore'
-        ),
-        'CommentText' => array(
+        ],
+        'CommentText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentText'
-        ),
-        'CommentTime' => array(
+        ],
+        'CommentTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentTime'
-        ),
-        'CommentType' => array(
+        ],
+        'CommentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentType'
-        ),
-        'FeedbackResponse' => array(
+        ],
+        'FeedbackResponse' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackResponse'
-        ),
-        'Followup' => array(
+        ],
+        'Followup' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Followup'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Role' => array(
+        ],
+        'Role' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Role'
-        ),
-        'ItemTitle' => array(
+        ],
+        'ItemTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemTitle'
-        ),
-        'ItemPrice' => array(
+        ],
+        'ItemPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemPrice'
-        ),
-        'FeedbackID' => array(
+        ],
+        'FeedbackID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'CommentReplaced' => array(
+        ],
+        'CommentReplaced' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentReplaced'
-        ),
-        'ResponseReplaced' => array(
+        ],
+        'ResponseReplaced' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ResponseReplaced'
-        ),
-        'FollowUpReplaced' => array(
+        ],
+        'FollowUpReplaced' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FollowUpReplaced'
-        ),
-        'Countable' => array(
+        ],
+        'Countable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Countable'
-        ),
-        'FeedbackRevised' => array(
+        ],
+        'FeedbackRevised' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackRevised'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

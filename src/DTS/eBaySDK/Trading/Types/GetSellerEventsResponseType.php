@@ -17,25 +17,25 @@ class GetSellerEventsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TimeTo' => array(
+    private static $propertyTypes = [
+        'TimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TimeTo'
-        ),
-        'ItemArray' => array(
+        ],
+        'ItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

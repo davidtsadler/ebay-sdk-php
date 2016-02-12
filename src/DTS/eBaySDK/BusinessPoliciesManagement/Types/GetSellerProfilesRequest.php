@@ -19,37 +19,37 @@ class GetSellerProfilesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\T
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'profileType' => array(
+    private static $propertyTypes = [
+        'profileType' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'profileType'
-        ),
-        'profileId' => array(
+        ],
+        'profileId' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'profileId'
-        ),
-        'profileName' => array(
+        ],
+        'profileName' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'profileName'
-        ),
-        'includeDetails' => array(
+        ],
+        'includeDetails' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'includeDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

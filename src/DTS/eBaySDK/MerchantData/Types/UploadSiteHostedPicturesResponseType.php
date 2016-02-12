@@ -17,25 +17,25 @@ class UploadSiteHostedPicturesResponseType extends \DTS\eBaySDK\MerchantData\Typ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PictureSystemVersion' => array(
+    private static $propertyTypes = [
+        'PictureSystemVersion' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSystemVersion'
-        ),
-        'SiteHostedPictureDetails' => array(
+        ],
+        'SiteHostedPictureDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SiteHostedPictureDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteHostedPictureDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

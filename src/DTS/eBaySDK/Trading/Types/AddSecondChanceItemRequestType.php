@@ -20,43 +20,43 @@ class AddSecondChanceItemRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RecipientBidderUserID' => array(
+    private static $propertyTypes = [
+        'RecipientBidderUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientBidderUserID'
-        ),
-        'BuyItNowPrice' => array(
+        ],
+        'BuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowPrice'
-        ),
-        'Duration' => array(
+        ],
+        'Duration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Duration'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'SellerMessage' => array(
+        ],
+        'SellerMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerMessage'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

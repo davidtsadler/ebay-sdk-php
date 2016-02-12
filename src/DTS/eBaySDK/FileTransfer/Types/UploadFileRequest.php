@@ -19,37 +19,37 @@ class UploadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceReque
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'taskReferenceId' => array(
+    private static $propertyTypes = [
+        'taskReferenceId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'taskReferenceId'
-        ),
-        'fileReferenceId' => array(
+        ],
+        'fileReferenceId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fileReferenceId'
-        ),
-        'fileFormat' => array(
+        ],
+        'fileFormat' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fileFormat'
-        ),
-        'fileAttachment' => array(
+        ],
+        'fileAttachment' => [
             'type' => 'DTS\eBaySDK\FileTransfer\Types\FileAttachment',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fileAttachment'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class DeliveryEstimate extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'maxDelivery' => array(
+    private static $propertyTypes = [
+        'maxDelivery' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxDelivery'
-        ),
-        'minDelivery' => array(
+        ],
+        'minDelivery' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minDelivery'
-        ),
-        'maxDeliveryDate' => array(
+        ],
+        'maxDeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxDeliveryDate'
-        ),
-        'minDeliveryDate' => array(
+        ],
+        'minDeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minDeliveryDate'
-        ),
-        'minConfidence' => array(
+        ],
+        'minConfidence' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minConfidence'
-        ),
-        'maxConfidence' => array(
+        ],
+        'maxConfidence' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxConfidence'
-        ),
-        'estimateTreatment' => array(
+        ],
+        'estimateTreatment' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'estimateTreatment'
-        ),
-        'maxActualDelivery' => array(
+        ],
+        'maxActualDelivery' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxActualDelivery'
-        ),
-        'minActualDelivery' => array(
+        ],
+        'minActualDelivery' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minActualDelivery'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

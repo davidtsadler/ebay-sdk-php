@@ -19,37 +19,37 @@ class SellingManagerProductType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SellingManagerProductDetails' => array(
+    private static $propertyTypes = [
+        'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
-        ),
-        'SellingManagerTemplateDetailsArray' => array(
+        ],
+        'SellingManagerTemplateDetailsArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerTemplateDetailsArray'
-        ),
-        'SellingManagerProductInventoryStatus' => array(
+        ],
+        'SellingManagerProductInventoryStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductInventoryStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductInventoryStatus'
-        ),
-        'SellingManagerProductSpecifics' => array(
+        ],
+        'SellingManagerProductSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductSpecifics'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

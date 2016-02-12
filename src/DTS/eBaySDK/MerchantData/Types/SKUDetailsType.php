@@ -22,55 +22,55 @@ class SKUDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SKU' => array(
+    private static $propertyTypes = [
+        'SKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'Price' => array(
+        ],
+        'Price' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Price'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'BidCount' => array(
+        ],
+        'BidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
-        ),
-        'ReserveMet' => array(
+        ],
+        'ReserveMet' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
-        ),
-        'Variations' => array(
+        ],
+        'Variations' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Variations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

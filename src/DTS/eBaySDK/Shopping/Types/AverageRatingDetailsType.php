@@ -18,31 +18,31 @@ class AverageRatingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RatingDetail' => array(
+    private static $propertyTypes = [
+        'RatingDetail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RatingDetail'
-        ),
-        'Rating' => array(
+        ],
+        'Rating' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Rating'
-        ),
-        'RatingCount' => array(
+        ],
+        'RatingCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RatingCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

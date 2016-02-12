@@ -22,55 +22,55 @@ class NonUsageTransactionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TransactionTime' => array(
+    private static $propertyTypes = [
+        'TransactionTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionTime'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'Memo' => array(
+        ],
+        'Memo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Memo'
-        ),
-        'OriginalChargeTime' => array(
+        ],
+        'OriginalChargeTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OriginalChargeTime'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'FeeAmount' => array(
+        ],
+        'FeeAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

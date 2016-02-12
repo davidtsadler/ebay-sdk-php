@@ -18,31 +18,31 @@ class RefundInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'refundDue' => array(
+    private static $propertyTypes = [
+        'refundDue' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'refundDue'
-        ),
-        'estimatedRefundDetail' => array(
+        ],
+        'estimatedRefundDetail' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\EstimatedRefundDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'estimatedRefundDetail'
-        ),
-        'actualRefundDetail' => array(
+        ],
+        'actualRefundDetail' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ActualRefundDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'actualRefundDetail'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -27,85 +27,85 @@ class ShippingPolicyService extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'shipToLocation' => array(
+    private static $propertyTypes = [
+        'shipToLocation' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shipToLocation'
-        ),
-        'shippingService' => array(
+        ],
+        'shippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingService'
-        ),
-        'shippingType' => array(
+        ],
+        'shippingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingType'
-        ),
-        'sortOrderId' => array(
+        ],
+        'sortOrderId' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sortOrderId'
-        ),
-        'freeShipping' => array(
+        ],
+        'freeShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'freeShipping'
-        ),
-        'codFee' => array(
+        ],
+        'codFee' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'codFee'
-        ),
-        'fastShipping' => array(
+        ],
+        'fastShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fastShipping'
-        ),
-        'shippingServiceAdditionalCost' => array(
+        ],
+        'shippingServiceAdditionalCost' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingServiceAdditionalCost'
-        ),
-        'shippingServiceCost' => array(
+        ],
+        'shippingServiceCost' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingServiceCost'
-        ),
-        'shippingSurcharge' => array(
+        ],
+        'shippingSurcharge' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingSurcharge'
-        ),
-        'shippingOverrideFee' => array(
+        ],
+        'shippingOverrideFee' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingOverrideFee'
-        ),
-        'buyerResponsibleForShipping' => array(
+        ],
+        'buyerResponsibleForShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'buyerResponsibleForShipping'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

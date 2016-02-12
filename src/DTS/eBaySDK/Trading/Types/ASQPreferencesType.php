@@ -17,25 +17,25 @@ class ASQPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ResetDefaultSubjects' => array(
+    private static $propertyTypes = [
+        'ResetDefaultSubjects' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ResetDefaultSubjects'
-        ),
-        'Subject' => array(
+        ],
+        'Subject' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Subject'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

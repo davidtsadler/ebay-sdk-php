@@ -40,163 +40,163 @@ class MyMessagesMessageType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Sender' => array(
+    private static $propertyTypes = [
+        'Sender' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sender'
-        ),
-        'RecipientUserID' => array(
+        ],
+        'RecipientUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientUserID'
-        ),
-        'SendToName' => array(
+        ],
+        'SendToName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SendToName'
-        ),
-        'Subject' => array(
+        ],
+        'Subject' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Subject'
-        ),
-        'MessageID' => array(
+        ],
+        'MessageID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
-        ),
-        'ExternalMessageID' => array(
+        ],
+        'ExternalMessageID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalMessageID'
-        ),
-        'ContentType' => array(
+        ],
+        'ContentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ContentType'
-        ),
-        'Text' => array(
+        ],
+        'Text' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Text'
-        ),
-        'Flagged' => array(
+        ],
+        'Flagged' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Flagged'
-        ),
-        'Read' => array(
+        ],
+        'Read' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Read'
-        ),
-        'CreationDate' => array(
+        ],
+        'CreationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationDate'
-        ),
-        'ReceiveDate' => array(
+        ],
+        'ReceiveDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReceiveDate'
-        ),
-        'ExpirationDate' => array(
+        ],
+        'ExpirationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpirationDate'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'ResponseDetails' => array(
+        ],
+        'ResponseDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesResponseDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ResponseDetails'
-        ),
-        'Folder' => array(
+        ],
+        'Folder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Folder'
-        ),
-        'Content' => array(
+        ],
+        'Content' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Content'
-        ),
-        'MessageType' => array(
+        ],
+        'MessageType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageType'
-        ),
-        'ListingStatus' => array(
+        ],
+        'ListingStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingStatus'
-        ),
-        'QuestionType' => array(
+        ],
+        'QuestionType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuestionType'
-        ),
-        'Replied' => array(
+        ],
+        'Replied' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Replied'
-        ),
-        'HighPriority' => array(
+        ],
+        'HighPriority' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HighPriority'
-        ),
-        'ItemEndTime' => array(
+        ],
+        'ItemEndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemEndTime'
-        ),
-        'ItemTitle' => array(
+        ],
+        'ItemTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemTitle'
-        ),
-        'MessageMedia' => array(
+        ],
+        'MessageMedia' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'MessageMedia'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -23,61 +23,61 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ReturnId' => array(
+    private static $propertyTypes = [
+        'ReturnId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnId'
-        ),
-        'ReturnType' => array(
+        ],
+        'ReturnType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnType'
-        ),
-        'otherParty' => array(
+        ],
+        'otherParty' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'otherParty'
-        ),
-        'returnRequest' => array(
+        ],
+        'returnRequest' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnRequestType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnRequest'
-        ),
-        'status' => array(
+        ],
+        'status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'status'
-        ),
-        'responseDue' => array(
+        ],
+        'responseDue' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnResponseDueType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'responseDue'
-        ),
-        'creationDate' => array(
+        ],
+        'creationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
-        ),
-        'lastModifiedDate' => array(
+        ],
+        'lastModifiedDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'lastModifiedDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

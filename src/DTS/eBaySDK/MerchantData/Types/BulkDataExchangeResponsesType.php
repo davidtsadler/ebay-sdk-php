@@ -32,115 +32,115 @@ class BulkDataExchangeResponsesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ActiveInventoryReport' => array(
+    private static $propertyTypes = [
+        'ActiveInventoryReport' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActiveInventoryReport'
-        ),
-        'AddFixedPriceItemResponse' => array(
+        ],
+        'AddFixedPriceItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddFixedPriceItemResponse'
-        ),
-        'AddItemResponse' => array(
+        ],
+        'AddItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddItemResponse'
-        ),
-        'EndFixedPriceItemResponse' => array(
+        ],
+        'EndFixedPriceItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndFixedPriceItemResponse'
-        ),
-        'EndItemResponse' => array(
+        ],
+        'EndItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\EndItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndItemResponse'
-        ),
-        'FeeSettlementReport' => array(
+        ],
+        'FeeSettlementReport' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeSettlementReport'
-        ),
-        'OrderAckResponse' => array(
+        ],
+        'OrderAckResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderAckResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OrderAckResponse'
-        ),
-        'RelistFixedPriceItemResponse' => array(
+        ],
+        'RelistFixedPriceItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RelistFixedPriceItemResponse'
-        ),
-        'RelistItemResponse' => array(
+        ],
+        'RelistItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RelistItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RelistItemResponse'
-        ),
-        'ReviseFixedPriceItemResponse' => array(
+        ],
+        'ReviseFixedPriceItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseFixedPriceItemResponse'
-        ),
-        'ReviseInventoryStatusResponse' => array(
+        ],
+        'ReviseInventoryStatusResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseInventoryStatusResponse'
-        ),
-        'ReviseItemResponse' => array(
+        ],
+        'ReviseItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseItemResponse'
-        ),
-        'SetShipmentTrackingInfoResponse' => array(
+        ],
+        'SetShipmentTrackingInfoResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SetShipmentTrackingInfoResponse'
-        ),
-        'SoldReport' => array(
+        ],
+        'SoldReport' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SoldReportResponseType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldReport'
-        ),
-        'UploadSiteHostedPicturesResponse' => array(
+        ],
+        'UploadSiteHostedPicturesResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'UploadSiteHostedPicturesResponse'
-        ),
-        'VerifyAddFixedPriceItemResponse' => array(
+        ],
+        'VerifyAddFixedPriceItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddFixedPriceItemResponse'
-        ),
-        'VerifyAddItemResponse' => array(
+        ],
+        'VerifyAddItemResponse' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddItemResponseType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddItemResponse'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

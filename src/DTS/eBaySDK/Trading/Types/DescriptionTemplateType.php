@@ -21,49 +21,49 @@ class DescriptionTemplateType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'GroupID' => array(
+    private static $propertyTypes = [
+        'GroupID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GroupID'
-        ),
-        'ID' => array(
+        ],
+        'ID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ID'
-        ),
-        'ImageURL' => array(
+        ],
+        'ImageURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ImageURL'
-        ),
-        'Name' => array(
+        ],
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'TemplateXML' => array(
+        ],
+        'TemplateXML' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TemplateXML'
-        ),
-        'Type' => array(
+        ],
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

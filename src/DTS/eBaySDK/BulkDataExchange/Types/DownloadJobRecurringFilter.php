@@ -16,19 +16,19 @@ class DownloadJobRecurringFilter extends \DTS\eBaySDK\BulkDataExchange\Types\Bas
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'orderReportRecurringFilter' => array(
+    private static $propertyTypes = [
+        'orderReportRecurringFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportRecurringFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'orderReportRecurringFilter'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

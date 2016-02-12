@@ -20,43 +20,43 @@ class VariationDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MaxVariationsPerItem' => array(
+    private static $propertyTypes = [
+        'MaxVariationsPerItem' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxVariationsPerItem'
-        ),
-        'MaxNamesPerVariationSpecificsSet' => array(
+        ],
+        'MaxNamesPerVariationSpecificsSet' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxNamesPerVariationSpecificsSet'
-        ),
-        'MaxValuesPerVariationSpecificsSetName' => array(
+        ],
+        'MaxValuesPerVariationSpecificsSetName' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxValuesPerVariationSpecificsSetName'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

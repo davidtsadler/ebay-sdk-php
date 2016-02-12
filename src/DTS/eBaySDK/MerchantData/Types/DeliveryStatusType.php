@@ -16,19 +16,19 @@ class DeliveryStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Email' => array(
+    private static $propertyTypes = [
+        'Email' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Email'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

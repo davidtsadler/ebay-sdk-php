@@ -31,109 +31,109 @@ class SellingManagerOrderStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CheckoutStatus' => array(
+    private static $propertyTypes = [
+        'CheckoutStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
-        ),
-        'PaidStatus' => array(
+        ],
+        'PaidStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaidStatus'
-        ),
-        'ShippedStatus' => array(
+        ],
+        'ShippedStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippedStatus'
-        ),
-        'eBayPaymentStatus' => array(
+        ],
+        'eBayPaymentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentStatus'
-        ),
-        'PayPalTransactionID' => array(
+        ],
+        'PayPalTransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalTransactionID'
-        ),
-        'PaymentMethodUsed' => array(
+        ],
+        'PaymentMethodUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethodUsed'
-        ),
-        'FeedbackReceived' => array(
+        ],
+        'FeedbackReceived' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackReceived'
-        ),
-        'FeedbackSent' => array(
+        ],
+        'FeedbackSent' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSent'
-        ),
-        'TotalEmailsSent' => array(
+        ],
+        'TotalEmailsSent' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalEmailsSent'
-        ),
-        'PaymentHoldStatus' => array(
+        ],
+        'PaymentHoldStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldStatus'
-        ),
-        'SellerInvoiceNumber' => array(
+        ],
+        'SellerInvoiceNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerInvoiceNumber'
-        ),
-        'ShippedTime' => array(
+        ],
+        'ShippedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippedTime'
-        ),
-        'PaidTime' => array(
+        ],
+        'PaidTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaidTime'
-        ),
-        'LastEmailSentTime' => array(
+        ],
+        'LastEmailSentTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastEmailSentTime'
-        ),
-        'SellerInvoiceTime' => array(
+        ],
+        'SellerInvoiceTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerInvoiceTime'
-        ),
-        'IntegratedMerchantCreditCardEnabled' => array(
+        ],
+        'IntegratedMerchantCreditCardEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -19,37 +19,37 @@ class ServiceDefinition extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'superscript' => array(
+    private static $propertyTypes = [
+        'superscript' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'superscript'
-        ),
-        'maxDeliveryServiceDefinition' => array(
+        ],
+        'maxDeliveryServiceDefinition' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxDeliveryServiceDefinition'
-        ),
-        'minDeliveryServiceDefinition' => array(
+        ],
+        'minDeliveryServiceDefinition' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minDeliveryServiceDefinition'
-        ),
-        'name' => array(
+        ],
+        'name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -25,73 +25,73 @@ class BestOfferType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BestOfferID' => array(
+    private static $propertyTypes = [
+        'BestOfferID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferID'
-        ),
-        'ExpirationTime' => array(
+        ],
+        'ExpirationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpirationTime'
-        ),
-        'Buyer' => array(
+        ],
+        'Buyer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Buyer'
-        ),
-        'Price' => array(
+        ],
+        'Price' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Price'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'BuyerMessage' => array(
+        ],
+        'BuyerMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerMessage'
-        ),
-        'SellerMessage' => array(
+        ],
+        'SellerMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerMessage'
-        ),
-        'BestOfferCodeType' => array(
+        ],
+        'BestOfferCodeType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferCodeType'
-        ),
-        'CallStatus' => array(
+        ],
+        'CallStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CallStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

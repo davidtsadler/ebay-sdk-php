@@ -19,37 +19,37 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Status' => array(
+    private static $propertyTypes = [
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'EIASToken' => array(
+        ],
+        'EIASToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EIASToken'
-        ),
-        'ExpirationTime' => array(
+        ],
+        'ExpirationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpirationTime'
-        ),
-        'RevocationTime' => array(
+        ],
+        'RevocationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RevocationTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

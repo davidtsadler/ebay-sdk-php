@@ -22,55 +22,55 @@ class IssueRefundRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'RefundReason' => array(
+        ],
+        'RefundReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundReason'
-        ),
-        'RefundType' => array(
+        ],
+        'RefundType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundType'
-        ),
-        'RefundAmount' => array(
+        ],
+        'RefundAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundAmount'
-        ),
-        'RefundMessage' => array(
+        ],
+        'RefundMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundMessage'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

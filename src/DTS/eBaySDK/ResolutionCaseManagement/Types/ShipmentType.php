@@ -21,49 +21,49 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'trackingNumber' => array(
+    private static $propertyTypes = [
+        'trackingNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
-        ),
-        'carrierUsed' => array(
+        ],
+        'carrierUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
-        ),
-        'deliveryStatus' => array(
+        ],
+        'deliveryStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'deliveryStatus'
-        ),
-        'deliveryDate' => array(
+        ],
+        'deliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'deliveryDate'
-        ),
-        'shippingCost' => array(
+        ],
+        'shippingCost' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'
-        ),
-        'shippingAddress' => array(
+        ],
+        'shippingAddress' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingAddress'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

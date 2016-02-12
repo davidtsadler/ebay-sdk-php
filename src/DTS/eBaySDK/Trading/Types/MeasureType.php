@@ -17,25 +17,25 @@ class MeasureType extends \DTS\eBaySDK\Types\DecimalType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'unit' => array(
+    private static $propertyTypes = [
+        'unit' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'unit'
-        ),
-        'measurementSystem' => array(
+        ],
+        'measurementSystem' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'measurementSystem'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

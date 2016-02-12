@@ -17,25 +17,25 @@ class ErrorParameterType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Value' => array(
+    private static $propertyTypes = [
+        'Value' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Value'
-        ),
-        'ParamID' => array(
+        ],
+        'ParamID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'ParamID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

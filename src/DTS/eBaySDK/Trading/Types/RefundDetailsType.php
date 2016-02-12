@@ -17,25 +17,25 @@ class RefundDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RefundOption' => array(
+    private static $propertyTypes = [
+        'RefundOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundOption'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

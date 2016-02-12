@@ -18,31 +18,31 @@ class GetUserProfileResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'User' => array(
+    private static $propertyTypes = [
+        'User' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'User'
-        ),
-        'FeedbackHistory' => array(
+        ],
+        'FeedbackHistory' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackHistoryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackHistory'
-        ),
-        'FeedbackDetails' => array(
+        ],
+        'FeedbackDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackDetailType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FeedbackDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class CaseStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'INRStatus' => array(
+    private static $propertyTypes = [
+        'INRStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'INRStatus'
-        ),
-        'SNADStatus' => array(
+        ],
+        'SNADStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SNADStatus'
-        ),
-        'EBPINRStatus' => array(
+        ],
+        'EBPINRStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EBPINRStatus'
-        ),
-        'EBPSNADStatus' => array(
+        ],
+        'EBPSNADStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EBPSNADStatus'
-        ),
-        'UPIStatus' => array(
+        ],
+        'UPIStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPIStatus'
-        ),
-        'cancelTransactionStatus' => array(
+        ],
+        'cancelTransactionStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'cancelTransactionStatus'
-        ),
-        'returnStatus' => array(
+        ],
+        'returnStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnStatus'
-        ),
-        'PaypalINRStatus' => array(
+        ],
+        'PaypalINRStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaypalINRStatus'
-        ),
-        'PaypalSNADStatus' => array(
+        ],
+        'PaypalSNADStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaypalSNADStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

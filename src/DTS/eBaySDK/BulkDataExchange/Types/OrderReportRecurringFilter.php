@@ -19,37 +19,37 @@ class OrderReportRecurringFilter extends \DTS\eBaySDK\BulkDataExchange\Types\Bas
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'createTimeRange' => array(
+    private static $propertyTypes = [
+        'createTimeRange' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'createTimeRange'
-        ),
-        'modTimeRange' => array(
+        ],
+        'modTimeRange' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'modTimeRange'
-        ),
-        'listingType' => array(
+        ],
+        'listingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'listingType'
-        ),
-        'version' => array(
+        ],
+        'version' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

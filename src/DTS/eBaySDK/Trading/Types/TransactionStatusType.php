@@ -27,85 +27,85 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'eBayPaymentStatus' => array(
+    private static $propertyTypes = [
+        'eBayPaymentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentStatus'
-        ),
-        'CheckoutStatus' => array(
+        ],
+        'CheckoutStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
-        ),
-        'LastTimeModified' => array(
+        ],
+        'LastTimeModified' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastTimeModified'
-        ),
-        'PaymentMethodUsed' => array(
+        ],
+        'PaymentMethodUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethodUsed'
-        ),
-        'CompleteStatus' => array(
+        ],
+        'CompleteStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompleteStatus'
-        ),
-        'BuyerSelectedShipping' => array(
+        ],
+        'BuyerSelectedShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerSelectedShipping'
-        ),
-        'PaymentHoldStatus' => array(
+        ],
+        'PaymentHoldStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldStatus'
-        ),
-        'IntegratedMerchantCreditCardEnabled' => array(
+        ],
+        'IntegratedMerchantCreditCardEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ),
-        'InquiryStatus' => array(
+        ],
+        'InquiryStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InquiryStatus'
-        ),
-        'ReturnStatus' => array(
+        ],
+        'ReturnStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnStatus'
-        ),
-        'PaymentInstrument' => array(
+        ],
+        'PaymentInstrument' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentInstrument'
-        ),
-        'DigitalStatus' => array(
+        ],
+        'DigitalStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DigitalStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

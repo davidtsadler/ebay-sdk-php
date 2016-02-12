@@ -24,67 +24,67 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'LinkedPayPalAccount' => array(
+    private static $propertyTypes = [
+        'LinkedPayPalAccount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LinkedPayPalAccount'
-        ),
-        'MaximumBuyerPolicyViolations' => array(
+        ],
+        'MaximumBuyerPolicyViolations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumBuyerPolicyViolations'
-        ),
-        'MaximumItemRequirements' => array(
+        ],
+        'MaximumItemRequirements' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumItemRequirementsDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumItemRequirements'
-        ),
-        'MaximumUnpaidItemStrikesInfo' => array(
+        ],
+        'MaximumUnpaidItemStrikesInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumUnpaidItemStrikesInfo'
-        ),
-        'MinimumFeedbackScore' => array(
+        ],
+        'MinimumFeedbackScore' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MinimumFeedbackScoreDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumFeedbackScore'
-        ),
-        'ShipToRegistrationCountry' => array(
+        ],
+        'ShipToRegistrationCountry' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipToRegistrationCountry'
-        ),
-        'VerifiedUserRequirements' => array(
+        ],
+        'VerifiedUserRequirements' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUserRequirements'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

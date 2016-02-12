@@ -56,7 +56,7 @@ class ResolutionCaseManagementBaseService extends \DTS\eBaySDK\Services\BaseServ
      */
     protected function getEbayHeaders($operationName)
     {
-        $headers = array();
+        $headers = [];
 
         // Add required headers first.
         $headers[self::HDR_AUTH_TOKEN] = $this->getConfig('authToken');

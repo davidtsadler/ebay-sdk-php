@@ -20,43 +20,43 @@ class GetBestOffersResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BestOfferArray' => array(
+    private static $propertyTypes = [
+        'BestOfferArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferArray'
-        ),
-        'Item' => array(
+        ],
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'ItemBestOffersArray' => array(
+        ],
+        'ItemBestOffersArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemBestOffersArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemBestOffersArray'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

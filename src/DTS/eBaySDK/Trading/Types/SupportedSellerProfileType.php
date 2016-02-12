@@ -20,43 +20,43 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ProfileID' => array(
+    private static $propertyTypes = [
+        'ProfileID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProfileID'
-        ),
-        'ProfileType' => array(
+        ],
+        'ProfileType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProfileType'
-        ),
-        'ProfileName' => array(
+        ],
+        'ProfileName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProfileName'
-        ),
-        'ShortSummary' => array(
+        ],
+        'ShortSummary' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShortSummary'
-        ),
-        'CategoryGroup' => array(
+        ],
+        'CategoryGroup' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryGroup'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -22,55 +22,55 @@ class DiscountPriceInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OriginalRetailPrice' => array(
+    private static $propertyTypes = [
+        'OriginalRetailPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OriginalRetailPrice'
-        ),
-        'MinimumAdvertisedPrice' => array(
+        ],
+        'MinimumAdvertisedPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumAdvertisedPrice'
-        ),
-        'MinimumAdvertisedPriceExposure' => array(
+        ],
+        'MinimumAdvertisedPriceExposure' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumAdvertisedPriceExposure'
-        ),
-        'PricingTreatment' => array(
+        ],
+        'PricingTreatment' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PricingTreatment'
-        ),
-        'SoldOneBay' => array(
+        ],
+        'SoldOneBay' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldOneBay'
-        ),
-        'SoldOffeBay' => array(
+        ],
+        'SoldOffeBay' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldOffeBay'
-        ),
-        'MadeForOutletComparisonPrice' => array(
+        ],
+        'MadeForOutletComparisonPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MadeForOutletComparisonPrice'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

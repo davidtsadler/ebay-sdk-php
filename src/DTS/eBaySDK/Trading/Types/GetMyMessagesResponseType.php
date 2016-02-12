@@ -17,25 +17,25 @@ class GetMyMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Summary' => array(
+    private static $propertyTypes = [
+        'Summary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Summary'
-        ),
-        'Messages' => array(
+        ],
+        'Messages' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Messages'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

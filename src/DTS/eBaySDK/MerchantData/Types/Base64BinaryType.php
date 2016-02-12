@@ -16,19 +16,19 @@ class Base64BinaryType extends \DTS\eBaySDK\Types\Base64BinaryType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'contentType' => array(
+    private static $propertyTypes = [
+        'contentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'contentType'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

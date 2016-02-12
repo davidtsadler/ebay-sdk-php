@@ -23,61 +23,61 @@ class GetCharitiesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CharityID' => array(
+    private static $propertyTypes = [
+        'CharityID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityID'
-        ),
-        'CharityName' => array(
+        ],
+        'CharityName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityName'
-        ),
-        'Query' => array(
+        ],
+        'Query' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Query'
-        ),
-        'CharityRegion' => array(
+        ],
+        'CharityRegion' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityRegion'
-        ),
-        'CharityDomain' => array(
+        ],
+        'CharityDomain' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityDomain'
-        ),
-        'IncludeDescription' => array(
+        ],
+        'IncludeDescription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeDescription'
-        ),
-        'MatchType' => array(
+        ],
+        'MatchType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MatchType'
-        ),
-        'Featured' => array(
+        ],
+        'Featured' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Featured'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

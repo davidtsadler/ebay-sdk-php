@@ -20,43 +20,43 @@ class SellerInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'sellerUserName' => array(
+    private static $propertyTypes = [
+        'sellerUserName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sellerUserName'
-        ),
-        'feedbackScore' => array(
+        ],
+        'feedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'feedbackScore'
-        ),
-        'positiveFeedbackPercent' => array(
+        ],
+        'positiveFeedbackPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
-        ),
-        'feedbackRatingStar' => array(
+        ],
+        'feedbackRatingStar' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'feedbackRatingStar'
-        ),
-        'topRatedSeller' => array(
+        ],
+        'topRatedSeller' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'topRatedSeller'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

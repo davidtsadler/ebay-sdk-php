@@ -31,109 +31,109 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CallName' => array(
+    private static $propertyTypes = [
+        'CallName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CallName'
-        ),
-        'CountsTowardAggregate' => array(
+        ],
+        'CountsTowardAggregate' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CountsTowardAggregate'
-        ),
-        'DailyHardLimit' => array(
+        ],
+        'DailyHardLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DailyHardLimit'
-        ),
-        'DailySoftLimit' => array(
+        ],
+        'DailySoftLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DailySoftLimit'
-        ),
-        'DailyUsage' => array(
+        ],
+        'DailyUsage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DailyUsage'
-        ),
-        'HourlyHardLimit' => array(
+        ],
+        'HourlyHardLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HourlyHardLimit'
-        ),
-        'HourlySoftLimit' => array(
+        ],
+        'HourlySoftLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HourlySoftLimit'
-        ),
-        'HourlyUsage' => array(
+        ],
+        'HourlyUsage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HourlyUsage'
-        ),
-        'Period' => array(
+        ],
+        'Period' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Period'
-        ),
-        'PeriodicHardLimit' => array(
+        ],
+        'PeriodicHardLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PeriodicHardLimit'
-        ),
-        'PeriodicSoftLimit' => array(
+        ],
+        'PeriodicSoftLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PeriodicSoftLimit'
-        ),
-        'PeriodicUsage' => array(
+        ],
+        'PeriodicUsage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PeriodicUsage'
-        ),
-        'PeriodicStartDate' => array(
+        ],
+        'PeriodicStartDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PeriodicStartDate'
-        ),
-        'ModTime' => array(
+        ],
+        'ModTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTime'
-        ),
-        'RuleCurrentStatus' => array(
+        ],
+        'RuleCurrentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RuleCurrentStatus'
-        ),
-        'RuleStatus' => array(
+        ],
+        'RuleStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RuleStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EndTime' => array(
+    private static $propertyTypes = [
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'Errors' => array(
+        ],
+        'Errors' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

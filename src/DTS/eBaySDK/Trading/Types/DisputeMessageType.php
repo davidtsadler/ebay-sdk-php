@@ -19,37 +19,37 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MessageID' => array(
+    private static $propertyTypes = [
+        'MessageID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
-        ),
-        'MessageSource' => array(
+        ],
+        'MessageSource' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageSource'
-        ),
-        'MessageCreationTime' => array(
+        ],
+        'MessageCreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageCreationTime'
-        ),
-        'MessageText' => array(
+        ],
+        'MessageText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageText'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

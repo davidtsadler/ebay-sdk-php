@@ -43,181 +43,181 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SellingManagerSoldTransaction' => array(
+    private static $propertyTypes = [
+        'SellingManagerSoldTransaction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldTransactionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellingManagerSoldTransaction'
-        ),
-        'ShippingAddress' => array(
+        ],
+        'ShippingAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
-        ),
-        'ShippingDetails' => array(
+        ],
+        'ShippingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetails'
-        ),
-        'CashOnDeliveryCost' => array(
+        ],
+        'CashOnDeliveryCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CashOnDeliveryCost'
-        ),
-        'TotalAmount' => array(
+        ],
+        'TotalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAmount'
-        ),
-        'TotalQuantity' => array(
+        ],
+        'TotalQuantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalQuantity'
-        ),
-        'ItemCost' => array(
+        ],
+        'ItemCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemCost'
-        ),
-        'VATRate' => array(
+        ],
+        'VATRate' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VATRateType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VATRate'
-        ),
-        'NetInsuranceFee' => array(
+        ],
+        'NetInsuranceFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NetInsuranceFee'
-        ),
-        'VATInsuranceFee' => array(
+        ],
+        'VATInsuranceFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATInsuranceFee'
-        ),
-        'VATShippingFee' => array(
+        ],
+        'VATShippingFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATShippingFee'
-        ),
-        'NetShippingFee' => array(
+        ],
+        'NetShippingFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NetShippingFee'
-        ),
-        'NetTotalAmount' => array(
+        ],
+        'NetTotalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NetTotalAmount'
-        ),
-        'VATTotalAmount' => array(
+        ],
+        'VATTotalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATTotalAmount'
-        ),
-        'ActualShippingCost' => array(
+        ],
+        'ActualShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActualShippingCost'
-        ),
-        'AdjustmentAmount' => array(
+        ],
+        'AdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
-        ),
-        'NotesToBuyer' => array(
+        ],
+        'NotesToBuyer' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotesToBuyer'
-        ),
-        'NotesFromBuyer' => array(
+        ],
+        'NotesFromBuyer' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotesFromBuyer'
-        ),
-        'NotesToSeller' => array(
+        ],
+        'NotesToSeller' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotesToSeller'
-        ),
-        'OrderStatus' => array(
+        ],
+        'OrderStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderStatus'
-        ),
-        'UnpaidItemStatus' => array(
+        ],
+        'UnpaidItemStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItemStatus'
-        ),
-        'SalePrice' => array(
+        ],
+        'SalePrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalePrice'
-        ),
-        'EmailsSent' => array(
+        ],
+        'EmailsSent' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailsSent'
-        ),
-        'DaysSinceSale' => array(
+        ],
+        'DaysSinceSale' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DaysSinceSale'
-        ),
-        'BuyerID' => array(
+        ],
+        'BuyerID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerID'
-        ),
-        'BuyerEmail' => array(
+        ],
+        'BuyerEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerEmail'
-        ),
-        'SaleRecordID' => array(
+        ],
+        'SaleRecordID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleRecordID'
-        ),
-        'CreationTime' => array(
+        ],
+        'CreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

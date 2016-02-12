@@ -36,139 +36,139 @@ class DisputeType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DisputeID' => array(
+    private static $propertyTypes = [
+        'DisputeID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeID'
-        ),
-        'DisputeRecordType' => array(
+        ],
+        'DisputeRecordType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeRecordType'
-        ),
-        'DisputeState' => array(
+        ],
+        'DisputeState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeState'
-        ),
-        'DisputeStatus' => array(
+        ],
+        'DisputeStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeStatus'
-        ),
-        'OtherPartyRole' => array(
+        ],
+        'OtherPartyRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyRole'
-        ),
-        'OtherPartyName' => array(
+        ],
+        'OtherPartyName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OtherPartyName'
-        ),
-        'UserRole' => array(
+        ],
+        'UserRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserRole'
-        ),
-        'BuyerUserID' => array(
+        ],
+        'BuyerUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerUserID'
-        ),
-        'SellerUserID' => array(
+        ],
+        'SellerUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerUserID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'Item' => array(
+        ],
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'DisputeReason' => array(
+        ],
+        'DisputeReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeReason'
-        ),
-        'DisputeExplanation' => array(
+        ],
+        'DisputeExplanation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeExplanation'
-        ),
-        'DisputeCreditEligibility' => array(
+        ],
+        'DisputeCreditEligibility' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeCreditEligibility'
-        ),
-        'DisputeCreatedTime' => array(
+        ],
+        'DisputeCreatedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeCreatedTime'
-        ),
-        'DisputeModifiedTime' => array(
+        ],
+        'DisputeModifiedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeModifiedTime'
-        ),
-        'DisputeResolution' => array(
+        ],
+        'DisputeResolution' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeResolutionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DisputeResolution'
-        ),
-        'DisputeMessage' => array(
+        ],
+        'DisputeMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeMessageType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DisputeMessage'
-        ),
-        'Escalation' => array(
+        ],
+        'Escalation' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Escalation'
-        ),
-        'PurchaseProtection' => array(
+        ],
+        'PurchaseProtection' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PurchaseProtection'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

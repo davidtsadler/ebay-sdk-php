@@ -23,61 +23,61 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PaymentStatus' => array(
+    private static $propertyTypes = [
+        'PaymentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentStatus'
-        ),
-        'Payer' => array(
+        ],
+        'Payer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Payer'
-        ),
-        'Payee' => array(
+        ],
+        'Payee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Payee'
-        ),
-        'PaymentTime' => array(
+        ],
+        'PaymentTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentTime'
-        ),
-        'PaymentAmount' => array(
+        ],
+        'PaymentAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentAmount'
-        ),
-        'ReferenceID' => array(
+        ],
+        'ReferenceID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReferenceID'
-        ),
-        'FeeOrCreditAmount' => array(
+        ],
+        'FeeOrCreditAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeOrCreditAmount'
-        ),
-        'PaymentReferenceID' => array(
+        ],
+        'PaymentReferenceID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PaymentReferenceID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

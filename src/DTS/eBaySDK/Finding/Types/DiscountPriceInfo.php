@@ -20,43 +20,43 @@ class DiscountPriceInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'originalRetailPrice' => array(
+    private static $propertyTypes = [
+        'originalRetailPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'originalRetailPrice'
-        ),
-        'minimumAdvertisedPriceExposure' => array(
+        ],
+        'minimumAdvertisedPriceExposure' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minimumAdvertisedPriceExposure'
-        ),
-        'pricingTreatment' => array(
+        ],
+        'pricingTreatment' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'pricingTreatment'
-        ),
-        'soldOnEbay' => array(
+        ],
+        'soldOnEbay' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'soldOnEbay'
-        ),
-        'soldOffEbay' => array(
+        ],
+        'soldOffEbay' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'soldOffEbay'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class LeaveFeedbackRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'CommentText' => array(
+        ],
+        'CommentText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentText'
-        ),
-        'CommentType' => array(
+        ],
+        'CommentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentType'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'TargetUser' => array(
+        ],
+        'TargetUser' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TargetUser'
-        ),
-        'SellerItemRatingDetailArray' => array(
+        ],
+        'SellerItemRatingDetailArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemRatingDetailArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerItemRatingDetailArray'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'ItemArrivedWithinEDDType' => array(
+        ],
+        'ItemArrivedWithinEDDType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArrivedWithinEDDType'
-        ),
-        'ItemDeliveredWithinEDD' => array(
+        ],
+        'ItemDeliveredWithinEDD' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemDeliveredWithinEDD'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

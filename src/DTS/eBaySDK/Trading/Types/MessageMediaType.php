@@ -17,25 +17,25 @@ class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MediaURL' => array(
+    private static $propertyTypes = [
+        'MediaURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MediaURL'
-        ),
-        'MediaName' => array(
+        ],
+        'MediaName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MediaName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

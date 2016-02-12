@@ -23,61 +23,61 @@ class MyeBaySelectionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Include' => array(
+    private static $propertyTypes = [
+        'Include' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Include'
-        ),
-        'IncludeItemCount' => array(
+        ],
+        'IncludeItemCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeItemCount'
-        ),
-        'IncludeFavoriteSearcheCount' => array(
+        ],
+        'IncludeFavoriteSearcheCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFavoriteSearcheCount'
-        ),
-        'IncludeFavoriteSellerCount' => array(
+        ],
+        'IncludeFavoriteSellerCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFavoriteSellerCount'
-        ),
-        'Sort' => array(
+        ],
+        'Sort' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sort'
-        ),
-        'MaxResults' => array(
+        ],
+        'MaxResults' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxResults'
-        ),
-        'UserDefinedListName' => array(
+        ],
+        'UserDefinedListName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserDefinedListName'
-        ),
-        'IncludeListContents' => array(
+        ],
+        'IncludeListContents' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeListContents'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

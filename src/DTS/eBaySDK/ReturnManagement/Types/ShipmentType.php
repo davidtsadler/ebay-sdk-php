@@ -24,67 +24,67 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'shipmentStatus' => array(
+    private static $propertyTypes = [
+        'shipmentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shipmentStatus'
-        ),
-        'trackingNumber' => array(
+        ],
+        'trackingNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
-        ),
-        'carrierUsed' => array(
+        ],
+        'carrierUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
-        ),
-        'deliveryDate' => array(
+        ],
+        'deliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'deliveryDate'
-        ),
-        'shippingCost' => array(
+        ],
+        'shippingCost' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'
-        ),
-        'shippingAddress' => array(
+        ],
+        'shippingAddress' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Address',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingAddress'
-        ),
-        'returnMerchandiseAuthorization' => array(
+        ],
+        'returnMerchandiseAuthorization' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
-        ),
-        'minEstDeliveryDate' => array(
+        ],
+        'minEstDeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'minEstDeliveryDate'
-        ),
-        'maxEstDeliveryDate' => array(
+        ],
+        'maxEstDeliveryDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'maxEstDeliveryDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

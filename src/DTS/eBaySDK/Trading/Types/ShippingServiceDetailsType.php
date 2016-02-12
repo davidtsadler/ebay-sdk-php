@@ -38,151 +38,151 @@ class ShippingServiceDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Description' => array(
+    private static $propertyTypes = [
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'ExpeditedService' => array(
+        ],
+        'ExpeditedService' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpeditedService'
-        ),
-        'InternationalService' => array(
+        ],
+        'InternationalService' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalService'
-        ),
-        'ShippingService' => array(
+        ],
+        'ShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
-        ),
-        'ShippingServiceID' => array(
+        ],
+        'ShippingServiceID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceID'
-        ),
-        'ShippingTimeMax' => array(
+        ],
+        'ShippingTimeMax' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMax'
-        ),
-        'ShippingTimeMin' => array(
+        ],
+        'ShippingTimeMin' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
-        ),
-        'ShippingServiceCode' => array(
+        ],
+        'ShippingServiceCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCode'
-        ),
-        'ServiceType' => array(
+        ],
+        'ServiceType' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ServiceType'
-        ),
-        'ShippingPackage' => array(
+        ],
+        'ShippingPackage' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingPackage'
-        ),
-        'DimensionsRequired' => array(
+        ],
+        'DimensionsRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DimensionsRequired'
-        ),
-        'ValidForSellingFlow' => array(
+        ],
+        'ValidForSellingFlow' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValidForSellingFlow'
-        ),
-        'SurchargeApplicable' => array(
+        ],
+        'SurchargeApplicable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SurchargeApplicable'
-        ),
-        'ShippingCarrier' => array(
+        ],
+        'ShippingCarrier' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingCarrier'
-        ),
-        'CODService' => array(
+        ],
+        'CODService' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CODService'
-        ),
-        'DeprecationDetails' => array(
+        ],
+        'DeprecationDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AnnouncementMessageType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DeprecationDetails'
-        ),
-        'MappedToShippingServiceID' => array(
+        ],
+        'MappedToShippingServiceID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MappedToShippingServiceID'
-        ),
-        'CostGroupFlat' => array(
+        ],
+        'CostGroupFlat' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CostGroupFlat'
-        ),
-        'ShippingServicePackageDetails' => array(
+        ],
+        'ShippingServicePackageDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingServicePackageDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingServicePackageDetails'
-        ),
-        'WeightRequired' => array(
+        ],
+        'WeightRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightRequired'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        ),
-        'ShippingCategory' => array(
+        ],
+        'ShippingCategory' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCategory'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

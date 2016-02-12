@@ -30,103 +30,103 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SKU' => array(
+    private static $propertyTypes = [
+        'SKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'StartPrice' => array(
+        ],
+        'StartPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'VariationSpecifics' => array(
+        ],
+        'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListArrayType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ),
-        'UnitsAvailable' => array(
+        ],
+        'UnitsAvailable' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnitsAvailable'
-        ),
-        'UnitCost' => array(
+        ],
+        'UnitCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnitCost'
-        ),
-        'SellingStatus' => array(
+        ],
+        'SellingStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SellingStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
-        ),
-        'VariationTitle' => array(
+        ],
+        'VariationTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationTitle'
-        ),
-        'VariationViewItemURL' => array(
+        ],
+        'VariationViewItemURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationViewItemURL'
-        ),
-        'Delete' => array(
+        ],
+        'Delete' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Delete'
-        ),
-        'SellingManagerProductInventoryStatus' => array(
+        ],
+        'SellingManagerProductInventoryStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerProductInventoryStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductInventoryStatus'
-        ),
-        'WatchCount' => array(
+        ],
+        'WatchCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WatchCount'
-        ),
-        'PrivateNotes' => array(
+        ],
+        'PrivateNotes' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrivateNotes'
-        ),
-        'DiscountPriceInfo' => array(
+        ],
+        'DiscountPriceInfo' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DiscountPriceInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
-        ),
-        'VariationProductListingDetails' => array(
+        ],
+        'VariationProductListingDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VariationProductListingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationProductListingDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -22,55 +22,55 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShortMessage' => array(
+    private static $propertyTypes = [
+        'ShortMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShortMessage'
-        ),
-        'LongMessage' => array(
+        ],
+        'LongMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LongMessage'
-        ),
-        'ErrorCode' => array(
+        ],
+        'ErrorCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorCode'
-        ),
-        'UserDisplayHint' => array(
+        ],
+        'UserDisplayHint' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserDisplayHint'
-        ),
-        'SeverityCode' => array(
+        ],
+        'SeverityCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SeverityCode'
-        ),
-        'ErrorParameters' => array(
+        ],
+        'ErrorParameters' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ErrorParameterType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ErrorParameters'
-        ),
-        'ErrorClassification' => array(
+        ],
+        'ErrorClassification' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorClassification'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

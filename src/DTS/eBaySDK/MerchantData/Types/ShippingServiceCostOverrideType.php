@@ -20,43 +20,43 @@ class ShippingServiceCostOverrideType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingServicePriority' => array(
+    private static $propertyTypes = [
+        'ShippingServicePriority' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServicePriority'
-        ),
-        'ShippingServiceType' => array(
+        ],
+        'ShippingServiceType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceType'
-        ),
-        'ShippingServiceCost' => array(
+        ],
+        'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
-        ),
-        'ShippingServiceAdditionalCost' => array(
+        ],
+        'ShippingServiceAdditionalCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingSurcharge' => array(
+        ],
+        'ShippingSurcharge' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingSurcharge'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -19,37 +19,37 @@ class AffiliateTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TrackingID' => array(
+    private static $propertyTypes = [
+        'TrackingID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TrackingID'
-        ),
-        'TrackingPartnerCode' => array(
+        ],
+        'TrackingPartnerCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TrackingPartnerCode'
-        ),
-        'ApplicationDeviceType' => array(
+        ],
+        'ApplicationDeviceType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApplicationDeviceType'
-        ),
-        'AffiliateUserID' => array(
+        ],
+        'AffiliateUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AffiliateUserID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

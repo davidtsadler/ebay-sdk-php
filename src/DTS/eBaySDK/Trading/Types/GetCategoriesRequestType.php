@@ -19,37 +19,37 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategorySiteID' => array(
+    private static $propertyTypes = [
+        'CategorySiteID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategorySiteID'
-        ),
-        'CategoryParent' => array(
+        ],
+        'CategoryParent' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryParent'
-        ),
-        'LevelLimit' => array(
+        ],
+        'LevelLimit' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LevelLimit'
-        ),
-        'ViewAllNodes' => array(
+        ],
+        'ViewAllNodes' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ViewAllNodes'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

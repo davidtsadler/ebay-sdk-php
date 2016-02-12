@@ -24,67 +24,67 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AlwaysUseThisPaymentAddress' => array(
+    private static $propertyTypes = [
+        'AlwaysUseThisPaymentAddress' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AlwaysUseThisPaymentAddress'
-        ),
-        'DisplayPayNowButton' => array(
+        ],
+        'DisplayPayNowButton' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayPayNowButton'
-        ),
-        'PayPalPreferred' => array(
+        ],
+        'PayPalPreferred' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalPreferred'
-        ),
-        'DefaultPayPalEmailAddress' => array(
+        ],
+        'DefaultPayPalEmailAddress' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DefaultPayPalEmailAddress'
-        ),
-        'PayPalAlwaysOn' => array(
+        ],
+        'PayPalAlwaysOn' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalAlwaysOn'
-        ),
-        'SellerPaymentAddress' => array(
+        ],
+        'SellerPaymentAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentAddress'
-        ),
-        'UPSRateOption' => array(
+        ],
+        'UPSRateOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPSRateOption'
-        ),
-        'FedExRateOption' => array(
+        ],
+        'FedExRateOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FedExRateOption'
-        ),
-        'USPSRateOption' => array(
+        ],
+        'USPSRateOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'USPSRateOption'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

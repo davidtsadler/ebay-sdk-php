@@ -16,19 +16,19 @@ class DeleteSellingManagerProductResponseType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DeletedSellingManagerProductDetails' => array(
+    private static $propertyTypes = [
+        'DeletedSellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeletedSellingManagerProductDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

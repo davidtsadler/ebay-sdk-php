@@ -32,115 +32,115 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Action' => array(
+    private static $propertyTypes = [
+        'Action' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Action'
-        ),
-        'Currency' => array(
+        ],
+        'Currency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'MaxBid' => array(
+        ],
+        'MaxBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxBid'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'SecondChanceEnabled' => array(
+        ],
+        'SecondChanceEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceEnabled'
-        ),
-        'SiteCurrency' => array(
+        ],
+        'SiteCurrency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteCurrency'
-        ),
-        'TimeBid' => array(
+        ],
+        'TimeBid' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TimeBid'
-        ),
-        'HighestBid' => array(
+        ],
+        'HighestBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HighestBid'
-        ),
-        'ConvertedPrice' => array(
+        ],
+        'ConvertedPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedPrice'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'User' => array(
+        ],
+        'User' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'User'
-        ),
-        'UserConsent' => array(
+        ],
+        'UserConsent' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserConsent'
-        ),
-        'BidCount' => array(
+        ],
+        'BidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
-        ),
-        'Message' => array(
+        ],
+        'Message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Message'
-        ),
-        'BestOfferID' => array(
+        ],
+        'BestOfferID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferID'
-        ),
-        'MyMaxBid' => array(
+        ],
+        'MyMaxBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MyMaxBid'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

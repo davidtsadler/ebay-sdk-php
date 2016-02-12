@@ -22,55 +22,55 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\MerchantData\Type
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PictureName' => array(
+    private static $propertyTypes = [
+        'PictureName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureName'
-        ),
-        'PictureSystemVersion' => array(
+        ],
+        'PictureSystemVersion' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSystemVersion'
-        ),
-        'PictureSet' => array(
+        ],
+        'PictureSet' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSet'
-        ),
-        'PictureData' => array(
+        ],
+        'PictureData' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\Base64BinaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureData'
-        ),
-        'PictureUploadPolicy' => array(
+        ],
+        'PictureUploadPolicy' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureUploadPolicy'
-        ),
-        'ExternalPictureURL' => array(
+        ],
+        'ExternalPictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
-        ),
-        'ExtensionInDays' => array(
+        ],
+        'ExtensionInDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtensionInDays'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

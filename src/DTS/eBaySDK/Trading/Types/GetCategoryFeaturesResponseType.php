@@ -20,43 +20,43 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryVersion' => array(
+    private static $propertyTypes = [
+        'CategoryVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        ),
-        'Category' => array(
+        ],
+        'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Category'
-        ),
-        'SiteDefaults' => array(
+        ],
+        'SiteDefaults' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SiteDefaultsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteDefaults'
-        ),
-        'FeatureDefinitions' => array(
+        ],
+        'FeatureDefinitions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeatureDefinitions'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

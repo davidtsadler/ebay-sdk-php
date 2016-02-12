@@ -17,25 +17,25 @@ class DeliveryEstimateMetaInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'key' => array(
+    private static $propertyTypes = [
+        'key' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'key'
-        ),
-        'value' => array(
+        ],
+        'value' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'value'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

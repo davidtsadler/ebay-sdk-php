@@ -16,19 +16,19 @@ class GetSellingManagerSaleRecordResponseType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SellingManagerSoldOrder' => array(
+    private static $propertyTypes = [
+        'SellingManagerSoldOrder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerSoldOrder'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

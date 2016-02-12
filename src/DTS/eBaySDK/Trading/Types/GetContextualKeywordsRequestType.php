@@ -18,31 +18,31 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'URL' => array(
+    private static $propertyTypes = [
+        'URL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URL'
-        ),
-        'Encoding' => array(
+        ],
+        'Encoding' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Encoding'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

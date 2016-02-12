@@ -16,19 +16,19 @@ class GetRecurringJobExecutionHistoryResponse extends \DTS\eBaySDK\BulkDataExcha
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'jobProfile' => array(
+    private static $propertyTypes = [
+        'jobProfile' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\JobProfile',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'jobProfile'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MemberMessage' => array(
+    private static $propertyTypes = [
+        'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'HasMoreItems' => array(
+        ],
+        'HasMoreItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMoreItems'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

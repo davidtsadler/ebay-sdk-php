@@ -17,25 +17,25 @@ class GetReturnDetailResponse extends \DTS\eBaySDK\ReturnManagement\Types\BaseRe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ReturnSummary' => array(
+    private static $propertyTypes = [
+        'ReturnSummary' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnSummary'
-        ),
-        'ReturnDetail' => array(
+        ],
+        'ReturnDetail' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnDetail'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

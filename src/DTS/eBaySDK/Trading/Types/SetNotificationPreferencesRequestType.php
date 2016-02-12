@@ -20,43 +20,43 @@ class SetNotificationPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\A
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ApplicationDeliveryPreferences' => array(
+    private static $propertyTypes = [
+        'ApplicationDeliveryPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ApplicationDeliveryPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApplicationDeliveryPreferences'
-        ),
-        'UserDeliveryPreferenceArray' => array(
+        ],
+        'UserDeliveryPreferenceArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserDeliveryPreferenceArray'
-        ),
-        'UserData' => array(
+        ],
+        'UserData' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationUserDataType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserData'
-        ),
-        'EventProperty' => array(
+        ],
+        'EventProperty' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EventProperty'
-        ),
-        'DeliveryURLName' => array(
+        ],
+        'DeliveryURLName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

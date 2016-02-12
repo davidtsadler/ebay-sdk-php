@@ -17,25 +17,25 @@ class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abst
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SuggestedCategoryArray' => array(
+    private static $propertyTypes = [
+        'SuggestedCategoryArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuggestedCategoryArray'
-        ),
-        'CategoryCount' => array(
+        ],
+        'CategoryCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

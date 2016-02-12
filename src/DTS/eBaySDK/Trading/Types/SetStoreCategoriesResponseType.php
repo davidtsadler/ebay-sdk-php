@@ -18,31 +18,31 @@ class SetStoreCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TaskID' => array(
+    private static $propertyTypes = [
+        'TaskID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaskID'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'CustomCategory' => array(
+        ],
+        'CustomCategory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomCategory'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

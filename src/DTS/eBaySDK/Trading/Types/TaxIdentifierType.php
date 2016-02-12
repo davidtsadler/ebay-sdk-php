@@ -18,31 +18,31 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Type' => array(
+    private static $propertyTypes = [
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        ),
-        'ID' => array(
+        ],
+        'ID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ID'
-        ),
-        'Attribute' => array(
+        ],
+        'Attribute' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierAttributeType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Attribute'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

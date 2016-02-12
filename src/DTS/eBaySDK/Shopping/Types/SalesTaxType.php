@@ -19,37 +19,37 @@ class SalesTaxType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SalesTaxPercent' => array(
+    private static $propertyTypes = [
+        'SalesTaxPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxPercent'
-        ),
-        'SalesTaxState' => array(
+        ],
+        'SalesTaxState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxState'
-        ),
-        'ShippingIncludedInTax' => array(
+        ],
+        'ShippingIncludedInTax' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
-        ),
-        'SalesTaxAmount' => array(
+        ],
+        'SalesTaxAmount' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

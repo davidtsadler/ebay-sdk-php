@@ -18,31 +18,31 @@ class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InventoryCountLastCalculatedDate' => array(
+    private static $propertyTypes = [
+        'InventoryCountLastCalculatedDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InventoryCountLastCalculatedDate'
-        ),
-        'SellingManagerProduct' => array(
+        ],
+        'SellingManagerProduct' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellingManagerProduct'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

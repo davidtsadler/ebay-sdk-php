@@ -21,49 +21,49 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'feeSettlementReportFilter' => array(
+    private static $propertyTypes = [
+        'feeSettlementReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'feeSettlementReportFilter'
-        ),
-        'siteFilter' => array(
+        ],
+        'siteFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SiteFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'siteFilter'
-        ),
-        'activeInventoryReportFilter' => array(
+        ],
+        'activeInventoryReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'activeInventoryReportFilter'
-        ),
-        'dateFilter' => array(
+        ],
+        'dateFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DateFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'dateFilter'
-        ),
-        'soldReportFilter' => array(
+        ],
+        'soldReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'soldReportFilter'
-        ),
-        'orderReportFilter' => array(
+        ],
+        'orderReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'orderReportFilter'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

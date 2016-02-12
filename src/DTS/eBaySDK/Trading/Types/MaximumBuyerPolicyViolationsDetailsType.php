@@ -17,25 +17,25 @@ class MaximumBuyerPolicyViolationsDetailsType extends \DTS\eBaySDK\Types\BaseTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'NumberOfPolicyViolations' => array(
+    private static $propertyTypes = [
+        'NumberOfPolicyViolations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NumberOfPolicyViolationsDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NumberOfPolicyViolations'
-        ),
-        'PolicyViolationDuration' => array(
+        ],
+        'PolicyViolationDuration' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PolicyViolationDurationDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PolicyViolationDuration'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

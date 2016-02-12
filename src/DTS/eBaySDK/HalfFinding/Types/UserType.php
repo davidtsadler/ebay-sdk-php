@@ -18,31 +18,31 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'userID' => array(
+    private static $propertyTypes = [
+        'userID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'userID'
-        ),
-        'feedbackScore' => array(
+        ],
+        'feedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'feedbackScore'
-        ),
-        'positiveFeedbackPercent' => array(
+        ],
+        'positiveFeedbackPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

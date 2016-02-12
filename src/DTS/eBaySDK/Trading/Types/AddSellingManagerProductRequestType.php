@@ -18,31 +18,31 @@ class AddSellingManagerProductRequestType extends \DTS\eBaySDK\Trading\Types\Abs
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SellingManagerProductDetails' => array(
+    private static $propertyTypes = [
+        'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'SellingManagerProductSpecifics' => array(
+        ],
+        'SellingManagerProductSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductSpecificsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductSpecifics'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

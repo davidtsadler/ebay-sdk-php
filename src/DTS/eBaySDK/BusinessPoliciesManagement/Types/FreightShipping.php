@@ -22,55 +22,55 @@ class FreightShipping extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'originPickupLocationType' => array(
+    private static $propertyTypes = [
+        'originPickupLocationType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'originPickupLocationType'
-        ),
-        'originPickupInside' => array(
+        ],
+        'originPickupInside' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'originPickupInside'
-        ),
-        'packagingHelpRequired' => array(
+        ],
+        'packagingHelpRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'packagingHelpRequired'
-        ),
-        'commodityType' => array(
+        ],
+        'commodityType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'commodityType'
-        ),
-        'freightShippingClass' => array(
+        ],
+        'freightShippingClass' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'freightShippingClass'
-        ),
-        'destPickupLocationType' => array(
+        ],
+        'destPickupLocationType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'destPickupLocationType'
-        ),
-        'destPickupInside' => array(
+        ],
+        'destPickupInside' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'destPickupInside'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

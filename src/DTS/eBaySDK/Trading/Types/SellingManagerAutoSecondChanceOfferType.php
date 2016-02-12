@@ -20,43 +20,43 @@ class SellingManagerAutoSecondChanceOfferType extends \DTS\eBaySDK\Types\BaseTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SecondChanceOfferCondition' => array(
+    private static $propertyTypes = [
+        'SecondChanceOfferCondition' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOfferCondition'
-        ),
-        'Amount' => array(
+        ],
+        'Amount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Amount'
-        ),
-        'ProfitPercent' => array(
+        ],
+        'ProfitPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProfitPercent'
-        ),
-        'Duration' => array(
+        ],
+        'Duration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Duration'
-        ),
-        'ListingHoldInventoryLevel' => array(
+        ],
+        'ListingHoldInventoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

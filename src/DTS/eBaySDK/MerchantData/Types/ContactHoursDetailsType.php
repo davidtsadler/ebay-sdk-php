@@ -24,67 +24,67 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TimeZoneID' => array(
+    private static $propertyTypes = [
+        'TimeZoneID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TimeZoneID'
-        ),
-        'Hours1Days' => array(
+        ],
+        'Hours1Days' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours1Days'
-        ),
-        'Hours1AnyTime' => array(
+        ],
+        'Hours1AnyTime' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours1AnyTime'
-        ),
-        'Hours1From' => array(
+        ],
+        'Hours1From' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours1From'
-        ),
-        'Hours1To' => array(
+        ],
+        'Hours1To' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours1To'
-        ),
-        'Hours2Days' => array(
+        ],
+        'Hours2Days' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2Days'
-        ),
-        'Hours2AnyTime' => array(
+        ],
+        'Hours2AnyTime' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2AnyTime'
-        ),
-        'Hours2From' => array(
+        ],
+        'Hours2From' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2From'
-        ),
-        'Hours2To' => array(
+        ],
+        'Hours2To' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Hours2To'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class RelistItemResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'Fees' => array(
+        ],
+        'Fees' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\FeesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fees'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'Category2ID' => array(
+        ],
+        'Category2ID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Category2ID'
-        ),
-        'DiscountReason' => array(
+        ],
+        'DiscountReason' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DiscountReason'
-        ),
-        'ProductSuggestions' => array(
+        ],
+        'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
-        ),
-        'ListingRecommendations' => array(
+        ],
+        'ListingRecommendations' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingRecommendations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -19,37 +19,37 @@ class CustomSecurityHeaderType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'eBayAuthToken' => array(
+    private static $propertyTypes = [
+        'eBayAuthToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
-        ),
-        'HardExpirationWarning' => array(
+        ],
+        'HardExpirationWarning' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
-        ),
-        'Credentials' => array(
+        ],
+        'Credentials' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdPasswordType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Credentials'
-        ),
-        'NotificationSignature' => array(
+        ],
+        'NotificationSignature' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationSignature'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

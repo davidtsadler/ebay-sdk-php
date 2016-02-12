@@ -36,139 +36,139 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'OrderID' => array(
+        ],
+        'OrderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'AmountPaid' => array(
+        ],
+        'AmountPaid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AmountPaid'
-        ),
-        'PaymentMethodUsed' => array(
+        ],
+        'PaymentMethodUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethodUsed'
-        ),
-        'CheckoutStatus' => array(
+        ],
+        'CheckoutStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
-        ),
-        'ShippingService' => array(
+        ],
+        'ShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
-        ),
-        'ShippingIncludedInTax' => array(
+        ],
+        'ShippingIncludedInTax' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
-        ),
-        'InsuranceType' => array(
+        ],
+        'InsuranceType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceType'
-        ),
-        'PaymentStatus' => array(
+        ],
+        'PaymentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentStatus'
-        ),
-        'AdjustmentAmount' => array(
+        ],
+        'AdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
-        ),
-        'ShippingAddress' => array(
+        ],
+        'ShippingAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
-        ),
-        'BuyerID' => array(
+        ],
+        'BuyerID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerID'
-        ),
-        'ShippingInsuranceCost' => array(
+        ],
+        'ShippingInsuranceCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
-        ),
-        'SalesTax' => array(
+        ],
+        'SalesTax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
-        ),
-        'ShippingCost' => array(
+        ],
+        'ShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCost'
-        ),
-        'EncryptedID' => array(
+        ],
+        'EncryptedID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EncryptedID'
-        ),
-        'ExternalTransaction' => array(
+        ],
+        'ExternalTransaction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ExternalTransactionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransaction'
-        ),
-        'MultipleSellerPaymentID' => array(
+        ],
+        'MultipleSellerPaymentID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MultipleSellerPaymentID'
-        ),
-        'CODCost' => array(
+        ],
+        'CODCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -36,139 +36,139 @@ class ListingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Adult' => array(
+    private static $propertyTypes = [
+        'Adult' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Adult'
-        ),
-        'BindingAuction' => array(
+        ],
+        'BindingAuction' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BindingAuction'
-        ),
-        'CheckoutEnabled' => array(
+        ],
+        'CheckoutEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutEnabled'
-        ),
-        'ConvertedBuyItNowPrice' => array(
+        ],
+        'ConvertedBuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedBuyItNowPrice'
-        ),
-        'ConvertedStartPrice' => array(
+        ],
+        'ConvertedStartPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedStartPrice'
-        ),
-        'ConvertedReservePrice' => array(
+        ],
+        'ConvertedReservePrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedReservePrice'
-        ),
-        'HasReservePrice' => array(
+        ],
+        'HasReservePrice' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasReservePrice'
-        ),
-        'RelistedItemID' => array(
+        ],
+        'RelistedItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistedItemID'
-        ),
-        'SecondChanceOriginalItemID' => array(
+        ],
+        'SecondChanceOriginalItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOriginalItemID'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'ViewItemURL' => array(
+        ],
+        'ViewItemURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ViewItemURL'
-        ),
-        'HasUnansweredQuestions' => array(
+        ],
+        'HasUnansweredQuestions' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasUnansweredQuestions'
-        ),
-        'HasPublicMessages' => array(
+        ],
+        'HasPublicMessages' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasPublicMessages'
-        ),
-        'BuyItNowAvailable' => array(
+        ],
+        'BuyItNowAvailable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowAvailable'
-        ),
-        'MinimumBestOfferPrice' => array(
+        ],
+        'MinimumBestOfferPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumBestOfferPrice'
-        ),
-        'LocalListingDistance' => array(
+        ],
+        'LocalListingDistance' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalListingDistance'
-        ),
-        'TCROriginalItemID' => array(
+        ],
+        'TCROriginalItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TCROriginalItemID'
-        ),
-        'ViewItemURLForNaturalSearch' => array(
+        ],
+        'ViewItemURLForNaturalSearch' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ViewItemURLForNaturalSearch'
-        ),
-        'BestOfferAutoAcceptPrice' => array(
+        ],
+        'BestOfferAutoAcceptPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferAutoAcceptPrice'
-        ),
-        'EndingReason' => array(
+        ],
+        'EndingReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndingReason'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

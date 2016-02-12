@@ -17,25 +17,25 @@ class NotificationEnableType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EventType' => array(
+    private static $propertyTypes = [
+        'EventType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EventType'
-        ),
-        'EventEnable' => array(
+        ],
+        'EventEnable' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EventEnable'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

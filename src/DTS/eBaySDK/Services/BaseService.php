@@ -269,7 +269,7 @@ abstract class BaseService
          * Ugly way of seeing if an attachment is present in the response.
          */
         if (strpos($response, 'application/xop+xml') === false) {
-            return array($response, array('data' => null, 'mimeType' => null));
+            return [$response, ['data' => null, 'mimeType' => null]];
         } else {
             return $this->extractXmlAndAttachment($response);
         }
@@ -284,7 +284,7 @@ abstract class BaseService
      */
     private function extractXmlAndAttachment($response)
     {
-        $attachment = array('data' => null, 'mimeType' => null);
+        $attachment = ['data' => null, 'mimeType' => null];
 
         preg_match('/\r\n/', $response, $matches, PREG_OFFSET_CAPTURE);
         $boundary = substr($response, 0, $matches[0][1]);
@@ -303,7 +303,7 @@ abstract class BaseService
         $mimeTypeEndPos = $matches[0][1];
         $attachment['mimeType'] = substr($response, $mimeTypeStartPos, $mimeTypeEndPos - $mimeTypeStartPos);
 
-        return array($xml, $attachment);
+        return [$xml, $attachment];
     }
 
     /**

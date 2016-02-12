@@ -19,37 +19,37 @@ class PromotionalShippingDiscountDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DiscountName' => array(
+    private static $propertyTypes = [
+        'DiscountName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountName'
-        ),
-        'ShippingCost' => array(
+        ],
+        'ShippingCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCost'
-        ),
-        'OrderAmount' => array(
+        ],
+        'OrderAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderAmount'
-        ),
-        'ItemCount' => array(
+        ],
+        'ItemCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

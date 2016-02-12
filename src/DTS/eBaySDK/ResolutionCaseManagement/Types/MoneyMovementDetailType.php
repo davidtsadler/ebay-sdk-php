@@ -25,73 +25,73 @@ class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'type' => array(
+    private static $propertyTypes = [
+        'type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'type'
-        ),
-        'fromParty' => array(
+        ],
+        'fromParty' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'fromParty'
-        ),
-        'toParty' => array(
+        ],
+        'toParty' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'toParty'
-        ),
-        'amount' => array(
+        ],
+        'amount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'amount'
-        ),
-        'paymentMethod' => array(
+        ],
+        'paymentMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paymentMethod'
-        ),
-        'paypalTransactionId' => array(
+        ],
+        'paypalTransactionId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paypalTransactionId'
-        ),
-        'status' => array(
+        ],
+        'status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'status'
-        ),
-        'transactionDate' => array(
+        ],
+        'transactionDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionDate'
-        ),
-        'id' => array(
+        ],
+        'id' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'id'
-        ),
-        'parentId' => array(
+        ],
+        'parentId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'parentId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

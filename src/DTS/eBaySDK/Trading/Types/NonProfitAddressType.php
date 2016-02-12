@@ -23,61 +23,61 @@ class NonProfitAddressType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AddressLine1' => array(
+    private static $propertyTypes = [
+        'AddressLine1' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AddressLine1'
-        ),
-        'AddressLine2' => array(
+        ],
+        'AddressLine2' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AddressLine2'
-        ),
-        'City' => array(
+        ],
+        'City' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'City'
-        ),
-        'State' => array(
+        ],
+        'State' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'State'
-        ),
-        'ZipCode' => array(
+        ],
+        'ZipCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ZipCode'
-        ),
-        'Latitude' => array(
+        ],
+        'Latitude' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Latitude'
-        ),
-        'Longitude' => array(
+        ],
+        'Longitude' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Longitude'
-        ),
-        'AddressType' => array(
+        ],
+        'AddressType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AddressType'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -21,49 +21,49 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'itemId' => array(
+    private static $propertyTypes = [
+        'itemId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemId'
-        ),
-        'itemTitle' => array(
+        ],
+        'itemTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemTitle'
-        ),
-        'transactionPrice' => array(
+        ],
+        'transactionPrice' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionPrice'
-        ),
-        'transactionDate' => array(
+        ],
+        'transactionDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionDate'
-        ),
-        'globalId' => array(
+        ],
+        'globalId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'globalId'
-        ),
-        'transactionId' => array(
+        ],
+        'transactionId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

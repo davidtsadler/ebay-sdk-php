@@ -22,55 +22,55 @@ class SellerFavoriteItemPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SearchKeywords' => array(
+    private static $propertyTypes = [
+        'SearchKeywords' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchKeywords'
-        ),
-        'StoreCategoryID' => array(
+        ],
+        'StoreCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ),
-        'ListingType' => array(
+        ],
+        'ListingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
-        ),
-        'SearchSortOrder' => array(
+        ],
+        'SearchSortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchSortOrder'
-        ),
-        'MinPrice' => array(
+        ],
+        'MinPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinPrice'
-        ),
-        'MaxPrice' => array(
+        ],
+        'MaxPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxPrice'
-        ),
-        'FavoriteItemID' => array(
+        ],
+        'FavoriteItemID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FavoriteItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

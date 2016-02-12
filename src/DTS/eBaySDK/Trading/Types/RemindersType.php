@@ -34,127 +34,127 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PaymentToSendCount' => array(
+    private static $propertyTypes = [
+        'PaymentToSendCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentToSendCount'
-        ),
-        'FeedbackToReceiveCount' => array(
+        ],
+        'FeedbackToReceiveCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackToReceiveCount'
-        ),
-        'FeedbackToSendCount' => array(
+        ],
+        'FeedbackToSendCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackToSendCount'
-        ),
-        'OutbidCount' => array(
+        ],
+        'OutbidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OutbidCount'
-        ),
-        'PaymentToReceiveCount' => array(
+        ],
+        'PaymentToReceiveCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentToReceiveCount'
-        ),
-        'SecondChanceOfferCount' => array(
+        ],
+        'SecondChanceOfferCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOfferCount'
-        ),
-        'ShippingNeededCount' => array(
+        ],
+        'ShippingNeededCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingNeededCount'
-        ),
-        'RelistingNeededCount' => array(
+        ],
+        'RelistingNeededCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistingNeededCount'
-        ),
-        'TotalNewLeadsCount' => array(
+        ],
+        'TotalNewLeadsCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalNewLeadsCount'
-        ),
-        'DocsForCCProcessingToSendCount' => array(
+        ],
+        'DocsForCCProcessingToSendCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DocsForCCProcessingToSendCount'
-        ),
-        'RTEToProcessCount' => array(
+        ],
+        'RTEToProcessCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RTEToProcessCount'
-        ),
-        'ItemReceiptToConfirmCount' => array(
+        ],
+        'ItemReceiptToConfirmCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemReceiptToConfirmCount'
-        ),
-        'RefundOnHoldCount' => array(
+        ],
+        'RefundOnHoldCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundOnHoldCount'
-        ),
-        'RefundCancelledCount' => array(
+        ],
+        'RefundCancelledCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundCancelledCount'
-        ),
-        'ShippingDetailsToBeProvidedCount' => array(
+        ],
+        'ShippingDetailsToBeProvidedCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetailsToBeProvidedCount'
-        ),
-        'ItemReceiptConfirmationToReceiveCount' => array(
+        ],
+        'ItemReceiptConfirmationToReceiveCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemReceiptConfirmationToReceiveCount'
-        ),
-        'RefundInitiatedCount' => array(
+        ],
+        'RefundInitiatedCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundInitiatedCount'
-        ),
-        'PendingRTERequestCount' => array(
+        ],
+        'PendingRTERequestCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PendingRTERequestCount'
-        ),
-        'DeclinedRTERequestCount' => array(
+        ],
+        'DeclinedRTERequestCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeclinedRTERequestCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

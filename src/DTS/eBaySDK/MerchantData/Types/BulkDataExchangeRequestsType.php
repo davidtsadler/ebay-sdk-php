@@ -30,103 +30,103 @@ class BulkDataExchangeRequestsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Header' => array(
+    private static $propertyTypes = [
+        'Header' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Header'
-        ),
-        'AddFixedPriceItemRequest' => array(
+        ],
+        'AddFixedPriceItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddFixedPriceItemRequest'
-        ),
-        'AddItemRequest' => array(
+        ],
+        'AddItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AddItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddItemRequest'
-        ),
-        'EndFixedPriceItemRequest' => array(
+        ],
+        'EndFixedPriceItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndFixedPriceItemRequest'
-        ),
-        'EndItemRequest' => array(
+        ],
+        'EndItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\EndItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EndItemRequest'
-        ),
-        'OrderAckRequest' => array(
+        ],
+        'OrderAckRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderAckRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OrderAckRequest'
-        ),
-        'RelistFixedPriceItemRequest' => array(
+        ],
+        'RelistFixedPriceItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RelistFixedPriceItemRequest'
-        ),
-        'RelistItemRequest' => array(
+        ],
+        'RelistItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RelistItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RelistItemRequest'
-        ),
-        'ReviseFixedPriceItemRequest' => array(
+        ],
+        'ReviseFixedPriceItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseFixedPriceItemRequest'
-        ),
-        'ReviseInventoryStatusRequest' => array(
+        ],
+        'ReviseInventoryStatusRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseInventoryStatusRequest'
-        ),
-        'ReviseItemRequest' => array(
+        ],
+        'ReviseItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReviseItemRequest'
-        ),
-        'SetShipmentTrackingInfoRequest' => array(
+        ],
+        'SetShipmentTrackingInfoRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SetShipmentTrackingInfoRequest'
-        ),
-        'UploadSiteHostedPicturesRequest' => array(
+        ],
+        'UploadSiteHostedPicturesRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'UploadSiteHostedPicturesRequest'
-        ),
-        'VerifyAddFixedPriceItemRequest' => array(
+        ],
+        'VerifyAddFixedPriceItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddFixedPriceItemRequest'
-        ),
-        'VerifyAddItemRequest' => array(
+        ],
+        'VerifyAddItemRequest' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddItemRequest'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

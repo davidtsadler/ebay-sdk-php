@@ -26,79 +26,79 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InsuranceCost' => array(
+    private static $propertyTypes = [
+        'InsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
-        ),
-        'InsuranceOption' => array(
+        ],
+        'InsuranceOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
-        ),
-        'InternationalShippingServiceOption' => array(
+        ],
+        'InternationalShippingServiceOption' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOption'
-        ),
-        'SalesTax' => array(
+        ],
+        'SalesTax' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SalesTaxType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
-        ),
-        'ShippingRateErrorMessage' => array(
+        ],
+        'ShippingRateErrorMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingRateErrorMessage'
-        ),
-        'ShippingServiceOption' => array(
+        ],
+        'ShippingServiceOption' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingServiceOptionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOption'
-        ),
-        'TaxTable' => array(
+        ],
+        'TaxTable' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\TaxTableType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
-        ),
-        'InternationalInsuranceCost' => array(
+        ],
+        'InternationalInsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceCost'
-        ),
-        'InternationalInsuranceOption' => array(
+        ],
+        'InternationalInsuranceOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceOption'
-        ),
-        'CODCost' => array(
+        ],
+        'CODCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
-        ),
-        'ExcludeShipToLocation' => array(
+        ],
+        'ExcludeShipToLocation' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExcludeShipToLocation'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

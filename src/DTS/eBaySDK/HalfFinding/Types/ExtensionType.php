@@ -19,37 +19,37 @@ class ExtensionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'id' => array(
+    private static $propertyTypes = [
+        'id' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PositiveInteger',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'id'
-        ),
-        'version' => array(
+        ],
+        'version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
-        ),
-        'contentType' => array(
+        ],
+        'contentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'contentType'
-        ),
-        'value' => array(
+        ],
+        'value' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'value'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -21,49 +21,49 @@ class StoreCustomListingHeaderType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DisplayType' => array(
+    private static $propertyTypes = [
+        'DisplayType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayType'
-        ),
-        'Logo' => array(
+        ],
+        'Logo' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Logo'
-        ),
-        'SearchBox' => array(
+        ],
+        'SearchBox' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchBox'
-        ),
-        'LinkToInclude' => array(
+        ],
+        'LinkToInclude' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderLinkType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'LinkToInclude'
-        ),
-        'AddToFavoriteStores' => array(
+        ],
+        'AddToFavoriteStores' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AddToFavoriteStores'
-        ),
-        'SignUpForStoreNewsletter' => array(
+        ],
+        'SignUpForStoreNewsletter' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SignUpForStoreNewsletter'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

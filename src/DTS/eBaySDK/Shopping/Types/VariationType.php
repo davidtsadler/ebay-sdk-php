@@ -21,49 +21,49 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SKU' => array(
+    private static $propertyTypes = [
+        'SKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'StartPrice' => array(
+        ],
+        'StartPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'VariationSpecifics' => array(
+        ],
+        'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ),
-        'SellingStatus' => array(
+        ],
+        'SellingStatus' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SellingStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
-        ),
-        'DiscountPriceInfo' => array(
+        ],
+        'DiscountPriceInfo' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

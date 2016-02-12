@@ -23,61 +23,61 @@ class GetUserReturnsRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'itemFilter' => array(
+    private static $propertyTypes = [
+        'itemFilter' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ItemFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemFilter'
-        ),
-        'orderId' => array(
+        ],
+        'orderId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'orderId'
-        ),
-        'creationDateRangeFilter' => array(
+        ],
+        'creationDateRangeFilter' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\DateRangeFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDateRangeFilter'
-        ),
-        'ReturnStatusFilter' => array(
+        ],
+        'ReturnStatusFilter' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnStatusFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnStatusFilter'
-        ),
-        'otherUserFilter' => array(
+        ],
+        'otherUserFilter' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\UserFilterType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'otherUserFilter'
-        ),
-        'paginationInput' => array(
+        ],
+        'paginationInput' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\PaginationInput',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
-        ),
-        'sortType' => array(
+        ],
+        'sortType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sortType'
-        ),
-        'sortOrderType' => array(
+        ],
+        'sortOrderType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sortOrderType'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

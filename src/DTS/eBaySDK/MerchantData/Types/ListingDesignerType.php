@@ -18,31 +18,31 @@ class ListingDesignerType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'LayoutID' => array(
+    private static $propertyTypes = [
+        'LayoutID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LayoutID'
-        ),
-        'OptimalPictureSize' => array(
+        ],
+        'OptimalPictureSize' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OptimalPictureSize'
-        ),
-        'ThemeID' => array(
+        ],
+        'ThemeID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ThemeID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

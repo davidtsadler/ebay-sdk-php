@@ -17,25 +17,25 @@ class CategoryHistogram extends \DTS\eBaySDK\Finding\Types\Category
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'count' => array(
+    private static $propertyTypes = [
+        'count' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'count'
-        ),
-        'childCategoryHistogram' => array(
+        ],
+        'childCategoryHistogram' => [
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogram',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'childCategoryHistogram'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

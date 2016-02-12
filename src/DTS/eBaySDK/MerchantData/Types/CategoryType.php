@@ -30,103 +30,103 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BestOfferEnabled' => array(
+    private static $propertyTypes = [
+        'BestOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
-        ),
-        'AutoPayEnabled' => array(
+        ],
+        'AutoPayEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AutoPayEnabled'
-        ),
-        'B2BVATEnabled' => array(
+        ],
+        'B2BVATEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'B2BVATEnabled'
-        ),
-        'CatalogEnabled' => array(
+        ],
+        'CatalogEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CatalogEnabled'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'CategoryLevel' => array(
+        ],
+        'CategoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryLevel'
-        ),
-        'CategoryName' => array(
+        ],
+        'CategoryName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryName'
-        ),
-        'CategoryParentID' => array(
+        ],
+        'CategoryParentID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryParentID'
-        ),
-        'CategoryParentName' => array(
+        ],
+        'CategoryParentName' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CategoryParentName'
-        ),
-        'Expired' => array(
+        ],
+        'Expired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Expired'
-        ),
-        'LeafCategory' => array(
+        ],
+        'LeafCategory' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LeafCategory'
-        ),
-        'Virtual' => array(
+        ],
+        'Virtual' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Virtual'
-        ),
-        'ORPA' => array(
+        ],
+        'ORPA' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ORPA'
-        ),
-        'ORRA' => array(
+        ],
+        'ORRA' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ORRA'
-        ),
-        'LSD' => array(
+        ],
+        'LSD' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LSD'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

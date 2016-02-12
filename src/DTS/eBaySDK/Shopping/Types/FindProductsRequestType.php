@@ -26,79 +26,79 @@ class FindProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'IncludeSelector' => array(
+    private static $propertyTypes = [
+        'IncludeSelector' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeSelector'
-        ),
-        'AvailableItemsOnly' => array(
+        ],
+        'AvailableItemsOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AvailableItemsOnly'
-        ),
-        'DomainName' => array(
+        ],
+        'DomainName' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DomainName'
-        ),
-        'ProductID' => array(
+        ],
+        'ProductID' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'QueryKeywords' => array(
+        ],
+        'QueryKeywords' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QueryKeywords'
-        ),
-        'ProductSort' => array(
+        ],
+        'ProductSort' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductSort'
-        ),
-        'SortOrder' => array(
+        ],
+        'SortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
-        ),
-        'MaxEntries' => array(
+        ],
+        'MaxEntries' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxEntries'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'HideDuplicateItems' => array(
+        ],
+        'HideDuplicateItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HideDuplicateItems'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

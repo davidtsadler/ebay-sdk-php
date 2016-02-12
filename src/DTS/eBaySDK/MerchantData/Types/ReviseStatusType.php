@@ -20,43 +20,43 @@ class ReviseStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemRevised' => array(
+    private static $propertyTypes = [
+        'ItemRevised' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemRevised'
-        ),
-        'BuyItNowAdded' => array(
+        ],
+        'BuyItNowAdded' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowAdded'
-        ),
-        'BuyItNowLowered' => array(
+        ],
+        'BuyItNowLowered' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowLowered'
-        ),
-        'ReserveLowered' => array(
+        ],
+        'ReserveLowered' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveLowered'
-        ),
-        'ReserveRemoved' => array(
+        ],
+        'ReserveRemoved' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveRemoved'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

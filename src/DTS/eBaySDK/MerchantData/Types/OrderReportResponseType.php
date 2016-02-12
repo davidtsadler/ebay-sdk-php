@@ -20,43 +20,43 @@ class OrderReportResponseType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'HardExpirationWarning' => array(
+    private static $propertyTypes = [
+        'HardExpirationWarning' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
-        ),
-        'Ack' => array(
+        ],
+        'Ack' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
-        ),
-        'Errors' => array(
+        ],
+        'Errors' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        ),
-        'OrderArray' => array(
+        ],
+        'OrderArray' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderArray'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

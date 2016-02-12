@@ -17,25 +17,25 @@ class DeliveryDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Recipient' => array(
+    private static $propertyTypes = [
+        'Recipient' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Recipient'
-        ),
-        'Sender' => array(
+        ],
+        'Sender' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DigitalDeliveryUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sender'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

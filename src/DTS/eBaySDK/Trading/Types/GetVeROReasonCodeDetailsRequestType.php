@@ -17,25 +17,25 @@ class GetVeROReasonCodeDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Abs
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ReasonCodeID' => array(
+    private static $propertyTypes = [
+        'ReasonCodeID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReasonCodeID'
-        ),
-        'ReturnAllSites' => array(
+        ],
+        'ReturnAllSites' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnAllSites'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

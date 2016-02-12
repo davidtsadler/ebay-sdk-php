@@ -21,49 +21,49 @@ class EBPCaseResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'note' => array(
+    private static $propertyTypes = [
+        'note' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'note'
-        ),
-        'author' => array(
+        ],
+        'author' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'author'
-        ),
-        'activity' => array(
+        ],
+        'activity' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'activity'
-        ),
-        'activityDetail' => array(
+        ],
+        'activityDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ActivityDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'activityDetail'
-        ),
-        'creationDate' => array(
+        ],
+        'creationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
-        ),
-        'attributes' => array(
+        ],
+        'attributes' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'attributes'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

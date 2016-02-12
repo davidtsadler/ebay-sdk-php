@@ -35,133 +35,133 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AccountState' => array(
+    private static $propertyTypes = [
+        'AccountState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountState'
-        ),
-        'InvoicePayment' => array(
+        ],
+        'InvoicePayment' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoicePayment'
-        ),
-        'InvoiceCredit' => array(
+        ],
+        'InvoiceCredit' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceCredit'
-        ),
-        'InvoiceNewFee' => array(
+        ],
+        'InvoiceNewFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceNewFee'
-        ),
-        'AdditionalAccount' => array(
+        ],
+        'AdditionalAccount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AdditionalAccountType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AdditionalAccount'
-        ),
-        'AmountPastDue' => array(
+        ],
+        'AmountPastDue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AmountPastDue'
-        ),
-        'BankAccountInfo' => array(
+        ],
+        'BankAccountInfo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BankAccountInfo'
-        ),
-        'BankModifyDate' => array(
+        ],
+        'BankModifyDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BankModifyDate'
-        ),
-        'BillingCycleDate' => array(
+        ],
+        'BillingCycleDate' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BillingCycleDate'
-        ),
-        'CreditCardExpiration' => array(
+        ],
+        'CreditCardExpiration' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreditCardExpiration'
-        ),
-        'CreditCardInfo' => array(
+        ],
+        'CreditCardInfo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreditCardInfo'
-        ),
-        'CreditCardModifyDate' => array(
+        ],
+        'CreditCardModifyDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreditCardModifyDate'
-        ),
-        'CurrentBalance' => array(
+        ],
+        'CurrentBalance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CurrentBalance'
-        ),
-        'Email' => array(
+        ],
+        'Email' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Email'
-        ),
-        'InvoiceBalance' => array(
+        ],
+        'InvoiceBalance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceBalance'
-        ),
-        'InvoiceDate' => array(
+        ],
+        'InvoiceDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceDate'
-        ),
-        'LastAmountPaid' => array(
+        ],
+        'LastAmountPaid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastAmountPaid'
-        ),
-        'LastPaymentDate' => array(
+        ],
+        'LastPaymentDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastPaymentDate'
-        ),
-        'PastDue' => array(
+        ],
+        'PastDue' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PastDue'
-        ),
-        'PaymentMethod' => array(
+        ],
+        'PaymentMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethod'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

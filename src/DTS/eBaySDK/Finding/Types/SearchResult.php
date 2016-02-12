@@ -17,25 +17,25 @@ class SearchResult extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'item' => array(
+    private static $propertyTypes = [
+        'item' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SearchItem',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'item'
-        ),
-        'count' => array(
+        ],
+        'count' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'count'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

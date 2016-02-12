@@ -70,13 +70,13 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('bar', $this->obj->strings[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
 
-        $this->obj->strings = array('foo', 'bar');
+        $this->obj->strings = ['foo', 'bar'];
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
 
-        $this->obj->strings = array();
+        $this->obj->strings = [];
         $this->assertEquals(0, count($this->obj->strings));
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
 
@@ -87,13 +87,13 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(222, $this->obj->integers[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
 
-        $this->obj->integers = array(111, 222);
+        $this->obj->integers = [111, 222];
         $this->assertEquals(2, count($this->obj->integers));
         $this->assertEquals(111, $this->obj->integers[0]);
         $this->assertEquals(222, $this->obj->integers[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
 
-        $this->obj->integers = array();
+        $this->obj->integers = [];
         $this->assertEquals(0, count($this->obj->integers));
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
 
@@ -189,7 +189,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Mocks\SimpleClass::integers expected <integer>, got <string>');
 
-        $this->obj->integers = array(123, 'foo');
+        $this->obj->integers = [123, 'foo'];
     }
 
     public function testSettingUnboundPropertyDirectly()

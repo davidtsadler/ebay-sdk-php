@@ -28,91 +28,91 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'itemID' => array(
+    private static $propertyTypes = [
+        'itemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemID'
-        ),
-        'itemURL' => array(
+        ],
+        'itemURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemURL'
-        ),
-        'quantity' => array(
+        ],
+        'quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'quantity'
-        ),
-        'seller' => array(
+        ],
+        'seller' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'seller'
-        ),
-        'price' => array(
+        ],
+        'price' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'price'
-        ),
-        'rentalPrice' => array(
+        ],
+        'rentalPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\RentalAmount',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'rentalPrice'
-        ),
-        'shippingService' => array(
+        ],
+        'shippingService' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shippingService'
-        ),
-        'itemLocation' => array(
+        ],
+        'itemLocation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemLocation'
-        ),
-        'excludedShippingAreas' => array(
+        ],
+        'excludedShippingAreas' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'excludedShippingAreas'
-        ),
-        'condition' => array(
+        ],
+        'condition' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'condition'
-        ),
-        'comments' => array(
+        ],
+        'comments' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'comments'
-        ),
-        'description' => array(
+        ],
+        'description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'description'
-        ),
-        'storefront' => array(
+        ],
+        'storefront' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\StorefrontType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'storefront'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

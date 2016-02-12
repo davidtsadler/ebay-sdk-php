@@ -22,55 +22,55 @@ class GetSellerListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PaginationResult' => array(
+    private static $propertyTypes = [
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'HasMoreItems' => array(
+        ],
+        'HasMoreItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMoreItems'
-        ),
-        'ItemArray' => array(
+        ],
+        'ItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
-        ),
-        'ItemsPerPage' => array(
+        ],
+        'ItemsPerPage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemsPerPage'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'ReturnedItemCountActual' => array(
+        ],
+        'ReturnedItemCountActual' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnedItemCountActual'
-        ),
-        'Seller' => array(
+        ],
+        'Seller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Seller'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

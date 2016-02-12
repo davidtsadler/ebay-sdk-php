@@ -19,37 +19,37 @@ class GetOrderTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemTransactionIDArray' => array(
+    private static $propertyTypes = [
+        'ItemTransactionIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemTransactionIDArray'
-        ),
-        'OrderIDArray' => array(
+        ],
+        'OrderIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderIDArray'
-        ),
-        'Platform' => array(
+        ],
+        'Platform' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Platform'
-        ),
-        'IncludeFinalValueFees' => array(
+        ],
+        'IncludeFinalValueFees' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFinalValueFees'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

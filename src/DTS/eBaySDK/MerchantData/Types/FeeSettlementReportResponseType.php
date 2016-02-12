@@ -31,109 +31,109 @@ class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\Ab
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InvoiceID' => array(
+    private static $propertyTypes = [
+        'InvoiceID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceID'
-        ),
-        'SellerID' => array(
+        ],
+        'SellerID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
-        ),
-        'AccountID' => array(
+        ],
+        'AccountID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountID'
-        ),
-        'ReportStartTime' => array(
+        ],
+        'ReportStartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReportStartTime'
-        ),
-        'ReportEndTime' => array(
+        ],
+        'ReportEndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReportEndTime'
-        ),
-        'InvoiceProcessingTime' => array(
+        ],
+        'InvoiceProcessingTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceProcessingTime'
-        ),
-        'ReportProcessingTime' => array(
+        ],
+        'ReportProcessingTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReportProcessingTime'
-        ),
-        'FeeSettlementAmount' => array(
+        ],
+        'FeeSettlementAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeSettlementAmount'
-        ),
-        'LastInvoiceAmount' => array(
+        ],
+        'LastInvoiceAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastInvoiceAmount'
-        ),
-        'FeeRoundingAdjustmentAmount' => array(
+        ],
+        'FeeRoundingAdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeRoundingAdjustmentAmount'
-        ),
-        'FeeTotalUsageAdjustmentAmount' => array(
+        ],
+        'FeeTotalUsageAdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeTotalUsageAdjustmentAmount'
-        ),
-        'OrderTransactionList' => array(
+        ],
+        'OrderTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OrderTransactionList'
-        ),
-        'ListingTransactionList' => array(
+        ],
+        'ListingTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionListType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ListingTransactionList'
-        ),
-        'OrderAdjustmentList' => array(
+        ],
+        'OrderAdjustmentList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'OrderAdjustmentList'
-        ),
-        'AccountTransactionList' => array(
+        ],
+        'AccountTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AccountTransactionList'
-        ),
-        'DiscountTransactionList' => array(
+        ],
+        'DiscountTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DiscountTransactionList'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

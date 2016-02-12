@@ -16,19 +16,19 @@ class ListingDurationReferenceType extends \DTS\eBaySDK\Types\IntegerType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'type' => array(
+    private static $propertyTypes = [
+        'type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'type'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

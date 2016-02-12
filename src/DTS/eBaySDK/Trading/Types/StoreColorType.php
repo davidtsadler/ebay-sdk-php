@@ -18,31 +18,31 @@ class StoreColorType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Primary' => array(
+    private static $propertyTypes = [
+        'Primary' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Primary'
-        ),
-        'Secondary' => array(
+        ],
+        'Secondary' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Secondary'
-        ),
-        'Accent' => array(
+        ],
+        'Accent' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Accent'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

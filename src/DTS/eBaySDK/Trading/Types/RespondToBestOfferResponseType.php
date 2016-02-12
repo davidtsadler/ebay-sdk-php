@@ -16,19 +16,19 @@ class RespondToBestOfferResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RespondToBestOffer' => array(
+    private static $propertyTypes = [
+        'RespondToBestOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RespondToBestOffer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

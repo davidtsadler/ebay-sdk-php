@@ -18,31 +18,31 @@ class FindItemsByProductRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'productId' => array(
+    private static $propertyTypes = [
+        'productId' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'productId'
-        ),
-        'itemFilter' => array(
+        ],
+        'itemFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
-        ),
-        'outputSelector' => array(
+        ],
+        'outputSelector' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

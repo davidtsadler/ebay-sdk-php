@@ -26,79 +26,79 @@ class GetSellerEventsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UserID' => array(
+    private static $propertyTypes = [
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'StartTimeFrom' => array(
+        ],
+        'StartTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTimeFrom'
-        ),
-        'StartTimeTo' => array(
+        ],
+        'StartTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTimeTo'
-        ),
-        'EndTimeFrom' => array(
+        ],
+        'EndTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeFrom'
-        ),
-        'EndTimeTo' => array(
+        ],
+        'EndTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'ModTimeFrom' => array(
+        ],
+        'ModTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeFrom'
-        ),
-        'ModTimeTo' => array(
+        ],
+        'ModTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeTo'
-        ),
-        'NewItemFilter' => array(
+        ],
+        'NewItemFilter' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewItemFilter'
-        ),
-        'IncludeWatchCount' => array(
+        ],
+        'IncludeWatchCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeWatchCount'
-        ),
-        'IncludeVariationSpecifics' => array(
+        ],
+        'IncludeVariationSpecifics' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeVariationSpecifics'
-        ),
-        'HideVariations' => array(
+        ],
+        'HideVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HideVariations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

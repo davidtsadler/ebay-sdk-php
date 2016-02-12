@@ -18,31 +18,31 @@ class AddMemberMessagesAAQToBidderRequestContainerType extends \DTS\eBaySDK\Type
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CorrelationID' => array(
+    private static $propertyTypes = [
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'MemberMessage' => array(
+        ],
+        'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

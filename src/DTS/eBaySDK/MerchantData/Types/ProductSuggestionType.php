@@ -19,37 +19,37 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Title' => array(
+    private static $propertyTypes = [
+        'Title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
-        ),
-        'EPID' => array(
+        ],
+        'EPID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EPID'
-        ),
-        'StockPhoto' => array(
+        ],
+        'StockPhoto' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StockPhoto'
-        ),
-        'Recommended' => array(
+        ],
+        'Recommended' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Recommended'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -33,7 +33,7 @@ function array_merge_deep()
 
 function array_merge_deep_array($arrays)
 {
-    $result = array();
+    $result = [];
 
     foreach ($arrays as $array) {
         foreach ($array as $key => $value) {

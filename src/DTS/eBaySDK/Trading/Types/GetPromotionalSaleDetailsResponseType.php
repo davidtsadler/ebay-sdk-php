@@ -16,19 +16,19 @@ class GetPromotionalSaleDetailsResponseType extends \DTS\eBaySDK\Trading\Types\A
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PromotionalSaleDetails' => array(
+    private static $propertyTypes = [
+        'PromotionalSaleDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

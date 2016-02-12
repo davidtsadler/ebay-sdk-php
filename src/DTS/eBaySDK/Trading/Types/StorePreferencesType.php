@@ -16,19 +16,19 @@ class StorePreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'VacationPreferences' => array(
+    private static $propertyTypes = [
+        'VacationPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreVacationPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VacationPreferences'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

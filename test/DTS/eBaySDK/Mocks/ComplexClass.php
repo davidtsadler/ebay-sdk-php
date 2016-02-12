@@ -3,28 +3,28 @@ namespace DTS\eBaySDK\Mocks;
 
 class ComplexClass extends \DTS\eBaySDK\Mocks\SimpleClass
 {
-    private static $propertyTypes = array(
-        'foo' => array(
+    private static $propertyTypes = [
+        'foo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'foo'
-        ),
-        'AmountClass' => array(
+        ],
+        'AmountClass' => [
             'type' => 'DTS\eBaySDK\Mocks\AmountClass',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AmountClass'
-        ),
-        'simpleClasses' => array(
+        ],
+        'simpleClasses' => [
             'type' => 'DTS\eBaySDK\Mocks\SimpleClass',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'simpleClasses'
-        )
-    );
+        ]
+    ];
 
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

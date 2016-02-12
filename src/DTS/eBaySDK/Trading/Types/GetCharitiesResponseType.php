@@ -16,19 +16,19 @@ class GetCharitiesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespon
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Charity' => array(
+    private static $propertyTypes = [
+        'Charity' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CharityInfoType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Charity'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -16,19 +16,19 @@ class GetVeROReasonCodeDetailsResponseType extends \DTS\eBaySDK\Trading\Types\Ab
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'VeROReasonCodeDetails' => array(
+    private static $propertyTypes = [
+        'VeROReasonCodeDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROReasonCodeDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VeROReasonCodeDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -10,6 +10,6 @@ class BaseService extends \DTS\eBaySDK\Services\BaseService
 
     protected function getEbayHeaders($operationName)
     {
-        return array('fooHdr' => $operationName);
+        return ['fooHdr' => $operationName];
     }
 }

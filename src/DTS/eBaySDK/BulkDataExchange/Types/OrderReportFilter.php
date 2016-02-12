@@ -23,61 +23,61 @@ class OrderReportFilter extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'createTimeFrom' => array(
+    private static $propertyTypes = [
+        'createTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'createTimeFrom'
-        ),
-        'createTimeTo' => array(
+        ],
+        'createTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'createTimeTo'
-        ),
-        'modTimeFrom' => array(
+        ],
+        'modTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'modTimeFrom'
-        ),
-        'modTimeTo' => array(
+        ],
+        'modTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'modTimeTo'
-        ),
-        'includeFinalValueFee' => array(
+        ],
+        'includeFinalValueFee' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'includeFinalValueFee'
-        ),
-        'listingType' => array(
+        ],
+        'listingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'listingType'
-        ),
-        'orderStatus' => array(
+        ],
+        'orderStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'orderStatus'
-        ),
-        'version' => array(
+        ],
+        'version' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

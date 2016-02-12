@@ -26,79 +26,79 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Refund' => array(
+    private static $propertyTypes = [
+        'Refund' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Refund'
-        ),
-        'ReturnsWithin' => array(
+        ],
+        'ReturnsWithin' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
-        ),
-        'ReturnsAccepted' => array(
+        ],
+        'ReturnsAccepted' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsAccepted'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'WarrantyOffered' => array(
+        ],
+        'WarrantyOffered' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyOffered'
-        ),
-        'WarrantyType' => array(
+        ],
+        'WarrantyType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyType'
-        ),
-        'WarrantyDuration' => array(
+        ],
+        'WarrantyDuration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyDuration'
-        ),
-        'EAN' => array(
+        ],
+        'EAN' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EAN'
-        ),
-        'ShippingCostPaidBy' => array(
+        ],
+        'ShippingCostPaidBy' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidBy'
-        ),
-        'RestockingFeeValue' => array(
+        ],
+        'RestockingFeeValue' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockingFeeValue'
-        ),
-        'RestockingFeeValueOption' => array(
+        ],
+        'RestockingFeeValueOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockingFeeValueOption'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

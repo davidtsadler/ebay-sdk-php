@@ -16,19 +16,19 @@ class IssueFullRefundOptionType extends \DTS\eBaySDK\ResolutionCaseManagement\Ty
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'daysToRefundBuyer' => array(
+    private static $propertyTypes = [
+        'daysToRefundBuyer' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'daysToRefundBuyer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

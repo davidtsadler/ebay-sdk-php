@@ -18,31 +18,31 @@ class ValType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ValueLiteral' => array(
+    private static $propertyTypes = [
+        'ValueLiteral' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueLiteral'
-        ),
-        'SuggestedValueLiteral' => array(
+        ],
+        'SuggestedValueLiteral' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SuggestedValueLiteral'
-        ),
-        'ValueID' => array(
+        ],
+        'ValueID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

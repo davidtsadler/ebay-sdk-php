@@ -42,175 +42,175 @@ class MyeBayFavoriteSearchType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SearchName' => array(
+    private static $propertyTypes = [
+        'SearchName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchName'
-        ),
-        'SearchQuery' => array(
+        ],
+        'SearchQuery' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SearchQuery'
-        ),
-        'QueryKeywords' => array(
+        ],
+        'QueryKeywords' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QueryKeywords'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'ItemSort' => array(
+        ],
+        'ItemSort' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemSort'
-        ),
-        'SortOrder' => array(
+        ],
+        'SortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
-        ),
-        'EndTimeFrom' => array(
+        ],
+        'EndTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeFrom'
-        ),
-        'EndTimeTo' => array(
+        ],
+        'EndTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'MaxDistance' => array(
+        ],
+        'MaxDistance' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxDistance'
-        ),
-        'PostalCode' => array(
+        ],
+        'PostalCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PostalCode'
-        ),
-        'ItemType' => array(
+        ],
+        'ItemType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemType'
-        ),
-        'PriceMax' => array(
+        ],
+        'PriceMax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PriceMax'
-        ),
-        'PriceMin' => array(
+        ],
+        'PriceMin' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PriceMin'
-        ),
-        'Currency' => array(
+        ],
+        'Currency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ),
-        'BidCountMax' => array(
+        ],
+        'BidCountMax' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidCountMax'
-        ),
-        'BidCountMin' => array(
+        ],
+        'BidCountMin' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidCountMin'
-        ),
-        'SearchFlag' => array(
+        ],
+        'SearchFlag' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SearchFlag'
-        ),
-        'PaymentMethod' => array(
+        ],
+        'PaymentMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethod'
-        ),
-        'PreferredLocation' => array(
+        ],
+        'PreferredLocation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PreferredLocation'
-        ),
-        'SellerID' => array(
+        ],
+        'SellerID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellerID'
-        ),
-        'SellerIDExclude' => array(
+        ],
+        'SellerIDExclude' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellerIDExclude'
-        ),
-        'ItemsAvailableTo' => array(
+        ],
+        'ItemsAvailableTo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemsAvailableTo'
-        ),
-        'ItemsLocatedIn' => array(
+        ],
+        'ItemsLocatedIn' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemsLocatedIn'
-        ),
-        'SellerBusinessType' => array(
+        ],
+        'SellerBusinessType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerBusinessType'
-        ),
-        'Condition' => array(
+        ],
+        'Condition' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Condition'
-        ),
-        'Quantity' => array(
+        ],
+        'Quantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
-        ),
-        'QuantityOperator' => array(
+        ],
+        'QuantityOperator' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityOperator'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

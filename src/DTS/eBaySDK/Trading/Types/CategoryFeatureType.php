@@ -132,715 +132,715 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryID' => array(
+    private static $propertyTypes = [
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'ListingDuration' => array(
+        ],
+        'ListingDuration' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingDurationReferenceType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ListingDuration'
-        ),
-        'ShippingTermsRequired' => array(
+        ],
+        'ShippingTermsRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTermsRequired'
-        ),
-        'BestOfferEnabled' => array(
+        ],
+        'BestOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
-        ),
-        'UserConsentRequired' => array(
+        ],
+        'UserConsentRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserConsentRequired'
-        ),
-        'HomePageFeaturedEnabled' => array(
+        ],
+        'HomePageFeaturedEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HomePageFeaturedEnabled'
-        ),
-        'ProPackEnabled' => array(
+        ],
+        'ProPackEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPackEnabled'
-        ),
-        'ValuePackEnabled' => array(
+        ],
+        'ValuePackEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValuePackEnabled'
-        ),
-        'ProPackPlusEnabled' => array(
+        ],
+        'ProPackPlusEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPackPlusEnabled'
-        ),
-        'AdFormatEnabled' => array(
+        ],
+        'AdFormatEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdFormatEnabled'
-        ),
-        'BestOfferCounterEnabled' => array(
+        ],
+        'BestOfferCounterEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferCounterEnabled'
-        ),
-        'BestOfferAutoDeclineEnabled' => array(
+        ],
+        'BestOfferAutoDeclineEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferAutoDeclineEnabled'
-        ),
-        'LocalMarketSpecialitySubscription' => array(
+        ],
+        'LocalMarketSpecialitySubscription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketSpecialitySubscription'
-        ),
-        'LocalMarketRegularSubscription' => array(
+        ],
+        'LocalMarketRegularSubscription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketRegularSubscription'
-        ),
-        'LocalMarketPremiumSubscription' => array(
+        ],
+        'LocalMarketPremiumSubscription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketPremiumSubscription'
-        ),
-        'LocalMarketNonSubscription' => array(
+        ],
+        'LocalMarketNonSubscription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketNonSubscription'
-        ),
-        'MinimumReservePrice' => array(
+        ],
+        'MinimumReservePrice' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumReservePrice'
-        ),
-        'SellerContactDetailsEnabled' => array(
+        ],
+        'SellerContactDetailsEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerContactDetailsEnabled'
-        ),
-        'TransactionConfirmationRequestEnabled' => array(
+        ],
+        'TransactionConfirmationRequestEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionConfirmationRequestEnabled'
-        ),
-        'SkypeMeTransactionalEnabled' => array(
+        ],
+        'SkypeMeTransactionalEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SkypeMeTransactionalEnabled'
-        ),
-        'SkypeMeNonTransactionalEnabled' => array(
+        ],
+        'SkypeMeNonTransactionalEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SkypeMeNonTransactionalEnabled'
-        ),
-        'ClassifiedAdPaymentMethodEnabled' => array(
+        ],
+        'ClassifiedAdPaymentMethodEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdPaymentMethodEnabled'
-        ),
-        'ClassifiedAdShippingMethodEnabled' => array(
+        ],
+        'ClassifiedAdShippingMethodEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdShippingMethodEnabled'
-        ),
-        'ClassifiedAdBestOfferEnabled' => array(
+        ],
+        'ClassifiedAdBestOfferEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdBestOfferEnabled'
-        ),
-        'ClassifiedAdCounterOfferEnabled' => array(
+        ],
+        'ClassifiedAdCounterOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdCounterOfferEnabled'
-        ),
-        'ClassifiedAdAutoDeclineEnabled' => array(
+        ],
+        'ClassifiedAdAutoDeclineEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdAutoDeclineEnabled'
-        ),
-        'ClassifiedAdContactByPhoneEnabled' => array(
+        ],
+        'ClassifiedAdContactByPhoneEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdContactByPhoneEnabled'
-        ),
-        'ClassifiedAdContactByEmailEnabled' => array(
+        ],
+        'ClassifiedAdContactByEmailEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdContactByEmailEnabled'
-        ),
-        'SafePaymentRequired' => array(
+        ],
+        'SafePaymentRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SafePaymentRequired'
-        ),
-        'ClassifiedAdPayPerLeadEnabled' => array(
+        ],
+        'ClassifiedAdPayPerLeadEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdPayPerLeadEnabled'
-        ),
-        'ItemSpecificsEnabled' => array(
+        ],
+        'ItemSpecificsEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecificsEnabled'
-        ),
-        'PaisaPayFullEscrowEnabled' => array(
+        ],
+        'PaisaPayFullEscrowEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaisaPayFullEscrowEnabled'
-        ),
-        'BrandMPNIdentifierEnabled' => array(
+        ],
+        'BrandMPNIdentifierEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BrandMPNIdentifierEnabled'
-        ),
-        'ClassifiedAdAutoAcceptEnabled' => array(
+        ],
+        'ClassifiedAdAutoAcceptEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdAutoAcceptEnabled'
-        ),
-        'BestOfferAutoAcceptEnabled' => array(
+        ],
+        'BestOfferAutoAcceptEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferAutoAcceptEnabled'
-        ),
-        'CrossBorderTradeNorthAmericaEnabled' => array(
+        ],
+        'CrossBorderTradeNorthAmericaEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CrossBorderTradeNorthAmericaEnabled'
-        ),
-        'CrossBorderTradeGBEnabled' => array(
+        ],
+        'CrossBorderTradeGBEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CrossBorderTradeGBEnabled'
-        ),
-        'CrossBorderTradeAustraliaEnabled' => array(
+        ],
+        'CrossBorderTradeAustraliaEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CrossBorderTradeAustraliaEnabled'
-        ),
-        'PayPalBuyerProtectionEnabled' => array(
+        ],
+        'PayPalBuyerProtectionEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalBuyerProtectionEnabled'
-        ),
-        'BuyerGuaranteeEnabled' => array(
+        ],
+        'BuyerGuaranteeEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerGuaranteeEnabled'
-        ),
-        'GalleryFeaturedDurations' => array(
+        ],
+        'GalleryFeaturedDurations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryFeaturedDurations'
-        ),
-        'PayPalRequired' => array(
+        ],
+        'PayPalRequired' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalRequired'
-        ),
-        'eBayMotorsProAdFormatEnabled' => array(
+        ],
+        'eBayMotorsProAdFormatEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProAdFormatEnabled'
-        ),
-        'eBayMotorsProContactByPhoneEnabled' => array(
+        ],
+        'eBayMotorsProContactByPhoneEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProContactByPhoneEnabled'
-        ),
-        'eBayMotorsProPhoneCount' => array(
+        ],
+        'eBayMotorsProPhoneCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProPhoneCount'
-        ),
-        'eBayMotorsProContactByAddressEnabled' => array(
+        ],
+        'eBayMotorsProContactByAddressEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProContactByAddressEnabled'
-        ),
-        'eBayMotorsProStreetCount' => array(
+        ],
+        'eBayMotorsProStreetCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProStreetCount'
-        ),
-        'eBayMotorsProCompanyNameEnabled' => array(
+        ],
+        'eBayMotorsProCompanyNameEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProCompanyNameEnabled'
-        ),
-        'eBayMotorsProContactByEmailEnabled' => array(
+        ],
+        'eBayMotorsProContactByEmailEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProContactByEmailEnabled'
-        ),
-        'eBayMotorsProBestOfferEnabled' => array(
+        ],
+        'eBayMotorsProBestOfferEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProBestOfferEnabled'
-        ),
-        'eBayMotorsProAutoAcceptEnabled' => array(
+        ],
+        'eBayMotorsProAutoAcceptEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProAutoAcceptEnabled'
-        ),
-        'eBayMotorsProAutoDeclineEnabled' => array(
+        ],
+        'eBayMotorsProAutoDeclineEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProAutoDeclineEnabled'
-        ),
-        'eBayMotorsProPaymentMethodCheckOutEnabled' => array(
+        ],
+        'eBayMotorsProPaymentMethodCheckOutEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProPaymentMethodCheckOutEnabled'
-        ),
-        'eBayMotorsProShippingMethodEnabled' => array(
+        ],
+        'eBayMotorsProShippingMethodEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProShippingMethodEnabled'
-        ),
-        'eBayMotorsProCounterOfferEnabled' => array(
+        ],
+        'eBayMotorsProCounterOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProCounterOfferEnabled'
-        ),
-        'eBayMotorsProSellerContactDetailsEnabled' => array(
+        ],
+        'eBayMotorsProSellerContactDetailsEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayMotorsProSellerContactDetailsEnabled'
-        ),
-        'LocalMarketAdFormatEnabled' => array(
+        ],
+        'LocalMarketAdFormatEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketAdFormatEnabled'
-        ),
-        'LocalMarketContactByPhoneEnabled' => array(
+        ],
+        'LocalMarketContactByPhoneEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketContactByPhoneEnabled'
-        ),
-        'LocalMarketPhoneCount' => array(
+        ],
+        'LocalMarketPhoneCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketPhoneCount'
-        ),
-        'LocalMarketContactByAddressEnabled' => array(
+        ],
+        'LocalMarketContactByAddressEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketContactByAddressEnabled'
-        ),
-        'LocalMarketStreetCount' => array(
+        ],
+        'LocalMarketStreetCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketStreetCount'
-        ),
-        'LocalMarketCompanyNameEnabled' => array(
+        ],
+        'LocalMarketCompanyNameEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketCompanyNameEnabled'
-        ),
-        'LocalMarketContactByEmailEnabled' => array(
+        ],
+        'LocalMarketContactByEmailEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketContactByEmailEnabled'
-        ),
-        'LocalMarketBestOfferEnabled' => array(
+        ],
+        'LocalMarketBestOfferEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketBestOfferEnabled'
-        ),
-        'LocalMarketAutoAcceptEnabled' => array(
+        ],
+        'LocalMarketAutoAcceptEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketAutoAcceptEnabled'
-        ),
-        'LocalMarketAutoDeclineEnabled' => array(
+        ],
+        'LocalMarketAutoDeclineEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketAutoDeclineEnabled'
-        ),
-        'LocalMarketPaymentMethodCheckOutEnabled' => array(
+        ],
+        'LocalMarketPaymentMethodCheckOutEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketPaymentMethodCheckOutEnabled'
-        ),
-        'LocalMarketShippingMethodEnabled' => array(
+        ],
+        'LocalMarketShippingMethodEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketShippingMethodEnabled'
-        ),
-        'LocalMarketCounterOfferEnabled' => array(
+        ],
+        'LocalMarketCounterOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketCounterOfferEnabled'
-        ),
-        'LocalMarketSellerContactDetailsEnabled' => array(
+        ],
+        'LocalMarketSellerContactDetailsEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalMarketSellerContactDetailsEnabled'
-        ),
-        'ClassifiedAdPhoneCount' => array(
+        ],
+        'ClassifiedAdPhoneCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdPhoneCount'
-        ),
-        'ClassifiedAdContactByAddressEnabled' => array(
+        ],
+        'ClassifiedAdContactByAddressEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdContactByAddressEnabled'
-        ),
-        'ClassifiedAdStreetCount' => array(
+        ],
+        'ClassifiedAdStreetCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdStreetCount'
-        ),
-        'ClassifiedAdCompanyNameEnabled' => array(
+        ],
+        'ClassifiedAdCompanyNameEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdCompanyNameEnabled'
-        ),
-        'SpecialitySubscription' => array(
+        ],
+        'SpecialitySubscription' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SpecialitySubscription'
-        ),
-        'RegularSubscription' => array(
+        ],
+        'RegularSubscription' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegularSubscription'
-        ),
-        'PremiumSubscription' => array(
+        ],
+        'PremiumSubscription' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PremiumSubscription'
-        ),
-        'NonSubscription' => array(
+        ],
+        'NonSubscription' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NonSubscription'
-        ),
-        'INEscrowWorkflowTimeline' => array(
+        ],
+        'INEscrowWorkflowTimeline' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'INEscrowWorkflowTimeline'
-        ),
-        'PayPalRequiredForStoreOwner' => array(
+        ],
+        'PayPalRequiredForStoreOwner' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalRequiredForStoreOwner'
-        ),
-        'ReviseQuantityAllowed' => array(
+        ],
+        'ReviseQuantityAllowed' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviseQuantityAllowed'
-        ),
-        'RevisePriceAllowed' => array(
+        ],
+        'RevisePriceAllowed' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RevisePriceAllowed'
-        ),
-        'StoreOwnerExtendedListingDurationsEnabled' => array(
+        ],
+        'StoreOwnerExtendedListingDurationsEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreOwnerExtendedListingDurationsEnabled'
-        ),
-        'StoreOwnerExtendedListingDurations' => array(
+        ],
+        'StoreOwnerExtendedListingDurations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreOwnerExtendedListingDurationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreOwnerExtendedListingDurations'
-        ),
-        'ReturnPolicyEnabled' => array(
+        ],
+        'ReturnPolicyEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnPolicyEnabled'
-        ),
-        'HandlingTimeEnabled' => array(
+        ],
+        'HandlingTimeEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HandlingTimeEnabled'
-        ),
-        'MaxFlatShippingCost' => array(
+        ],
+        'MaxFlatShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxFlatShippingCost'
-        ),
-        'Group1MaxFlatShippingCost' => array(
+        ],
+        'Group1MaxFlatShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Group1MaxFlatShippingCost'
-        ),
-        'Group2MaxFlatShippingCost' => array(
+        ],
+        'Group2MaxFlatShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Group2MaxFlatShippingCost'
-        ),
-        'Group3MaxFlatShippingCost' => array(
+        ],
+        'Group3MaxFlatShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Group3MaxFlatShippingCost'
-        ),
-        'PaymentMethod' => array(
+        ],
+        'PaymentMethod' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PaymentMethod'
-        ),
-        'VariationsEnabled' => array(
+        ],
+        'VariationsEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationsEnabled'
-        ),
-        'FreeGalleryPlusEnabled' => array(
+        ],
+        'FreeGalleryPlusEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FreeGalleryPlusEnabled'
-        ),
-        'FreePicturePackEnabled' => array(
+        ],
+        'FreePicturePackEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FreePicturePackEnabled'
-        ),
-        'ItemCompatibilityEnabled' => array(
+        ],
+        'ItemCompatibilityEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemCompatibilityEnabled'
-        ),
-        'MinItemCompatibility' => array(
+        ],
+        'MinItemCompatibility' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinItemCompatibility'
-        ),
-        'MaxItemCompatibility' => array(
+        ],
+        'MaxItemCompatibility' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxItemCompatibility'
-        ),
-        'ConditionEnabled' => array(
+        ],
+        'ConditionEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConditionEnabled'
-        ),
-        'ConditionValues' => array(
+        ],
+        'ConditionValues' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ConditionValuesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConditionValues'
-        ),
-        'ValueCategory' => array(
+        ],
+        'ValueCategory' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueCategory'
-        ),
-        'ProductCreationEnabled' => array(
+        ],
+        'ProductCreationEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductCreationEnabled'
-        ),
-        'EANEnabled' => array(
+        ],
+        'EANEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EANEnabled'
-        ),
-        'ISBNEnabled' => array(
+        ],
+        'ISBNEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ISBNEnabled'
-        ),
-        'UPCEnabled' => array(
+        ],
+        'UPCEnabled' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPCEnabled'
-        ),
-        'MaxGranularFitmentCount' => array(
+        ],
+        'MaxGranularFitmentCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxGranularFitmentCount'
-        ),
-        'CompatibleVehicleType' => array(
+        ],
+        'CompatibleVehicleType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompatibleVehicleType'
-        ),
-        'ShippingProfileCategoryGroup' => array(
+        ],
+        'ShippingProfileCategoryGroup' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingProfileCategoryGroup'
-        ),
-        'PaymentProfileCategoryGroup' => array(
+        ],
+        'PaymentProfileCategoryGroup' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentProfileCategoryGroup'
-        ),
-        'ReturnPolicyProfileCategoryGroup' => array(
+        ],
+        'ReturnPolicyProfileCategoryGroup' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnPolicyProfileCategoryGroup'
-        ),
-        'VINSupported' => array(
+        ],
+        'VINSupported' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VINSupported'
-        ),
-        'VRMSupported' => array(
+        ],
+        'VRMSupported' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VRMSupported'
-        ),
-        'SellerProvidedTitleSupported' => array(
+        ],
+        'SellerProvidedTitleSupported' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerProvidedTitleSupported'
-        ),
-        'DepositSupported' => array(
+        ],
+        'DepositSupported' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DepositSupported'
-        ),
-        'GlobalShippingEnabled' => array(
+        ],
+        'GlobalShippingEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GlobalShippingEnabled'
-        ),
-        'AdditionalCompatibilityEnabled' => array(
+        ],
+        'AdditionalCompatibilityEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdditionalCompatibilityEnabled'
-        ),
-        'PickupDropOffEnabled' => array(
+        ],
+        'PickupDropOffEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupDropOffEnabled'
-        ),
-        'DigitalGoodDeliveryEnabled' => array(
+        ],
+        'DigitalGoodDeliveryEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DigitalGoodDeliveryEnabled'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

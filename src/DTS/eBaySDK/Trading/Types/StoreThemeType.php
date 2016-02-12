@@ -18,31 +18,31 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ThemeID' => array(
+    private static $propertyTypes = [
+        'ThemeID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ThemeID'
-        ),
-        'Name' => array(
+        ],
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'ColorScheme' => array(
+        ],
+        'ColorScheme' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ColorScheme'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

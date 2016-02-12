@@ -22,55 +22,55 @@ class GetUserDisputesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'StartingDisputeID' => array(
+    private static $propertyTypes = [
+        'StartingDisputeID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartingDisputeID'
-        ),
-        'EndingDisputeID' => array(
+        ],
+        'EndingDisputeID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndingDisputeID'
-        ),
-        'DisputeArray' => array(
+        ],
+        'DisputeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeArray'
-        ),
-        'ItemsPerPage' => array(
+        ],
+        'ItemsPerPage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemsPerPage'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'DisputeFilterCount' => array(
+        ],
+        'DisputeFilterCount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeFilterCountType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DisputeFilterCount'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

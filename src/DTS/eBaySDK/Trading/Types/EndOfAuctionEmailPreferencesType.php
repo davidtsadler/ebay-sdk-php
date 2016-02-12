@@ -21,49 +21,49 @@ class EndOfAuctionEmailPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TemplateText' => array(
+    private static $propertyTypes = [
+        'TemplateText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TemplateText'
-        ),
-        'LogoURL' => array(
+        ],
+        'LogoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoURL'
-        ),
-        'LogoType' => array(
+        ],
+        'LogoType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoType'
-        ),
-        'EmailCustomized' => array(
+        ],
+        'EmailCustomized' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailCustomized'
-        ),
-        'TextCustomized' => array(
+        ],
+        'TextCustomized' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TextCustomized'
-        ),
-        'LogoCustomized' => array(
+        ],
+        'LogoCustomized' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoCustomized'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

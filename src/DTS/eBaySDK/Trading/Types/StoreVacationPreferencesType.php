@@ -22,55 +22,55 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OnVacation' => array(
+    private static $propertyTypes = [
+        'OnVacation' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OnVacation'
-        ),
-        'ReturnDate' => array(
+        ],
+        'ReturnDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnDate'
-        ),
-        'HideFixedPriceStoreItems' => array(
+        ],
+        'HideFixedPriceStoreItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HideFixedPriceStoreItems'
-        ),
-        'MessageItem' => array(
+        ],
+        'MessageItem' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageItem'
-        ),
-        'MessageStore' => array(
+        ],
+        'MessageStore' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStore'
-        ),
-        'DisplayMessageStoreCustomText' => array(
+        ],
+        'DisplayMessageStoreCustomText' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayMessageStoreCustomText'
-        ),
-        'MessageStoreCustomText' => array(
+        ],
+        'MessageStoreCustomText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStoreCustomText'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

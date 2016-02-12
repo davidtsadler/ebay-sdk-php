@@ -26,79 +26,79 @@ class ActivityOptionListType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'offerOtherSolution' => array(
+    private static $propertyTypes = [
+        'offerOtherSolution' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\OfferOtherSolutionOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'offerOtherSolution'
-        ),
-        'provideTrackingInfo' => array(
+        ],
+        'provideTrackingInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideTrackingInfoOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'provideTrackingInfo'
-        ),
-        'issueFullRefund' => array(
+        ],
+        'issueFullRefund' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\IssueFullRefundOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'issueFullRefund'
-        ),
-        'issuePartialRefund' => array(
+        ],
+        'issuePartialRefund' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\IssuePartialRefundOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'issuePartialRefund'
-        ),
-        'provideShippingInfo' => array(
+        ],
+        'provideShippingInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideShippingInfoOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'provideShippingInfo'
-        ),
-        'requestBuyerToReturn' => array(
+        ],
+        'requestBuyerToReturn' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\RequestBuyerToReturnOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'requestBuyerToReturn'
-        ),
-        'provideShippingOrTrackingInfo' => array(
+        ],
+        'provideShippingOrTrackingInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideShippingOrTrackingInfoOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'provideShippingOrTrackingInfo'
-        ),
-        'provideRefundInfo' => array(
+        ],
+        'provideRefundInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'provideRefundInfo'
-        ),
-        'contactCustomerSupport' => array(
+        ],
+        'contactCustomerSupport' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ContactCustomerSupportOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'contactCustomerSupport'
-        ),
-        'escalateToCustomerSupport' => array(
+        ],
+        'escalateToCustomerSupport' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EscalateToCustomerSupportOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'escalateToCustomerSupport'
-        ),
-        'appealToCustomerSupport' => array(
+        ],
+        'appealToCustomerSupport' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealToCustomerSupportOptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'appealToCustomerSupport'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

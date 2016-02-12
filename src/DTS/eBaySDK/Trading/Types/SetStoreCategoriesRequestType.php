@@ -19,37 +19,37 @@ class SetStoreCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Action' => array(
+    private static $propertyTypes = [
+        'Action' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Action'
-        ),
-        'ItemDestinationCategoryID' => array(
+        ],
+        'ItemDestinationCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemDestinationCategoryID'
-        ),
-        'DestinationParentCategoryID' => array(
+        ],
+        'DestinationParentCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DestinationParentCategoryID'
-        ),
-        'StoreCategories' => array(
+        ],
+        'StoreCategories' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategories'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

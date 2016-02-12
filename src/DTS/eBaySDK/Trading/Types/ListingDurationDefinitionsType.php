@@ -17,25 +17,25 @@ class ListingDurationDefinitionsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ListingDuration' => array(
+    private static $propertyTypes = [
+        'ListingDuration' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingDurationDefinitionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ListingDuration'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'Version'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

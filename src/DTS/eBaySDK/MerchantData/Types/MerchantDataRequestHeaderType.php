@@ -17,25 +17,25 @@ class MerchantDataRequestHeaderType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SiteID' => array(
+    private static $propertyTypes = [
+        'SiteID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteID'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

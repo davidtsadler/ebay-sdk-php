@@ -25,73 +25,73 @@ class ListingFeatureDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BoldTitle' => array(
+    private static $propertyTypes = [
+        'BoldTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BoldTitle'
-        ),
-        'Border' => array(
+        ],
+        'Border' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Border'
-        ),
-        'Highlight' => array(
+        ],
+        'Highlight' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Highlight'
-        ),
-        'GiftIcon' => array(
+        ],
+        'GiftIcon' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GiftIcon'
-        ),
-        'HomePageFeatured' => array(
+        ],
+        'HomePageFeatured' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HomePageFeatured'
-        ),
-        'FeaturedFirst' => array(
+        ],
+        'FeaturedFirst' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeaturedFirst'
-        ),
-        'FeaturedPlus' => array(
+        ],
+        'FeaturedPlus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeaturedPlus'
-        ),
-        'ProPack' => array(
+        ],
+        'ProPack' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProPack'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

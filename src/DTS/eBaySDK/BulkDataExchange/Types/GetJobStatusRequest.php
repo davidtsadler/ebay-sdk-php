@@ -16,19 +16,19 @@ class GetJobStatusRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServic
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'jobId' => array(
+    private static $propertyTypes = [
+        'jobId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

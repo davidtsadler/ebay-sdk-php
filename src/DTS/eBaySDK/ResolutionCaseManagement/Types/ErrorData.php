@@ -23,61 +23,61 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'errorId' => array(
+    private static $propertyTypes = [
+        'errorId' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'errorId'
-        ),
-        'domain' => array(
+        ],
+        'domain' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'domain'
-        ),
-        'subdomain' => array(
+        ],
+        'subdomain' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'subdomain'
-        ),
-        'severity' => array(
+        ],
+        'severity' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'severity'
-        ),
-        'category' => array(
+        ],
+        'category' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'category'
-        ),
-        'message' => array(
+        ],
+        'message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'message'
-        ),
-        'exceptionId' => array(
+        ],
+        'exceptionId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'exceptionId'
-        ),
-        'parameter' => array(
+        ],
+        'parameter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ErrorParameter',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'parameter'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -22,55 +22,55 @@ class UserDefinedListType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'ItemCount' => array(
+        ],
+        'ItemCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemCount'
-        ),
-        'FavoriteSearcheCount' => array(
+        ],
+        'FavoriteSearcheCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSearcheCount'
-        ),
-        'FavoriteSellerCount' => array(
+        ],
+        'FavoriteSellerCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSellerCount'
-        ),
-        'ItemArray' => array(
+        ],
+        'ItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
-        ),
-        'FavoriteSearches' => array(
+        ],
+        'FavoriteSearches' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSearches'
-        ),
-        'FavoriteSellers' => array(
+        ],
+        'FavoriteSellers' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerListType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

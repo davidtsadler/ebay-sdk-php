@@ -47,205 +47,205 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OrderID' => array(
+    private static $propertyTypes = [
+        'OrderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'BuyerUserID' => array(
+        ],
+        'BuyerUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerUserID'
-        ),
-        'BuyerFirstName' => array(
+        ],
+        'BuyerFirstName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerFirstName'
-        ),
-        'BuyerLastName' => array(
+        ],
+        'BuyerLastName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerLastName'
-        ),
-        'BuyerEmail' => array(
+        ],
+        'BuyerEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerEmail'
-        ),
-        'BuyerPhone' => array(
+        ],
+        'BuyerPhone' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerPhone'
-        ),
-        'ShipRecipientName' => array(
+        ],
+        'ShipRecipientName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipRecipientName'
-        ),
-        'ShipStreet1' => array(
+        ],
+        'ShipStreet1' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipStreet1'
-        ),
-        'ShipStreet2' => array(
+        ],
+        'ShipStreet2' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipStreet2'
-        ),
-        'ShipCityName' => array(
+        ],
+        'ShipCityName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipCityName'
-        ),
-        'ShipStateOrProvince' => array(
+        ],
+        'ShipStateOrProvince' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipStateOrProvince'
-        ),
-        'ShipPostalCode' => array(
+        ],
+        'ShipPostalCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipPostalCode'
-        ),
-        'ShipCountryName' => array(
+        ],
+        'ShipCountryName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipCountryName'
-        ),
-        'ShippingService' => array(
+        ],
+        'ShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
-        ),
-        'PaymentClearedTime' => array(
+        ],
+        'PaymentClearedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentClearedTime'
-        ),
-        'CheckoutSiteID' => array(
+        ],
+        'CheckoutSiteID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutSiteID'
-        ),
-        'OrderCreationTime' => array(
+        ],
+        'OrderCreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderCreationTime'
-        ),
-        'OrderSalePrice' => array(
+        ],
+        'OrderSalePrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderSalePrice'
-        ),
-        'TaxAmount' => array(
+        ],
+        'TaxAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxAmount'
-        ),
-        'InsuranceCost' => array(
+        ],
+        'InsuranceCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
-        ),
-        'ShippingCost' => array(
+        ],
+        'ShippingCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCost'
-        ),
-        'OrderTotalCost' => array(
+        ],
+        'OrderTotalCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderTotalCost'
-        ),
-        'SellingManagerSaleRecordID' => array(
+        ],
+        'SellingManagerSaleRecordID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerSaleRecordID'
-        ),
-        'OrderItemDetails' => array(
+        ],
+        'OrderItemDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderItemDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderItemDetails'
-        ),
-        'BuyerStaticAlias' => array(
+        ],
+        'BuyerStaticAlias' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerStaticAlias'
-        ),
-        'ShippingServiceToken' => array(
+        ],
+        'ShippingServiceToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceToken'
-        ),
-        'CheckoutStatus' => array(
+        ],
+        'CheckoutStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\CheckoutStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
-        ),
-        'PaymentHoldStatus' => array(
+        ],
+        'PaymentHoldStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldStatus'
-        ),
-        'ExternalTransaction' => array(
+        ],
+        'ExternalTransaction' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ExternalTransactionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExternalTransaction'
-        ),
-        'ShipReferenceId' => array(
+        ],
+        'ShipReferenceId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipReferenceId'
-        ),
-        'PickupDetails' => array(
+        ],
+        'PickupDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PickupDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupDetails'
-        ),
-        'PickupMethodSelected' => array(
+        ],
+        'PickupMethodSelected' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupMethodSelected'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

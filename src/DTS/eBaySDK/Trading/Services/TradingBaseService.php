@@ -92,7 +92,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         $certId = $credentials->getCertId();
         $devId = $credentials->getDevId();
 
-        $headers = array();
+        $headers = [];
 
         // Add required headers first.
         $headers[self::HDR_API_VERSION] = $this->getConfig('apiVersion');

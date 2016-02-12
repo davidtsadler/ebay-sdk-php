@@ -26,79 +26,79 @@ class FindReviewsAndGuidesResponseType extends \DTS\eBaySDK\Shopping\Types\Abstr
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ReviewCount' => array(
+    private static $propertyTypes = [
+        'ReviewCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewCount'
-        ),
-        'BuyingGuideCount' => array(
+        ],
+        'BuyingGuideCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideCount'
-        ),
-        'ReviewerRank' => array(
+        ],
+        'ReviewerRank' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewerRank'
-        ),
-        'TotalHelpfulnessVotes' => array(
+        ],
+        'TotalHelpfulnessVotes' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalHelpfulnessVotes'
-        ),
-        'ProductID' => array(
+        ],
+        'ProductID' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'ReviewsAndGuidesURL' => array(
+        ],
+        'ReviewsAndGuidesURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewsAndGuidesURL'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'TotalPages' => array(
+        ],
+        'TotalPages' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalPages'
-        ),
-        'BuyingGuideDetails' => array(
+        ],
+        'BuyingGuideDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\BuyingGuideDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideDetails'
-        ),
-        'ReviewDetails' => array(
+        ],
+        'ReviewDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ReviewDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewDetails'
-        ),
-        'PositiveHelpfulnessVotes' => array(
+        ],
+        'PositiveHelpfulnessVotes' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PositiveHelpfulnessVotes'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

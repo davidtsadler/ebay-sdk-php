@@ -17,25 +17,25 @@ class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RightsOwnerID' => array(
+    private static $propertyTypes = [
+        'RightsOwnerID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RightsOwnerID'
-        ),
-        'ReportItems' => array(
+        ],
+        'ReportItems' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROReportItemsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReportItems'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

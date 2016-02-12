@@ -20,43 +20,43 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'QualifiesForBuyItNow' => array(
+    private static $propertyTypes = [
+        'QualifiesForBuyItNow' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNow'
-        ),
-        'QualifiesForBuyItNowMultiple' => array(
+        ],
+        'QualifiesForBuyItNowMultiple' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNowMultiple'
-        ),
-        'QualifiedForFixedPriceOneDayDuration' => array(
+        ],
+        'QualifiedForFixedPriceOneDayDuration' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiedForFixedPriceOneDayDuration'
-        ),
-        'QualifiesForVariations' => array(
+        ],
+        'QualifiesForVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForVariations'
-        ),
-        'QualifiedForAuctionOneDayDuration' => array(
+        ],
+        'QualifiedForAuctionOneDayDuration' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiedForAuctionOneDayDuration'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

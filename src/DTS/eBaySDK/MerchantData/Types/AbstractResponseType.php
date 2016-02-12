@@ -30,103 +30,103 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Timestamp' => array(
+    private static $propertyTypes = [
+        'Timestamp' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Timestamp'
-        ),
-        'Ack' => array(
+        ],
+        'Ack' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'Errors' => array(
+        ],
+        'Errors' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        ),
-        'Message' => array(
+        ],
+        'Message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Message'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
-        ),
-        'Build' => array(
+        ],
+        'Build' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Build'
-        ),
-        'NotificationEventName' => array(
+        ],
+        'NotificationEventName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationEventName'
-        ),
-        'DuplicateInvocationDetails' => array(
+        ],
+        'DuplicateInvocationDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DuplicateInvocationDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DuplicateInvocationDetails'
-        ),
-        'RecipientUserID' => array(
+        ],
+        'RecipientUserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecipientUserID'
-        ),
-        'EIASToken' => array(
+        ],
+        'EIASToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EIASToken'
-        ),
-        'NotificationSignature' => array(
+        ],
+        'NotificationSignature' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationSignature'
-        ),
-        'HardExpirationWarning' => array(
+        ],
+        'HardExpirationWarning' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
-        ),
-        'BotBlock' => array(
+        ],
+        'BotBlock' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\BotBlockResponseType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BotBlock'
-        ),
-        'ExternalUserData' => array(
+        ],
+        'ExternalUserData' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalUserData'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -35,133 +35,133 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'openReason' => array(
+    private static $propertyTypes = [
+        'openReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'openReason'
-        ),
-        'decisionReason' => array(
+        ],
+        'decisionReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionReason'
-        ),
-        'decisionReasonDetail' => array(
+        ],
+        'decisionReasonDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DecisionReasonDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionReasonDetail'
-        ),
-        'decisionDate' => array(
+        ],
+        'decisionDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decisionDate'
-        ),
-        'decision' => array(
+        ],
+        'decision' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'decision'
-        ),
-        'FVFCredited' => array(
+        ],
+        'FVFCredited' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FVFCredited'
-        ),
-        'notCountedInBuyerProtectionCases' => array(
+        ],
+        'notCountedInBuyerProtectionCases' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'notCountedInBuyerProtectionCases'
-        ),
-        'globalId' => array(
+        ],
+        'globalId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'globalId'
-        ),
-        'appeal' => array(
+        ],
+        'appeal' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'appeal'
-        ),
-        'responseHistory' => array(
+        ],
+        'responseHistory' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'responseHistory'
-        ),
-        'agreedRefundAmount' => array(
+        ],
+        'agreedRefundAmount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'agreedRefundAmount'
-        ),
-        'paymentDetail' => array(
+        ],
+        'paymentDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paymentDetail'
-        ),
-        'buyerReturnShipment' => array(
+        ],
+        'buyerReturnShipment' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'buyerReturnShipment'
-        ),
-        'sellerShipment' => array(
+        ],
+        'sellerShipment' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sellerShipment'
-        ),
-        'detailStatus' => array(
+        ],
+        'detailStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'detailStatus'
-        ),
-        'detailStatusInfo' => array(
+        ],
+        'detailStatusInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DetailStatusInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'detailStatusInfo'
-        ),
-        'initialBuyerExpectation' => array(
+        ],
+        'initialBuyerExpectation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'initialBuyerExpectation'
-        ),
-        'initialBuyerExpectationDetail' => array(
+        ],
+        'initialBuyerExpectationDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\InitialBuyerExpectationDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'initialBuyerExpectationDetail'
-        ),
-        'returnMerchandiseAuthorization' => array(
+        ],
+        'returnMerchandiseAuthorization' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
-        ),
-        'caseDocumentInfo' => array(
+        ],
+        'caseDocumentInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'caseDocumentInfo'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

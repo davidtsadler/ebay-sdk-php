@@ -17,25 +17,25 @@ class FindItemsByProductResponse extends \DTS\eBaySDK\Finding\Types\BaseFindingS
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'aspectHistogramContainer' => array(
+    private static $propertyTypes = [
+        'aspectHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'aspectHistogramContainer'
-        ),
-        'conditionHistogramContainer' => array(
+        ],
+        'conditionHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ConditionHistogramContainer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'conditionHistogramContainer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

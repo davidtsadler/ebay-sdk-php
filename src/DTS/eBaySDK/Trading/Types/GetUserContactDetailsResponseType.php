@@ -18,31 +18,31 @@ class GetUserContactDetailsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UserID' => array(
+    private static $propertyTypes = [
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'ContactAddress' => array(
+        ],
+        'ContactAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ContactAddress'
-        ),
-        'RegistrationDate' => array(
+        ],
+        'RegistrationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

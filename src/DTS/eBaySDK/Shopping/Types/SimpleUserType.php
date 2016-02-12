@@ -37,145 +37,145 @@ class SimpleUserType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UserID' => array(
+    private static $propertyTypes = [
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'FeedbackPrivate' => array(
+        ],
+        'FeedbackPrivate' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackPrivate'
-        ),
-        'FeedbackRatingStar' => array(
+        ],
+        'FeedbackRatingStar' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackRatingStar'
-        ),
-        'FeedbackScore' => array(
+        ],
+        'FeedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
-        ),
-        'UserAnonymized' => array(
+        ],
+        'UserAnonymized' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserAnonymized'
-        ),
-        'NewUser' => array(
+        ],
+        'NewUser' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewUser'
-        ),
-        'RegistrationDate' => array(
+        ],
+        'RegistrationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationDate'
-        ),
-        'RegistrationSite' => array(
+        ],
+        'RegistrationSite' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationSite'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'SellerBusinessType' => array(
+        ],
+        'SellerBusinessType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerBusinessType'
-        ),
-        'StoreURL' => array(
+        ],
+        'StoreURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreURL'
-        ),
-        'StoreName' => array(
+        ],
+        'StoreName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreName'
-        ),
-        'SellerItemsURL' => array(
+        ],
+        'SellerItemsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerItemsURL'
-        ),
-        'AboutMeURL' => array(
+        ],
+        'AboutMeURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AboutMeURL'
-        ),
-        'MyWorldURL' => array(
+        ],
+        'MyWorldURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MyWorldURL'
-        ),
-        'MyWorldSmallImage' => array(
+        ],
+        'MyWorldSmallImage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MyWorldSmallImage'
-        ),
-        'MyWorldLargeImage' => array(
+        ],
+        'MyWorldLargeImage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MyWorldLargeImage'
-        ),
-        'ReviewsAndGuidesURL' => array(
+        ],
+        'ReviewsAndGuidesURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewsAndGuidesURL'
-        ),
-        'FeedbackDetailsURL' => array(
+        ],
+        'FeedbackDetailsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackDetailsURL'
-        ),
-        'PositiveFeedbackPercent' => array(
+        ],
+        'PositiveFeedbackPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackPercent'
-        ),
-        'SellerLevel' => array(
+        ],
+        'SellerLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerLevel'
-        ),
-        'TopRatedSeller' => array(
+        ],
+        'TopRatedSeller' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TopRatedSeller'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

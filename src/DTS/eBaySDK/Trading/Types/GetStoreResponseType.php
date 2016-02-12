@@ -16,19 +16,19 @@ class GetStoreResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Store' => array(
+    private static $propertyTypes = [
+        'Store' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Store'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

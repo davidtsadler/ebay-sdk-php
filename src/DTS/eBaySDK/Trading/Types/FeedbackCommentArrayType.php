@@ -16,19 +16,19 @@ class FeedbackCommentArrayType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'StoredCommentText' => array(
+    private static $propertyTypes = [
+        'StoredCommentText' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'StoredCommentText'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

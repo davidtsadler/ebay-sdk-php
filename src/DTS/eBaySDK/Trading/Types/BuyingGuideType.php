@@ -22,55 +22,55 @@ class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'URL' => array(
+        ],
+        'URL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URL'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'Title' => array(
+        ],
+        'Title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
-        ),
-        'Text' => array(
+        ],
+        'Text' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Text'
-        ),
-        'CreationTime' => array(
+        ],
+        'CreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationTime'
-        ),
-        'UserID' => array(
+        ],
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

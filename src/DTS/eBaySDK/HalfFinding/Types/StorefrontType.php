@@ -17,25 +17,25 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'storeURL' => array(
+    private static $propertyTypes = [
+        'storeURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'storeURL'
-        ),
-        'storeName' => array(
+        ],
+        'storeName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'storeName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

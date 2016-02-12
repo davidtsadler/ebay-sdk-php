@@ -27,85 +27,85 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Refund' => array(
+    private static $propertyTypes = [
+        'Refund' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RefundDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Refund'
-        ),
-        'ReturnsWithin' => array(
+        ],
+        'ReturnsWithin' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReturnsWithinDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
-        ),
-        'ReturnsAccepted' => array(
+        ],
+        'ReturnsAccepted' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ReturnsAccepted'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'WarrantyOffered' => array(
+        ],
+        'WarrantyOffered' => [
             'type' => 'DTS\eBaySDK\Trading\Types\WarrantyOfferedDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'WarrantyOffered'
-        ),
-        'WarrantyType' => array(
+        ],
+        'WarrantyType' => [
             'type' => 'DTS\eBaySDK\Trading\Types\WarrantyTypeDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'WarrantyType'
-        ),
-        'WarrantyDuration' => array(
+        ],
+        'WarrantyDuration' => [
             'type' => 'DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'WarrantyDuration'
-        ),
-        'EAN' => array(
+        ],
+        'EAN' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EAN'
-        ),
-        'ShippingCostPaidBy' => array(
+        ],
+        'ShippingCostPaidBy' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidBy'
-        ),
-        'RestockingFeeValue' => array(
+        ],
+        'RestockingFeeValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RestockingFeeValue'
-        ),
-        'DetailVersion' => array(
+        ],
+        'DetailVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
-        ),
-        'UpdateTime' => array(
+        ],
+        'UpdateTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -23,61 +23,61 @@ class ShipPackageDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MeasurementUnit' => array(
+    private static $propertyTypes = [
+        'MeasurementUnit' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MeasurementUnit'
-        ),
-        'PackageDepth' => array(
+        ],
+        'PackageDepth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageDepth'
-        ),
-        'PackageLength' => array(
+        ],
+        'PackageLength' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageLength'
-        ),
-        'PackageWidth' => array(
+        ],
+        'PackageWidth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PackageWidth'
-        ),
-        'ShippingIrregular' => array(
+        ],
+        'ShippingIrregular' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingIrregular'
-        ),
-        'ShippingPackage' => array(
+        ],
+        'ShippingPackage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingPackage'
-        ),
-        'WeightMajor' => array(
+        ],
+        'WeightMajor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMajor'
-        ),
-        'WeightMinor' => array(
+        ],
+        'WeightMinor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

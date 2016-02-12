@@ -27,52 +27,52 @@ class ToArrayTest extends \PHPUnit_Framework_TestCase
 
     public function testToArray()
     {
-        $array = array(
+        $array = [
             'integer' => 123,
             'string' => 'foo',
             'double' => 123.45,
             'booleanTrue' => true,
             'booleanFalse' => false,
             'DateTime' => '2000-01-01T00:00:00.000Z',
-            'strings' => array('foo', 'bar'),
-            'integers' => array(111, 222),
-            'AmountClass' => array(
+            'strings' => ['foo', 'bar'],
+            'integers' => [111, 222],
+            'AmountClass' => [
                 'value' => 543.21,
                 'AttributeOne' => 'one'
-            ),
-            'SimpleClass' => array(
+            ],
+            'SimpleClass' => [
                 'integer' => 123,
                 'string' => 'foo',
                 'double' => 123.45,
                 'booleanTrue' => true,
                 'booleanFalse' => false,
                 'DateTime' => '2000-01-01T00:00:00.000Z',
-                'integers' => array(100, 200, 300)
-            ),
-            'simpleClasses' => array(
-                array(
+                'integers' => [100, 200, 300]
+            ],
+            'simpleClasses' => [
+                [
                     'integer' => 321,
                     'string' => 'bar',
                     'double' => 5432.10,
                     'booleanTrue' => true,
                     'booleanFalse' => false,
                     'DateTime' => '2015-01-01T00:00:00.000Z'
-                ),
-                array(
-                    'integers' => array(300, 200, 100),
-                    'strings' => array('foo', 'bar')
-                ),
-                array()
-            ),
-            'base64BinaryType' => array(),
-            'booleanType' => array(),
-            'decimalType' => array(),
-            'doubleType' => array(),
-            'integerType' => array(),
-            'stringType' => array(),
-            'tokenType' => array(),
-            'uriType' => array()
-        );
+                ],
+                [
+                    'integers' => [300, 200, 100],
+                    'strings' => ['foo', 'bar']
+                ],
+                []
+            ],
+            'base64BinaryType' => [],
+            'booleanType' => [],
+            'decimalType' => [],
+            'doubleType' => [],
+            'integerType' => [],
+            'stringType' => [],
+            'tokenType' => [],
+            'uriType' => []
+        ];
 
         $this->obj->integer = 123;
         $this->obj->string = 'foo';
@@ -80,36 +80,36 @@ class ToArrayTest extends \PHPUnit_Framework_TestCase
         $this->obj->booleanTrue = true;
         $this->obj->booleanFalse = false;
         $this->obj->DateTime = new \DateTime('2000-01-01', new \DateTimeZone('UTC'));
-        $this->obj->strings = array('foo', 'bar');
-        $this->obj->integers = array(111, 222);
-        $this->obj->AmountClass = new Amountclass(array(
+        $this->obj->strings = ['foo', 'bar'];
+        $this->obj->integers = [111, 222];
+        $this->obj->AmountClass = new Amountclass([
             'value' => 543.21,
             'AttributeOne' => 'one'
-        ));
-        $this->obj->SimpleClass = new SimpleClass(array(
+        ]);
+        $this->obj->SimpleClass = new SimpleClass([
             'integer' => 123,
             'string' => 'foo',
             'double' => 123.45,
             'booleanTrue' => true,
             'booleanFalse' => false,
             'DateTime' => new \DateTime('2000-01-01', new \DateTimeZone('UTC')),
-            'integers' => array(100, 200, 300)
-        ));
-        $this->obj->simpleClasses = array(
-            new SimpleClass(array(
+            'integers' => [100, 200, 300]
+        ]);
+        $this->obj->simpleClasses = [
+            new SimpleClass([
                 'integer' => 321,
                 'string' => 'bar',
                 'double' => 5432.10,
                 'booleanTrue' => true,
                 'booleanFalse' => false,
                 'DateTime' => new \DateTime('2015-01-01', new \DateTimeZone('UTC'))
-            )),
-            new SimpleClass(array(
-                'integers' => array(300, 200, 100),
-                'strings' => array('foo', 'bar')
-            )),
+            ]),
+            new SimpleClass([
+                'integers' => [300, 200, 100],
+                'strings' => ['foo', 'bar']
+            ]),
             new SimpleClass()
-        );
+        ];
         $this->obj->base64BinaryType = new Base64BinaryType();
         $this->obj->booleanType = new BooleanType();
         $this->obj->decimalType = new DecimalType();

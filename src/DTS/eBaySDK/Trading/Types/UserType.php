@@ -58,271 +58,271 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AboutMePage' => array(
+    private static $propertyTypes = [
+        'AboutMePage' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AboutMePage'
-        ),
-        'EIASToken' => array(
+        ],
+        'EIASToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EIASToken'
-        ),
-        'Email' => array(
+        ],
+        'Email' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Email'
-        ),
-        'FeedbackScore' => array(
+        ],
+        'FeedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
-        ),
-        'UniqueNegativeFeedbackCount' => array(
+        ],
+        'UniqueNegativeFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniqueNegativeFeedbackCount'
-        ),
-        'UniquePositiveFeedbackCount' => array(
+        ],
+        'UniquePositiveFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniquePositiveFeedbackCount'
-        ),
-        'PositiveFeedbackPercent' => array(
+        ],
+        'PositiveFeedbackPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackPercent'
-        ),
-        'FeedbackPrivate' => array(
+        ],
+        'FeedbackPrivate' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackPrivate'
-        ),
-        'FeedbackRatingStar' => array(
+        ],
+        'FeedbackRatingStar' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackRatingStar'
-        ),
-        'IDVerified' => array(
+        ],
+        'IDVerified' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IDVerified'
-        ),
-        'eBayGoodStanding' => array(
+        ],
+        'eBayGoodStanding' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayGoodStanding'
-        ),
-        'NewUser' => array(
+        ],
+        'NewUser' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewUser'
-        ),
-        'RegistrationAddress' => array(
+        ],
+        'RegistrationAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationAddress'
-        ),
-        'RegistrationDate' => array(
+        ],
+        'RegistrationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationDate'
-        ),
-        'Site' => array(
+        ],
+        'Site' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Site'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'UserID' => array(
+        ],
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'UserIDChanged' => array(
+        ],
+        'UserIDChanged' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserIDChanged'
-        ),
-        'UserIDLastChanged' => array(
+        ],
+        'UserIDLastChanged' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserIDLastChanged'
-        ),
-        'VATStatus' => array(
+        ],
+        'VATStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATStatus'
-        ),
-        'BuyerInfo' => array(
+        ],
+        'BuyerInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BuyerType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerInfo'
-        ),
-        'SellerInfo' => array(
+        ],
+        'SellerInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerInfo'
-        ),
-        'BusinessRole' => array(
+        ],
+        'BusinessRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BusinessRole'
-        ),
-        'PayPalAccountLevel' => array(
+        ],
+        'PayPalAccountLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalAccountLevel'
-        ),
-        'PayPalAccountType' => array(
+        ],
+        'PayPalAccountType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalAccountType'
-        ),
-        'PayPalAccountStatus' => array(
+        ],
+        'PayPalAccountStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalAccountStatus'
-        ),
-        'UserSubscription' => array(
+        ],
+        'UserSubscription' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'UserSubscription'
-        ),
-        'SiteVerified' => array(
+        ],
+        'SiteVerified' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SiteVerified'
-        ),
-        'SkypeID' => array(
+        ],
+        'SkypeID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SkypeID'
-        ),
-        'eBayWikiReadOnly' => array(
+        ],
+        'eBayWikiReadOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayWikiReadOnly'
-        ),
-        'TUVLevel' => array(
+        ],
+        'TUVLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TUVLevel'
-        ),
-        'VATID' => array(
+        ],
+        'VATID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATID'
-        ),
-        'MotorsDealer' => array(
+        ],
+        'MotorsDealer' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MotorsDealer'
-        ),
-        'BiddingSummary' => array(
+        ],
+        'BiddingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BiddingSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BiddingSummary'
-        ),
-        'UserAnonymized' => array(
+        ],
+        'UserAnonymized' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserAnonymized'
-        ),
-        'UniqueNeutralFeedbackCount' => array(
+        ],
+        'UniqueNeutralFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniqueNeutralFeedbackCount'
-        ),
-        'EnterpriseSeller' => array(
+        ],
+        'EnterpriseSeller' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EnterpriseSeller'
-        ),
-        'BillingEmail' => array(
+        ],
+        'BillingEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BillingEmail'
-        ),
-        'QualifiesForSelling' => array(
+        ],
+        'QualifiesForSelling' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForSelling'
-        ),
-        'StaticAlias' => array(
+        ],
+        'StaticAlias' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StaticAlias'
-        ),
-        'ShippingAddress' => array(
+        ],
+        'ShippingAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
-        ),
-        'UserFirstName' => array(
+        ],
+        'UserFirstName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserFirstName'
-        ),
-        'UserLastName' => array(
+        ],
+        'UserLastName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserLastName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

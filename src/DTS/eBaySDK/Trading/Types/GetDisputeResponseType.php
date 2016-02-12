@@ -16,19 +16,19 @@ class GetDisputeResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Dispute' => array(
+    private static $propertyTypes = [
+        'Dispute' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Dispute'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

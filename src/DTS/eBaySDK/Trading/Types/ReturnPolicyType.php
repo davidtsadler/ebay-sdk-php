@@ -34,127 +34,127 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RefundOption' => array(
+    private static $propertyTypes = [
+        'RefundOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundOption'
-        ),
-        'Refund' => array(
+        ],
+        'Refund' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Refund'
-        ),
-        'ReturnsWithinOption' => array(
+        ],
+        'ReturnsWithinOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsWithinOption'
-        ),
-        'ReturnsWithin' => array(
+        ],
+        'ReturnsWithin' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
-        ),
-        'ReturnsAcceptedOption' => array(
+        ],
+        'ReturnsAcceptedOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsAcceptedOption'
-        ),
-        'ReturnsAccepted' => array(
+        ],
+        'ReturnsAccepted' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnsAccepted'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'WarrantyOfferedOption' => array(
+        ],
+        'WarrantyOfferedOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyOfferedOption'
-        ),
-        'WarrantyOffered' => array(
+        ],
+        'WarrantyOffered' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyOffered'
-        ),
-        'WarrantyTypeOption' => array(
+        ],
+        'WarrantyTypeOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyTypeOption'
-        ),
-        'WarrantyType' => array(
+        ],
+        'WarrantyType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyType'
-        ),
-        'WarrantyDurationOption' => array(
+        ],
+        'WarrantyDurationOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyDurationOption'
-        ),
-        'WarrantyDuration' => array(
+        ],
+        'WarrantyDuration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WarrantyDuration'
-        ),
-        'EAN' => array(
+        ],
+        'EAN' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EAN'
-        ),
-        'ShippingCostPaidByOption' => array(
+        ],
+        'ShippingCostPaidByOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidByOption'
-        ),
-        'ShippingCostPaidBy' => array(
+        ],
+        'ShippingCostPaidBy' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidBy'
-        ),
-        'RestockingFeeValue' => array(
+        ],
+        'RestockingFeeValue' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockingFeeValue'
-        ),
-        'RestockingFeeValueOption' => array(
+        ],
+        'RestockingFeeValueOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockingFeeValueOption'
-        ),
-        'ExtendedHolidayReturns' => array(
+        ],
+        'ExtendedHolidayReturns' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtendedHolidayReturns'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

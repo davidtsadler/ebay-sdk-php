@@ -20,43 +20,43 @@ class ExternalTransactionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ExternalTransactionID' => array(
+    private static $propertyTypes = [
+        'ExternalTransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransactionID'
-        ),
-        'ExternalTransactionTime' => array(
+        ],
+        'ExternalTransactionTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransactionTime'
-        ),
-        'FeeOrCreditAmount' => array(
+        ],
+        'FeeOrCreditAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeOrCreditAmount'
-        ),
-        'PaymentOrRefundAmount' => array(
+        ],
+        'PaymentOrRefundAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentOrRefundAmount'
-        ),
-        'ExternalTransactionStatus' => array(
+        ],
+        'ExternalTransactionStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalTransactionStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

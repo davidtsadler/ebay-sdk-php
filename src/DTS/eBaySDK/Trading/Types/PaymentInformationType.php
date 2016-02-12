@@ -16,19 +16,19 @@ class PaymentInformationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Payment' => array(
+    private static $propertyTypes = [
+        'Payment' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaymentTransactionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Payment'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

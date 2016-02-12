@@ -19,37 +19,37 @@ class Affiliate extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'trackingId' => array(
+    private static $propertyTypes = [
+        'trackingId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'trackingId'
-        ),
-        'networkId' => array(
+        ],
+        'networkId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'networkId'
-        ),
-        'customId' => array(
+        ],
+        'customId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'customId'
-        ),
-        'geoTargeting' => array(
+        ],
+        'geoTargeting' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'geoTargeting'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

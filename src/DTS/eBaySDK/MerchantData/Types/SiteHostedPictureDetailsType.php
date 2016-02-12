@@ -23,61 +23,61 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PictureName' => array(
+    private static $propertyTypes = [
+        'PictureName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureName'
-        ),
-        'PictureSet' => array(
+        ],
+        'PictureSet' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSet'
-        ),
-        'PictureFormat' => array(
+        ],
+        'PictureFormat' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureFormat'
-        ),
-        'FullURL' => array(
+        ],
+        'FullURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FullURL'
-        ),
-        'BaseURL' => array(
+        ],
+        'BaseURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BaseURL'
-        ),
-        'PictureSetMember' => array(
+        ],
+        'PictureSetMember' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PictureSetMemberType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureSetMember'
-        ),
-        'ExternalPictureURL' => array(
+        ],
+        'ExternalPictureURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
-        ),
-        'UseByDate' => array(
+        ],
+        'UseByDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UseByDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

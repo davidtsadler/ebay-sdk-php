@@ -17,25 +17,25 @@ class BuyingGuideDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BuyingGuide' => array(
+    private static $propertyTypes = [
+        'BuyingGuide' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\BuyingGuideType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'BuyingGuide'
-        ),
-        'BuyingGuideHub' => array(
+        ],
+        'BuyingGuideHub' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideHub'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

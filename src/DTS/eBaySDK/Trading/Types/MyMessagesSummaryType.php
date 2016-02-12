@@ -24,67 +24,67 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FolderSummary' => array(
+    private static $propertyTypes = [
+        'FolderSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FolderSummary'
-        ),
-        'NewAlertCount' => array(
+        ],
+        'NewAlertCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewAlertCount'
-        ),
-        'NewMessageCount' => array(
+        ],
+        'NewMessageCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewMessageCount'
-        ),
-        'UnresolvedAlertCount' => array(
+        ],
+        'UnresolvedAlertCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnresolvedAlertCount'
-        ),
-        'FlaggedMessageCount' => array(
+        ],
+        'FlaggedMessageCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FlaggedMessageCount'
-        ),
-        'TotalAlertCount' => array(
+        ],
+        'TotalAlertCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAlertCount'
-        ),
-        'TotalMessageCount' => array(
+        ],
+        'TotalMessageCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalMessageCount'
-        ),
-        'NewHighPriorityCount' => array(
+        ],
+        'NewHighPriorityCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewHighPriorityCount'
-        ),
-        'TotalHighPriorityCount' => array(
+        ],
+        'TotalHighPriorityCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalHighPriorityCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

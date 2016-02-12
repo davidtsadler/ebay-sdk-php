@@ -17,25 +17,25 @@ class ItemPolicyViolationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PolicyID' => array(
+    private static $propertyTypes = [
+        'PolicyID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PolicyID'
-        ),
-        'PolicyText' => array(
+        ],
+        'PolicyText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PolicyText'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

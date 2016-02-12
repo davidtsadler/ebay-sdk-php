@@ -19,37 +19,37 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Variation' => array(
+    private static $propertyTypes = [
+        'Variation' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Variation'
-        ),
-        'Pictures' => array(
+        ],
+        'Pictures' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PicturesType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Pictures'
-        ),
-        'VariationSpecificsSet' => array(
+        ],
+        'VariationSpecificsSet' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecificsSet'
-        ),
-        'ModifyNameList' => array(
+        ],
+        'ModifyNameList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModifyNameList'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

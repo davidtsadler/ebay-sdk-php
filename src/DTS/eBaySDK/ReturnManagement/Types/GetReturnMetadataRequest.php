@@ -16,19 +16,19 @@ class GetReturnMetadataRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'metadataEntryCode' => array(
+    private static $propertyTypes = [
+        'metadataEntryCode' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'metadataEntryCode'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

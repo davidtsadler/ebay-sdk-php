@@ -23,61 +23,61 @@ class GetAccountResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AccountID' => array(
+    private static $propertyTypes = [
+        'AccountID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountID'
-        ),
-        'AccountSummary' => array(
+        ],
+        'AccountSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AccountSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountSummary'
-        ),
-        'Currency' => array(
+        ],
+        'Currency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ),
-        'AccountEntries' => array(
+        ],
+        'AccountEntries' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AccountEntriesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountEntries'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'HasMoreEntries' => array(
+        ],
+        'HasMoreEntries' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMoreEntries'
-        ),
-        'EntriesPerPage' => array(
+        ],
+        'EntriesPerPage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EntriesPerPage'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

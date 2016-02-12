@@ -17,25 +17,25 @@ class VeROReportItemsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'VeROReportPacketID' => array(
+    private static $propertyTypes = [
+        'VeROReportPacketID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VeROReportPacketID'
-        ),
-        'VeROReportPacketStatus' => array(
+        ],
+        'VeROReportPacketStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VeROReportPacketStatus'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

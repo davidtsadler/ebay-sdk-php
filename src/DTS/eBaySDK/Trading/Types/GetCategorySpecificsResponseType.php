@@ -18,31 +18,31 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Recommendations' => array(
+    private static $propertyTypes = [
+        'Recommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Recommendations'
-        ),
-        'TaskReferenceID' => array(
+        ],
+        'TaskReferenceID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaskReferenceID'
-        ),
-        'FileReferenceID' => array(
+        ],
+        'FileReferenceID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FileReferenceID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

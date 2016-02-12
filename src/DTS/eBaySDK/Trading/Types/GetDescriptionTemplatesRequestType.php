@@ -18,31 +18,31 @@ class GetDescriptionTemplatesRequestType extends \DTS\eBaySDK\Trading\Types\Abst
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryID' => array(
+    private static $propertyTypes = [
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'LastModifiedTime' => array(
+        ],
+        'LastModifiedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedTime'
-        ),
-        'MotorVehicles' => array(
+        ],
+        'MotorVehicles' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MotorVehicles'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

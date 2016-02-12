@@ -20,43 +20,43 @@ class BaseResponse extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ack' => array(
+    private static $propertyTypes = [
+        'ack' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ack'
-        ),
-        'errorMessage' => array(
+        ],
+        'errorMessage' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ErrorMessage',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'errorMessage'
-        ),
-        'version' => array(
+        ],
+        'version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'version'
-        ),
-        'timestamp' => array(
+        ],
+        'timestamp' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'timestamp'
-        ),
-        'extension' => array(
+        ],
+        'extension' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ExtensionType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'extension'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

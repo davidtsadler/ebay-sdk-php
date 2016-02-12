@@ -17,25 +17,25 @@ class MetaDataCodeResultType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'codeName' => array(
+    private static $propertyTypes = [
+        'codeName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'codeName'
-        ),
-        'value' => array(
+        ],
+        'value' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'value'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

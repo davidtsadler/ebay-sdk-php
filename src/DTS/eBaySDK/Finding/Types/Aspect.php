@@ -17,25 +17,25 @@ class Aspect extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'valueHistogram' => array(
+    private static $propertyTypes = [
+        'valueHistogram' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectValueHistogram',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'valueHistogram'
-        ),
-        'name' => array(
+        ],
+        'name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'name'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

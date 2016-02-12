@@ -17,25 +17,25 @@ class MyMessagesFolderType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FolderID' => array(
+    private static $propertyTypes = [
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'FolderName' => array(
+        ],
+        'FolderName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

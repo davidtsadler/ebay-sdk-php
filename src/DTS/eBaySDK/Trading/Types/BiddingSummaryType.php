@@ -22,55 +22,55 @@ class BiddingSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SummaryDays' => array(
+    private static $propertyTypes = [
+        'SummaryDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SummaryDays'
-        ),
-        'TotalBids' => array(
+        ],
+        'TotalBids' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalBids'
-        ),
-        'BidActivityWithSeller' => array(
+        ],
+        'BidActivityWithSeller' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidActivityWithSeller'
-        ),
-        'BidsToUniqueSellers' => array(
+        ],
+        'BidsToUniqueSellers' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidsToUniqueSellers'
-        ),
-        'BidsToUniqueCategories' => array(
+        ],
+        'BidsToUniqueCategories' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidsToUniqueCategories'
-        ),
-        'BidRetractions' => array(
+        ],
+        'BidRetractions' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidRetractions'
-        ),
-        'ItemBidDetails' => array(
+        ],
+        'ItemBidDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemBidDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ItemBidDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

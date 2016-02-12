@@ -20,43 +20,43 @@ class PlaceOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Offer' => array(
+    private static $propertyTypes = [
+        'Offer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Offer'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'BlockOnWarning' => array(
+        ],
+        'BlockOnWarning' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BlockOnWarning'
-        ),
-        'AffiliateTrackingDetails' => array(
+        ],
+        'AffiliateTrackingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AffiliateTrackingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AffiliateTrackingDetails'
-        ),
-        'VariationSpecifics' => array(
+        ],
+        'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -23,61 +23,61 @@ class ListingInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'bestOfferEnabled' => array(
+    private static $propertyTypes = [
+        'bestOfferEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'bestOfferEnabled'
-        ),
-        'buyItNowAvailable' => array(
+        ],
+        'buyItNowAvailable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'buyItNowAvailable'
-        ),
-        'buyItNowPrice' => array(
+        ],
+        'buyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'buyItNowPrice'
-        ),
-        'convertedBuyItNowPrice' => array(
+        ],
+        'convertedBuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'convertedBuyItNowPrice'
-        ),
-        'startTime' => array(
+        ],
+        'startTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'startTime'
-        ),
-        'endTime' => array(
+        ],
+        'endTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'endTime'
-        ),
-        'listingType' => array(
+        ],
+        'listingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'listingType'
-        ),
-        'gift' => array(
+        ],
+        'gift' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'gift'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

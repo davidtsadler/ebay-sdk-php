@@ -19,37 +19,37 @@ class StoreCustomCategoryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CategoryID' => array(
+    private static $propertyTypes = [
+        'CategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'Name' => array(
+        ],
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'Order' => array(
+        ],
+        'Order' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Order'
-        ),
-        'ChildCategory' => array(
+        ],
+        'ChildCategory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ChildCategory'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

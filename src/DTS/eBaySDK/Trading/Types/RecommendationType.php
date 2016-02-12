@@ -20,43 +20,43 @@ class RecommendationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FieldGroup' => array(
+    private static $propertyTypes = [
+        'FieldGroup' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FieldGroup'
-        ),
-        'FieldName' => array(
+        ],
+        'FieldName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FieldName'
-        ),
-        'RecommendationCode' => array(
+        ],
+        'RecommendationCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RecommendationCode'
-        ),
-        'RecommendedValue' => array(
+        ],
+        'RecommendedValue' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RecommendedValue'
-        ),
-        'Message' => array(
+        ],
+        'Message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Message'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -23,61 +23,61 @@ class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'jobAction' => array(
+    private static $propertyTypes = [
+        'jobAction' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'jobAction'
-        ),
-        'filterType' => array(
+        ],
+        'filterType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'filterType'
-        ),
-        'includeAttributes' => array(
+        ],
+        'includeAttributes' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'includeAttributes'
-        ),
-        'includeDescription' => array(
+        ],
+        'includeDescription' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'includeDescription'
-        ),
-        'reportDateFrom' => array(
+        ],
+        'reportDateFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'reportDateFrom'
-        ),
-        'reportDateTo' => array(
+        ],
+        'reportDateTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'reportDateTo'
-        ),
-        'timeFrame' => array(
+        ],
+        'timeFrame' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'timeFrame'
-        ),
-        'changedFieldSelector' => array(
+        ],
+        'changedFieldSelector' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'changedFieldSelector'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

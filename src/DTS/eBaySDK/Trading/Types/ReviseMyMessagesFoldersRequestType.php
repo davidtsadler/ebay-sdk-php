@@ -18,31 +18,31 @@ class ReviseMyMessagesFoldersRequestType extends \DTS\eBaySDK\Trading\Types\Abst
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Operation' => array(
+    private static $propertyTypes = [
+        'Operation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Operation'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'FolderName' => array(
+        ],
+        'FolderName' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FolderName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

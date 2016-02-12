@@ -35,133 +35,133 @@ class GetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShowBidderNoticePreferences' => array(
+    private static $propertyTypes = [
+        'ShowBidderNoticePreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowBidderNoticePreferences'
-        ),
-        'ShowCombinedPaymentPreferences' => array(
+        ],
+        'ShowCombinedPaymentPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowCombinedPaymentPreferences'
-        ),
-        'ShowSellerPaymentPreferences' => array(
+        ],
+        'ShowSellerPaymentPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerPaymentPreferences'
-        ),
-        'ShowEndOfAuctionEmailPreferences' => array(
+        ],
+        'ShowEndOfAuctionEmailPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowEndOfAuctionEmailPreferences'
-        ),
-        'ShowSellerFavoriteItemPreferences' => array(
+        ],
+        'ShowSellerFavoriteItemPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerFavoriteItemPreferences'
-        ),
-        'ShowEmailShipmentTrackingNumberPreference' => array(
+        ],
+        'ShowEmailShipmentTrackingNumberPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowEmailShipmentTrackingNumberPreference'
-        ),
-        'ShowRequiredShipPhoneNumberPreference' => array(
+        ],
+        'ShowRequiredShipPhoneNumberPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowRequiredShipPhoneNumberPreference'
-        ),
-        'ShowSellerExcludeShipToLocationPreference' => array(
+        ],
+        'ShowSellerExcludeShipToLocationPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerExcludeShipToLocationPreference'
-        ),
-        'ShowUnpaidItemAssistancePreference' => array(
+        ],
+        'ShowUnpaidItemAssistancePreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowUnpaidItemAssistancePreference'
-        ),
-        'ShowPurchaseReminderEmailPreferences' => array(
+        ],
+        'ShowPurchaseReminderEmailPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowPurchaseReminderEmailPreferences'
-        ),
-        'ShowUnpaidItemAssistanceExclusionList' => array(
+        ],
+        'ShowUnpaidItemAssistanceExclusionList' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowUnpaidItemAssistanceExclusionList'
-        ),
-        'ShowSellerProfilePreferences' => array(
+        ],
+        'ShowSellerProfilePreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerProfilePreferences'
-        ),
-        'ShowSellerReturnPreferences' => array(
+        ],
+        'ShowSellerReturnPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowSellerReturnPreferences'
-        ),
-        'ShowGlobalShippingProgramPreference' => array(
+        ],
+        'ShowGlobalShippingProgramPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowGlobalShippingProgramPreference'
-        ),
-        'ShowDispatchCutoffTimePreferences' => array(
+        ],
+        'ShowDispatchCutoffTimePreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowDispatchCutoffTimePreferences'
-        ),
-        'ShowGlobalShippingProgramListingPreference' => array(
+        ],
+        'ShowGlobalShippingProgramListingPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowGlobalShippingProgramListingPreference'
-        ),
-        'ShowOverrideGSPServiceWithIntlServicePreference' => array(
+        ],
+        'ShowOverrideGSPServiceWithIntlServicePreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowOverrideGSPServiceWithIntlServicePreference'
-        ),
-        'ShowPickupDropoffPreferences' => array(
+        ],
+        'ShowPickupDropoffPreferences' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowPickupDropoffPreferences'
-        ),
-        'ShowOutOfStockControlPreference' => array(
+        ],
+        'ShowOutOfStockControlPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShowOutOfStockControlPreference'
-        ),
-        'ShoweBayPLUSPreference' => array(
+        ],
+        'ShoweBayPLUSPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShoweBayPLUSPreference'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

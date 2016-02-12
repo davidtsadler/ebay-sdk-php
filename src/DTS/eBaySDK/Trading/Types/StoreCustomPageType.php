@@ -24,67 +24,67 @@ class StoreCustomPageType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'PageID' => array(
+        ],
+        'PageID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageID'
-        ),
-        'URLPath' => array(
+        ],
+        'URLPath' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URLPath'
-        ),
-        'URL' => array(
+        ],
+        'URL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URL'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'Content' => array(
+        ],
+        'Content' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Content'
-        ),
-        'LeftNav' => array(
+        ],
+        'LeftNav' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LeftNav'
-        ),
-        'PreviewEnabled' => array(
+        ],
+        'PreviewEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PreviewEnabled'
-        ),
-        'Order' => array(
+        ],
+        'Order' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Order'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

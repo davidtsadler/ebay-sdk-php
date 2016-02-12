@@ -20,43 +20,43 @@ class BiddingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ConvertedMaxBid' => array(
+    private static $propertyTypes = [
+        'ConvertedMaxBid' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedMaxBid'
-        ),
-        'MaxBid' => array(
+        ],
+        'MaxBid' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxBid'
-        ),
-        'QuantityBid' => array(
+        ],
+        'QuantityBid' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityBid'
-        ),
-        'QuantityWon' => array(
+        ],
+        'QuantityWon' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityWon'
-        ),
-        'Winning' => array(
+        ],
+        'Winning' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Winning'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

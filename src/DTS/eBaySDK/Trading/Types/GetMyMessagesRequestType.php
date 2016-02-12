@@ -22,55 +22,55 @@ class GetMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MessageIDs' => array(
+    private static $propertyTypes = [
+        'MessageIDs' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageIDs'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'ExternalMessageIDs' => array(
+        ],
+        'ExternalMessageIDs' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesExternalMessageIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalMessageIDs'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'IncludeHighPriorityMessageOnly' => array(
+        ],
+        'IncludeHighPriorityMessageOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeHighPriorityMessageOnly'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

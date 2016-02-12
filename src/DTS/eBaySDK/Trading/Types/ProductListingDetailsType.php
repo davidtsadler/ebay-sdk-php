@@ -31,109 +31,109 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ProductID' => array(
+    private static $propertyTypes = [
+        'ProductID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'IncludeStockPhotoURL' => array(
+        ],
+        'IncludeStockPhotoURL' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeStockPhotoURL'
-        ),
-        'UseStockPhotoURLAsGallery' => array(
+        ],
+        'UseStockPhotoURLAsGallery' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UseStockPhotoURLAsGallery'
-        ),
-        'StockPhotoURL' => array(
+        ],
+        'StockPhotoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StockPhotoURL'
-        ),
-        'Copyright' => array(
+        ],
+        'Copyright' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Copyright'
-        ),
-        'ProductReferenceID' => array(
+        ],
+        'ProductReferenceID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductReferenceID'
-        ),
-        'DetailsURL' => array(
+        ],
+        'DetailsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailsURL'
-        ),
-        'ProductDetailsURL' => array(
+        ],
+        'ProductDetailsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductDetailsURL'
-        ),
-        'ReturnSearchResultOnDuplicates' => array(
+        ],
+        'ReturnSearchResultOnDuplicates' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnSearchResultOnDuplicates'
-        ),
-        'ISBN' => array(
+        ],
+        'ISBN' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ISBN'
-        ),
-        'UPC' => array(
+        ],
+        'UPC' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UPC'
-        ),
-        'EAN' => array(
+        ],
+        'EAN' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EAN'
-        ),
-        'BrandMPN' => array(
+        ],
+        'BrandMPN' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BrandMPNType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BrandMPN'
-        ),
-        'TicketListingDetails' => array(
+        ],
+        'TicketListingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TicketListingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TicketListingDetails'
-        ),
-        'UseFirstProduct' => array(
+        ],
+        'UseFirstProduct' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UseFirstProduct'
-        ),
-        'IncludeeBayProductDetails' => array(
+        ],
+        'IncludeeBayProductDetails' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeeBayProductDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

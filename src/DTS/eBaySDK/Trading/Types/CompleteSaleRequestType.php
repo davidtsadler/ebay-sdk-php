@@ -24,67 +24,67 @@ class CompleteSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'FeedbackInfo' => array(
+        ],
+        'FeedbackInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackInfo'
-        ),
-        'Shipped' => array(
+        ],
+        'Shipped' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Shipped'
-        ),
-        'Paid' => array(
+        ],
+        'Paid' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Paid'
-        ),
-        'ListingType' => array(
+        ],
+        'ListingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
-        ),
-        'Shipment' => array(
+        ],
+        'Shipment' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Shipment'
-        ),
-        'OrderID' => array(
+        ],
+        'OrderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

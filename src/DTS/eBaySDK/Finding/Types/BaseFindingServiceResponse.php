@@ -18,31 +18,31 @@ class BaseFindingServiceResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'searchResult' => array(
+    private static $propertyTypes = [
+        'searchResult' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SearchResult',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'searchResult'
-        ),
-        'paginationOutput' => array(
+        ],
+        'paginationOutput' => [
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationOutput',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paginationOutput'
-        ),
-        'itemSearchURL' => array(
+        ],
+        'itemSearchURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'itemSearchURL'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

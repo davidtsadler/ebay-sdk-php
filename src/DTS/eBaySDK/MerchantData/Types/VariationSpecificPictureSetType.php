@@ -19,37 +19,37 @@ class VariationSpecificPictureSetType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'VariationSpecificValue' => array(
+    private static $propertyTypes = [
+        'VariationSpecificValue' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecificValue'
-        ),
-        'PictureURL' => array(
+        ],
+        'PictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
-        ),
-        'ExternalPictureURL' => array(
+        ],
+        'ExternalPictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
-        ),
-        'ExtendedPictureDetails' => array(
+        ],
+        'ExtendedPictureDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtendedPictureDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

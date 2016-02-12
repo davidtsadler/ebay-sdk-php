@@ -30,23 +30,23 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
 
     public function testAttachment()
     {
-        $this->assertEquals(array('data' => null, 'mimeType' => null), $this->request->attachment());
+        $this->assertEquals(['data' => null, 'mimeType' => null], $this->request->attachment());
         $this->assertEquals(false, $this->request->hasAttachment());
 
         $this->request->attachment('123ABC');
-        $this->assertEquals(array('data' => '123ABC', 'mimeType' => 'application/octet-stream'), $this->request->attachment());
+        $this->assertEquals(['data' => '123ABC', 'mimeType' => 'application/octet-stream'], $this->request->attachment());
         $this->assertEquals(true, $this->request->hasAttachment());
 
         $this->request->attachment('ABC123', 'image/jpeg');
-        $this->assertEquals(array('data' => 'ABC123', 'mimeType' => 'image/jpeg'), $this->request->attachment());
+        $this->assertEquals(['data' => 'ABC123', 'mimeType' => 'image/jpeg'], $this->request->attachment());
         $this->assertEquals(true, $this->request->hasAttachment());
 
-        $this->request->attachment(array('data' => '1A2B3C'));
-        $this->assertEquals(array('data' => '1A2B3C', 'mimeType' => 'application/octet-stream'), $this->request->attachment());
+        $this->request->attachment(['data' => '1A2B3C']);
+        $this->assertEquals(['data' => '1A2B3C', 'mimeType' => 'application/octet-stream'], $this->request->attachment());
         $this->assertEquals(true, $this->request->hasAttachment());
 
-        $this->request->attachment(array('data' => 'A1B2C3', 'mimeType' => 'image/jpeg'));
-        $this->assertEquals(array('data' => 'A1B2C3', 'mimeType' => 'image/jpeg'), $this->request->attachment());
+        $this->request->attachment(['data' => 'A1B2C3', 'mimeType' => 'image/jpeg']);
+        $this->assertEquals(['data' => 'A1B2C3', 'mimeType' => 'image/jpeg'], $this->request->attachment());
         $this->assertEquals(true, $this->request->hasAttachment());
     }
 
@@ -78,6 +78,6 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('a string', $response->string);
         $this->assertEquals(123.45, $response->double);
 
-        $this->assertEquals(array('data' => 'ABC123', 'mimeType' => 'image/jpeg'), $response->attachment());
+        $this->assertEquals(['data' => 'ABC123', 'mimeType' => 'image/jpeg'], $response->attachment());
     }
 }

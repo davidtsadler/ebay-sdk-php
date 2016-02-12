@@ -25,73 +25,73 @@ class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'description' => array(
+    private static $propertyTypes = [
+        'description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'description'
-        ),
-        'refundOption' => array(
+        ],
+        'refundOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'refundOption'
-        ),
-        'shippingCostPaidByOption' => array(
+        ],
+        'shippingCostPaidByOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingCostPaidByOption'
-        ),
-        'returnsWithinOption' => array(
+        ],
+        'returnsWithinOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnsWithinOption'
-        ),
-        'returnsAcceptedOption' => array(
+        ],
+        'returnsAcceptedOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnsAcceptedOption'
-        ),
-        'warrantyOfferedOption' => array(
+        ],
+        'warrantyOfferedOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'warrantyOfferedOption'
-        ),
-        'warrantyTypeOption' => array(
+        ],
+        'warrantyTypeOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'warrantyTypeOption'
-        ),
-        'warrantyDurationOption' => array(
+        ],
+        'warrantyDurationOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'warrantyDurationOption'
-        ),
-        'restockingFeeValue' => array(
+        ],
+        'restockingFeeValue' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'restockingFeeValue'
-        ),
-        'holidayReturns' => array(
+        ],
+        'holidayReturns' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'holidayReturns'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

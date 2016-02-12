@@ -20,43 +20,43 @@ class NotificationStatisticsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DeliveredCount' => array(
+    private static $propertyTypes = [
+        'DeliveredCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveredCount'
-        ),
-        'QueuedNewCount' => array(
+        ],
+        'QueuedNewCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QueuedNewCount'
-        ),
-        'QueuedPendingCount' => array(
+        ],
+        'QueuedPendingCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QueuedPendingCount'
-        ),
-        'ExpiredCount' => array(
+        ],
+        'ExpiredCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpiredCount'
-        ),
-        'ErrorCount' => array(
+        ],
+        'ErrorCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -17,25 +17,25 @@ class IssueRefundResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RefundFromSeller' => array(
+    private static $propertyTypes = [
+        'RefundFromSeller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundFromSeller'
-        ),
-        'TotalRefundToBuyer' => array(
+        ],
+        'TotalRefundToBuyer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalRefundToBuyer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

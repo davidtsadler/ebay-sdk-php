@@ -20,43 +20,43 @@ class GetBidderListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ActiveItemsOnly' => array(
+    private static $propertyTypes = [
+        'ActiveItemsOnly' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActiveItemsOnly'
-        ),
-        'EndTimeFrom' => array(
+        ],
+        'EndTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeFrom'
-        ),
-        'EndTimeTo' => array(
+        ],
+        'EndTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
-        ),
-        'UserID' => array(
+        ],
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'GranularityLevel' => array(
+        ],
+        'GranularityLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GranularityLevel'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

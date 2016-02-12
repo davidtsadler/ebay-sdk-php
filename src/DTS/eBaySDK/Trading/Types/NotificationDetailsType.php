@@ -25,73 +25,73 @@ class NotificationDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DeliveryURL' => array(
+    private static $propertyTypes = [
+        'DeliveryURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURL'
-        ),
-        'ReferenceID' => array(
+        ],
+        'ReferenceID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReferenceID'
-        ),
-        'ExpirationTime' => array(
+        ],
+        'ExpirationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpirationTime'
-        ),
-        'Type' => array(
+        ],
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        ),
-        'Retries' => array(
+        ],
+        'Retries' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Retries'
-        ),
-        'DeliveryStatus' => array(
+        ],
+        'DeliveryStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
-        ),
-        'NextRetryTime' => array(
+        ],
+        'NextRetryTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NextRetryTime'
-        ),
-        'DeliveryTime' => array(
+        ],
+        'DeliveryTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryTime'
-        ),
-        'ErrorMessage' => array(
+        ],
+        'ErrorMessage' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ErrorMessage'
-        ),
-        'DeliveryURLName' => array(
+        ],
+        'DeliveryURLName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -20,43 +20,43 @@ class RefundType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RefundFromSeller' => array(
+    private static $propertyTypes = [
+        'RefundFromSeller' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundFromSeller'
-        ),
-        'TotalRefundToBuyer' => array(
+        ],
+        'TotalRefundToBuyer' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalRefundToBuyer'
-        ),
-        'RefundTime' => array(
+        ],
+        'RefundTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundTime'
-        ),
-        'RefundID' => array(
+        ],
+        'RefundID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundID'
-        ),
-        'RefundAmount' => array(
+        ],
+        'RefundAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

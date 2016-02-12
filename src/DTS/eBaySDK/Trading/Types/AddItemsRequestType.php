@@ -16,19 +16,19 @@ class AddItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AddItemRequestContainer' => array(
+    private static $propertyTypes = [
+        'AddItemRequestContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddItemRequestContainerType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'AddItemRequestContainer'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

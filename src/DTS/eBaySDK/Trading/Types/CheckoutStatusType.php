@@ -22,55 +22,55 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'eBayPaymentStatus' => array(
+    private static $propertyTypes = [
+        'eBayPaymentStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentStatus'
-        ),
-        'LastModifiedTime' => array(
+        ],
+        'LastModifiedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedTime'
-        ),
-        'PaymentMethod' => array(
+        ],
+        'PaymentMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentMethod'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'IntegratedMerchantCreditCardEnabled' => array(
+        ],
+        'IntegratedMerchantCreditCardEnabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ),
-        'eBayPaymentMismatchDetails' => array(
+        ],
+        'eBayPaymentMismatchDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EBayPaymentMismatchDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayPaymentMismatchDetails'
-        ),
-        'PaymentInstrument' => array(
+        ],
+        'PaymentInstrument' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentInstrument'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

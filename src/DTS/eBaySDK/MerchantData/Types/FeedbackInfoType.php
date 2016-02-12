@@ -18,31 +18,31 @@ class FeedbackInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CommentText' => array(
+    private static $propertyTypes = [
+        'CommentText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentText'
-        ),
-        'CommentType' => array(
+        ],
+        'CommentType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CommentType'
-        ),
-        'TargetUser' => array(
+        ],
+        'TargetUser' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TargetUser'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

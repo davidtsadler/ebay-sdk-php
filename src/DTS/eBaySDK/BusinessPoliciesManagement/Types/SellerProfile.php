@@ -23,61 +23,61 @@ class SellerProfile extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'profileName' => array(
+    private static $propertyTypes = [
+        'profileName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileName'
-        ),
-        'profileId' => array(
+        ],
+        'profileId' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileId'
-        ),
-        'profileType' => array(
+        ],
+        'profileType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileType'
-        ),
-        'profileVersion' => array(
+        ],
+        'profileVersion' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileVersion'
-        ),
-        'profileDesc' => array(
+        ],
+        'profileDesc' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'profileDesc'
-        ),
-        'deletedDate' => array(
+        ],
+        'deletedDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'deletedDate'
-        ),
-        'siteId' => array(
+        ],
+        'siteId' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'siteId'
-        ),
-        'categoryGroups' => array(
+        ],
+        'categoryGroups' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'categoryGroups'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

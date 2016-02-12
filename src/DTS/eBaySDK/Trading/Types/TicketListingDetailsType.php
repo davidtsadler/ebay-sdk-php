@@ -19,37 +19,37 @@ class TicketListingDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EventTitle' => array(
+    private static $propertyTypes = [
+        'EventTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EventTitle'
-        ),
-        'Venue' => array(
+        ],
+        'Venue' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Venue'
-        ),
-        'PrintedDate' => array(
+        ],
+        'PrintedDate' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrintedDate'
-        ),
-        'PrintedTime' => array(
+        ],
+        'PrintedTime' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PrintedTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

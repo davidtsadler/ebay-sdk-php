@@ -19,37 +19,37 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EmailType' => array(
+    private static $propertyTypes = [
+        'EmailType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailType'
-        ),
-        'CustomEmailName' => array(
+        ],
+        'CustomEmailName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomEmailName'
-        ),
-        'EmailState' => array(
+        ],
+        'EmailState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailState'
-        ),
-        'EventTime' => array(
+        ],
+        'EventTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EventTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

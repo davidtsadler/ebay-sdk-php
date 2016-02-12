@@ -22,55 +22,55 @@ class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\B
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DayOfWeek' => array(
+    private static $propertyTypes = [
+        'DayOfWeek' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DayOfWeek'
-        ),
-        'ListingPeriodInWeeks' => array(
+        ],
+        'ListingPeriodInWeeks' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingPeriodInWeeks'
-        ),
-        'ListAtSpecificTimeOfDay' => array(
+        ],
+        'ListAtSpecificTimeOfDay' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListAtSpecificTimeOfDay'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'MaxActiveItemCount' => array(
+        ],
+        'MaxActiveItemCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxActiveItemCount'
-        ),
-        'ListingHoldInventoryLevel' => array(
+        ],
+        'ListingHoldInventoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

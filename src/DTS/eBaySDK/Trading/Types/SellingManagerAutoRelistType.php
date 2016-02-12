@@ -22,55 +22,55 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Type' => array(
+    private static $propertyTypes = [
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        ),
-        'RelistCondition' => array(
+        ],
+        'RelistCondition' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistCondition'
-        ),
-        'RelistAfterDays' => array(
+        ],
+        'RelistAfterDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistAfterDays'
-        ),
-        'RelistAfterHours' => array(
+        ],
+        'RelistAfterHours' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistAfterHours'
-        ),
-        'RelistAtSpecificTimeOfDay' => array(
+        ],
+        'RelistAtSpecificTimeOfDay' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RelistAtSpecificTimeOfDay'
-        ),
-        'BestOfferDetails' => array(
+        ],
+        'BestOfferDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferDetails'
-        ),
-        'ListingHoldInventoryLevel' => array(
+        ],
+        'ListingHoldInventoryLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

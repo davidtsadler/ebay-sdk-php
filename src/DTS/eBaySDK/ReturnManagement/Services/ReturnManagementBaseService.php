@@ -56,7 +56,7 @@ class ReturnManagementBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     protected function getEbayHeaders($operationName)
     {
-        $headers = array();
+        $headers = [];
 
         // Add required headers first.
         $headers[self::HDR_AUTH_TOKEN] = $this->getConfig('authToken');

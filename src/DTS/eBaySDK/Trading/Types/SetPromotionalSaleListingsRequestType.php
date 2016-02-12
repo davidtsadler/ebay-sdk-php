@@ -23,61 +23,61 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PromotionalSaleID' => array(
+    private static $propertyTypes = [
+        'PromotionalSaleID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleID'
-        ),
-        'Action' => array(
+        ],
+        'Action' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Action'
-        ),
-        'PromotionalSaleItemIDArray' => array(
+        ],
+        'PromotionalSaleItemIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleItemIDArray'
-        ),
-        'StoreCategoryID' => array(
+        ],
+        'StoreCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'AllFixedPriceItems' => array(
+        ],
+        'AllFixedPriceItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AllFixedPriceItems'
-        ),
-        'AllStoreInventoryItems' => array(
+        ],
+        'AllStoreInventoryItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AllStoreInventoryItems'
-        ),
-        'AllAuctionItems' => array(
+        ],
+        'AllAuctionItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AllAuctionItems'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -19,37 +19,37 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'MessageIDs' => array(
+    private static $propertyTypes = [
+        'MessageIDs' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageIDs'
-        ),
-        'Read' => array(
+        ],
+        'Read' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Read'
-        ),
-        'Flagged' => array(
+        ],
+        'Flagged' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Flagged'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

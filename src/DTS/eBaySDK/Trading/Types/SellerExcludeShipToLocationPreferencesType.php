@@ -16,19 +16,19 @@ class SellerExcludeShipToLocationPreferencesType extends \DTS\eBaySDK\Types\Base
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ExcludeShipToLocation' => array(
+    private static $propertyTypes = [
+        'ExcludeShipToLocation' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExcludeShipToLocation'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

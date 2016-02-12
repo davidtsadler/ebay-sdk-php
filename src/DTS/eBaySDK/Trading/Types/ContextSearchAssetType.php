@@ -18,31 +18,31 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Keyword' => array(
+    private static $propertyTypes = [
+        'Keyword' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Keyword'
-        ),
-        'Category' => array(
+        ],
+        'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Category'
-        ),
-        'Ranking' => array(
+        ],
+        'Ranking' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ranking'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

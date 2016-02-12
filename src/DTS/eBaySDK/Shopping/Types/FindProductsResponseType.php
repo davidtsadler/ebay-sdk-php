@@ -23,61 +23,61 @@ class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRespo
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ApproximatePages' => array(
+    private static $propertyTypes = [
+        'ApproximatePages' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApproximatePages'
-        ),
-        'MoreResults' => array(
+        ],
+        'MoreResults' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MoreResults'
-        ),
-        'DomainHistogram' => array(
+        ],
+        'DomainHistogram' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
-        ),
-        'ItemArray' => array(
+        ],
+        'ItemArray' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'Product' => array(
+        ],
+        'Product' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\CatalogProductType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Product'
-        ),
-        'TotalProducts' => array(
+        ],
+        'TotalProducts' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalProducts'
-        ),
-        'DuplicateItems' => array(
+        ],
+        'DuplicateItems' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DuplicateItems'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

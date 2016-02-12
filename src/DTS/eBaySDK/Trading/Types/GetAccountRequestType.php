@@ -26,79 +26,79 @@ class GetAccountRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AccountHistorySelection' => array(
+    private static $propertyTypes = [
+        'AccountHistorySelection' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountHistorySelection'
-        ),
-        'InvoiceDate' => array(
+        ],
+        'InvoiceDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceDate'
-        ),
-        'BeginDate' => array(
+        ],
+        'BeginDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BeginDate'
-        ),
-        'EndDate' => array(
+        ],
+        'EndDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndDate'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'ExcludeBalance' => array(
+        ],
+        'ExcludeBalance' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExcludeBalance'
-        ),
-        'ExcludeSummary' => array(
+        ],
+        'ExcludeSummary' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExcludeSummary'
-        ),
-        'IncludeConversionRate' => array(
+        ],
+        'IncludeConversionRate' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeConversionRate'
-        ),
-        'AccountEntrySortType' => array(
+        ],
+        'AccountEntrySortType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AccountEntrySortType'
-        ),
-        'Currency' => array(
+        ],
+        'Currency' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

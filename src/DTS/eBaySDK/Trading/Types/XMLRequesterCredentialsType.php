@@ -18,31 +18,31 @@ class XMLRequesterCredentialsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Username' => array(
+    private static $propertyTypes = [
+        'Username' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Username'
-        ),
-        'Password' => array(
+        ],
+        'Password' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Password'
-        ),
-        'eBayAuthToken' => array(
+        ],
+        'eBayAuthToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

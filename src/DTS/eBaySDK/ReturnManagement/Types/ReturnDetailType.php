@@ -22,55 +22,55 @@ class ReturnDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'globalId' => array(
+    private static $propertyTypes = [
+        'globalId' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'globalId'
-        ),
-        'returnHistory' => array(
+        ],
+        'returnHistory' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnResponseHistoryType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'returnHistory'
-        ),
-        'refundInfo' => array(
+        ],
+        'refundInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\RefundInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'refundInfo'
-        ),
-        'returnPolicy' => array(
+        ],
+        'returnPolicy' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnPolicyInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnPolicy'
-        ),
-        'buyerReturnShipment' => array(
+        ],
+        'buyerReturnShipment' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'buyerReturnShipment'
-        ),
-        'shipmentInfo' => array(
+        ],
+        'shipmentInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ShipmentType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'shipmentInfo'
-        ),
-        'caseId' => array(
+        ],
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

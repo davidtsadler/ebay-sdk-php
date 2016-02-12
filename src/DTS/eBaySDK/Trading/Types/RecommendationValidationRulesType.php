@@ -24,67 +24,67 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ValueType' => array(
+    private static $propertyTypes = [
+        'ValueType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueType'
-        ),
-        'MinValues' => array(
+        ],
+        'MinValues' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinValues'
-        ),
-        'MaxValues' => array(
+        ],
+        'MaxValues' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaxValues'
-        ),
-        'SelectionMode' => array(
+        ],
+        'SelectionMode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SelectionMode'
-        ),
-        'Confidence' => array(
+        ],
+        'Confidence' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Confidence'
-        ),
-        'Relationship' => array(
+        ],
+        'Relationship' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueRelationshipType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Relationship'
-        ),
-        'VariationPicture' => array(
+        ],
+        'VariationPicture' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationPicture'
-        ),
-        'VariationSpecifics' => array(
+        ],
+        'VariationSpecifics' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ),
-        'ValueFormat' => array(
+        ],
+        'ValueFormat' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValueFormat'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class GetShippingCostsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingDetails' => array(
+    private static $propertyTypes = [
+        'ShippingDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetails'
-        ),
-        'ShippingCostSummary' => array(
+        ],
+        'ShippingCostSummary' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostSummary'
-        ),
-        'PickUpInStoreDetails' => array(
+        ],
+        'PickUpInStoreDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\PickUpInStoreDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickUpInStoreDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

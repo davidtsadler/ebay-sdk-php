@@ -19,37 +19,37 @@ class CombinedPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CalculatedShippingPreferences' => array(
+    private static $propertyTypes = [
+        'CalculatedShippingPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingPreferences'
-        ),
-        'CombinedPaymentOption' => array(
+        ],
+        'CombinedPaymentOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentOption'
-        ),
-        'CombinedPaymentPeriod' => array(
+        ],
+        'CombinedPaymentPeriod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentPeriod'
-        ),
-        'FlatShippingPreferences' => array(
+        ],
+        'FlatShippingPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingPreferences'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class EnumerationDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'code' => array(
+    private static $propertyTypes = [
+        'code' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'code'
-        ),
-        'description' => array(
+        ],
+        'description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'description'
-        ),
-        'content' => array(
+        ],
+        'content' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'content'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

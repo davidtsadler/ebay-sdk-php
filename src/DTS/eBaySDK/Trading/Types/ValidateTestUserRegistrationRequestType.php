@@ -21,49 +21,49 @@ class ValidateTestUserRegistrationRequestType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FeedbackScore' => array(
+    private static $propertyTypes = [
+        'FeedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
-        ),
-        'RegistrationDate' => array(
+        ],
+        'RegistrationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RegistrationDate'
-        ),
-        'SubscribeSA' => array(
+        ],
+        'SubscribeSA' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscribeSA'
-        ),
-        'SubscribeSAPro' => array(
+        ],
+        'SubscribeSAPro' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscribeSAPro'
-        ),
-        'SubscribeSM' => array(
+        ],
+        'SubscribeSM' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscribeSM'
-        ),
-        'SubscribeSMPro' => array(
+        ],
+        'SubscribeSMPro' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscribeSMPro'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

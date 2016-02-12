@@ -28,91 +28,91 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'WatchList' => array(
+    private static $propertyTypes = [
+        'WatchList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WatchList'
-        ),
-        'BidList' => array(
+        ],
+        'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidList'
-        ),
-        'BestOfferList' => array(
+        ],
+        'BestOfferList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOfferList'
-        ),
-        'WonList' => array(
+        ],
+        'WonList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WonList'
-        ),
-        'LostList' => array(
+        ],
+        'LostList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LostList'
-        ),
-        'FavoriteSearches' => array(
+        ],
+        'FavoriteSearches' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSearches'
-        ),
-        'FavoriteSellers' => array(
+        ],
+        'FavoriteSellers' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
-        ),
-        'SecondChanceOffer' => array(
+        ],
+        'SecondChanceOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
-        ),
-        'DeletedFromWonList' => array(
+        ],
+        'DeletedFromWonList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromWonList'
-        ),
-        'DeletedFromLostList' => array(
+        ],
+        'DeletedFromLostList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromLostList'
-        ),
-        'BuyingSummary' => array(
+        ],
+        'BuyingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyingSummary'
-        ),
-        'UserDefinedLists' => array(
+        ],
+        'UserDefinedLists' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserDefinedLists'
-        ),
-        'HideVariations' => array(
+        ],
+        'HideVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HideVariations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

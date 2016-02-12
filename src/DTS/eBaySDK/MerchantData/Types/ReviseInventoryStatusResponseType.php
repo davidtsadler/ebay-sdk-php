@@ -17,25 +17,25 @@ class ReviseInventoryStatusResponseType extends \DTS\eBaySDK\MerchantData\Types\
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InventoryStatus' => array(
+    private static $propertyTypes = [
+        'InventoryStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryStatusType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'InventoryStatus'
-        ),
-        'Fees' => array(
+        ],
+        'Fees' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryFeesType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Fees'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

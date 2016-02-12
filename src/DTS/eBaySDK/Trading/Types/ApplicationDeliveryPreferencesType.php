@@ -22,55 +22,55 @@ class ApplicationDeliveryPreferencesType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ApplicationURL' => array(
+    private static $propertyTypes = [
+        'ApplicationURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApplicationURL'
-        ),
-        'ApplicationEnable' => array(
+        ],
+        'ApplicationEnable' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApplicationEnable'
-        ),
-        'AlertEmail' => array(
+        ],
+        'AlertEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AlertEmail'
-        ),
-        'AlertEnable' => array(
+        ],
+        'AlertEnable' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AlertEnable'
-        ),
-        'DeviceType' => array(
+        ],
+        'DeviceType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeviceType'
-        ),
-        'PayloadVersion' => array(
+        ],
+        'PayloadVersion' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayloadVersion'
-        ),
-        'DeliveryURLDetails' => array(
+        ],
+        'DeliveryURLDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DeliveryURLDetailType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DeliveryURLDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

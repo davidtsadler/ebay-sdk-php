@@ -25,73 +25,73 @@ class SellingManagerProductDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ProductName' => array(
+    private static $propertyTypes = [
+        'ProductName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductName'
-        ),
-        'ProductID' => array(
+        ],
+        'ProductID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'CustomLabel' => array(
+        ],
+        'CustomLabel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomLabel'
-        ),
-        'QuantityAvailable' => array(
+        ],
+        'QuantityAvailable' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityAvailable'
-        ),
-        'UnitCost' => array(
+        ],
+        'UnitCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnitCost'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'RestockAlert' => array(
+        ],
+        'RestockAlert' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockAlert'
-        ),
-        'RestockThreshold' => array(
+        ],
+        'RestockThreshold' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RestockThreshold'
-        ),
-        'VendorInfo' => array(
+        ],
+        'VendorInfo' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SellingManagerVendorDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VendorInfo'
-        ),
-        'Note' => array(
+        ],
+        'Note' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Note'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

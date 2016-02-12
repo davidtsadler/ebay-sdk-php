@@ -21,49 +21,49 @@ class RespondToBestOfferRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'BestOfferID' => array(
+        ],
+        'BestOfferID' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'BestOfferID'
-        ),
-        'Action' => array(
+        ],
+        'Action' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Action'
-        ),
-        'SellerResponse' => array(
+        ],
+        'SellerResponse' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerResponse'
-        ),
-        'CounterOfferPrice' => array(
+        ],
+        'CounterOfferPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CounterOfferPrice'
-        ),
-        'CounterOfferQuantity' => array(
+        ],
+        'CounterOfferQuantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CounterOfferQuantity'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -17,25 +17,25 @@ class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Typ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SaleRecord' => array(
+    private static $propertyTypes = [
+        'SaleRecord' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SaleRecord'
-        ),
-        'PaginationResult' => array(
+        ],
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

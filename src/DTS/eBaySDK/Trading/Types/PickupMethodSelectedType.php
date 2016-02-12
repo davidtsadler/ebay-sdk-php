@@ -21,49 +21,49 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PickupMethod' => array(
+    private static $propertyTypes = [
+        'PickupMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupMethod'
-        ),
-        'PickupStoreID' => array(
+        ],
+        'PickupStoreID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupStoreID'
-        ),
-        'PickupStatus' => array(
+        ],
+        'PickupStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupStatus'
-        ),
-        'MerchantPickupCode' => array(
+        ],
+        'MerchantPickupCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MerchantPickupCode'
-        ),
-        'PickupFulfillmentTime' => array(
+        ],
+        'PickupFulfillmentTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupFulfillmentTime'
-        ),
-        'PickupLocationUUID' => array(
+        ],
+        'PickupLocationUUID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupLocationUUID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

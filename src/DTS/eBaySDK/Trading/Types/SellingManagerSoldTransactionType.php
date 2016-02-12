@@ -36,139 +36,139 @@ class SellingManagerSoldTransactionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InvoiceNumber' => array(
+    private static $propertyTypes = [
+        'InvoiceNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InvoiceNumber'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'SaleRecordID' => array(
+        ],
+        'SaleRecordID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleRecordID'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'QuantitySold' => array(
+        ],
+        'QuantitySold' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
-        ),
-        'ItemPrice' => array(
+        ],
+        'ItemPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemPrice'
-        ),
-        'SubtotalAmount' => array(
+        ],
+        'SubtotalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubtotalAmount'
-        ),
-        'ItemTitle' => array(
+        ],
+        'ItemTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemTitle'
-        ),
-        'ListingType' => array(
+        ],
+        'ListingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
-        ),
-        'Relisted' => array(
+        ],
+        'Relisted' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Relisted'
-        ),
-        'WatchCount' => array(
+        ],
+        'WatchCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WatchCount'
-        ),
-        'StartPrice' => array(
+        ],
+        'StartPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
-        ),
-        'ReservePrice' => array(
+        ],
+        'ReservePrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReservePrice'
-        ),
-        'SecondChanceOfferSent' => array(
+        ],
+        'SecondChanceOfferSent' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOfferSent'
-        ),
-        'CustomLabel' => array(
+        ],
+        'CustomLabel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomLabel'
-        ),
-        'SoldOn' => array(
+        ],
+        'SoldOn' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldOn'
-        ),
-        'ListedOn' => array(
+        ],
+        'ListedOn' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ListedOn'
-        ),
-        'Shipment' => array(
+        ],
+        'Shipment' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Shipment'
-        ),
-        'CharityListing' => array(
+        ],
+        'CharityListing' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityListing'
-        ),
-        'Variation' => array(
+        ],
+        'Variation' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VariationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Variation'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

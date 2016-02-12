@@ -17,25 +17,25 @@ class GetMyeBayRemindersResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BuyingReminders' => array(
+    private static $propertyTypes = [
+        'BuyingReminders' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RemindersType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyingReminders'
-        ),
-        'SellingReminders' => array(
+        ],
+        'SellingReminders' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RemindersType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingReminders'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

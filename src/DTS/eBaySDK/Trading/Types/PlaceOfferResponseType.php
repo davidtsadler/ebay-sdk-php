@@ -19,37 +19,37 @@ class PlaceOfferResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SellingStatus' => array(
+    private static $propertyTypes = [
+        'SellingStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'BestOffer' => array(
+        ],
+        'BestOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestOffer'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

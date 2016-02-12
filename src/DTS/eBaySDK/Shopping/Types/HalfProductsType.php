@@ -16,19 +16,19 @@ class HalfProductsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Product' => array(
+    private static $propertyTypes = [
+        'Product' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\HalfCatalogProductType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Product'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

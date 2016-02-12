@@ -20,43 +20,43 @@ class GetNotificationsUsageResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'StartTime' => array(
+    private static $propertyTypes = [
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'NotificationDetailsArray' => array(
+        ],
+        'NotificationDetailsArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationDetailsArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationDetailsArray'
-        ),
-        'MarkUpMarkDownHistory' => array(
+        ],
+        'MarkUpMarkDownHistory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MarkUpMarkDownHistory'
-        ),
-        'NotificationStatistics' => array(
+        ],
+        'NotificationStatistics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationStatisticsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NotificationStatistics'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

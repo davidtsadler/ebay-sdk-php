@@ -22,55 +22,55 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UUID' => array(
+    private static $propertyTypes = [
+        'UUID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UUID'
-        ),
-        'downloadJobRecurringFilter' => array(
+        ],
+        'downloadJobRecurringFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DownloadJobRecurringFilter',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'downloadJobRecurringFilter'
-        ),
-        'frequencyInMinutes' => array(
+        ],
+        'frequencyInMinutes' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'frequencyInMinutes'
-        ),
-        'downloadJobType' => array(
+        ],
+        'downloadJobType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'downloadJobType'
-        ),
-        'monthlyRecurrence' => array(
+        ],
+        'monthlyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'monthlyRecurrence'
-        ),
-        'weeklyRecurrence' => array(
+        ],
+        'weeklyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\WeeklyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'weeklyRecurrence'
-        ),
-        'dailyRecurrence' => array(
+        ],
+        'dailyRecurrence' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'dailyRecurrence'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

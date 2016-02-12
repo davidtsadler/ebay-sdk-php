@@ -16,19 +16,19 @@ class RevokeTokenRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'UnsubscribeNotification' => array(
+    private static $propertyTypes = [
+        'UnsubscribeNotification' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnsubscribeNotification'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

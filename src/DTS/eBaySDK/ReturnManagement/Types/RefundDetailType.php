@@ -17,25 +17,25 @@ class RefundDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'totalAmount' => array(
+    private static $propertyTypes = [
+        'totalAmount' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'totalAmount'
-        ),
-        'itemizedRefund' => array(
+        ],
+        'itemizedRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ItemizedRefundDetailType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemizedRefund'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

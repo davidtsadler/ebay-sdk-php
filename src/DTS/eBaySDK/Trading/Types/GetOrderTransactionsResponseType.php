@@ -16,19 +16,19 @@ class GetOrderTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OrderArray' => array(
+    private static $propertyTypes = [
+        'OrderArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderArray'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

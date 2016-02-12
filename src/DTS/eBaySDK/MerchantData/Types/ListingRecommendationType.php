@@ -22,55 +22,55 @@ class ListingRecommendationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Type' => array(
+    private static $propertyTypes = [
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        ),
-        'Group' => array(
+        ],
+        'Group' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Group'
-        ),
-        'FieldName' => array(
+        ],
+        'FieldName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FieldName'
-        ),
-        'Code' => array(
+        ],
+        'Code' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Code'
-        ),
-        'Value' => array(
+        ],
+        'Value' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Value'
-        ),
-        'Message' => array(
+        ],
+        'Message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Message'
-        ),
-        'Metadata' => array(
+        ],
+        'Metadata' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MetadataType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Metadata'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

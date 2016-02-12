@@ -9,7 +9,7 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
 {
     public function testSettingPropertiesViaCtor()
     {
-        $values = array(
+        $values = [
             'foo' => 'foo',
             'integer' => 123,
             'double' => 123.45,
@@ -23,38 +23,38 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
              * and it will be handled correctly by the code.
              */
             'DateTime' => new \DateTime('2000-01-01T00:00:00.000Z', new \DateTimeZone('UTC')),
-            'strings' => array('foo', 'bar'),
-            'integers' => array(111, 222),
-            'AmountClass' => array(
+            'strings' => ['foo', 'bar'],
+            'integers' => [111, 222],
+            'AmountClass' => [
                 'value' => 543.21,
                 'AttributeOne' => 'one'
-            ),
-            'AmountClass' => new AmountClass(array('value' => 543.21, 'AttributeOne' => 'one')),
-            'SimpleClass' => array(
+            ],
+            'AmountClass' => new AmountClass(['value' => 543.21, 'AttributeOne' => 'one']),
+            'SimpleClass' => [
                 'integer' => 123,
                 'string' => 'foo',
                 'double' => 123.45,
                 'booleanTrue' => true,
                 'booleanFalse' => false,
                 'DateTime' => new \DateTime('2000-01-01T00:00:00.000Z', new \DateTimeZone('UTC')),
-                'integers' => array(100, 200, 300)
-            ),
-            'simpleClasses' => array(
-                array(
+                'integers' => [100, 200, 300]
+            ],
+            'simpleClasses' => [
+                [
                     'integer' => 321,
                     'string' => 'bar',
                     'double' => 5432.10,
                     'booleanTrue' => true,
                     'booleanFalse' => false,
                     'DateTime' => '2015-01-01T00:00:00.000Z'
-                ),
-                new SimpleClass(array(
-                    'integers' => array(300, 200, 100),
-                    'strings' => array('foo', 'bar')
-                )),
+                ],
+                new SimpleClass([
+                    'integers' => [300, 200, 100],
+                    'strings' => ['foo', 'bar']
+                ]),
                 new SimpleClass()
-            ),
-        );
+            ],
+        ];
 
         $obj = new ComplexClass($values);
 
@@ -117,17 +117,17 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property: DTS\eBaySDK\Mocks\ComplexClass::bar');
 
-        $obj = new ComplexClass(array(
+        $obj = new ComplexClass([
             'bar' => 'bar'
-        ));
+        ]);
     }
 
     public function testSettingInvalidPropertyTypeViaCtor()
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Mocks\ComplexClass::string expected <string>, got <integer>');
 
-        $obj = new ComplexClass(array(
+        $obj = new ComplexClass([
             'string' => 123
-        ));
+        ]);
     }
 }

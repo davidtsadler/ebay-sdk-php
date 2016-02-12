@@ -57,7 +57,7 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
      */
     protected function getEbayHeaders($operationName)
     {
-        $headers = array();
+        $headers = [];
 
         // Add required headers first.
         $headers[self::HDR_AUTH_TOKEN] = $this->getConfig('authToken');

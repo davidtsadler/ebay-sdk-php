@@ -18,31 +18,31 @@ class ItemsCanceledEventType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CanceledItemIDArray' => array(
+    private static $propertyTypes = [
+        'CanceledItemIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CanceledItemIDArray'
-        ),
-        'EligibleForRelist' => array(
+        ],
+        'EligibleForRelist' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EligibleForRelist'
-        ),
-        'SellerID' => array(
+        ],
+        'SellerID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -17,25 +17,25 @@ class BotBlockRequestType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BotBlockToken' => array(
+    private static $propertyTypes = [
+        'BotBlockToken' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BotBlockToken'
-        ),
-        'BotBlockUserInput' => array(
+        ],
+        'BotBlockUserInput' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BotBlockUserInput'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

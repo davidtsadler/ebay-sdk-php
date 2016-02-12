@@ -39,157 +39,157 @@ class AddressType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'Street' => array(
+        ],
+        'Street' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Street'
-        ),
-        'Street1' => array(
+        ],
+        'Street1' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Street1'
-        ),
-        'Street2' => array(
+        ],
+        'Street2' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Street2'
-        ),
-        'CityName' => array(
+        ],
+        'CityName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CityName'
-        ),
-        'County' => array(
+        ],
+        'County' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'County'
-        ),
-        'StateOrProvince' => array(
+        ],
+        'StateOrProvince' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StateOrProvince'
-        ),
-        'CountryName' => array(
+        ],
+        'CountryName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CountryName'
-        ),
-        'Phone' => array(
+        ],
+        'Phone' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Phone'
-        ),
-        'PhoneCountryPrefix' => array(
+        ],
+        'PhoneCountryPrefix' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PhoneCountryPrefix'
-        ),
-        'PhoneAreaOrCityCode' => array(
+        ],
+        'PhoneAreaOrCityCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PhoneAreaOrCityCode'
-        ),
-        'PhoneLocalNumber' => array(
+        ],
+        'PhoneLocalNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PhoneLocalNumber'
-        ),
-        'Phone2CountryPrefix' => array(
+        ],
+        'Phone2CountryPrefix' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Phone2CountryPrefix'
-        ),
-        'Phone2AreaOrCityCode' => array(
+        ],
+        'Phone2AreaOrCityCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Phone2AreaOrCityCode'
-        ),
-        'Phone2LocalNumber' => array(
+        ],
+        'Phone2LocalNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Phone2LocalNumber'
-        ),
-        'PostalCode' => array(
+        ],
+        'PostalCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PostalCode'
-        ),
-        'AddressID' => array(
+        ],
+        'AddressID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AddressID'
-        ),
-        'ExternalAddressID' => array(
+        ],
+        'ExternalAddressID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalAddressID'
-        ),
-        'InternationalName' => array(
+        ],
+        'InternationalName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalName'
-        ),
-        'InternationalStateAndCity' => array(
+        ],
+        'InternationalStateAndCity' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalStateAndCity'
-        ),
-        'InternationalStreet' => array(
+        ],
+        'InternationalStreet' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalStreet'
-        ),
-        'CompanyName' => array(
+        ],
+        'CompanyName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CompanyName'
-        ),
-        'FirstName' => array(
+        ],
+        'FirstName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FirstName'
-        ),
-        'LastName' => array(
+        ],
+        'LastName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastName'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

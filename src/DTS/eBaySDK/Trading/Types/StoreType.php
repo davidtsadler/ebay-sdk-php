@@ -33,121 +33,121 @@ class StoreType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'URLPath' => array(
+        ],
+        'URLPath' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URLPath'
-        ),
-        'URL' => array(
+        ],
+        'URL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'URL'
-        ),
-        'SubscriptionLevel' => array(
+        ],
+        'SubscriptionLevel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubscriptionLevel'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'Logo' => array(
+        ],
+        'Logo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreLogoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Logo'
-        ),
-        'Theme' => array(
+        ],
+        'Theme' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Theme'
-        ),
-        'HeaderStyle' => array(
+        ],
+        'HeaderStyle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HeaderStyle'
-        ),
-        'HomePage' => array(
+        ],
+        'HomePage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HomePage'
-        ),
-        'ItemListLayout' => array(
+        ],
+        'ItemListLayout' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemListLayout'
-        ),
-        'ItemListSortOrder' => array(
+        ],
+        'ItemListSortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemListSortOrder'
-        ),
-        'CustomHeaderLayout' => array(
+        ],
+        'CustomHeaderLayout' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomHeaderLayout'
-        ),
-        'CustomHeader' => array(
+        ],
+        'CustomHeader' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomHeader'
-        ),
-        'ExportListings' => array(
+        ],
+        'ExportListings' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExportListings'
-        ),
-        'CustomCategories' => array(
+        ],
+        'CustomCategories' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomCategories'
-        ),
-        'CustomListingHeader' => array(
+        ],
+        'CustomListingHeader' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomListingHeaderType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomListingHeader'
-        ),
-        'LastOpenedTime' => array(
+        ],
+        'LastOpenedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastOpenedTime'
-        ),
-        'TitleWithCompatibility' => array(
+        ],
+        'TitleWithCompatibility' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TitleWithCompatibility'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

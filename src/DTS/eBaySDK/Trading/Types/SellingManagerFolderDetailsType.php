@@ -22,55 +22,55 @@ class SellingManagerFolderDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FolderID' => array(
+    private static $propertyTypes = [
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'ParentFolderID' => array(
+        ],
+        'ParentFolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ParentFolderID'
-        ),
-        'FolderLevel' => array(
+        ],
+        'FolderLevel' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderLevel'
-        ),
-        'FolderName' => array(
+        ],
+        'FolderName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
-        ),
-        'FolderComment' => array(
+        ],
+        'FolderComment' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderComment'
-        ),
-        'ChildFolder' => array(
+        ],
+        'ChildFolder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ChildFolder'
-        ),
-        'CreationTime' => array(
+        ],
+        'CreationTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

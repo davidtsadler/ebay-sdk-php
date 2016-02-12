@@ -19,37 +19,37 @@ class ReturnResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'note' => array(
+    private static $propertyTypes = [
+        'note' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'note'
-        ),
-        'author' => array(
+        ],
+        'author' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'author'
-        ),
-        'activityDetail' => array(
+        ],
+        'activityDetail' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ActivityDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'activityDetail'
-        ),
-        'creationDate' => array(
+        ],
+        'creationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

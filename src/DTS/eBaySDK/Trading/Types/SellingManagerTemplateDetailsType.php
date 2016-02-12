@@ -20,43 +20,43 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SaleTemplateID' => array(
+    private static $propertyTypes = [
+        'SaleTemplateID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
-        ),
-        'SaleTemplateName' => array(
+        ],
+        'SaleTemplateName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
-        ),
-        'SuccessPercent' => array(
+        ],
+        'SuccessPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
-        ),
-        'SellingManagerProductDetails' => array(
+        ],
+        'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
-        ),
-        'Template' => array(
+        ],
+        'Template' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Template'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

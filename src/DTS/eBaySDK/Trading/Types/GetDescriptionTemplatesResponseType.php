@@ -21,49 +21,49 @@ class GetDescriptionTemplatesResponseType extends \DTS\eBaySDK\Trading\Types\Abs
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DescriptionTemplate' => array(
+    private static $propertyTypes = [
+        'DescriptionTemplate' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DescriptionTemplateType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DescriptionTemplate'
-        ),
-        'LayoutTotal' => array(
+        ],
+        'LayoutTotal' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LayoutTotal'
-        ),
-        'ObsoleteLayoutID' => array(
+        ],
+        'ObsoleteLayoutID' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ObsoleteLayoutID'
-        ),
-        'ObsoleteThemeID' => array(
+        ],
+        'ObsoleteThemeID' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ObsoleteThemeID'
-        ),
-        'ThemeGroup' => array(
+        ],
+        'ThemeGroup' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ThemeGroupType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ThemeGroup'
-        ),
-        'ThemeTotal' => array(
+        ],
+        'ThemeTotal' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ThemeTotal'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

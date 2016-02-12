@@ -19,37 +19,37 @@ class FindItemsByKeywordsRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingS
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'keywords' => array(
+    private static $propertyTypes = [
+        'keywords' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'keywords'
-        ),
-        'itemFilter' => array(
+        ],
+        'itemFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
-        ),
-        'aspectFilter' => array(
+        ],
+        'aspectFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'aspectFilter'
-        ),
-        'outputSelector' => array(
+        ],
+        'outputSelector' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

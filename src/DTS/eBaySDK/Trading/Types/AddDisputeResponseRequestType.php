@@ -21,49 +21,49 @@ class AddDisputeResponseRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DisputeID' => array(
+    private static $propertyTypes = [
+        'DisputeID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeID'
-        ),
-        'MessageText' => array(
+        ],
+        'MessageText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageText'
-        ),
-        'DisputeActivity' => array(
+        ],
+        'DisputeActivity' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisputeActivity'
-        ),
-        'ShippingCarrierUsed' => array(
+        ],
+        'ShippingCarrierUsed' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingCarrierUsed'
-        ),
-        'ShipmentTrackNumber' => array(
+        ],
+        'ShipmentTrackNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipmentTrackNumber'
-        ),
-        'ShippingTime' => array(
+        ],
+        'ShippingTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

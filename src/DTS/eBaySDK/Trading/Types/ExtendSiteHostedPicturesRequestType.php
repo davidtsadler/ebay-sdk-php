@@ -17,25 +17,25 @@ class ExtendSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PictureURL' => array(
+    private static $propertyTypes = [
+        'PictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
-        ),
-        'ExtensionInDays' => array(
+        ],
+        'ExtensionInDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtensionInDays'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

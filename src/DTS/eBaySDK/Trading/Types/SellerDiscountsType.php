@@ -19,37 +19,37 @@ class SellerDiscountsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OriginalItemPrice' => array(
+    private static $propertyTypes = [
+        'OriginalItemPrice' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OriginalItemPrice'
-        ),
-        'OriginalItemShippingCost' => array(
+        ],
+        'OriginalItemShippingCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OriginalItemShippingCost'
-        ),
-        'OriginalShippingService' => array(
+        ],
+        'OriginalShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OriginalShippingService'
-        ),
-        'SellerDiscount' => array(
+        ],
+        'SellerDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerDiscountType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SellerDiscount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

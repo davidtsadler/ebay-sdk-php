@@ -17,25 +17,25 @@ class AddMemberMessageAAQToPartnerRequestType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'MemberMessage' => array(
+        ],
+        'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

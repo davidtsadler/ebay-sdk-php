@@ -71,13 +71,13 @@ class ComplexClassTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('bar', $this->obj->strings[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
 
-        $this->obj->strings = array('foo', 'bar');
+        $this->obj->strings = ['foo', 'bar'];
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
 
-        $this->obj->strings = array();
+        $this->obj->strings = [];
         $this->assertEquals(0, count($this->obj->strings));
         $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
     }
@@ -102,13 +102,13 @@ class ComplexClassTest extends \PHPUnit_Framework_TestCase
         $amountClass->AttributeOne = 'one';
         $this->obj->AmountClass = $amountClass;
 
-        $this->obj->strings = array('foo', 'bar');
-        $this->obj->integers = array(1,2,3,4,5);
+        $this->obj->strings = ['foo', 'bar'];
+        $this->obj->integers = [1,2,3,4,5];
 
-        $this->obj->simpleClasses = array(
-            new SimpleClass(array('integer' => 888)),
-            new SimpleClass(array('integer' => 999))
-        );
+        $this->obj->simpleClasses = [
+            new SimpleClass(['integer' => 888]),
+            new SimpleClass(['integer' => 999])
+        ];
 
         $this->assertXmlStringEqualsXmlFile(__DIR__ . '/../Mocks/ComplexClassXml.xml', $this->obj->toRequestXml());
     }

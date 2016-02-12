@@ -24,67 +24,67 @@ class PromotionalSaleType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PromotionalSaleID' => array(
+    private static $propertyTypes = [
+        'PromotionalSaleID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleID'
-        ),
-        'PromotionalSaleName' => array(
+        ],
+        'PromotionalSaleName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleName'
-        ),
-        'PromotionalSaleItemIDArray' => array(
+        ],
+        'PromotionalSaleItemIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleItemIDArray'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'DiscountType' => array(
+        ],
+        'DiscountType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountType'
-        ),
-        'DiscountValue' => array(
+        ],
+        'DiscountValue' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountValue'
-        ),
-        'PromotionalSaleStartTime' => array(
+        ],
+        'PromotionalSaleStartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleStartTime'
-        ),
-        'PromotionalSaleEndTime' => array(
+        ],
+        'PromotionalSaleEndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleEndTime'
-        ),
-        'PromotionalSaleType' => array(
+        ],
+        'PromotionalSaleType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleType'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

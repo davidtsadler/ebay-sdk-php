@@ -23,61 +23,61 @@ class MyMessagesFolderSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FolderID' => array(
+    private static $propertyTypes = [
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'FolderName' => array(
+        ],
+        'FolderName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
-        ),
-        'NewAlertCount' => array(
+        ],
+        'NewAlertCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewAlertCount'
-        ),
-        'NewMessageCount' => array(
+        ],
+        'NewMessageCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewMessageCount'
-        ),
-        'TotalAlertCount' => array(
+        ],
+        'TotalAlertCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalAlertCount'
-        ),
-        'TotalMessageCount' => array(
+        ],
+        'TotalMessageCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalMessageCount'
-        ),
-        'NewHighPriorityCount' => array(
+        ],
+        'NewHighPriorityCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NewHighPriorityCount'
-        ),
-        'TotalHighPriorityCount' => array(
+        ],
+        'TotalHighPriorityCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalHighPriorityCount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

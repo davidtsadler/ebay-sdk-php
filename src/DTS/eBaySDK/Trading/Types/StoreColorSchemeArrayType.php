@@ -16,19 +16,19 @@ class StoreColorSchemeArrayType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ColorScheme' => array(
+    private static $propertyTypes = [
+        'ColorScheme' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ColorScheme'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

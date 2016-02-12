@@ -22,55 +22,55 @@ class GetSellingManagerInventoryRequestType extends \DTS\eBaySDK\Trading\Types\A
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Sort' => array(
+    private static $propertyTypes = [
+        'Sort' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Sort'
-        ),
-        'FolderID' => array(
+        ],
+        'FolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'SortOrder' => array(
+        ],
+        'SortOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
-        ),
-        'Search' => array(
+        ],
+        'Search' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Search'
-        ),
-        'StoreCategoryID' => array(
+        ],
+        'StoreCategoryID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
-        ),
-        'Filter' => array(
+        ],
+        'Filter' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Filter'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

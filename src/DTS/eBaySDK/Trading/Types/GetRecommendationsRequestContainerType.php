@@ -23,61 +23,61 @@ class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ListingFlow' => array(
+    private static $propertyTypes = [
+        'ListingFlow' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingFlow'
-        ),
-        'Item' => array(
+        ],
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'RecommendationEngine' => array(
+        ],
+        'RecommendationEngine' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'RecommendationEngine'
-        ),
-        'Query' => array(
+        ],
+        'Query' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Query'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'DeletedField' => array(
+        ],
+        'DeletedField' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
-        ),
-        'ExcludeRelationships' => array(
+        ],
+        'ExcludeRelationships' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExcludeRelationships'
-        ),
-        'IncludeConfidence' => array(
+        ],
+        'IncludeConfidence' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeConfidence'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

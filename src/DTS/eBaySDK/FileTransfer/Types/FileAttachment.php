@@ -17,25 +17,25 @@ class FileAttachment extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Size' => array(
+    private static $propertyTypes = [
+        'Size' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Size'
-        ),
-        'Data' => array(
+        ],
+        'Data' => [
             'type' => 'DTS\eBaySDK\FileTransfer\Types\Data',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Data'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

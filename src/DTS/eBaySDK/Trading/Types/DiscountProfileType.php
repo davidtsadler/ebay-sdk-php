@@ -22,55 +22,55 @@ class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DiscountProfileID' => array(
+    private static $propertyTypes = [
+        'DiscountProfileID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountProfileID'
-        ),
-        'DiscountProfileName' => array(
+        ],
+        'DiscountProfileName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DiscountProfileName'
-        ),
-        'EachAdditionalAmount' => array(
+        ],
+        'EachAdditionalAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalAmount'
-        ),
-        'EachAdditionalAmountOff' => array(
+        ],
+        'EachAdditionalAmountOff' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalAmountOff'
-        ),
-        'EachAdditionalPercentOff' => array(
+        ],
+        'EachAdditionalPercentOff' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalPercentOff'
-        ),
-        'WeightOff' => array(
+        ],
+        'WeightOff' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'WeightOff'
-        ),
-        'MappedDiscountProfileID' => array(
+        ],
+        'MappedDiscountProfileID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MappedDiscountProfileID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class GetRecommendationsResponseContainerType extends \DTS\eBaySDK\Types\BaseTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ListingAnalyzerRecommendations' => array(
+    private static $propertyTypes = [
+        'ListingAnalyzerRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingAnalyzerRecommendations'
-        ),
-        'SIFFTASRecommendations' => array(
+        ],
+        'SIFFTASRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SIFFTASRecommendations'
-        ),
-        'PricingRecommendations' => array(
+        ],
+        'PricingRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PricingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PricingRecommendations'
-        ),
-        'AttributeRecommendations' => array(
+        ],
+        'AttributeRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AttributeRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AttributeRecommendations'
-        ),
-        'ProductRecommendations' => array(
+        ],
+        'ProductRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductRecommendations'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'Recommendations' => array(
+        ],
+        'Recommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Recommendations'
-        ),
-        'ProductListingDetails' => array(
+        ],
+        'ProductListingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductListingDetails'
-        ),
-        'Title' => array(
+        ],
+        'Title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

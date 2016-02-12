@@ -18,31 +18,31 @@ class AddSellerProfileResponse extends \DTS\eBaySDK\BusinessPoliciesManagement\T
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'paymentProfile' => array(
+    private static $propertyTypes = [
+        'paymentProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PaymentProfile',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paymentProfile'
-        ),
-        'returnPolicyProfile' => array(
+        ],
+        'returnPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnPolicyProfile'
-        ),
-        'shippingPolicyProfile' => array(
+        ],
+        'shippingPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyProfile',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyProfile'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

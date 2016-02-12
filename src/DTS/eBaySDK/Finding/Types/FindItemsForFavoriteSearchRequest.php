@@ -16,19 +16,19 @@ class FindItemsForFavoriteSearchRequest extends \DTS\eBaySDK\Finding\Types\BaseS
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'paginationInput' => array(
+    private static $propertyTypes = [
+        'paginationInput' => [
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationInput',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -16,19 +16,19 @@ class Money extends \DTS\eBaySDK\Types\DecimalType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'currencyCode' => array(
+    private static $propertyTypes = [
+        'currencyCode' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'currencyCode'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

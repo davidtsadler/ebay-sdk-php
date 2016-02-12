@@ -23,61 +23,61 @@ class BuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShipToRegistrationCountry' => array(
+    private static $propertyTypes = [
+        'ShipToRegistrationCountry' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipToRegistrationCountry'
-        ),
-        'ZeroFeedbackScore' => array(
+        ],
+        'ZeroFeedbackScore' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ZeroFeedbackScore'
-        ),
-        'MinimumFeedbackScore' => array(
+        ],
+        'MinimumFeedbackScore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumFeedbackScore'
-        ),
-        'MaximumItemRequirements' => array(
+        ],
+        'MaximumItemRequirements' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumItemRequirementsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumItemRequirements'
-        ),
-        'LinkedPayPalAccount' => array(
+        ],
+        'LinkedPayPalAccount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LinkedPayPalAccount'
-        ),
-        'VerifiedUserRequirements' => array(
+        ],
+        'VerifiedUserRequirements' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUserRequirements'
-        ),
-        'MaximumUnpaidItemStrikesInfo' => array(
+        ],
+        'MaximumUnpaidItemStrikesInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumUnpaidItemStrikesInfo'
-        ),
-        'MaximumBuyerPolicyViolations' => array(
+        ],
+        'MaximumBuyerPolicyViolations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MaximumBuyerPolicyViolations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

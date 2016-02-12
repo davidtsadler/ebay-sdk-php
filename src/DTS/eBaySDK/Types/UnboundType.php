@@ -13,7 +13,7 @@ class UnboundType implements \ArrayAccess, \Countable, \Iterator
     /**
      * @var array The data to store as an array.
      */
-    private $data = array();
+    private $data = [];
 
     /**
      * @var integer The current position in the array.

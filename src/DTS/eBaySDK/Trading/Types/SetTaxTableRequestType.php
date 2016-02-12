@@ -16,19 +16,19 @@ class SetTaxTableRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'TaxTable' => array(
+    private static $propertyTypes = [
+        'TaxTable' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxTableType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

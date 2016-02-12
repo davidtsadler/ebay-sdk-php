@@ -24,67 +24,67 @@ class GetItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'IncludeWatchCount' => array(
+        ],
+        'IncludeWatchCount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeWatchCount'
-        ),
-        'IncludeItemSpecifics' => array(
+        ],
+        'IncludeItemSpecifics' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeItemSpecifics'
-        ),
-        'IncludeTaxTable' => array(
+        ],
+        'IncludeTaxTable' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeTaxTable'
-        ),
-        'SKU' => array(
+        ],
+        'SKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'VariationSKU' => array(
+        ],
+        'VariationSKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSKU'
-        ),
-        'VariationSpecifics' => array(
+        ],
+        'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'IncludeItemCompatibilityList' => array(
+        ],
+        'IncludeItemCompatibilityList' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeItemCompatibilityList'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

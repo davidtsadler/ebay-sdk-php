@@ -3,22 +3,22 @@ namespace DTS\eBaySDK\Mocks;
 
 class AmountClass extends \DTS\eBaySDK\Types\DoubleType
 {
-    private static $propertyTypes = array(
-        'AttributeOne' => array(
+    private static $propertyTypes = [
+        'AttributeOne' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'AttributeOne'
-        ),
-        'AttributeTwo' => array(
+        ],
+        'AttributeTwo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'AttributeTwo'
-        )
-    );
+        ]
+    ];
 
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

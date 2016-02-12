@@ -27,85 +27,85 @@ class GetOrdersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestTyp
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OrderIDArray' => array(
+    private static $propertyTypes = [
+        'OrderIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderIDArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderIDArray'
-        ),
-        'CreateTimeFrom' => array(
+        ],
+        'CreateTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreateTimeFrom'
-        ),
-        'CreateTimeTo' => array(
+        ],
+        'CreateTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreateTimeTo'
-        ),
-        'OrderRole' => array(
+        ],
+        'OrderRole' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderRole'
-        ),
-        'OrderStatus' => array(
+        ],
+        'OrderStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderStatus'
-        ),
-        'ListingType' => array(
+        ],
+        'ListingType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'ModTimeFrom' => array(
+        ],
+        'ModTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeFrom'
-        ),
-        'ModTimeTo' => array(
+        ],
+        'ModTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeTo'
-        ),
-        'NumberOfDays' => array(
+        ],
+        'NumberOfDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NumberOfDays'
-        ),
-        'IncludeFinalValueFee' => array(
+        ],
+        'IncludeFinalValueFee' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFinalValueFee'
-        ),
-        'SortingOrder' => array(
+        ],
+        'SortingOrder' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SortingOrder'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

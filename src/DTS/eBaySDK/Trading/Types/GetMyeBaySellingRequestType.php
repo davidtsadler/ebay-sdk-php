@@ -24,67 +24,67 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ScheduledList' => array(
+    private static $propertyTypes = [
+        'ScheduledList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ScheduledList'
-        ),
-        'ActiveList' => array(
+        ],
+        'ActiveList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
-        ),
-        'SoldList' => array(
+        ],
+        'SoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldList'
-        ),
-        'UnsoldList' => array(
+        ],
+        'UnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnsoldList'
-        ),
-        'BidList' => array(
+        ],
+        'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidList'
-        ),
-        'DeletedFromSoldList' => array(
+        ],
+        'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromSoldList'
-        ),
-        'DeletedFromUnsoldList' => array(
+        ],
+        'DeletedFromUnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
-        ),
-        'SellingSummary' => array(
+        ],
+        'SellingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellingSummary'
-        ),
-        'HideVariations' => array(
+        ],
+        'HideVariations' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HideVariations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

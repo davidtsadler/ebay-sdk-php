@@ -22,55 +22,55 @@ class RefundTransactionInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'RefundStatus' => array(
+    private static $propertyTypes = [
+        'RefundStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundStatus'
-        ),
-        'RefundType' => array(
+        ],
+        'RefundType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundType'
-        ),
-        'RefundTo' => array(
+        ],
+        'RefundTo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundTo'
-        ),
-        'RefundTime' => array(
+        ],
+        'RefundTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundTime'
-        ),
-        'RefundAmount' => array(
+        ],
+        'RefundAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RefundAmount'
-        ),
-        'ReferenceID' => array(
+        ],
+        'ReferenceID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReferenceID'
-        ),
-        'FeeOrCreditAmount' => array(
+        ],
+        'FeeOrCreditAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeeOrCreditAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

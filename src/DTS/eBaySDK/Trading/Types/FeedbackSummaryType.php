@@ -27,85 +27,85 @@ class FeedbackSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BidRetractionFeedbackPeriodArray' => array(
+    private static $propertyTypes = [
+        'BidRetractionFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidRetractionFeedbackPeriodArray'
-        ),
-        'NegativeFeedbackPeriodArray' => array(
+        ],
+        'NegativeFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NegativeFeedbackPeriodArray'
-        ),
-        'NeutralFeedbackPeriodArray' => array(
+        ],
+        'NeutralFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NeutralFeedbackPeriodArray'
-        ),
-        'PositiveFeedbackPeriodArray' => array(
+        ],
+        'PositiveFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackPeriodArray'
-        ),
-        'TotalFeedbackPeriodArray' => array(
+        ],
+        'TotalFeedbackPeriodArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalFeedbackPeriodArray'
-        ),
-        'NeutralCommentCountFromSuspendedUsers' => array(
+        ],
+        'NeutralCommentCountFromSuspendedUsers' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NeutralCommentCountFromSuspendedUsers'
-        ),
-        'UniqueNegativeFeedbackCount' => array(
+        ],
+        'UniqueNegativeFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniqueNegativeFeedbackCount'
-        ),
-        'UniquePositiveFeedbackCount' => array(
+        ],
+        'UniquePositiveFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniquePositiveFeedbackCount'
-        ),
-        'UniqueNeutralFeedbackCount' => array(
+        ],
+        'UniqueNeutralFeedbackCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UniqueNeutralFeedbackCount'
-        ),
-        'SellerRatingSummaryArray' => array(
+        ],
+        'SellerRatingSummaryArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerRatingSummaryArray'
-        ),
-        'SellerRoleMetrics' => array(
+        ],
+        'SellerRoleMetrics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerRoleMetricsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerRoleMetrics'
-        ),
-        'BuyerRoleMetrics' => array(
+        ],
+        'BuyerRoleMetrics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BuyerRoleMetricsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BuyerRoleMetrics'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class SellingManagerAutoListType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SourceSaleTemplateID' => array(
+    private static $propertyTypes = [
+        'SourceSaleTemplateID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SourceSaleTemplateID'
-        ),
-        'KeepMinActive' => array(
+        ],
+        'KeepMinActive' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListMinActiveItemsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'KeepMinActive'
-        ),
-        'ListAccordingToSchedule' => array(
+        ],
+        'ListAccordingToSchedule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListAccordingToScheduleType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListAccordingToSchedule'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

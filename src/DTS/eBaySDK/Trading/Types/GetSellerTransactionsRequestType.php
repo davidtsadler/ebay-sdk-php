@@ -25,73 +25,73 @@ class GetSellerTransactionsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ModTimeFrom' => array(
+    private static $propertyTypes = [
+        'ModTimeFrom' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeFrom'
-        ),
-        'ModTimeTo' => array(
+        ],
+        'ModTimeTo' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ModTimeTo'
-        ),
-        'Pagination' => array(
+        ],
+        'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
-        ),
-        'IncludeFinalValueFee' => array(
+        ],
+        'IncludeFinalValueFee' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeFinalValueFee'
-        ),
-        'IncludeContainingOrder' => array(
+        ],
+        'IncludeContainingOrder' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeContainingOrder'
-        ),
-        'SKUArray' => array(
+        ],
+        'SKUArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKUArray'
-        ),
-        'Platform' => array(
+        ],
+        'Platform' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Platform'
-        ),
-        'NumberOfDays' => array(
+        ],
+        'NumberOfDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NumberOfDays'
-        ),
-        'InventoryTrackingMethod' => array(
+        ],
+        'InventoryTrackingMethod' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InventoryTrackingMethod'
-        ),
-        'IncludeCodiceFiscale' => array(
+        ],
+        'IncludeCodiceFiscale' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IncludeCodiceFiscale'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

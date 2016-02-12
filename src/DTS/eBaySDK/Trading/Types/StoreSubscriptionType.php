@@ -17,25 +17,25 @@ class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Level' => array(
+    private static $propertyTypes = [
+        'Level' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Level'
-        ),
-        'Fee' => array(
+        ],
+        'Fee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fee'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

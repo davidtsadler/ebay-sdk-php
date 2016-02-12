@@ -21,49 +21,49 @@ class PaymentInfo extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'acceptedPaymentMethod' => array(
+    private static $propertyTypes = [
+        'acceptedPaymentMethod' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'acceptedPaymentMethod'
-        ),
-        'immediatePay' => array(
+        ],
+        'immediatePay' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'immediatePay'
-        ),
-        'paymentInstructions' => array(
+        ],
+        'paymentInstructions' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paymentInstructions'
-        ),
-        'paypalEmailAddress' => array(
+        ],
+        'paypalEmailAddress' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paypalEmailAddress'
-        ),
-        'depositDetails' => array(
+        ],
+        'depositDetails' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'depositDetails'
-        ),
-        'daysToFullPayment' => array(
+        ],
+        'daysToFullPayment' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'daysToFullPayment'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

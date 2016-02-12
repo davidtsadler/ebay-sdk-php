@@ -19,37 +19,37 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingServiceDetails' => array(
+    private static $propertyTypes = [
+        'ShippingServiceDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceDetails'
-        ),
-        'ShipToAddress' => array(
+        ],
+        'ShipToAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShipToAddress'
-        ),
-        'ShippingTimeMin' => array(
+        ],
+        'ShippingTimeMin' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
-        ),
-        'ShippingTimeMax' => array(
+        ],
+        'ShippingTimeMax' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMax'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

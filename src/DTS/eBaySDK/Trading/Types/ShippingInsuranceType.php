@@ -17,25 +17,25 @@ class ShippingInsuranceType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'InsuranceOption' => array(
+    private static $propertyTypes = [
+        'InsuranceOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
-        ),
-        'FlatRateInsuranceRangeCost' => array(
+        ],
+        'FlatRateInsuranceRangeCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FlatRateInsuranceRangeCostType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'FlatRateInsuranceRangeCost'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -24,67 +24,67 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CurrencyID' => array(
+    private static $propertyTypes = [
+        'CurrencyID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CurrencyID'
-        ),
-        'FlatShippingDiscount' => array(
+        ],
+        'FlatShippingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingDiscount'
-        ),
-        'CalculatedShippingDiscount' => array(
+        ],
+        'CalculatedShippingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingDiscount'
-        ),
-        'PromotionalShippingDiscount' => array(
+        ],
+        'PromotionalShippingDiscount' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscount'
-        ),
-        'CalculatedHandlingDiscount' => array(
+        ],
+        'CalculatedHandlingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CalculatedHandlingDiscount'
-        ),
-        'PromotionalShippingDiscountDetails' => array(
+        ],
+        'PromotionalShippingDiscountDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
-        ),
-        'ShippingInsurance' => array(
+        ],
+        'ShippingInsurance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsurance'
-        ),
-        'InternationalShippingInsurance' => array(
+        ],
+        'InternationalShippingInsurance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InternationalShippingInsurance'
-        ),
-        'CombinedDuration' => array(
+        ],
+        'CombinedDuration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CombinedDuration'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

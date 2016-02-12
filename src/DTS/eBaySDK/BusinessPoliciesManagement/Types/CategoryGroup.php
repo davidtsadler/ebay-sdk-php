@@ -18,31 +18,31 @@ class CategoryGroup extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'default' => array(
+    private static $propertyTypes = [
+        'default' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'default'
-        ),
-        'name' => array(
+        ],
+        'name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'name'
-        ),
-        'ETRS' => array(
+        ],
+        'ETRS' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ETRS'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

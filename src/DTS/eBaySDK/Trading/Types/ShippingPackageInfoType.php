@@ -22,55 +22,55 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'StoreID' => array(
+    private static $propertyTypes = [
+        'StoreID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StoreID'
-        ),
-        'ShippingTrackingEvent' => array(
+        ],
+        'ShippingTrackingEvent' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTrackingEvent'
-        ),
-        'ScheduledDeliveryTimeMin' => array(
+        ],
+        'ScheduledDeliveryTimeMin' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ScheduledDeliveryTimeMin'
-        ),
-        'ScheduledDeliveryTimeMax' => array(
+        ],
+        'ScheduledDeliveryTimeMax' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ScheduledDeliveryTimeMax'
-        ),
-        'ActualDeliveryTime' => array(
+        ],
+        'ActualDeliveryTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ActualDeliveryTime'
-        ),
-        'EstimatedDeliveryTimeMin' => array(
+        ],
+        'EstimatedDeliveryTimeMin' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EstimatedDeliveryTimeMin'
-        ),
-        'EstimatedDeliveryTimeMax' => array(
+        ],
+        'EstimatedDeliveryTimeMax' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EstimatedDeliveryTimeMax'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

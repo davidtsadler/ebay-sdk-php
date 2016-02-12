@@ -23,61 +23,61 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AlertType' => array(
+    private static $propertyTypes = [
+        'AlertType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AlertType'
-        ),
-        'SoldAlert' => array(
+        ],
+        'SoldAlert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldAlert'
-        ),
-        'InventoryAlert' => array(
+        ],
+        'InventoryAlert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InventoryAlert'
-        ),
-        'AutomationAlert' => array(
+        ],
+        'AutomationAlert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AutomationAlert'
-        ),
-        'PaisaPayAlert' => array(
+        ],
+        'PaisaPayAlert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaisaPayAlert'
-        ),
-        'GeneralAlert' => array(
+        ],
+        'GeneralAlert' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GeneralAlert'
-        ),
-        'DurationInDays' => array(
+        ],
+        'DurationInDays' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DurationInDays'
-        ),
-        'Count' => array(
+        ],
+        'Count' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Count'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

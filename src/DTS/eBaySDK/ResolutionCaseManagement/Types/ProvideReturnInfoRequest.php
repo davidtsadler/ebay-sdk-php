@@ -18,31 +18,31 @@ class ProvideReturnInfoRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Typ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'address' => array(
+    private static $propertyTypes = [
+        'address' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'address'
-        ),
-        'caseId' => array(
+        ],
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        ),
-        'returnMerchandiseAuthorization' => array(
+        ],
+        'returnMerchandiseAuthorization' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

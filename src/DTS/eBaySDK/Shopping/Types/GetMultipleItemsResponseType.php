@@ -16,19 +16,19 @@ class GetMultipleItemsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Item' => array(
+    private static $propertyTypes = [
+        'Item' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Item'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -33,121 +33,121 @@ class AdFormatLeadType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'AdditionalInformation' => array(
+    private static $propertyTypes = [
+        'AdditionalInformation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdditionalInformation'
-        ),
-        'Address' => array(
+        ],
+        'Address' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Address'
-        ),
-        'BestTimeToCall' => array(
+        ],
+        'BestTimeToCall' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BestTimeToCall'
-        ),
-        'Email' => array(
+        ],
+        'Email' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Email'
-        ),
-        'SubmittedTime' => array(
+        ],
+        'SubmittedTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SubmittedTime'
-        ),
-        'ItemID' => array(
+        ],
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'ItemTitle' => array(
+        ],
+        'ItemTitle' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemTitle'
-        ),
-        'UserID' => array(
+        ],
+        'UserID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UserID'
-        ),
-        'MemberMessage' => array(
+        ],
+        'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
-        ),
-        'Status' => array(
+        ],
+        'Status' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Status'
-        ),
-        'ExternalEmail' => array(
+        ],
+        'ExternalEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalEmail'
-        ),
-        'PurchaseTimeFrame' => array(
+        ],
+        'PurchaseTimeFrame' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PurchaseTimeFrame'
-        ),
-        'TradeInYear' => array(
+        ],
+        'TradeInYear' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TradeInYear'
-        ),
-        'TradeInMake' => array(
+        ],
+        'TradeInMake' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TradeInMake'
-        ),
-        'TradeInModel' => array(
+        ],
+        'TradeInModel' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TradeInModel'
-        ),
-        'FinancingAnswer' => array(
+        ],
+        'FinancingAnswer' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FinancingAnswer'
-        ),
-        'Answer1' => array(
+        ],
+        'Answer1' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Answer1'
-        ),
-        'Answer2' => array(
+        ],
+        'Answer2' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Answer2'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

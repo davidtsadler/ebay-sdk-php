@@ -18,31 +18,31 @@ class ReturnRequestType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'returnItem' => array(
+    private static $propertyTypes = [
+        'returnItem' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnItemType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'returnItem'
-        ),
-        'returnReason' => array(
+        ],
+        'returnReason' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnReasonType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'returnReason'
-        ),
-        'comments' => array(
+        ],
+        'comments' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'comments'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

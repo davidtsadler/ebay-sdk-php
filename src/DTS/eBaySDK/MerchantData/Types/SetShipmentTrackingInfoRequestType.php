@@ -20,43 +20,43 @@ class SetShipmentTrackingInfoRequestType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'OrderID' => array(
+    private static $propertyTypes = [
+        'OrderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'Shipment' => array(
+        ],
+        'Shipment' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ShipmentType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Shipment'
-        ),
-        'IsShipped' => array(
+        ],
+        'IsShipped' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IsShipped'
-        ),
-        'IsPaid' => array(
+        ],
+        'IsPaid' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'IsPaid'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

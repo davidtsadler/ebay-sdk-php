@@ -24,67 +24,67 @@ class StoreFontType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'NameFace' => array(
+    private static $propertyTypes = [
+        'NameFace' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NameFace'
-        ),
-        'NameSize' => array(
+        ],
+        'NameSize' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NameSize'
-        ),
-        'NameColor' => array(
+        ],
+        'NameColor' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NameColor'
-        ),
-        'TitleFace' => array(
+        ],
+        'TitleFace' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TitleFace'
-        ),
-        'TitleSize' => array(
+        ],
+        'TitleSize' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TitleSize'
-        ),
-        'TitleColor' => array(
+        ],
+        'TitleColor' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TitleColor'
-        ),
-        'DescFace' => array(
+        ],
+        'DescFace' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DescFace'
-        ),
-        'DescSize' => array(
+        ],
+        'DescSize' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DescSize'
-        ),
-        'DescColor' => array(
+        ],
+        'DescColor' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DescColor'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

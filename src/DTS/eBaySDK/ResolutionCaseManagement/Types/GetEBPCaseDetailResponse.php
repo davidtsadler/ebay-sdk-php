@@ -17,25 +17,25 @@ class GetEBPCaseDetailResponse extends \DTS\eBaySDK\ResolutionCaseManagement\Typ
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'caseSummary' => array(
+    private static $propertyTypes = [
+        'caseSummary' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseSummaryType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseSummary'
-        ),
-        'caseDetail' => array(
+        ],
+        'caseDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseDetail'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

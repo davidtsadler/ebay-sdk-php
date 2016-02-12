@@ -19,37 +19,37 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'productID' => array(
+    private static $propertyTypes = [
+        'productID' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'productID'
-        ),
-        'paginationInput' => array(
+        ],
+        'paginationInput' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PaginationInputType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
-        ),
-        'itemFilter' => array(
+        ],
+        'itemFilter' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemFilter',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
-        ),
-        'sortBy' => array(
+        ],
+        'sortBy' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\SortByType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'sortBy'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

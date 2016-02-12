@@ -32,115 +32,115 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'ListingNPEmailNotifPref' => array(
+        ],
+        'ListingNPEmailNotifPref' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingNPEmailNotifPref'
-        ),
-        'ListingNPEmail' => array(
+        ],
+        'ListingNPEmail' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingNPEmail'
-        ),
-        'ListingNPContactName' => array(
+        ],
+        'ListingNPContactName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingNPContactName'
-        ),
-        'Mission' => array(
+        ],
+        'Mission' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Mission'
-        ),
-        'LogoURL' => array(
+        ],
+        'LogoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoURL'
-        ),
-        'CharityRegion' => array(
+        ],
+        'CharityRegion' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CharityRegion'
-        ),
-        'CharityDomain' => array(
+        ],
+        'CharityDomain' => [
             'type' => 'integer',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'CharityDomain'
-        ),
-        'LogoURLSelling' => array(
+        ],
+        'LogoURLSelling' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LogoURLSelling'
-        ),
-        'Description' => array(
+        ],
+        'Description' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Description'
-        ),
-        'ExternalID' => array(
+        ],
+        'ExternalID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalID'
-        ),
-        'PopularityIndex' => array(
+        ],
+        'PopularityIndex' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PopularityIndex'
-        ),
-        'EIN' => array(
+        ],
+        'EIN' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EIN'
-        ),
-        'NonProfitSecondName' => array(
+        ],
+        'NonProfitSecondName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NonProfitSecondName'
-        ),
-        'NonProfitAddress' => array(
+        ],
+        'NonProfitAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NonProfitAddressType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'NonProfitAddress'
-        ),
-        'NonProfitSocialAddress' => array(
+        ],
+        'NonProfitSocialAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NonProfitSocialAddressType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'NonProfitSocialAddress'
-        ),
-        'id' => array(
+        ],
+        'id' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'id'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

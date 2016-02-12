@@ -16,19 +16,19 @@ class SetStoreCustomPageRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'CustomPage' => array(
+    private static $propertyTypes = [
+        'CustomPage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomPageType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CustomPage'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

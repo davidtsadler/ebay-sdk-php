@@ -33,121 +33,121 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BidCount' => array(
+    private static $propertyTypes = [
+        'BidCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
-        ),
-        'BidIncrement' => array(
+        ],
+        'BidIncrement' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidIncrement'
-        ),
-        'ConvertedCurrentPrice' => array(
+        ],
+        'ConvertedCurrentPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ConvertedCurrentPrice'
-        ),
-        'CurrentPrice' => array(
+        ],
+        'CurrentPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CurrentPrice'
-        ),
-        'HighBidder' => array(
+        ],
+        'HighBidder' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HighBidder'
-        ),
-        'LeadCount' => array(
+        ],
+        'LeadCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LeadCount'
-        ),
-        'MinimumToBid' => array(
+        ],
+        'MinimumToBid' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MinimumToBid'
-        ),
-        'QuantitySold' => array(
+        ],
+        'QuantitySold' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
-        ),
-        'ReserveMet' => array(
+        ],
+        'ReserveMet' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
-        ),
-        'SecondChanceEligible' => array(
+        ],
+        'SecondChanceEligible' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceEligible'
-        ),
-        'BidderCount' => array(
+        ],
+        'BidderCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidderCount'
-        ),
-        'ListingStatus' => array(
+        ],
+        'ListingStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingStatus'
-        ),
-        'FinalValueFee' => array(
+        ],
+        'FinalValueFee' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FinalValueFee'
-        ),
-        'PromotionalSaleDetails' => array(
+        ],
+        'PromotionalSaleDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PromotionalSaleDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleDetails'
-        ),
-        'AdminEnded' => array(
+        ],
+        'AdminEnded' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdminEnded'
-        ),
-        'SoldAsBin' => array(
+        ],
+        'SoldAsBin' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SoldAsBin'
-        ),
-        'QuantitySoldByPickupInStore' => array(
+        ],
+        'QuantitySoldByPickupInStore' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySoldByPickupInStore'
-        ),
-        'SuggestedBidValues' => array(
+        ],
+        'SuggestedBidValues' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SuggestedBidValueType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuggestedBidValues'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

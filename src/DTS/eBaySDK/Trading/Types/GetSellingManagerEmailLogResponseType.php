@@ -16,19 +16,19 @@ class GetSellingManagerEmailLogResponseType extends \DTS\eBaySDK\Trading\Types\A
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'EmailLog' => array(
+    private static $propertyTypes = [
+        'EmailLog' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerEmailLogType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'EmailLog'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -22,55 +22,55 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DomainHistogram' => array(
+    private static $propertyTypes = [
+        'DomainHistogram' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'ApproximatePages' => array(
+        ],
+        'ApproximatePages' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ApproximatePages'
-        ),
-        'MoreResults' => array(
+        ],
+        'MoreResults' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MoreResults'
-        ),
-        'TotalProducts' => array(
+        ],
+        'TotalProducts' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TotalProducts'
-        ),
-        'Products' => array(
+        ],
+        'Products' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\HalfProductsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Products'
-        ),
-        'ProductSearchURL' => array(
+        ],
+        'ProductSearchURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductSearchURL'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

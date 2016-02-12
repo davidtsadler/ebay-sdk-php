@@ -31,109 +31,109 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'TransactionID' => array(
+        ],
+        'TransactionID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
-        ),
-        'OrderID' => array(
+        ],
+        'OrderID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
-        ),
-        'InternationalShippingServiceOptions' => array(
+        ],
+        'InternationalShippingServiceOptions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOptions'
-        ),
-        'ShippingServiceOptions' => array(
+        ],
+        'ShippingServiceOptions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
-        ),
-        'SalesTax' => array(
+        ],
+        'SalesTax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
-        ),
-        'InsuranceOption' => array(
+        ],
+        'InsuranceOption' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
-        ),
-        'InsuranceFee' => array(
+        ],
+        'InsuranceFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'InsuranceFee'
-        ),
-        'PaymentMethods' => array(
+        ],
+        'PaymentMethods' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PaymentMethods'
-        ),
-        'PayPalEmailAddress' => array(
+        ],
+        'PayPalEmailAddress' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalEmailAddress'
-        ),
-        'CheckoutInstructions' => array(
+        ],
+        'CheckoutInstructions' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CheckoutInstructions'
-        ),
-        'EmailCopyToSeller' => array(
+        ],
+        'EmailCopyToSeller' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailCopyToSeller'
-        ),
-        'CODCost' => array(
+        ],
+        'CODCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
-        ),
-        'SKU' => array(
+        ],
+        'SKU' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ),
-        'OrderLineItemID' => array(
+        ],
+        'OrderLineItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
-        ),
-        'AdjustmentAmount' => array(
+        ],
+        'AdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

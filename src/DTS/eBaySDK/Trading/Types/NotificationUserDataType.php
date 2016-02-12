@@ -18,31 +18,31 @@ class NotificationUserDataType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'SMSSubscription' => array(
+    private static $propertyTypes = [
+        'SMSSubscription' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SMSSubscriptionType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SMSSubscription'
-        ),
-        'SummarySchedule' => array(
+        ],
+        'SummarySchedule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SummaryEventScheduleType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'SummarySchedule'
-        ),
-        'ExternalUserData' => array(
+        ],
+        'ExternalUserData' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExternalUserData'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -19,37 +19,37 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PositiveFeedbackLeftCount' => array(
+    private static $propertyTypes = [
+        'PositiveFeedbackLeftCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackLeftCount'
-        ),
-        'NegativeFeedbackLeftCount' => array(
+        ],
+        'NegativeFeedbackLeftCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NegativeFeedbackLeftCount'
-        ),
-        'NeutralFeedbackLeftCount' => array(
+        ],
+        'NeutralFeedbackLeftCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
-        ),
-        'FeedbackLeftPercent' => array(
+        ],
+        'FeedbackLeftPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FeedbackLeftPercent'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

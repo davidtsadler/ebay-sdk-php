@@ -22,55 +22,55 @@ class MemberMessageExchangeType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Item' => array(
+    private static $propertyTypes = [
+        'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Item'
-        ),
-        'Question' => array(
+        ],
+        'Question' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Question'
-        ),
-        'Response' => array(
+        ],
+        'Response' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Response'
-        ),
-        'MessageStatus' => array(
+        ],
+        'MessageStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'MessageStatus'
-        ),
-        'CreationDate' => array(
+        ],
+        'CreationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CreationDate'
-        ),
-        'LastModifiedDate' => array(
+        ],
+        'LastModifiedDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedDate'
-        ),
-        'MessageMedia' => array(
+        ],
+        'MessageMedia' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MessageMediaType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'MessageMedia'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

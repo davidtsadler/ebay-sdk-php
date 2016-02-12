@@ -35,133 +35,133 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'BidderNoticePreferences' => array(
+    private static $propertyTypes = [
+        'BidderNoticePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'BidderNoticePreferences'
-        ),
-        'CombinedPaymentPreferences' => array(
+        ],
+        'CombinedPaymentPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentPreferences'
-        ),
-        'SellerPaymentPreferences' => array(
+        ],
+        'SellerPaymentPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentPreferences'
-        ),
-        'SellerFavoriteItemPreferences' => array(
+        ],
+        'SellerFavoriteItemPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerFavoriteItemPreferences'
-        ),
-        'EndOfAuctionEmailPreferences' => array(
+        ],
+        'EndOfAuctionEmailPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndOfAuctionEmailPreferences'
-        ),
-        'EmailShipmentTrackingNumberPreference' => array(
+        ],
+        'EmailShipmentTrackingNumberPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EmailShipmentTrackingNumberPreference'
-        ),
-        'RequiredShipPhoneNumberPreference' => array(
+        ],
+        'RequiredShipPhoneNumberPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequiredShipPhoneNumberPreference'
-        ),
-        'UnpaidItemAssistancePreferences' => array(
+        ],
+        'UnpaidItemAssistancePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItemAssistancePreferences'
-        ),
-        'SellerExcludeShipToLocationPreferences' => array(
+        ],
+        'SellerExcludeShipToLocationPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerExcludeShipToLocationPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerExcludeShipToLocationPreferences'
-        ),
-        'PurchaseReminderEmailPreferences' => array(
+        ],
+        'PurchaseReminderEmailPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PurchaseReminderEmailPreferences'
-        ),
-        'SellerThirdPartyCheckoutDisabled' => array(
+        ],
+        'SellerThirdPartyCheckoutDisabled' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerThirdPartyCheckoutDisabled'
-        ),
-        'SellerProfilePreferences' => array(
+        ],
+        'SellerProfilePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilePreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerProfilePreferences'
-        ),
-        'SellerReturnPreferences' => array(
+        ],
+        'SellerReturnPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerReturnPreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SellerReturnPreferences'
-        ),
-        'OfferGlobalShippingProgramPreference' => array(
+        ],
+        'OfferGlobalShippingProgramPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OfferGlobalShippingProgramPreference'
-        ),
-        'DispatchCutoffTimePreference' => array(
+        ],
+        'DispatchCutoffTimePreference' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DispatchCutoffTimePreference'
-        ),
-        'GlobalShippingProgramListingPreference' => array(
+        ],
+        'GlobalShippingProgramListingPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GlobalShippingProgramListingPreference'
-        ),
-        'OverrideGSPServiceWithIntlServicePreference' => array(
+        ],
+        'OverrideGSPServiceWithIntlServicePreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OverrideGSPServiceWithIntlServicePreference'
-        ),
-        'PickupDropoffSellerPreference' => array(
+        ],
+        'PickupDropoffSellerPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PickupDropoffSellerPreference'
-        ),
-        'OutOfStockControlPreference' => array(
+        ],
+        'OutOfStockControlPreference' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'OutOfStockControlPreference'
-        ),
-        'eBayPLUSPreference' => array(
+        ],
+        'eBayPLUSPreference' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'eBayPLUSPreference'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

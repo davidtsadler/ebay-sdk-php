@@ -19,37 +19,37 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ExpectedReleaseDate' => array(
+    private static $propertyTypes = [
+        'ExpectedReleaseDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpectedReleaseDate'
-        ),
-        'RequiredSellerActionArray' => array(
+        ],
+        'RequiredSellerActionArray' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RequiredSellerActionArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'RequiredSellerActionArray'
-        ),
-        'NumOfReqSellerActions' => array(
+        ],
+        'NumOfReqSellerActions' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'NumOfReqSellerActions'
-        ),
-        'PaymentHoldReason' => array(
+        ],
+        'PaymentHoldReason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldReason'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -25,73 +25,73 @@ class CatalogProductType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'DomainName' => array(
+    private static $propertyTypes = [
+        'DomainName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DomainName'
-        ),
-        'DetailsURL' => array(
+        ],
+        'DetailsURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DetailsURL'
-        ),
-        'DisplayStockPhotos' => array(
+        ],
+        'DisplayStockPhotos' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'DisplayStockPhotos'
-        ),
-        'ProductID' => array(
+        ],
+        'ProductID' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ProductID'
-        ),
-        'ItemCount' => array(
+        ],
+        'ItemCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemCount'
-        ),
-        'ItemSpecifics' => array(
+        ],
+        'ItemSpecifics' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
-        ),
-        'ReviewCount' => array(
+        ],
+        'ReviewCount' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReviewCount'
-        ),
-        'StockPhotoURL' => array(
+        ],
+        'StockPhotoURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StockPhotoURL'
-        ),
-        'Title' => array(
+        ],
+        'Title' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Title'
-        ),
-        'ProductState' => array(
+        ],
+        'ProductState' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ProductState'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

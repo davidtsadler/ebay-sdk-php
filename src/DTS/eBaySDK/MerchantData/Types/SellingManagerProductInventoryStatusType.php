@@ -21,49 +21,49 @@ class SellingManagerProductInventoryStatusType extends \DTS\eBaySDK\Types\BaseTy
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'QuantityScheduled' => array(
+    private static $propertyTypes = [
+        'QuantityScheduled' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityScheduled'
-        ),
-        'QuantityActive' => array(
+        ],
+        'QuantityActive' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityActive'
-        ),
-        'QuantitySold' => array(
+        ],
+        'QuantitySold' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
-        ),
-        'QuantityUnsold' => array(
+        ],
+        'QuantityUnsold' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'QuantityUnsold'
-        ),
-        'SuccessPercent' => array(
+        ],
+        'SuccessPercent' => [
             'type' => 'double',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
-        ),
-        'AverageSellingPrice' => array(
+        ],
+        'AverageSellingPrice' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AverageSellingPrice'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

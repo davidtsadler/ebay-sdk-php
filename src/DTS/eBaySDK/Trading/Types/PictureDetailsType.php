@@ -25,73 +25,73 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'GalleryType' => array(
+    private static $propertyTypes = [
+        'GalleryType' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryType'
-        ),
-        'GalleryURL' => array(
+        ],
+        'GalleryURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryURL'
-        ),
-        'PhotoDisplay' => array(
+        ],
+        'PhotoDisplay' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PhotoDisplay'
-        ),
-        'PictureURL' => array(
+        ],
+        'PictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
-        ),
-        'PictureSource' => array(
+        ],
+        'PictureSource' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PictureSource'
-        ),
-        'GalleryDuration' => array(
+        ],
+        'GalleryDuration' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryDuration'
-        ),
-        'GalleryStatus' => array(
+        ],
+        'GalleryStatus' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryStatus'
-        ),
-        'GalleryErrorInfo' => array(
+        ],
+        'GalleryErrorInfo' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'GalleryErrorInfo'
-        ),
-        'ExternalPictureURL' => array(
+        ],
+        'ExternalPictureURL' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
-        ),
-        'ExtendedPictureDetails' => array(
+        ],
+        'ExtendedPictureDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ExtendedPictureDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExtendedPictureDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

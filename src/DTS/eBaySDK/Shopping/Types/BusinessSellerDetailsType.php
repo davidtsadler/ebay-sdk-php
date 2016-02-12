@@ -23,61 +23,61 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Address' => array(
+    private static $propertyTypes = [
+        'Address' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AddressType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Address'
-        ),
-        'Fax' => array(
+        ],
+        'Fax' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fax'
-        ),
-        'Email' => array(
+        ],
+        'Email' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Email'
-        ),
-        'AdditionalContactInformation' => array(
+        ],
+        'AdditionalContactInformation' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'AdditionalContactInformation'
-        ),
-        'TradeRegistrationNumber' => array(
+        ],
+        'TradeRegistrationNumber' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TradeRegistrationNumber'
-        ),
-        'LegalInvoice' => array(
+        ],
+        'LegalInvoice' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LegalInvoice'
-        ),
-        'TermsAndConditions' => array(
+        ],
+        'TermsAndConditions' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TermsAndConditions'
-        ),
-        'VATDetails' => array(
+        ],
+        'VATDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\VATDetailsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'VATDetails'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

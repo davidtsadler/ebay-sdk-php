@@ -26,79 +26,79 @@ class AddItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ItemID' => array(
+    private static $propertyTypes = [
+        'ItemID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
-        ),
-        'StartTime' => array(
+        ],
+        'StartTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
-        ),
-        'EndTime' => array(
+        ],
+        'EndTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
-        ),
-        'Fees' => array(
+        ],
+        'Fees' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Fees'
-        ),
-        'CategoryID' => array(
+        ],
+        'CategoryID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ),
-        'Category2ID' => array(
+        ],
+        'Category2ID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Category2ID'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        ),
-        'Errors' => array(
+        ],
+        'Errors' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        ),
-        'Message' => array(
+        ],
+        'Message' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Message'
-        ),
-        'DiscountReason' => array(
+        ],
+        'DiscountReason' => [
             'type' => 'string',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'DiscountReason'
-        ),
-        'ListingRecommendations' => array(
+        ],
+        'ListingRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingRecommendationsType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ListingRecommendations'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

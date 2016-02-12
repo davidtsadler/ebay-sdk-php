@@ -18,31 +18,31 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'FolderName' => array(
+    private static $propertyTypes = [
+        'FolderName' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
-        ),
-        'ParentFolderID' => array(
+        ],
+        'ParentFolderID' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ParentFolderID'
-        ),
-        'Comment' => array(
+        ],
+        'Comment' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Comment'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

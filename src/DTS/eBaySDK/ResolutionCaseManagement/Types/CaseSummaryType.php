@@ -25,73 +25,73 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'caseId' => array(
+    private static $propertyTypes = [
+        'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseId'
-        ),
-        'user' => array(
+        ],
+        'user' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'user'
-        ),
-        'otherParty' => array(
+        ],
+        'otherParty' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'otherParty'
-        ),
-        'status' => array(
+        ],
+        'status' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'status'
-        ),
-        'item' => array(
+        ],
+        'item' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'item'
-        ),
-        'caseQuantity' => array(
+        ],
+        'caseQuantity' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseQuantity'
-        ),
-        'caseAmount' => array(
+        ],
+        'caseAmount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'caseAmount'
-        ),
-        'respondByDate' => array(
+        ],
+        'respondByDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'respondByDate'
-        ),
-        'creationDate' => array(
+        ],
+        'creationDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
-        ),
-        'lastModifiedDate' => array(
+        ],
+        'lastModifiedDate' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'lastModifiedDate'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

@@ -18,31 +18,31 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Type' => array(
+    private static $propertyTypes = [
+        'Type' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Type'
-        ),
-        'Time' => array(
+        ],
+        'Time' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Time'
-        ),
-        'Reason' => array(
+        ],
+        'Reason' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Reason'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

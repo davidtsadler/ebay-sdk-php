@@ -21,49 +21,49 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Timestamp' => array(
+    private static $propertyTypes = [
+        'Timestamp' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Timestamp'
-        ),
-        'Ack' => array(
+        ],
+        'Ack' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Ack'
-        ),
-        'Errors' => array(
+        ],
+        'Errors' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ErrorType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'Errors'
-        ),
-        'Build' => array(
+        ],
+        'Build' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Build'
-        ),
-        'Version' => array(
+        ],
+        'Version' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Version'
-        ),
-        'CorrelationID' => array(
+        ],
+        'CorrelationID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

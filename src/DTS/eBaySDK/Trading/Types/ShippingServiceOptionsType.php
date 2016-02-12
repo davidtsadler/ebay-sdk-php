@@ -29,97 +29,97 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'ShippingInsuranceCost' => array(
+    private static $propertyTypes = [
+        'ShippingInsuranceCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
-        ),
-        'ShippingService' => array(
+        ],
+        'ShippingService' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
-        ),
-        'ShippingServiceCost' => array(
+        ],
+        'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
-        ),
-        'ShippingServiceAdditionalCost' => array(
+        ],
+        'ShippingServiceAdditionalCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceAdditionalCost'
-        ),
-        'ShippingServicePriority' => array(
+        ],
+        'ShippingServicePriority' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServicePriority'
-        ),
-        'ExpeditedService' => array(
+        ],
+        'ExpeditedService' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ExpeditedService'
-        ),
-        'ShippingTimeMin' => array(
+        ],
+        'ShippingTimeMin' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
-        ),
-        'ShippingTimeMax' => array(
+        ],
+        'ShippingTimeMax' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMax'
-        ),
-        'ShippingSurcharge' => array(
+        ],
+        'ShippingSurcharge' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingSurcharge'
-        ),
-        'FreeShipping' => array(
+        ],
+        'FreeShipping' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'FreeShipping'
-        ),
-        'LocalPickup' => array(
+        ],
+        'LocalPickup' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'LocalPickup'
-        ),
-        'ImportCharge' => array(
+        ],
+        'ImportCharge' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
-        ),
-        'ShippingPackageInfo' => array(
+        ],
+        'ShippingPackageInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingPackageInfoType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ShippingPackageInfo'
-        ),
-        'ShippingServiceCutOffTime' => array(
+        ],
+        'ShippingServiceCutOffTime' => [
             'type' => 'DateTime',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCutOffTime'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

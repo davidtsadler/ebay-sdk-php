@@ -23,61 +23,61 @@ class GetSellerTransactionsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'PaginationResult' => array(
+    private static $propertyTypes = [
+        'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
-        ),
-        'HasMoreTransactions' => array(
+        ],
+        'HasMoreTransactions' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HasMoreTransactions'
-        ),
-        'TransactionsPerPage' => array(
+        ],
+        'TransactionsPerPage' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionsPerPage'
-        ),
-        'PageNumber' => array(
+        ],
+        'PageNumber' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
-        ),
-        'ReturnedTransactionCountActual' => array(
+        ],
+        'ReturnedTransactionCountActual' => [
             'type' => 'integer',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ReturnedTransactionCountActual'
-        ),
-        'Seller' => array(
+        ],
+        'Seller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Seller'
-        ),
-        'TransactionArray' => array(
+        ],
+        'TransactionArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TransactionArrayType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'TransactionArray'
-        ),
-        'PayPalPreferred' => array(
+        ],
+        'PayPalPreferred' => [
             'type' => 'boolean',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'PayPalPreferred'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

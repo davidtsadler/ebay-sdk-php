@@ -20,43 +20,43 @@ class NameRecommendationType extends \DTS\eBaySDK\Types\BaseType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'Name' => array(
+    private static $propertyTypes = [
+        'Name' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'Name'
-        ),
-        'ValidationRules' => array(
+        ],
+        'ValidationRules' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'ValidationRules'
-        ),
-        'ValueRecommendation' => array(
+        ],
+        'ValueRecommendation' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ValueRecommendationType',
             'unbound' => true,
             'attribute' => false,
             'elementName' => 'ValueRecommendation'
-        ),
-        'HelpURL' => array(
+        ],
+        'HelpURL' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HelpURL'
-        ),
-        'HelpText' => array(
+        ],
+        'HelpText' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => false,
             'elementName' => 'HelpText'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 

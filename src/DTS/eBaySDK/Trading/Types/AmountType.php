@@ -16,19 +16,19 @@ class AmountType extends \DTS\eBaySDK\Types\DoubleType
     /**
      * @var array Properties belonging to objects of this class.
      */
-    private static $propertyTypes = array(
-        'currencyID' => array(
+    private static $propertyTypes = [
+        'currencyID' => [
             'type' => 'string',
             'unbound' => false,
             'attribute' => true,
             'attributeName' => 'currencyID'
-        )
-    );
+        ]
+    ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
      */
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
