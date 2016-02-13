@@ -25,21 +25,10 @@
         "squizlabs/php_codesniffer": "2.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "DTS\\eBaySDK\\": "src/",
-            "DTS\\eBaySDK\\TestTraits\\": "test/",
-            "DTS\\eBaySDK\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\BulkDataExchange\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\BusinessPoliciesManagement\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\FileTransfer\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\Finding\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\HalfFinding\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\MerchantData\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\ResolutionCaseManagement\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\ReturnManagement\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\Shopping\\Mocks\\": "test/",
-            "DTS\\eBaySDK\\Trading\\Mocks\\": "test/"
+            "DTS\\eBaySDK\\Test\\": "test/"
         },
-        "files": ["src/DTS/eBaySDK/functions.php"]
+        "files": ["src/functions.php"]
     }
 }
