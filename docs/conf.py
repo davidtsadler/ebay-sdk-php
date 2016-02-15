@@ -1,7 +1,7 @@
 import sys
 import os
 import shlex
-from sphinx.highlighting import lexers 
+from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
 lexers['php'] = PhpLexer(startinline=True, linenos=1)
@@ -10,7 +10,7 @@ primary_domain = 'php'
 
 project = u'eBay SDK for PHP'
 version = '1.x'
-copyright = u'2015, David T. Sadler'
+copyright = u'2016, David T. Sadler'
 author = u'David T. Sadler'
 master_doc = 'index'
 
@@ -26,6 +26,9 @@ todo_include_todos = False
 html_static_path = ['_static']
 
 htmlhelp_basename = 'eBaySDKforPHPdoc'
+
+html_favicon = 'favicon.ico'
+
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -87,9 +90,10 @@ epub_exclude_files = ['search.html']
 
 html_show_source_link = False
 html_sidebars = {
-    '**': ['globaltoc.html',
-	   'localtoc.html',
-	   'searchbox.html']
+    '**': ['sidebarlogo.html',
+      'globaltoc.html',
+      'localtoc.html',
+      'searchbox.html']
 }
 
 import guzzle_sphinx_theme
@@ -101,5 +105,6 @@ html_theme = 'guzzle_sphinx_theme'
 extensions.append('guzzle_sphinx_theme')
 
 html_theme_options = {
-    'project_nav_name': 'eBay SDK for PHP'
+    'project_nav_name': 'eBay SDK for PHP',
+    'base_url': 'http://devbay.net/sdk/guides/'
 }

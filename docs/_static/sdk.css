@@ -1,0 +1,31 @@
+@import url("guzzle.css");
+
+body, h1, h2, h3, h4, h5, h6  {
+  font-family: "Noto Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+    background-color: #7587a6;
+    color: #ffffff;
+}
+
+h2 {
+    border-bottom: 1px solid #7587a6;
+}
+
+a {
+    color: #7587a6;
+}
+
+a:hover {
+    color: #616b7d;
+}
+
+.sphinxsidebar > .sidebar-block:not(:last-child)::after{
+    border-top: 1px solid #7587a6;
+}
+
+.sidebar-toc ul li a:hover {
+    background-color: #7587a6;
+}
