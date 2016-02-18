@@ -97,3 +97,56 @@ Service-specific configuration options are deep merged with those provided to th
         'apiVersion' => '1.13.0',
         'globalId'   => 'EBAY-GB'
     ]);
+
+Creating a Request
+------------------
+
+Before sending data to the API you will need to instaniate a **request** object. This example will call the `findItemsByKeywords <http://developer.ebay.com/DevZone/finding/CallRef/findItemsByKeywords.html>`_ operation and so the object will be an instance of the `DTS\\eBaySDK\\Finding\\Types\\FindItemsByKeywordsRequest <https://github.com/davidtsadler/ebay-sdk-php/blob/master/src/Finding/Types/FindItemsByKeywordsRequest.php>`_ class.
+
+.. code-block:: php
+
+    // Create the API request object.
+    $request = new Types\FindItemsByKeywordsRequest();
+
+Properties of the request object can then be assigned values that will be sent to the API. Note that you may have to create instances of other classes, such as `DTS\\eBaySDK\\Finding\\Types\\PaginationInput <https://github.com/davidtsadler/ebay-sdk-php/blob/master/src/Finding/Types/PaginationInput.php>`_, in order to build up a complete request.
+
+.. code-block:: php
+
+    // Assign the keywords.
+    $request->keywords = 'Harry Potter';
+
+    // Ask for the first 25 items.
+    $request->paginationInput = new Types\PaginationInput();
+    $request->paginationInput->entriesPerPage = 25;
+    $request->paginationInput->pageNumber = 1;
+
+    // Ask for the results to be sorted from high to low price.
+    $request->sortOrder = 'CurrentPriceHighest';
+
+Calling a service operation
+---------------------------
+
+You call a service operation by calling the appropriate method on the service object. There will be one method for each  operation that the service provides. All methods, such as *findItemsByKeywords*, accept the request object as their only parameter. The SDK takes the information assigned to the properties of the request object and uses it to construct the raw XML that is sent to the API.
+
+.. code-block:: php
+
+  // Send the request.
+  $response = $service->findItemsByKeywords($request);
+
+Working with Responses
+----------------------
+
+The result of calling a service operation is a **response** object that contains the data returned from the API. The SDK uses the raw XML response to assign values to the properties on the response object. The type and contents of the object depend on the service operation that was called. In this example the object will be an instance of the `DTS\\eBaySDK\\Finding\\Types\\FindItemsByKeywordsResponse <https://github.com/davidtsadler/ebay-sdk-php/blob/master/src/Finding/Types/FindItemsByKeywordsResponse.php>`_ class.
+
+.. code-block:: php
+
+    // Output the response from the API.
+    if ($response->ack !== 'Success') {
+        foreach ($response->errorMessage->error as $error) {
+            printf("Error: %s\n", $error->message);
+        }
+    } else {
+        foreach ($response->searchResult->item as $item) {
+            printf("(%s) %s:%.2f\n", $item->itemId, $item->title, $item->sellingStatus->currentPrice->value);
+        }
+    }
