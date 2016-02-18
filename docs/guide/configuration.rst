@@ -11,7 +11,7 @@ The following example shows how to pass options into the FindingService construc
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $service = new FindingService([
         'apiVersion' => '1.13.0',
@@ -41,8 +41,8 @@ Each of the services offered by eBay have a version number. Use this optional co
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
-    use \DTS\eBaySDK\Trading\Services\TradingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Trading\Services\TradingService;
 
     /**
      * Use the 1.13.0 version of the finding service.
@@ -62,7 +62,7 @@ If you do not provide a version number the SDK will default to the value that is
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Shopping\Services\ShoppingService;
+    use DTS\eBaySDK\Shopping\Services\ShoppingService;
 
     /**
      * apiVerion will default to the value in ShoppingService::API_VERSION.
@@ -86,8 +86,8 @@ The Trading service is different to other services in that the auth token can be
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Trading\Types;
-    use \DTS\eBaySDK\Trading\Services;
+    use DTS\eBaySDK\Trading\Types;
+    use DTS\eBaySDK\Trading\Services;
 
     /**
      * No auth token provided.
@@ -104,7 +104,7 @@ The Trading service is different to other services in that the auth token can be
 credentials
 ~~~~~~~~~~~
 
-:Type: ``array|\DTS\eBaySDK\Interfaces\CredentialsInterface|callable``
+:Type: ``array|DTS\eBaySDK\Credentials\CredentialsInterface|callable``
 
 Provide your "Application ID", "Certificate ID", and "Developer ID" credentials that are required when using the eBay API. If you do not provide any credentials the SDK will attempt to load them in the following order:
 
@@ -115,7 +115,7 @@ You can :ref:`hardcode your credentials <hardcoded_credentials>` via an associat
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $service = new FindingService([
         'apiVersion'  => '1.13.0',
@@ -127,12 +127,12 @@ You can :ref:`hardcode your credentials <hardcoded_credentials>` via an associat
         ]
     ]);
 
-You can also pass an instance of the ``DTS\eBaySDK\Interfaces\CredentialsInterface`` interface.
+You can also pass an instance of the ``DTS\eBaySDK\Credentials\CredentialsInterface`` interface.
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Credentials\Credentials;
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Credentials\Credentials;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $credentials = new Credentials('111', '222', '333');
 
@@ -146,8 +146,8 @@ Pass a callable :ref:`credentials provider <credentials_provider>` function to c
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Credentials\Credentials;
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Credentials\Credentials;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $provider = function () {
         return new Credentials('111', '222', '333');
@@ -183,7 +183,7 @@ scrub_strings (array)
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $service = new FindingService([
         'apiVersion' => '1.13.0',
@@ -216,7 +216,7 @@ By default the SDK uses a ``Guzzle 6`` client to handle the sending and receivin
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $handler = function (Psr\Http\Message\RequestInterface $request) {
         $client = new SomeClient();
@@ -240,7 +240,7 @@ Specifies the name of a profile within the ini file that is located in your HOME
 
 .. code-block:: php
 
-    use \DTS\eBaySDK\Finding\Services\FindingService;
+    use DTS\eBaySDK\Finding\Services\FindingService;
 
     $service = new FindingService([
         'apiVersion' => '1.13.0',
