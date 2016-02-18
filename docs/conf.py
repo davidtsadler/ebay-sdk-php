@@ -106,5 +106,6 @@ extensions.append('guzzle_sphinx_theme')
 
 html_theme_options = {
     'project_nav_name': 'eBay SDK for PHP',
-    'base_url': 'http://devbay.net/sdk/guides/'
+    'base_url': 'http://devbay.net/sdk/guides/',
+    'google_analytics_account': 'UA-51857511-1'
 }
