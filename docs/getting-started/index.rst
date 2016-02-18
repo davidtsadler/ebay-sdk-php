@@ -2,7 +2,7 @@
 Getting Started
 ===============
 
-The following guides will help you get up and running with the eBay SDK for PHP. 
+The following guides will help you get up and running with the eBay SDK for PHP.
 
 .. toctree::
     :maxdepth: 2
@@ -10,3 +10,4 @@ The following guides will help you get up and running with the eBay SDK for PHP.
     requirements
     installation
     basic-usage
+    supported-services

@@ -22,6 +22,7 @@ Getting Started
 1. :doc:`getting-started/requirements`
 2. :doc:`getting-started/installation`
 3. :doc:`getting-started/basic-usage`
+4. :doc:`getting-started/supported-services`
 
 SDK Guides
 ----------
