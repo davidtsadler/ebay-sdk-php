@@ -96,7 +96,8 @@ html_sidebars = {
     '**': ['sidebarlogo.html',
       'globaltoc.html',
       'localtoc.html',
-      'searchbox.html']
+      'searchbox.html',
+      'social.html']
 }
 
 import guzzle_sphinx_theme
