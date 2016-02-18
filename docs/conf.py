@@ -4,6 +4,9 @@ import shlex
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 
+# Use environment variables to manipulate the config file.
+production = os.environ.get('SDK_ENV', 'development') == 'production'
+
 lexers['php'] = PhpLexer(startinline=True, linenos=1)
 lexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)
 primary_domain = 'php'
@@ -106,6 +109,8 @@ extensions.append('guzzle_sphinx_theme')
 
 html_theme_options = {
     'project_nav_name': 'eBay SDK for PHP',
-    'base_url': 'http://devbay.net/sdk/guides/',
-    'google_analytics_account': 'UA-51857511-1'
+    'base_url': 'http://devbay.net/sdk/guides/'
 }
+
+if production:
+    html_theme_options['google_analytics_account'] = 'UA-51857511-1'
