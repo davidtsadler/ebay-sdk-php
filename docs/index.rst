@@ -29,3 +29,4 @@ SDK Guides
 
 * :doc:`guide/configuration`
 * :doc:`guide/credentials`
+* :doc:`guide/uploading-and-downloading-files`

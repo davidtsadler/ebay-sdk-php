@@ -251,4 +251,3 @@ The ``defaultProvider`` uses this composition in order to check multiple provide
             )
         );
     }
-
