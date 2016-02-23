@@ -1,11 +1,14 @@
 <?php
-namespace DTS\eBaySDK\MerchantData\Services;
+namespace DTS\eBaySDK\MerchantData;
 
 /**
- * Unlike the other API's this is not a true service.
- * This class exists to help parse XML from the Bulk Data Exchange Service into the correct PHP objects.
+ * Unlike other services there is no MerchantData service class as all operations
+ * are performed via other services.
+ *
+ * This class is to help client code parse the XML that has been returned via an
+ * attachment in a LMS response.
  */
-class MerchantDataService
+class MerchantData
 {
     /**
      * @var \DTS\eBaySDK\Parser Xml Parser.
