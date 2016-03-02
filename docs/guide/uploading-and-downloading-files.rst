@@ -2,7 +2,12 @@
 Uploading and downloading files
 ===============================
 
-Depending on your project requirements you may need to upload or download files via the eBay API. The eBay SDK for PHP handles this through the ``attachment`` method that is explained in this guide.
+Depending on your project requirements you may need to upload or download files via the eBay API.
+
+Uploading files
+---------------
+
+The eBay SDK for PHP handles this through the ``attachment`` method.
 
 .. code-block:: php
 

@@ -42,6 +42,8 @@ You can create a service object by passing an associative array of configuration
         'globalId'   => DTS\eBaySDK\Constants\GlobalIds::US
     ]);
 
+.. _sdk-class:
+
 Using the Sdk class
 -------------------
 
