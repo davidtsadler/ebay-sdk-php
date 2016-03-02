@@ -271,4 +271,22 @@ EOT;
             'handler' => $h
         ], $s->getConfig());
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Invalid configuration value provided for "sandbox". Expected bool, but got int(-1)
+     */
+    public function testSetConfigWillThrow()
+    {
+        $s = new Service([
+            'x'=> 1,
+            'credentials' => [
+                'appId' => '111',
+                'certId' => '222',
+                'devId' => '333'
+            ]
+        ]);
+
+        $s->setConfig(['sandbox' => -1]);
+    }
 }
