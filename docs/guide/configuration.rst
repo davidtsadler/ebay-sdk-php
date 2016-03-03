@@ -165,6 +165,8 @@ More information about providing credentials to a client can be found in the :do
 
     Credentials must be valid for the eBay environment that you are using. Sandbox and production credentials are not interchangeable.
 
+.. _debug:
+
 debug
 ~~~~~
 
@@ -206,6 +208,9 @@ globalId
 :Required For: ``BusinessPoliciesManagement``
 
 The unique string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value EBAY-US to specify the eBay US site. A `complete list of eBay global IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
+
+
+.. _handler:
 
 handler
 ~~~~~~~
@@ -259,7 +264,7 @@ siteId
 ~~~~~~
 :Type: ``string|integer``
 :Services: ``Shopping``, ``Trading``.
-:Required: true
+:Required For: ``Trading``
 
 The unique numerical identifier for the eBay site your API requests are to be sent to. For example, you would pass the value 3 to specify the eBay UK site. A `complete list of eBay site IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
 
