@@ -34,4 +34,6 @@ SDK Guides
 
 * :doc:`guide/configuration`
 * :doc:`guide/credentials`
+* :doc:`guide/request-and-response-objects`
 * :doc:`guide/uploading-and-downloading-files`
+* :doc:`guide/migration`

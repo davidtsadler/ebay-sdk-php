@@ -9,5 +9,6 @@ Each of the following guides describe the components that make up the eBay SDK f
 
     configuration
     credentials
+    request-and-response-objects
     uploading-and-downloading-files
     migration
