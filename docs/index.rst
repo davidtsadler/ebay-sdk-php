@@ -16,6 +16,11 @@ External links: `GitHub <https://github.com/davidtsadler/ebay-sdk-php>`_
 | `Packagist <https://packagist.org/packages/dts/ebay-sdk-php>`_
 
 
+.. note::
+
+    If you are using the pre-version 1 SDK and you wish to upgrade, there is a :doc:`guide/migration` guide available.
+
+
 Getting Started
 ---------------
 
