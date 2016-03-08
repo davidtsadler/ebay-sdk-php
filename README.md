@@ -4,6 +4,8 @@
 
 This project enables PHP developers to use the [eBay API](https://go.developer.ebay.com/api-documentation) in their PHP code, and build software using services such as [Finding](http://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html), [Trading](http://developer.ebay.com/DevZone/guides/ebayfeatures/index.html), [Shopping](http://developer.ebay.com/Devzone/shopping/docs/Concepts/ShoppingAPIGuide.html), etc. You can get started by [installing the SDK via Composer](http://devbay.net/sdk/guides/installation/) and by following the [Getting Started Guide](http://devbay.net/sdk/guides/getting-started/).
 
+This is a personal project that has been developed by me, [David T. Sadler](http://twitter.com/davidtsadler). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
+
 ## Features
 
   - Compatible with PHP 5.5 or greater.
@@ -78,10 +80,6 @@ printf("The official eBay time is: %s\n", $response->Timestamp->format('H:i (\G\
   - Be [well documented](http://devbay.net/sdk/guides/).
   - Be [well tested](https://github.com/davidtsadler/ebay-sdk-php/tree/master/test/DTS/eBaySDK).
   - Be well supported with [working examples](https://github.com/davidtsadler/ebay-sdk-examples).
-
-## Project Maturity
-
-This is a personal project that has been developed by me, [David T. Sadler](http://twitter.com/davidtsadler). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
 
 ## License
 
