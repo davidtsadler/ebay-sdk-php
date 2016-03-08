@@ -90,8 +90,8 @@ sync_half:
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/HalfFinding/test/HalfFinding/ test/HalfFinding/
 
 sync_merc:
-	rsync -rtvu --delete --exclude MerchantDataService.php ../ebay-api-sdk-php/dist/MerchantData/src/MerchantData/ src/MerchantData/
-	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/MerchantData/test/MerchantData/ test/MerchantData/
+	rsync -rtvu --delete --exclude MerchantData.php ../ebay-api-sdk-php/dist/MerchantData/src/MerchantData/ src/MerchantData/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude MerchantDataTest.php ../ebay-api-sdk-php/dist/MerchantData/test/MerchantData/ test/MerchantData/
 
 sync_res:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ResolutionCaseManagement/src/ResolutionCaseManagement/ src/ResolutionCaseManagement/
