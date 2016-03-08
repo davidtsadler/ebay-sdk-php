@@ -39,6 +39,11 @@ Removed MerchantDataService class
 
 The ``DTS\eBaySDK\MerchantData\Services\\MerchantDataService`` class was removed in version 1 and replaced with the ``DTS\eBaySDK\MerchantData\\MerchantData`` class. There is no difference in how the new class works when compared with the previous version.
 
+Removed UnboundType class
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``DTS\eBaySDK\Types\UnboundType`` class was removed in version 1 and replaced with the ``DTS\eBaySDK\Types\RepeatableType`` class. There is no difference in how the new class works when compared with the previous version.
+
 Required configuration options enforced
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -50,11 +55,11 @@ From version 1 the SDK enforces required configuration options by throwning a ``
 
     // Pre-version 1
     // No exception thrown.
-    $service = new TradingService([]);
+    $service = new TradingService();
 
     // Version 1
     try {
-        $service = new TradingService([]);
+        $service = new TradingService();
     } catch (\InvalidArgumentException $e) {
         // Missing required configuration options: siteId
         echo $e->getMessage();
