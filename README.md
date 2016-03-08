@@ -13,8 +13,7 @@ This project enables PHP developers to use the [eBay API](https://go.developer.e
 ## Resources
 
   - [User Guides](http://devbay.net/sdk/guides/) - Getting started guide and in-depth information.
-  - [SDK Versions](http://devbay.net/sdk/guides/versions/) - A complete list of each SDK, and the API version they support.
-  - [Sample Project](https://github.com/davidtsadler/ebay-sdk-examples) - Provides several examples of using the SDK.
+  - [Examples](https://github.com/davidtsadler/ebay-sdk-examples) - Several examples of using the SDK.
   - [Google Group](https://groups.google.com/forum/#!forum/ebay-sdk-php) - Join for support with the SDK.
   - [@devbaydotnet](https://twitter.com/devbaydotnet) - Follow on Twitter for announcements of releases, important changes and so on.
 
@@ -61,10 +60,7 @@ use \DTS\eBaySDK\Shopping\Services;
 use \DTS\eBaySDK\Shopping\Types;
 
 // Create the service object.
-$service = new Services\ShoppingService(array(
-    'apiVersion' => '863',
-    'appId' => 'YOUR_PRODUCTION_APPID_APPLICATION_KEY'
-));
+$service = new Services\ShoppingService();
 
 // Create the request object.
 $request = new Types\GeteBayTimeRequestType();
@@ -87,10 +83,8 @@ printf("The official eBay time is: %s\n", $response->Timestamp->format('H:i (\G\
 
 This is a personal project that has been developed by me, [David T. Sadler](http://twitter.com/davidtsadler). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
 
-As this is a brand new project you should expect frequent releases until it reaches the stable `1.0.0` target. I will endeavour to keep changes to a minimum between each release and any changes will be [documented](https://github.com/davidtsadler/ebay-sdk-php/blob/master/CHANGELOG.md).
-
 ## License
 
 Licensed under the [Apache Public License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
-Copyright 2014 [David T. Sadler](http://twitter.com/davidtsadler)
+Copyright 2016 [David T. Sadler](http://twitter.com/davidtsadler)
