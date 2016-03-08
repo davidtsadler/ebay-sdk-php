@@ -14,7 +14,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
     /**
      * @param array $config Configuration option values.
      */
-    public function __construct(array $config)
+    public function __construct(array $config = [])
     {
         parent::__construct($config);
     }

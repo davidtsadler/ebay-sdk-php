@@ -14,7 +14,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
     /**
      * @param array $config Configuration option values.
      */
-    public function __construct(array $config)
+    public function __construct(array $config = [])
     {
         parent::__construct($config);
     }

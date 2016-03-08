@@ -14,7 +14,7 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
     /**
      * @param array $config Configuration option values.
      */
-    public function __construct(array $config)
+    public function __construct(array $config = [])
     {
         parent::__construct($config);
     }

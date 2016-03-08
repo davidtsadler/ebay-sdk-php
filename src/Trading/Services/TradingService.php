@@ -14,7 +14,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     /**
      * @param array $config Configuration option values.
      */
-    public function __construct(array $config)
+    public function __construct(array $config = [])
     {
         parent::__construct($config);
     }
