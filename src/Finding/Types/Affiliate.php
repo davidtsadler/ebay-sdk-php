@@ -22,25 +22,25 @@ class Affiliate extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'trackingId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'trackingId'
         ],
         'networkId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'networkId'
         ],
         'customId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'customId'
         ],
         'geoTargeting' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'geoTargeting'
         ]

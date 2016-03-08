@@ -19,7 +19,7 @@ class PaymentProfile extends \DTS\eBaySDK\BusinessPoliciesManagement\Types\Selle
     private static $propertyTypes = [
         'paymentInfo' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PaymentInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentInfo'
         ]

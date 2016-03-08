@@ -26,49 +26,49 @@ class SellingManagerAlertType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AlertType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AlertType'
         ],
         'SoldAlert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldAlert'
         ],
         'InventoryAlert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InventoryAlert'
         ],
         'AutomationAlert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomationAlert'
         ],
         'PaisaPayAlert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaisaPayAlert'
         ],
         'GeneralAlert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GeneralAlert'
         ],
         'DurationInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DurationInDays'
         ],
         'Count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Count'
         ]

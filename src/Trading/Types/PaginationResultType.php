@@ -20,13 +20,13 @@ class PaginationResultType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TotalNumberOfPages' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalNumberOfPages'
         ],
         'TotalNumberOfEntries' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalNumberOfEntries'
         ]

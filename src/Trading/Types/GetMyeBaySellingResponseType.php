@@ -27,55 +27,55 @@ class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
     private static $propertyTypes = [
         'SellingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingSummaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingSummary'
         ],
         'ScheduledList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ScheduledList'
         ],
         'ActiveList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
         ],
         'SoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldList'
         ],
         'UnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnsoldList'
         ],
         'Summary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Summary'
         ],
         'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidList'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromSoldList'
         ],
         'DeletedFromUnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
         ]

@@ -22,25 +22,25 @@ class CombinedPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CalculatedShippingPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingPreferences'
         ],
         'CombinedPaymentOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentOption'
         ],
         'CombinedPaymentPeriod' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentPeriod'
         ],
         'FlatShippingPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingPreferences'
         ]

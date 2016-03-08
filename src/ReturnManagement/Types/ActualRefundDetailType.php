@@ -21,19 +21,19 @@ class ActualRefundDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'actualRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\RefundDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'actualRefund'
         ],
         'refundStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundStatus'
         ],
         'refundDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundDate'
         ]

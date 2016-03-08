@@ -94,457 +94,457 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BestOfferEnabled' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
         ],
         'BuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowPrice'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ],
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'BuyItNowAvailable' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowAvailable'
         ],
         'ConvertedBuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConvertedBuyItNowPrice'
         ],
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ],
         'StartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
         ],
         'ViewItemURLForNaturalSearch' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ViewItemURLForNaturalSearch'
         ],
         'ListingType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingType'
         ],
         'Location' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Location'
         ],
         'PaymentMethods' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PaymentMethods'
         ],
         'GalleryURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryURL'
         ],
         'PictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
         ],
         'PostalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PostalCode'
         ],
         'PrimaryCategoryID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategoryID'
         ],
         'PrimaryCategoryName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategoryName'
         ],
         'Quantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
         ],
         'Seller' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Seller'
         ],
         'BidCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
         ],
         'ConvertedCurrentPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConvertedCurrentPrice'
         ],
         'CurrentPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CurrentPrice'
         ],
         'HighBidder' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HighBidder'
         ],
         'ListingStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingStatus'
         ],
         'QuantitySold' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
         ],
         'ReserveMet' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
         ],
         'ShipToLocations' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShipToLocations'
         ],
         'Site' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Site'
         ],
         'TimeLeft' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TimeLeft'
         ],
         'Title' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Title'
         ],
         'ShippingCostSummary' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostSummary'
         ],
         'ItemSpecifics' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
         ],
         'HitCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HitCount'
         ],
         'Subtitle' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Subtitle'
         ],
         'PrimaryCategoryIDPath' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategoryIDPath'
         ],
         'SecondaryCategoryID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondaryCategoryID'
         ],
         'SecondaryCategoryName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondaryCategoryName'
         ],
         'SecondaryCategoryIDPath' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondaryCategoryIDPath'
         ],
         'Charity' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\CharityType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Charity'
         ],
         'Storefront' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\StorefrontType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Storefront'
         ],
         'Country' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Country'
         ],
         'HalfItemCondition' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HalfItemCondition'
         ],
         'SellerComments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerComments'
         ],
         'ReturnPolicy' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ReturnPolicyType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnPolicy'
         ],
         'MinimumToBid' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinimumToBid'
         ],
         'ProductID' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
         ],
         'AutoPay' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutoPay'
         ],
         'BusinessSellerDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BusinessSellerDetails'
         ],
         'PaymentAllowedSite' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PaymentAllowedSite'
         ],
         'IntegratedMerchantCreditCardEnabled' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
         ],
         'Variations' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\VariationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variations'
         ],
         'HandlingTime' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HandlingTime'
         ],
         'LotSize' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LotSize'
         ],
         'ConditionID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionID'
         ],
         'ConditionDisplayName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionDisplayName'
         ],
         'QuantityAvailableHint' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityAvailableHint'
         ],
         'QuantityThreshold' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityThreshold'
         ],
         'DiscountPriceInfo' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
         ],
         'ExcludeShipToLocation' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExcludeShipToLocation'
         ],
         'TopRatedListing' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TopRatedListing'
         ],
         'VhrUrl' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VhrUrl'
         ],
         'VhrAvailable' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VhrAvailable'
         ],
         'QuantityInfo' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\QuantityInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityInfo'
         ],
         'UnitInfo' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\UnitInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnitInfo'
         ],
         'GlobalShipping' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GlobalShipping'
         ],
         'ConditionDescription' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionDescription'
         ],
         'ItemCompatibilityCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCompatibilityCount'
         ],
         'ItemCompatibilityList' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCompatibilityList'
         ],
         'QuantitySoldByPickupInStore' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySoldByPickupInStore'
         ],
         'SKU' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKU'
         ],
         'NewBestOffer' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewBestOffer'
         ],
         'eBayNowEligible' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayNowEligible'
         ],
         'eBayNowAvailable' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayNowAvailable'
         ],
         'IgnoreQuantity' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IgnoreQuantity'
         ],
         'AvailableForPickupDropOff' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AvailableForPickupDropOff'
         ],
         'EligibleForPickupDropOff' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EligibleForPickupDropOff'
         ]

@@ -25,43 +25,43 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
     private static $propertyTypes = [
         'FeedbackDetailArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackDetailArray'
         ],
         'FeedbackDetailItemTotal' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackDetailItemTotal'
         ],
         'FeedbackSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackSummaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSummary'
         ],
         'FeedbackScore' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
         ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ],
         'EntriesPerPage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EntriesPerPage'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ]

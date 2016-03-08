@@ -19,7 +19,7 @@ class ConfirmIdentityResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     private static $propertyTypes = [
         'UserID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
         ]

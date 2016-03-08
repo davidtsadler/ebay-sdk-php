@@ -21,19 +21,19 @@ class AddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'StartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
         ],
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ]

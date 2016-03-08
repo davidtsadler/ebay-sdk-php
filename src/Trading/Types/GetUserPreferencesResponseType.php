@@ -38,121 +38,121 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'BidderNoticePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidderNoticePreferences'
         ],
         'CombinedPaymentPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentPreferences'
         ],
         'SellerPaymentPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentPreferences'
         ],
         'SellerFavoriteItemPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerFavoriteItemPreferences'
         ],
         'EndOfAuctionEmailPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndOfAuctionEmailPreferences'
         ],
         'EmailShipmentTrackingNumberPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EmailShipmentTrackingNumberPreference'
         ],
         'RequiredShipPhoneNumberPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequiredShipPhoneNumberPreference'
         ],
         'UnpaidItemAssistancePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItemAssistancePreferences'
         ],
         'SellerExcludeShipToLocationPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerExcludeShipToLocationPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerExcludeShipToLocationPreferences'
         ],
         'PurchaseReminderEmailPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PurchaseReminderEmailPreferences'
         ],
         'SellerThirdPartyCheckoutDisabled' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerThirdPartyCheckoutDisabled'
         ],
         'SellerProfilePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilePreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerProfilePreferences'
         ],
         'SellerReturnPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerReturnPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerReturnPreferences'
         ],
         'OfferGlobalShippingProgramPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OfferGlobalShippingProgramPreference'
         ],
         'DispatchCutoffTimePreference' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DispatchCutoffTimePreference'
         ],
         'GlobalShippingProgramListingPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GlobalShippingProgramListingPreference'
         ],
         'OverrideGSPServiceWithIntlServicePreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OverrideGSPServiceWithIntlServicePreference'
         ],
         'PickupDropoffSellerPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupDropoffSellerPreference'
         ],
         'OutOfStockControlPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OutOfStockControlPreference'
         ],
         'eBayPLUSPreference' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'eBayPLUSPreference'
         ]

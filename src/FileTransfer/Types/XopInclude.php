@@ -13,7 +13,7 @@ class XopInclude extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'href' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'href'
         ]

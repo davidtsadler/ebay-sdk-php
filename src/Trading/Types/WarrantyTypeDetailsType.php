@@ -20,13 +20,13 @@ class WarrantyTypeDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'WarrantyTypeOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WarrantyTypeOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

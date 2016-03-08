@@ -25,43 +25,43 @@ class BuyingSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BiddingCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BiddingCount'
         ],
         'WinningCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WinningCount'
         ],
         'TotalWinningCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalWinningCost'
         ],
         'WonCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WonCount'
         ],
         'TotalWonCost' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalWonCost'
         ],
         'WonDurationInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WonDurationInDays'
         ],
         'BestOfferCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferCount'
         ]

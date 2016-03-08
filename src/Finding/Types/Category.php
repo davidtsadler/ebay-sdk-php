@@ -20,13 +20,13 @@ class Category extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'categoryId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'categoryId'
         ],
         'categoryName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'categoryName'
         ]

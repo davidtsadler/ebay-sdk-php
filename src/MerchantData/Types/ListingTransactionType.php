@@ -26,49 +26,49 @@ class ListingTransactionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TransactionTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionTime'
         ],
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'ItemTitle' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemTitle'
         ],
         'SerialNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SerialNumber'
         ],
         'Memo' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Memo'
         ],
         'GlobalCategoryDescription' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GlobalCategoryDescription'
         ],
         'SiteDescription' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SiteDescription'
         ],
         'FeeAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeAmount'
         ]

@@ -24,37 +24,37 @@ class GetDescriptionTemplatesResponseType extends \DTS\eBaySDK\Trading\Types\Abs
     private static $propertyTypes = [
         'DescriptionTemplate' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DescriptionTemplateType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DescriptionTemplate'
         ],
         'LayoutTotal' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LayoutTotal'
         ],
         'ObsoleteLayoutID' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ObsoleteLayoutID'
         ],
         'ObsoleteThemeID' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ObsoleteThemeID'
         ],
         'ThemeGroup' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ThemeGroupType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ThemeGroup'
         ],
         'ThemeTotal' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ThemeTotal'
         ]

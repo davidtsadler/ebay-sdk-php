@@ -20,13 +20,13 @@ class UnitPriceInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'type'
         ],
         'quantity' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'quantity'
         ]

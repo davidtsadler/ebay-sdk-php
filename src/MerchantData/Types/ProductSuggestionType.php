@@ -22,25 +22,25 @@ class ProductSuggestionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Title' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Title'
         ],
         'EPID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EPID'
         ],
         'StockPhoto' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StockPhoto'
         ],
         'Recommended' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Recommended'
         ]

@@ -28,61 +28,61 @@ class ReturnPolicyInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'description'
         ],
         'refundOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundOption'
         ],
         'shippingCostPaidByOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingCostPaidByOption'
         ],
         'returnsWithinOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnsWithinOption'
         ],
         'returnsAcceptedOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnsAcceptedOption'
         ],
         'warrantyOfferedOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'warrantyOfferedOption'
         ],
         'warrantyTypeOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'warrantyTypeOption'
         ],
         'warrantyDurationOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'warrantyDurationOption'
         ],
         'restockingFeeValue' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'restockingFeeValue'
         ],
         'holidayReturns' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'holidayReturns'
         ]

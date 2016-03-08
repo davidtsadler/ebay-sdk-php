@@ -19,7 +19,7 @@ class GetNotificationPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\A
     private static $propertyTypes = [
         'PreferenceLevel' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PreferenceLevel'
         ]

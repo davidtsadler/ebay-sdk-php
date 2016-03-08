@@ -21,19 +21,19 @@ class MyMessagesResponseDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ResponseEnabled' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ResponseEnabled'
         ],
         'ResponseURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ResponseURL'
         ],
         'UserResponseDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserResponseDate'
         ]

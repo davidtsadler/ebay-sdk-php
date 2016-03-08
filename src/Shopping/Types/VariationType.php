@@ -24,37 +24,37 @@ class VariationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SKU' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKU'
         ],
         'StartPrice' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
         ],
         'Quantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
         ],
         'VariationSpecifics' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
         ],
         'SellingStatus' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SellingStatusType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
         ],
         'DiscountPriceInfo' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
         ]

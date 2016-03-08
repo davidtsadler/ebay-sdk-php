@@ -19,7 +19,7 @@ class PromotionalSaleArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PromotionalSale' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PromotionalSale'
         ]

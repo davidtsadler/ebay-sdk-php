@@ -22,25 +22,25 @@ class GetSellingManagerSaleRecordRequestType extends \DTS\eBaySDK\Trading\Types\
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'TransactionID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
         ],
         'OrderID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderID'
         ],
         'OrderLineItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
         ]

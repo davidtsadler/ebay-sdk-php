@@ -20,13 +20,13 @@ class ListingCheckoutRedirectPreferenceType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ProStoresStoreName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProStoresStoreName'
         ],
         'SellerThirdPartyUsername' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerThirdPartyUsername'
         ]

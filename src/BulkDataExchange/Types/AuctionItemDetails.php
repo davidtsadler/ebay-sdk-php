@@ -20,13 +20,13 @@ class AuctionItemDetails extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'includeBidCount' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeBidCount'
         ],
         'includeReservePriceMet' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeReservePriceMet'
         ]

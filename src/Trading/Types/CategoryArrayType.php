@@ -19,7 +19,7 @@ class CategoryArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Category'
         ]

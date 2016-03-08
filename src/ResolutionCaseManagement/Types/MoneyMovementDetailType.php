@@ -28,61 +28,61 @@ class MoneyMovementDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'type'
         ],
         'fromParty' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fromParty'
         ],
         'toParty' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'toParty'
         ],
         'amount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'amount'
         ],
         'paymentMethod' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentMethod'
         ],
         'paypalTransactionId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paypalTransactionId'
         ],
         'status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'status'
         ],
         'transactionDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionDate'
         ],
         'id' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'id'
         ],
         'parentId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'parentId'
         ]

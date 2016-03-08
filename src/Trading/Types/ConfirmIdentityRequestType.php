@@ -19,7 +19,7 @@ class ConfirmIdentityRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     private static $propertyTypes = [
         'SessionID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SessionID'
         ]

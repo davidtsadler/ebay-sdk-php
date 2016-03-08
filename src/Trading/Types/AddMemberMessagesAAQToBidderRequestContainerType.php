@@ -21,19 +21,19 @@ class AddMemberMessagesAAQToBidderRequestContainerType extends \DTS\eBaySDK\Type
     private static $propertyTypes = [
         'CorrelationID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
         ],
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
         ]

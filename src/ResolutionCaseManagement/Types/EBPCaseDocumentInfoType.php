@@ -21,19 +21,19 @@ class EBPCaseDocumentInfoType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'name'
         ],
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'type'
         ],
         'uploadDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'uploadDate'
         ]

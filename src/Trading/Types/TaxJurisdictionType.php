@@ -24,37 +24,37 @@ class TaxJurisdictionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'JurisdictionID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JurisdictionID'
         ],
         'SalesTaxPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxPercent'
         ],
         'ShippingIncludedInTax' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
         ],
         'JurisdictionName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JurisdictionName'
         ],
         'DetailVersion' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
         ]

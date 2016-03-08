@@ -19,7 +19,7 @@ class ModifyNameArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ModifyName' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ModifyNameType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ModifyName'
         ]

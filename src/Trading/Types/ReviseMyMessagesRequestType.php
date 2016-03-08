@@ -22,25 +22,25 @@ class ReviseMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
     private static $propertyTypes = [
         'MessageIDs' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageIDs'
         ],
         'Read' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Read'
         ],
         'Flagged' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Flagged'
         ],
         'FolderID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
         ]

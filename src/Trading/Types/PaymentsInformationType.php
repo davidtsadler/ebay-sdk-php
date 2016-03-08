@@ -20,13 +20,13 @@ class PaymentsInformationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Payments' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaymentInformationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Payments'
         ],
         'Refunds' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RefundInformationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Refunds'
         ]

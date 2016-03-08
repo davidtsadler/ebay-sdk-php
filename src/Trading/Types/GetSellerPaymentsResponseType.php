@@ -24,37 +24,37 @@ class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
     private static $propertyTypes = [
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ],
         'HasMorePayments' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HasMorePayments'
         ],
         'SellerPayment' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SellerPayment'
         ],
         'PaymentsPerPage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentsPerPage'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
         'ReturnedPaymentCountActual' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnedPaymentCountActual'
         ]

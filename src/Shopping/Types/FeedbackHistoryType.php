@@ -28,61 +28,61 @@ class FeedbackHistoryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BidRetractionFeedbackPeriods' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'BidRetractionFeedbackPeriods'
         ],
         'NegativeFeedbackPeriods' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'NegativeFeedbackPeriods'
         ],
         'NeutralFeedbackPeriods' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'NeutralFeedbackPeriods'
         ],
         'PositiveFeedbackPeriods' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackPeriods'
         ],
         'TotalFeedbackPeriods' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'TotalFeedbackPeriods'
         ],
         'UniqueNegativeFeedbackCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UniqueNegativeFeedbackCount'
         ],
         'UniquePositiveFeedbackCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UniquePositiveFeedbackCount'
         ],
         'AverageRatingDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AverageRatingDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AverageRatingDetails'
         ],
         'NeutralCommentCountFromSuspendedUsers' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NeutralCommentCountFromSuspendedUsers'
         ],
         'UniqueNeutralFeedbackCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UniqueNeutralFeedbackCount'
         ]

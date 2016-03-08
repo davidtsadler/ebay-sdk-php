@@ -23,31 +23,31 @@ class UserIdPasswordType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AppId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AppId'
         ],
         'DevId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DevId'
         ],
         'AuthCert' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AuthCert'
         ],
         'Username' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Username'
         ],
         'Password' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Password'
         ]

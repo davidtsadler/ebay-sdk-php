@@ -20,13 +20,13 @@ class GetItemJobActionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'action' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'action'
         ],
         'jobId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'jobId'
         ]

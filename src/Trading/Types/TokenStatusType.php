@@ -22,25 +22,25 @@ class TokenStatusType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
         ],
         'EIASToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EIASToken'
         ],
         'ExpirationTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExpirationTime'
         ],
         'RevocationTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RevocationTime'
         ]

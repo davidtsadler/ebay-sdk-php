@@ -20,13 +20,13 @@ class CancelOfferType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Offer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Offer'
         ],
         'Explanation' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Explanation'
         ]

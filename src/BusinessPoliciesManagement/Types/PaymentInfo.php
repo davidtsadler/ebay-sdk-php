@@ -24,37 +24,37 @@ class PaymentInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'acceptedPaymentMethod' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'acceptedPaymentMethod'
         ],
         'immediatePay' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'immediatePay'
         ],
         'paymentInstructions' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentInstructions'
         ],
         'paypalEmailAddress' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paypalEmailAddress'
         ],
         'depositDetails' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\DepositDetails',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'depositDetails'
         ],
         'daysToFullPayment' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'daysToFullPayment'
         ]

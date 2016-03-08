@@ -20,13 +20,13 @@ class OfferOtherSolutionRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Ty
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'messageToBuyer' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'messageToBuyer'
         ]

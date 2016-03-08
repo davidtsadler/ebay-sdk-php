@@ -24,37 +24,37 @@ class GetUserCasesRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types\Ba
     private static $propertyTypes = [
         'itemFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ItemFilterType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'creationDateRangeFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DateRangeFilterType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationDateRangeFilter'
         ],
         'caseTypeFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseTypeFilterType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseTypeFilter'
         ],
         'caseStatusFilter' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseStatusFilterType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseStatusFilter'
         ],
         'paginationInput' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaginationInput',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ],
         'sortOrder' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortOrder'
         ]

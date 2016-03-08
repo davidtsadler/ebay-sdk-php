@@ -19,7 +19,7 @@ class OfferArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Offer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OfferType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Offer'
         ]

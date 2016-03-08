@@ -19,7 +19,7 @@ class ItemTransactionIDArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ItemTransactionID' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemTransactionID'
         ]

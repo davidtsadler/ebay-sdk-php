@@ -23,31 +23,31 @@ class DiscountPriceInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'originalRetailPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'originalRetailPrice'
         ],
         'minimumAdvertisedPriceExposure' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minimumAdvertisedPriceExposure'
         ],
         'pricingTreatment' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pricingTreatment'
         ],
         'soldOnEbay' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'soldOnEbay'
         ],
         'soldOffEbay' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'soldOffEbay'
         ]

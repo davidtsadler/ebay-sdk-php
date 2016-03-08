@@ -19,7 +19,7 @@ class GetVeROReasonCodeDetailsResponseType extends \DTS\eBaySDK\Trading\Types\Ab
     private static $propertyTypes = [
         'VeROReasonCodeDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROReasonCodeDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VeROReasonCodeDetails'
         ]

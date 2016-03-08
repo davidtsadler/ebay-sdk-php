@@ -21,19 +21,19 @@ class AttributeType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Value' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ValType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Value'
         ],
         'attributeID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'attributeID'
         ],
         'attributeLabel' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'attributeLabel'
         ]

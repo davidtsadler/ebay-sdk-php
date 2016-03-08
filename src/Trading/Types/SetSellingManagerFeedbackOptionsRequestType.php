@@ -20,13 +20,13 @@ class SetSellingManagerFeedbackOptionsRequestType extends \DTS\eBaySDK\Trading\T
     private static $propertyTypes = [
         'AutomatedLeaveFeedbackEvent' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedLeaveFeedbackEvent'
         ],
         'StoredComments' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackCommentArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoredComments'
         ]

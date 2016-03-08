@@ -19,7 +19,7 @@ class CaseArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'caseSummary' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseSummaryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'caseSummary'
         ]

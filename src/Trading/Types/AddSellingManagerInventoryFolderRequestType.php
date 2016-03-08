@@ -21,19 +21,19 @@ class AddSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Trading\T
     private static $propertyTypes = [
         'FolderName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
         ],
         'ParentFolderID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ParentFolderID'
         ],
         'Comment' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Comment'
         ]

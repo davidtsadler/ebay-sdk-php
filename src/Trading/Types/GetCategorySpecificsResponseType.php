@@ -21,19 +21,19 @@ class GetCategorySpecificsResponseType extends \DTS\eBaySDK\Trading\Types\Abstra
     private static $propertyTypes = [
         'Recommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Recommendations'
         ],
         'TaskReferenceID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaskReferenceID'
         ],
         'FileReferenceID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FileReferenceID'
         ]

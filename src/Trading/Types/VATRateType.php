@@ -22,25 +22,25 @@ class VATRateType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'TransactionID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionID'
         ],
         'VATPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATPercent'
         ],
         'OrderLineItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
         ]

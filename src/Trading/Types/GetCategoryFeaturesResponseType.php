@@ -23,31 +23,31 @@ class GetCategoryFeaturesResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
     private static $propertyTypes = [
         'CategoryVersion' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
         ],
         'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryFeatureType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Category'
         ],
         'SiteDefaults' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SiteDefaultsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SiteDefaults'
         ],
         'FeatureDefinitions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeatureDefinitionsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeatureDefinitions'
         ]

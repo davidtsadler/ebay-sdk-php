@@ -24,37 +24,37 @@ class AbstractResponseType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Timestamp' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Timestamp'
         ],
         'Ack' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Ack'
         ],
         'Errors' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ErrorType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Errors'
         ],
         'Build' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Build'
         ],
         'Version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Version'
         ],
         'CorrelationID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
         ]

@@ -23,31 +23,31 @@ class SellingManagerTemplateDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SaleTemplateID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
         ],
         'SaleTemplateName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateName'
         ],
         'SuccessPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SuccessPercent'
         ],
         'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
         ],
         'Template' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Template'
         ]

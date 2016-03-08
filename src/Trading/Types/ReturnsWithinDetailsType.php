@@ -20,13 +20,13 @@ class ReturnsWithinDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ReturnsWithinOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnsWithinOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

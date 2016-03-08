@@ -20,13 +20,13 @@ class HistogramEntryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Name'
         ],
         'Count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Count'
         ]

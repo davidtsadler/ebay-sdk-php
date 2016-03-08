@@ -19,7 +19,7 @@ class GetReturnDetailRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseReq
     private static $propertyTypes = [
         'ReturnId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnId'
         ]

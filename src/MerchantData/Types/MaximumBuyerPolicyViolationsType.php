@@ -20,13 +20,13 @@ class MaximumBuyerPolicyViolationsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Count'
         ],
         'Period' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Period'
         ]

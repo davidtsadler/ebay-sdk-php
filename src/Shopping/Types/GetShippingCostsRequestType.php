@@ -23,31 +23,31 @@ class GetShippingCostsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'QuantitySold' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
         ],
         'DestinationPostalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DestinationPostalCode'
         ],
         'DestinationCountryCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DestinationCountryCode'
         ],
         'IncludeDetails' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeDetails'
         ]

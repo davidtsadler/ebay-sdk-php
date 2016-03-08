@@ -22,25 +22,25 @@ class SellerDiscountType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CampaignID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CampaignID'
         ],
         'CampaignDisplayName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CampaignDisplayName'
         ],
         'ItemDiscountAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemDiscountAmount'
         ],
         'ShippingDiscountAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingDiscountAmount'
         ]

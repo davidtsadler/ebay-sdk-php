@@ -19,7 +19,7 @@ class GetActivityOptionsResponse extends \DTS\eBaySDK\ResolutionCaseManagement\T
     private static $propertyTypes = [
         'activityOptions' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ActivityOptionListType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'activityOptions'
         ]

@@ -27,55 +27,55 @@ class DeliveryEstimate extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'maxDelivery' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxDelivery'
         ],
         'minDelivery' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minDelivery'
         ],
         'maxDeliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxDeliveryDate'
         ],
         'minDeliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minDeliveryDate'
         ],
         'minConfidence' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minConfidence'
         ],
         'maxConfidence' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxConfidence'
         ],
         'estimateTreatment' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'estimateTreatment'
         ],
         'maxActualDelivery' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxActualDelivery'
         ],
         'minActualDelivery' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minActualDelivery'
         ]

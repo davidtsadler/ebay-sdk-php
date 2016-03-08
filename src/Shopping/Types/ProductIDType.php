@@ -19,7 +19,7 @@ class ProductIDType extends \DTS\eBaySDK\Types\StringType
     private static $propertyTypes = [
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'type'
         ]

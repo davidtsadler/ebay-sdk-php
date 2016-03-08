@@ -29,67 +29,67 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'InsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
         ],
         'InsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
         ],
         'InternationalShippingServiceOption' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOption'
         ],
         'SalesTax' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SalesTaxType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
         ],
         'ShippingRateErrorMessage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingRateErrorMessage'
         ],
         'ShippingServiceOption' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ShippingServiceOptionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOption'
         ],
         'TaxTable' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\TaxTableType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
         ],
         'InternationalInsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceCost'
         ],
         'InternationalInsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceOption'
         ],
         'CODCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
         ],
         'ExcludeShipToLocation' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExcludeShipToLocation'
         ]

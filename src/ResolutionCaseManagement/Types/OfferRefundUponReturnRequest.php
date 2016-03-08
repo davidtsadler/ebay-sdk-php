@@ -22,25 +22,25 @@ class OfferRefundUponReturnRequest extends \DTS\eBaySDK\ResolutionCaseManagement
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'returnAddress' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnAddress'
         ],
         'returnMerchandiseAuthorization' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ],
         'additionalReturnInstructions' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'additionalReturnInstructions'
         ]

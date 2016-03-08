@@ -14,7 +14,7 @@ class Base64BinaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false
         ]
     ];

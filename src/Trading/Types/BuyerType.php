@@ -20,13 +20,13 @@ class BuyerType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
         ],
         'BuyerTaxIdentifier' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'BuyerTaxIdentifier'
         ]

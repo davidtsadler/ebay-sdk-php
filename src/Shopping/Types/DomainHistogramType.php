@@ -19,7 +19,7 @@ class DomainHistogramType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Domain' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\HistogramEntryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Domain'
         ]

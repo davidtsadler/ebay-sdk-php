@@ -21,19 +21,19 @@ class ListingDesignerType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'LayoutID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LayoutID'
         ],
         'OptimalPictureSize' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OptimalPictureSize'
         ],
         'ThemeID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ThemeID'
         ]

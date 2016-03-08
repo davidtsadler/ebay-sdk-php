@@ -19,7 +19,7 @@ class FeedbackPeriodArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FeedbackPeriod' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeedbackPeriodType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FeedbackPeriod'
         ]

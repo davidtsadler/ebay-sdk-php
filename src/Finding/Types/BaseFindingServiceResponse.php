@@ -21,19 +21,19 @@ class BaseFindingServiceResponse extends \DTS\eBaySDK\Finding\Types\BaseServiceR
     private static $propertyTypes = [
         'searchResult' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SearchResult',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'searchResult'
         ],
         'paginationOutput' => [
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationOutput',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationOutput'
         ],
         'itemSearchURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemSearchURL'
         ]

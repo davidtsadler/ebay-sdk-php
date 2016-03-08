@@ -20,13 +20,13 @@ class DateFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'startTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'startTime'
         ],
         'endTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'endTime'
         ]

@@ -20,13 +20,13 @@ class MeasureType extends \DTS\eBaySDK\Types\DecimalType
     private static $propertyTypes = [
         'unit' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'unit'
         ],
         'measurementSystem' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'measurementSystem'
         ]

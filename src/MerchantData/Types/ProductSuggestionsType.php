@@ -19,7 +19,7 @@ class ProductSuggestionsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ProductSuggestion' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ProductSuggestionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ProductSuggestion'
         ]

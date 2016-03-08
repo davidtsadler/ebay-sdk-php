@@ -21,19 +21,19 @@ class ReturnItemType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'itemId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'transactionId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
         ],
         'returnQuantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnQuantity'
         ]

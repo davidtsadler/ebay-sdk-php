@@ -21,19 +21,19 @@ class GetMemberMessagesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
     private static $propertyTypes = [
         'MemberMessage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MemberMessage'
         ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ],
         'HasMoreItems' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HasMoreItems'
         ]

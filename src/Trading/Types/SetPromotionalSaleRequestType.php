@@ -20,13 +20,13 @@ class SetPromotionalSaleRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     private static $propertyTypes = [
         'Action' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Action'
         ],
         'PromotionalSaleDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleDetails'
         ]

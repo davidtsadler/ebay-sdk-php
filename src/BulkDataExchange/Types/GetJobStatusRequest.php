@@ -19,7 +19,7 @@ class GetJobStatusRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServic
     private static $propertyTypes = [
         'jobId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'jobId'
         ]

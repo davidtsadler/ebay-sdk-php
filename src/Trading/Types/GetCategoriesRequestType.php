@@ -22,25 +22,25 @@ class GetCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     private static $propertyTypes = [
         'CategorySiteID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategorySiteID'
         ],
         'CategoryParent' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryParent'
         ],
         'LevelLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LevelLimit'
         ],
         'ViewAllNodes' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ViewAllNodes'
         ]

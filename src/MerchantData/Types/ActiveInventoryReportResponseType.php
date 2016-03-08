@@ -19,7 +19,7 @@ class ActiveInventoryReportResponseType extends \DTS\eBaySDK\MerchantData\Types\
     private static $propertyTypes = [
         'SKUDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SKUDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SKUDetails'
         ]

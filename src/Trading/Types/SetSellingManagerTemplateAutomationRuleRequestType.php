@@ -22,25 +22,25 @@ class SetSellingManagerTemplateAutomationRuleRequestType extends \DTS\eBaySDK\Tr
     private static $propertyTypes = [
         'SaleTemplateID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
         ],
         'AutomatedListingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedListingRule'
         ],
         'AutomatedRelistingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedRelistingRule'
         ],
         'AutomatedSecondChanceOfferRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoSecondChanceOfferType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedSecondChanceOfferRule'
         ]

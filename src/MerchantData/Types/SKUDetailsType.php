@@ -25,43 +25,43 @@ class SKUDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SKU' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKU'
         ],
         'Price' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Price'
         ],
         'Quantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Quantity'
         ],
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'BidCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidCount'
         ],
         'ReserveMet' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReserveMet'
         ],
         'Variations' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variations'
         ]

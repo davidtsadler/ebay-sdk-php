@@ -26,49 +26,49 @@ class GetSellingManagerSoldListingsRequestType extends \DTS\eBaySDK\Trading\Type
     private static $propertyTypes = [
         'Search' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSearchType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Search'
         ],
         'StoreCategoryID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoreCategoryID'
         ],
         'Filter' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Filter'
         ],
         'Archived' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Archived'
         ],
         'Sort' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Sort'
         ],
         'SortOrder' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SortOrder'
         ],
         'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
         ],
         'SaleDateRange' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TimeRangeType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SaleDateRange'
         ]

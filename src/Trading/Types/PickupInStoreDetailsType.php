@@ -20,13 +20,13 @@ class PickupInStoreDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'EligibleForPickupInStore' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EligibleForPickupInStore'
         ],
         'EligibleForPickupDropOff' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EligibleForPickupDropOff'
         ]

@@ -22,25 +22,25 @@ class BuyerRoleMetricsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PositiveFeedbackLeftCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PositiveFeedbackLeftCount'
         ],
         'NegativeFeedbackLeftCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NegativeFeedbackLeftCount'
         ],
         'NeutralFeedbackLeftCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NeutralFeedbackLeftCount'
         ],
         'FeedbackLeftPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackLeftPercent'
         ]

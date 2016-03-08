@@ -20,13 +20,13 @@ class AspectValueHistogram extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'count'
         ],
         'valueName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'valueName'
         ]

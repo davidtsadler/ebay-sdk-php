@@ -20,13 +20,13 @@ class SellerPaymentProfileType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PaymentProfileID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentProfileID'
         ],
         'PaymentProfileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentProfileName'
         ]

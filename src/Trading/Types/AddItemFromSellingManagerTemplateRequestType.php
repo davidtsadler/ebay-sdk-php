@@ -21,19 +21,19 @@ class AddItemFromSellingManagerTemplateRequestType extends \DTS\eBaySDK\Trading\
     private static $propertyTypes = [
         'SaleTemplateID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SaleTemplateID'
         ],
         'ScheduleTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ScheduleTime'
         ],
         'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Item'
         ]

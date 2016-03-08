@@ -24,37 +24,37 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'feeSettlementReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'feeSettlementReportFilter'
         ],
         'siteFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SiteFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'siteFilter'
         ],
         'activeInventoryReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'activeInventoryReportFilter'
         ],
         'dateFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DateFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'dateFilter'
         ],
         'soldReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'soldReportFilter'
         ],
         'orderReportFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'orderReportFilter'
         ]

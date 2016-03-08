@@ -19,7 +19,7 @@ class AttributeArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Attribute' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AttributeType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Attribute'
         ]

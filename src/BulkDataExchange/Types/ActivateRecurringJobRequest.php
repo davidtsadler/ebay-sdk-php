@@ -19,7 +19,7 @@ class ActivateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Ba
     private static $propertyTypes = [
         'recurringJobId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'recurringJobId'
         ]

@@ -27,55 +27,55 @@ class ShippingCostSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingServiceName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceName'
         ],
         'ShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
         ],
         'InsuranceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
         ],
         'ShippingType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingType'
         ],
         'LocalPickup' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LocalPickup'
         ],
         'InsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
         ],
         'ListedShippingServiceCost' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListedShippingServiceCost'
         ],
         'ImportCharge' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
         ],
         'LogisticPlanType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LogisticPlanType'
         ]

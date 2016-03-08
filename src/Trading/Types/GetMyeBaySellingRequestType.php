@@ -27,55 +27,55 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
     private static $propertyTypes = [
         'ScheduledList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ScheduledList'
         ],
         'ActiveList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
         ],
         'SoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldList'
         ],
         'UnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnsoldList'
         ],
         'BidList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidList'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromSoldList'
         ],
         'DeletedFromUnsoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
         ],
         'SellingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingSummary'
         ],
         'HideVariations' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HideVariations'
         ]

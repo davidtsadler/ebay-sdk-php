@@ -19,7 +19,7 @@ class StoreCustomCategoryArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CustomCategory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomCategoryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CustomCategory'
         ]

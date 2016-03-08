@@ -32,85 +32,85 @@ class GetSellerListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     private static $propertyTypes = [
         'UserID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
         ],
         'MotorsDealerUsers' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIDArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MotorsDealerUsers'
         ],
         'EndTimeFrom' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTimeFrom'
         ],
         'EndTimeTo' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTimeTo'
         ],
         'Sort' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Sort'
         ],
         'StartTimeFrom' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTimeFrom'
         ],
         'StartTimeTo' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTimeTo'
         ],
         'Pagination' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Pagination'
         ],
         'GranularityLevel' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GranularityLevel'
         ],
         'SKUArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SKUArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKUArray'
         ],
         'IncludeWatchCount' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeWatchCount'
         ],
         'AdminEndedItemsOnly' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdminEndedItemsOnly'
         ],
         'CategoryID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'IncludeVariations' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeVariations'
         ]

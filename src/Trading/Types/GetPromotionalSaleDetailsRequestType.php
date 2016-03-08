@@ -20,13 +20,13 @@ class GetPromotionalSaleDetailsRequestType extends \DTS\eBaySDK\Trading\Types\Ab
     private static $propertyTypes = [
         'PromotionalSaleID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleID'
         ],
         'PromotionalSaleStatus' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PromotionalSaleStatus'
         ]

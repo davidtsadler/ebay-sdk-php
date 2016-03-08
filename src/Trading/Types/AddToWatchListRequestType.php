@@ -20,13 +20,13 @@ class AddToWatchListRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReque
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'VariationKey' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VariationKeyType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VariationKey'
         ]

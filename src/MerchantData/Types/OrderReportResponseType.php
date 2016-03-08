@@ -23,31 +23,31 @@ class OrderReportResponseType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'HardExpirationWarning' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
         ],
         'Ack' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Ack'
         ],
         'Version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Version'
         ],
         'Errors' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ErrorType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Errors'
         ],
         'OrderArray' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderArray'
         ]

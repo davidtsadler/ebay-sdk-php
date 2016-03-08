@@ -28,61 +28,61 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'GalleryType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryType'
         ],
         'GalleryURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryURL'
         ],
         'PhotoDisplay' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PhotoDisplay'
         ],
         'PictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
         ],
         'PictureSource' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSource'
         ],
         'GalleryDuration' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryDuration'
         ],
         'GalleryStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryStatus'
         ],
         'GalleryErrorInfo' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryErrorInfo'
         ],
         'ExternalPictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
         ],
         'ExtendedPictureDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ExtendedPictureDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExtendedPictureDetails'
         ]

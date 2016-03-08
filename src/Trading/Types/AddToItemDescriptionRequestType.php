@@ -20,13 +20,13 @@ class AddToItemDescriptionRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

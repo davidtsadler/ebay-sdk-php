@@ -34,97 +34,97 @@ class ApiAccessRuleType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CallName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CallName'
         ],
         'CountsTowardAggregate' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CountsTowardAggregate'
         ],
         'DailyHardLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DailyHardLimit'
         ],
         'DailySoftLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DailySoftLimit'
         ],
         'DailyUsage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DailyUsage'
         ],
         'HourlyHardLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HourlyHardLimit'
         ],
         'HourlySoftLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HourlySoftLimit'
         ],
         'HourlyUsage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HourlyUsage'
         ],
         'Period' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Period'
         ],
         'PeriodicHardLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodicHardLimit'
         ],
         'PeriodicSoftLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodicSoftLimit'
         ],
         'PeriodicUsage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodicUsage'
         ],
         'PeriodicStartDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodicStartDate'
         ],
         'ModTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ModTime'
         ],
         'RuleCurrentStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RuleCurrentStatus'
         ],
         'RuleStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RuleStatus'
         ]

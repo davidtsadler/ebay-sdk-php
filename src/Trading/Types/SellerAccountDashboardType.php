@@ -20,13 +20,13 @@ class SellerAccountDashboardType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
         ],
         'Alert' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerDashboardAlertType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Alert'
         ]

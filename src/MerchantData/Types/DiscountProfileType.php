@@ -25,43 +25,43 @@ class DiscountProfileType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'DiscountProfileID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountProfileID'
         ],
         'DiscountProfileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountProfileName'
         ],
         'EachAdditionalAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalAmount'
         ],
         'EachAdditionalAmountOff' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalAmountOff'
         ],
         'EachAdditionalPercentOff' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EachAdditionalPercentOff'
         ],
         'WeightOff' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WeightOff'
         ],
         'MappedDiscountProfileID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MappedDiscountProfileID'
         ]

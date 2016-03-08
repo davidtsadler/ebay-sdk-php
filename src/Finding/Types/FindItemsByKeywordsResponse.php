@@ -21,19 +21,19 @@ class FindItemsByKeywordsResponse extends \DTS\eBaySDK\Finding\Types\BaseFinding
     private static $propertyTypes = [
         'categoryHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogramContainer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'categoryHistogramContainer'
         ],
         'aspectHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectHistogramContainer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'aspectHistogramContainer'
         ],
         'conditionHistogramContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ConditionHistogramContainer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'conditionHistogramContainer'
         ]

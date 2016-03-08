@@ -20,13 +20,13 @@ class VerifyAddSecondChanceItemResponseType extends \DTS\eBaySDK\Trading\Types\A
     private static $propertyTypes = [
         'StartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
         ],
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ]

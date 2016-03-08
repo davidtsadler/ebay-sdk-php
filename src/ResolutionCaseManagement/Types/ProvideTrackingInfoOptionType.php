@@ -20,13 +20,13 @@ class ProvideTrackingInfoOptionType extends \DTS\eBaySDK\ResolutionCaseManagemen
     private static $propertyTypes = [
         'trackingNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
         ],
         'carrierUsed' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
         ]

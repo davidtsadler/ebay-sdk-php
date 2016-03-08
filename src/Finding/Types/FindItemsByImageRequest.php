@@ -23,31 +23,31 @@ class FindItemsByImageRequest extends \DTS\eBaySDK\Finding\Types\BestMatchFindin
     private static $propertyTypes = [
         'itemId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'categoryId' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'categoryId'
         ],
         'itemFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'aspectFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'aspectFilter'
         ],
         'outputSelector' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
         ]

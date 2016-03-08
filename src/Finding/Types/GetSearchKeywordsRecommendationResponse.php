@@ -19,7 +19,7 @@ class GetSearchKeywordsRecommendationResponse extends \DTS\eBaySDK\Finding\Types
     private static $propertyTypes = [
         'keywords' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'keywords'
         ]

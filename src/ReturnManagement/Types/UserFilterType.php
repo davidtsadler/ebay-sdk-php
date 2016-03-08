@@ -21,19 +21,19 @@ class UserFilterType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'userId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'userId'
         ],
         'userLoginName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'userLoginName'
         ],
         'role' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'role'
         ]

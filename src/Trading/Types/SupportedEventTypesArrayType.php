@@ -19,7 +19,7 @@ class SupportedEventTypesArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'EventType' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EventType'
         ]

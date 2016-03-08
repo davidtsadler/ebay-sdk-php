@@ -19,7 +19,7 @@ class NameValueListArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'NameValueList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\NameValueListType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'NameValueList'
         ]

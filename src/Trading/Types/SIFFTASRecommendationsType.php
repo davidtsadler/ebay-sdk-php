@@ -19,7 +19,7 @@ class SIFFTASRecommendationsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AttributeSetArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AttributeSetArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AttributeSetArray'
         ]

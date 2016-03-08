@@ -27,55 +27,55 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FolderSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FolderSummary'
         ],
         'NewAlertCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewAlertCount'
         ],
         'NewMessageCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewMessageCount'
         ],
         'UnresolvedAlertCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnresolvedAlertCount'
         ],
         'FlaggedMessageCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlaggedMessageCount'
         ],
         'TotalAlertCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalAlertCount'
         ],
         'TotalMessageCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalMessageCount'
         ],
         'NewHighPriorityCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewHighPriorityCount'
         ],
         'TotalHighPriorityCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalHighPriorityCount'
         ]

@@ -21,19 +21,19 @@ class AppealToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManageme
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'appealReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'appealReason'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ]

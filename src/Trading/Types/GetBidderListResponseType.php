@@ -20,13 +20,13 @@ class GetBidderListResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespo
     private static $propertyTypes = [
         'Bidder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Bidder'
         ],
         'BidItemArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidItemArray'
         ]

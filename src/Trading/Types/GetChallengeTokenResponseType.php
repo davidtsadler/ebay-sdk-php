@@ -21,19 +21,19 @@ class GetChallengeTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
     private static $propertyTypes = [
         'ChallengeToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ChallengeToken'
         ],
         'ImageChallengeURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ImageChallengeURL'
         ],
         'AudioChallengeURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AudioChallengeURL'
         ]

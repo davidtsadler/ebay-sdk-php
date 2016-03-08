@@ -20,13 +20,13 @@ class GetUserCasesResponse extends \DTS\eBaySDK\ResolutionCaseManagement\Types\B
     private static $propertyTypes = [
         'cases' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'cases'
         ],
         'paginationOutput' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaginationOutput',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationOutput'
         ]

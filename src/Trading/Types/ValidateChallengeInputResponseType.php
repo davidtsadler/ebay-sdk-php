@@ -19,7 +19,7 @@ class ValidateChallengeInputResponseType extends \DTS\eBaySDK\Trading\Types\Abst
     private static $propertyTypes = [
         'ValidToken' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValidToken'
         ]

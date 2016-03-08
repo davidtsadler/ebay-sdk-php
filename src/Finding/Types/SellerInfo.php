@@ -23,31 +23,31 @@ class SellerInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'sellerUserName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerUserName'
         ],
         'feedbackScore' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'feedbackScore'
         ],
         'positiveFeedbackPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
         ],
         'feedbackRatingStar' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'feedbackRatingStar'
         ],
         'topRatedSeller' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'topRatedSeller'
         ]

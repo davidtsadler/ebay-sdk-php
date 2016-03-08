@@ -21,19 +21,19 @@ class ProvideSellerInfoRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseR
     private static $propertyTypes = [
         'ReturnId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnId'
         ],
         'returnMerchandiseAuthorization' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ],
         'returnAddress' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Address',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnAddress'
         ]

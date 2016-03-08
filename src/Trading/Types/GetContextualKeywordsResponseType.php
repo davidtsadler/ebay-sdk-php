@@ -19,7 +19,7 @@ class GetContextualKeywordsResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
     private static $propertyTypes = [
         'ContextSearchAsset' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ContextSearchAssetType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ContextSearchAsset'
         ]

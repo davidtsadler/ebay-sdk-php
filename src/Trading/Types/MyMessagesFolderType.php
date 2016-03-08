@@ -20,13 +20,13 @@ class MyMessagesFolderType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FolderID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
         ],
         'FolderName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderName'
         ]

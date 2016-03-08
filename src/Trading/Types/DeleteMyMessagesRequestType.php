@@ -19,7 +19,7 @@ class DeleteMyMessagesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
     private static $propertyTypes = [
         'MessageIDs' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageIDArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageIDs'
         ]

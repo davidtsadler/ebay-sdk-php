@@ -19,7 +19,7 @@ class Money extends \DTS\eBaySDK\Types\DecimalType
     private static $propertyTypes = [
         'currencyCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'currencyCode'
         ]

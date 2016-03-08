@@ -22,25 +22,25 @@ class ShippingProfileDiscountInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'domesticFlatCalcDiscountProfileId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'domesticFlatCalcDiscountProfileId'
         ],
         'intlFlatCalcDiscountProfileId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'intlFlatCalcDiscountProfileId'
         ],
         'applyDomesticPromoShippingProfile' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'applyDomesticPromoShippingProfile'
         ],
         'applyIntlPromoShippingProfile' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'applyIntlPromoShippingProfile'
         ]

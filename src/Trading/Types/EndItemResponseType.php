@@ -19,7 +19,7 @@ class EndItemResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTyp
     private static $propertyTypes = [
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ]

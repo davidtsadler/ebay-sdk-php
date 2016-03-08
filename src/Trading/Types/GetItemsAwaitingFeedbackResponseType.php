@@ -19,7 +19,7 @@ class GetItemsAwaitingFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\Ab
     private static $propertyTypes = [
         'ItemsAwaitingFeedback' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedTransactionArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemsAwaitingFeedback'
         ]

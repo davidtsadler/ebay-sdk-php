@@ -22,25 +22,25 @@ class DeleteSellingManagerTemplateAutomationRuleResponseType extends \DTS\eBaySD
     private static $propertyTypes = [
         'AutomatedListingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoListType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedListingRule'
         ],
         'AutomatedRelistingRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoRelistType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedRelistingRule'
         ],
         'AutomatedSecondChanceOfferRule' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAutoSecondChanceOfferType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutomatedSecondChanceOfferRule'
         ],
         'Fees' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FeesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fees'
         ]

@@ -19,7 +19,7 @@ class CaseStatusFilterType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'caseStatus' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'caseStatus'
         ]

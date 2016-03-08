@@ -21,19 +21,19 @@ class FindItemsByProductRequest extends \DTS\eBaySDK\Finding\Types\BaseFindingSe
     private static $propertyTypes = [
         'productId' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productId'
         ],
         'itemFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'outputSelector' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
         ]

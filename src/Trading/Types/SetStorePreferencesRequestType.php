@@ -19,7 +19,7 @@ class SetStorePreferencesRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'StorePreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StorePreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StorePreferences'
         ]

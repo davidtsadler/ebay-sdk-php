@@ -19,7 +19,7 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MessageID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
         ]

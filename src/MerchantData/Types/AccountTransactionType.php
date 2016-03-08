@@ -20,13 +20,13 @@ class AccountTransactionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FeeDescription' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeDescription'
         ],
         'Transaction' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\NonUsageTransactionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Transaction'
         ]

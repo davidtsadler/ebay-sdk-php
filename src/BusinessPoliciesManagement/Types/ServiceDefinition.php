@@ -22,25 +22,25 @@ class ServiceDefinition extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'superscript' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'superscript'
         ],
         'maxDeliveryServiceDefinition' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxDeliveryServiceDefinition'
         ],
         'minDeliveryServiceDefinition' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minDeliveryServiceDefinition'
         ],
         'name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'name'
         ]

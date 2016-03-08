@@ -20,13 +20,13 @@ class GetMessagePreferencesRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
     private static $propertyTypes = [
         'SellerID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
         ],
         'IncludeASQPreferences' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeASQPreferences'
         ]

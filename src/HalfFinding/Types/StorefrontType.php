@@ -20,13 +20,13 @@ class StorefrontType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'storeURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeURL'
         ],
         'storeName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeName'
         ]

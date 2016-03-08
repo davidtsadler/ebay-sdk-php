@@ -19,7 +19,7 @@ class ReturnPolicyProfileList extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ReturnPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReturnPolicyProfile'
         ]

@@ -19,7 +19,7 @@ class ReturnIdType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'id' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'id'
         ]

@@ -19,7 +19,7 @@ class ReviseSellingManagerInventoryFolderRequestType extends \DTS\eBaySDK\Tradin
     private static $propertyTypes = [
         'Folder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerFolderDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Folder'
         ]

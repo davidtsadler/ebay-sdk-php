@@ -31,79 +31,79 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'itemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemID'
         ],
         'itemURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemURL'
         ],
         'quantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'quantity'
         ],
         'seller' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\UserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'seller'
         ],
         'price' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
         ],
         'rentalPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\RentalAmount',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'rentalPrice'
         ],
         'shippingService' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shippingService'
         ],
         'itemLocation' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemLocation'
         ],
         'excludedShippingAreas' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'excludedShippingAreas'
         ],
         'condition' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'condition'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ],
         'description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'description'
         ],
         'storefront' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\StorefrontType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storefront'
         ]

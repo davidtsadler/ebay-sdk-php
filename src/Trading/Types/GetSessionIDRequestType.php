@@ -19,7 +19,7 @@ class GetSessionIDRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequest
     private static $propertyTypes = [
         'RuName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RuName'
         ]

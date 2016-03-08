@@ -20,13 +20,13 @@ class ReturnResponseDueType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'party' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'party'
         ],
         'respondByDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'respondByDate'
         ]

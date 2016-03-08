@@ -20,13 +20,13 @@ class AspectFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'aspectName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'aspectName'
         ],
         'aspectValueName' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'aspectValueName'
         ]

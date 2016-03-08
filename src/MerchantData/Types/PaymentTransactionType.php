@@ -26,49 +26,49 @@ class PaymentTransactionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PaymentStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentStatus'
         ],
         'Payer' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\UserIdentityType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Payer'
         ],
         'Payee' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\UserIdentityType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Payee'
         ],
         'PaymentTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentTime'
         ],
         'PaymentAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentAmount'
         ],
         'ReferenceID' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionReferenceType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReferenceID'
         ],
         'FeeOrCreditAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeOrCreditAmount'
         ],
         'PaymentReferenceID' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionReferenceType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PaymentReferenceID'
         ]

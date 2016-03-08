@@ -19,7 +19,7 @@ class GetReturnMetadataResponse extends \DTS\eBaySDK\ReturnManagement\Types\Base
     private static $propertyTypes = [
         'metadataCodeValues' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\MetaDataCodeResultType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'metadataCodeValues'
         ]

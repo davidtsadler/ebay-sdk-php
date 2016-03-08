@@ -21,19 +21,19 @@ class MarkUpMarkDownEventType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Type'
         ],
         'Time' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Time'
         ],
         'Reason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Reason'
         ]

@@ -21,19 +21,19 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'type'
         ],
         'cost' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'cost'
         ],
         'expeditedService' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'expeditedService'
         ]

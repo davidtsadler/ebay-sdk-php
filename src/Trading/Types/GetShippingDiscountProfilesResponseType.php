@@ -27,55 +27,55 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
     private static $propertyTypes = [
         'CurrencyID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CurrencyID'
         ],
         'FlatShippingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingDiscount'
         ],
         'CalculatedShippingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingDiscount'
         ],
         'PromotionalShippingDiscount' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscount'
         ],
         'CalculatedHandlingDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedHandlingDiscount'
         ],
         'PromotionalShippingDiscountDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
         ],
         'ShippingInsurance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsurance'
         ],
         'InternationalShippingInsurance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalShippingInsurance'
         ],
         'CombinedDuration' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedDuration'
         ]

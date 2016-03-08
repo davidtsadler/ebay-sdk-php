@@ -20,13 +20,13 @@ class MaximumUnpaidItemStrikesInfoDetailsType extends \DTS\eBaySDK\Types\BaseTyp
     private static $propertyTypes = [
         'MaximumUnpaidItemStrikesCount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesCountDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaximumUnpaidItemStrikesCount'
         ],
         'MaximumUnpaidItemStrikesDuration' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesDurationDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'MaximumUnpaidItemStrikesDuration'
         ]

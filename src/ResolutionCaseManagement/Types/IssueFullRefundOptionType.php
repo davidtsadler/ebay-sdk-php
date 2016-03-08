@@ -19,7 +19,7 @@ class IssueFullRefundOptionType extends \DTS\eBaySDK\ResolutionCaseManagement\Ty
     private static $propertyTypes = [
         'daysToRefundBuyer' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'daysToRefundBuyer'
         ]

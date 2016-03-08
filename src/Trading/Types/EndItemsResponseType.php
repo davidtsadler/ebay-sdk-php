@@ -19,7 +19,7 @@ class EndItemsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseTy
     private static $propertyTypes = [
         'EndItemResponseContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\EndItemResponseContainerType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EndItemResponseContainer'
         ]

@@ -22,25 +22,25 @@ class ItemFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'paramName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paramName'
         ],
         'paramValue' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paramValue'
         ],
         'name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'name'
         ],
         'value' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'value'
         ]

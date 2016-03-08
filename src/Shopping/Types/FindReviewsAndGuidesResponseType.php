@@ -29,67 +29,67 @@ class FindReviewsAndGuidesResponseType extends \DTS\eBaySDK\Shopping\Types\Abstr
     private static $propertyTypes = [
         'ReviewCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReviewCount'
         ],
         'BuyingGuideCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideCount'
         ],
         'ReviewerRank' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReviewerRank'
         ],
         'TotalHelpfulnessVotes' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalHelpfulnessVotes'
         ],
         'ProductID' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
         ],
         'ReviewsAndGuidesURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReviewsAndGuidesURL'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
         'TotalPages' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalPages'
         ],
         'BuyingGuideDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\BuyingGuideDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideDetails'
         ],
         'ReviewDetails' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ReviewDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReviewDetails'
         ],
         'PositiveHelpfulnessVotes' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PositiveHelpfulnessVotes'
         ]

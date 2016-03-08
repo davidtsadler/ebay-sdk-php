@@ -19,7 +19,7 @@ class ItemArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Item'
         ]

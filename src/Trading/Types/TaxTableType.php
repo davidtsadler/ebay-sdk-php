@@ -19,7 +19,7 @@ class TaxTableType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TaxJurisdiction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxJurisdictionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'TaxJurisdiction'
         ]

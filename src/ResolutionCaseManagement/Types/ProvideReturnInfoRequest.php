@@ -21,19 +21,19 @@ class ProvideReturnInfoRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Typ
     private static $propertyTypes = [
         'address' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'address'
         ],
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'returnMerchandiseAuthorization' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ]

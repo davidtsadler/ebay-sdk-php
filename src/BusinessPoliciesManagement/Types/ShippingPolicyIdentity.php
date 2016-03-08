@@ -19,7 +19,7 @@ class ShippingPolicyIdentity extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'shippingPolicyVersionId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyVersionId'
         ]

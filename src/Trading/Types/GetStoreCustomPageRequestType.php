@@ -19,7 +19,7 @@ class GetStoreCustomPageRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
     private static $propertyTypes = [
         'PageID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageID'
         ]

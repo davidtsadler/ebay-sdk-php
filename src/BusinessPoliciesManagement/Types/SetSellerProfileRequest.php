@@ -21,19 +21,19 @@ class SetSellerProfileRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\Ty
     private static $propertyTypes = [
         'paymentProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PaymentProfile',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentProfile'
         ],
         'returnPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnPolicyProfile'
         ],
         'shippingPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyProfile',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyProfile'
         ]

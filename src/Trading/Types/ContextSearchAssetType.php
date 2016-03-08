@@ -21,19 +21,19 @@ class ContextSearchAssetType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Keyword' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Keyword'
         ],
         'Category' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Category'
         ],
         'Ranking' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Ranking'
         ]

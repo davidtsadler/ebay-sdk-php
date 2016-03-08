@@ -25,43 +25,43 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'OnVacation' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OnVacation'
         ],
         'ReturnDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnDate'
         ],
         'HideFixedPriceStoreItems' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HideFixedPriceStoreItems'
         ],
         'MessageItem' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageItem'
         ],
         'MessageStore' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageStore'
         ],
         'DisplayMessageStoreCustomText' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisplayMessageStoreCustomText'
         ],
         'MessageStoreCustomText' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageStoreCustomText'
         ]

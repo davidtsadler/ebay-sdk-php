@@ -20,13 +20,13 @@ class ItemTotalsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TotalQuantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalQuantity'
         ],
         'TotalValue' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalValue'
         ]

@@ -19,7 +19,7 @@ class SiteFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'globalId' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'globalId'
         ]

@@ -20,13 +20,13 @@ class RefundDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'RefundOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

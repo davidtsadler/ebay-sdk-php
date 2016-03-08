@@ -20,13 +20,13 @@ class SellerProfilePreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SellerProfileOptedIn' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerProfileOptedIn'
         ],
         'SupportedSellerProfiles' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SupportedSellerProfilesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SupportedSellerProfiles'
         ]

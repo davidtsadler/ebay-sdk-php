@@ -19,7 +19,7 @@ class SetShipmentTrackingInfoResponseType extends \DTS\eBaySDK\MerchantData\Type
     private static $propertyTypes = [
         'OrderLineItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
         ]

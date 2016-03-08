@@ -25,43 +25,43 @@ class SellingManagerAutoListAccordingToScheduleType extends \DTS\eBaySDK\Types\B
     private static $propertyTypes = [
         'DayOfWeek' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DayOfWeek'
         ],
         'ListingPeriodInWeeks' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingPeriodInWeeks'
         ],
         'ListAtSpecificTimeOfDay' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListAtSpecificTimeOfDay'
         ],
         'StartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
         ],
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ],
         'MaxActiveItemCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxActiveItemCount'
         ],
         'ListingHoldInventoryLevel' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
         ]

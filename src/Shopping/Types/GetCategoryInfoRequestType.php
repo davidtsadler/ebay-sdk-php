@@ -20,13 +20,13 @@ class GetCategoryInfoRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReq
     private static $propertyTypes = [
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'IncludeSelector' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeSelector'
         ]

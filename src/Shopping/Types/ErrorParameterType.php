@@ -20,13 +20,13 @@ class ErrorParameterType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Value'
         ],
         'ParamID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'ParamID'
         ]

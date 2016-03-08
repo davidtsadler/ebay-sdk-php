@@ -20,13 +20,13 @@ class IssueFullRefundRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Types
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ]

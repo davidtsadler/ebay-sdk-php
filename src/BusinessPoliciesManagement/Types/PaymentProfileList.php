@@ -19,7 +19,7 @@ class PaymentProfileList extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PaymentProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PaymentProfile',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PaymentProfile'
         ]

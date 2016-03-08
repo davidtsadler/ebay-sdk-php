@@ -20,13 +20,13 @@ class ReturnsAcceptedDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ReturnsAcceptedOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnsAcceptedOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

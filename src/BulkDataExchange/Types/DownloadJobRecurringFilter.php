@@ -19,7 +19,7 @@ class DownloadJobRecurringFilter extends \DTS\eBaySDK\BulkDataExchange\Types\Bas
     private static $propertyTypes = [
         'orderReportRecurringFilter' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportRecurringFilter',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'orderReportRecurringFilter'
         ]

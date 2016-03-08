@@ -21,19 +21,19 @@ class TaxIdentifierType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Type'
         ],
         'ID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ID'
         ],
         'Attribute' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxIdentifierAttributeType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Attribute'
         ]

@@ -21,19 +21,19 @@ class GetContextualKeywordsRequestType extends \DTS\eBaySDK\Trading\Types\Abstra
     private static $propertyTypes = [
         'URL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'URL'
         ],
         'Encoding' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Encoding'
         ],
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ]

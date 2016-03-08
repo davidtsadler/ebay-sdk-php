@@ -22,25 +22,25 @@ class GetItemShippingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'QuantitySold' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
         ],
         'DestinationPostalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DestinationPostalCode'
         ],
         'DestinationCountryCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DestinationCountryCode'
         ]

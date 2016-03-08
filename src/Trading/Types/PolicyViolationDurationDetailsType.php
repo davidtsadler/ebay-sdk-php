@@ -20,13 +20,13 @@ class PolicyViolationDurationDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Period' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Period'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

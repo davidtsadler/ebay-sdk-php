@@ -19,7 +19,7 @@ class FindItemsForFavoriteSearchRequest extends \DTS\eBaySDK\Finding\Types\BaseS
     private static $propertyTypes = [
         'paginationInput' => [
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationInput',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ]

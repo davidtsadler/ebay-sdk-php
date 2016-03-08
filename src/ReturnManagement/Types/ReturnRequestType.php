@@ -21,19 +21,19 @@ class ReturnRequestType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'returnItem' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'returnItem'
         ],
         'returnReason' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnReasonType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnReason'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ]

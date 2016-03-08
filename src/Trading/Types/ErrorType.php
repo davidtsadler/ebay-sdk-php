@@ -25,43 +25,43 @@ class ErrorType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShortMessage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShortMessage'
         ],
         'LongMessage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LongMessage'
         ],
         'ErrorCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ErrorCode'
         ],
         'UserDisplayHint' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserDisplayHint'
         ],
         'SeverityCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SeverityCode'
         ],
         'ErrorParameters' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorParameterType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ErrorParameters'
         ],
         'ErrorClassification' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ErrorClassification'
         ]

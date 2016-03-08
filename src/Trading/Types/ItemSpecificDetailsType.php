@@ -24,37 +24,37 @@ class ItemSpecificDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MaxItemSpecificsPerItem' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxItemSpecificsPerItem'
         ],
         'MaxValuesPerName' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxValuesPerName'
         ],
         'MaxCharactersPerValue' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxCharactersPerValue'
         ],
         'MaxCharactersPerName' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxCharactersPerName'
         ],
         'DetailVersion' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DetailVersion'
         ],
         'UpdateTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UpdateTime'
         ]

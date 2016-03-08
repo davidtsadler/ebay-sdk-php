@@ -19,7 +19,7 @@ class GetMultipleItemsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Item'
         ]

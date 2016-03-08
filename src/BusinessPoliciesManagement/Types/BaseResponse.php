@@ -22,25 +22,25 @@ class BaseResponse extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ack' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ack'
         ],
         'errorMessage' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ErrorMessage',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'errorMessage'
         ],
         'version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'version'
         ],
         'timestamp' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'timestamp'
         ]

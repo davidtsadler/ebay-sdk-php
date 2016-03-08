@@ -19,7 +19,7 @@ class SellerRatingSummaryArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AverageRatingSummary' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AverageRatingSummaryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AverageRatingSummary'
         ]

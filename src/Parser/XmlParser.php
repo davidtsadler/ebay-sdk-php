@@ -99,7 +99,7 @@ class XmlParser
                 $parentObject = $this->getParentObject();
                 // Parent object may not have been created if it didn't exist as a property name.
                 if ($parentObject) {
-                    if (!$meta->unbound) {
+                    if (!$meta->repeatable) {
                         $parentObject->{$meta->propertyName} = $this->getValueToAssign($meta);
                     } else {
                         $parentObject->{$meta->propertyName}[] = $this->getValueToAssign($meta);
@@ -155,7 +155,7 @@ class XmlParser
         $meta = new \StdClass();
         $meta->propertyName = '';
         $meta->phpType = '';
-        $meta->unbound = false;
+        $meta->repeatable = false;
         $meta->attribute = false;
         $meta->elementName = '';
         $meta->strData = '';

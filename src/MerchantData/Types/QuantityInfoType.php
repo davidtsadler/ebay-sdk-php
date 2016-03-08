@@ -19,7 +19,7 @@ class QuantityInfoType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MinimumRemnantSet' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinimumRemnantSet'
         ]

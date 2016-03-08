@@ -21,19 +21,19 @@ class AdditionalAccountType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Balance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Balance'
         ],
         'Currency' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Currency'
         ],
         'AccountCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AccountCode'
         ]

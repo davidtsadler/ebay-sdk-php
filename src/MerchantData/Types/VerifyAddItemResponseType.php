@@ -25,43 +25,43 @@ class VerifyAddItemResponseType extends \DTS\eBaySDK\MerchantData\Types\Abstract
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'Fees' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\FeesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fees'
         ],
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'Category2ID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Category2ID'
         ],
         'DiscountReason' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DiscountReason'
         ],
         'ProductSuggestions' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ProductSuggestionsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductSuggestions'
         ],
         'ListingRecommendations' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ListingRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingRecommendations'
         ]

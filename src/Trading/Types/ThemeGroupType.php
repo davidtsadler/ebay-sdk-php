@@ -22,25 +22,25 @@ class ThemeGroupType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'GroupID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GroupID'
         ],
         'GroupName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GroupName'
         ],
         'ThemeID' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ThemeID'
         ],
         'ThemeTotal' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ThemeTotal'
         ]

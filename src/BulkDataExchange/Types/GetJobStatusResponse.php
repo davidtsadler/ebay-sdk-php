@@ -19,7 +19,7 @@ class GetJobStatusResponse extends \DTS\eBaySDK\BulkDataExchange\Types\BaseServi
     private static $propertyTypes = [
         'jobProfile' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\JobProfile',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'jobProfile'
         ]

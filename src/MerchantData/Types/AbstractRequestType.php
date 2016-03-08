@@ -31,79 +31,79 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\CustomSecurityHeaderType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
         ],
         'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
         ],
         'DetailLevel' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DetailLevel'
         ],
         'ErrorLanguage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ErrorLanguage'
         ],
         'MessageID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
         ],
         'Version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Version'
         ],
         'EndUserIP' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndUserIP'
         ],
         'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
         ],
         'ErrorHandling' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ErrorHandling'
         ],
         'InvocationID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvocationID'
         ],
         'OutputSelector' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OutputSelector'
         ],
         'WarningLevel' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WarningLevel'
         ],
         'BotBlock' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\BotBlockRequestType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BotBlock'
         ]

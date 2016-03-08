@@ -19,7 +19,7 @@ class ItemBestOffersArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ItemBestOffers' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemBestOffersType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemBestOffers'
         ]

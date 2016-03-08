@@ -22,25 +22,25 @@ class GetStoreRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     private static $propertyTypes = [
         'CategoryStructureOnly' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryStructureOnly'
         ],
         'RootCategoryID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RootCategoryID'
         ],
         'LevelLimit' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LevelLimit'
         ],
         'UserID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
         ]

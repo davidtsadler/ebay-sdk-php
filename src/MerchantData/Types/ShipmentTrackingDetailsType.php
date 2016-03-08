@@ -21,19 +21,19 @@ class ShipmentTrackingDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingCarrierUsed' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCarrierUsed'
         ],
         'ShipmentTrackingNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShipmentTrackingNumber'
         ],
         'ShipmentLineItem' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ShipmentLineItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShipmentLineItem'
         ]

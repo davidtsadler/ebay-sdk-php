@@ -24,37 +24,37 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'trackingNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
         ],
         'carrierUsed' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
         ],
         'deliveryStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryStatus'
         ],
         'deliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryDate'
         ],
         'shippingCost' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'
         ],
         'shippingAddress' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Address',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingAddress'
         ]

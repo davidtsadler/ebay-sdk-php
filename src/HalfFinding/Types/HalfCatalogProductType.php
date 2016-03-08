@@ -29,67 +29,67 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'title' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'title'
         ],
         'detailsURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'detailsURL'
         ],
         'stockPhotoURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'stockPhotoURL'
         ],
         'productID' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'productID'
         ],
         'categoryName' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'categoryName'
         ],
         'itemSpecifics' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\NameValueListArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemSpecifics'
         ],
         'item' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'item'
         ],
         'listPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listPrice'
         ],
         'reviewCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'reviewCount'
         ],
         'BestFixedPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestFixedPrice'
         ],
         'BestRentalPrice' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestRentalPrice'
         ]

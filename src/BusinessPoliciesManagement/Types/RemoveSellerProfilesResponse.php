@@ -19,7 +19,7 @@ class RemoveSellerProfilesResponse extends \DTS\eBaySDK\BusinessPoliciesManageme
     private static $propertyTypes = [
         'sellerProfileResponseStatus' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\SellerProfileResponseStatus',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'sellerProfileResponseStatus'
         ]

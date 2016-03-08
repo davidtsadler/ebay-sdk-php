@@ -20,13 +20,13 @@ class ReminderCustomizationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'DurationInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DurationInDays'
         ],
         'Include' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Include'
         ]

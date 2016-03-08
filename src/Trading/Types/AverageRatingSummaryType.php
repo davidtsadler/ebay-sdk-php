@@ -20,13 +20,13 @@ class AverageRatingSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FeedbackSummaryPeriod' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSummaryPeriod'
         ],
         'AverageRatingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AverageRatingDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AverageRatingDetails'
         ]

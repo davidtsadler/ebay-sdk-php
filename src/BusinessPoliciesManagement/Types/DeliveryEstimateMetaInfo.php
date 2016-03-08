@@ -20,13 +20,13 @@ class DeliveryEstimateMetaInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'key' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'key'
         ],
         'value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'value'
         ]

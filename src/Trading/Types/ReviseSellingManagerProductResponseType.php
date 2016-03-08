@@ -19,7 +19,7 @@ class ReviseSellingManagerProductResponseType extends \DTS\eBaySDK\Trading\Types
     private static $propertyTypes = [
         'SellingManagerProductDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerProductDetails'
         ]

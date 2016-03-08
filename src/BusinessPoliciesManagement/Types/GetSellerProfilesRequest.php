@@ -22,25 +22,25 @@ class GetSellerProfilesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\T
     private static $propertyTypes = [
         'profileType' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'profileType'
         ],
         'profileId' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'profileId'
         ],
         'profileName' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'profileName'
         ],
         'includeDetails' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeDetails'
         ]

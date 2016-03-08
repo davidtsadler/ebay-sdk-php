@@ -20,13 +20,13 @@ class CaseUserType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'userId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'userId'
         ],
         'role' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'role'
         ]

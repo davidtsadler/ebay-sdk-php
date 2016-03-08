@@ -22,25 +22,25 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
     private static $propertyTypes = [
         'productID' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productID'
         ],
         'paginationInput' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PaginationInputType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ],
         'itemFilter' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'sortBy' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\SortByType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortBy'
         ]

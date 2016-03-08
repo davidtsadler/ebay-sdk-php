@@ -21,19 +21,19 @@ class CreateUploadJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSer
     private static $propertyTypes = [
         'uploadJobType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'uploadJobType'
         ],
         'UUID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UUID'
         ],
         'fileType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fileType'
         ]

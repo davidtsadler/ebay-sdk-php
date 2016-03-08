@@ -21,19 +21,19 @@ class CharityAffiliationDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CharityID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CharityID'
         ],
         'AffiliationType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AffiliationType'
         ],
         'LastUsedTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastUsedTime'
         ]

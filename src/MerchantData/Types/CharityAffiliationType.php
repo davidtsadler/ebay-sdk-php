@@ -20,13 +20,13 @@ class CharityAffiliationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'id' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'id'
         ],
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'type'
         ]

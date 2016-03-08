@@ -20,13 +20,13 @@ class ModifyNameType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Name'
         ],
         'NewName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewName'
         ]

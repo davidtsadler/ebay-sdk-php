@@ -19,7 +19,7 @@ class HalfProductsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Product' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\HalfCatalogProductType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Product'
         ]

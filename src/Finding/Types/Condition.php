@@ -20,13 +20,13 @@ class Condition extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'conditionId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'conditionId'
         ],
         'conditionDisplayName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'conditionDisplayName'
         ]

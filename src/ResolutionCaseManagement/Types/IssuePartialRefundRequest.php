@@ -21,19 +21,19 @@ class IssuePartialRefundRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Ty
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'amount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Money',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'amount'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ]

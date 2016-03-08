@@ -25,43 +25,43 @@ class GetUserDisputesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     private static $propertyTypes = [
         'StartingDisputeID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartingDisputeID'
         ],
         'EndingDisputeID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndingDisputeID'
         ],
         'DisputeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisputeArray'
         ],
         'ItemsPerPage' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemsPerPage'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
         'DisputeFilterCount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeFilterCountType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DisputeFilterCount'
         ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ]

@@ -20,13 +20,13 @@ class ReviewDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AverageRating' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AverageRating'
         ],
         'Review' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\ReviewType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Review'
         ]

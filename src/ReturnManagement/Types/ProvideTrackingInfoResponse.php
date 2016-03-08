@@ -19,7 +19,7 @@ class ProvideTrackingInfoResponse extends \DTS\eBaySDK\ReturnManagement\Types\Ba
     private static $propertyTypes = [
         'deliveryStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryStatus'
         ]

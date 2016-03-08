@@ -6,13 +6,13 @@ class AmountClass extends \DTS\eBaySDK\Types\DoubleType
     private static $propertyTypes = [
         'AttributeOne' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'AttributeOne'
         ],
         'AttributeTwo' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'AttributeTwo'
         ]

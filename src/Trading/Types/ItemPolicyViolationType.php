@@ -20,13 +20,13 @@ class ItemPolicyViolationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PolicyID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PolicyID'
         ],
         'PolicyText' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PolicyText'
         ]

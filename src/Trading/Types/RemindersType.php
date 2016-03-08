@@ -37,115 +37,115 @@ class RemindersType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PaymentToSendCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentToSendCount'
         ],
         'FeedbackToReceiveCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackToReceiveCount'
         ],
         'FeedbackToSendCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackToSendCount'
         ],
         'OutbidCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OutbidCount'
         ],
         'PaymentToReceiveCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentToReceiveCount'
         ],
         'SecondChanceOfferCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOfferCount'
         ],
         'ShippingNeededCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingNeededCount'
         ],
         'RelistingNeededCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistingNeededCount'
         ],
         'TotalNewLeadsCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalNewLeadsCount'
         ],
         'DocsForCCProcessingToSendCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DocsForCCProcessingToSendCount'
         ],
         'RTEToProcessCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RTEToProcessCount'
         ],
         'ItemReceiptToConfirmCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemReceiptToConfirmCount'
         ],
         'RefundOnHoldCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundOnHoldCount'
         ],
         'RefundCancelledCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundCancelledCount'
         ],
         'ShippingDetailsToBeProvidedCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetailsToBeProvidedCount'
         ],
         'ItemReceiptConfirmationToReceiveCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemReceiptConfirmationToReceiveCount'
         ],
         'RefundInitiatedCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundInitiatedCount'
         ],
         'PendingRTERequestCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PendingRTERequestCount'
         ],
         'DeclinedRTERequestCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeclinedRTERequestCount'
         ]

@@ -19,7 +19,7 @@ class AddOrderRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     private static $propertyTypes = [
         'Order' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Order'
         ]

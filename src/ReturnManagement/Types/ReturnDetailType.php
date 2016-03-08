@@ -25,43 +25,43 @@ class ReturnDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'globalId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'globalId'
         ],
         'returnHistory' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnResponseHistoryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'returnHistory'
         ],
         'refundInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\RefundInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundInfo'
         ],
         'returnPolicy' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnPolicyInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnPolicy'
         ],
         'buyerReturnShipment' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ShipmentType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerReturnShipment'
         ],
         'shipmentInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ShipmentType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shipmentInfo'
         ],
         'caseId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ]

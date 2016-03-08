@@ -20,13 +20,13 @@ class VeROReportItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
     private static $propertyTypes = [
         'RightsOwnerID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RightsOwnerID'
         ],
         'ReportItems' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROReportItemsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReportItems'
         ]

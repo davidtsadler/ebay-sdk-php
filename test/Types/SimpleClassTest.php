@@ -61,41 +61,41 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\SimpleClass', $this->obj->SimpleClass);
 
         $this->assertEquals(0, count($this->obj->strings));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
 
         $this->obj->strings[] = 'foo';
         $this->obj->strings[] = 'bar';
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
 
         $this->obj->strings = ['foo', 'bar'];
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
 
         $this->obj->strings = [];
         $this->assertEquals(0, count($this->obj->strings));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->strings);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
 
         $this->obj->integers[] = 111;
         $this->obj->integers[] = 222;
         $this->assertEquals(2, count($this->obj->integers));
         $this->assertEquals(111, $this->obj->integers[0]);
         $this->assertEquals(222, $this->obj->integers[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->integers);
 
         $this->obj->integers = [111, 222];
         $this->assertEquals(2, count($this->obj->integers));
         $this->assertEquals(111, $this->obj->integers[0]);
         $this->assertEquals(222, $this->obj->integers[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->integers);
 
         $this->obj->integers = [];
         $this->assertEquals(0, count($this->obj->integers));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj->integers);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->integers);
 
         $this->obj->base64BinaryType = new Base64BinaryType();
         $this->obj->base64BinaryType->value = 'binary type';
@@ -178,23 +178,23 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         isset($this->obj->foo);
     }
 
-    public function testSettingUnboundPropertyWithAnInvalidType()
+    public function testSettingRepeatablePropertyWithAnInvalidType()
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Test\Mocks\SimpleClass::integers expected <integer>, got <string>');
 
         $this->obj->integers[] = 'foo';
     }
 
-    public function testSettingUnboundPropertyWithOneInvalidType()
+    public function testSettingRepeatablePropertyWithOneInvalidType()
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Test\Mocks\SimpleClass::integers expected <integer>, got <string>');
 
         $this->obj->integers = [123, 'foo'];
     }
 
-    public function testSettingUnboundPropertyDirectly()
+    public function testSettingRepeatablePropertyDirectly()
     {
-        $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Test\Mocks\SimpleClass::integers expected <DTS\eBaySDK\Types\UnboundType>, got <integer>');
+        $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type: DTS\eBaySDK\Test\Mocks\SimpleClass::integers expected <DTS\eBaySDK\Types\RepeatableType>, got <integer>');
 
         $this->obj->integers = 123;
     }
@@ -204,7 +204,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         $meta = new \StdClass();
         $meta->propertyName = 'SimpleClass';
         $meta->phpType = 'DTS\eBaySDK\Test\Mocks\SimpleClass';
-        $meta->unbound = false;
+        $meta->repeatable = false;
         $meta->attribute = false;
         $meta->elementName = 'SimpleClass';
         $meta->strData = '';

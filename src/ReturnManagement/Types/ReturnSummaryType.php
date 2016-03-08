@@ -26,49 +26,49 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ReturnId' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnId'
         ],
         'ReturnType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnType'
         ],
         'otherParty' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'otherParty'
         ],
         'returnRequest' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnRequestType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnRequest'
         ],
         'status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'status'
         ],
         'responseDue' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnResponseDueType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'responseDue'
         ],
         'creationDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
         ],
         'lastModifiedDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'lastModifiedDate'
         ]

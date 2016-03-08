@@ -21,19 +21,19 @@ class BestMatchFindingServiceRequest extends \DTS\eBaySDK\Finding\Types\BaseServ
     private static $propertyTypes = [
         'paginationInput' => [
             'type' => 'DTS\eBaySDK\Finding\Types\PaginationInput',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ],
         'buyerPostalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerPostalCode'
         ],
         'affiliate' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Affiliate',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'affiliate'
         ]

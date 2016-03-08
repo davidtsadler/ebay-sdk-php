@@ -19,7 +19,7 @@ class GetTokenStatusResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResp
     private static $propertyTypes = [
         'TokenStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TokenStatusType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TokenStatus'
         ]

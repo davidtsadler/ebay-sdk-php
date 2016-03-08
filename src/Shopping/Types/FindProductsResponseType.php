@@ -26,49 +26,49 @@ class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRespo
     private static $propertyTypes = [
         'ApproximatePages' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ApproximatePages'
         ],
         'MoreResults' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MoreResults'
         ],
         'DomainHistogram' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
         ],
         'ItemArray' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemArray'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
         'Product' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\CatalogProductType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Product'
         ],
         'TotalProducts' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalProducts'
         ],
         'DuplicateItems' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DuplicateItems'
         ]

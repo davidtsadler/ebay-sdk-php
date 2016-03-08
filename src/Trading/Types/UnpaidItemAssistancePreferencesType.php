@@ -24,37 +24,37 @@ class UnpaidItemAssistancePreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'DelayBeforeOpeningDispute' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DelayBeforeOpeningDispute'
         ],
         'OptInStatus' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OptInStatus'
         ],
         'AutoRelist' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutoRelist'
         ],
         'RemoveAllExcludedUsers' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RemoveAllExcludedUsers'
         ],
         'ExcludedUser' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExcludedUser'
         ],
         'AutoOptDonationRefund' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AutoOptDonationRefund'
         ]

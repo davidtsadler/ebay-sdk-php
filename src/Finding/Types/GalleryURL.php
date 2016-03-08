@@ -19,7 +19,7 @@ class GalleryURL extends \DTS\eBaySDK\Types\URIType
     private static $propertyTypes = [
         'gallerySize' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'gallerySize'
         ]

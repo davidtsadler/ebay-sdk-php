@@ -20,13 +20,13 @@ class MyeBayFavoriteSellerType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'UserID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
         ],
         'StoreName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoreName'
         ]

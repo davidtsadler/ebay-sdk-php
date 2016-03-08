@@ -29,67 +29,67 @@ class CalculatedShippingRateType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'OriginatingPostalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OriginatingPostalCode'
         ],
         'MeasurementUnit' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MeasurementUnit'
         ],
         'PackageDepth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageDepth'
         ],
         'PackageLength' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageLength'
         ],
         'PackageWidth' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageWidth'
         ],
         'PackagingHandlingCosts' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackagingHandlingCosts'
         ],
         'ShippingIrregular' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingIrregular'
         ],
         'ShippingPackage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingPackage'
         ],
         'WeightMajor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WeightMajor'
         ],
         'WeightMinor' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MeasureType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
         ],
         'InternationalPackagingHandlingCosts' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalPackagingHandlingCosts'
         ]

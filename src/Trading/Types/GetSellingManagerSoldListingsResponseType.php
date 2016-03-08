@@ -20,13 +20,13 @@ class GetSellingManagerSoldListingsResponseType extends \DTS\eBaySDK\Trading\Typ
     private static $propertyTypes = [
         'SaleRecord' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SaleRecord'
         ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ]

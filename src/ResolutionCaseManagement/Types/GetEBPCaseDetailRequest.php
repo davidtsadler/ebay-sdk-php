@@ -19,7 +19,7 @@ class GetEBPCaseDetailRequest extends \DTS\eBaySDK\ResolutionCaseManagement\Type
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ]

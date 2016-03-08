@@ -21,19 +21,19 @@ class GetSellingManagerInventoryResponseType extends \DTS\eBaySDK\Trading\Types\
     private static $propertyTypes = [
         'InventoryCountLastCalculatedDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InventoryCountLastCalculatedDate'
         ],
         'SellingManagerProduct' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerProductType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SellingManagerProduct'
         ],
         'PaginationResult' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
         ]

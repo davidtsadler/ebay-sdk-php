@@ -20,13 +20,13 @@ class SellingStatusType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'QuantitySold' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySold'
         ],
         'QuantitySoldByPickupInStore' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantitySoldByPickupInStore'
         ]

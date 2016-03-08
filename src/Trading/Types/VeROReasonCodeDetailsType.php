@@ -19,7 +19,7 @@ class VeROReasonCodeDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'VeROSiteDetail' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VeROSiteDetailType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VeROSiteDetail'
         ]

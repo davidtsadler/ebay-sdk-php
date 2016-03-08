@@ -19,7 +19,7 @@ class TopRatedSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TopRatedProgram' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'TopRatedProgram'
         ]

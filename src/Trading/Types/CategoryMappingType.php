@@ -20,13 +20,13 @@ class CategoryMappingType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'oldID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'oldID'
         ],
         'id' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'id'
         ]

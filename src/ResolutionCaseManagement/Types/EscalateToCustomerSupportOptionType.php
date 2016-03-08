@@ -19,7 +19,7 @@ class EscalateToCustomerSupportOptionType extends \DTS\eBaySDK\ResolutionCaseMan
     private static $propertyTypes = [
         'customerSupportResponseTimeInHours' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'customerSupportResponseTimeInHours'
         ]

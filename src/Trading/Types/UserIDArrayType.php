@@ -19,7 +19,7 @@ class UserIDArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'UserID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'UserID'
         ]

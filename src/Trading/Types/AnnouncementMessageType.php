@@ -21,19 +21,19 @@ class AnnouncementMessageType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AnnouncementStartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AnnouncementStartTime'
         ],
         'EventTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EventTime'
         ],
         'MessageType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageType'
         ]

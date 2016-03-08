@@ -23,31 +23,31 @@ class CancelDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CancelReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelReason'
         ],
         'CancelReasonDetails' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelReasonDetails'
         ],
         'CancelIntiator' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelIntiator'
         ],
         'CancelIntiationDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelIntiationDate'
         ],
         'CancelCompleteDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CancelCompleteDate'
         ]

@@ -20,13 +20,13 @@ class InsuranceDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'InsuranceFee' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceFee'
         ],
         'InsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceOption'
         ]

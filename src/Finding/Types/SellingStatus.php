@@ -23,31 +23,31 @@ class SellingStatus extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'currentPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'currentPrice'
         ],
         'convertedCurrentPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'convertedCurrentPrice'
         ],
         'bidCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'bidCount'
         ],
         'sellingState' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellingState'
         ],
         'timeLeft' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'timeLeft'
         ]

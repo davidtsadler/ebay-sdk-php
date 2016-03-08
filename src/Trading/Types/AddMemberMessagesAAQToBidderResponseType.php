@@ -19,7 +19,7 @@ class AddMemberMessagesAAQToBidderResponseType extends \DTS\eBaySDK\Trading\Type
     private static $propertyTypes = [
         'AddMemberMessagesAAQToBidderResponseContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderResponseContainerType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddMemberMessagesAAQToBidderResponseContainer'
         ]

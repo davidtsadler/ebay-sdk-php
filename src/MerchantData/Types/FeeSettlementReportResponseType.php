@@ -34,97 +34,97 @@ class FeeSettlementReportResponseType extends \DTS\eBaySDK\MerchantData\Types\Ab
     private static $propertyTypes = [
         'InvoiceID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceID'
         ],
         'SellerID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
         ],
         'AccountID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AccountID'
         ],
         'ReportStartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReportStartTime'
         ],
         'ReportEndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReportEndTime'
         ],
         'InvoiceProcessingTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceProcessingTime'
         ],
         'ReportProcessingTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReportProcessingTime'
         ],
         'FeeSettlementAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeSettlementAmount'
         ],
         'LastInvoiceAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastInvoiceAmount'
         ],
         'FeeRoundingAdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeRoundingAdjustmentAmount'
         ],
         'FeeTotalUsageAdjustmentAmount' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeTotalUsageAdjustmentAmount'
         ],
         'OrderTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderTransactionList'
         ],
         'ListingTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionListType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ListingTransactionList'
         ],
         'OrderAdjustmentList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderAdjustmentList'
         ],
         'AccountTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AccountTransactionList'
         ],
         'DiscountTransactionList' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AccountTransactionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DiscountTransactionList'
         ]

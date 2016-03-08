@@ -19,7 +19,7 @@ class BaseActivityOptionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'buyerPreference' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerPreference'
         ]

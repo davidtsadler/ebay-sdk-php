@@ -19,7 +19,7 @@ class QuantityRestrictionPerBuyerInfoType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MaximumQuantity' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaximumQuantity'
         ]

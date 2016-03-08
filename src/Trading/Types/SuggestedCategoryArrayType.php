@@ -19,7 +19,7 @@ class SuggestedCategoryArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SuggestedCategory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SuggestedCategory'
         ]

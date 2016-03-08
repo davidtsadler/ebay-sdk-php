@@ -19,7 +19,7 @@ class PickupDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PickupOptions' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PickupOptionsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PickupOptions'
         ]

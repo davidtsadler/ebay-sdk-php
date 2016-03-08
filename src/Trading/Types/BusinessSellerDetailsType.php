@@ -26,49 +26,49 @@ class BusinessSellerDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Address' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Address'
         ],
         'Fax' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fax'
         ],
         'Email' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Email'
         ],
         'AdditionalContactInformation' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdditionalContactInformation'
         ],
         'TradeRegistrationNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TradeRegistrationNumber'
         ],
         'LegalInvoice' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LegalInvoice'
         ],
         'TermsAndConditions' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TermsAndConditions'
         ],
         'VATDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATDetails'
         ]

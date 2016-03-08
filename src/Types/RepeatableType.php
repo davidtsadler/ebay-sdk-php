@@ -4,11 +4,11 @@ namespace DTS\eBaySDK\Types;
 use \DTS\eBaySDK\Exceptions;
 
 /**
- * Class to handle XML elements that are unbound.
+ * Class to handle XML elements that are repeatable.
  *
  * Allows properties in an object to be treated as an array.
  */
-class UnboundType implements \ArrayAccess, \Countable, \Iterator
+class RepeatableType implements \ArrayAccess, \Countable, \Iterator
 {
     /**
      * @var array The data to store as an array.

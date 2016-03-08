@@ -21,19 +21,19 @@ class FaultDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ErrorCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ErrorCode'
         ],
         'Severity' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Severity'
         ],
         'DetailedMessage' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DetailedMessage'
         ]

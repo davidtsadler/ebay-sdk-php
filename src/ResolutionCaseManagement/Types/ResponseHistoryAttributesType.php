@@ -24,37 +24,37 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'appealRef' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'appealRef'
         ],
         'moneyMovementRef' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'moneyMovementRef'
         ],
         'onholdReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'onholdReason'
         ],
         'onholdReasonDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\OnHoldReasonDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'onholdReasonDetail'
         ],
         'idref' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'idref'
         ],
         'idref' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'idref'
         ]

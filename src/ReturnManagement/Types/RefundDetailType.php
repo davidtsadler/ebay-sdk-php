@@ -20,13 +20,13 @@ class RefundDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'totalAmount' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'totalAmount'
         ],
         'itemizedRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ItemizedRefundDetailType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemizedRefund'
         ]

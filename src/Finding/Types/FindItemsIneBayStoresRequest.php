@@ -24,37 +24,37 @@ class FindItemsIneBayStoresRequest extends \DTS\eBaySDK\Finding\Types\BaseFindin
     private static $propertyTypes = [
         'keywords' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'keywords'
         ],
         'storeName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeName'
         ],
         'itemFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'outputSelector' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'outputSelector'
         ],
         'aspectFilter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\AspectFilter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'aspectFilter'
         ],
         'categoryId' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'categoryId'
         ]

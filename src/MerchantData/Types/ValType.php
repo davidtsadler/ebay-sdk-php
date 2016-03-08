@@ -21,19 +21,19 @@ class ValType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ValueLiteral' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValueLiteral'
         ],
         'SuggestedValueLiteral' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SuggestedValueLiteral'
         ],
         'ValueID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValueID'
         ]

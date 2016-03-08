@@ -26,49 +26,49 @@ class SiteHostedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PictureName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureName'
         ],
         'PictureSet' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSet'
         ],
         'PictureFormat' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureFormat'
         ],
         'FullURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FullURL'
         ],
         'BaseURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BaseURL'
         ],
         'PictureSetMember' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PictureSetMemberType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureSetMember'
         ],
         'ExternalPictureURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
         ],
         'UseByDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UseByDate'
         ]

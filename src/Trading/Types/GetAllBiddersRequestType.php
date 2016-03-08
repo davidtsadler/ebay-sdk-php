@@ -21,19 +21,19 @@ class GetAllBiddersRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReques
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'CallMode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CallMode'
         ],
         'IncludeBiddingSummary' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeBiddingSummary'
         ]

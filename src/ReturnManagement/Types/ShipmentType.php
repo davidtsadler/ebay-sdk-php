@@ -27,55 +27,55 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'shipmentStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shipmentStatus'
         ],
         'trackingNumber' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'trackingNumber'
         ],
         'carrierUsed' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'carrierUsed'
         ],
         'deliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryDate'
         ],
         'shippingCost' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'
         ],
         'shippingAddress' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Address',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingAddress'
         ],
         'returnMerchandiseAuthorization' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ],
         'minEstDeliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minEstDeliveryDate'
         ],
         'maxEstDeliveryDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxEstDeliveryDate'
         ]

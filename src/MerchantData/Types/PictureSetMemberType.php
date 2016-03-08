@@ -21,19 +21,19 @@ class PictureSetMemberType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MemberURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MemberURL'
         ],
         'PictureHeight' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureHeight'
         ],
         'PictureWidth' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureWidth'
         ]

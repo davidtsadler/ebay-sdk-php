@@ -20,13 +20,13 @@ class UploadSiteHostedPicturesResponseType extends \DTS\eBaySDK\MerchantData\Typ
     private static $propertyTypes = [
         'PictureSystemVersion' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSystemVersion'
         ],
         'SiteHostedPictureDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\SiteHostedPictureDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SiteHostedPictureDetails'
         ]

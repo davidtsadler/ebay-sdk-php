@@ -22,25 +22,25 @@ class DisputeMessageType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MessageID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageID'
         ],
         'MessageSource' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageSource'
         ],
         'MessageCreationTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageCreationTime'
         ],
         'MessageText' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MessageText'
         ]

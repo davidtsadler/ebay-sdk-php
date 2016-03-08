@@ -19,7 +19,7 @@ class MarkUpMarkDownHistoryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MarkUpMarkDownEvent' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MarkUpMarkDownEventType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'MarkUpMarkDownEvent'
         ]

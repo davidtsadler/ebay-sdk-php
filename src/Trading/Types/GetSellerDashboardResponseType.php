@@ -24,37 +24,37 @@ class GetSellerDashboardResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'SearchStanding' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SearchStandingDashboardType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SearchStanding'
         ],
         'SellerFeeDiscount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerFeeDiscountDashboardType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerFeeDiscount'
         ],
         'PowerSellerStatus' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PowerSellerDashboardType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PowerSellerStatus'
         ],
         'BuyerSatisfaction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BuyerSatisfactionDashboardType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerSatisfaction'
         ],
         'SellerAccount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerAccountDashboardType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerAccount'
         ],
         'Performance' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PerformanceDashboardType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Performance'
         ]

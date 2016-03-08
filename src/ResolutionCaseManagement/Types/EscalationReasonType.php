@@ -22,25 +22,25 @@ class EscalationReasonType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'sellerINRReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerINRReason'
         ],
         'sellerSNADReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerSNADReason'
         ],
         'buyerINRReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerINRReason'
         ],
         'buyerSNADReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerSNADReason'
         ]

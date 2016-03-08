@@ -19,7 +19,7 @@ class SoldReportResponseType extends \DTS\eBaySDK\MerchantData\Types\AbstractRes
     private static $propertyTypes = [
         'OrderDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderDetailsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderDetails'
         ]

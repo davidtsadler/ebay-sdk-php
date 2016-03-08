@@ -20,13 +20,13 @@ class ActivityOptionListType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'issueRefund' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\IssueRefundOptionType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'issueRefund'
         ],
         'provideSellerInfo' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoOptionType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'provideSellerInfo'
         ]

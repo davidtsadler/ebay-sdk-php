@@ -19,7 +19,7 @@ class GetSellingManagerAlertsResponseType extends \DTS\eBaySDK\Trading\Types\Abs
     private static $propertyTypes = [
         'Alert' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerAlertType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Alert'
         ]

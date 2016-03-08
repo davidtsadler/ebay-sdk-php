@@ -26,49 +26,49 @@ class SellerProfile extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'profileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileName'
         ],
         'profileId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileId'
         ],
         'profileType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileType'
         ],
         'profileVersion' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileVersion'
         ],
         'profileDesc' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileDesc'
         ],
         'deletedDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deletedDate'
         ],
         'siteId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'siteId'
         ],
         'categoryGroups' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\CategoryGroups',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'categoryGroups'
         ]

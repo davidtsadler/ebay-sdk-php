@@ -19,7 +19,7 @@ class MerchantDataVariationsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Variation' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Variation'
         ]

@@ -19,7 +19,7 @@ class GetStoreCustomPageResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'CustomPageArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomPageArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CustomPageArray'
         ]

@@ -23,31 +23,31 @@ class SupportedSellerProfileType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ProfileID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProfileID'
         ],
         'ProfileType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProfileType'
         ],
         'ProfileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProfileName'
         ],
         'ShortSummary' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShortSummary'
         ],
         'CategoryGroup' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryGroupType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryGroup'
         ]

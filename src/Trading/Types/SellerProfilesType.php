@@ -21,19 +21,19 @@ class SellerProfilesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SellerShippingProfile' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerShippingProfileType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerShippingProfile'
         ],
         'SellerReturnProfile' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerReturnProfileType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerReturnProfile'
         ],
         'SellerPaymentProfile' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentProfileType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentProfile'
         ]

@@ -19,7 +19,7 @@ class GetCategoryMappingsRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'CategoryVersion' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryVersion'
         ]

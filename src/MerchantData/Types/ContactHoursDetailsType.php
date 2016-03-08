@@ -27,55 +27,55 @@ class ContactHoursDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TimeZoneID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TimeZoneID'
         ],
         'Hours1Days' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours1Days'
         ],
         'Hours1AnyTime' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours1AnyTime'
         ],
         'Hours1From' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours1From'
         ],
         'Hours1To' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours1To'
         ],
         'Hours2Days' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2Days'
         ],
         'Hours2AnyTime' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2AnyTime'
         ],
         'Hours2From' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2From'
         ],
         'Hours2To' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Hours2To'
         ]

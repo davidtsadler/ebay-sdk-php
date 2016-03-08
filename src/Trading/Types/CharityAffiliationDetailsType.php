@@ -19,7 +19,7 @@ class CharityAffiliationDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CharityAffiliationDetail' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CharityAffiliationDetailType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CharityAffiliationDetail'
         ]

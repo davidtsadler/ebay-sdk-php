@@ -19,7 +19,7 @@ class GetSellingManagerSaleRecordResponseType extends \DTS\eBaySDK\Trading\Types
     private static $propertyTypes = [
         'SellingManagerSoldOrder' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldOrderType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerSoldOrder'
         ]

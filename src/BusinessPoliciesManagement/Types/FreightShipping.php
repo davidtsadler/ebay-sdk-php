@@ -25,43 +25,43 @@ class FreightShipping extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'originPickupLocationType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'originPickupLocationType'
         ],
         'originPickupInside' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'originPickupInside'
         ],
         'packagingHelpRequired' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'packagingHelpRequired'
         ],
         'commodityType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'commodityType'
         ],
         'freightShippingClass' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'freightShippingClass'
         ],
         'destPickupLocationType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'destPickupLocationType'
         ],
         'destPickupInside' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'destPickupInside'
         ]

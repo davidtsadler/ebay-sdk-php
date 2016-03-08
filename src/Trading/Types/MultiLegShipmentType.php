@@ -22,25 +22,25 @@ class MultiLegShipmentType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingServiceDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceDetails'
         ],
         'ShipToAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShipToAddress'
         ],
         'ShippingTimeMin' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMin'
         ],
         'ShippingTimeMax' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingTimeMax'
         ]

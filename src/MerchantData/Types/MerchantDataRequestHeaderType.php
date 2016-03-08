@@ -20,13 +20,13 @@ class MerchantDataRequestHeaderType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SiteID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SiteID'
         ],
         'Version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Version'
         ]

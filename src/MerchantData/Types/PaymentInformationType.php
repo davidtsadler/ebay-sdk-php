@@ -19,7 +19,7 @@ class PaymentInformationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Payment' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentTransactionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Payment'
         ]

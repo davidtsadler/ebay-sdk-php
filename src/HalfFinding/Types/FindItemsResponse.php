@@ -20,13 +20,13 @@ class FindItemsResponse extends \DTS\eBaySDK\HalfFinding\Types\BaseResponse
     private static $propertyTypes = [
         'paginationOutput' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PaginationOutputType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationOutput'
         ],
         'product' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\HalfCatalogProductType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'product'
         ]

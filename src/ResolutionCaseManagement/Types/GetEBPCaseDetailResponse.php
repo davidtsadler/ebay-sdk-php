@@ -20,13 +20,13 @@ class GetEBPCaseDetailResponse extends \DTS\eBaySDK\ResolutionCaseManagement\Typ
     private static $propertyTypes = [
         'caseSummary' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseSummaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseSummary'
         ],
         'caseDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseDetail'
         ]

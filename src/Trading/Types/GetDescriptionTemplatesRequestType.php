@@ -21,19 +21,19 @@ class GetDescriptionTemplatesRequestType extends \DTS\eBaySDK\Trading\Types\Abst
     private static $propertyTypes = [
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'LastModifiedTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastModifiedTime'
         ],
         'MotorVehicles' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MotorVehicles'
         ]

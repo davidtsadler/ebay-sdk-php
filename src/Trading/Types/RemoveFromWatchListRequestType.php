@@ -21,19 +21,19 @@ class RemoveFromWatchListRequestType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'RemoveAllItems' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RemoveAllItems'
         ],
         'VariationKey' => [
             'type' => 'DTS\eBaySDK\Trading\Types\VariationKeyType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VariationKey'
         ]

@@ -21,19 +21,19 @@ class CreateUploadJobResponse extends \DTS\eBaySDK\BulkDataExchange\Types\BaseSe
     private static $propertyTypes = [
         'jobId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'jobId'
         ],
         'fileReferenceId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fileReferenceId'
         ],
         'maxFileSize' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxFileSize'
         ]

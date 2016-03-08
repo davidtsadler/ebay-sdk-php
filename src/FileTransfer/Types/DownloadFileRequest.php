@@ -20,13 +20,13 @@ class DownloadFileRequest extends \DTS\eBaySDK\FileTransfer\Types\BaseServiceReq
     private static $propertyTypes = [
         'taskReferenceId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'taskReferenceId'
         ],
         'fileReferenceId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fileReferenceId'
         ]

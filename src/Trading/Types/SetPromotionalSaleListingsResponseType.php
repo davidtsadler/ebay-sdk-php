@@ -19,7 +19,7 @@ class SetPromotionalSaleListingsResponseType extends \DTS\eBaySDK\Trading\Types\
     private static $propertyTypes = [
         'Status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
         ]

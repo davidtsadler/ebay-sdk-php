@@ -19,7 +19,7 @@ class ExtendSiteHostedPicturesResponseType extends \DTS\eBaySDK\Trading\Types\Ab
     private static $propertyTypes = [
         'PictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
         ]

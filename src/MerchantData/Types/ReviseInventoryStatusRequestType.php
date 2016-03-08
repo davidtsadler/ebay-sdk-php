@@ -19,7 +19,7 @@ class ReviseInventoryStatusRequestType extends \DTS\eBaySDK\MerchantData\Types\A
     private static $propertyTypes = [
         'InventoryStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\InventoryStatusType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InventoryStatus'
         ]

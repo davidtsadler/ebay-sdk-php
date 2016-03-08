@@ -20,13 +20,13 @@ class ValueRecommendationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Value'
         ],
         'ValidationRules' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationValidationRulesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValidationRules'
         ]

@@ -26,49 +26,49 @@ class ErrorData extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'errorId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'errorId'
         ],
         'domain' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'domain'
         ],
         'severity' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'severity'
         ],
         'category' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'category'
         ],
         'message' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'message'
         ],
         'subdomain' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'subdomain'
         ],
         'exceptionId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'exceptionId'
         ],
         'parameter' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ErrorParameter',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'parameter'
         ]

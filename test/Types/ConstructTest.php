@@ -82,12 +82,12 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(2, count($obj->strings));
         $this->assertEquals('foo', $obj->strings[0]);
         $this->assertEquals('bar', $obj->strings[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $obj->strings);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->strings);
 
         $this->assertEquals(2, count($obj->integers));
         $this->assertEquals(111, $obj->integers[0]);
         $this->assertEquals(222, $obj->integers[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $obj->integers);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->integers);
 
         $this->assertEquals(543.21, $obj->AmountClass->value);
         $this->assertEquals('one', $obj->AmountClass->AttributeOne);
@@ -110,7 +110,7 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(300, $obj->SimpleClass->integers[2]);
 
         $this->assertEquals(3, count($obj->simpleClasses));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $obj->simpleClasses);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->simpleClasses);
     }
 
     public function testSettingInvalidPropertyViaCtor()

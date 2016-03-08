@@ -20,13 +20,13 @@ class ItemFilterType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'itemId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'transactionId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
         ]

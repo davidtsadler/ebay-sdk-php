@@ -22,25 +22,25 @@ class ExtensionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'id' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\PositiveInteger',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'id'
         ],
         'version' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'version'
         ],
         'contentType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'contentType'
         ],
         'value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'value'
         ]

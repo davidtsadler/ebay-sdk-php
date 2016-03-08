@@ -24,37 +24,37 @@ class GetStoreOptionsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRes
     private static $propertyTypes = [
         'BasicThemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BasicThemeArray'
         ],
         'AdvancedThemeArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreThemeArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdvancedThemeArray'
         ],
         'LogoArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreLogoArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LogoArray'
         ],
         'SubscriptionArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SubscriptionArray'
         ],
         'MaxCategories' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxCategories'
         ],
         'MaxCategoryLevels' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxCategoryLevels'
         ]

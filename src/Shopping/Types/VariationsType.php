@@ -21,19 +21,19 @@ class VariationsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Variation' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\VariationType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Variation'
         ],
         'Pictures' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\PicturesType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Pictures'
         ],
         'VariationSpecificsSet' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecificsSet'
         ]

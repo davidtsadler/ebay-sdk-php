@@ -20,13 +20,13 @@ class GetMyeBayRemindersResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'BuyingReminders' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RemindersType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyingReminders'
         ],
         'SellingReminders' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RemindersType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingReminders'
         ]

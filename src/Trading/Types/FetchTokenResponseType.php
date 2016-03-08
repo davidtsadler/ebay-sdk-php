@@ -21,19 +21,19 @@ class FetchTokenResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     private static $propertyTypes = [
         'eBayAuthToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
         ],
         'HardExpirationTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationTime'
         ],
         'RESTToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RESTToken'
         ]

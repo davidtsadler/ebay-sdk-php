@@ -20,13 +20,13 @@ class RemoveFromWatchListResponseType extends \DTS\eBaySDK\Trading\Types\Abstrac
     private static $propertyTypes = [
         'WatchListCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WatchListCount'
         ],
         'WatchListMaximum' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WatchListMaximum'
         ]

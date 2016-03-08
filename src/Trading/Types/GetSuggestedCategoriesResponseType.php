@@ -20,13 +20,13 @@ class GetSuggestedCategoriesResponseType extends \DTS\eBaySDK\Trading\Types\Abst
     private static $propertyTypes = [
         'SuggestedCategoryArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SuggestedCategoryArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SuggestedCategoryArray'
         ],
         'CategoryCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryCount'
         ]

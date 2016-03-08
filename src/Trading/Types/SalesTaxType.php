@@ -22,25 +22,25 @@ class SalesTaxType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'SalesTaxPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxPercent'
         ],
         'SalesTaxState' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxState'
         ],
         'ShippingIncludedInTax' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
         ],
         'SalesTaxAmount' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTaxAmount'
         ]

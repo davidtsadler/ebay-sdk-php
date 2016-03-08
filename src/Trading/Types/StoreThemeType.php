@@ -21,19 +21,19 @@ class StoreThemeType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ThemeID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ThemeID'
         ],
         'Name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Name'
         ],
         'ColorScheme' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreColorSchemeType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ColorScheme'
         ]

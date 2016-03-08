@@ -20,13 +20,13 @@ class MessageMediaType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MediaURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MediaURL'
         ],
         'MediaName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MediaName'
         ]

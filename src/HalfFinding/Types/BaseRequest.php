@@ -19,7 +19,7 @@ class BaseRequest extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'extension' => [
             'type' => 'DTS\eBaySDK\HalfFinding\Types\ExtensionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'extension'
         ]

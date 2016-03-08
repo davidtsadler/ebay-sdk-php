@@ -23,31 +23,31 @@ class RecommendationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FieldGroup' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FieldGroup'
         ],
         'FieldName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FieldName'
         ],
         'RecommendationCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RecommendationCode'
         ],
         'RecommendedValue' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RecommendedValue'
         ],
         'Message' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Message'
         ]

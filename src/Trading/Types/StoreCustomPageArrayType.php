@@ -19,7 +19,7 @@ class StoreCustomPageArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CustomPage' => [
             'type' => 'DTS\eBaySDK\Trading\Types\StoreCustomPageType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CustomPage'
         ]

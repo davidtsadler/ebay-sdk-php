@@ -19,7 +19,7 @@ class GetConsolidationJobStatusRequest extends \DTS\eBaySDK\BusinessPoliciesMana
     private static $propertyTypes = [
         'JobId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JobId'
         ]

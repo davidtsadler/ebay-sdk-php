@@ -19,7 +19,7 @@ class RefundInformationType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Refund' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RefundTransactionInfoType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Refund'
         ]

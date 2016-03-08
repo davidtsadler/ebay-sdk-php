@@ -25,43 +25,43 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
     private static $propertyTypes = [
         'DomainHistogram' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
         ],
         'PageNumber' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PageNumber'
         ],
         'ApproximatePages' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ApproximatePages'
         ],
         'MoreResults' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MoreResults'
         ],
         'TotalProducts' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalProducts'
         ],
         'Products' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\HalfProductsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Products'
         ],
         'ProductSearchURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductSearchURL'
         ]

@@ -23,31 +23,31 @@ class FeatureEligibilityType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'QualifiesForBuyItNow' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNow'
         ],
         'QualifiesForBuyItNowMultiple' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForBuyItNowMultiple'
         ],
         'QualifiedForFixedPriceOneDayDuration' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiedForFixedPriceOneDayDuration'
         ],
         'QualifiesForVariations' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiesForVariations'
         ],
         'QualifiedForAuctionOneDayDuration' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QualifiedForAuctionOneDayDuration'
         ]

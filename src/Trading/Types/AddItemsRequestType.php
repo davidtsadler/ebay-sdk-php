@@ -19,7 +19,7 @@ class AddItemsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
     private static $propertyTypes = [
         'AddItemRequestContainer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddItemRequestContainerType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddItemRequestContainer'
         ]

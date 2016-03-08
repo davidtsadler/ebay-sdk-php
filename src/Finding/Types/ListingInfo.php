@@ -26,49 +26,49 @@ class ListingInfo extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'bestOfferEnabled' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'bestOfferEnabled'
         ],
         'buyItNowAvailable' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyItNowAvailable'
         ],
         'buyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyItNowPrice'
         ],
         'convertedBuyItNowPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'convertedBuyItNowPrice'
         ],
         'startTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'startTime'
         ],
         'endTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'endTime'
         ],
         'listingType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listingType'
         ],
         'gift' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'gift'
         ]

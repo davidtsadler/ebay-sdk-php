@@ -19,7 +19,7 @@ class VerifyAddFixedPriceItemRequestType extends \DTS\eBaySDK\Trading\Types\Abst
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Item'
         ]

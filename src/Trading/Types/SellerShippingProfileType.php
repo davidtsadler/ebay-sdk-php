@@ -20,13 +20,13 @@ class SellerShippingProfileType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingProfileID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingProfileID'
         ],
         'ShippingProfileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingProfileName'
         ]

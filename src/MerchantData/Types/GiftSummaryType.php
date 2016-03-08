@@ -19,7 +19,7 @@ class GiftSummaryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Message' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Message'
         ]

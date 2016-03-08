@@ -23,31 +23,31 @@ class SellingManagerAutoListMinActiveItemsType extends \DTS\eBaySDK\Types\BaseTy
     private static $propertyTypes = [
         'MinActiveItemCount' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinActiveItemCount'
         ],
         'ListTimeFrom' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListTimeFrom'
         ],
         'ListTimeTo' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListTimeTo'
         ],
         'SpacingIntervalInMinutes' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SpacingIntervalInMinutes'
         ],
         'ListingHoldInventoryLevel' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
         ]

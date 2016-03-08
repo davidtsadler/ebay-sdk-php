@@ -1,18 +1,18 @@
 <?php
 namespace DTS\eBaySDK\Types\Test;
 
-use DTS\eBaySDK\Types\UnboundType;
+use DTS\eBaySDK\Types\RepeatableType;
 
-class UnboundTypeTest extends \PHPUnit_Framework_TestCase
+class RepeatableTypeTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->obj = new UnboundType('', '', 'string');
+        $this->obj = new RepeatableType('', '', 'string');
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\UnboundType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj);
     }
 
     public function testExtendsArrayAccess()

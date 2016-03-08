@@ -19,7 +19,7 @@ class OrderItemDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'OrderLineItem' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\OrderLineItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderLineItem'
         ]

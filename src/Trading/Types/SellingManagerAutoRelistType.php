@@ -25,43 +25,43 @@ class SellingManagerAutoRelistType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Type'
         ],
         'RelistCondition' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistCondition'
         ],
         'RelistAfterDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistAfterDays'
         ],
         'RelistAfterHours' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistAfterHours'
         ],
         'RelistAtSpecificTimeOfDay' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RelistAtSpecificTimeOfDay'
         ],
         'BestOfferDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferDetails'
         ],
         'ListingHoldInventoryLevel' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingHoldInventoryLevel'
         ]

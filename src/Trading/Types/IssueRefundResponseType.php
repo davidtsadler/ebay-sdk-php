@@ -20,13 +20,13 @@ class IssueRefundResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
     private static $propertyTypes = [
         'RefundFromSeller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundFromSeller'
         ],
         'TotalRefundToBuyer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalRefundToBuyer'
         ]

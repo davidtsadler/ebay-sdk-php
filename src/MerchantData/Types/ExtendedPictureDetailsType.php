@@ -19,7 +19,7 @@ class ExtendedPictureDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PictureURLs' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PictureURLsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureURLs'
         ]

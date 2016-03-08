@@ -19,7 +19,7 @@ class TaxIdentifierAttributeType extends \DTS\eBaySDK\Types\StringType
     private static $propertyTypes = [
         'name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'name'
         ]

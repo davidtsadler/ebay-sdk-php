@@ -25,43 +25,43 @@ class UploadSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
     private static $propertyTypes = [
         'PictureName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureName'
         ],
         'PictureSystemVersion' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSystemVersion'
         ],
         'PictureSet' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureSet'
         ],
         'PictureData' => [
             'type' => 'DTS\eBaySDK\Trading\Types\Base64BinaryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureData'
         ],
         'PictureUploadPolicy' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureUploadPolicy'
         ],
         'ExternalPictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExternalPictureURL'
         ],
         'ExtensionInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExtensionInDays'
         ]

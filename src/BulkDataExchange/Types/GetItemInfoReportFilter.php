@@ -26,49 +26,49 @@ class GetItemInfoReportFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'jobAction' => [
             'type' => 'DTS\eBaySDK\BulkDataExchange\Types\GetItemJobActionType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'jobAction'
         ],
         'filterType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'filterType'
         ],
         'includeAttributes' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeAttributes'
         ],
         'includeDescription' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeDescription'
         ],
         'reportDateFrom' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'reportDateFrom'
         ],
         'reportDateTo' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'reportDateTo'
         ],
         'timeFrame' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'timeFrame'
         ],
         'changedFieldSelector' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'changedFieldSelector'
         ]

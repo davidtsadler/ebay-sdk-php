@@ -23,31 +23,31 @@ class GetNotificationsUsageResponseType extends \DTS\eBaySDK\Trading\Types\Abstr
     private static $propertyTypes = [
         'StartTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartTime'
         ],
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ],
         'NotificationDetailsArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationDetailsArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NotificationDetailsArray'
         ],
         'MarkUpMarkDownHistory' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MarkUpMarkDownHistoryType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MarkUpMarkDownHistory'
         ],
         'NotificationStatistics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationStatisticsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NotificationStatistics'
         ]

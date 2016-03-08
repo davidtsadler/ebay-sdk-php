@@ -19,7 +19,7 @@ class AddFixedPriceItemRequestType extends \DTS\eBaySDK\MerchantData\Types\Abstr
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Item'
         ]

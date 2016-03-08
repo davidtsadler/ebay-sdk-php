@@ -19,7 +19,7 @@ class SoldReportFilter extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'includeShippingAddress' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeShippingAddress'
         ]

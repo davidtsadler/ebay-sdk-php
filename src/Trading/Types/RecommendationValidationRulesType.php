@@ -27,55 +27,55 @@ class RecommendationValidationRulesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ValueType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValueType'
         ],
         'MinValues' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinValues'
         ],
         'MaxValues' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxValues'
         ],
         'SelectionMode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SelectionMode'
         ],
         'Confidence' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Confidence'
         ],
         'Relationship' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueRelationshipType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Relationship'
         ],
         'VariationPicture' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationPicture'
         ],
         'VariationSpecifics' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VariationSpecifics'
         ],
         'ValueFormat' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ValueFormat'
         ]

@@ -19,7 +19,7 @@ class RemoveOverridesRequest extends \DTS\eBaySDK\BusinessPoliciesManagement\Typ
     private static $propertyTypes = [
         'profileId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileId'
         ]

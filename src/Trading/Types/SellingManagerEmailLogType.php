@@ -22,25 +22,25 @@ class SellingManagerEmailLogType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'EmailType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EmailType'
         ],
         'CustomEmailName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CustomEmailName'
         ],
         'EmailState' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EmailState'
         ],
         'EventTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EventTime'
         ]

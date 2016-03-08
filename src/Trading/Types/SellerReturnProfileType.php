@@ -20,13 +20,13 @@ class SellerReturnProfileType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ReturnProfileID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnProfileID'
         ],
         'ReturnProfileName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnProfileName'
         ]

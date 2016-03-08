@@ -20,13 +20,13 @@ class DateRangeFilterType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'fromDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fromDate'
         ],
         'toDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'toDate'
         ]

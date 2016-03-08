@@ -19,7 +19,7 @@ class RespondToBestOfferResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
     private static $propertyTypes = [
         'RespondToBestOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BestOfferArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RespondToBestOffer'
         ]

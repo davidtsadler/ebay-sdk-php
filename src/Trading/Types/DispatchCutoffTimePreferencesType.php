@@ -19,7 +19,7 @@ class DispatchCutoffTimePreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CutoffTime' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CutoffTime'
         ]

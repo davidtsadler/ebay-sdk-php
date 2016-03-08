@@ -20,13 +20,13 @@ class UploadDocumentInfoType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'name'
         ],
         'content' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'content'
         ]

@@ -21,19 +21,19 @@ class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Delete' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Delete'
         ],
         'NameValueList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'NameValueList'
         ],
         'CompatibilityNotes' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CompatibilityNotes'
         ]

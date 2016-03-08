@@ -52,205 +52,205 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'itemId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'title' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'title'
         ],
         'globalId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'globalId'
         ],
         'subtitle' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'subtitle'
         ],
         'primaryCategory' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Category',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'primaryCategory'
         ],
         'secondaryCategory' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Category',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'secondaryCategory'
         ],
         'galleryURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'galleryURL'
         ],
         'galleryInfoContainer' => [
             'type' => 'DTS\eBaySDK\Finding\Types\GalleryInfoContainer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'galleryInfoContainer'
         ],
         'viewItemURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'viewItemURL'
         ],
         'charityId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'charityId'
         ],
         'productId' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productId'
         ],
         'paymentMethod' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'paymentMethod'
         ],
         'autoPay' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'autoPay'
         ],
         'postalCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'postalCode'
         ],
         'location' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'location'
         ],
         'country' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'country'
         ],
         'storeInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Storefront',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeInfo'
         ],
         'sellerInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SellerInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerInfo'
         ],
         'shippingInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ShippingInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingInfo'
         ],
         'sellingStatus' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SellingStatus',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellingStatus'
         ],
         'listingInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ListingInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listingInfo'
         ],
         'returnsAccepted' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnsAccepted'
         ],
         'galleryPlusPictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'galleryPlusPictureURL'
         ],
         'compatibility' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'compatibility'
         ],
         'distance' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Distance',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'distance'
         ],
         'condition' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Condition',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'condition'
         ],
         'isMultiVariationListing' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'isMultiVariationListing'
         ],
         'discountPriceInfo' => [
             'type' => 'DTS\eBaySDK\Finding\Types\DiscountPriceInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'discountPriceInfo'
         ],
         'pictureURLSuperSize' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pictureURLSuperSize'
         ],
         'pictureURLLarge' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pictureURLLarge'
         ],
         'unitPrice' => [
             'type' => 'DTS\eBaySDK\Finding\Types\UnitPriceInfo',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'unitPrice'
         ],
         'attribute' => [
             'type' => 'DTS\eBaySDK\Finding\Types\ItemAttribute',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'attribute'
         ],
         'topRatedListing' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'topRatedListing'
         ],
         'eekStatus' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'eekStatus'
         ]

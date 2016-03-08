@@ -19,7 +19,7 @@ class OrderArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Order' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Order'
         ]

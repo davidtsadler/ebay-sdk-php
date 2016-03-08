@@ -21,19 +21,19 @@ class GetSellerProfilesResponse extends \DTS\eBaySDK\BusinessPoliciesManagement\
     private static $propertyTypes = [
         'paymentProfileList' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PaymentProfileList',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentProfileList'
         ],
         'returnPolicyProfileList' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfileList',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnPolicyProfileList'
         ],
         'shippingPolicyProfile' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ShippingPolicyProfileList',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingPolicyProfile'
         ]

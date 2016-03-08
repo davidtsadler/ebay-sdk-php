@@ -20,13 +20,13 @@ class ConditionHistogram extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'condition' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Condition',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'condition'
         ],
         'count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'count'
         ]

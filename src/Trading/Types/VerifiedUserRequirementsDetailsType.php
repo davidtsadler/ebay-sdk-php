@@ -20,13 +20,13 @@ class VerifiedUserRequirementsDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'VerifiedUser' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUser'
         ],
         'FeedbackScore' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
         ]

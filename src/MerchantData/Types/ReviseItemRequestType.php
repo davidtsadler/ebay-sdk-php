@@ -21,19 +21,19 @@ class ReviseItemRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequ
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Item'
         ],
         'DeletedField' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
         ],
         'VerifyOnly' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VerifyOnly'
         ]

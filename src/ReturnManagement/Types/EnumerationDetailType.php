@@ -21,19 +21,19 @@ class EnumerationDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'code' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'code'
         ],
         'description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'description'
         ],
         'content' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'content'
         ]

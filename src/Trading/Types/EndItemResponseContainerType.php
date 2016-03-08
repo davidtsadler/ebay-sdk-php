@@ -21,19 +21,19 @@ class EndItemResponseContainerType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'EndTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndTime'
         ],
         'CorrelationID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
         ],
         'Errors' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ErrorType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Errors'
         ]

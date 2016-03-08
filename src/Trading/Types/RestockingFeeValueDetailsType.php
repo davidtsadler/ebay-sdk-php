@@ -20,13 +20,13 @@ class RestockingFeeValueDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'RestockingFeeValueOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RestockingFeeValueOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

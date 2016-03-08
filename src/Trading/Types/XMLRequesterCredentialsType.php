@@ -21,19 +21,19 @@ class XMLRequesterCredentialsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Username' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Username'
         ],
         'Password' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Password'
         ],
         'eBayAuthToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
         ]

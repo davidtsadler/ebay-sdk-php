@@ -21,19 +21,19 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'userID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'userID'
         ],
         'feedbackScore' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'feedbackScore'
         ],
         'positiveFeedbackPercent' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'positiveFeedbackPercent'
         ]

@@ -20,13 +20,13 @@ class ShippingCostPaidByDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingCostPaidByOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidByOption'
         ],
         'Description' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Description'
         ]

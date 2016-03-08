@@ -24,37 +24,37 @@ class PickupMethodSelectedType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PickupMethod' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupMethod'
         ],
         'PickupStoreID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupStoreID'
         ],
         'PickupStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupStatus'
         ],
         'MerchantPickupCode' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MerchantPickupCode'
         ],
         'PickupFulfillmentTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupFulfillmentTime'
         ],
         'PickupLocationUUID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupLocationUUID'
         ]

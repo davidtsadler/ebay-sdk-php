@@ -21,19 +21,19 @@ class EscalateToCustomerSupportRequest extends \DTS\eBaySDK\ResolutionCaseManage
     private static $propertyTypes = [
         'caseId' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseIdType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseId'
         ],
         'escalationReason' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EscalationReasonType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'escalationReason'
         ],
         'comments' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'comments'
         ]

@@ -19,7 +19,7 @@ class DisputeArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Dispute' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DisputeType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Dispute'
         ]

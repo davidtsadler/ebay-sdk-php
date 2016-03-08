@@ -20,13 +20,13 @@ class MyeBaySecondChanceOfferListType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TotalAvailable' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalAvailable'
         ],
         'SecondChanceOffer' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
         ]

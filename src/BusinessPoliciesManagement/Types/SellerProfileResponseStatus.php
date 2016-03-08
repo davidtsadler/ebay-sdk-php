@@ -21,19 +21,19 @@ class SellerProfileResponseStatus extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'profileId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'profileId'
         ],
         'ack' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ack'
         ],
         'errorMessage' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\ErrorMessage',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'errorMessage'
         ]

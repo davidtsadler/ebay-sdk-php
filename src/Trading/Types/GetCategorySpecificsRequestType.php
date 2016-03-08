@@ -27,55 +27,55 @@ class GetCategorySpecificsRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
     private static $propertyTypes = [
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'LastUpdateTime' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastUpdateTime'
         ],
         'MaxNames' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxNames'
         ],
         'MaxValuesPerName' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxValuesPerName'
         ],
         'Name' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Name'
         ],
         'CategorySpecific' => [
             'type' => 'DTS\eBaySDK\Trading\Types\CategoryItemSpecificsType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategorySpecific'
         ],
         'ExcludeRelationships' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExcludeRelationships'
         ],
         'IncludeConfidence' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeConfidence'
         ],
         'CategorySpecificsFileInfo' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategorySpecificsFileInfo'
         ]

@@ -20,13 +20,13 @@ class RelistItemRequestType extends \DTS\eBaySDK\MerchantData\Types\AbstractRequ
     private static $propertyTypes = [
         'Item' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\ItemType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Item'
         ],
         'DeletedField' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DeletedField'
         ]

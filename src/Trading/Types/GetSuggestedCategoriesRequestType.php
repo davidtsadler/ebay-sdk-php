@@ -19,7 +19,7 @@ class GetSuggestedCategoriesRequestType extends \DTS\eBaySDK\Trading\Types\Abstr
     private static $propertyTypes = [
         'Query' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Query'
         ]

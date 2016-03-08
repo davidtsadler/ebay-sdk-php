@@ -20,13 +20,13 @@ class SearchResult extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'item' => [
             'type' => 'DTS\eBaySDK\Finding\Types\SearchItem',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'item'
         ],
         'count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'count'
         ]

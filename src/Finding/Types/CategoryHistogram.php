@@ -20,13 +20,13 @@ class CategoryHistogram extends \DTS\eBaySDK\Finding\Types\Category
     private static $propertyTypes = [
         'count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'count'
         ],
         'childCategoryHistogram' => [
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogram',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'childCategoryHistogram'
         ]

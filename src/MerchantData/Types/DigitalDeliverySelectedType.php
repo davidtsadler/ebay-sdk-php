@@ -21,19 +21,19 @@ class DigitalDeliverySelectedType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'DeliveryMethod' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryMethod'
         ],
         'DeliveryStatus' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryStatusType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryStatus'
         ],
         'DeliveryDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DeliveryDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryDetails'
         ]

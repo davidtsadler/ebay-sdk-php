@@ -20,13 +20,13 @@ class ItemCompatibilityType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'NameValueList' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'NameValueList'
         ],
         'CompatibilityNotes' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CompatibilityNotes'
         ]

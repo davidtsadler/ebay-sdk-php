@@ -23,31 +23,31 @@ class SetNotificationPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\A
     private static $propertyTypes = [
         'ApplicationDeliveryPreferences' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ApplicationDeliveryPreferencesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ApplicationDeliveryPreferences'
         ],
         'UserDeliveryPreferenceArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationEnableArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserDeliveryPreferenceArray'
         ],
         'UserData' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationUserDataType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserData'
         ],
         'EventProperty' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NotificationEventPropertyType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EventProperty'
         ],
         'DeliveryURLName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeliveryURLName'
         ]

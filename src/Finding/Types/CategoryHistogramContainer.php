@@ -19,7 +19,7 @@ class CategoryHistogramContainer extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'categoryHistogram' => [
             'type' => 'DTS\eBaySDK\Finding\Types\CategoryHistogram',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'categoryHistogram'
         ]

@@ -20,13 +20,13 @@ class RentalAmount extends \DTS\eBaySDK\Types\DoubleType
     private static $propertyTypes = [
         'duration' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'duration'
         ],
         'currencyId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'currencyId'
         ]

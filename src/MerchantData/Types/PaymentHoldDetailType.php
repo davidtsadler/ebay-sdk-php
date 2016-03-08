@@ -22,25 +22,25 @@ class PaymentHoldDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ExpectedReleaseDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExpectedReleaseDate'
         ],
         'RequiredSellerActionArray' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\RequiredSellerActionArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequiredSellerActionArray'
         ],
         'NumOfReqSellerActions' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NumOfReqSellerActions'
         ],
         'PaymentHoldReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentHoldReason'
         ]

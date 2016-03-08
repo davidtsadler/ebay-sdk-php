@@ -21,19 +21,19 @@ class StoreCustomListingHeaderLinkType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'LinkID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LinkID'
         ],
         'Order' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Order'
         ],
         'LinkType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LinkType'
         ]

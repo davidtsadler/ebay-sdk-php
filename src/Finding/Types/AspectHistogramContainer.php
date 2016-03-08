@@ -19,7 +19,7 @@ class AspectHistogramContainer extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'aspect' => [
             'type' => 'DTS\eBaySDK\Finding\Types\Aspect',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'aspect'
         ]

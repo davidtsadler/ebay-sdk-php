@@ -20,13 +20,13 @@ class StoreSubscriptionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Level' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Level'
         ],
         'Fee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Fee'
         ]

@@ -27,55 +27,55 @@ class GetRecommendationsResponseContainerType extends \DTS\eBaySDK\Types\BaseTyp
     private static $propertyTypes = [
         'ListingAnalyzerRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingAnalyzerRecommendations'
         ],
         'SIFFTASRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SIFFTASRecommendations'
         ],
         'PricingRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PricingRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PricingRecommendations'
         ],
         'AttributeRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AttributeRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AttributeRecommendations'
         ],
         'ProductRecommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductRecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductRecommendations'
         ],
         'CorrelationID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CorrelationID'
         ],
         'Recommendations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Recommendations'
         ],
         'ProductListingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductListingDetails'
         ],
         'Title' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Title'
         ]

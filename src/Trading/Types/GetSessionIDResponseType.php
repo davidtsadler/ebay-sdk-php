@@ -19,7 +19,7 @@ class GetSessionIDResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespon
     private static $propertyTypes = [
         'SessionID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SessionID'
         ]

@@ -19,7 +19,7 @@ class BuyerPackageEnclosuresType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BuyerPackageEnclosure' => [
             'type' => 'DTS\eBaySDK\Trading\Types\BuyerPackageEnclosureType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'BuyerPackageEnclosure'
         ]

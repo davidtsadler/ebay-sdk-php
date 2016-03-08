@@ -20,7 +20,7 @@ class BaseType
      *
      *            'subject' => [                  The name of the property.
      *                'type' => 'string',         The data type or class name.
-     *                'unbound' => false,         Indicates if the property is unbound, I.e is an array.
+     *                'repeatable' => false,         Indicates if the property is repeatable, I.e is an array.
      *                'attribute' => false,       Indicates if the proeprty is an attribute in the XML.
      *                'elementName' => 'Subject'  The corressponding element in the XML.
      *            ]
@@ -155,7 +155,7 @@ class BaseType
                     $meta = new \StdClass();
                     $meta->propertyName = $elementName;
                     $meta->phpType = $info['type'];
-                    $meta->unbound = $info['unbound'];
+                    $meta->repeatable = $info['repeatable'];
                     $meta->attribute = $info['attribute'];
                     $meta->elementName = $info[$nameKey];
                     $meta->strData = '';
@@ -216,7 +216,7 @@ class BaseType
 
             $value = $this->values[$name];
 
-            if ($info['unbound']) {
+            if ($info['repeatable']) {
                 if (count($value)) {
                     $array[$name] = [];
                     foreach ($value as $property) {
@@ -322,8 +322,8 @@ class BaseType
     {
         $info = self::propertyInfo($class, $name);
 
-        if ($info['unbound'] && !array_key_exists($name, $this->values)) {
-            $this->values[$name] = new Types\UnboundType($class, $name, $info['type']);
+        if ($info['repeatable'] && !array_key_exists($name, $this->values)) {
+            $this->values[$name] = new Types\RepeatableType($class, $name, $info['type']);
         }
 
         return array_key_exists($name, $this->values) ? $this->values[$name] : null;
@@ -335,20 +335,20 @@ class BaseType
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
      * @param mixed $value. The value to assign to the property.
-     * @throws InvalidPropertyTypeException If trying to assign a non array type to an unbound property.
+     * @throws InvalidPropertyTypeException If trying to assign a non array type to an repeatable property.
      */
     private function setValue($class, $name, $value)
     {
         $info = self::propertyInfo($class, $name);
 
-        if (!$info['unbound']) {
+        if (!$info['repeatable']) {
             $this->values[$name] = $value;
         } else {
             $actualType = self::getActualType($value);
             if ('array' !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException(get_class($this), $name, 'DTS\eBaySDK\Types\UnboundType', $actualType);
+                throw new Exceptions\InvalidPropertyTypeException(get_class($this), $name, 'DTS\eBaySDK\Types\RepeatableType', $actualType);
             } else {
-                $this->values[$name] = new Types\UnboundType(get_class($this), $name, $info['type']);
+                $this->values[$name] = new Types\RepeatableType(get_class($this), $name, $info['type']);
                 foreach ($value as $item) {
                     $this->values[$name][] = $item;
                 }
@@ -403,7 +403,7 @@ class BaseType
             if (!array_key_exists('elementName', $info) && !array_key_exists('attributeName', $info)) {
                 $properties[] = self::encodeValueXml($value);
             } else {
-                if ($info['unbound']) {
+                if ($info['repeatable']) {
                     foreach ($value as $property) {
                         $properties[] = self::propertyToXml($info['elementName'], $property);
                     }
@@ -575,7 +575,7 @@ class BaseType
 
         $info = self::propertyInfo($class, $property);
 
-        if ($info['unbound'] && is_array($value)) {
+        if ($info['repeatable'] && is_array($value)) {
             $values = [];
             foreach ($value as $val) {
                 $values[] = self::actualValue($info, $class, $property, $val);

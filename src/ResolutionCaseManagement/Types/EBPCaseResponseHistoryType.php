@@ -24,37 +24,37 @@ class EBPCaseResponseHistoryType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'note' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'note'
         ],
         'author' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\CaseUserType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'author'
         ],
         'activity' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'activity'
         ],
         'activityDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ActivityDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'activityDetail'
         ],
         'creationDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
         ],
         'attributes' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ResponseHistoryAttributesType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'attributes'
         ]

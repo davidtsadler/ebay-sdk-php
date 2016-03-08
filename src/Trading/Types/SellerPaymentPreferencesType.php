@@ -27,55 +27,55 @@ class SellerPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AlwaysUseThisPaymentAddress' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AlwaysUseThisPaymentAddress'
         ],
         'DisplayPayNowButton' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DisplayPayNowButton'
         ],
         'PayPalPreferred' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PayPalPreferred'
         ],
         'DefaultPayPalEmailAddress' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DefaultPayPalEmailAddress'
         ],
         'PayPalAlwaysOn' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PayPalAlwaysOn'
         ],
         'SellerPaymentAddress' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentAddress'
         ],
         'UPSRateOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UPSRateOption'
         ],
         'FedExRateOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FedExRateOption'
         ],
         'USPSRateOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'USPSRateOption'
         ]

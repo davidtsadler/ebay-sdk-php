@@ -19,7 +19,7 @@ class SetTaxTableRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
     private static $propertyTypes = [
         'TaxTable' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxTableType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
         ]

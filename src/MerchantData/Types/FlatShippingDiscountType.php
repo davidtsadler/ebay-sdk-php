@@ -20,13 +20,13 @@ class FlatShippingDiscountType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'DiscountName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountName'
         ],
         'DiscountProfile' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\DiscountProfileType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DiscountProfile'
         ]

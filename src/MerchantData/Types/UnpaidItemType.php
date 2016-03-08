@@ -20,13 +20,13 @@ class UnpaidItemType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Status' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
         ],
         'Type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Type'
         ]

@@ -19,7 +19,7 @@ class MinimumFeedbackScoreDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'FeedbackScore' => [
             'type' => 'integer',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FeedbackScore'
         ]

@@ -20,13 +20,13 @@ class FeedbackPeriodType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'PeriodInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PeriodInDays'
         ],
         'Count' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Count'
         ]

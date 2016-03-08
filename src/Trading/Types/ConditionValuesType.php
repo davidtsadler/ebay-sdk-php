@@ -20,13 +20,13 @@ class ConditionValuesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Condition' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ConditionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Condition'
         ],
         'ConditionHelpURL' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionHelpURL'
         ]

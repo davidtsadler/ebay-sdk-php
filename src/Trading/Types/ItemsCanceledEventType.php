@@ -21,19 +21,19 @@ class ItemsCanceledEventType extends \DTS\eBaySDK\Trading\Types\AbstractResponse
     private static $propertyTypes = [
         'CanceledItemIDArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemIDArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CanceledItemIDArray'
         ],
         'EligibleForRelist' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EligibleForRelist'
         ],
         'SellerID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerID'
         ]

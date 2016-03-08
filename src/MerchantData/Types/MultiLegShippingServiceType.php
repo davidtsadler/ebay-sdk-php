@@ -20,13 +20,13 @@ class MultiLegShippingServiceType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ShippingService' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingService'
         ],
         'TotalShippingCost' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalShippingCost'
         ]

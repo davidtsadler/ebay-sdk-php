@@ -19,7 +19,7 @@ class AddSellingManagerInventoryFolderResponseType extends \DTS\eBaySDK\Trading\
     private static $propertyTypes = [
         'FolderID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FolderID'
         ]

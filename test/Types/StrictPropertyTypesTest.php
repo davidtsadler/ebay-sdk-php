@@ -46,7 +46,7 @@ class StrictPropertyTypesTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \DTS\eBaySDK\Exceptions\InvalidPropertyTypeException
      */
-    public function testSettingCompleaxUnboundPropertiesThrows()
+    public function testSettingComplexRepeatablePropertiesThrows()
     {
         $this->obj->simpleClasses[] = 'foo';
     }

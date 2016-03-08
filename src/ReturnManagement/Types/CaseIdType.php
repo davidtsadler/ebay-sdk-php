@@ -20,13 +20,13 @@ class CaseIdType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'id' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'id'
         ],
         'type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'type'
         ]

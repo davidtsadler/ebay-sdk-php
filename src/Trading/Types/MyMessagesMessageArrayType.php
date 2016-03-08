@@ -19,7 +19,7 @@ class MyMessagesMessageArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Message' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyMessagesMessageType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Message'
         ]

@@ -20,13 +20,13 @@ class ListingDurationDefinitionType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Duration' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Duration'
         ],
         'durationSetID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'durationSetID'
         ]

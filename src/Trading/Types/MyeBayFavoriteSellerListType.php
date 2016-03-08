@@ -20,13 +20,13 @@ class MyeBayFavoriteSellerListType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'TotalAvailable' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalAvailable'
         ],
         'FavoriteSeller' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MyeBayFavoriteSellerType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'FavoriteSeller'
         ]

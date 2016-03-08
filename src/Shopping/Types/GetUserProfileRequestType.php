@@ -20,13 +20,13 @@ class GetUserProfileRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequ
     private static $propertyTypes = [
         'UserID' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserID'
         ],
         'IncludeSelector' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeSelector'
         ]

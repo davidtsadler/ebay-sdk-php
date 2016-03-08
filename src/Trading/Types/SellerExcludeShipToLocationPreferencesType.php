@@ -19,7 +19,7 @@ class SellerExcludeShipToLocationPreferencesType extends \DTS\eBaySDK\Types\Base
     private static $propertyTypes = [
         'ExcludeShipToLocation' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExcludeShipToLocation'
         ]

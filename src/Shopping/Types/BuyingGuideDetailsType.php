@@ -20,13 +20,13 @@ class BuyingGuideDetailsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BuyingGuide' => [
             'type' => 'DTS\eBaySDK\Shopping\Types\BuyingGuideType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'BuyingGuide'
         ],
         'BuyingGuideHub' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyingGuideHub'
         ]

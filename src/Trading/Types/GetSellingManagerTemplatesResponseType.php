@@ -19,7 +19,7 @@ class GetSellingManagerTemplatesResponseType extends \DTS\eBaySDK\Trading\Types\
     private static $propertyTypes = [
         'SellingManagerTemplateDetailsArray' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerTemplateDetailsArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingManagerTemplateDetailsArray'
         ]

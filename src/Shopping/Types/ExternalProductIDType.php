@@ -22,25 +22,25 @@ class ExternalProductIDType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'Value' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Value'
         ],
         'ReturnSearchResultOnDuplicates' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnSearchResultOnDuplicates'
         ],
         'Type' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Type'
         ],
         'AlternateValue' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AlternateValue'
         ]

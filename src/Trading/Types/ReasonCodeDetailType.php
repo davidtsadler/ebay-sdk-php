@@ -21,19 +21,19 @@ class ReasonCodeDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'BriefText' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BriefText'
         ],
         'DetailedText' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DetailedText'
         ],
         'codeID' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'codeID'
         ]

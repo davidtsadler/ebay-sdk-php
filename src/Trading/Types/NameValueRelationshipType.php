@@ -20,13 +20,13 @@ class NameValueRelationshipType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'ParentName' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ParentName'
         ],
         'ParentValue' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ParentValue'
         ]

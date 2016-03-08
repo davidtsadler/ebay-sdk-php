@@ -19,7 +19,7 @@ class FixedPriceItemDetails extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'includeVariations' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'includeVariations'
         ]

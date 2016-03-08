@@ -6,19 +6,19 @@ class ComplexClass extends \DTS\eBaySDK\Test\Mocks\SimpleClass
     private static $propertyTypes = [
         'foo' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'foo'
         ],
         'AmountClass' => [
             'type' => 'DTS\eBaySDK\Test\Mocks\AmountClass',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AmountClass'
         ],
         'simpleClasses' => [
             'type' => 'DTS\eBaySDK\Test\Mocks\SimpleClass',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'simpleClasses'
         ]

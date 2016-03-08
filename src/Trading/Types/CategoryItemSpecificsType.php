@@ -20,13 +20,13 @@ class CategoryItemSpecificsType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'CategoryID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'CategoryID'
         ],
         'ItemSpecifics' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
         ]

@@ -22,25 +22,25 @@ class CustomSecurityHeaderType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'eBayAuthToken' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eBayAuthToken'
         ],
         'HardExpirationWarning' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HardExpirationWarning'
         ],
         'Credentials' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserIdPasswordType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Credentials'
         ],
         'NotificationSignature' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NotificationSignature'
         ]

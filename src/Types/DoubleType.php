@@ -14,7 +14,7 @@ class DoubleType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'value' => [
             'type' => 'double',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false
         ]
     ];

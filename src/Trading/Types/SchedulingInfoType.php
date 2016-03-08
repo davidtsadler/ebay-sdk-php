@@ -21,19 +21,19 @@ class SchedulingInfoType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MaxScheduledMinutes' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxScheduledMinutes'
         ],
         'MinScheduledMinutes' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinScheduledMinutes'
         ],
         'MaxScheduledItems' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxScheduledItems'
         ]

@@ -19,7 +19,7 @@ class MemberMessageExchangeArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'MemberMessageExchange' => [
             'type' => 'DTS\eBaySDK\Trading\Types\MemberMessageExchangeType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'MemberMessageExchange'
         ]

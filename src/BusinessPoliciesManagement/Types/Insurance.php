@@ -22,25 +22,25 @@ class Insurance extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'domesticInsuranceFee' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'domesticInsuranceFee'
         ],
         'domesticInsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'domesticInsuranceOption'
         ],
         'intlInsuranceOption' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'intlInsuranceOption'
         ],
         'intlInsuranceFee' => [
             'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'intlInsuranceFee'
         ]

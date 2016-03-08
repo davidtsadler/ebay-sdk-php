@@ -20,13 +20,13 @@ class GetMultipleItemsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemID'
         ],
         'IncludeSelector' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeSelector'
         ]

@@ -19,7 +19,7 @@ class GetItemStatusRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractReque
     private static $propertyTypes = [
         'ItemID' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemID'
         ]

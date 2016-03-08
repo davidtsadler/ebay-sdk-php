@@ -19,7 +19,7 @@ class GetHistogramsRequest extends \DTS\eBaySDK\Finding\Types\BaseServiceRequest
     private static $propertyTypes = [
         'categoryId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'categoryId'
         ]

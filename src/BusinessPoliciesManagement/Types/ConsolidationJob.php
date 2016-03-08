@@ -22,25 +22,25 @@ class ConsolidationJob extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'JobId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JobId'
         ],
         'JobType' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JobType'
         ],
         'JobStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'JobStatus'
         ],
         'SiteId' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SiteId'
         ]

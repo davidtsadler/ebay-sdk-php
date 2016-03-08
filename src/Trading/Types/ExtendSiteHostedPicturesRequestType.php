@@ -20,13 +20,13 @@ class ExtendSiteHostedPicturesRequestType extends \DTS\eBaySDK\Trading\Types\Abs
     private static $propertyTypes = [
         'PictureURL' => [
             'type' => 'string',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'PictureURL'
         ],
         'ExtensionInDays' => [
             'type' => 'integer',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExtensionInDays'
         ]

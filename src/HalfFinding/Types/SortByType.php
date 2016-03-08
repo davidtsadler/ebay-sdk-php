@@ -20,13 +20,13 @@ class SortByType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'sortOrder' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortOrder'
         ],
         'sortOn' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortOn'
         ]

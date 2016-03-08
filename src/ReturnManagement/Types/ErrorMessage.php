@@ -19,7 +19,7 @@ class ErrorMessage extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'error' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\ErrorData',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'error'
         ]

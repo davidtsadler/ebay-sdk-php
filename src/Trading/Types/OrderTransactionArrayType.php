@@ -19,7 +19,7 @@ class OrderTransactionArrayType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'OrderTransaction' => [
             'type' => 'DTS\eBaySDK\Trading\Types\OrderTransactionType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderTransaction'
         ]

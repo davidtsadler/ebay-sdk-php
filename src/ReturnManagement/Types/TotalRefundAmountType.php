@@ -20,13 +20,13 @@ class TotalRefundAmountType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'estimatedRefundAmount' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'estimatedRefundAmount'
         ],
         'actualRefundAmount' => [
             'type' => 'DTS\eBaySDK\ReturnManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'actualRefundAmount'
         ]

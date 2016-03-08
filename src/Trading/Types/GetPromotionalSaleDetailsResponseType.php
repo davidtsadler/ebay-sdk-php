@@ -19,7 +19,7 @@ class GetPromotionalSaleDetailsResponseType extends \DTS\eBaySDK\Trading\Types\A
     private static $propertyTypes = [
         'PromotionalSaleDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PromotionalSaleArrayType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalSaleDetails'
         ]

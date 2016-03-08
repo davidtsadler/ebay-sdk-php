@@ -19,7 +19,7 @@ class AccountEntriesType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'AccountEntry' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AccountEntryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AccountEntry'
         ]

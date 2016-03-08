@@ -38,121 +38,121 @@ class EBPCaseDetailType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'openReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'openReason'
         ],
         'decisionReason' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decisionReason'
         ],
         'decisionReasonDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DecisionReasonDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decisionReasonDetail'
         ],
         'decisionDate' => [
             'type' => 'DateTime',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decisionDate'
         ],
         'decision' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decision'
         ],
         'FVFCredited' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FVFCredited'
         ],
         'notCountedInBuyerProtectionCases' => [
             'type' => 'boolean',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'notCountedInBuyerProtectionCases'
         ],
         'globalId' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'globalId'
         ],
         'appeal' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'appeal'
         ],
         'responseHistory' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseResponseHistoryType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'responseHistory'
         ],
         'agreedRefundAmount' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\Amount',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'agreedRefundAmount'
         ],
         'paymentDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\PaymentDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paymentDetail'
         ],
         'buyerReturnShipment' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerReturnShipment'
         ],
         'sellerShipment' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\ShipmentType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerShipment'
         ],
         'detailStatus' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'detailStatus'
         ],
         'detailStatusInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\DetailStatusInfoType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'detailStatusInfo'
         ],
         'initialBuyerExpectation' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'initialBuyerExpectation'
         ],
         'initialBuyerExpectationDetail' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\InitialBuyerExpectationDetailType',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'initialBuyerExpectationDetail'
         ],
         'returnMerchandiseAuthorization' => [
             'type' => 'string',
-            'unbound' => false,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnMerchandiseAuthorization'
         ],
         'caseDocumentInfo' => [
             'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\EBPCaseDocumentInfoType',
-            'unbound' => true,
+            'repeatable' => true,
             'attribute' => false,
             'elementName' => 'caseDocumentInfo'
         ]
