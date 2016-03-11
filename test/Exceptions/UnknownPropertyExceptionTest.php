@@ -7,7 +7,7 @@ class UnknownPropertyExceptionTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->obj = new UnknownPropertyException('Bar', 'foo');
+        $this->obj = new UnknownPropertyException('foo');
     }
 
     public function testCanBeCreated()
@@ -22,6 +22,6 @@ class UnknownPropertyExceptionTest extends \PHPUnit_Framework_TestCase
 
     public function testCorrectMessageIsGenerated()
     {
-        $this->assertEquals('Unknown property: Bar::foo', $this->obj->getMessage());
+        $this->assertEquals('Unknown property foo', $this->obj->getMessage());
     }
 }

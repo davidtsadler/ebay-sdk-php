@@ -346,7 +346,7 @@ class BaseType
         } else {
             $actualType = self::getActualType($value);
             if ('array' !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException(get_class($this), $name, 'DTS\eBaySDK\Types\RepeatableType', $actualType);
+                throw new Exceptions\InvalidPropertyTypeException($name, 'DTS\eBaySDK\Types\RepeatableType', $actualType);
             } else {
                 $this->values[$name] = new Types\RepeatableType(get_class($this), $name, $info['type']);
                 foreach ($value as $item) {
@@ -426,7 +426,7 @@ class BaseType
     private static function ensurePropertyExists($class, $name)
     {
         if (!array_key_exists($name, self::$properties[$class])) {
-            throw new Exceptions\UnknownPropertyException(get_called_class(), $name);
+            throw new Exceptions\UnknownPropertyException($name);
         }
     }
 
@@ -447,7 +447,7 @@ class BaseType
             $actualType = self::getActualType($value);
 
             if ($expectedType !== $actualType && 'array' !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException(get_called_class(), $name, $expectedType, $actualType);
+                throw new Exceptions\InvalidPropertyTypeException($name, $expectedType, $actualType);
             }
         }
     }

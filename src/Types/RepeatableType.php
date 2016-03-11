@@ -162,7 +162,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
             }
 
             if ($this->expectedType !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException($this->class, $this->property, $this->expectedType, $actualType);
+                throw new Exceptions\InvalidPropertyTypeException($this->property, $this->expectedType, $actualType);
             }
         }
     }

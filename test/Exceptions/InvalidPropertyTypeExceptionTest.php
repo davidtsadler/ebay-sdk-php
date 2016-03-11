@@ -7,7 +7,7 @@ class InvalidPropertyTypeExceptionTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->obj = new InvalidPropertyTypeException('Bar', 'foo', 'string', 'integer');
+        $this->obj = new InvalidPropertyTypeException('foo', 'string', 'integer');
     }
 
     public function testCanBeCreated()
@@ -22,6 +22,6 @@ class InvalidPropertyTypeExceptionTest extends \PHPUnit_Framework_TestCase
 
     public function testCorrectMessageIsGenerated()
     {
-        $this->assertEquals('Invalid property type: Bar::foo expected <string>, got <integer>', $this->obj->getMessage());
+        $this->assertEquals('Invalid property type provided for foo. Expected string but got integer', $this->obj->getMessage());
     }
 }
