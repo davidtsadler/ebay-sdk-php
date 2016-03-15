@@ -36,7 +36,6 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Enums\PayPalAccountTypeCodeType $PayPalAccountType
  * @property \DTS\eBaySDK\MerchantData\Enums\PayPalAccountStatusCodeType $PayPalAccountStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\EBaySubscriptionTypeCodeType[] $UserSubscription
- * @property boolean $SiteVerified
  * @property string[] $SkypeID
  * @property boolean $eBayWikiReadOnly
  * @property integer $TUVLevel
@@ -220,12 +219,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'UserSubscription'
-        ],
-        'SiteVerified' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SiteVerified'
         ],
         'SkypeID' => [
             'type' => 'string',
