@@ -10,9 +10,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Guzzle\Http\Client;
-use Guzzle\Http\Url;
-use Guzzle\Stream;
+use GuzzleHttp\Middleware;
+use GuzzleHttp\Psr7\Uri;
+use GuzzleHttp\Psr7;
 
 $owner = 'davidtsadler';
 $repo = 'ebay-sdk-php';
@@ -27,38 +27,39 @@ assert(file_exists(__DIR__ . '/artifacts/ebay-sdk-php.phar'));
 chdir(dirname(__DIR__));
 $message = `chag contents --tag "$tag"` or die('Chag could not find or parse the tag');
 
-// Create a GitHub client.
-$client = new Client('https://api.github.com/');
-$client->setDefaultOption('headers/Authorization', "token $token");
+// Create a GitHub client
+$client = new GuzzleHttp\Client([
+    'base_uri' => 'https://api.github.com/',
+    'headers'  => ['Authorization' => "token $token"],
+]);
 
 // Create the release
-$response = $client->post(
-    "repos/${owner}/${repo}/releases",
-    array('Content-Type' => 'application/json'),
-    json_encode(array(
-        'tag_name'   => $tag,
-        'name'       => "Version {$tag}",
-        'body'       => $message,
-        'prerelease' => false
-    ))
-)->send();
+$response = $client->post("repos/${owner}/${repo}/releases", [
+    'json' => [
+        'tag_name' => $tag,
+        'name'     => "Version {$tag}",
+        'body'     => $message,
+    ]
+]);
 
 // Grab the location of the new release
-$url = (string) $response->getHeader('Location');
-// Uploads go to uploads.github.com
-$uploadUrl = Url::factory($url);
-$uploadUrl->setHost('uploads.github.com');
-
-$client->post(
-    $uploadUrl . '/assets?name=ebay-sdk-php.zip',
-    array('Content-Type' => 'application/zip'),
-    fopen(__DIR__ . '/artifacts/ebay-sdk-php.zip', 'r')
-)->send();
-
-$client->post(
-    $uploadUrl . '/assets?name=ebay-sdk-php.phar',
-    array('Content-Type' => 'application/phar'),
-    fopen(__DIR__ . '/artifacts/ebay-sdk-php.phar', 'r')
-)->send();
-
+$url = $response->getHeaderLine('Location');
 echo "Release successfully published to: $url\n";
+
+// Uploads go to uploads.github.com
+$uploadUrl = new Uri($url);
+$uploadUrl = $uploadUrl->withHost('uploads.github.com');
+
+// Upload ebay-sdk-php.zip
+$response = $client->post($uploadUrl . '/assets?name=ebay-sdk-php.zip', [
+    'headers' => ['Content-Type' => 'application/zip'],
+    'body'    => Psr7\try_fopen(__DIR__ . '/artifacts/ebay-sdk-php.zip', 'r')
+]);
+echo "ebay-sdk-php.zip uploaded to: " . json_decode($response->getBody(), true)['browser_download_url'] . "\n";
+
+// Upload ebay-sdk-php.phar
+$response = $client->post($uploadUrl . '/assets?name=ebay-sdk-php.phar', [
+    'headers' => ['Content-Type' => 'application/phar'],
+    'body'    => Psr7\try_fopen(__DIR__ . '/artifacts/ebay-sdk-php.phar', 'r')
+]);
+echo "ebay-sdk-php.phar uploaded to: " . json_decode($response->getBody(), true)['browser_download_url'] . "\n";
