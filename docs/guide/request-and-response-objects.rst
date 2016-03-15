@@ -182,7 +182,7 @@ The SDK handles these `repeatable <http://developer.ebay.com/DevZone/finding/Cal
     echo $response->searchResult->item[0]->title;
 
 Assign multiple properties
------------------------------
+--------------------------
 
 Passing an associative array when constructing an object allows you to specify multiple properties at a time. Use the property names as the keys of the array and pass in the values that you want assigned. You can nest associative arrays to assign properties of other complex properties.
 
@@ -221,3 +221,33 @@ The SDK will handle the escaping of it in the XML.
     <Description>
         &lt;h1&gt;Bits &amp; Bobs&lt;/h1&gt;&lt;p&gt;Just some &amp;lt;stuff&amp;gt; I found.&lt;/p&gt;
     </Description>
+
+Convert to an array
+-------------------
+
+The ``toArray`` method returns an associate array of an object's properties. The array keys are the property names and the values are the property values.
+
+.. code-block:: php
+
+    $request = new Types\FindItemsAdvancedRequest();
+    $request->keywords = 'Harry Potter';
+    $request->categoryId = ['617', '171228'];
+
+    print_r($request->toArray());
+
+    /**
+      Array
+      (
+          [keywords] => Harry Potter
+          [categoryId] => Array
+              (
+                  [0] => 617
+                  [1] => 171228
+              )
+
+      )
+    */
+
+.. note::
+
+    The output from ``toArray`` can be passed to the constructor of a object to assign multiple properties.

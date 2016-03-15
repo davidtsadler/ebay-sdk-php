@@ -37,7 +37,7 @@ You no longer need to convert characters to their HTML entities before passing t
 Removed MerchantDataService class
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``DTS\eBaySDK\MerchantData\Services\\MerchantDataService`` class was removed in version 1 and replaced with the ``DTS\eBaySDK\MerchantData\\MerchantData`` class. There is no difference in how the new class works when compared with the previous version.
+The ``DTS\eBaySDK\MerchantData\Services\MerchantDataService`` class was removed in version 1 and replaced with the ``DTS\eBaySDK\MerchantData\MerchantData`` class. There is no difference in how the new class works when compared with the previous version.
 
 Removed UnboundType class
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +47,7 @@ The ``DTS\eBaySDK\Types\UnboundType`` class was removed in version 1 and replace
 Required configuration options enforced
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From version 1 the SDK enforces required configuration options by throwning a ``InvalidArgumentException`` during the construction of a service object.
+From version 1 onwards the SDK enforces required configuration options by throwning a ``InvalidArgumentException`` during the construction of a service object.
 
 .. code-block:: php
 

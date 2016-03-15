@@ -67,7 +67,7 @@ If you do not provide a version number the SDK will default to the value that is
     /**
      * apiVerion will default to the value in ShoppingService::API_VERSION.
      */
-    $shopping = new ShoppingService([]);
+    $shopping = new ShoppingService();
 
 .. warning::
 
@@ -92,7 +92,7 @@ The Trading service is different to other services in that the auth token can be
     /**
      * No auth token provided.
      */
-    $trading = new Services\TradingService([]);
+    $trading = new Services\TradingService();
 
     $request = new Types\GeteBayOfficialTimeRequestType();
     /**
@@ -266,7 +266,7 @@ siteId
 :Services: ``Shopping``, ``Trading``.
 :Required For: ``Trading``
 
-The unique numerical identifier for the eBay site your API requests are to be sent to. For example, you would pass the value 3 to specify the eBay UK site. A `complete list of eBay site IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
+The unique numerical identifier for the eBay site your API requests are to be sent to. For example, you would pass the value ``3`` to specify the eBay UK site. A `complete list of eBay site IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
 
 trackingId
 ~~~~~~~~~~
