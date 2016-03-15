@@ -9,15 +9,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType $ListingAnalyzerRecommendations
- * @property \DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType $SIFFTASRecommendations
- * @property \DTS\eBaySDK\Trading\Types\PricingRecommendationsType $PricingRecommendations
- * @property \DTS\eBaySDK\Trading\Types\AttributeRecommendationsType $AttributeRecommendations
- * @property \DTS\eBaySDK\Trading\Types\ProductRecommendationsType $ProductRecommendations
- * @property string $CorrelationID
- * @property \DTS\eBaySDK\Trading\Types\RecommendationsType $Recommendations
- * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
- * @property string $Title
  */
 class GetRecommendationsResponseContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,60 +16,6 @@ class GetRecommendationsResponseContainerType extends \DTS\eBaySDK\Types\BaseTyp
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ListingAnalyzerRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingAnalyzerRecommendations'
-        ],
-        'SIFFTASRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SIFFTASRecommendations'
-        ],
-        'PricingRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PricingRecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PricingRecommendations'
-        ],
-        'AttributeRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AttributeRecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeRecommendations'
-        ],
-        'ProductRecommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductRecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductRecommendations'
-        ],
-        'CorrelationID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
-        ],
-        'Recommendations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RecommendationsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Recommendations'
-        ],
-        'ProductListingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductListingDetails'
-        ],
-        'Title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ]
     ];
 
     /**

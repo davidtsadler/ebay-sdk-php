@@ -9,14 +9,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\ListingFlowCodeType $ListingFlow
- * @property \DTS\eBaySDK\Trading\Types\ItemType $Item
- * @property \DTS\eBaySDK\Trading\Enums\RecommendationEngineCodeType[] $RecommendationEngine
- * @property string $Query
- * @property string $CorrelationID
- * @property string[] $DeletedField
- * @property boolean $ExcludeRelationships
- * @property boolean $IncludeConfidence
  */
 class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,54 +16,6 @@ class GetRecommendationsRequestContainerType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ListingFlow' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingFlow'
-        ],
-        'Item' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Item'
-        ],
-        'RecommendationEngine' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'RecommendationEngine'
-        ],
-        'Query' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Query'
-        ],
-        'CorrelationID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CorrelationID'
-        ],
-        'DeletedField' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DeletedField'
-        ],
-        'ExcludeRelationships' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ExcludeRelationships'
-        ],
-        'IncludeConfidence' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeConfidence'
-        ]
     ];
 
     /**

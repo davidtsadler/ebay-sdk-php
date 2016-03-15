@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $BestOfferEnabled
  * @property boolean $AutoPayEnabled
  * @property boolean $B2BVATEnabled
- * @property boolean $CatalogEnabled
  * @property string $CategoryID
  * @property integer $CategoryLevel
  * @property string $CategoryName
@@ -48,12 +47,6 @@ class CategoryType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'B2BVATEnabled'
-        ],
-        'CatalogEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CatalogEnabled'
         ],
         'CategoryID' => [
             'type' => 'string',

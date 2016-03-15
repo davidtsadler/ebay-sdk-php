@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
- * @property \DTS\eBaySDK\Trading\Types\DistanceType $Distance
  * @property integer $GiftIcon
  * @property \DTS\eBaySDK\Trading\Enums\GiftServicesCodeType[] $GiftServices
  * @property \DTS\eBaySDK\Trading\Enums\HitCounterCodeType $HitCounter
@@ -42,7 +41,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
  * @property integer $Quantity
  * @property string $PrivateNotes
- * @property string $RegionID
  * @property boolean $RelistLink
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ReservePrice
  * @property \DTS\eBaySDK\Trading\Types\ReviseStatusType $ReviseStatus
@@ -76,7 +74,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $QuantityAvailable
  * @property string $SKU
  * @property boolean $CategoryBasedAttributesPrefill
- * @property \DTS\eBaySDK\Trading\Types\SearchDetailsType $SearchDetails
  * @property string $PostalCode
  * @property boolean $ShippingTermsInDescription
  * @property string $SellerInventoryID
@@ -85,8 +82,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $SkypeEnabled
  * @property string $SkypeID
  * @property \DTS\eBaySDK\Trading\Enums\SkypeContactOptionCodeType[] $SkypeContactOption
- * @property boolean $BestOfferEnabled
- * @property boolean $LocalListing
  * @property boolean $ThirdPartyCheckoutIntegration
  * @property \DTS\eBaySDK\Trading\Types\ListingCheckoutRedirectPreferenceType $ListingCheckoutRedirectPreference
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerContactDetails
@@ -96,7 +91,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $LeadCount
  * @property integer $NewLeadCount
  * @property \DTS\eBaySDK\Trading\Types\NameValueListArrayType $ItemSpecifics
- * @property string $GroupCategoryID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ClassifiedAdPayPerLeadFee
  * @property \DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType $ApplyBuyerProtection
  * @property \DTS\eBaySDK\Trading\Enums\ListingSubtypeCodeType $ListingSubtype2
@@ -126,9 +120,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $UseRecommendedProduct
  * @property string $SellerProvidedTitle
  * @property string $VIN
- * @property string $VINLink
  * @property string $VRM
- * @property string $VRMLink
  * @property \DTS\eBaySDK\Trading\Types\QuantityInfoType $QuantityInfo
  * @property \DTS\eBaySDK\Trading\Types\SellerProfilesType $SellerProfiles
  * @property \DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType $ShippingServiceCostOverrideList
@@ -246,12 +238,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'DescriptionReviseMode'
         ],
-        'Distance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DistanceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Distance'
-        ],
         'GiftIcon' => [
             'type' => 'integer',
             'repeatable' => false,
@@ -359,12 +345,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrivateNotes'
-        ],
-        'RegionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RegionID'
         ],
         'RelistLink' => [
             'type' => 'boolean',
@@ -564,12 +544,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'CategoryBasedAttributesPrefill'
         ],
-        'SearchDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SearchDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SearchDetails'
-        ],
         'PostalCode' => [
             'type' => 'string',
             'repeatable' => false,
@@ -617,18 +591,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SkypeContactOption'
-        ],
-        'BestOfferEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BestOfferEnabled'
-        ],
-        'LocalListing' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'LocalListing'
         ],
         'ThirdPartyCheckoutIntegration' => [
             'type' => 'boolean',
@@ -683,12 +645,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
-        ],
-        'GroupCategoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GroupCategoryID'
         ],
         'ClassifiedAdPayPerLeadFee' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -864,23 +820,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'VIN'
         ],
-        'VINLink' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VINLink'
-        ],
         'VRM' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VRM'
-        ],
-        'VRMLink' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'VRMLink'
         ],
         'QuantityInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\QuantityInfoType',

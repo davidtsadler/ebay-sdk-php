@@ -15,8 +15,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $StockPhotoURL
  * @property string[] $Copyright
  * @property string $ProductReferenceID
- * @property string $DetailsURL
- * @property string $ProductDetailsURL
  * @property boolean $ReturnSearchResultOnDuplicates
  * @property string $ISBN
  * @property string $UPC
@@ -67,18 +65,6 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductReferenceID'
-        ],
-        'DetailsURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DetailsURL'
-        ],
-        'ProductDetailsURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductDetailsURL'
         ],
         'ReturnSearchResultOnDuplicates' => [
             'type' => 'boolean',

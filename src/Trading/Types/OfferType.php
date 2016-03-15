@@ -22,7 +22,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\UserType $User
  * @property boolean $UserConsent
- * @property integer $BidCount
  * @property string $Message
  * @property string $BestOfferID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MyMaxBid
@@ -110,12 +109,6 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserConsent'
-        ],
-        'BidCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BidCount'
         ],
         'Message' => [
             'type' => 'string',

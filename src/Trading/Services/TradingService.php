@@ -9,7 +9,7 @@ namespace DTS\eBaySDK\Trading\Services;
 
 class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
 {
-    const API_VERSION = '951';
+    const API_VERSION = '957';
 
     /**
      * @param array $config Configuration option values.
@@ -822,19 +822,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'GetOrders',
             $request,
             '\DTS\eBaySDK\Trading\Types\GetOrdersResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetProductSellingPagesRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetProductSellingPagesResponseType
-     */
-    public function getProductSellingPages(\DTS\eBaySDK\Trading\Types\GetProductSellingPagesRequestType $request)
-    {
-        return $this->callOperation(
-            'GetProductSellingPages',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetProductSellingPagesResponseType'
         );
     }
 
@@ -1745,6 +1732,19 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'SetUserNotes',
             $request,
             '\DTS\eBaySDK\Trading\Types\SetUserNotesResponseType'
+        );
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType $request
+     * @return \DTS\eBaySDK\Trading\Types\SetUserPreferencesResponseType
+     */
+    public function setUserPreferences(\DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType $request)
+    {
+        return $this->callOperation(
+            'SetUserPreferences',
+            $request,
+            '\DTS\eBaySDK\Trading\Types\SetUserPreferencesResponseType'
         );
     }
 

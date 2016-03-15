@@ -7,20 +7,20 @@
 
 namespace DTS\eBaySDK\Test\Trading\Types;
 
-use DTS\eBaySDK\Trading\Types\GetProductSellingPagesRequestType;
+use DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType;
 
-class GetProductSellingPagesRequestTypeTest extends \PHPUnit_Framework_TestCase
+class SetUserPreferencesRequestTypeTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new GetProductSellingPagesRequestType();
+        $this->obj = new SetUserPreferencesRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\GetProductSellingPagesRequestType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType', $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
