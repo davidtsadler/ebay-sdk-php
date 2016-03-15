@@ -26,9 +26,14 @@
     },
     "autoload": {
         "psr-4": {
-            "DTS\\eBaySDK\\": "src/",
-            "DTS\\eBaySDK\\Test\\": "test/"
+            "DTS\\eBaySDK\\": "src/"
         },
         "files": ["src/functions.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DTS\\eBaySDK\\Test\\": "test/"
+        },
+        "classmap": ["build/"]
     }
 }

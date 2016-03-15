@@ -1,8 +1,15 @@
 <?php
 require __DIR__ . '/artifacts/ebay-sdk-php.phar';
 
-$service = new \DTS\eBaySDK\Trading\Services\TradingService(array(
-    'apiVersion' => '123'
-));
+$sdk = new \DTS\eBaySDK\Sdk();
 
-echo 'Version=' . \DTS\eBaySDK\Services\BaseService::VERSION;
+$trading = new \DTS\eBaySDK\Trading\Services\TradingService([
+    'siteId'      => 0,
+    'credentials' => [
+        'appId'  => 'secret',
+        'certId' => 'secret',
+        'devId'  => 'secret'
+    ]
+]);
+
+echo 'Version=' . \DTS\eBaySDK\Sdk::VERSION;
