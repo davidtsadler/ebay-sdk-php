@@ -1,0 +1,21 @@
+title: eBay SDK for PHP
+main: DTS
+baseUrl: http://devbay.net/guides/api/
+googleAnalytics: ""
+
+source: [build/artifacts/staging/DTS, build/artifacts/staging/GuzzleHttp/Psr7, build/artifacts/staging/GuzzleHttp/Promise, build/artifacts/staging/Psr]
+destination: build/artifacts/docs
+
+templateTheme: bootstrap
+accessLevels: [public]
+extensions: [php]
+
+deprecated: No
+internal: No
+
+download: No
+php: No
+noSourceCode: Yes
+todo: No
+tree: No
+sourceCode: No

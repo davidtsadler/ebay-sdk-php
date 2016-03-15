@@ -24,6 +24,23 @@ guide:
 guide-show:
 	open docs/_build/html/index.html
 
+api: api-get-apigen
+	# Build the package if necessary.
+	[ -d build/artifacts/staging ] || make package
+	# Delete a previously built API build to avoid the prompt.
+	rm -rf build/artifacts/docs
+	php build/artifacts/apigen.phar generate --config build/docs/apigen.neon --debug
+
+api-get-apigen:
+	mkdir -p build/artifacts
+	[ -f build/artifacts/apigen.phar ] || wget -q -O build/artifacts/apigen.phar https://github.com/ApiGen/ApiGen/releases/download/v4.1.0/apigen-4.1.0.phar
+
+api-show:
+	open build/artifacts/docs/index.html
+
+api-package:
+	zip -r build/artifacts/ebay-sdk-php-docs-api.zip build/artifacts/docs
+
 # Packages the phar and zip
 package:
 	php build/packager.php
