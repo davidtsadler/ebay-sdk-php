@@ -203,7 +203,9 @@ class BaseType
     }
 
     /**
-     * @return array Returns an associative array of the object's properties and values.
+     * Helper method that returns an associative array of the object's properties and values.
+     *
+     * @return array Associative array where the keys are the object's properties.
      */
     public function toArray()
     {
