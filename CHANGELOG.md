@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+
+As this is version 1.0.0 there are a few breaking changes. A full list can be found in the [migration guide](http://devbay.net/sdk/guides/guide/migration.html).
+
 ## 0.5.0 - 2015-11-20
 
 ### Fixes
