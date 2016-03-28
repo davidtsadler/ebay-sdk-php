@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Breaking changes
+
+* Support Trading API version 959.
+
 ### Doc
 
 * Added version information.
