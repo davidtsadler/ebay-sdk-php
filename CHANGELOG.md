@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 2.0.0 - 2016-03-28
 
 ### Breaking changes
 
