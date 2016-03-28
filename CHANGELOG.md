@@ -4,7 +4,8 @@
 
 ### Doc
 
-Corrected site map for API guide.
+* Added version information.
+* Corrected site map for API guide.
 
 ## 1.0.0 - 2016-03-19
 

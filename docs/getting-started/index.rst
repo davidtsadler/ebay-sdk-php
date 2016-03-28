@@ -11,3 +11,4 @@ The following guides will help you get up and running with the eBay SDK for PHP.
     installation
     basic-usage
     supported-services
+    versioning
