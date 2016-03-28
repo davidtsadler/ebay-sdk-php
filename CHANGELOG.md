@@ -5,6 +5,7 @@
 ### Breaking changes
 
 * Support Trading API version 959.
+* Support Shopping API version 959.
 
 ### Doc
 
