@@ -219,13 +219,52 @@ Version 1 introduced the new :ref:`handler <handler>` configuration option which
         'globalId'   => 'EBAY-US'
     ], new HttpClient());
 
-    // Version 1
+-------------------
+this doesnt WORK!!!
+    // Version 1 
     $handler = function (Psr\Http\Message\RequestInterface $request) {
         $client = new SomeClient();
         $response = $client->sendRequest($request);
 
         return $response->getBody()->getContent();
     };
+    
+-------------------
+use this instead!!!
+
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use Psr\Http\Message\RequestInterface as Psr7Request;
+
+/**
+ * @internal Sends PSR-7-compatible requests using a Guzzle client.
+ */
+class MyHandler
+{
+	/**
+	 * @var ClientInterface
+	 */
+	private $client;
+
+	/**
+	 * @param ClientInterface $client
+	 */
+	public function __construct(ClientInterface $client = null)
+	{
+		$this->client = new Client(array("verify"=>false));
+	}
+
+	/**
+	 * @param Psr7Request $request
+	 *
+	 * @return string Body of the response
+	 */
+	public function __invoke(Psr7Request $request)
+	{
+		return $this->client->send($request)->getBody()->getContents();
+	}
+}
+----
 
     $service = new FindingService([
         'apiVersion' => '1.13.0',
