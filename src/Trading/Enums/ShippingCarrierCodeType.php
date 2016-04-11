@@ -94,7 +94,7 @@ class ShippingCarrierCodeType
     const C_INTER_POST = 'InterPost';
     const C_IO_INVIO = 'IoInvio';
     const C_IPARCEL = 'Iparcel';
-    const C_ISRAEL_POST = 'Israel Post';
+    const C_ISRAEL_POST = 'IsraelPost';
     const C_I_LOXX = 'iLoxx';
     const C_JAPAN_POST = 'JapanPost';
     const C_KIALA = 'KIALA';
