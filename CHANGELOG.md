@@ -5,6 +5,7 @@
 ### Breaking changes
 
 * Support Trading API version 961.
+* Support Shopping API version 961.
 
 ## 2.0.0 - 2016-03-28
 
