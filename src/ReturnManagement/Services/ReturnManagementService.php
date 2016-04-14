@@ -25,11 +25,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function getVersion(\DTS\eBaySDK\ReturnManagement\Types\GetVersionRequest $request)
     {
-        return $this->callOperation(
-            'getVersion',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetVersionResponse'
-        );
+        return $this->getVersionAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function getUserReturns(\DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsRequest $request)
     {
-        return $this->callOperation(
-            'getUserReturns',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsResponse'
-        );
+        return $this->getUserReturnsAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function getReturnDetail(\DTS\eBaySDK\ReturnManagement\Types\GetReturnDetailRequest $request)
     {
-        return $this->callOperation(
-            'getReturnDetail',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetReturnDetailResponse'
-        );
+        return $this->getReturnDetailAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function getActivityOptions(\DTS\eBaySDK\ReturnManagement\Types\GetActivityOptionsRequest $request)
     {
-        return $this->callOperation(
-            'getActivityOptions',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetActivityOptionsResponse'
-        );
+        return $this->getActivityOptionsAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function issueRefund(\DTS\eBaySDK\ReturnManagement\Types\IssueRefundRequest $request)
     {
-        return $this->callOperation(
-            'issueRefund',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\IssueRefundResponse'
-        );
+        return $this->issueRefundAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function provideSellerInfo(\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoRequest $request)
     {
-        return $this->callOperation(
-            'provideSellerInfo',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoResponse'
-        );
+        return $this->provideSellerInfoAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function getReturnMetadata(\DTS\eBaySDK\ReturnManagement\Types\GetReturnMetadataRequest $request)
     {
-        return $this->callOperation(
-            'getReturnMetadata',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetReturnMetadataResponse'
-        );
+        return $this->getReturnMetadataAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function provideTrackingInfo(\DTS\eBaySDK\ReturnManagement\Types\ProvideTrackingInfoRequest $request)
     {
-        return $this->callOperation(
-            'provideTrackingInfo',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\ProvideTrackingInfoResponse'
-        );
+        return $this->provideTrackingInfoAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
      */
     public function setItemAsReceived(\DTS\eBaySDK\ReturnManagement\Types\SetItemAsReceivedRequest $request)
     {
-        return $this->callOperation(
-            'setItemAsReceived',
-            $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\SetItemAsReceivedResponse'
-        );
+        return $this->setItemAsReceivedAsync($request)->wait();
     }
 
     /**

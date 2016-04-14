@@ -25,11 +25,7 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
      */
     public function uploadFile(\DTS\eBaySDK\FileTransfer\Types\UploadFileRequest $request)
     {
-        return $this->callOperation(
-            'uploadFile',
-            $request,
-            '\DTS\eBaySDK\FileTransfer\Types\UploadFileResponse'
-        );
+        return $this->uploadFileAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
      */
     public function downloadFile(\DTS\eBaySDK\FileTransfer\Types\DownloadFileRequest $request)
     {
-        return $this->callOperation(
-            'downloadFile',
-            $request,
-            '\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse'
-        );
+        return $this->downloadFileAsync($request)->wait();
     }
 
     /**

@@ -25,11 +25,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addDispute(\DTS\eBaySDK\Trading\Types\AddDisputeRequestType $request)
     {
-        return $this->callOperation(
-            'AddDispute',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddDisputeResponseType'
-        );
+        return $this->addDisputeAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addDisputeResponse(\DTS\eBaySDK\Trading\Types\AddDisputeResponseRequestType $request)
     {
-        return $this->callOperation(
-            'AddDisputeResponse',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddDisputeResponseResponseType'
-        );
+        return $this->addDisputeResponseAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addFixedPriceItem(\DTS\eBaySDK\Trading\Types\AddFixedPriceItemRequestType $request)
     {
-        return $this->callOperation(
-            'AddFixedPriceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddFixedPriceItemResponseType'
-        );
+        return $this->addFixedPriceItemAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addItem(\DTS\eBaySDK\Trading\Types\AddItemRequestType $request)
     {
-        return $this->callOperation(
-            'AddItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddItemResponseType'
-        );
+        return $this->addItemAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addItemFromSellingManagerTemplate(\DTS\eBaySDK\Trading\Types\AddItemFromSellingManagerTemplateRequestType $request)
     {
-        return $this->callOperation(
-            'AddItemFromSellingManagerTemplate',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddItemFromSellingManagerTemplateResponseType'
-        );
+        return $this->addItemFromSellingManagerTemplateAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addItems(\DTS\eBaySDK\Trading\Types\AddItemsRequestType $request)
     {
-        return $this->callOperation(
-            'AddItems',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddItemsResponseType'
-        );
+        return $this->addItemsAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addMemberMessageAAQToPartner(\DTS\eBaySDK\Trading\Types\AddMemberMessageAAQToPartnerRequestType $request)
     {
-        return $this->callOperation(
-            'AddMemberMessageAAQToPartner',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddMemberMessageAAQToPartnerResponseType'
-        );
+        return $this->addMemberMessageAAQToPartnerAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addMemberMessageRTQ(\DTS\eBaySDK\Trading\Types\AddMemberMessageRTQRequestType $request)
     {
-        return $this->callOperation(
-            'AddMemberMessageRTQ',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddMemberMessageRTQResponseType'
-        );
+        return $this->addMemberMessageRTQAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addMemberMessagesAAQToBidder(\DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderRequestType $request)
     {
-        return $this->callOperation(
-            'AddMemberMessagesAAQToBidder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderResponseType'
-        );
+        return $this->addMemberMessagesAAQToBidderAsync($request)->wait();
     }
 
     /**
@@ -259,11 +223,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addOrder(\DTS\eBaySDK\Trading\Types\AddOrderRequestType $request)
     {
-        return $this->callOperation(
-            'AddOrder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddOrderResponseType'
-        );
+        return $this->addOrderAsync($request)->wait();
     }
 
     /**
@@ -285,11 +245,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addSecondChanceItem(\DTS\eBaySDK\Trading\Types\AddSecondChanceItemRequestType $request)
     {
-        return $this->callOperation(
-            'AddSecondChanceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddSecondChanceItemResponseType'
-        );
+        return $this->addSecondChanceItemAsync($request)->wait();
     }
 
     /**
@@ -311,11 +267,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addSellingManagerInventoryFolder(\DTS\eBaySDK\Trading\Types\AddSellingManagerInventoryFolderRequestType $request)
     {
-        return $this->callOperation(
-            'AddSellingManagerInventoryFolder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddSellingManagerInventoryFolderResponseType'
-        );
+        return $this->addSellingManagerInventoryFolderAsync($request)->wait();
     }
 
     /**
@@ -337,11 +289,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addSellingManagerProduct(\DTS\eBaySDK\Trading\Types\AddSellingManagerProductRequestType $request)
     {
-        return $this->callOperation(
-            'AddSellingManagerProduct',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddSellingManagerProductResponseType'
-        );
+        return $this->addSellingManagerProductAsync($request)->wait();
     }
 
     /**
@@ -363,11 +311,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addSellingManagerTemplate(\DTS\eBaySDK\Trading\Types\AddSellingManagerTemplateRequestType $request)
     {
-        return $this->callOperation(
-            'AddSellingManagerTemplate',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddSellingManagerTemplateResponseType'
-        );
+        return $this->addSellingManagerTemplateAsync($request)->wait();
     }
 
     /**
@@ -389,11 +333,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addToItemDescription(\DTS\eBaySDK\Trading\Types\AddToItemDescriptionRequestType $request)
     {
-        return $this->callOperation(
-            'AddToItemDescription',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddToItemDescriptionResponseType'
-        );
+        return $this->addToItemDescriptionAsync($request)->wait();
     }
 
     /**
@@ -415,11 +355,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addToWatchList(\DTS\eBaySDK\Trading\Types\AddToWatchListRequestType $request)
     {
-        return $this->callOperation(
-            'AddToWatchList',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddToWatchListResponseType'
-        );
+        return $this->addToWatchListAsync($request)->wait();
     }
 
     /**
@@ -441,11 +377,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function addTransactionConfirmationItem(\DTS\eBaySDK\Trading\Types\AddTransactionConfirmationItemRequestType $request)
     {
-        return $this->callOperation(
-            'AddTransactionConfirmationItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\AddTransactionConfirmationItemResponseType'
-        );
+        return $this->addTransactionConfirmationItemAsync($request)->wait();
     }
 
     /**
@@ -467,11 +399,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function completeSale(\DTS\eBaySDK\Trading\Types\CompleteSaleRequestType $request)
     {
-        return $this->callOperation(
-            'CompleteSale',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\CompleteSaleResponseType'
-        );
+        return $this->completeSaleAsync($request)->wait();
     }
 
     /**
@@ -493,11 +421,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function confirmIdentity(\DTS\eBaySDK\Trading\Types\ConfirmIdentityRequestType $request)
     {
-        return $this->callOperation(
-            'ConfirmIdentity',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ConfirmIdentityResponseType'
-        );
+        return $this->confirmIdentityAsync($request)->wait();
     }
 
     /**
@@ -519,11 +443,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteMyMessages(\DTS\eBaySDK\Trading\Types\DeleteMyMessagesRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteMyMessages',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteMyMessagesResponseType'
-        );
+        return $this->deleteMyMessagesAsync($request)->wait();
     }
 
     /**
@@ -545,11 +465,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteSellingManagerInventoryFolder(\DTS\eBaySDK\Trading\Types\DeleteSellingManagerInventoryFolderRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteSellingManagerInventoryFolder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteSellingManagerInventoryFolderResponseType'
-        );
+        return $this->deleteSellingManagerInventoryFolderAsync($request)->wait();
     }
 
     /**
@@ -571,11 +487,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteSellingManagerItemAutomationRule(\DTS\eBaySDK\Trading\Types\DeleteSellingManagerItemAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteSellingManagerItemAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteSellingManagerItemAutomationRuleResponseType'
-        );
+        return $this->deleteSellingManagerItemAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -597,11 +509,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteSellingManagerProduct(\DTS\eBaySDK\Trading\Types\DeleteSellingManagerProductRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteSellingManagerProduct',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteSellingManagerProductResponseType'
-        );
+        return $this->deleteSellingManagerProductAsync($request)->wait();
     }
 
     /**
@@ -623,11 +531,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteSellingManagerTemplate(\DTS\eBaySDK\Trading\Types\DeleteSellingManagerTemplateRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteSellingManagerTemplate',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteSellingManagerTemplateResponseType'
-        );
+        return $this->deleteSellingManagerTemplateAsync($request)->wait();
     }
 
     /**
@@ -649,11 +553,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function deleteSellingManagerTemplateAutomationRule(\DTS\eBaySDK\Trading\Types\DeleteSellingManagerTemplateAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'DeleteSellingManagerTemplateAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DeleteSellingManagerTemplateAutomationRuleResponseType'
-        );
+        return $this->deleteSellingManagerTemplateAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -675,11 +575,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function disableUnpaidItemAssistance(\DTS\eBaySDK\Trading\Types\DisableUnpaidItemAssistanceRequestType $request)
     {
-        return $this->callOperation(
-            'DisableUnpaidItemAssistance',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\DisableUnpaidItemAssistanceResponseType'
-        );
+        return $this->disableUnpaidItemAssistanceAsync($request)->wait();
     }
 
     /**
@@ -701,11 +597,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function endFixedPriceItem(\DTS\eBaySDK\Trading\Types\EndFixedPriceItemRequestType $request)
     {
-        return $this->callOperation(
-            'EndFixedPriceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\EndFixedPriceItemResponseType'
-        );
+        return $this->endFixedPriceItemAsync($request)->wait();
     }
 
     /**
@@ -727,11 +619,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function endItem(\DTS\eBaySDK\Trading\Types\EndItemRequestType $request)
     {
-        return $this->callOperation(
-            'EndItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\EndItemResponseType'
-        );
+        return $this->endItemAsync($request)->wait();
     }
 
     /**
@@ -753,11 +641,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function endItems(\DTS\eBaySDK\Trading\Types\EndItemsRequestType $request)
     {
-        return $this->callOperation(
-            'EndItems',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\EndItemsResponseType'
-        );
+        return $this->endItemsAsync($request)->wait();
     }
 
     /**
@@ -779,11 +663,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function extendSiteHostedPictures(\DTS\eBaySDK\Trading\Types\ExtendSiteHostedPicturesRequestType $request)
     {
-        return $this->callOperation(
-            'ExtendSiteHostedPictures',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ExtendSiteHostedPicturesResponseType'
-        );
+        return $this->extendSiteHostedPicturesAsync($request)->wait();
     }
 
     /**
@@ -805,11 +685,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function fetchToken(\DTS\eBaySDK\Trading\Types\FetchTokenRequestType $request)
     {
-        return $this->callOperation(
-            'FetchToken',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\FetchTokenResponseType'
-        );
+        return $this->fetchTokenAsync($request)->wait();
     }
 
     /**
@@ -831,11 +707,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getAccount(\DTS\eBaySDK\Trading\Types\GetAccountRequestType $request)
     {
-        return $this->callOperation(
-            'GetAccount',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetAccountResponseType'
-        );
+        return $this->getAccountAsync($request)->wait();
     }
 
     /**
@@ -857,11 +729,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getAdFormatLeads(\DTS\eBaySDK\Trading\Types\GetAdFormatLeadsRequestType $request)
     {
-        return $this->callOperation(
-            'GetAdFormatLeads',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetAdFormatLeadsResponseType'
-        );
+        return $this->getAdFormatLeadsAsync($request)->wait();
     }
 
     /**
@@ -883,11 +751,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getAllBidders(\DTS\eBaySDK\Trading\Types\GetAllBiddersRequestType $request)
     {
-        return $this->callOperation(
-            'GetAllBidders',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetAllBiddersResponseType'
-        );
+        return $this->getAllBiddersAsync($request)->wait();
     }
 
     /**
@@ -909,11 +773,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getApiAccessRules(\DTS\eBaySDK\Trading\Types\GetApiAccessRulesRequestType $request)
     {
-        return $this->callOperation(
-            'GetApiAccessRules',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetApiAccessRulesResponseType'
-        );
+        return $this->getApiAccessRulesAsync($request)->wait();
     }
 
     /**
@@ -935,11 +795,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getBestOffers(\DTS\eBaySDK\Trading\Types\GetBestOffersRequestType $request)
     {
-        return $this->callOperation(
-            'GetBestOffers',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetBestOffersResponseType'
-        );
+        return $this->getBestOffersAsync($request)->wait();
     }
 
     /**
@@ -961,11 +817,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getBidderList(\DTS\eBaySDK\Trading\Types\GetBidderListRequestType $request)
     {
-        return $this->callOperation(
-            'GetBidderList',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetBidderListResponseType'
-        );
+        return $this->getBidderListAsync($request)->wait();
     }
 
     /**
@@ -987,11 +839,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getCategories(\DTS\eBaySDK\Trading\Types\GetCategoriesRequestType $request)
     {
-        return $this->callOperation(
-            'GetCategories',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCategoriesResponseType'
-        );
+        return $this->getCategoriesAsync($request)->wait();
     }
 
     /**
@@ -1013,11 +861,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getCategoryFeatures(\DTS\eBaySDK\Trading\Types\GetCategoryFeaturesRequestType $request)
     {
-        return $this->callOperation(
-            'GetCategoryFeatures',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCategoryFeaturesResponseType'
-        );
+        return $this->getCategoryFeaturesAsync($request)->wait();
     }
 
     /**
@@ -1039,11 +883,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getCategoryMappings(\DTS\eBaySDK\Trading\Types\GetCategoryMappingsRequestType $request)
     {
-        return $this->callOperation(
-            'GetCategoryMappings',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCategoryMappingsResponseType'
-        );
+        return $this->getCategoryMappingsAsync($request)->wait();
     }
 
     /**
@@ -1065,11 +905,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getCategorySpecifics(\DTS\eBaySDK\Trading\Types\GetCategorySpecificsRequestType $request)
     {
-        return $this->callOperation(
-            'GetCategorySpecifics',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCategorySpecificsResponseType'
-        );
+        return $this->getCategorySpecificsAsync($request)->wait();
     }
 
     /**
@@ -1091,11 +927,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getChallengeToken(\DTS\eBaySDK\Trading\Types\GetChallengeTokenRequestType $request)
     {
-        return $this->callOperation(
-            'GetChallengeToken',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetChallengeTokenResponseType'
-        );
+        return $this->getChallengeTokenAsync($request)->wait();
     }
 
     /**
@@ -1117,11 +949,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getCharities(\DTS\eBaySDK\Trading\Types\GetCharitiesRequestType $request)
     {
-        return $this->callOperation(
-            'GetCharities',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetCharitiesResponseType'
-        );
+        return $this->getCharitiesAsync($request)->wait();
     }
 
     /**
@@ -1143,11 +971,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getClientAlertsAuthToken(\DTS\eBaySDK\Trading\Types\GetClientAlertsAuthTokenRequestType $request)
     {
-        return $this->callOperation(
-            'GetClientAlertsAuthToken',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetClientAlertsAuthTokenResponseType'
-        );
+        return $this->getClientAlertsAuthTokenAsync($request)->wait();
     }
 
     /**
@@ -1169,11 +993,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getContextualKeywords(\DTS\eBaySDK\Trading\Types\GetContextualKeywordsRequestType $request)
     {
-        return $this->callOperation(
-            'GetContextualKeywords',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetContextualKeywordsResponseType'
-        );
+        return $this->getContextualKeywordsAsync($request)->wait();
     }
 
     /**
@@ -1195,11 +1015,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getDescriptionTemplates(\DTS\eBaySDK\Trading\Types\GetDescriptionTemplatesRequestType $request)
     {
-        return $this->callOperation(
-            'GetDescriptionTemplates',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetDescriptionTemplatesResponseType'
-        );
+        return $this->getDescriptionTemplatesAsync($request)->wait();
     }
 
     /**
@@ -1221,11 +1037,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getDispute(\DTS\eBaySDK\Trading\Types\GetDisputeRequestType $request)
     {
-        return $this->callOperation(
-            'GetDispute',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetDisputeResponseType'
-        );
+        return $this->getDisputeAsync($request)->wait();
     }
 
     /**
@@ -1247,11 +1059,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getFeedback(\DTS\eBaySDK\Trading\Types\GetFeedbackRequestType $request)
     {
-        return $this->callOperation(
-            'GetFeedback',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetFeedbackResponseType'
-        );
+        return $this->getFeedbackAsync($request)->wait();
     }
 
     /**
@@ -1273,11 +1081,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getItem(\DTS\eBaySDK\Trading\Types\GetItemRequestType $request)
     {
-        return $this->callOperation(
-            'GetItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetItemResponseType'
-        );
+        return $this->getItemAsync($request)->wait();
     }
 
     /**
@@ -1299,11 +1103,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getItemShipping(\DTS\eBaySDK\Trading\Types\GetItemShippingRequestType $request)
     {
-        return $this->callOperation(
-            'GetItemShipping',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetItemShippingResponseType'
-        );
+        return $this->getItemShippingAsync($request)->wait();
     }
 
     /**
@@ -1325,11 +1125,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getItemTransactions(\DTS\eBaySDK\Trading\Types\GetItemTransactionsRequestType $request)
     {
-        return $this->callOperation(
-            'GetItemTransactions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetItemTransactionsResponseType'
-        );
+        return $this->getItemTransactionsAsync($request)->wait();
     }
 
     /**
@@ -1351,11 +1147,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getItemsAwaitingFeedback(\DTS\eBaySDK\Trading\Types\GetItemsAwaitingFeedbackRequestType $request)
     {
-        return $this->callOperation(
-            'GetItemsAwaitingFeedback',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetItemsAwaitingFeedbackResponseType'
-        );
+        return $this->getItemsAwaitingFeedbackAsync($request)->wait();
     }
 
     /**
@@ -1377,11 +1169,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMemberMessages(\DTS\eBaySDK\Trading\Types\GetMemberMessagesRequestType $request)
     {
-        return $this->callOperation(
-            'GetMemberMessages',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMemberMessagesResponseType'
-        );
+        return $this->getMemberMessagesAsync($request)->wait();
     }
 
     /**
@@ -1403,11 +1191,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMessagePreferences(\DTS\eBaySDK\Trading\Types\GetMessagePreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'GetMessagePreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMessagePreferencesResponseType'
-        );
+        return $this->getMessagePreferencesAsync($request)->wait();
     }
 
     /**
@@ -1429,11 +1213,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMyMessages(\DTS\eBaySDK\Trading\Types\GetMyMessagesRequestType $request)
     {
-        return $this->callOperation(
-            'GetMyMessages',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMyMessagesResponseType'
-        );
+        return $this->getMyMessagesAsync($request)->wait();
     }
 
     /**
@@ -1455,11 +1235,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMyeBayBuying(\DTS\eBaySDK\Trading\Types\GetMyeBayBuyingRequestType $request)
     {
-        return $this->callOperation(
-            'GetMyeBayBuying',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMyeBayBuyingResponseType'
-        );
+        return $this->getMyeBayBuyingAsync($request)->wait();
     }
 
     /**
@@ -1481,11 +1257,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMyeBayReminders(\DTS\eBaySDK\Trading\Types\GetMyeBayRemindersRequestType $request)
     {
-        return $this->callOperation(
-            'GetMyeBayReminders',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMyeBayRemindersResponseType'
-        );
+        return $this->getMyeBayRemindersAsync($request)->wait();
     }
 
     /**
@@ -1507,11 +1279,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getMyeBaySelling(\DTS\eBaySDK\Trading\Types\GetMyeBaySellingRequestType $request)
     {
-        return $this->callOperation(
-            'GetMyeBaySelling',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetMyeBaySellingResponseType'
-        );
+        return $this->getMyeBaySellingAsync($request)->wait();
     }
 
     /**
@@ -1533,11 +1301,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getNotificationPreferences(\DTS\eBaySDK\Trading\Types\GetNotificationPreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'GetNotificationPreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetNotificationPreferencesResponseType'
-        );
+        return $this->getNotificationPreferencesAsync($request)->wait();
     }
 
     /**
@@ -1559,11 +1323,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getNotificationsUsage(\DTS\eBaySDK\Trading\Types\GetNotificationsUsageRequestType $request)
     {
-        return $this->callOperation(
-            'GetNotificationsUsage',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetNotificationsUsageResponseType'
-        );
+        return $this->getNotificationsUsageAsync($request)->wait();
     }
 
     /**
@@ -1585,11 +1345,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getOrderTransactions(\DTS\eBaySDK\Trading\Types\GetOrderTransactionsRequestType $request)
     {
-        return $this->callOperation(
-            'GetOrderTransactions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetOrderTransactionsResponseType'
-        );
+        return $this->getOrderTransactionsAsync($request)->wait();
     }
 
     /**
@@ -1611,11 +1367,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getOrders(\DTS\eBaySDK\Trading\Types\GetOrdersRequestType $request)
     {
-        return $this->callOperation(
-            'GetOrders',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetOrdersResponseType'
-        );
+        return $this->getOrdersAsync($request)->wait();
     }
 
     /**
@@ -1637,11 +1389,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getPromotionalSaleDetails(\DTS\eBaySDK\Trading\Types\GetPromotionalSaleDetailsRequestType $request)
     {
-        return $this->callOperation(
-            'GetPromotionalSaleDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetPromotionalSaleDetailsResponseType'
-        );
+        return $this->getPromotionalSaleDetailsAsync($request)->wait();
     }
 
     /**
@@ -1663,11 +1411,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellerDashboard(\DTS\eBaySDK\Trading\Types\GetSellerDashboardRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellerDashboard',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerDashboardResponseType'
-        );
+        return $this->getSellerDashboardAsync($request)->wait();
     }
 
     /**
@@ -1689,11 +1433,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellerEvents(\DTS\eBaySDK\Trading\Types\GetSellerEventsRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellerEvents',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerEventsResponseType'
-        );
+        return $this->getSellerEventsAsync($request)->wait();
     }
 
     /**
@@ -1715,11 +1455,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellerList(\DTS\eBaySDK\Trading\Types\GetSellerListRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellerList',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerListResponseType'
-        );
+        return $this->getSellerListAsync($request)->wait();
     }
 
     /**
@@ -1741,11 +1477,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellerPayments(\DTS\eBaySDK\Trading\Types\GetSellerPaymentsRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellerPayments',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerPaymentsResponseType'
-        );
+        return $this->getSellerPaymentsAsync($request)->wait();
     }
 
     /**
@@ -1767,11 +1499,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellerTransactions(\DTS\eBaySDK\Trading\Types\GetSellerTransactionsRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellerTransactions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerTransactionsResponseType'
-        );
+        return $this->getSellerTransactionsAsync($request)->wait();
     }
 
     /**
@@ -1793,11 +1521,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerAlerts(\DTS\eBaySDK\Trading\Types\GetSellingManagerAlertsRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerAlerts',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerAlertsResponseType'
-        );
+        return $this->getSellingManagerAlertsAsync($request)->wait();
     }
 
     /**
@@ -1819,11 +1543,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerEmailLog(\DTS\eBaySDK\Trading\Types\GetSellingManagerEmailLogRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerEmailLog',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerEmailLogResponseType'
-        );
+        return $this->getSellingManagerEmailLogAsync($request)->wait();
     }
 
     /**
@@ -1845,11 +1565,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerInventory(\DTS\eBaySDK\Trading\Types\GetSellingManagerInventoryRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerInventory',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerInventoryResponseType'
-        );
+        return $this->getSellingManagerInventoryAsync($request)->wait();
     }
 
     /**
@@ -1871,11 +1587,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerInventoryFolder(\DTS\eBaySDK\Trading\Types\GetSellingManagerInventoryFolderRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerInventoryFolder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerInventoryFolderResponseType'
-        );
+        return $this->getSellingManagerInventoryFolderAsync($request)->wait();
     }
 
     /**
@@ -1897,11 +1609,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerItemAutomationRule(\DTS\eBaySDK\Trading\Types\GetSellingManagerItemAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerItemAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerItemAutomationRuleResponseType'
-        );
+        return $this->getSellingManagerItemAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -1923,11 +1631,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerSaleRecord(\DTS\eBaySDK\Trading\Types\GetSellingManagerSaleRecordRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerSaleRecord',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerSaleRecordResponseType'
-        );
+        return $this->getSellingManagerSaleRecordAsync($request)->wait();
     }
 
     /**
@@ -1949,11 +1653,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerSoldListings(\DTS\eBaySDK\Trading\Types\GetSellingManagerSoldListingsRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerSoldListings',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerSoldListingsResponseType'
-        );
+        return $this->getSellingManagerSoldListingsAsync($request)->wait();
     }
 
     /**
@@ -1975,11 +1675,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerTemplateAutomationRule(\DTS\eBaySDK\Trading\Types\GetSellingManagerTemplateAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerTemplateAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerTemplateAutomationRuleResponseType'
-        );
+        return $this->getSellingManagerTemplateAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -2001,11 +1697,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSellingManagerTemplates(\DTS\eBaySDK\Trading\Types\GetSellingManagerTemplatesRequestType $request)
     {
-        return $this->callOperation(
-            'GetSellingManagerTemplates',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellingManagerTemplatesResponseType'
-        );
+        return $this->getSellingManagerTemplatesAsync($request)->wait();
     }
 
     /**
@@ -2027,11 +1719,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSessionID(\DTS\eBaySDK\Trading\Types\GetSessionIDRequestType $request)
     {
-        return $this->callOperation(
-            'GetSessionID',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSessionIDResponseType'
-        );
+        return $this->getSessionIDAsync($request)->wait();
     }
 
     /**
@@ -2053,11 +1741,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getShippingDiscountProfiles(\DTS\eBaySDK\Trading\Types\GetShippingDiscountProfilesRequestType $request)
     {
-        return $this->callOperation(
-            'GetShippingDiscountProfiles',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetShippingDiscountProfilesResponseType'
-        );
+        return $this->getShippingDiscountProfilesAsync($request)->wait();
     }
 
     /**
@@ -2079,11 +1763,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getStore(\DTS\eBaySDK\Trading\Types\GetStoreRequestType $request)
     {
-        return $this->callOperation(
-            'GetStore',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetStoreResponseType'
-        );
+        return $this->getStoreAsync($request)->wait();
     }
 
     /**
@@ -2105,11 +1785,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getStoreCategoryUpdateStatus(\DTS\eBaySDK\Trading\Types\GetStoreCategoryUpdateStatusRequestType $request)
     {
-        return $this->callOperation(
-            'GetStoreCategoryUpdateStatus',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetStoreCategoryUpdateStatusResponseType'
-        );
+        return $this->getStoreCategoryUpdateStatusAsync($request)->wait();
     }
 
     /**
@@ -2131,11 +1807,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getStoreCustomPage(\DTS\eBaySDK\Trading\Types\GetStoreCustomPageRequestType $request)
     {
-        return $this->callOperation(
-            'GetStoreCustomPage',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetStoreCustomPageResponseType'
-        );
+        return $this->getStoreCustomPageAsync($request)->wait();
     }
 
     /**
@@ -2157,11 +1829,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getStoreOptions(\DTS\eBaySDK\Trading\Types\GetStoreOptionsRequestType $request)
     {
-        return $this->callOperation(
-            'GetStoreOptions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetStoreOptionsResponseType'
-        );
+        return $this->getStoreOptionsAsync($request)->wait();
     }
 
     /**
@@ -2183,11 +1851,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getStorePreferences(\DTS\eBaySDK\Trading\Types\GetStorePreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'GetStorePreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetStorePreferencesResponseType'
-        );
+        return $this->getStorePreferencesAsync($request)->wait();
     }
 
     /**
@@ -2209,11 +1873,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getSuggestedCategories(\DTS\eBaySDK\Trading\Types\GetSuggestedCategoriesRequestType $request)
     {
-        return $this->callOperation(
-            'GetSuggestedCategories',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSuggestedCategoriesResponseType'
-        );
+        return $this->getSuggestedCategoriesAsync($request)->wait();
     }
 
     /**
@@ -2235,11 +1895,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getTaxTable(\DTS\eBaySDK\Trading\Types\GetTaxTableRequestType $request)
     {
-        return $this->callOperation(
-            'GetTaxTable',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetTaxTableResponseType'
-        );
+        return $this->getTaxTableAsync($request)->wait();
     }
 
     /**
@@ -2261,11 +1917,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getTokenStatus(\DTS\eBaySDK\Trading\Types\GetTokenStatusRequestType $request)
     {
-        return $this->callOperation(
-            'GetTokenStatus',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetTokenStatusResponseType'
-        );
+        return $this->getTokenStatusAsync($request)->wait();
     }
 
     /**
@@ -2287,11 +1939,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getUser(\DTS\eBaySDK\Trading\Types\GetUserRequestType $request)
     {
-        return $this->callOperation(
-            'GetUser',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetUserResponseType'
-        );
+        return $this->getUserAsync($request)->wait();
     }
 
     /**
@@ -2313,11 +1961,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getUserContactDetails(\DTS\eBaySDK\Trading\Types\GetUserContactDetailsRequestType $request)
     {
-        return $this->callOperation(
-            'GetUserContactDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetUserContactDetailsResponseType'
-        );
+        return $this->getUserContactDetailsAsync($request)->wait();
     }
 
     /**
@@ -2339,11 +1983,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getUserDisputes(\DTS\eBaySDK\Trading\Types\GetUserDisputesRequestType $request)
     {
-        return $this->callOperation(
-            'GetUserDisputes',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetUserDisputesResponseType'
-        );
+        return $this->getUserDisputesAsync($request)->wait();
     }
 
     /**
@@ -2365,11 +2005,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getUserPreferences(\DTS\eBaySDK\Trading\Types\GetUserPreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'GetUserPreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetUserPreferencesResponseType'
-        );
+        return $this->getUserPreferencesAsync($request)->wait();
     }
 
     /**
@@ -2391,11 +2027,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getVeROReasonCodeDetails(\DTS\eBaySDK\Trading\Types\GetVeROReasonCodeDetailsRequestType $request)
     {
-        return $this->callOperation(
-            'GetVeROReasonCodeDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetVeROReasonCodeDetailsResponseType'
-        );
+        return $this->getVeROReasonCodeDetailsAsync($request)->wait();
     }
 
     /**
@@ -2417,11 +2049,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function getVeROReportStatus(\DTS\eBaySDK\Trading\Types\GetVeROReportStatusRequestType $request)
     {
-        return $this->callOperation(
-            'GetVeROReportStatus',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetVeROReportStatusResponseType'
-        );
+        return $this->getVeROReportStatusAsync($request)->wait();
     }
 
     /**
@@ -2443,11 +2071,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function geteBayDetails(\DTS\eBaySDK\Trading\Types\GeteBayDetailsRequestType $request)
     {
-        return $this->callOperation(
-            'GeteBayDetails',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GeteBayDetailsResponseType'
-        );
+        return $this->geteBayDetailsAsync($request)->wait();
     }
 
     /**
@@ -2469,11 +2093,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function geteBayOfficialTime(\DTS\eBaySDK\Trading\Types\GeteBayOfficialTimeRequestType $request)
     {
-        return $this->callOperation(
-            'GeteBayOfficialTime',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GeteBayOfficialTimeResponseType'
-        );
+        return $this->geteBayOfficialTimeAsync($request)->wait();
     }
 
     /**
@@ -2495,11 +2115,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function issueRefund(\DTS\eBaySDK\Trading\Types\IssueRefundRequestType $request)
     {
-        return $this->callOperation(
-            'IssueRefund',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\IssueRefundResponseType'
-        );
+        return $this->issueRefundAsync($request)->wait();
     }
 
     /**
@@ -2521,11 +2137,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function leaveFeedback(\DTS\eBaySDK\Trading\Types\LeaveFeedbackRequestType $request)
     {
-        return $this->callOperation(
-            'LeaveFeedback',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\LeaveFeedbackResponseType'
-        );
+        return $this->leaveFeedbackAsync($request)->wait();
     }
 
     /**
@@ -2547,11 +2159,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function moveSellingManagerInventoryFolder(\DTS\eBaySDK\Trading\Types\MoveSellingManagerInventoryFolderRequestType $request)
     {
-        return $this->callOperation(
-            'MoveSellingManagerInventoryFolder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\MoveSellingManagerInventoryFolderResponseType'
-        );
+        return $this->moveSellingManagerInventoryFolderAsync($request)->wait();
     }
 
     /**
@@ -2573,11 +2181,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function placeOffer(\DTS\eBaySDK\Trading\Types\PlaceOfferRequestType $request)
     {
-        return $this->callOperation(
-            'PlaceOffer',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\PlaceOfferResponseType'
-        );
+        return $this->placeOfferAsync($request)->wait();
     }
 
     /**
@@ -2599,11 +2203,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function relistFixedPriceItem(\DTS\eBaySDK\Trading\Types\RelistFixedPriceItemRequestType $request)
     {
-        return $this->callOperation(
-            'RelistFixedPriceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RelistFixedPriceItemResponseType'
-        );
+        return $this->relistFixedPriceItemAsync($request)->wait();
     }
 
     /**
@@ -2625,11 +2225,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function relistItem(\DTS\eBaySDK\Trading\Types\RelistItemRequestType $request)
     {
-        return $this->callOperation(
-            'RelistItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RelistItemResponseType'
-        );
+        return $this->relistItemAsync($request)->wait();
     }
 
     /**
@@ -2651,11 +2247,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function removeFromWatchList(\DTS\eBaySDK\Trading\Types\RemoveFromWatchListRequestType $request)
     {
-        return $this->callOperation(
-            'RemoveFromWatchList',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RemoveFromWatchListResponseType'
-        );
+        return $this->removeFromWatchListAsync($request)->wait();
     }
 
     /**
@@ -2677,11 +2269,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function respondToBestOffer(\DTS\eBaySDK\Trading\Types\RespondToBestOfferRequestType $request)
     {
-        return $this->callOperation(
-            'RespondToBestOffer',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RespondToBestOfferResponseType'
-        );
+        return $this->respondToBestOfferAsync($request)->wait();
     }
 
     /**
@@ -2703,11 +2291,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function respondToFeedback(\DTS\eBaySDK\Trading\Types\RespondToFeedbackRequestType $request)
     {
-        return $this->callOperation(
-            'RespondToFeedback',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RespondToFeedbackResponseType'
-        );
+        return $this->respondToFeedbackAsync($request)->wait();
     }
 
     /**
@@ -2729,11 +2313,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseCheckoutStatus(\DTS\eBaySDK\Trading\Types\ReviseCheckoutStatusRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseCheckoutStatus',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseCheckoutStatusResponseType'
-        );
+        return $this->reviseCheckoutStatusAsync($request)->wait();
     }
 
     /**
@@ -2755,11 +2335,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseFixedPriceItem(\DTS\eBaySDK\Trading\Types\ReviseFixedPriceItemRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseFixedPriceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseFixedPriceItemResponseType'
-        );
+        return $this->reviseFixedPriceItemAsync($request)->wait();
     }
 
     /**
@@ -2781,11 +2357,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseInventoryStatus(\DTS\eBaySDK\Trading\Types\ReviseInventoryStatusRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseInventoryStatus',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseInventoryStatusResponseType'
-        );
+        return $this->reviseInventoryStatusAsync($request)->wait();
     }
 
     /**
@@ -2807,11 +2379,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseItem(\DTS\eBaySDK\Trading\Types\ReviseItemRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseItemResponseType'
-        );
+        return $this->reviseItemAsync($request)->wait();
     }
 
     /**
@@ -2833,11 +2401,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseMyMessages(\DTS\eBaySDK\Trading\Types\ReviseMyMessagesRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseMyMessages',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseMyMessagesResponseType'
-        );
+        return $this->reviseMyMessagesAsync($request)->wait();
     }
 
     /**
@@ -2859,11 +2423,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseMyMessagesFolders(\DTS\eBaySDK\Trading\Types\ReviseMyMessagesFoldersRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseMyMessagesFolders',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseMyMessagesFoldersResponseType'
-        );
+        return $this->reviseMyMessagesFoldersAsync($request)->wait();
     }
 
     /**
@@ -2885,11 +2445,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseSellingManagerInventoryFolder(\DTS\eBaySDK\Trading\Types\ReviseSellingManagerInventoryFolderRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseSellingManagerInventoryFolder',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseSellingManagerInventoryFolderResponseType'
-        );
+        return $this->reviseSellingManagerInventoryFolderAsync($request)->wait();
     }
 
     /**
@@ -2911,11 +2467,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseSellingManagerProduct(\DTS\eBaySDK\Trading\Types\ReviseSellingManagerProductRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseSellingManagerProduct',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseSellingManagerProductResponseType'
-        );
+        return $this->reviseSellingManagerProductAsync($request)->wait();
     }
 
     /**
@@ -2937,11 +2489,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseSellingManagerSaleRecord(\DTS\eBaySDK\Trading\Types\ReviseSellingManagerSaleRecordRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseSellingManagerSaleRecord',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseSellingManagerSaleRecordResponseType'
-        );
+        return $this->reviseSellingManagerSaleRecordAsync($request)->wait();
     }
 
     /**
@@ -2963,11 +2511,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function reviseSellingManagerTemplate(\DTS\eBaySDK\Trading\Types\ReviseSellingManagerTemplateRequestType $request)
     {
-        return $this->callOperation(
-            'ReviseSellingManagerTemplate',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ReviseSellingManagerTemplateResponseType'
-        );
+        return $this->reviseSellingManagerTemplateAsync($request)->wait();
     }
 
     /**
@@ -2989,11 +2533,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function revokeToken(\DTS\eBaySDK\Trading\Types\RevokeTokenRequestType $request)
     {
-        return $this->callOperation(
-            'RevokeToken',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\RevokeTokenResponseType'
-        );
+        return $this->revokeTokenAsync($request)->wait();
     }
 
     /**
@@ -3015,11 +2555,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function saveItemToSellingManagerTemplate(\DTS\eBaySDK\Trading\Types\SaveItemToSellingManagerTemplateRequestType $request)
     {
-        return $this->callOperation(
-            'SaveItemToSellingManagerTemplate',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SaveItemToSellingManagerTemplateResponseType'
-        );
+        return $this->saveItemToSellingManagerTemplateAsync($request)->wait();
     }
 
     /**
@@ -3041,11 +2577,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function sellerReverseDispute(\DTS\eBaySDK\Trading\Types\SellerReverseDisputeRequestType $request)
     {
-        return $this->callOperation(
-            'SellerReverseDispute',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SellerReverseDisputeResponseType'
-        );
+        return $this->sellerReverseDisputeAsync($request)->wait();
     }
 
     /**
@@ -3067,11 +2599,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function sendInvoice(\DTS\eBaySDK\Trading\Types\SendInvoiceRequestType $request)
     {
-        return $this->callOperation(
-            'SendInvoice',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SendInvoiceResponseType'
-        );
+        return $this->sendInvoiceAsync($request)->wait();
     }
 
     /**
@@ -3093,11 +2621,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setMessagePreferences(\DTS\eBaySDK\Trading\Types\SetMessagePreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'SetMessagePreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetMessagePreferencesResponseType'
-        );
+        return $this->setMessagePreferencesAsync($request)->wait();
     }
 
     /**
@@ -3119,11 +2643,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setNotificationPreferences(\DTS\eBaySDK\Trading\Types\SetNotificationPreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'SetNotificationPreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetNotificationPreferencesResponseType'
-        );
+        return $this->setNotificationPreferencesAsync($request)->wait();
     }
 
     /**
@@ -3145,11 +2665,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setPromotionalSale(\DTS\eBaySDK\Trading\Types\SetPromotionalSaleRequestType $request)
     {
-        return $this->callOperation(
-            'SetPromotionalSale',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetPromotionalSaleResponseType'
-        );
+        return $this->setPromotionalSaleAsync($request)->wait();
     }
 
     /**
@@ -3171,11 +2687,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setPromotionalSaleListings(\DTS\eBaySDK\Trading\Types\SetPromotionalSaleListingsRequestType $request)
     {
-        return $this->callOperation(
-            'SetPromotionalSaleListings',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetPromotionalSaleListingsResponseType'
-        );
+        return $this->setPromotionalSaleListingsAsync($request)->wait();
     }
 
     /**
@@ -3197,11 +2709,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setSellingManagerFeedbackOptions(\DTS\eBaySDK\Trading\Types\SetSellingManagerFeedbackOptionsRequestType $request)
     {
-        return $this->callOperation(
-            'SetSellingManagerFeedbackOptions',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetSellingManagerFeedbackOptionsResponseType'
-        );
+        return $this->setSellingManagerFeedbackOptionsAsync($request)->wait();
     }
 
     /**
@@ -3223,11 +2731,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setSellingManagerItemAutomationRule(\DTS\eBaySDK\Trading\Types\SetSellingManagerItemAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'SetSellingManagerItemAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetSellingManagerItemAutomationRuleResponseType'
-        );
+        return $this->setSellingManagerItemAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -3249,11 +2753,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setSellingManagerTemplateAutomationRule(\DTS\eBaySDK\Trading\Types\SetSellingManagerTemplateAutomationRuleRequestType $request)
     {
-        return $this->callOperation(
-            'SetSellingManagerTemplateAutomationRule',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetSellingManagerTemplateAutomationRuleResponseType'
-        );
+        return $this->setSellingManagerTemplateAutomationRuleAsync($request)->wait();
     }
 
     /**
@@ -3275,11 +2775,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setShippingDiscountProfiles(\DTS\eBaySDK\Trading\Types\SetShippingDiscountProfilesRequestType $request)
     {
-        return $this->callOperation(
-            'SetShippingDiscountProfiles',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetShippingDiscountProfilesResponseType'
-        );
+        return $this->setShippingDiscountProfilesAsync($request)->wait();
     }
 
     /**
@@ -3301,11 +2797,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setStore(\DTS\eBaySDK\Trading\Types\SetStoreRequestType $request)
     {
-        return $this->callOperation(
-            'SetStore',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetStoreResponseType'
-        );
+        return $this->setStoreAsync($request)->wait();
     }
 
     /**
@@ -3327,11 +2819,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setStoreCategories(\DTS\eBaySDK\Trading\Types\SetStoreCategoriesRequestType $request)
     {
-        return $this->callOperation(
-            'SetStoreCategories',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetStoreCategoriesResponseType'
-        );
+        return $this->setStoreCategoriesAsync($request)->wait();
     }
 
     /**
@@ -3353,11 +2841,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setStoreCustomPage(\DTS\eBaySDK\Trading\Types\SetStoreCustomPageRequestType $request)
     {
-        return $this->callOperation(
-            'SetStoreCustomPage',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetStoreCustomPageResponseType'
-        );
+        return $this->setStoreCustomPageAsync($request)->wait();
     }
 
     /**
@@ -3379,11 +2863,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setStorePreferences(\DTS\eBaySDK\Trading\Types\SetStorePreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'SetStorePreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetStorePreferencesResponseType'
-        );
+        return $this->setStorePreferencesAsync($request)->wait();
     }
 
     /**
@@ -3405,11 +2885,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setTaxTable(\DTS\eBaySDK\Trading\Types\SetTaxTableRequestType $request)
     {
-        return $this->callOperation(
-            'SetTaxTable',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetTaxTableResponseType'
-        );
+        return $this->setTaxTableAsync($request)->wait();
     }
 
     /**
@@ -3431,11 +2907,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setUserNotes(\DTS\eBaySDK\Trading\Types\SetUserNotesRequestType $request)
     {
-        return $this->callOperation(
-            'SetUserNotes',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetUserNotesResponseType'
-        );
+        return $this->setUserNotesAsync($request)->wait();
     }
 
     /**
@@ -3457,11 +2929,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function setUserPreferences(\DTS\eBaySDK\Trading\Types\SetUserPreferencesRequestType $request)
     {
-        return $this->callOperation(
-            'SetUserPreferences',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\SetUserPreferencesResponseType'
-        );
+        return $this->setUserPreferencesAsync($request)->wait();
     }
 
     /**
@@ -3483,11 +2951,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function uploadSiteHostedPictures(\DTS\eBaySDK\Trading\Types\UploadSiteHostedPicturesRequestType $request)
     {
-        return $this->callOperation(
-            'UploadSiteHostedPictures',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\UploadSiteHostedPicturesResponseType'
-        );
+        return $this->uploadSiteHostedPicturesAsync($request)->wait();
     }
 
     /**
@@ -3509,11 +2973,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function validateChallengeInput(\DTS\eBaySDK\Trading\Types\ValidateChallengeInputRequestType $request)
     {
-        return $this->callOperation(
-            'ValidateChallengeInput',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ValidateChallengeInputResponseType'
-        );
+        return $this->validateChallengeInputAsync($request)->wait();
     }
 
     /**
@@ -3535,11 +2995,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function validateTestUserRegistration(\DTS\eBaySDK\Trading\Types\ValidateTestUserRegistrationRequestType $request)
     {
-        return $this->callOperation(
-            'ValidateTestUserRegistration',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\ValidateTestUserRegistrationResponseType'
-        );
+        return $this->validateTestUserRegistrationAsync($request)->wait();
     }
 
     /**
@@ -3561,11 +3017,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function veROReportItems(\DTS\eBaySDK\Trading\Types\VeROReportItemsRequestType $request)
     {
-        return $this->callOperation(
-            'VeROReportItems',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\VeROReportItemsResponseType'
-        );
+        return $this->veROReportItemsAsync($request)->wait();
     }
 
     /**
@@ -3587,11 +3039,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function verifyAddFixedPriceItem(\DTS\eBaySDK\Trading\Types\VerifyAddFixedPriceItemRequestType $request)
     {
-        return $this->callOperation(
-            'VerifyAddFixedPriceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\VerifyAddFixedPriceItemResponseType'
-        );
+        return $this->verifyAddFixedPriceItemAsync($request)->wait();
     }
 
     /**
@@ -3613,11 +3061,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function verifyAddItem(\DTS\eBaySDK\Trading\Types\VerifyAddItemRequestType $request)
     {
-        return $this->callOperation(
-            'VerifyAddItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\VerifyAddItemResponseType'
-        );
+        return $this->verifyAddItemAsync($request)->wait();
     }
 
     /**
@@ -3639,11 +3083,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function verifyAddSecondChanceItem(\DTS\eBaySDK\Trading\Types\VerifyAddSecondChanceItemRequestType $request)
     {
-        return $this->callOperation(
-            'VerifyAddSecondChanceItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\VerifyAddSecondChanceItemResponseType'
-        );
+        return $this->verifyAddSecondChanceItemAsync($request)->wait();
     }
 
     /**
@@ -3665,11 +3105,7 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
      */
     public function verifyRelistItem(\DTS\eBaySDK\Trading\Types\VerifyRelistItemRequestType $request)
     {
-        return $this->callOperation(
-            'VerifyRelistItem',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\VerifyRelistItemResponseType'
-        );
+        return $this->verifyRelistItemAsync($request)->wait();
     }
 
     /**

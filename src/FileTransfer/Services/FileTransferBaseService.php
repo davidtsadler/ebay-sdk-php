@@ -50,9 +50,9 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
      * @param string The name of the PHP class that will be created from the XML response.
      *
-     * @return mixed A response object created from the XML respose.
+     * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
-    protected function callOperation($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
+    protected function callOperationAsync($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
         /**
             Modify the request object to add xop:Include element.
@@ -79,7 +79,7 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
             }
         }
 
-        return parent::callOperation($name, $request, $responseClass);
+        return parent::callOperationAsync($name, $request, $responseClass);
     }
 
     /**

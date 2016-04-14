@@ -25,11 +25,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function getSearchKeywordsRecommendation(\DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationRequest $request)
     {
-        return $this->callOperation(
-            'getSearchKeywordsRecommendation',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse'
-        );
+        return $this->getSearchKeywordsRecommendationAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsByKeywords(\DTS\eBaySDK\Finding\Types\FindItemsByKeywordsRequest $request)
     {
-        return $this->callOperation(
-            'findItemsByKeywords',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByKeywordsResponse'
-        );
+        return $this->findItemsByKeywordsAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsByCategory(\DTS\eBaySDK\Finding\Types\FindItemsByCategoryRequest $request)
     {
-        return $this->callOperation(
-            'findItemsByCategory',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByCategoryResponse'
-        );
+        return $this->findItemsByCategoryAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsAdvanced(\DTS\eBaySDK\Finding\Types\FindItemsAdvancedRequest $request)
     {
-        return $this->callOperation(
-            'findItemsAdvanced',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsAdvancedResponse'
-        );
+        return $this->findItemsAdvancedAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsByProduct(\DTS\eBaySDK\Finding\Types\FindItemsByProductRequest $request)
     {
-        return $this->callOperation(
-            'findItemsByProduct',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByProductResponse'
-        );
+        return $this->findItemsByProductAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsIneBayStores(\DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresRequest $request)
     {
-        return $this->callOperation(
-            'findItemsIneBayStores',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse'
-        );
+        return $this->findItemsIneBayStoresAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsByImage(\DTS\eBaySDK\Finding\Types\FindItemsByImageRequest $request)
     {
-        return $this->callOperation(
-            'findItemsByImage',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByImageResponse'
-        );
+        return $this->findItemsByImageAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function getHistograms(\DTS\eBaySDK\Finding\Types\GetHistogramsRequest $request)
     {
-        return $this->callOperation(
-            'getHistograms',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\GetHistogramsResponse'
-        );
+        return $this->getHistogramsAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function getVersion(\DTS\eBaySDK\Finding\Types\GetVersionRequest $request)
     {
-        return $this->callOperation(
-            'getVersion',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\GetVersionResponse'
-        );
+        return $this->getVersionAsync($request)->wait();
     }
 
     /**
@@ -259,11 +223,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findItemsForFavoriteSearch(\DTS\eBaySDK\Finding\Types\FindItemsForFavoriteSearchRequest $request)
     {
-        return $this->callOperation(
-            'findItemsForFavoriteSearch',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsForFavoriteSearchResponse'
-        );
+        return $this->findItemsForFavoriteSearchAsync($request)->wait();
     }
 
     /**
@@ -285,11 +245,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
      */
     public function findCompletedItems(\DTS\eBaySDK\Finding\Types\FindCompletedItemsRequest $request)
     {
-        return $this->callOperation(
-            'findCompletedItems',
-            $request,
-            '\DTS\eBaySDK\Finding\Types\FindCompletedItemsResponse'
-        );
+        return $this->findCompletedItemsAsync($request)->wait();
     }
 
     /**

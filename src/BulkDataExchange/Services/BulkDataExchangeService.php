@@ -25,11 +25,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function createUploadJob(\DTS\eBaySDK\BulkDataExchange\Types\CreateUploadJobRequest $request)
     {
-        return $this->callOperation(
-            'createUploadJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\CreateUploadJobResponse'
-        );
+        return $this->createUploadJobAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function startUploadJob(\DTS\eBaySDK\BulkDataExchange\Types\StartUploadJobRequest $request)
     {
-        return $this->callOperation(
-            'startUploadJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\StartUploadJobResponse'
-        );
+        return $this->startUploadJobAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function abortJob(\DTS\eBaySDK\BulkDataExchange\Types\AbortJobRequest $request)
     {
-        return $this->callOperation(
-            'abortJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\AbortJobResponse'
-        );
+        return $this->abortJobAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function getJobs(\DTS\eBaySDK\BulkDataExchange\Types\GetJobsRequest $request)
     {
-        return $this->callOperation(
-            'getJobs',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\GetJobsResponse'
-        );
+        return $this->getJobsAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function getJobStatus(\DTS\eBaySDK\BulkDataExchange\Types\GetJobStatusRequest $request)
     {
-        return $this->callOperation(
-            'getJobStatus',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\GetJobStatusResponse'
-        );
+        return $this->getJobStatusAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function startDownloadJob(\DTS\eBaySDK\BulkDataExchange\Types\StartDownloadJobRequest $request)
     {
-        return $this->callOperation(
-            'startDownloadJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\StartDownloadJobResponse'
-        );
+        return $this->startDownloadJobAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function createRecurringJob(\DTS\eBaySDK\BulkDataExchange\Types\CreateRecurringJobRequest $request)
     {
-        return $this->callOperation(
-            'createRecurringJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\CreateRecurringJobResponse'
-        );
+        return $this->createRecurringJobAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function deleteRecurringJob(\DTS\eBaySDK\BulkDataExchange\Types\DeleteRecurringJobRequest $request)
     {
-        return $this->callOperation(
-            'deleteRecurringJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\DeleteRecurringJobResponse'
-        );
+        return $this->deleteRecurringJobAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function getRecurringJobs(\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobsRequest $request)
     {
-        return $this->callOperation(
-            'getRecurringJobs',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobsResponse'
-        );
+        return $this->getRecurringJobsAsync($request)->wait();
     }
 
     /**
@@ -259,11 +223,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function getRecurringJobExecutionStatus(\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobExecutionStatusRequest $request)
     {
-        return $this->callOperation(
-            'getRecurringJobExecutionStatus',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobExecutionStatusResponse'
-        );
+        return $this->getRecurringJobExecutionStatusAsync($request)->wait();
     }
 
     /**
@@ -285,11 +245,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function getRecurringJobExecutionHistory(\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobExecutionHistoryRequest $request)
     {
-        return $this->callOperation(
-            'getRecurringJobExecutionHistory',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\GetRecurringJobExecutionHistoryResponse'
-        );
+        return $this->getRecurringJobExecutionHistoryAsync($request)->wait();
     }
 
     /**
@@ -311,11 +267,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function activateRecurringJob(\DTS\eBaySDK\BulkDataExchange\Types\ActivateRecurringJobRequest $request)
     {
-        return $this->callOperation(
-            'activateRecurringJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\ActivateRecurringJobResponse'
-        );
+        return $this->activateRecurringJobAsync($request)->wait();
     }
 
     /**
@@ -337,11 +289,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function suspendRecurringJob(\DTS\eBaySDK\BulkDataExchange\Types\SuspendRecurringJobRequest $request)
     {
-        return $this->callOperation(
-            'suspendRecurringJob',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\SuspendRecurringJobResponse'
-        );
+        return $this->suspendRecurringJobAsync($request)->wait();
     }
 
     /**
@@ -363,11 +311,7 @@ class BulkDataExchangeService extends \DTS\eBaySDK\BulkDataExchange\Services\Bul
      */
     public function abortRecurringJobExecution(\DTS\eBaySDK\BulkDataExchange\Types\AbortRecurringJobExecutionRequest $request)
     {
-        return $this->callOperation(
-            'abortRecurringJobExecution',
-            $request,
-            '\DTS\eBaySDK\BulkDataExchange\Types\AbortRecurringJobExecutionResponse'
-        );
+        return $this->abortRecurringJobExecutionAsync($request)->wait();
     }
 
     /**

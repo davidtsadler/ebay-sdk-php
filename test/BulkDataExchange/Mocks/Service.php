@@ -12,10 +12,10 @@ class Service extends \DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeBas
 
     public function testOperation()
     {
-        return $this->callOperation(
+        return $this->callOperationAsync(
             'testOperation',
             new ComplexClass(),
             '\DTS\eBaySDK\Test\Mocks\ComplexClass'
-        );
+        )->wait();
     }
 }

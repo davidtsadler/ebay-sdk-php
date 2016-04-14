@@ -119,20 +119,6 @@ abstract class BaseService
     }
 
     /**
-     * Sends a synchronous API request.
-     *
-     * @param string $name The name of the operation.
-     * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
-     *
-     * @return mixed A response object created from the XML respose.
-     */
-    protected function callOperation($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
-    {
-        return $this->callOperationAsync($name, $request, $responseClass)->wait();
-    }
-
-    /**
      * Sends an asynchronous API request.
      *
      * @param string $name The name of the operation.

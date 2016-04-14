@@ -18,19 +18,19 @@ class Service extends \DTS\eBaySDK\Test\Mocks\BaseService
 
     public function foo(\DTS\eBaySDK\Test\Mocks\ComplexClass $request)
     {
-        return $this->callOperation(
+        return $this->callOperationAsync(
             'foo',
             $request,
             '\DTS\eBaySDK\Test\Mocks\ComplexClass'
-        );
+        )->wait();
     }
 
     public function bar(\DTS\eBaySDK\Test\Mocks\ComplexClass $request)
     {
-        return $this->callOperation(
+        return $this->callOperationAsync(
             'foo',
             $request,
             '\DTS\eBaySDK\Test\Mocks\ComplexClass'
-        );
+        )->wait();
     }
 }

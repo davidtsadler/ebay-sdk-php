@@ -25,11 +25,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function findHalfProducts(\DTS\eBaySDK\Shopping\Types\FindHalfProductsRequestType $request)
     {
-        return $this->callOperation(
-            'FindHalfProducts',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType'
-        );
+        return $this->findHalfProductsAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function findProducts(\DTS\eBaySDK\Shopping\Types\FindProductsRequestType $request)
     {
-        return $this->callOperation(
-            'FindProducts',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindProductsResponseType'
-        );
+        return $this->findProductsAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function findReviewsAndGuides(\DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesRequestType $request)
     {
-        return $this->callOperation(
-            'FindReviewsAndGuides',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesResponseType'
-        );
+        return $this->findReviewsAndGuidesAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getCategoryInfo(\DTS\eBaySDK\Shopping\Types\GetCategoryInfoRequestType $request)
     {
-        return $this->callOperation(
-            'GetCategoryInfo',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetCategoryInfoResponseType'
-        );
+        return $this->getCategoryInfoAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getItemStatus(\DTS\eBaySDK\Shopping\Types\GetItemStatusRequestType $request)
     {
-        return $this->callOperation(
-            'GetItemStatus',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetItemStatusResponseType'
-        );
+        return $this->getItemStatusAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getMultipleItems(\DTS\eBaySDK\Shopping\Types\GetMultipleItemsRequestType $request)
     {
-        return $this->callOperation(
-            'GetMultipleItems',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetMultipleItemsResponseType'
-        );
+        return $this->getMultipleItemsAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getShippingCosts(\DTS\eBaySDK\Shopping\Types\GetShippingCostsRequestType $request)
     {
-        return $this->callOperation(
-            'GetShippingCosts',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetShippingCostsResponseType'
-        );
+        return $this->getShippingCostsAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getSingleItem(\DTS\eBaySDK\Shopping\Types\GetSingleItemRequestType $request)
     {
-        return $this->callOperation(
-            'GetSingleItem',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetSingleItemResponseType'
-        );
+        return $this->getSingleItemAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function getUserProfile(\DTS\eBaySDK\Shopping\Types\GetUserProfileRequestType $request)
     {
-        return $this->callOperation(
-            'GetUserProfile',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GetUserProfileResponseType'
-        );
+        return $this->getUserProfileAsync($request)->wait();
     }
 
     /**
@@ -259,11 +223,7 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
      */
     public function geteBayTime(\DTS\eBaySDK\Shopping\Types\GeteBayTimeRequestType $request)
     {
-        return $this->callOperation(
-            'GeteBayTime',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\GeteBayTimeResponseType'
-        );
+        return $this->geteBayTimeAsync($request)->wait();
     }
 
     /**

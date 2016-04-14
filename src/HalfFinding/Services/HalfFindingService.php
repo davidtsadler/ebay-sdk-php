@@ -25,11 +25,7 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
      */
     public function getVersion(\DTS\eBaySDK\HalfFinding\Types\GetVersionRequest $request)
     {
-        return $this->callOperation(
-            'getVersion',
-            $request,
-            '\DTS\eBaySDK\HalfFinding\Types\GetVersionResponse'
-        );
+        return $this->getVersionAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
      */
     public function findHalfItems(\DTS\eBaySDK\HalfFinding\Types\FindItemsRequest $request)
     {
-        return $this->callOperation(
-            'findHalfItems',
-            $request,
-            '\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse'
-        );
+        return $this->findHalfItemsAsync($request)->wait();
     }
 
     /**

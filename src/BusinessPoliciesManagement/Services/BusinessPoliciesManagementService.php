@@ -25,11 +25,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function getVersion(\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetVersionRequest $request)
     {
-        return $this->callOperation(
-            'getVersion',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetVersionResponse'
-        );
+        return $this->getVersionAsync($request)->wait();
     }
 
     /**
@@ -51,11 +47,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function removeProfile(\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileRequest $request)
     {
-        return $this->callOperation(
-            'removeProfile',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse'
-        );
+        return $this->removeProfileAsync($request)->wait();
     }
 
     /**
@@ -77,11 +69,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function addSellerProfile(\DTS\eBaySDK\BusinessPoliciesManagement\Types\AddSellerProfileRequest $request)
     {
-        return $this->callOperation(
-            'addSellerProfile',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\AddSellerProfileResponse'
-        );
+        return $this->addSellerProfileAsync($request)->wait();
     }
 
     /**
@@ -103,11 +91,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function getSellerProfiles(\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetSellerProfilesRequest $request)
     {
-        return $this->callOperation(
-            'getSellerProfiles',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetSellerProfilesResponse'
-        );
+        return $this->getSellerProfilesAsync($request)->wait();
     }
 
     /**
@@ -129,11 +113,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function setSellerProfile(\DTS\eBaySDK\BusinessPoliciesManagement\Types\SetSellerProfileRequest $request)
     {
-        return $this->callOperation(
-            'setSellerProfile',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\SetSellerProfileResponse'
-        );
+        return $this->setSellerProfileAsync($request)->wait();
     }
 
     /**
@@ -155,11 +135,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function removeSellerProfiles(\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveSellerProfilesRequest $request)
     {
-        return $this->callOperation(
-            'removeSellerProfiles',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveSellerProfilesResponse'
-        );
+        return $this->removeSellerProfilesAsync($request)->wait();
     }
 
     /**
@@ -181,11 +157,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function consolidateShippingProfiles(\DTS\eBaySDK\BusinessPoliciesManagement\Types\ConsolidateShippingProfilesRequest $request)
     {
-        return $this->callOperation(
-            'consolidateShippingProfiles',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\ConsolidateShippingProfilesResponse'
-        );
+        return $this->consolidateShippingProfilesAsync($request)->wait();
     }
 
     /**
@@ -207,11 +179,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function getConsolidationJobStatus(\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusRequest $request)
     {
-        return $this->callOperation(
-            'getConsolidationJobStatus',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse'
-        );
+        return $this->getConsolidationJobStatusAsync($request)->wait();
     }
 
     /**
@@ -233,11 +201,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
      */
     public function removeOverrides(\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesRequest $request)
     {
-        return $this->callOperation(
-            'removeOverrides',
-            $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse'
-        );
+        return $this->removeOverridesAsync($request)->wait();
     }
 
     /**
