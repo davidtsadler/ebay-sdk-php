@@ -33,12 +33,38 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
     }
 
     /**
+     * @param \DTS\eBaySDK\FileTransfer\Types\UploadFileRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uploadFileAsync(\DTS\eBaySDK\FileTransfer\Types\UploadFileRequest $request)
+    {
+        return $this->callOperationAsync(
+            'uploadFile',
+            $request,
+            '\DTS\eBaySDK\FileTransfer\Types\UploadFileResponse'
+        );
+    }
+
+    /**
      * @param \DTS\eBaySDK\FileTransfer\Types\DownloadFileRequest $request
      * @return \DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse
      */
     public function downloadFile(\DTS\eBaySDK\FileTransfer\Types\DownloadFileRequest $request)
     {
         return $this->callOperation(
+            'downloadFile',
+            $request,
+            '\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse'
+        );
+    }
+
+    /**
+     * @param \DTS\eBaySDK\FileTransfer\Types\DownloadFileRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function downloadFileAsync(\DTS\eBaySDK\FileTransfer\Types\DownloadFileRequest $request)
+    {
+        return $this->callOperationAsync(
             'downloadFile',
             $request,
             '\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse'

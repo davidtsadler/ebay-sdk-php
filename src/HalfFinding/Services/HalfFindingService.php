@@ -33,12 +33,38 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
     }
 
     /**
+     * @param \DTS\eBaySDK\HalfFinding\Types\GetVersionRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getVersionAsync(\DTS\eBaySDK\HalfFinding\Types\GetVersionRequest $request)
+    {
+        return $this->callOperationAsync(
+            'getVersion',
+            $request,
+            '\DTS\eBaySDK\HalfFinding\Types\GetVersionResponse'
+        );
+    }
+
+    /**
      * @param \DTS\eBaySDK\HalfFinding\Types\FindItemsRequest $request
      * @return \DTS\eBaySDK\HalfFinding\Types\FindItemsResponse
      */
     public function findHalfItems(\DTS\eBaySDK\HalfFinding\Types\FindItemsRequest $request)
     {
         return $this->callOperation(
+            'findHalfItems',
+            $request,
+            '\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse'
+        );
+    }
+
+    /**
+     * @param \DTS\eBaySDK\HalfFinding\Types\FindItemsRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function findHalfItemsAsync(\DTS\eBaySDK\HalfFinding\Types\FindItemsRequest $request)
+    {
+        return $this->callOperationAsync(
             'findHalfItems',
             $request,
             '\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse'

@@ -3,7 +3,8 @@ namespace DTS\eBaySDK;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Psr\Http\Message\RequestInterface as Psr7Request;
+use Psr\Http\Message\RequestInterface;
+use GuzzleHttp\Promise;
 
 /**
  * @internal Sends PSR-7-compatible requests using a Guzzle client.
@@ -28,8 +29,8 @@ class Handler
      *
      * @return string Body of the response
      */
-    public function __invoke(Psr7Request $request)
+    public function __invoke(RequestInterface $request)
     {
-        return $this->client->send($request)->getBody()->getContents();
+        return $this->client->sendAsync($request);
     }
 }

@@ -17,7 +17,22 @@ class HandlerTest extends \PHPUnit_Framework_TestCase
         $handler = new Handler($client);
 
         $request = new Request('POST', 'http://example.com', [], '');
-        $response = $handler($request);
+        $response = $handler($request)->wait()->getBody()->getContents();
         $this->assertContains('OK', $response);
+    }
+
+    public function testWorksWithFailedRequest()
+    {
+        $mock = new MockHandler([new \Exception('FAIL')]);
+        $client = new Client(['handler' => $mock]);
+        $handler = new Handler($client);
+
+        $request = new Request('POST', 'http://example.com', [], '');
+        try {
+            $handler($request)->wait();
+            $this->fail();
+        } catch (\Exception $e) {
+            $this->assertContains('FAIL', $e->getMessage());
+        }
     }
 }

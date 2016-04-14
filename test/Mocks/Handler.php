@@ -1,7 +1,10 @@
 <?php
 namespace DTS\eBaySDK\Test\Mocks;
 
-use Psr\Http\Message\RequestInterface as Psr7Request;
+use Psr\Http\Message\RequestInterface;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Promise\FulfilledPromise;
 
 class Handler
 {
@@ -14,7 +17,7 @@ class Handler
     {
     }
 
-    public function __invoke(Psr7Request $request)
+    public function __invoke(RequestInterface $request)
     {
         $this->url = $request->getUri();
         $this->headers = [];
@@ -22,7 +25,15 @@ class Handler
             $this->headers[$name] = implode(', ', $values);
         }
         $this->body = $request->getBody();
-        // Return a fake XML resposne.
-        return file_get_contents($this->returnAttachment ? __DIR__.'/../Mocks/AttachmentRequestResponse.xml' : __DIR__.'/../Mocks/Response.xml');
+
+        // Return a fake XML response.
+        $xml = file_get_contents(
+            $this->returnAttachment ?
+            __DIR__.'/../Mocks/AttachmentRequestResponse.xml'
+            :
+            __DIR__.'/../Mocks/Response.xml'
+        );
+
+        return new FulfilledPromise(new Response(200, [], Psr7\stream_for($xml)));
     }
 }
