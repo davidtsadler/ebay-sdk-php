@@ -217,7 +217,7 @@ handler
 
 :Type: ``callable``
 
-By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``handler`` you can use a HTTP client that best meets your project's requirments. A ``handler`` accepts a ``Psr\Http\Message\RequestInterface`` object and returns a string.
+By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``handler`` you can use a HTTP client that best meets your project's requirments. A ``handler`` accepts a ``Psr\Http\Message\RequestInterface`` object and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a ``Psr\Http\Message\ResponseInterface`` object or rejected with an ``\Exception``.
 
 .. code-block:: php
 
@@ -225,9 +225,11 @@ By default the SDK uses a ``Guzzle 6`` client to handle the sending and receivin
 
     $handler = function (Psr\Http\Message\RequestInterface $request) {
         $client = new SomeClient();
+
         $response = $client->sendRequest($request);
 
-        return $response->getBody()->getContent();
+        // Return promise that is fulfilled with a Psr\Http\Message\ResponseInterface.
+        return $response;
     };
 
     $service = new FindingService([

@@ -222,9 +222,11 @@ Version 1 introduced the new :ref:`handler <handler>` configuration option which
     // Version 1
     $handler = function (Psr\Http\Message\RequestInterface $request) {
         $client = new SomeClient();
+
         $response = $client->sendRequest($request);
 
-        return $response->getBody()->getContent();
+        // Return promise that is fulfilled with a Psr\Http\Message\ResponseInterface.
+        return $response;
     };
 
     $service = new FindingService([
