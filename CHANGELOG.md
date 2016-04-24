@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 4.0.0 - 2016-04-24
 
 ### Breaking changes
 
