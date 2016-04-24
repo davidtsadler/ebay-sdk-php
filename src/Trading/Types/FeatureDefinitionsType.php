@@ -26,7 +26,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\MinimumReservePriceDefinitionType $MinimumReservePrice
  * @property \DTS\eBaySDK\Trading\Types\TCREnabledDefinitionType $TransactionConfirmationRequestEnabled
  * @property \DTS\eBaySDK\Trading\Types\SellerContactDetailsEnabledDefinitionType $SellerContactDetailsEnabled
- * @property \DTS\eBaySDK\Trading\Types\StoreInventoryEnabledDefinitionType $StoreInventoryEnabled
  * @property \DTS\eBaySDK\Trading\Types\SkypeMeTransactionalEnabledDefinitionType $SkypeMeTransactionalEnabled
  * @property \DTS\eBaySDK\Trading\Types\SkypeMeNonTransactionalEnabledDefinitionType $SkypeMeNonTransactionalEnabled
  * @property \DTS\eBaySDK\Trading\Types\LocalListingDistancesRegularDefinitionType $LocalListingDistancesRegular
@@ -51,7 +50,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\CrossBorderTradeAustraliaEnabledDefinitionType $CrossBorderTradeAustraliaEnabled
  * @property \DTS\eBaySDK\Trading\Types\PayPalBuyerProtectionEnabledDefinitionType $PayPalBuyerProtectionEnabled
  * @property \DTS\eBaySDK\Trading\Types\BuyerGuaranteeEnabledDefinitionType $BuyerGuaranteeEnabled
- * @property \DTS\eBaySDK\Trading\Types\CombinedFixedPriceTreatmentEnabledDefinitionType $CombinedFixedPriceTreatmentEnabled
  * @property \DTS\eBaySDK\Trading\Types\ListingEnhancementDurationDefinitionType $GalleryFeaturedDurations
  * @property \DTS\eBaySDK\Trading\Types\INEscrowWorkflowTimelineDefinitionType $INEscrowWorkflowTimeline
  * @property \DTS\eBaySDK\Trading\Types\PayPalRequiredDefinitionType $PayPalRequired
@@ -93,7 +91,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\NonSubscriptionDefinitionType $NonSubscription
  * @property \DTS\eBaySDK\Trading\Types\ReturnPolicyEnabledDefinitionType $ReturnPolicyEnabled
  * @property \DTS\eBaySDK\Trading\Types\HandlingTimeEnabledDefinitionType $HandlingTimeEnabled
- * @property \DTS\eBaySDK\Trading\Types\PayPalRequiredForStoreOwnerDefinitionType $PayPalRequiredForStoreOwner
  * @property \DTS\eBaySDK\Trading\Types\ReviseQuantityAllowedDefinitionType $ReviseQuantityAllowed
  * @property \DTS\eBaySDK\Trading\Types\RevisePriceAllowedDefinitionType $RevisePriceAllowed
  * @property \DTS\eBaySDK\Trading\Types\StoreOwnerExtendedListingDurationsEnabledDefinitionType $StoreOwnerExtendedListingDurationsEnabled
@@ -239,12 +236,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'SellerContactDetailsEnabled'
         ],
-        'StoreInventoryEnabled' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreInventoryEnabledDefinitionType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StoreInventoryEnabled'
-        ],
         'SkypeMeTransactionalEnabled' => [
             'type' => 'DTS\eBaySDK\Trading\Types\SkypeMeTransactionalEnabledDefinitionType',
             'repeatable' => false,
@@ -388,12 +379,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerGuaranteeEnabled'
-        ],
-        'CombinedFixedPriceTreatmentEnabled' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CombinedFixedPriceTreatmentEnabledDefinitionType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedFixedPriceTreatmentEnabled'
         ],
         'GalleryFeaturedDurations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingEnhancementDurationDefinitionType',
@@ -640,12 +625,6 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HandlingTimeEnabled'
-        ],
-        'PayPalRequiredForStoreOwner' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PayPalRequiredForStoreOwnerDefinitionType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalRequiredForStoreOwner'
         ],
         'ReviseQuantityAllowed' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ReviseQuantityAllowedDefinitionType',

@@ -29,7 +29,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property double $MinimumReservePrice
  * @property boolean $SellerContactDetailsEnabled
  * @property boolean $TransactionConfirmationRequestEnabled
- * @property boolean $StoreInventoryEnabled
  * @property boolean $SkypeMeTransactionalEnabled
  * @property boolean $SkypeMeNonTransactionalEnabled
  * @property string $LocalListingDistancesRegular
@@ -58,7 +57,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $PayPalBuyerProtectionEnabled
  * @property boolean $BuyerGuaranteeEnabled
  * @property \DTS\eBaySDK\Trading\Enums\INEscrowWorkflowTimelineCodeType $INEscrowWorkflowTimeline
- * @property boolean $CombinedFixedPriceTreatmentEnabled
  * @property \DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType $GalleryFeaturedDurations
  * @property boolean $PayPalRequired
  * @property \DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType $eBayMotorsProAdFormatEnabled
@@ -97,7 +95,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $RegularSubscription
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $PremiumSubscription
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $NonSubscription
- * @property boolean $PayPalRequiredForStoreOwner
  * @property boolean $ReviseQuantityAllowed
  * @property boolean $RevisePriceAllowed
  * @property boolean $StoreOwnerExtendedListingDurationsEnabled
@@ -262,12 +259,6 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionConfirmationRequestEnabled'
-        ],
-        'StoreInventoryEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'StoreInventoryEnabled'
         ],
         'SkypeMeTransactionalEnabled' => [
             'type' => 'boolean',
@@ -436,12 +427,6 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'INEscrowWorkflowTimeline'
-        ],
-        'CombinedFixedPriceTreatmentEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedFixedPriceTreatmentEnabled'
         ],
         'GalleryFeaturedDurations' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType',
@@ -670,12 +655,6 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NonSubscription'
-        ],
-        'PayPalRequiredForStoreOwner' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalRequiredForStoreOwner'
         ],
         'ReviseQuantityAllowed' => [
             'type' => 'boolean',

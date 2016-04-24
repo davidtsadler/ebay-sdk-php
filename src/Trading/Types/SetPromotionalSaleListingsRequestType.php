@@ -15,7 +15,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $StoreCategoryID
  * @property integer $CategoryID
  * @property boolean $AllFixedPriceItems
- * @property boolean $AllStoreInventoryItems
  * @property boolean $AllAuctionItems
  */
 class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
@@ -59,12 +58,6 @@ class SetPromotionalSaleListingsRequestType extends \DTS\eBaySDK\Trading\Types\A
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AllFixedPriceItems'
-        ],
-        'AllStoreInventoryItems' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AllStoreInventoryItems'
         ],
         'AllAuctionItems' => [
             'type' => 'boolean',

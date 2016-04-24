@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Breaking changes
+
+* Support Trading API version 963.
+
 ## 3.0.0 - 2016-04-11
 
 ### Breaking changes
