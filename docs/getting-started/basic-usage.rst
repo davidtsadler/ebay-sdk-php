@@ -157,7 +157,7 @@ You can make a promise complete synchronously by using the `wait` method of the 
   // Send the request.
   $promise = $service->findItemsByKeywordsAsync($request);
   // Block until response is received.
-  $result = $promise->wait();
+  $response = $promise->wait();
 
 Working with Responses
 ----------------------

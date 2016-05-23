@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Features
+
+* The SDK now supports asynchronous requests.
+
 ### Breaking changes
 
 * The protected method `\DTS\eBaySDK\Services::BaseService::callOperation` has been removed. Code that called this method will now need to call `callOperationAsync(...)->wait()` instead.
