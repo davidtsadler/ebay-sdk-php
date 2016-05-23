@@ -17,7 +17,7 @@ class HttpHandlerTest extends \PHPUnit_Framework_TestCase
         $httpHandler = new HttpHandler($client);
 
         $request = new Request('POST', 'http://example.com', [], '');
-        $response = $httpHandler($request)->wait()->getBody()->getContents();
+        $response = $httpHandler($request, [])->wait()->getBody()->getContents();
         $this->assertContains('OK', $response);
     }
 
@@ -29,7 +29,7 @@ class HttpHandlerTest extends \PHPUnit_Framework_TestCase
 
         $request = new Request('POST', 'http://example.com', [], '');
         try {
-            $httpHandler($request)->wait();
+            $httpHandler($request, [])->wait();
             $this->fail();
         } catch (\Exception $e) {
             $this->assertContains('FAIL', $e->getMessage());

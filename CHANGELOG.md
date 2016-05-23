@@ -5,11 +5,12 @@
 ### Features
 
 * The SDK now supports asynchronous requests.
+* HTTP options can be passed to the HTTP client via the new configuration option [httpOptions](http://devbay.net/sdk/guides/guide/configuration.html#httpOptions).
 
 ### Breaking changes
 
 * The protected method `\DTS\eBaySDK\Services::BaseService::callOperation` has been removed. Code that called this method will now need to call `callOperationAsync(...)->wait()` instead.
-* The `handler` configuration option is now called [httpHandler](http://devbay.net/sdk/guides/guide/configuration.html#httpHandler).
+* The `handler` configuration option is now called [httpHandler](http://devbay.net/sdk/guides/guide/configuration.html#httpHandler) and supports the new [httpOptions](http://devbay.net/sdk/guides/guide/configuration.html#httpOptions) configuration option.
 * The class `\DTS\eBaySDK\Handler` is now `\DTS\eBaySDK\HttpHandler`.
 
 ## 3.0.0 - 2016-04-11

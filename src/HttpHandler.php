@@ -16,6 +16,18 @@ class HttpHandler
     private $client;
 
     /**
+     * @var array
+     */
+    private static $validOptions = [
+        'connect_timeout' => true,
+        'debug'           => true,
+        'delay'           => true,
+        'proxy'           => true,
+        'timeout'         => true,
+        'verify'          => true
+    ];
+
+    /**
      * @param ClientInterface $client
      */
     public function __construct(ClientInterface $client = null)
@@ -25,13 +37,21 @@ class HttpHandler
 
     /**
      * @param Psr7Request $request
+     * @param Array       $options Http options for the client.
      *
      * @return GuzzleHttp\Promise\PromiseInterface Promise that will be resolved with a
      *                                             Psr\Http\Message\ResponseInterface
      *                                             response object.
      */
-    public function __invoke(RequestInterface $request)
+    public function __invoke(RequestInterface $request, array $options)
     {
-        return $this->client->sendAsync($request);
+        // Remove options that are not supported.
+        foreach (array_keys($options) as $key) {
+            if (!isset(self::$validOptions[$key])) {
+                unset($options[$key]);
+            }
+        }
+
+        return $this->client->sendAsync($request, $options);
     }
 }

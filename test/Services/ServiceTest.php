@@ -37,6 +37,12 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'default' => 'DTS\eBaySDK\defaultHttpHandler'
         ], $d['httpHandler']);
 
+        $this->assertArrayHasKey('httpOptions', $d);
+        $this->assertEquals([
+            'valid'   => ['array'],
+            'default' => []
+        ], $d['httpOptions']);
+
         $this->assertArrayHasKey('profile', $d);
         $this->assertEquals([
             'valid' => ['string'],
@@ -247,14 +253,16 @@ EOT;
                 'certId' => '222',
                 'devId' => '333'
             ],
-            'httpHandler' => $h
+            'httpHandler' => $h,
+            'httpOptions' => []
         ]);
 
         $this->assertEquals([
             'sandbox' => true,
             'credentials' => new Credentials('111', '222', '333'),
             'debug' => false,
-            'httpHandler' => $h
+            'httpHandler' => $h,
+            'httpOptions' => []
         ], $s->getConfig());
 
         $s->setConfig([
@@ -268,7 +276,8 @@ EOT;
             'sandbox' => false,
             'credentials' => new Credentials('444', '555', '666'),
             'debug' => false,
-            'httpHandler' => $h
+            'httpHandler' => $h,
+            'httpOptions' => []
         ], $s->getConfig());
     }
 
