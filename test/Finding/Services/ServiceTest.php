@@ -4,7 +4,7 @@ namespace DTS\eBaySDK\Test\Finding\Services;
 use DTS\eBaySDK\Finding\Services\FindingBaseService;
 use DTS\eBaySDK\Finding\Services\FindingService;
 use DTS\eBaySDK\Test\Finding\Mocks\Service;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,7 +26,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'credentials' => ['appId' => '321', 'certId' => '', 'devId' => ''],
@@ -51,7 +51,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'apiVersion' => '123',

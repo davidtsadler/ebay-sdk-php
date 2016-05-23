@@ -4,7 +4,7 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Services;
 use DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementBaseService;
 use DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementService;
 use DTS\eBaySDK\Test\ResolutionCaseManagement\Mocks\Service;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -32,7 +32,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'authToken' => '321',
@@ -58,7 +58,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'apiVersion' => '123',

@@ -3,13 +3,13 @@ namespace DTS\eBaySDK\Test\FileTransfer\Services;
 
 use DTS\eBaySDK\FileTransfer\Services\FileTransferService;
 use DTS\eBaySDK\FileTransfer\Types;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
     public function testAttachmentFieldIsSetCorrectlyInRequest()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new FileTransferService([
             'authToken' => '321',

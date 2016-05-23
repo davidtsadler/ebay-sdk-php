@@ -3,7 +3,7 @@ namespace DTS\eBaySDK\Types\Test;
 
 use DTS\eBaySDK\Test\Mocks\Service;
 use DTS\eBaySDK\Test\Mocks\ComplexClass;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,10 +15,10 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
          * passed to the client by the service. What we want to test is that the
          * is actualy passed correctly. We are not testing the sending of the request
          * over the internet.
-         * The Handler contains properties that will be set when the service
+         * The HttpHandler contains properties that will be set when the service
          * makes the request. We can test these properties to check what the service is passing.
          */
-        $this->httpHandler = new Handler();
+        $this->httpHandler = new HttpHandler();
         // BaseService is abstract so use class that is derived from it for testing.
         $this->service = new Service(['httpHandler' => $this->httpHandler]);
         $this->request = new ComplexClass();

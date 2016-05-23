@@ -4,7 +4,7 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Services;
 use DTS\eBaySDK\ReturnManagement\Services\ReturnManagementBaseService;
 use DTS\eBaySDK\ReturnManagement\Services\ReturnManagementService;
 use DTS\eBaySDK\Test\ReturnManagement\Mocks\Service;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -32,7 +32,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'authToken' => '321',
@@ -58,7 +58,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'apiVersion' => '123',

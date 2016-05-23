@@ -4,7 +4,7 @@ namespace DTS\eBaySDK\Test\Trading\Services;
 use DTS\eBaySDK\Trading\Services\TradingBaseService;
 use DTS\eBaySDK\Trading\Services\TradingService;
 use DTS\eBaySDK\Test\Trading\Mocks\Service;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -33,7 +33,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'apiVersion' => '123',
@@ -62,7 +62,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'credentials' => ['appId' => 'appId', 'certId' => 'certId', 'devId' => 'devId'],

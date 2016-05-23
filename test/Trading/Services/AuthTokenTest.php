@@ -3,7 +3,7 @@ namespace DTS\eBaySDK\Test\Trading\Services;
 
 use DTS\eBaySDK\Trading\Services\TradingService;
 use DTS\eBaySDK\Trading\Types;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class AuthTokenTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class AuthTokenTest extends \PHPUnit_Framework_TestCase
             'authToken' => '321',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'siteId' => 0,
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
 
         // Calling the operation results in the auth token been set by the service.

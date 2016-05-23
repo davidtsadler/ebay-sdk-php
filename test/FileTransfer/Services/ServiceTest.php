@@ -4,7 +4,7 @@ namespace DTS\eBaySDK\Test\FileTransfer\Services;
 use DTS\eBaySDK\FileTransfer\Services\FileTransferBaseService;
 use DTS\eBaySDK\FileTransfer\Services\FileTransferService;
 use DTS\eBaySDK\Test\FileTransfer\Mocks\Service;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -27,7 +27,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'authToken' => '321',
@@ -51,7 +51,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testOptionalEbayHeaders()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
 
         $s = new Service([
             'apiVersion' => '123',

@@ -8,7 +8,7 @@ use Psr\Http\Message\RequestInterface;
 /**
  * @internal Sends PSR-7-compatible requests using a Guzzle client.
  */
-class Handler
+class HttpHandler
 {
     /**
      * @var ClientInterface

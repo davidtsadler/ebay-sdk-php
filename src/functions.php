@@ -5,7 +5,7 @@ use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Credentials\CredentialsInterface;
 use DTS\eBaySDK\Debugger;
-use DTS\eBaySDK\Handler;
+use DTS\eBaySDK\HttpHandler;
 
 function describeType($value)
 {
@@ -100,9 +100,9 @@ function applyDebug($value, array &$configuration)
     }
 }
 
-function defaultHandler(array &$configuration)
+function defaultHttpHandler(array &$configuration)
 {
-    return new Handler();
+    return new HttpHandler();
 }
 
 /**

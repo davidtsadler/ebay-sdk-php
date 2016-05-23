@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Promise\FulfilledPromise;
 
-class Handler
+class HttpHandler
 {
     public $url;
     public $headers;

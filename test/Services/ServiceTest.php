@@ -7,7 +7,7 @@ use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Test\Mocks\Service;
 use DTS\eBaySDK\Test\Mocks\ComplexClass;
-use DTS\eBaySDK\Test\Mocks\Handler;
+use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class ServiceTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,7 +34,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('httpHandler', $d);
         $this->assertEquals([
             'valid'   => ['callable'],
-            'default' => 'DTS\eBaySDK\defaultHandler'
+            'default' => 'DTS\eBaySDK\defaultHttpHandler'
         ], $d['httpHandler']);
 
         $this->assertArrayHasKey('profile', $d);
@@ -53,7 +53,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testProductionUrlIsUsed()
     {
         // By default sandbox will be false.
-        $h = new Handler();
+        $h = new HttpHandler();
         $s = new Service(['httpHandler' => $h]);
         $s->foo(new ComplexClass());
 
@@ -62,7 +62,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testSandboxUrlIsUsed()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
         $s = new Service([
             'sandbox' => true,
             'httpHandler' => $h
@@ -74,7 +74,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testHttpHeadersAreCreated()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
         $s = new Service(['httpHandler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
@@ -89,7 +89,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testXmlIsCreated()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
         $s = new Service(['httpHandler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
@@ -99,7 +99,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testResponseIsReturned()
     {
-        $s = new Service(['httpHandler' => new Handler()]);
+        $s = new Service(['httpHandler' => new HttpHandler()]);
         $r = $s->foo(new ComplexClass());
 
         $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $r);
@@ -114,7 +114,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $s = new Service([
             'debug' => ['logfn' => $logfn],
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
         $r = new ComplexClass();
         $s->foo($r);
@@ -129,7 +129,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     {
         $s = new Service([
             'credentials' => new Credentials('111', '222', '333'),
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
 
         $c = $s->getCredentials();
@@ -146,7 +146,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
                 'certId' => '222',
                 'devId' => '333'
             ],
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
 
         $c = $s->getCredentials();
@@ -161,7 +161,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'credentials' => function () {
                 return new Credentials('111', '222', '333');
             },
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
 
         $c = $s->getCredentials();
@@ -185,7 +185,7 @@ EOT;
 
         $s = new Service([
             'profile' => 'foo',
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
         $c = $s->getCredentials();
 
@@ -212,7 +212,7 @@ EOT;
 
         $s = new Service([
             'profile' => 'foo',
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
 
         try {
@@ -233,13 +233,13 @@ EOT;
             'credentials' => function () {
                 return new \InvalidArgumentException('Cannot locate credentials');
             },
-            'httpHandler' => new Handler()
+            'httpHandler' => new HttpHandler()
         ]);
     }
 
     public function testCanSetConfigurationOptionsAfterInstaniation()
     {
-        $h = new Handler();
+        $h = new HttpHandler();
         $s = new Service([
             'sandbox' => true,
             'credentials' => [

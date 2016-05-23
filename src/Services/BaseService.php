@@ -79,7 +79,7 @@ abstract class BaseService
             ],
             'httpHandler' => [
                 'valid'   => ['callable'],
-                'default' => 'DTS\eBaySDK\defaultHandler'
+                'default' => 'DTS\eBaySDK\defaultHttpHandler'
             ],
             'sandbox' => [
                 'valid'   => ['bool'],
