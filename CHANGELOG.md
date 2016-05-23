@@ -9,6 +9,7 @@
 ### Breaking changes
 
 * The protected method `\DTS\eBaySDK\Services::BaseService::callOperation` has been removed. Code that called this method will now need to call `callOperationAsync(...)->wait()` instead.
+* The `handler` configuration option is now called [httpHandler](http://devbay.net/sdk/guides/guide/configuration.html#httpHandler).
 
 ## 3.0.0 - 2016-04-11
 

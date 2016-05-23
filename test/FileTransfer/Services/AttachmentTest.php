@@ -14,7 +14,7 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $s = new FileTransferService([
             'authToken' => '321',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
-            'handler' => $h
+            'httpHandler' => $h
         ]);
 
         // Calling the operation will not set the attachment field if there is no attachment.

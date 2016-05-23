@@ -47,7 +47,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $s = new Service([
             'apiVersion' => '123',
             'credentials' => ['appId' => '321', 'certId' => '', 'devId' => ''],
-            'handler' => $h
+            'httpHandler' => $h
         ]);
 
         $s->testOperation();
@@ -82,7 +82,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'siteId' => 0,
             'trackingId' => '888',
             'trackingPartnerCode' => '777',
-            'handler' => $h
+            'httpHandler' => $h
         ]);
 
         $s->testOperation();

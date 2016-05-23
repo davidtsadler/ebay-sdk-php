@@ -77,7 +77,7 @@ abstract class BaseService
                 'fn'      => 'DTS\eBaySDK\applyDebug',
                 'default' => false
             ],
-            'handler' => [
+            'httpHandler' => [
                 'valid'   => ['callable'],
                 'default' => 'DTS\eBaySDK\defaultHandler'
             ],
@@ -133,7 +133,7 @@ abstract class BaseService
         $body = $this->buildRequestBody($request);
         $headers = $this->buildRequestHeaders($name, $request, $body);
         $debug = $this->getConfig('debug');
-        $handler = $this->getConfig('handler');
+        $httpHandler = $this->getConfig('httpHandler');
 
         if ($debug !== false) {
             $this->debugRequest($url, $headers, $body);
@@ -141,7 +141,7 @@ abstract class BaseService
 
         $request = new Request('POST', $url, $headers, $body);
 
-        return $handler($request)->then(
+        return $httpHandler($request)->then(
             function (ResponseInterface $res) use ($debug, $responseClass) {
                 list($xmlResponse, $attachment) = $this->extractXml($res->getBody()->getContents());
 

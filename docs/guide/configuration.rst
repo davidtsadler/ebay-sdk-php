@@ -210,20 +210,20 @@ globalId
 The unique string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value EBAY-US to specify the eBay US site. A `complete list of eBay global IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
 
 
-.. _handler:
+.. _httpHandler:
 
-handler
+httpHandler
 ~~~~~~~
 
 :Type: ``callable``
 
-By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``handler`` you can use a HTTP client that best meets your project's requirments. A ``handler`` accepts a ``Psr\Http\Message\RequestInterface`` object and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a ``Psr\Http\Message\ResponseInterface`` object or rejected with an ``\Exception``.
+By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``httpHandler`` you can use a HTTP client that best meets your project's requirments. A ``httpHandler`` accepts a ``Psr\Http\Message\RequestInterface`` object and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a ``Psr\Http\Message\ResponseInterface`` object or rejected with an ``\Exception``.
 
 .. code-block:: php
 
     use DTS\eBaySDK\Finding\Services\FindingService;
 
-    $handler = function (Psr\Http\Message\RequestInterface $request) {
+    $httpHandler = function (Psr\Http\Message\RequestInterface $request) {
         $client = new SomeClient();
 
         $response = $client->sendRequest($request);
@@ -235,7 +235,7 @@ By default the SDK uses a ``Guzzle 6`` client to handle the sending and receivin
     $service = new FindingService([
         'apiVersion' => '1.13.0',
         'globalId'   => 'EBAY-US',
-        'handler'    => $handler
+        'httpHandler'    => $httpHandler
     ]);
 
 profile

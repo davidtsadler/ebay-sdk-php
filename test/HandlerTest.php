@@ -14,10 +14,10 @@ class HandlerTest extends \PHPUnit_Framework_TestCase
     {
         $mock = new MockHandler([new Response(200, [], 'OK')]);
         $client = new Client(['handler' => $mock]);
-        $handler = new Handler($client);
+        $httpHandler = new Handler($client);
 
         $request = new Request('POST', 'http://example.com', [], '');
-        $response = $handler($request)->wait()->getBody()->getContents();
+        $response = $httpHandler($request)->wait()->getBody()->getContents();
         $this->assertContains('OK', $response);
     }
 
@@ -25,11 +25,11 @@ class HandlerTest extends \PHPUnit_Framework_TestCase
     {
         $mock = new MockHandler([new \Exception('FAIL')]);
         $client = new Client(['handler' => $mock]);
-        $handler = new Handler($client);
+        $httpHandler = new Handler($client);
 
         $request = new Request('POST', 'http://example.com', [], '');
         try {
-            $handler($request)->wait();
+            $httpHandler($request)->wait();
             $this->fail();
         } catch (\Exception $e) {
             $this->assertContains('FAIL', $e->getMessage());

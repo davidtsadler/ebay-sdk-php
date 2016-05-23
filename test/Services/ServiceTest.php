@@ -31,11 +31,11 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'default' => false
         ], $d['debug']);
 
-        $this->assertArrayHasKey('handler', $d);
+        $this->assertArrayHasKey('httpHandler', $d);
         $this->assertEquals([
             'valid'   => ['callable'],
             'default' => 'DTS\eBaySDK\defaultHandler'
-        ], $d['handler']);
+        ], $d['httpHandler']);
 
         $this->assertArrayHasKey('profile', $d);
         $this->assertEquals([
@@ -54,7 +54,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     {
         // By default sandbox will be false.
         $h = new Handler();
-        $s = new Service(['handler' => $h]);
+        $s = new Service(['httpHandler' => $h]);
         $s->foo(new ComplexClass());
 
         $this->assertEquals('http://production.com', $h->url);
@@ -65,7 +65,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $h = new Handler();
         $s = new Service([
             'sandbox' => true,
-            'handler' => $h
+            'httpHandler' => $h
         ]);
         $s->foo(new ComplexClass());
 
@@ -75,7 +75,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testHttpHeadersAreCreated()
     {
         $h = new Handler();
-        $s = new Service(['handler' => $h]);
+        $s = new Service(['httpHandler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
 
@@ -90,7 +90,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testXmlIsCreated()
     {
         $h = new Handler();
-        $s = new Service(['handler' => $h]);
+        $s = new Service(['httpHandler' => $h]);
         $r = new ComplexClass();
         $s->foo($r);
 
@@ -99,7 +99,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
     public function testResponseIsReturned()
     {
-        $s = new Service(['handler' => new Handler()]);
+        $s = new Service(['httpHandler' => new Handler()]);
         $r = $s->foo(new ComplexClass());
 
         $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $r);
@@ -114,7 +114,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $s = new Service([
             'debug' => ['logfn' => $logfn],
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
         $r = new ComplexClass();
         $s->foo($r);
@@ -129,7 +129,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     {
         $s = new Service([
             'credentials' => new Credentials('111', '222', '333'),
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -146,7 +146,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
                 'certId' => '222',
                 'devId' => '333'
             ],
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -161,7 +161,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'credentials' => function () {
                 return new Credentials('111', '222', '333');
             },
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
 
         $c = $s->getCredentials();
@@ -185,7 +185,7 @@ EOT;
 
         $s = new Service([
             'profile' => 'foo',
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
         $c = $s->getCredentials();
 
@@ -212,7 +212,7 @@ EOT;
 
         $s = new Service([
             'profile' => 'foo',
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
 
         try {
@@ -233,7 +233,7 @@ EOT;
             'credentials' => function () {
                 return new \InvalidArgumentException('Cannot locate credentials');
             },
-            'handler' => new Handler()
+            'httpHandler' => new Handler()
         ]);
     }
 
@@ -247,14 +247,14 @@ EOT;
                 'certId' => '222',
                 'devId' => '333'
             ],
-            'handler' => $h
+            'httpHandler' => $h
         ]);
 
         $this->assertEquals([
             'sandbox' => true,
             'credentials' => new Credentials('111', '222', '333'),
             'debug' => false,
-            'handler' => $h
+            'httpHandler' => $h
         ], $s->getConfig());
 
         $s->setConfig([
@@ -268,7 +268,7 @@ EOT;
             'sandbox' => false,
             'credentials' => new Credentials('444', '555', '666'),
             'debug' => false,
-            'handler' => $h
+            'httpHandler' => $h
         ], $s->getConfig());
     }
 
