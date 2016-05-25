@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 4.0.1 - 2016-05-25
 
 ### Fixes
 
