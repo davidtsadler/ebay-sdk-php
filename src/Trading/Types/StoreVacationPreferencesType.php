@@ -11,7 +11,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property boolean $OnVacation
  * @property \DateTime $ReturnDate
- * @property boolean $HideFixedPriceStoreItems
  * @property boolean $MessageItem
  * @property boolean $MessageStore
  * @property boolean $DisplayMessageStoreCustomText
@@ -34,12 +33,6 @@ class StoreVacationPreferencesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnDate'
-        ],
-        'HideFixedPriceStoreItems' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'HideFixedPriceStoreItems'
         ],
         'MessageItem' => [
             'type' => 'boolean',

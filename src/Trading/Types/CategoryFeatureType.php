@@ -88,7 +88,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $PremiumSubscription
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $NonSubscription
  * @property \DTS\eBaySDK\Trading\Enums\INEscrowWorkflowTimelineCodeType $INEscrowWorkflowTimeline
- * @property boolean $PayPalRequiredForStoreOwner
  * @property boolean $ReviseQuantityAllowed
  * @property boolean $RevisePriceAllowed
  * @property boolean $StoreOwnerExtendedListingDurationsEnabled
@@ -606,12 +605,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'INEscrowWorkflowTimeline'
-        ],
-        'PayPalRequiredForStoreOwner' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PayPalRequiredForStoreOwner'
         ],
         'ReviseQuantityAllowed' => [
             'type' => 'boolean',

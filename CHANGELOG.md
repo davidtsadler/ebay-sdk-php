@@ -13,6 +13,20 @@
 * The `handler` configuration option is now called [httpHandler](http://devbay.net/sdk/guides/guide/configuration.html#httpHandler) and supports the new [httpOptions](http://devbay.net/sdk/guides/guide/configuration.html#httpOptions) configuration option.
 * The class `\DTS\eBaySDK\Handler` is now `\DTS\eBaySDK\HttpHandler`.
 
+## 4.0.1 - 2016-05-25
+
+### Fixes
+
+* Updated recursive function call to new function name.
+
+## 4.0.0 - 2016-04-24
+
+### Breaking changes
+
+* Support Trading API version 963.
+* Support Shopping API version 963.
+>>>>>>> develop
+
 ## 3.0.0 - 2016-04-11
 
 ### Breaking changes
