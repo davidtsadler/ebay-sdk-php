@@ -44,7 +44,7 @@ function arrayMergeDeepArray($arrays)
                 $result[] = $value;
             } elseif (isset($result[$key]) && is_array($result[$key]) && is_array($value)) {
                 // Recurse when both values are arrays.
-                $result[$key] = array_merge_deep_array(array($result[$key], $value));
+                $result[$key] = arrayMergeDeepArray(array($result[$key], $value));
             } else {
                 // Otherwise, use the latter value, overriding any previous value.
                 $result[$key] = $value;

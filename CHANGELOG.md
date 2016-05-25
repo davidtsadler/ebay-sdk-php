@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Fixes
+
+* Updated recursive function call to new function name.
+
 ## 4.0.0 - 2016-04-24
 
 ### Breaking changes
