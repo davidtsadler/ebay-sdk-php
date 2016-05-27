@@ -132,8 +132,8 @@ You call a service operation by calling the appropriate method on the service ob
 
 .. code-block:: php
 
-  // Send the request.
-  $response = $service->findItemsByKeywords($request);
+    // Send the request.
+    $response = $service->findItemsByKeywords($request);
 
 Asynchronous Requests
 ---------------------
@@ -142,22 +142,22 @@ You can call an operation asynchronously by adding `Async` to the method's name.
 
 .. code-block:: php
 
-  // Send the request.
-  $promise = $service->findItemsByKeywordsAsync($request);
-  $promise->then(function ($response) {
-      echo $response->ack;
-  })->otherwise(function ($reason) {
-      echo 'An error occurred: '.$reason->getMessage();
-  });
+    // Send the request.
+    $promise = $service->findItemsByKeywordsAsync($request);
+    $promise->then(function ($response) {
+        echo $response->ack;
+    })->otherwise(function ($reason) {
+        echo 'An error occurred: '.$reason->getMessage();
+    });
 
 You can make a promise complete synchronously by using the `wait` method of the promise.
 
 .. code-block:: php
 
-  // Send the request.
-  $promise = $service->findItemsByKeywordsAsync($request);
-  // Block until response is received.
-  $response = $promise->wait();
+    // Send the request.
+    $promise = $service->findItemsByKeywordsAsync($request);
+    // Block until response is received.
+    $response = $promise->wait();
 
 Working with Responses
 ----------------------
