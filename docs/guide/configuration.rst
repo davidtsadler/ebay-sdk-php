@@ -213,20 +213,20 @@ The unique string identifier for the eBay site your API requests are to be sent 
 .. _httpHandler:
 
 httpHandler
-~~~~~~~
+~~~~~~~~~~~
 
 :Type: ``callable``
 
-By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``httpHandler`` you can use a HTTP client that best meets your project's requirments. A ``httpHandler`` accepts a ``Psr\Http\Message\RequestInterface`` object and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a ``Psr\Http\Message\ResponseInterface`` object or rejected with an ``\Exception``.
+By default the SDK uses a ``Guzzle 6`` client to handle the sending and receiving HTTP messages. By providing your own ``httpHandler`` you can use a HTTP client that best meets your project's requirments. A ``httpHandler`` accepts a ``Psr\Http\Message\RequestInterface`` object and an array of :ref:`httpOptions <httpOptions>`, and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a ``Psr\Http\Message\ResponseInterface`` object or rejected with an ``\Exception``.
 
 .. code-block:: php
 
     use DTS\eBaySDK\Finding\Services\FindingService;
 
-    $httpHandler = function (Psr\Http\Message\RequestInterface $request) {
+    $httpHandler = function (Psr\Http\Message\RequestInterface $request, array $options) {
         $client = new SomeClient();
 
-        $response = $client->sendRequest($request);
+        $response = $client->sendRequest($request, $options);
 
         // Return promise that is fulfilled with a Psr\Http\Message\ResponseInterface.
         return $response;
@@ -237,6 +237,120 @@ By default the SDK uses a ``Guzzle 6`` client to handle the sending and receivin
         'globalId'   => 'EBAY-US',
         'httpHandler'    => $httpHandler
     ]);
+
+.. _httpOptions:
+
+httpOptions
+~~~~~~~~~~~
+
+:Type: ``array``
+
+An array of HTTP options that will be passed to the HTTP client. The SDK supports the following options:
+
+.. _http_options_connect_timeout:
+
+connect_timeout
+^^^^^^^^^^^^^^^
+
+:Type: ``float``
+
+A float specifying the number of seconds to wait when trying to connect to the API. Use ``0`` to wait indefinitely.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'connect_timeout' => 1.5
+        ]
+    ]);
+
+.. _http_options_debug:
+
+debug
+^^^^^
+
+:Type: ``bool|resource``
+
+Pass ``true`` to instruct the HTTP handler to output debug information to STDOUT. Alternatively pass `resource` as return from `fopen` to write to a specific PHP stream. The information provided will vary between HTTP handlers.
+
+.. _http_options_delay:
+
+delay
+^^^^^
+
+:Type: ``int``
+
+The number of milliseconds to delay before sending the request.
+
+.. _http_options_proxy:
+
+proxy
+^^^^^
+
+:Type: ``string|array``
+
+If you are connecting to the API through a proxy pass a string specifying the proxy or pass an array to specify several proxies.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'proxy' => 'http://192.168.2.1:10'
+        ]
+    ]);
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'proxy' => [
+                'http'  => 'tcp://192.168.2.1:10',
+                'https' => 'tcp://192.168.2.1:11'
+            ]
+        ]
+    ]);
+
+.. _http_options_timeout:
+
+timeout
+^^^^^^^
+
+:Type: ``float``
+
+A float specifying the number of seconds to wait for a response from the API. Use ``0`` to wait indefinitely.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'timeout' => 1.5
+        ]
+    ]);
+
+.. _http_options_verify:
+
+verify
+^^^^^^
+
+:Type: ``bool|string``
+
+Control the SSL certificate verification behavior of the request.
+
+* Set to ``true``  to enable SSL/TLS certificate verification. The SDK will use the default CA bundle provided by the operating system.
+* Set to ``false`` to disable verification. You should not do this in production as the SDK will connect to the API using an insecure connection.
+* Pass a string that is the path to the CA bundle to be used by the SDK.
 
 profile
 ~~~~~~~
