@@ -13,7 +13,7 @@ What's New?
 - The SDK now requires PHP 5.5+.
 - The SDK has been upgraded to use `Guzzle 6 <http://guzzlephp.org>`_ as its underlying HTTP client.
 - Follows the `PSR-4 <http://www.php-fig.org/psr/psr-4/>`_ and `PSR-7 <http://www.php-fig.org/psr/psr-7/>`_ standards.
-- A simple way of providing your own HTTP client via the new ``'handler'`` configuration option.
+- A simple way of providing your own HTTP client via the new ``'httpHandler'`` configuration option.
 - Simplified debugging via the new :ref:`debug <debug>` configuration option.
 - Your eBay application keys no longer have to be hardcode in your project's code. The SDK provides several ways in which to supply your :doc:`credentials <credentials>`.
 - Manage shared configuration between multiple services by using the new :ref:`SDK object <sdk-class>`.
@@ -196,7 +196,7 @@ The pre-version 1 SDK would throw a ``DTS\eBaySDK\Exceptions\UnknownConfiguratio
 HttpClient paramter and method has been removed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version 1 introduced the new :ref:`handler <handler>` configuration option which replaced both the ``httpClient`` parameter and method.
+Version 1 introduced the new :ref:`httpHandler <httpHandler>` configuration option which replaced both the ``httpClient`` parameter and method.
 
 .. code-block:: php
 
@@ -220,17 +220,17 @@ Version 1 introduced the new :ref:`handler <handler>` configuration option which
     ], new HttpClient());
 
     // Version 1
-    $handler = function (Psr\Http\Message\RequestInterface $request) {
+    $httpHandler = function (Psr\Http\Message\RequestInterface $request, array $options) {
         $client = new SomeClient();
 
-        $response = $client->sendRequest($request);
+        $response = $client->sendRequest($request, $options);
 
         // Return promise that is fulfilled with a Psr\Http\Message\ResponseInterface.
         return $response;
     };
 
     $service = new FindingService([
-        'apiVersion' => '1.13.0',
-        'globalId'   => 'EBAY-US',
-        'handler'    => $handler
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpHandler' => $httpHandler
     ]);
