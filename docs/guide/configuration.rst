@@ -275,7 +275,7 @@ debug
 
 :Type: ``bool|resource``
 
-Pass ``true`` to instruct the HTTP handler to output debug information to STDOUT. Alternatively pass `resource` as return from `fopen` to write to a specific PHP stream. The information provided will vary between HTTP handlers.
+Pass ``true`` to instruct the HTTP handler to output debug information to STDOUT. Alternatively pass ``resource`` as return from ``fopen`` to write to a specific PHP stream. The information provided will vary between HTTP handlers.
 
 .. _http_options_delay:
 
