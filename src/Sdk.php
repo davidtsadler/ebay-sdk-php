@@ -15,7 +15,7 @@ namespace DTS\eBaySDK;
  */
 class Sdk
 {
-    const VERSION = '4.0.1';
+    const VERSION = '5.0.0';
 
     public static $STRICT_PROPERTY_TYPES = true;
 
