@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## Doc
+
+* Fixed issue with JMS seriallizer. Documentation was incorrectly using @returns instead of @return.
+
+`find src -type f -iname "*.php" | xargs grep -l @returns | xargs sed -i 's/@returns/@return/'`
+
 ### Features
 
 * The SDK now supports asynchronous requests.

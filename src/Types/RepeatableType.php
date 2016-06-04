@@ -53,7 +53,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
      *
      * @param integer $offset The array index to check.
      *
-     * @returns boolean Returns if the offset exists in the array.
+     * @return boolean Returns if the offset exists in the array.
      */
     public function offsetExists($offset)
     {
@@ -65,7 +65,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
      *
      * @param integer $offset The array index.
      *
-     * @returns mixed Returns the value for the given offset or null if it doesn't exist.
+     * @return mixed Returns the value for the given offset or null if it doesn't exist.
      */
     public function offsetGet($offset)
     {
@@ -100,7 +100,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns integer The number of array items.
+     * @return integer The number of array items.
      */
     public function count()
     {
@@ -108,7 +108,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns mixed The value of the current array index.
+     * @return mixed The value of the current array index.
      */
     public function current()
     {
@@ -116,7 +116,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns index The current array index.
+     * @return index The current array index.
      */
     public function key()
     {
@@ -140,7 +140,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
     }
 
     /**
-     * @returns boolean Return if the current array index is valid.
+     * @return boolean Return if the current array index is valid.
      */
     public function valid()
     {

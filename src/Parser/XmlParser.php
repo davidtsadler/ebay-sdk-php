@@ -36,7 +36,7 @@ class XmlParser
      *
      * @param string $xml The xml string to parse.
      *
-     * @returns mixed A PHP object derived from DTS\eBaySDK\Types\BaseType
+     * @return mixed A PHP object derived from DTS\eBaySDK\Types\BaseType
      */
     public function parse($xml)
     {
@@ -133,7 +133,7 @@ class XmlParser
     /**
      * Returns that parent PHP object.
      *
-     * @returns mixed The parent PHP object.
+     * @return mixed The parent PHP object.
      */
     private function getParentObject()
     {
@@ -148,7 +148,7 @@ class XmlParser
      * @param string $name The name of the element.
      * @param arrary $attributes Associative array of the element's attributes.
      *
-     * @returns array Associative array containing the PHP meta data.
+     * @return array Associative array containing the PHP meta data.
      */
     private function getPhpMeta($elementName, $attributes)
     {
@@ -218,7 +218,7 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @returns mixed The value to assign.
+     * @return mixed The value to assign.
      */
     private function getValueToAssign($meta)
     {
@@ -237,7 +237,7 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @returns boolean True if the property type is simlple.
+     * @return boolean True if the property type is simlple.
      */
     private function isSimplePhpType($meta)
     {
@@ -258,7 +258,7 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @returns boolean True if the property need to be set by _value_.
+     * @return boolean True if the property need to be set by _value_.
      */
     private function setByValue($meta)
     {
@@ -279,7 +279,7 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @returns boolean True if the property type is simlple.
+     * @return boolean True if the property type is simlple.
      */
     private function getValueToAssignToProperty($meta)
     {
@@ -303,7 +303,7 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @returns mixed The value to assign.
+     * @return mixed The value to assign.
      */
     private function getValueToAssignToValue($meta)
     {

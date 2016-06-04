@@ -106,7 +106,7 @@ class BaseType
     /**
      * Converts the object to a XML request string.
      *
-     * @returns string The XML request string.
+     * @return string The XML request string.
      */
     public function toRequestXml()
     {
@@ -119,7 +119,7 @@ class BaseType
      * @param string $elementName The XML element that the object's properties will be a children of.
      * @param boolean $rootElement Indicates if the XML will be the root element.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private function toXml($elementName, $rootElement = false)
     {
@@ -256,7 +256,7 @@ class BaseType
      * @param string $name The property name.
      * @throws UnknownPropertyException If the property does not exist.
      *
-     * @returns mixed The value of the property.
+     * @return mixed The value of the property.
      */
     private function get($class, $name)
     {
@@ -289,7 +289,7 @@ class BaseType
      * @param string $name The property name.
      * @throws UnknownPropertyException If the property does not exist.
      *
-     * @returns boolean Returns if the property has been set.
+     * @return boolean Returns if the property has been set.
      */
     private function isPropertySet($class, $name)
     {
@@ -318,7 +318,7 @@ class BaseType
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
      *
-     * @returns mixed The value of the property.
+     * @return mixed The value of the property.
      */
     private function getValue($class, $name)
     {
@@ -361,7 +361,7 @@ class BaseType
     /**
      * Returns an XML string of the object's attributes.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private function attributesToXml()
     {
@@ -385,7 +385,7 @@ class BaseType
     /**
      * Returns an XML string of the object's properties.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private function propertiesToXml()
     {
@@ -459,7 +459,7 @@ class BaseType
      *
      * @param mixed $value The value we want the type of.
      *
-     * @returns string The type name of the value.
+     * @return string The type name of the value.
      */
     private static function getActualType($value)
     {
@@ -478,7 +478,7 @@ class BaseType
      * @param string $class The name of the class the property belongs to.
      * @param string $name The of the property.
      *
-     * @returns array The meta data for the property.
+     * @return array The meta data for the property.
      */
     private static function propertyInfo($class, $name)
     {
@@ -488,7 +488,7 @@ class BaseType
     /**
      * Helper function to remove the properties and values that belong to a object's parent.
      *
-     * @returns array The first element is an array of parent properties and values.
+     * @return array The first element is an array of parent properties and values.
      *                The second element is an array of the object's properties and values.
      */
     protected static function getParentValues(array $properties, array $values)
@@ -505,7 +505,7 @@ class BaseType
      * @param string $class The name of the class the property belongs to.
      * @param string $name The of the attribute property.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private static function attributeToXml($name, $value)
     {
@@ -518,7 +518,7 @@ class BaseType
      * @param string $name The of the property.
      * @param mixed $value The value of the property.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private static function propertyToXml($name, $value)
     {
@@ -534,7 +534,7 @@ class BaseType
      *
      * @param mixed $value The value of the property.
      *
-     * @returns string The XML.
+     * @return string The XML.
      */
     private static function encodeValueXml($value)
     {
@@ -552,7 +552,7 @@ class BaseType
      *
      * @param mixed $value The value of the property.
      *
-     * @returns mixed A value to add to an array.
+     * @return mixed A value to add to an array.
      */
     private static function propertyToArrayValue($value)
     {
