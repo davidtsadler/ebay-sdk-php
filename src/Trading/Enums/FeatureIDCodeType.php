@@ -48,6 +48,7 @@ class FeatureIDCodeType
     const C_DUTCHBIN_ENABLED = 'DutchBINEnabled';
     const C_EAN_ENABLED = 'EANEnabled';
     const C_EAN_IDENTIFIER_ENABLED = 'EANIdentifierEnabled';
+    const C_EPID_SUPPORTED = 'EpidSupported';
     const C_EXPRESS_CONDITION_REQUIRED = 'ExpressConditionRequired';
     const C_EXPRESS_ENABLED = 'ExpressEnabled';
     const C_EXPRESS_PICTURES_REQUIRED = 'ExpressPicturesRequired';
@@ -77,6 +78,7 @@ class FeatureIDCodeType
     const C_ISBN_ENABLED = 'ISBNEnabled';
     const C_ISBN_IDENTIFIER_ENABLED = 'ISBNIdentifierEnabled';
     const C_ITEM_SPECIFICS_ENABLED = 'ItemSpecificsEnabled';
+    const C_K_TYPE_SUPPORTED = 'KTypeSupported';
     const C_LISTING_DURATIONS = 'ListingDurations';
     const C_LOCAL_LISTING_DISTANCES = 'LocalListingDistances';
     const C_LOCAL_MARKET_AD_FORMAT_ENABLED = 'LocalMarketAdFormatEnabled';

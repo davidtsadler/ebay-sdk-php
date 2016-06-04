@@ -127,6 +127,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AdditionalCompatibilityEnabledDefinitionType $AdditionalCompatibilityEnabled
  * @property \DTS\eBaySDK\Trading\Types\PickupDropOffEnabledDefinitionType $PickupDropOffEnabled
  * @property \DTS\eBaySDK\Trading\Types\DigitalGoodDeliveryEnabledDefinitionType $DigitalGoodDeliveryEnabled
+ * @property \DTS\eBaySDK\Trading\Types\EpidSupportedDefinitionType $EpidSupported
+ * @property \DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType $KTypeSupported
  */
 class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -841,6 +843,18 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DigitalGoodDeliveryEnabled'
+        ],
+        'EpidSupported' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\EpidSupportedDefinitionType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EpidSupported'
+        ],
+        'KTypeSupported' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'KTypeSupported'
         ]
     ];
 

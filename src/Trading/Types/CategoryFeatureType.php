@@ -125,6 +125,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $AdditionalCompatibilityEnabled
  * @property boolean $PickupDropOffEnabled
  * @property boolean $DigitalGoodDeliveryEnabled
+ * @property boolean $EpidSupported
+ * @property boolean $KTypeSupported
  */
 class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -827,6 +829,18 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DigitalGoodDeliveryEnabled'
+        ],
+        'EpidSupported' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'EpidSupported'
+        ],
+        'KTypeSupported' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'KTypeSupported'
         ]
     ];
 
