@@ -39,4 +39,5 @@ SDK Guides
 * :doc:`guide/request-and-response-objects`
 * :doc:`guide/uploading-and-downloading-files`
 * :doc:`guide/promises`
+* :doc:`guide/jmespath`
 * :doc:`guide/migration`

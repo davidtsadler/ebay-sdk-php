@@ -3,12 +3,14 @@ namespace DTS\eBaySDK\Types;
 
 use \DTS\eBaySDK\Types;
 use \DTS\eBaySDK\Exceptions;
+use \DTS\eBaySDK\JmesPath\Env;
+use \DTS\eBaySDK\JmesPath\JmesPathableObjectInterface;
 
 /**
  * Base class for all API objects.
  *
  */
-class BaseType
+class BaseType implements JmesPathableObjectInterface
 {
     /**
      * @var array Associative array containing meta data about each property.
@@ -231,6 +233,23 @@ class BaseType
         }
 
         return $array;
+    }
+
+    /**
+     * Assign multiple values to an object.
+     *
+     * @param string $expression A valid JMESPath expression
+     *
+     * @return mixed The results of the search.
+     */
+    public function search($expression)
+    {
+        return Env::search($expression, $this);
+    }
+
+    public function __toString()
+    {
+        return json_encode($this->toArray());
     }
 
     /**

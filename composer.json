@@ -4,7 +4,7 @@
     "keywords": ["ebay", "api", "sdk"],
     "homepage": "http://devbay.net/",
     "type": "library",
-    "license": "Apache-2.0",
+    "license": "(Apache-2.0 and MIT)",
     "authors": [
         {
             "name": "David T. Sadler",

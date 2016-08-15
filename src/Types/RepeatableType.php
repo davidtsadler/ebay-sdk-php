@@ -2,13 +2,14 @@
 namespace DTS\eBaySDK\Types;
 
 use \DTS\eBaySDK\Exceptions;
+use \DTS\eBaySDK\JmesPath\JmesPathableArrayInterface;
 
 /**
  * Class to handle XML elements that are repeatable.
  *
  * Allows properties in an object to be treated as an array.
  */
-class RepeatableType implements \ArrayAccess, \Countable, \Iterator
+class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathableArrayInterface
 {
     /**
      * @var array The data to store as an array.

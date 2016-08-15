@@ -12,6 +12,10 @@
 
 * Allow properties on `DTS\eBaySDK\Types\DecimalType` objects to be assigned both `integer` and `double` values.
 
+### Features
+
+- The SDK now supports JMESPath expressions that allow you to declaratively extract data from an API response.
+
 ## 6.0.0 - 2016-08-30
 
 ### Breaking changes
