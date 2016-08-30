@@ -9,6 +9,7 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Shopping\Enums\FeedbackRatingStarCodeType $FeedbackRatingStar
  * @property string $CommentingUser
  * @property integer $CommentingUserScore
  * @property string $CommentText
@@ -33,6 +34,12 @@ class FeedbackDetailType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'FeedbackRatingStar' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'FeedbackRatingStar'
+        ],
         'CommentingUser' => [
             'type' => 'string',
             'repeatable' => false,
