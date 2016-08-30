@@ -198,19 +198,27 @@ class XmlParser
      * Builds the required PHP object.
      *
      * @param array $meta The PHP meta data.
+     *
+     * @return mixed A new PHP object or null.
      */
     private function newPhpObject($meta)
     {
-        switch ($meta->phpType) {
-            case 'integer':
-            case 'string':
-            case 'double':
-            case 'boolean':
-            case 'DateTime':
-                break;
-            default:
-                return $meta->phpType !== '' ? new $meta->phpType() : null;
+        $phpTypes = explode('|', $meta->phpType);
+
+        foreach ($phpTypes as $phpType) {
+            switch ($phpType) {
+                case 'integer':
+                case 'string':
+                case 'double':
+                case 'boolean':
+                case 'DateTime':
+                    continue;
+                default:
+                    return $meta->phpType !== '' ? new $phpType() : null;
+            }
         }
+
+        return null;
     }
 
     /**
@@ -237,20 +245,26 @@ class XmlParser
      *
      * @param array $meta The PHP meta data.
      *
-     * @return boolean True if the property type is simlple.
+     * @return boolean True if the property type is simple.
      */
     private function isSimplePhpType($meta)
     {
-        switch ($meta->phpType) {
-            case 'integer':
-            case 'string':
-            case 'double':
-            case 'boolean':
-            case 'DateTime':
-                return true;
-            default:
-                return false;
+        $phpTypes = explode('|', $meta->phpType);
+
+        foreach ($phpTypes as $phpType) {
+            switch ($phpType) {
+                case 'integer':
+                case 'string':
+                case 'double':
+                case 'boolean':
+                case 'DateTime':
+                    continue;
+                default:
+                    return false;
+            }
         }
+
+        return true;
     }
 
     /**
@@ -312,7 +326,7 @@ class XmlParser
         } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\BooleanType', false)) {
             return strtolower($meta->strData) === 'true';
         } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DecimalType', false)) {
-            return (integer)$meta->strData;
+            return is_int(0 + $meta->strData) ? (integer)$meta->strData : (double)$meta->strData;
         } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DoubleType', false)) {
             return (double)$meta->strData;
         } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\IntegerType', false)) {

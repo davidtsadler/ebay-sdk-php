@@ -8,6 +8,10 @@
 * Support Shopping API version 981.
 * Support Trading API version 981.
 
+### Fixes
+
+* Allow properties on `DTS\eBaySDK\Types\DecimalType` objects to be assigned both `integer` and `double` values.
+
 ## 6.0.0 - 2016-08-30
 
 ### Breaking changes

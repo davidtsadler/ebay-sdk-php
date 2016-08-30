@@ -155,15 +155,26 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator
      */
     private function ensurePropertyType($value)
     {
-        if (\DTS\eBaySDK\checkPropertyType($this->expectedType)) {
-            $actualType = gettype($value);
-            if ('object' === $actualType) {
-                $actualType = get_class($value);
-            }
+        $actualType = gettype($value);
+        if ('object' === $actualType) {
+            $actualType = get_class($value);
+        }
 
-            if ($this->expectedType !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException($this->property, $this->expectedType, $actualType);
+        $valid = explode('|', $this->expectedType);
+        $isValid = false;
+        foreach ($valid as $check) {
+            if (\DTS\eBaySDK\checkPropertyType($check)) {
+                if ($check === $actualType) {
+                    return;
+                }
+                $isValid = false;
+            } else {
+                $isValid = true;
             }
+        }
+
+        if (!$isValid) {
+            throw new Exceptions\InvalidPropertyTypeException($this->property, $this->expectedType, $actualType);
         }
     }
 }

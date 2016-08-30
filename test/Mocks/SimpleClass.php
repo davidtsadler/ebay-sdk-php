@@ -135,6 +135,36 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => true,
             'attributeName' => 'DateTimeAttribute'
+        ],
+        'decimalTypes' => [
+            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'decimalTypes'
+        ],
+        'decimalTypePosInteger' => [
+            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'decimalTypePosInteger'
+        ],
+        'decimalTypePosFloat' => [
+            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'decimalTypePosFloat'
+        ],
+        'decimalTypeNegInteger' => [
+            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'decimalTypeNegInteger'
+        ],
+        'decimalTypeNegFloat' => [
+            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'decimalTypeNegFloat'
         ]
     ];
 

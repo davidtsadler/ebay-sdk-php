@@ -54,6 +54,10 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
                 ]),
                 new SimpleClass()
             ],
+            'decimalTypes' => [
+                ['value' => 1],
+                ['value' => 2.34]
+            ]
         ];
 
         $obj = new ComplexClass($values);
@@ -111,6 +115,11 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3, count($obj->simpleClasses));
         $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->simpleClasses);
+
+        $this->assertEquals(2, count($obj->decimalTypes));
+        $this->assertEquals(1, $obj->decimalTypes[0]->value);
+        $this->assertEquals(2.34, $obj->decimalTypes[1]->value);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->strings);
     }
 
     public function testSettingInvalidPropertyViaCtor()

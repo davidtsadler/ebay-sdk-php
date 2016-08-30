@@ -442,15 +442,25 @@ class BaseType
      */
     private static function ensurePropertyType($class, $name, $value)
     {
+        $isValid = false;
         $info = self::propertyInfo($class, $name);
-        $expectedType = $info['type'];
+        $actualType = self::getActualType($value);
+        $valid = explode('|', $info['type']);
 
-        if (\DTS\eBaySDK\checkPropertyType($expectedType)) {
-            $actualType = self::getActualType($value);
-
-            if ($expectedType !== $actualType && 'array' !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException($name, $expectedType, $actualType);
+        foreach ($valid as $check) {
+            if (\DTS\eBaySDK\checkPropertyType($check)) {
+                if ($check === $actualType || 'array' === $actualType) {
+                    return;
+                }
+                $isValid = false;
+            } else {
+                $isValid = true;
             }
+        }
+
+        if (!$isValid) {
+            $expectedType = $info['type'];
+            throw new Exceptions\InvalidPropertyTypeException($name, $expectedType, $actualType);
         }
     }
 
@@ -600,16 +610,20 @@ class BaseType
             return $value;
         }
 
-        switch ($info['type']) {
-            case 'integer':
-            case 'string':
-            case 'double':
-            case 'boolean':
-                return $value;
-            case 'DateTime':
-                return new \DateTime($value, new \DateTimeZone('UTC'));
-            default:
-                return new $info['type']($value);
+        $types = explode('|', $info['type']);
+
+        foreach ($types as $type) {
+            switch ($type) {
+                case 'integer':
+                case 'string':
+                case 'double':
+                case 'boolean':
+                    return $value;
+                case 'DateTime':
+                    return new \DateTime($value, new \DateTimeZone('UTC'));
+                default:
+                    return new $info['type']($value);
+            }
         }
     }
 }

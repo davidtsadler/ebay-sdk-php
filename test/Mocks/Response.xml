@@ -38,4 +38,8 @@
     </nonexistent>
     <BISH>foo</BISH>
     <BishBash>foo</BishBash>
+    <decimalTypePosInteger>123</decimalTypePosInteger>
+    <decimalTypePosFloat>123.45</decimalTypePosFloat>
+    <decimalTypeNegInteger>-123</decimalTypeNegInteger>
+    <decimalTypeNegFloat>-123.45</decimalTypeNegFloat>
 </root>

@@ -64,6 +64,10 @@ class XmlTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('string type', $obj->stringType->value);
         $this->assertEquals('token type', $obj->tokenType->value);
         $this->assertEquals('uri type', $obj->uriType->value);
+        $this->assertEquals(123, $obj->decimalTypePosInteger->value);
+        $this->assertEquals(123.45, $obj->decimalTypePosFloat->value);
+        $this->assertEquals(-123, $obj->decimalTypeNegInteger->value);
+        $this->assertEquals(-123.45, $obj->decimalTypeNegFloat->value);
     }
 
     public function testCanParseXmlWithNamespace()
