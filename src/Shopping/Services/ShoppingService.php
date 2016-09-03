@@ -9,7 +9,7 @@ namespace DTS\eBaySDK\Shopping\Services;
 
 class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
 {
-    const API_VERSION = '979';
+    const API_VERSION = '981';
 
     /**
      * @param array $config Configuration option values.

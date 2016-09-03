@@ -5,6 +5,7 @@
 ### Breaking changes
 
 * Support Merchant Data API version 981.
+* Support Shopping API version 981.
 
 ## 6.0.0 - 2016-08-30
 
