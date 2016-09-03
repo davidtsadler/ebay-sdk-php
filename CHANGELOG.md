@@ -56,7 +56,6 @@
 
 * Support Trading API version 963.
 * Support Shopping API version 963.
->>>>>>> develop
 
 ## 3.0.0 - 2016-04-11
 
