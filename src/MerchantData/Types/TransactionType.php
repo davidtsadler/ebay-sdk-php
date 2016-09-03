@@ -53,10 +53,9 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualShippingCost
  * @property \DTS\eBaySDK\MerchantData\Types\AmountType $ActualHandlingCost
  * @property string $OrderLineItemID
+ * @property string $eBayPaymentID
  * @property \DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType $PaymentHoldDetails
  * @property \DTS\eBaySDK\MerchantData\Types\SellerDiscountsType $SellerDiscounts
- * @property \DTS\eBaySDK\MerchantData\Types\AmountType $RefundAmount
- * @property string $RefundStatus
  * @property string $CodiceFiscale
  * @property boolean $IsMultiLegShipping
  * @property \DTS\eBaySDK\MerchantData\Types\MultiLegShippingDetailsType $MultiLegShippingDetails
@@ -75,6 +74,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Types\GiftSummaryType $GiftSummary
  * @property \DTS\eBaySDK\MerchantData\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
  * @property boolean $Gift
+ * @property boolean $GuaranteedShipping
  */
 class TransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -346,6 +346,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'OrderLineItemID'
         ],
+        'eBayPaymentID' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'eBayPaymentID'
+        ],
         'PaymentHoldDetails' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\PaymentHoldDetailType',
             'repeatable' => false,
@@ -357,18 +363,6 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerDiscounts'
-        ],
-        'RefundAmount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ],
-        'RefundStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundStatus'
         ],
         'CodiceFiscale' => [
             'type' => 'string',
@@ -477,6 +471,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Gift'
+        ],
+        'GuaranteedShipping' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'GuaranteedShipping'
         ]
     ];
 

@@ -21,6 +21,7 @@ namespace DTS\eBaySDK\MerchantData\Types;
  * @property \DTS\eBaySDK\MerchantData\Enums\ReturnStatusCodeType $ReturnStatus
  * @property \DTS\eBaySDK\MerchantData\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  * @property \DTS\eBaySDK\MerchantData\Enums\DigitalStatusCodeType $DigitalStatus
+ * @property \DTS\eBaySDK\MerchantData\Enums\CancelStatusCodeType $CancelStatus
  */
 class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -99,6 +100,12 @@ class TransactionStatusType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DigitalStatus'
+        ],
+        'CancelStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'CancelStatus'
         ]
     ];
 
