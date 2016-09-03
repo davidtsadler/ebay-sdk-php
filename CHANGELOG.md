@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 7.0.0 - 2016-09-03
 
 ### Breaking changes
 
