@@ -5,6 +5,8 @@ use DTS\eBaySDK\Types\URIType;
 
 class URITypeTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new URIType();

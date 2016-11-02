@@ -222,8 +222,8 @@ EOT;
         ]);
 
         try {
-            $c = $s->getCredentials();
-        } catch (Exception $e) {
+            $s->getCredentials();
+        } catch (\Exception $e) {
             unlink($dir . '/credentials');
             throw $e;
         }
@@ -235,7 +235,7 @@ EOT;
      */
     public function testCredentialsProviderThrowsIfCantProvide()
     {
-        $s = new Service([
+        new Service([
             'credentials' => function () {
                 return new \InvalidArgumentException('Cannot locate credentials');
             },

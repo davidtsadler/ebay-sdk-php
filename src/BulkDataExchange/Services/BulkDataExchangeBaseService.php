@@ -7,14 +7,19 @@ namespace DTS\eBaySDK\BulkDataExchange\Services;
 class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. The API version your application supports.
      */
     const HDR_API_VERSION = 'X-EBAY-SOA-SERVICE-VERSION';
+
+    /**
+     * HTTP header constant. The Authentication Token that is used to validate the caller has permission to access the eBay servers.
+     */
     const HDR_AUTH_TOKEN = 'X-EBAY-SOA-SECURITY-TOKEN';
-    const HDR_CONTENT_TYPE = 'CONTENT-TYPE';
-    const HDR_MESSAGE_PROTOCOL = 'X-EBAY-SOA-MESSAGE-PROTOCOL';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-SOA-OPERATION-NAME';
-    const HDR_SERVICE_NAME = 'X-EBAY-SOA-SERVICE-NAME';
 
     /**
      * @param array $config Configuration option values.
@@ -24,6 +29,11 @@ class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
         parent::__construct('https://webservices.ebay.com/BulkDataExchangeService', 'https://webservices.sandbox.ebay.com/BulkDataExchangeService', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -41,7 +51,7 @@ class BulkDataExchangeBaseService extends \DTS\eBaySDK\Services\BaseService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *

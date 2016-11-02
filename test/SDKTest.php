@@ -5,6 +5,8 @@ use DTS\eBaySDK\Sdk;
 
 class SdkTest extends \PHPUnit_Framework_TestCase
 {
+    private $sdk;
+
     protected function setUp()
     {
         $this->sdk = new Sdk([

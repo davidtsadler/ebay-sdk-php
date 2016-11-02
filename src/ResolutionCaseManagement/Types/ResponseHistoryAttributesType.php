@@ -13,8 +13,6 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef $moneyMovementRef
  * @property string $onholdReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\OnHoldReasonDetailType $onholdReasonDetail
- * @property string $idref
- * @property string $idref
  */
 class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -45,18 +43,6 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'onholdReasonDetail'
-        ],
-        'idref' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'idref'
-        ],
-        'idref' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'idref'
         ]
     ];
 

@@ -3,7 +3,9 @@ namespace DTS\eBaySDK;
 
 trait StatusCodeTrait
 {
-    /** @var int */
+    /**
+     * @var int The response status code.
+     */
     private $statusCode;
 
     /**

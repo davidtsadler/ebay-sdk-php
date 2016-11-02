@@ -7,20 +7,44 @@ namespace DTS\eBaySDK\Shopping\Services;
 class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. Your affiliate ID.
      */
     const HDR_AFFILIATE_USER_ID = 'X-EBAY-API-AFFILIATE-USER-ID';
+
+    /**
+     * HTTP header constant. The API version your application supports.
+     */
     const HDR_API_VERSION = 'X-EBAY-API-VERSION';
+
+    /**
+     * HTTP header constant. Your application ID.
+     */
     const HDR_APP_ID = 'X-EBAY-API-APP-ID';
-    const HDR_CALLBACK_NAME = 'X-EBAY-API-CALLBACK-NAME';
-    const HDR_CALLBACK = 'X-EBAY-API-CALLBACK';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-API-CALL-NAME';
+
+    /**
+     * HTTP header constant. Indicates that the request uses XML.
+     */
     const HDR_REQUEST_FORMAT = 'X-EBAY-API-REQUEST-ENCODING';
-    const HDR_RESPONSE_FORMAT = 'X-EBAY-API-RESPONSE-ENCODING';
+
+    /**
+     * HTTP header constant. The site ID of the eBay site the request is for.
+     */
     const HDR_SITE_ID = 'X-EBAY-API-SITE-ID';
+
+    /**
+     * HTTP header constant. Your tracking ID.
+     */
     const HDR_TRACKING_ID = 'X-EBAY-API-TRACKING-ID';
+
+    /**
+     * HTTP header constant. Your tracking partner ID.
+     */
     const HDR_TRACKING_PARTNER_CODE = 'X-EBAY-API-TRACKING-PARTNER-CODE';
-    const HDR_VERSION_HANDLING = 'X-EBAY-API-VERSIONHANDLING';
 
     /**
      * @param array $config Configuration option values.
@@ -30,6 +54,11 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
         parent::__construct('http://open.api.ebay.com/shopping', 'http://open.api.sandbox.ebay.com/shopping', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -56,7 +85,7 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *

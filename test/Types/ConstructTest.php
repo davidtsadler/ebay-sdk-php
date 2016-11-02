@@ -15,20 +15,9 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
             'double' => 123.45,
             'booleanTrue' => true,
             'booleanFalse' => false,
-            'DateTime' => '2000-01-01T00:00:00.000Z',
-            /**
-             * Wouldn't do this in client code.
-             * Can pass the same field multiple times. The value is just assigned over the previous one.
-             * All we are doing here is testing that different types can be passed to the field
-             * and it will be handled correctly by the code.
-             */
             'DateTime' => new \DateTime('2000-01-01T00:00:00.000Z', new \DateTimeZone('UTC')),
             'strings' => ['foo', 'bar'],
             'integers' => [111, 222],
-            'AmountClass' => [
-                'value' => 543.21,
-                'AttributeOne' => 'one'
-            ],
             'AmountClass' => new AmountClass(['value' => 543.21, 'AttributeOne' => 'one']),
             'SimpleClass' => [
                 'integer' => 123,
@@ -136,7 +125,7 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property bar');
 
-        $obj = new ComplexClass([
+        new ComplexClass([
             'bar' => 'bar'
         ]);
     }
@@ -145,7 +134,7 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\InvalidPropertyTypeException', 'Invalid property type provided for string. Expected string but got integer');
 
-        $obj = new ComplexClass([
+        new ComplexClass([
             'string' => 123
         ]);
     }

@@ -23,12 +23,12 @@ abstract class BaseRestService
     const HDR_RESPONSE_LANGUAGE = 'Accept-Language';
 
     /**
-     * @var DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
+     * @var \DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
      */
     private $resolver;
 
     /**
-     * @var DTS\eBaySDK\UriResolver Resolves uri parameters.
+     * @var \DTS\eBaySDK\UriResolver Resolves uri parameters.
      */
     private $uriResolver;
 
@@ -48,9 +48,9 @@ abstract class BaseRestService
     }
 
     /**
-     * Get an array of service configuration option definitions.
+     * Returns definitions for each configuration option that is supported.
      *
-     * @return array
+     * @return array An associative array of configuration definitions.
      */
     public static function getConfigDefinitions()
     {
@@ -88,7 +88,10 @@ abstract class BaseRestService
     /**
      * Method to get the service's configuration.
      *
-     * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
+     * @param string|null $option The name of the option whos value will be returned.
+     *
+     * @return mixed Returns an associative array of configuration options if no parameters are passed,
+     * otherwise returns the value for the specified configuration option.
      */
     public function getConfig($option = null)
     {
@@ -99,7 +102,12 @@ abstract class BaseRestService
                 : null);
     }
 
-    public function setConfig($configuration)
+    /**
+     * Set multiple configuration options.
+     *
+     * @param array $configuration Associative array of configuration options and their values.
+     */
+    public function setConfig(array $configuration)
     {
         $this->config = Functions\arrayMergeDeep(
             $this->config,
@@ -108,6 +116,8 @@ abstract class BaseRestService
     }
 
     /**
+     * Helper method to return the value of the credentials configuration option.
+     *
      * @return \DTS\eBaySDK\Credentials\CredentialsInterface
      */
     public function getCredentials()
@@ -127,7 +137,6 @@ abstract class BaseRestService
     {
         $operation = static::$operations[$name];
 
-        $requestArray = [];
         $paramValues = [];
         $requestValues = [];
 
@@ -195,7 +204,9 @@ abstract class BaseRestService
     /**
      * Builds the request body string.
      *
-     * @return string The request body.
+     * @param array $request Associative array that is the request body.
+     *
+     * @return string The request body in JSON format.
      */
     private function buildRequestBody(array $request)
     {
@@ -240,10 +251,10 @@ abstract class BaseRestService
      * Sends a debug string of the request details.
      *
      * @param string $url API endpoint.
-     * @param array  $headers Associative array of HTTP headers.
+     * @param array $headers Associative array of HTTP headers.
      * @param string $body The JSON body of the request.
       */
-    private function debugRequest($url, $headers, $body)
+    private function debugRequest($url, array $headers, $body)
     {
         $str = $url.PHP_EOL;
 
@@ -269,6 +280,8 @@ abstract class BaseRestService
 
     /**
      * Sends a debug string via the attach debugger.
+     *
+     * @param string $str The debug information.
      */
     private function debug($str)
     {

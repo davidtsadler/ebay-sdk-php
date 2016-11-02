@@ -6,7 +6,9 @@ namespace DTS\eBaySDK;
  */
 class UriResolver
 {
-    /** @var array Map of type to function that confirms type. */
+    /**
+     * @var array Map of type to function that confirms type.
+     */
     private static $typeMap = [
         'array' => 'is_array',
         'bool' => 'is_bool',
@@ -27,6 +29,7 @@ class UriResolver
      * @param string $resource The name of the resource.
      * @param array $paramDefs Associative array of uri parameter definitions for the operation.
      * @param array $paramValues Associative array of uri parameter values for the operation.
+     *
      * @return string Returns a resolved uri.
      * @throws \InvalidArgumentException.
      */
@@ -66,7 +69,7 @@ class UriResolver
         );
     }
 
-    private function checkType($valid, $name, $provided)
+    private function checkType(array $valid, $name, $provided)
     {
         foreach ($valid as $check) {
             if (isset(self::$typeMap[$check])) {
@@ -89,7 +92,7 @@ class UriResolver
         throw new \InvalidArgumentException($msg);
     }
 
-    private function throwRequired($paramDefs, $paramValues)
+    private function throwRequired(array $paramDefs, array $paramValues)
     {
         $missing = [];
 
@@ -108,7 +111,15 @@ class UriResolver
         throw new \InvalidArgumentException($msg);
     }
 
-    private function fillPathParams($uri, &$paramValues)
+    /**
+     * Replaces path parameters placeholders in the uri with the correct values.
+     *
+     * @param string $uri A uri with path parameters.
+     * @param array $paramValues Associative array of path parameter names and their values.
+     *
+     * @return string The path.
+     */
+    private function fillPathParams($uri, array &$paramValues)
     {
         return preg_replace_callback('/{(\S+)}/U', function ($matches) use (&$paramValues) {
             $path = $matches[1];
@@ -122,7 +133,14 @@ class UriResolver
         }, $uri);
     }
 
-    private function buildQueryParameters($paramValues)
+    /**
+     * Builds a query parameters string.
+     *
+     * @param array $paramValues Associative array of query parameter names and their values.
+     *
+     * @return string The query parameters string
+     */
+    private function buildQueryParameters(array $paramValues)
     {
         if (empty($paramValues)) {
             return '';

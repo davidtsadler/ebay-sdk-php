@@ -6,10 +6,14 @@ namespace DTS\eBaySDK;
  */
 class ConfigurationResolver
 {
-    /** @var array */
+    /**
+     * @var array $definitions Definitions for each configuration option.
+     */
     private $definitions;
 
-    /** @var array Map of type to function that confirms type. */
+    /**
+     * @var array Map of type to function that confirms type.
+     */
     private static $typeMap = [
         'array' => 'is_array',
         'bool' => 'is_bool',
@@ -21,7 +25,7 @@ class ConfigurationResolver
     /**
      * @param array $definitions Definitions for each configuration option.
      */
-    public function __construct($definitions)
+    public function __construct(array $definitions)
     {
         $this->definitions = $definitions;
     }
@@ -87,7 +91,14 @@ class ConfigurationResolver
         return $configuration;
     }
 
-    private function checkType($valid, $name, $provided)
+    /**
+     * @param array $valid Array of valid types.
+     * @param $name Name of the configuration option.
+     * @param $provided Value to check the type of.
+     *
+     * @throws \InvalidArgumentException.
+     */
+    private function checkType(array $valid, $name, $provided)
     {
         foreach ($valid as $check) {
             if (isset(self::$typeMap[$check])) {
@@ -110,7 +121,12 @@ class ConfigurationResolver
         throw new \InvalidArgumentException($msg);
     }
 
-    private function throwRequired($configuration)
+    /**
+     * @param array $configuration Associative array of configuration options.
+     *
+     * @throws \InvalidArgumentException.
+     */
+    private function throwRequired(array $configuration)
     {
         $missing = [];
 

@@ -7,6 +7,8 @@ use DTS\eBaySDK\Test\Mocks\ComplexClass;
 
 class ComplexClassTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new ComplexClass();

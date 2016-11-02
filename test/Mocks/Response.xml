@@ -2,7 +2,6 @@
 <root xmlns="http://davidtsadler.com">
     <integer>123</integer>
     <string>&lt;h1&gt;Bits &amp;amp; Bobs &#xA9;&lt;/h1&gt;&lt;p&gt;Just some &amp;lt;stuff&amp;gt; I found.&amp;nbsp;&amp;copy;&lt;/p&gt;</string>
-    <foo>foo</foo>
     <double>123.45</double>
     <booleanTrue>TRUE</booleanTrue>
     <booleanFalse>false</booleanFalse>

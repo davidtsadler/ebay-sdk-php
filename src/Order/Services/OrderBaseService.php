@@ -37,6 +37,11 @@ class OrderBaseService extends \DTS\eBaySDK\Services\BaseRestService
         parent::__construct($config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -57,7 +62,7 @@ class OrderBaseService extends \DTS\eBaySDK\Services\BaseRestService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @return array An associative array of eBay HTTP headers.
      */

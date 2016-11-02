@@ -29,16 +29,32 @@ class Sdk
 {
     const VERSION = '7.0.0';
 
+    /**
+     * @var bool Controls if the SDK should enforce strict types
+     * when values are assigned to property classes.
+     */
     public static $STRICT_PROPERTY_TYPES = true;
 
-    /** @var array Configuration options for all services. */
+    /**
+     * @var array Configuration options for all services.
+     */
     private $config;
 
+    /**
+     * @param array $config Configuration option values for all services.
+     */
     public function __construct(array $config = [])
     {
         $this->config = $config;
     }
 
+    /**
+     * @param string $name The method name.
+     * @param array $args Arguments that will be passed to the method.
+     *
+     * @return \DTS\eBaySDK\Services\BaseService
+     * @throws \BadMethodCallException
+     */
     public function __call($name, array $args)
     {
         if (strpos($name, 'create') === 0) {
@@ -55,7 +71,7 @@ class Sdk
      * Create a service object by namespace. Service is configured using array of options.
      *
      * @param string $namespace Service namespace (e.g. Finding, Trading).
-     * @param array  $config    Configuration options for the service.
+     * @param array  $config Configuration options for the service.
      *
      * @return \DTS\eBaySDK\Services\BaseService
      **/

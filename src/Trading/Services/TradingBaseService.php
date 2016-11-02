@@ -7,15 +7,33 @@ namespace DTS\eBaySDK\Trading\Services;
 class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. The API version your application supports.
      */
     const HDR_API_VERSION = 'X-EBAY-API-COMPATIBILITY-LEVEL';
+
+    /**
+     * HTTP header constant. Your application ID.
+     */
     const HDR_APP_ID = 'X-EBAY-API-APP-NAME';
+
+    /**
+     * HTTP header constant. Your certificate ID.
+     */
     const HDR_CERT_ID = 'X-EBAY-API-CERT-NAME';
-    const HDR_CONTENT_LENGTH = 'Content-Length';
-    const HDR_CONTENT_TYPE = 'Content-Type';
+
+    /**
+     * HTTP header constant. Your developer ID.
+     */
     const HDR_DEV_ID = 'X-EBAY-API-DEV-NAME';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-API-CALL-NAME';
+
+    /**
+     * HTTP header constant. The site ID of the eBay site the request is for.
+     */
     const HDR_SITE_ID = 'X-EBAY-API-SITEID';
 
     /**
@@ -26,6 +44,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         parent::__construct('https://api.ebay.com/ws/api.dll', 'https://api.sandbox.ebay.com/ws/api.dll', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -50,11 +73,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
      * Sends an API request.
      *
      * This method overrides the parent so that it can modify
-     * the request object before is handled by the parent class.
+     * the request object before it is handled by the parent class.
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
@@ -79,7 +102,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *

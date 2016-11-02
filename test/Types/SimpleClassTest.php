@@ -13,6 +13,8 @@ use DTS\eBaySDK\Test\Mocks\URIType;
 
 class SimpleClassTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new SimpleClass();
@@ -236,7 +238,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
 
     public function testCanGetElementMeta()
     {
-        $meta = new \StdClass();
+        $meta = new \stdClass();
         $meta->propertyName = 'SimpleClass';
         $meta->phpType = 'DTS\eBaySDK\Test\Mocks\SimpleClass';
         $meta->repeatable = false;

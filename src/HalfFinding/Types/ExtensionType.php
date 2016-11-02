@@ -9,7 +9,7 @@ namespace DTS\eBaySDK\HalfFinding\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\HalfFinding\Types\PositiveInteger $id
+ * @property integer $id
  * @property string $version
  * @property string $contentType
  * @property string $value
@@ -21,7 +21,7 @@ class ExtensionType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'id' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\PositiveInteger',
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'id'
