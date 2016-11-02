@@ -68,6 +68,7 @@ class BaseType implements JmesPathableObjectInterface
      * PHP magic function that is called when getting a property.
      *
      * @param string $name The property name.
+     * @return mixed
      */
     public function __get($name)
     {
@@ -89,6 +90,7 @@ class BaseType implements JmesPathableObjectInterface
      * PHP magic function that is called to determine if a property is set.
      *
      * @param string $name The property name.
+     * @return bool
      */
     public function __isset($name)
     {
@@ -142,9 +144,9 @@ class BaseType implements JmesPathableObjectInterface
      * This method is used when parsing the XML into a PHP object. The parser
      * needs the meta data for a property when the parser has only the element name.
      *
-     * @param $string $elementName The XML element that we want the meta for.
-     *
+     * @param string $elementName The element name.
      * @return mixed The meta for the property or null if not found.
+     * @internal param $string $elementName The XML element that we want the meta for.
      */
     public function elementMeta($elementName)
     {
@@ -154,7 +156,7 @@ class BaseType implements JmesPathableObjectInterface
             $nameKey = $info['attribute'] ? 'attributeName' : 'elementName';
             if (array_key_exists($nameKey, $info)) {
                 if ($info[$nameKey] === $elementName) {
-                    $meta = new \StdClass();
+                    $meta = new \stdClass();
                     $meta->propertyName = $elementName;
                     $meta->phpType = $info['type'];
                     $meta->repeatable = $info['repeatable'];
@@ -173,9 +175,9 @@ class BaseType implements JmesPathableObjectInterface
     /**
      * Method to get or set the object's attachment. Overrides any existing attachment is setting.
      *
-     * @param mixed If a string it is assumed to be the contents of the attachment.
+     * @param mixed $data If a string it is assumed to be the contents of the attachment.
      *              If an array copy its values across.
-     * @param string The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+     * @param string $mimeType The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
      *
      * @return mixed Returns the contents of the current atachment or null if none has been specified.
      */
@@ -257,8 +259,8 @@ class BaseType implements JmesPathableObjectInterface
      *
      * @param string $class The name of the class the properties belong to.
      * @param array $values. Associative array of property names and their values.
-     * @throws UnknownPropertyException If the property does not exist.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\InvalidPropertyTypeException If the value is the wrong type for the property.
      */
     protected function setValues($class, array $values = [])
     {
@@ -273,7 +275,7 @@ class BaseType implements JmesPathableObjectInterface
      *
      * @param string $class The name of the class the property belongs to.
      * @param string $name The property name.
-     * @throws UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
      *
      * @return mixed The value of the property.
      */
@@ -290,8 +292,8 @@ class BaseType implements JmesPathableObjectInterface
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
      * @param mixed $value. The value to assign to the property.
-     * @throws UnknownPropertyException If the property does not exist.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\InvalidPropertyTypeException If the value is the wrong type for the property.
      */
     private function set($class, $name, $value)
     {
@@ -306,7 +308,7 @@ class BaseType implements JmesPathableObjectInterface
      *
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
-     * @throws UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
      *
      * @return boolean Returns if the property has been set.
      */
@@ -322,7 +324,7 @@ class BaseType implements JmesPathableObjectInterface
      *
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
-     * @throws UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
      */
     private function unSetProperty($class, $name)
     {
@@ -356,7 +358,7 @@ class BaseType implements JmesPathableObjectInterface
      * @param string $class The name of the class the properties belong to.
      * @param string $name The property name.
      * @param mixed $value. The value to assign to the property.
-     * @throws InvalidPropertyTypeException If trying to assign a non array type to an repeatable property.
+     * @throws Exceptions\InvalidPropertyTypeException If trying to assign a non array type to an repeatable property.
      */
     private function setValue($class, $name, $value)
     {
@@ -442,7 +444,7 @@ class BaseType implements JmesPathableObjectInterface
      *
      * @param string $class The name of the class that we are checking for.
      * @param string $name The property name.
-     * @throws UnknownPropertyException If the property does not exist.
+     * @throws Exceptions\UnknownPropertyException If the property does not exist.
      */
     private static function ensurePropertyExists($class, $name)
     {
@@ -455,9 +457,8 @@ class BaseType implements JmesPathableObjectInterface
      * Determines if the value is the correct type to assign to a property.
      *
      * @param string $class The name of the class that we are checking for.
-     * @param string $name The property name.
      * @param mixed $name The value to check the type of.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @param mixed $value The value
      */
     private static function ensurePropertyType($class, $name, $value)
     {
@@ -517,6 +518,8 @@ class BaseType implements JmesPathableObjectInterface
     /**
      * Helper function to remove the properties and values that belong to a object's parent.
      *
+     * @param array $properties
+     * @param array $values
      * @return array The first element is an array of parent properties and values.
      *                The second element is an array of the object's properties and values.
      */
@@ -531,10 +534,10 @@ class BaseType implements JmesPathableObjectInterface
     /**
      * Helper function to convert an attribute property into XML
      *
-     * @param string $class The name of the class the property belongs to.
      * @param string $name The of the attribute property.
-     *
+     * @param mixed $value
      * @return string The XML.
+     * @internal param string $class The name of the class the property belongs to.
      */
     private static function attributeToXml($name, $value)
     {
@@ -597,6 +600,10 @@ class BaseType implements JmesPathableObjectInterface
     /**
      * Helper function when assigning values via the ctor.
      * Determines the actual value to assign to a property.
+     * @param $class
+     * @param $property
+     * @param $value
+     * @return array|\DateTime
      */
     private static function determineActualValueToAssign($class, $property, $value)
     {
@@ -619,6 +626,11 @@ class BaseType implements JmesPathableObjectInterface
 
     /**
      * Helper function when assigning values via the ctor.
+     * @param string $info
+     * @param string $class
+     * @param string $property
+     * @param mixed $value
+     * @return \DateTime
      */
     private static function actualValue($info, $class, $property, $value)
     {
@@ -640,9 +652,9 @@ class BaseType implements JmesPathableObjectInterface
                     return $value;
                 case 'DateTime':
                     return new \DateTime($value, new \DateTimeZone('UTC'));
-                default:
-                    return new $info['type']($value);
             }
         }
+
+        return new $info['type']($value);
     }
 }

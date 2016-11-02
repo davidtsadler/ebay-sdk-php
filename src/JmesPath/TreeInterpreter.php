@@ -57,6 +57,8 @@ class TreeInterpreter
      * Recursively traverses an AST using depth-first, pre-order traversal.
      * The evaluation logic for each node type is embedded into a large switch
      * statement to avoid the cost of "double dispatch".
+     * @param array $node
+     * @param $value
      * @return mixed
      */
     private function dispatch(array $node, $value)
@@ -238,6 +240,9 @@ class TreeInterpreter
     }
 
     /**
+     * @param $left
+     * @param $right
+     * @param $cmp
      * @return bool
      */
     private static function relativeCmp($left, $right, $cmp)

@@ -7,7 +7,7 @@ class InvalidPropertyTypeExceptionTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->obj = new InvalidPropertyTypeException('foo', 'string', 'integer');
+        $this->obj = new InvalidPropertyTypeException('foo', 'string', 'integer'); // TODO Unused function result.
     }
 
     public function testCanBeCreated()

@@ -1,8 +1,6 @@
 <?php
 namespace DTS\eBaySDK\Credentials;
 
-use DTS\eBaySDK\Credentials\Credentials;
-
 /**
  * Credentials providers are functions that accept no arguments and return an
  * instance that implements DTS\eBaySDK\Credentials\CredentialsInterface. If they
@@ -116,11 +114,11 @@ class CredentialsProvider
      * Provider that creates credentials using an ini file stored in the
      * current user's home directory.
      *
-     * @param string|null $profile  Profile to use. Defaults to "default".
+     * @param string|null $profile Profile to use. Defaults to "default".
      * @param string|null $filename If provided, uses a custom filename rather than
      *                              looking in the home directory for the current user.
      *
-     * @reutrn callable
+     * @return callable
      */
     public static function ini($profile = null, $filename = null)
     {

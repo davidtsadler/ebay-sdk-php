@@ -8,8 +8,7 @@
 namespace DTS\eBaySDK\BusinessPoliciesManagement\Types;
 
 /**
- *
- * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\PositiveInteger $id
+ * @property \DTS\eBaySDK\BusinessPoliciesManagement\Types\PositiveInteger $id  // TODO This class is not found.
  * @property string $version
  * @property string $contentType
  * @property string $value
@@ -21,7 +20,7 @@ class ExtensionType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'id' => [
-            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PositiveInteger',
+            'type' => 'DTS\eBaySDK\BusinessPoliciesManagement\Types\PositiveInteger', // TODO This class is not found.
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'id'

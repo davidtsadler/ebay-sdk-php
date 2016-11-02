@@ -168,7 +168,7 @@ class ConfigurationResolverTest extends \PHPUnit_Framework_TestCase
             'callable' => function () {
             },
             'int' => 1,
-            'stdClass' => new \StdClass(),
+            'stdClass' => new \stdClass(),
             'string' => 'foo'
         ];
 

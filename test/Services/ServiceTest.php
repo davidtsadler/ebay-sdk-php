@@ -222,8 +222,9 @@ EOT;
         ]);
 
         try {
+            // TODO Unused variable.
             $c = $s->getCredentials();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             unlink($dir . '/credentials');
             throw $e;
         }
@@ -235,6 +236,7 @@ EOT;
      */
     public function testCredentialsProviderThrowsIfCantProvide()
     {
+        // TODO Unused variable.
         $s = new Service([
             'credentials' => function () {
                 return new \InvalidArgumentException('Cannot locate credentials');

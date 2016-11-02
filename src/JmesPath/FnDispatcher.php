@@ -422,7 +422,10 @@ class FnDispatcher
         };
     }
 
-    /** @internal Pass function name validation off to runtime */
+    /** @internal Pass function name validation off to runtime
+     * @param $name
+     * @param $args
+     */
     public function __call($name, $args)
     {
         $name = str_replace('fn_', '', $name);

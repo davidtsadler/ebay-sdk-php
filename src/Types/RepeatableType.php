@@ -77,7 +77,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
      * Sets a value for the given offset.
      *
      * @param mixed $offset The array index or null to add the value to the end of the array.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @param mixed $value
      */
     public function offsetSet($offset, $value)
     {
@@ -117,7 +117,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     }
 
     /**
-     * @return index The current array index.
+     * @return int The current array index.
      */
     public function key()
     {
@@ -151,8 +151,8 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     /**
      * Determines if the value is the correct type to assign to a property.
      *
-     * @param mixed $name The value to check the type of.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @param $value
+     * @internal param mixed $name The value to check the type of.
      */
     private function ensurePropertyType($value)
     {

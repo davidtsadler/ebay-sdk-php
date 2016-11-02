@@ -11,7 +11,7 @@ namespace DTS\eBaySDK\MerchantData;
 class MerchantData
 {
     /**
-     * @var \DTS\eBaySDK\Parser Xml Parser.
+     * @var \DTS\eBaySDK\Parser Xml Parser. // TODO This class is not found.
      */
     private $xmlParser;
 
@@ -40,7 +40,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\AddFixedPriceItemResponseType[]
      */
     public function addFixedPriceItem($xml)
     {
@@ -49,7 +49,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\AddItemResponseType[]
      */
     public function addItem($xml)
     {
@@ -58,7 +58,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\EndFixedPriceItemResponseType[]
      */
     public function endFixedPriceItem($xml)
     {
@@ -67,7 +67,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\EndItemResponseType[]
      */
     public function endItem($xml)
     {
@@ -85,7 +85,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\OrderAckResponseType[]
      */
     public function orderAck($xml)
     {
@@ -94,7 +94,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\RelistFixedPriceItemResponseType[]
      */
     public function relistFixedPriceItem($xml)
     {
@@ -103,7 +103,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\RelistItemResponseType[]
      */
     public function relistItem($xml)
     {
@@ -112,7 +112,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\ReviseFixedPriceItemResponseType[]
      */
     public function reviseFixedPriceItem($xml)
     {
@@ -121,7 +121,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\ReviseInventoryStatusResponseType[]
      */
     public function reviseInventoryStatus($xml)
     {
@@ -130,7 +130,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\ReviseItemResponseType[]
      */
     public function reviseItem($xml)
     {
@@ -139,7 +139,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\SetShipmentTrackingInfoResponseType[]
      */
     public function setShipmentTrackingInfo($xml)
     {
@@ -157,7 +157,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\UploadSiteHostedPicturesResponseType[]
      */
     public function uploadSiteHostedPictures($xml)
     {
@@ -166,7 +166,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\VerifyAddFixedPriceItemResponseType[]
      */
     public function verifyAddFixedPriceItem($xml)
     {
@@ -175,7 +175,7 @@ class MerchantData
 
     /**
      * @param string $xml
-     * @return \DTS\eBaySDK\Types\RepeatableType
+     * @return Types\VerifyAddItemResponseType[]
      */
     public function verifyAddItem($xml)
     {

@@ -10,13 +10,11 @@ namespace DTS\eBaySDK\MerchantData\Types;
 /**
  *
  * @property \DTS\eBaySDK\MerchantData\Types\CustomSecurityHeaderType $RequesterCredentials
- * @property \DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType $RequesterCredentials
  * @property \DTS\eBaySDK\MerchantData\Enums\DetailLevelCodeType[] $DetailLevel
  * @property string $ErrorLanguage
  * @property string $MessageID
  * @property string $Version
  * @property string $EndUserIP
- * @property \DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType $RequesterCredentials
  * @property \DTS\eBaySDK\MerchantData\Enums\ErrorHandlingCodeType $ErrorHandling
  * @property string $InvocationID
  * @property string[] $OutputSelector
@@ -31,12 +29,6 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'RequesterCredentials' => [
             'type' => 'DTS\eBaySDK\MerchantData\Types\CustomSecurityHeaderType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RequesterCredentials'
-        ],
-        'RequesterCredentials' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RequesterCredentials'
@@ -70,12 +62,6 @@ class AbstractRequestType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndUserIP'
-        ],
-        'RequesterCredentials' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\XMLRequesterCredentialsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RequesterCredentials'
         ],
         'ErrorHandling' => [
             'type' => 'string',
