@@ -36,12 +36,11 @@ class HttpHandler
     }
 
     /**
-     * @param Psr7Request $request
-     * @param Array       $options Http options for the client.
-     *
-     * @return GuzzleHttp\Promise\PromiseInterface Promise that will be resolved with a
+     * @param Psr7Request|RequestInterface $request
+     * @param array $options Http options for the client.
+     * @return \GuzzleHttp\Promise\PromiseInterface Promise that will be resolved with a
      *                                             Psr\Http\Message\ResponseInterface
-     *                                             response object.
+     * response object.
      */
     public function __invoke(RequestInterface $request, array $options)
     {

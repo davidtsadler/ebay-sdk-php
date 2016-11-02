@@ -15,7 +15,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
 {
     protected function setUp()
     {
-        $this->obj = new SimpleClass();
+        $this->obj = new SimpleClass(); // TODO Property is not defined.
     }
 
     public function testCanBeCreated()
@@ -168,14 +168,14 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property foo');
 
-        isset($this->obj->foo);
+        isset($this->obj->foo); // TODO Unused function result.
     }
 
     public function testUnSetNonExistentProperty()
     {
         $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property foo');
 
-        isset($this->obj->foo);
+        isset($this->obj->foo); // TODO Unused function result.
     }
 
     public function testSettingRepeatablePropertyWithAnInvalidType()
@@ -201,7 +201,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
 
     public function testCanGetElementMeta()
     {
-        $meta = new \StdClass();
+        $meta = new \stdClass();
         $meta->propertyName = 'SimpleClass';
         $meta->phpType = 'DTS\eBaySDK\Test\Mocks\SimpleClass';
         $meta->repeatable = false;

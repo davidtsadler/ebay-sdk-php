@@ -4,8 +4,6 @@ namespace DTS\eBaySDK;
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Credentials\CredentialsInterface;
-use DTS\eBaySDK\Debugger;
-use DTS\eBaySDK\HttpHandler;
 
 function describeType($value)
 {
@@ -107,6 +105,8 @@ function defaultHttpHandler(array &$configuration)
 
 /**
  * Helper function that returns true if the property type should be checked.
+ * @param $type
+ * @return bool
  */
 function checkPropertyType($type)
 {

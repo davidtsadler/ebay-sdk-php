@@ -48,7 +48,7 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */

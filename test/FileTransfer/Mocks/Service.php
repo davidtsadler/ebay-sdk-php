@@ -12,7 +12,7 @@ class Service extends \DTS\eBaySDK\FileTransfer\Services\FileTransferBaseService
 
     public function testOperation()
     {
-        return $this->callOperationASync(
+        return $this->callOperationAsync(
             'testOperation',
             new ComplexClass(),
             '\DTS\eBaySDK\Test\Mocks\ComplexClass'

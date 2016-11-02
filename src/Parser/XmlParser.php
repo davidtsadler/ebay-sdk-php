@@ -60,7 +60,7 @@ class XmlParser
      *
      * @param resource $parser Reference to the XML parser calling the handler.
      * @param string $name The name of the element.
-     * @param arrary $attributes Associative array of the element's attributes.
+     * @param array $attributes Associative array of the element's attributes.
      */
     private function startElement($parser, $name, array $attributes)
     {
@@ -114,7 +114,7 @@ class XmlParser
     /**
      * Handles element names that may have namespaces in them.
      *
-     * @param string Element name.
+     * @param string $name Element name.
      *
      * @return string The element name stripped of any namespaces.
      */
@@ -145,14 +145,14 @@ class XmlParser
      *
      * Allow the parser to build the required PHP object for an element.
      *
-     * @param string $name The name of the element.
-     * @param arrary $attributes Associative array of the element's attributes.
-     *
-     * @return array Associative array containing the PHP meta data.
+     * @param string $elementName The element name.
+     * @param array $attributes Associative array of the element's attributes.
+     * @return \stdClass
+     * @internal param string $name The name of the element.
      */
     private function getPhpMeta($elementName, $attributes)
     {
-        $meta = new \StdClass();
+        $meta = new \stdClass();
         $meta->propertyName = '';
         $meta->phpType = '';
         $meta->repeatable = false;
@@ -197,7 +197,7 @@ class XmlParser
     /**
      * Builds the required PHP object.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed A new PHP object or null.
      */
@@ -224,7 +224,7 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed The value to assign.
      */
@@ -243,7 +243,7 @@ class XmlParser
     /**
      * Determines if the type of the property is simple.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return boolean True if the property type is simple.
      */
@@ -270,7 +270,7 @@ class XmlParser
     /**
      * Determines if the the property of an object is set by a _value_ property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return boolean True if the property need to be set by _value_.
      */
@@ -291,9 +291,8 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's property.
      *
-     * @param array $meta The PHP meta data.
-     *
-     * @return boolean True if the property type is simlple.
+     * @param \stdClass $meta The PHP meta data.
+     * @return bool|\DateTime|float|int
      */
     private function getValueToAssignToProperty($meta)
     {
@@ -315,7 +314,7 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's _value_ property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed The value to assign.
      */

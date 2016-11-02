@@ -9,11 +9,10 @@ namespace DTS\eBaySDK\ResolutionCaseManagement\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef $appealRef
- * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef $moneyMovementRef
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef $appealRef // TODO This class is not found.
+ * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef $moneyMovementRef // TODO This class is not found.
  * @property string $onholdReason
  * @property \DTS\eBaySDK\ResolutionCaseManagement\Types\OnHoldReasonDetailType $onholdReasonDetail
- * @property string $idref
  * @property string $idref
  */
 class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
@@ -23,13 +22,13 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'appealRef' => [
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef',
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\AppealRef', // TODO This class is not found.
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'appealRef'
         ],
         'moneyMovementRef' => [
-            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef',
+            'type' => 'DTS\eBaySDK\ResolutionCaseManagement\Types\MoneyMovementRef', // TODO This class is not found.
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'moneyMovementRef'
@@ -45,12 +44,6 @@ class ResponseHistoryAttributesType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'onholdReasonDetail'
-        ],
-        'idref' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'idref'
         ],
         'idref' => [
             'type' => 'string',

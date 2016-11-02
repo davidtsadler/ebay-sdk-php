@@ -4,7 +4,6 @@ namespace DTS\eBaySDK\Test;
 use DTS\eBaySDK\HttpHandler;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 

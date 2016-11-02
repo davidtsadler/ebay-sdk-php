@@ -515,6 +515,8 @@ class Parser
 
     /**
      * @internal Handles undefined tokens without paying the cost of validation
+     * @param $method
+     * @param $args
      */
     public function __call($method, $args)
     {

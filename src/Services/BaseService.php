@@ -2,7 +2,6 @@
 namespace DTS\eBaySDK\Services;
 
 use DTS\eBaySDK\Parser\XmlParser;
-use DTS\eBaySDK\Exceptions;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use \DTS\eBaySDK as Functions;
@@ -20,7 +19,7 @@ abstract class BaseService
     const CRLF = "\r\n";
 
     /**
-     * @var DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
+     * @var \DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
      */
     private $resolver;
 
@@ -95,7 +94,9 @@ abstract class BaseService
     /**
      * Method to get the service's configuration.
      *
-     * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
+     * @param null $option
+     * @return mixed Returns an associative array of configuration options if no parameters are passed,
+     *               otherwise returns the value for the specified configuration option.
      */
     public function getConfig($option = null)
     {
@@ -127,7 +128,7 @@ abstract class BaseService
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
@@ -243,7 +244,8 @@ abstract class BaseService
         $headers = $this->getEbayHeaders($name);
 
         if ($request->hasAttachment()) {
-            $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"';
+            $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";' .
+                'start="<request.xml@devbay.net>";start-info="text/xml"';
         } else {
             $headers['Content-Type'] = 'text/xml';
         }
@@ -256,7 +258,7 @@ abstract class BaseService
     /**
      * Extracts the XML from the response if it contains an attachment.
      *
-     * @param string The XML response body.
+     * @param string $response The XML response body.
      *
      * @return array first item is the XML part of response body and the second
      *               is an attachement if one was present in the API response.
@@ -276,7 +278,7 @@ abstract class BaseService
     /**
      * Extracts the XML and the attachment from the response if it contains an attachment.
      *
-     * @param string The XML response body.
+     * @param string $response The XML response body.
      *
      * @return string The XML part of response body.
      */
@@ -346,6 +348,7 @@ abstract class BaseService
 
     /**
      * Sends a debug string via the attach debugger.
+     * @param string $str
      */
     private function debug($str)
     {
