@@ -5,7 +5,7 @@ Request and Response objects
 Introduction
 ------------
 
-Working with the eBay API normally involves the sending and receiving of XML. By using the SDK this is hidden from your projects and it allows you to instead work with PHP objects for both the request and the response.
+Working with the eBay API normally involves the sending and receiving of XML, or JSON if using eBay's RESTful services. By using the SDK this is hidden from your projects and it allows you to instead work with PHP objects for both the request and the response.
 
 Below is an example of a typical XML request to the Finding service.
 
@@ -44,7 +44,7 @@ Instead of constructing this XML you use the SDK to instantiate various objects.
     $request->paginationInput->entriesPerPage = 10;
     $request->paginationInput->pageNumber = 1;
 
-Likewise, the SDK creates objects for you by parsing the XML response. The example below shows a response from the Finding service and how you would handle this in your projects.
+Likewise, the SDK creates objects for you by parsing the XML/JSON response. The example below shows a response from the Finding service and how you would handle this in your projects.
 
 .. code-block:: xml
 
@@ -214,7 +214,7 @@ You can assign HTML to a property.
 
     $request->Description = '<h1>Bits & Bobs</h1><p>Just some &lt;stuff&gt; I found.</p>';
 
-The SDK will handle the escaping of it in the XML.
+The SDK will handle the escaping of it in the XML/JSON.
 
 .. code-block:: xml
 

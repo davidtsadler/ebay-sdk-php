@@ -78,7 +78,7 @@ printf("The official eBay time is: %s\n", $response->Timestamp->format('H:i (\G\
 
   - Be well maintained.
   - Be [well documented](http://devbay.net/sdk/guides/).
-  - Be [well tested](https://github.com/davidtsadler/ebay-sdk-php/tree/master/test/DTS/eBaySDK).
+  - Be [well tested](https://github.com/davidtsadler/ebay-sdk-php/tree/master/test).
   - Be well supported with [working examples](https://github.com/davidtsadler/ebay-sdk-examples).
 
 ## License

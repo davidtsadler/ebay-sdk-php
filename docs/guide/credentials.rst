@@ -9,6 +9,10 @@ In order to authenticate requests, eBay services require you to provide your `de
 #. :ref:`hardcoded_credentials`
 #. :ref:`credentials_provider`
 
+.. note::
+
+    The RESTful services do not require any credentials as authentication is done through an OAuth token. Therefore this guide is only applicable to eBay's older XML services.
+
 .. _environment_credentials:
 
 Using credentials from environment variables

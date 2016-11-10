@@ -5,6 +5,8 @@ use DTS\eBaySDK\Test\Mocks\AmountClass;
 
 class AmountClassTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new AmountClass();

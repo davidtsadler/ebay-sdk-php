@@ -1,0 +1,67 @@
+{
+    "integer": 123,
+    "string": "&lt;h1&gt;Bits &amp;amp; Bobs &#xA9;&lt;/h1&gt;&lt;p&gt;Just some &amp;lt;stuff&amp;gt; I found.&amp;nbsp;&amp;copy;&lt;/p&gt;",
+    "double": 123.45,
+    "booleanTrue": true,
+    "booleanFalse": false,
+    "DateTime": "2000-01-01T16:15:30.123Z",
+    "SimpleClass": {
+        "integer": 321,
+        "string": "another string"
+    },
+    "strings": ["foo", "bar"],
+    "integers": [1, 2, 3, 4, 5],
+    "simpleClasses": [{
+        "integer": 888
+    }, {
+        "integer": 999
+    }],
+    "AmountClass": {
+      "value": 543.21
+    },
+    "base64BinaryType": {
+      "value": "binary type"
+    },
+    "booleanType": {
+      "value": true
+    },
+    "decimalType": {
+     "value": 123
+    },
+    "doubleType": {
+      "value": 123.45
+    },
+    "integerType": {
+      "value": 123
+    },
+    "stringType": {
+      "value": "string type"
+    },
+    "tokenType": {
+      "value": "token type"
+    },
+    "uriType": {
+      "value": "uri type"
+    },
+    "decimalTypePosInteger":{
+     "value": 123
+    },
+    "decimalTypePosFloat": {
+      "value": 123.45
+    },
+    "decimalTypeNegInteger": {
+      "value": -123
+    },
+    "decimalTypeNegFloat": {
+      "value": -123.45
+    },
+    "anyType": 1,
+    "anyTypes": [
+      1,
+      "foo",
+      1.23,
+      true,
+      false,
+      [1, 2, 3]
+    ]
+}

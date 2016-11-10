@@ -5,6 +5,8 @@ use DTS\eBaySDK\Exceptions\UnknownPropertyException;
 
 class UnknownPropertyExceptionTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new UnknownPropertyException('foo');

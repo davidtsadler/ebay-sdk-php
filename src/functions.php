@@ -4,9 +4,14 @@ namespace DTS\eBaySDK;
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use DTS\eBaySDK\Credentials\CredentialsInterface;
-use DTS\eBaySDK\Debugger;
-use DTS\eBaySDK\HttpHandler;
 
+/**
+ * Returns a description of the type for the passed value.
+ *
+ * @param mixed $value The value whos type will be described.
+ *
+ * @return string A description of the value's type.
+ */
 function describeType($value)
 {
     switch (gettype($value)) {
@@ -22,8 +27,11 @@ function describeType($value)
 }
 
 /**
+ * Merges multiple arrays, recursively, and returns the merged array.
  * Code taken from
  * https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/drupal_array_merge_deep/7
+ *
+ * @return array The merged array.
  */
 function arrayMergeDeep()
 {
@@ -31,7 +39,14 @@ function arrayMergeDeep()
     return arrayMergeDeepArray($args);
 }
 
-function arrayMergeDeepArray($arrays)
+/**
+ * Merges multiple arrays, recursively, and returns the merged array.
+ *
+ * @param array $arrays The arrays to merge.
+ *
+ * @return array The merged array.
+ */
+function arrayMergeDeepArray(array $arrays)
 {
     $result = [];
 
@@ -55,6 +70,14 @@ function arrayMergeDeepArray($arrays)
     return $result;
 }
 
+/**
+ * Resolve and apply the passed credentials.
+ *
+ * @param mixed $value The credentials.
+ * @param array &$configuration The configuration array where the resolved credentials will be stored.
+ *
+ * @throws \InvalidArgumentException.
+ */
 function applyCredentials($value, array &$configuration)
 {
     if (is_callable($value)) {
@@ -64,7 +87,7 @@ function applyCredentials($value, array &$configuration)
         } else {
             $configuration['credentials'] = $c;
         }
-    } else if ($value instanceof CredentialsInterface) {
+    } elseif ($value instanceof CredentialsInterface) {
         return;
     } elseif (is_array($value)
         && isset($value['appId'])
@@ -86,11 +109,23 @@ function applyCredentials($value, array &$configuration)
     }
 }
 
+/**
+ * Resolves the credentials with a ini provider.
+ *
+ * @param mixed $value Not used.
+ * @param array &$configuration The configuration array where the provider will be stored.
+ */
 function applyProfile($value, array &$configuration)
 {
     $configuration['credentials'] = CredentialsProvider::ini($configuration['profile']);
 }
 
+/**
+ * Applies the default debugger if required.
+ *
+ * @param mixed $value Debugger options.
+ * @param array &$configuration The configuration array where the resolved debugger will be stored.
+ */
 function applyDebug($value, array &$configuration)
 {
     if ($value !== false) {
@@ -100,6 +135,13 @@ function applyDebug($value, array &$configuration)
     }
 }
 
+/**
+ * Returns the default HTTP handler.
+ *
+ * @param array &$configuration Not used.
+ *
+ * @return \DTS\eBaySDK\HttpHandler
+ */
 function defaultHttpHandler(array &$configuration)
 {
     return new HttpHandler();
@@ -107,6 +149,10 @@ function defaultHttpHandler(array &$configuration)
 
 /**
  * Helper function that returns true if the property type should be checked.
+ *
+ * @param string $type The type name.
+ *
+ * @return bool
  */
 function checkPropertyType($type)
 {

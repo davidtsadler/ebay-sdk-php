@@ -73,16 +73,29 @@ If you do not provide a version number the SDK will default to the value that is
 
     You should specify an apiVerion in your production code and not leave it to the default value that is provided by the SDK as you code will be dependant upon a value that will changed when the SDK is updated.
 
+authorization
+~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Trading``
+:Required: true, except for the Trading service.
+
+All eBay RESTful services use OAuth 2.0 access tokens for application authentication and user authorization. The token passed via ``authorization`` can be either an User or Application token. You must ensure that the token has the require scope for the operation that you are calling.
+
+.. warning::
+
+  The Trading service can accept both an OAuth and Auth'n'auth token. The OAuth token will be used by the SDK if both are specified.
+
 authToken
 ~~~~~~~~~
 
 :Type: ``string``
-:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``FileTransfer``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Trading``.
+:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``Feedback``, ``FileTransfer``, ``PostOrder``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Trading``.
 :Required: true, except for the Trading service.
 
-Some services require an authentication token before you can perfrom operations on behalf of an eBay user. This token can be provided via the ``authToken`` option.
+Some services require an Auth'n'auth token before you can perform operations on behalf of an eBay user. This token can be provided via the ``authToken`` option.
 
-The Trading service is different to other services in that the auth token can be passed as a configuration option or via the actual request object. Use which ever method is suitable for your project requirements.
+The Trading service is different to other services in that the  Auth'n'auth token can be passed as a configuration option or via the actual request object. Use which ever method is suitable for your project requirements.
 
 .. code-block:: php
 
@@ -105,6 +118,7 @@ credentials
 ~~~~~~~~~~~
 
 :Type: ``array|DTS\eBaySDK\Credentials\CredentialsInterface|callable``
+:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``Feedback``, ``FileTransfer``, ``Finding``, ``HalfFinding``, ``Merchandising``, ``Product``, ``ProductMetadata``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Shopping``, ``Trading``.
 
 Provide your "Application ID", "Certificate ID", and "Developer ID" credentials that are required when using the eBay API. If you do not provide any credentials the SDK will attempt to load them in the following order:
 
@@ -204,11 +218,10 @@ globalId
 ~~~~~~~~
 
 :Type: ``string``
-:Services: ``BusinessPoliciesManagement``, ``Finding``, ``HalfFinding``, ``ResolutionCaseManagement``, ``ReturnManagement``.
+:Services: ``BusinessPoliciesManagement``, ``Finding``, ``HalfFinding``, ``Merchandising``, ``Product``, ``ProductMeta``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``.
 :Required For: ``BusinessPoliciesManagement``
 
 The unique string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value EBAY-US to specify the eBay US site. A `complete list of eBay global IDs <http://developer.ebay.com/devzone/finding/Concepts/SiteIDToGlobalID.html>`_ is available.
-
 
 .. _httpHandler:
 
@@ -268,6 +281,30 @@ A float specifying the number of seconds to wait when trying to connect to the A
         ]
     ]);
 
+.. _http_options_curl:
+
+curl
+^^^^
+
+:Type: ``array``
+
+Depending on your project's requirments you may find that you need to set custom cURL options. This can be done by passing an associative array of `CURLOPT_XXX options <http://us1.php.net/curl_setopt>`_.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'curl' => [
+                CURLOPT_VERBOSE   => true,
+                CURLOPT_INTERFACE => 'xxx.xxx.xxx.xxx'
+            ]
+        ]
+    ]);
+
 .. _http_options_debug:
 
 debug
@@ -285,6 +322,15 @@ delay
 :Type: ``int``
 
 The number of milliseconds to delay before sending the request.
+
+.. _http_options_http_errors:
+
+http_errors
+^^^^^^^^^^^
+
+:Type: ``bool``
+
+Set to false to disable throwing exceptions on an HTTP protocol errors (i.e., 4xx and 5xx responses). Exceptions are thrown by default when HTTP protocol errors are encountered.
 
 .. _http_options_proxy:
 
@@ -352,10 +398,19 @@ Control the SSL certificate verification behavior of the request.
 * Set to ``false`` to disable verification. You should not do this in production as the SDK will connect to the API using an insecure connection.
 * Pass a string that is the path to the CA bundle to be used by the SDK.
 
+marketplaceId
+~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+
+The string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value ``EBAY-UK`` to specify the eBay UK site.
+
 profile
 ~~~~~~~
 
 :Type: ``string``
+:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``Feedback``, ``FileTransfer``, ``Finding``, ``HalfFinding``, ``Merchandising``, ``Product``, ``ProductMetadata``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Shopping``, ``Trading``.
 
 Specifies the name of a profile within the ini file that is located in your HOME directory. The SDK will attempt to load the credentials from this profile. Note that the ``credentials`` option and ``EBAY_SDK_PROFILE`` environment variable are both ignored if this option is specified.
 
@@ -369,6 +424,22 @@ Specifies the name of a profile within the ini file that is located in your HOME
         'profile'    => 'production'
     ]);
 
+requestLanguage
+~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+
+This configuration option will set the ``Content-Language`` HTTP header for the request.
+
+responseLanguage
+~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+
+This configuration option will set the ``Accept-Language`` HTTP header for the request.
+
 sandbox
 ~~~~~~~
 
@@ -378,6 +449,7 @@ eBay provides a sandbox environment for testing your API calls. Pass ``true`` to
 
 siteId
 ~~~~~~
+
 :Type: ``string|integer``
 :Services: ``Shopping``, ``Trading``.
 :Required For: ``Trading``
@@ -394,6 +466,7 @@ Affiliate parameter for applications that have registered on the `eBay Partner N
 
 trackingPartnerCode
 ~~~~~~~~~~~~~~~~~~~
+
 :Type: ``string``
 :Services: ``Shopping``
 

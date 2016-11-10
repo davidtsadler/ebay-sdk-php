@@ -48,7 +48,7 @@ class GlobalIds
     const MY = 'EBAY-MY';
     // Canada (French)
     const FRCA = 'EBAY-FRCA';
-    // Philippones
+    // Philippines
     const PH = 'EBAY-PH';
     // Poland
     const PL = 'EBAY-PL';

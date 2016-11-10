@@ -19,6 +19,11 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'required' => true
         ], $d['apiVersion']);
 
+        $this->assertArrayHasKey('authorization', $d);
+        $this->assertEquals([
+            'valid'   => ['string']
+        ], $d['authorization']);
+
         $this->assertArrayHasKey('authToken', $d);
         $this->assertEquals([
             'valid' => ['string']
@@ -58,6 +63,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayNotHasKey(TradingBaseService::HDR_APP_ID, $h->headers);
         $this->assertArrayNotHasKey(TradingBaseService::HDR_CERT_ID, $h->headers);
         $this->assertArrayNotHasKey(TradingBaseService::HDR_DEV_ID, $h->headers);
+        $this->assertArrayNotHasKey(TradingBaseService::HDR_AUTHORIZATION, $h->headers);
     }
 
     public function testOptionalEbayHeaders()
@@ -65,6 +71,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         $h = new HttpHandler();
 
         $s = new Service([
+            'authorization' => 'foo',
             'credentials' => ['appId' => 'appId', 'certId' => 'certId', 'devId' => 'devId'],
             'siteId' => 999,
             'httpHandler' => $h
@@ -83,5 +90,9 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey(TradingBaseService::HDR_DEV_ID, $h->headers);
         $this->assertEquals('devId', $h->headers[TradingBaseService::HDR_DEV_ID]);
+
+        $this->assertArrayHasKey(TradingBaseService::HDR_AUTHORIZATION, $h->headers);
+        $this->assertEquals('foo', $h->headers[TradingBaseService::HDR_AUTHORIZATION]);
+
     }
 }

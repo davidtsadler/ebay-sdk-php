@@ -2,7 +2,6 @@
 namespace DTS\eBaySDK\Services;
 
 use DTS\eBaySDK\Parser\XmlParser;
-use DTS\eBaySDK\Exceptions;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 use \DTS\eBaySDK as Functions;
@@ -20,7 +19,7 @@ abstract class BaseService
     const CRLF = "\r\n";
 
     /**
-     * @var DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
+     * @var \DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
      */
     private $resolver;
 
@@ -56,9 +55,9 @@ abstract class BaseService
     }
 
     /**
-     * Get an array of service configuration option definitions.
+     * Returns definitions for each configuration option that is supported.
      *
-     * @return array
+     * @return array An associative array of configuration definitions.
      */
     public static function getConfigDefinitions()
     {
@@ -95,7 +94,10 @@ abstract class BaseService
     /**
      * Method to get the service's configuration.
      *
-     * @return mixed Returns an associative array of configuration options if no parameters are passed, otherwise returns the value for the specified configuration option.
+     * @param string|null $option The name of the option whos value will be returned.
+     *
+     * @return mixed Returns an associative array of configuration options if no parameters are passed,
+     * otherwise returns the value for the specified configuration option.
      */
     public function getConfig($option = null)
     {
@@ -106,7 +108,12 @@ abstract class BaseService
                 : null);
     }
 
-    public function setConfig($configuration)
+    /**
+     * Set multiple configuration options.
+     *
+     * @param array $configuration Associative array of configuration options and their values.
+     */
+    public function setConfig(array $configuration)
     {
         $this->config = Functions\arrayMergeDeep(
             $this->config,
@@ -115,6 +122,8 @@ abstract class BaseService
     }
 
     /**
+     * Helper method to return the value of the credentials configuration option.
+     *
      * @return \DTS\eBaySDK\Credentials\CredentialsInterface
      */
     public function getCredentials()
@@ -127,7 +136,7 @@ abstract class BaseService
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
@@ -216,7 +225,7 @@ abstract class BaseService
      *
      * @return string The attachment part of request body.
      */
-    private function buildAttachmentBody($attachment)
+    private function buildAttachmentBody(array $attachment)
     {
         return sprintf(
             '%s%s%s%s%s%s',
@@ -256,10 +265,10 @@ abstract class BaseService
     /**
      * Extracts the XML from the response if it contains an attachment.
      *
-     * @param string The XML response body.
+     * @param string $response The XML response body.
      *
      * @return array first item is the XML part of response body and the second
-     *               is an attachement if one was present in the API response.
+     * is an attachement if one was present in the API response.
      */
     private function extractXml($response)
     {
@@ -276,7 +285,7 @@ abstract class BaseService
     /**
      * Extracts the XML and the attachment from the response if it contains an attachment.
      *
-     * @param string The XML response body.
+     * @param string $response The XML response body.
      *
      * @return string The XML part of response body.
      */
@@ -320,7 +329,7 @@ abstract class BaseService
      * @param array  $headers Associative array of HTTP headers.
      * @param string $body The XML body of the POST request.
       */
-    private function debugRequest($url, $headers, $body)
+    private function debugRequest($url, array $headers, $body)
     {
         $str = $url.PHP_EOL;
 
@@ -346,6 +355,8 @@ abstract class BaseService
 
     /**
      * Sends a debug string via the attach debugger.
+     *
+     * @param string $str
      */
     private function debug($str)
     {

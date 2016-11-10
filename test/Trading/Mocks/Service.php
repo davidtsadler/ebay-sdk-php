@@ -1,7 +1,7 @@
 <?php
 namespace DTS\eBaySDK\Test\Trading\Mocks;
 
-use DTS\eBaySDK\Test\Mocks\ComplexClass;
+use DTS\eBaySDK\Trading\Types\GeteBayOfficialTimeRequestType;
 
 class Service extends \DTS\eBaySDK\Trading\Services\TradingBaseService
 {
@@ -14,7 +14,7 @@ class Service extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     {
         return $this->callOperationAsync(
             'testOperation',
-            new ComplexClass(),
+            new GeteBayOfficialTimeRequestType(),
             '\DTS\eBaySDK\Test\Mocks\ComplexClass'
         )->wait();
     }

@@ -2,7 +2,6 @@
 <ns1:root xmlns:ns1="http://davidtsadler.com">
     <ns1:integer>123</ns1:integer>
     <ns1:string>a string</ns1:string>
-    <ns1:foo>foo</ns1:foo>
     <ns1:double>123.45</ns1:double>
     <ns1:booleanTrue>TRUE</ns1:booleanTrue>
     <ns1:booleanFalse>false</ns1:booleanFalse>

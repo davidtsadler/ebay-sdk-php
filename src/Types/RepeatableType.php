@@ -17,7 +17,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     private $data = [];
 
     /**
-     * @var integer The current position in the array.
+     * @var int The current position in the array.
      */
     private $position = 0;
 
@@ -52,9 +52,9 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     /**
      * Determines if the offset exists in the array.
      *
-     * @param integer $offset The array index to check.
+     * @param int $offset The array index to check.
      *
-     * @return boolean Returns if the offset exists in the array.
+     * @return bool Returns if the offset exists in the array.
      */
     public function offsetExists($offset)
     {
@@ -64,7 +64,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     /**
      * Returns the value of the given offset.
      *
-     * @param integer $offset The array index.
+     * @param int $offset The array index.
      *
      * @return mixed Returns the value for the given offset or null if it doesn't exist.
      */
@@ -77,7 +77,9 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
      * Sets a value for the given offset.
      *
      * @param mixed $offset The array index or null to add the value to the end of the array.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @param mixed $value The value to add.
+     *
+     * @throws \DTS\eBaySDK\Exceptions\InvalidPropertyTypeException If the value is the wrong type for the array.
      */
     public function offsetSet($offset, $value)
     {
@@ -93,7 +95,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     /**
      * Unsets the value of the given offset.
      *
-     * @param integer $offset The array index.
+     * @param int $offset The array index.
      */
     public function offsetUnset($offset)
     {
@@ -101,7 +103,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     }
 
     /**
-     * @return integer The number of array items.
+     * @return int The number of array items.
      */
     public function count()
     {
@@ -117,7 +119,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     }
 
     /**
-     * @return index The current array index.
+     * @return int The current array index.
      */
     public function key()
     {
@@ -141,7 +143,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     }
 
     /**
-     * @return boolean Return if the current array index is valid.
+     * @return bool Return if the current array index is valid.
      */
     public function valid()
     {
@@ -149,10 +151,11 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
     }
 
     /**
-     * Determines if the value is the correct type to assign to a property.
+     * Determines if the value is the correct type to assign to the array.
      *
-     * @param mixed $name The value to check the type of.
-     * @throws InvalidPropertyTypeException If the value is the wrong type for the property.
+     * @param mixed $value The value to check the type of.
+     *
+     * @throws \DTS\eBaySDK\Exceptions\InvalidPropertyTypeException If the value is the wrong type for the array.
      */
     private function ensurePropertyType($value)
     {
@@ -164,7 +167,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
         $valid = explode('|', $this->expectedType);
         $isValid = false;
         foreach ($valid as $check) {
-            if (\DTS\eBaySDK\checkPropertyType($check)) {
+            if ($check !== 'any' && \DTS\eBaySDK\checkPropertyType($check)) {
                 if ($check === $actualType) {
                     return;
                 }

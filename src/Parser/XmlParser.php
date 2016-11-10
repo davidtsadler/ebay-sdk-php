@@ -60,7 +60,7 @@ class XmlParser
      *
      * @param resource $parser Reference to the XML parser calling the handler.
      * @param string $name The name of the element.
-     * @param arrary $attributes Associative array of the element's attributes.
+     * @param array $attributes Associative array of the element's attributes.
      */
     private function startElement($parser, $name, array $attributes)
     {
@@ -114,7 +114,7 @@ class XmlParser
     /**
      * Handles element names that may have namespaces in them.
      *
-     * @param string Element name.
+     * @param string $name Element name.
      *
      * @return string The element name stripped of any namespaces.
      */
@@ -131,7 +131,7 @@ class XmlParser
     }
 
     /**
-     * Returns that parent PHP object.
+     * Returns the parent PHP object.
      *
      * @return mixed The parent PHP object.
      */
@@ -145,14 +145,14 @@ class XmlParser
      *
      * Allow the parser to build the required PHP object for an element.
      *
-     * @param string $name The name of the element.
-     * @param arrary $attributes Associative array of the element's attributes.
+     * @param string $elementName The element name.
+     * @param array $attributes Associative array of the element's attributes.
      *
-     * @return array Associative array containing the PHP meta data.
+     * @return \stdClass
      */
-    private function getPhpMeta($elementName, $attributes)
+    private function getPhpMeta($elementName, array $attributes)
     {
-        $meta = new \StdClass();
+        $meta = new \stdClass();
         $meta->propertyName = '';
         $meta->phpType = '';
         $meta->repeatable = false;
@@ -197,11 +197,11 @@ class XmlParser
     /**
      * Builds the required PHP object.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed A new PHP object or null.
      */
-    private function newPhpObject($meta)
+    private function newPhpObject(\stdClass $meta)
     {
         $phpTypes = explode('|', $meta->phpType);
 
@@ -224,11 +224,11 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed The value to assign.
      */
-    private function getValueToAssign($meta)
+    private function getValueToAssign(\stdClass $meta)
     {
         if ($this->isSimplePhpType($meta)) {
             return $this->getValueToAssignToProperty($meta);
@@ -243,11 +243,11 @@ class XmlParser
     /**
      * Determines if the type of the property is simple.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
-     * @return boolean True if the property type is simple.
+     * @return bool True if the property type is simple.
      */
-    private function isSimplePhpType($meta)
+    private function isSimplePhpType(\stdClass $meta)
     {
         $phpTypes = explode('|', $meta->phpType);
 
@@ -270,11 +270,11 @@ class XmlParser
     /**
      * Determines if the the property of an object is set by a _value_ property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
-     * @return boolean True if the property need to be set by _value_.
+     * @return bool True if the property needs to be set by _value_.
      */
-    private function setByValue($meta)
+    private function setByValue(\stdClass $meta)
     {
         return (
             is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\Base64BinaryType', false) ||
@@ -291,11 +291,11 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
-     * @return boolean True if the property type is simlple.
+     * @return mixed The value to assign.
      */
-    private function getValueToAssignToProperty($meta)
+    private function getValueToAssignToProperty(\stdClass $meta)
     {
         switch ($meta->phpType) {
             case 'integer':
@@ -315,27 +315,27 @@ class XmlParser
     /**
      * Returns a value that will be assigned to an object's _value_ property.
      *
-     * @param array $meta The PHP meta data.
+     * @param \stdClass $meta The PHP meta data.
      *
      * @return mixed The value to assign.
      */
-    private function getValueToAssignToValue($meta)
+    private function getValueToAssignToValue(\stdClass $meta)
     {
         if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\Base64BinaryType', false)) {
             return $meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\BooleanType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\BooleanType', false)) {
             return strtolower($meta->strData) === 'true';
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DecimalType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DecimalType', false)) {
             return is_int(0 + $meta->strData) ? (integer)$meta->strData : (double)$meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DoubleType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DoubleType', false)) {
             return (double)$meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\IntegerType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\IntegerType', false)) {
             return (integer)$meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\StringType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\StringType', false)) {
             return $meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\TokenType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\TokenType', false)) {
             return $meta->strData;
-        } else if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\URIType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\URIType', false)) {
             return $meta->strData;
         }
 

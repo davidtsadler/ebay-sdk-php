@@ -13,6 +13,8 @@ use DTS\eBaySDK\Test\Mocks\URIType;
 
 class SimpleClassTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new SimpleClass();
@@ -128,6 +130,41 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
         $this->obj->uriType = new URIType();
         $this->obj->uriType->value = 'uri type';
         $this->assertEquals('uri type', $this->obj->uriType->value);
+
+        $this->obj->anyType = 1;
+        $this->assertEquals(1, $this->obj->anyType);
+        $this->obj->anyType = 'foo';
+        $this->assertEquals('foo', $this->obj->anyType);
+        $this->obj->anyType = 1.23;
+        $this->assertEquals(1.23, $this->obj->anyType);
+        $this->obj->anyType = true;
+        $this->assertEquals(true, $this->obj->anyType);
+        $this->obj->anyType = false;
+        $this->assertEquals(false, $this->obj->anyType);
+        $date = new \DateTime('2000-01-01', new \DateTimeZone('UTC'));
+        $this->obj->anyType = $date;
+        $this->assertEquals($date, $this->obj->anyType);
+        $this->obj->anyType = [1, 2, 3];
+        $this->assertEquals([1, 2, 3], $this->obj->anyType);
+
+        $this->assertEquals(0, count($this->obj->anyTypes));
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->anyTypes);
+        $this->obj->anyTypes[] = 1;
+        $this->obj->anyTypes[] = 'foo';
+        $this->obj->anyTypes[] = 1.23;
+        $this->obj->anyTypes[] = true;
+        $this->obj->anyTypes[] = false;
+        $date = new \DateTime('2000-01-01', new \DateTimeZone('UTC'));
+        $this->obj->anyTypes[] = $date;
+        $this->obj->anyTypes[] = [1, 2, 3];
+        $this->assertEquals(7, count($this->obj->anyTypes));
+        $this->assertEquals(1, $this->obj->anyTypes[0]);
+        $this->assertEquals('foo', $this->obj->anyTypes[1]);
+        $this->assertEquals(1.23, $this->obj->anyTypes[2]);
+        $this->assertEquals(true, $this->obj->anyTypes[3]);
+        $this->assertEquals(false, $this->obj->anyTypes[4]);
+        $this->assertEquals($date, $this->obj->anyTypes[5]);
+        $this->assertEquals([1, 2, 3], $this->obj->anyTypes[6]);
     }
 
     public function testIsSet()
@@ -201,7 +238,7 @@ class SimpleClassTest extends \PHPUnit_Framework_TestCase
 
     public function testCanGetElementMeta()
     {
-        $meta = new \StdClass();
+        $meta = new \stdClass();
         $meta->propertyName = 'SimpleClass';
         $meta->phpType = 'DTS\eBaySDK\Test\Mocks\SimpleClass';
         $meta->repeatable = false;

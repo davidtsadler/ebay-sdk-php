@@ -7,27 +7,38 @@ namespace DTS\eBaySDK\BusinessPoliciesManagement\Services;
 class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. The API version your application supports.
      */
     const HDR_API_VERSION = 'X-EBAY-SOA-SERVICE-VERSION';
+
+    /**
+     * HTTP header constant. The Authentication Token that is used to validate the caller has permission to access the eBay servers.
+     */
     const HDR_AUTH_TOKEN = 'X-EBAY-SOA-SECURITY-TOKEN';
-    const HDR_CONTENT_TYPE = 'CONTENT-TYPE';
+
+    /**
+     * HTTP header constant. The global ID of the eBay site the request is for.
+     */
     const HDR_GLOBAL_ID = 'X-EBAY-SOA-GLOBAL-ID';
-    const HDR_MESSAGE_ENCODING = 'X-EBAY-SOA-MESSAGE-ENCODING';
-    const HDR_MESSAGE_PROTOCOL = 'X-EBAY-SOA-MESSAGE-PROTOCOL';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-SOA-OPERATION-NAME';
-    const HDR_REQUEST_FORMAT = 'X-EBAY-SOA-REQUEST-DATA-FORMAT';
-    const HDR_RESPONSE_FORMAT = 'X-EBAY-SOA-RESPONSE-DATA-FORMAT';
-    const HDR_SERVICE_NAME = 'X-EBAY-SOA-SERVICE-NAME';
 
     /**
      * @param array $config Configuration option values.
      */
     public function __construct(array $config)
     {
-        parent::__construct('https://svcs.ebay.com/services/selling/v1/SellerProfilesManagementService', 'http://svcs.sandbox.ebay.com/services/selling/v1/SellerProfilesManagementService', $config);
+        parent::__construct('https://svcs.ebay.com/services/selling/v1/SellerProfilesManagementService', 'https://svcs.sandbox.ebay.com/services/selling/v1/SellerProfilesManagementService', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -49,7 +60,7 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *

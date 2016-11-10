@@ -431,7 +431,10 @@ class TreeCompiler
         return $this;
     }
 
-    /** @internal */
+    /** @internal
+     * @param $method
+     * @param $args
+     */
     public function __call($method, $args)
     {
         throw new \RuntimeException(

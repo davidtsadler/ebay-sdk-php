@@ -79,6 +79,18 @@ release: check_tag package
 # Tags the repo and publishes a release.
 full_release: tag release
 
+sync_account:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Account/src/Account/ src/Account/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Account/test/Account/ test/Account/
+
+sync_analytics:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Analytics/src/Analytics/ src/Analytics/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Analytics/test/Analytics/ test/Analytics/
+
+sync_browse:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Browse/src/Browse/ src/Browse/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Browse/test/Browse/ test/Browse/
+
 sync_bulk:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/BulkDataExchange/src/BulkDataExchange/ src/BulkDataExchange/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/BulkDataExchange/test/BulkDataExchange/ test/BulkDataExchange/
@@ -86,6 +98,10 @@ sync_bulk:
 sync_bus:
 	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/src/BusinessPoliciesManagement/ src/BusinessPoliciesManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/test/BusinessPoliciesManagement/ test/BusinessPoliciesManagement/
+
+sync_feedback:
+	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Feedback/src/Feedback/ src/Feedback/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Feedback/test/Feedback/ test/Feedback/
 
 sync_file:
 	rsync -rtvu --delete --exclude *BaseService.php --exclude Data.php --exclude XopInclude.php ../ebay-api-sdk-php/dist/FileTransfer/src/FileTransfer/ src/FileTransfer/
@@ -97,13 +113,53 @@ sync_finding:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Finding/src/Finding/ src/Finding/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Finding/test/Finding/ test/Finding/
 
+sync_fulfillment:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Fulfillment/src/Fulfillment/ src/Fulfillment/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Fulfillment/test/Fulfillment/ test/Fulfillment/
+
 sync_half:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/HalfFinding/src/HalfFinding/ src/HalfFinding/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/HalfFinding/test/HalfFinding/ test/HalfFinding/
 
+sync_inventory:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Inventory/src/Inventory/ src/Inventory/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Inventory/test/Inventory/ test/Inventory/
+
+sync_marketing:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Marketing/src/Marketing/ src/Marketing/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Marketing/test/Marketing/ test/Marketing/
+
+sync_merchand:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Merchandising/src/Merchandising/ src/Merchandising/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Merchandising/test/Merchandising/ test/Merchandising/
+
 sync_merc:
 	rsync -rtvu --delete --exclude MerchantData.php ../ebay-api-sdk-php/dist/MerchantData/src/MerchantData/ src/MerchantData/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude MerchantDataTest.php ../ebay-api-sdk-php/dist/MerchantData/test/MerchantData/ test/MerchantData/
+
+sync_metadata:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Metadata/src/Metadata/ src/Metadata/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Metadata/test/Metadata/ test/Metadata/
+
+sync_order:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Order/src/Order/ src/Order/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Order/test/Order/ test/Order/
+
+sync_post:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/PostOrder/src/PostOrder/ src/PostOrder/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/PostOrder/test/PostOrder/ test/PostOrder/
+
+sync_product:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Product/src/Product/ src/Product/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Product/test/Product/ test/Product/
+
+sync_product_metadata:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ProductMetadata/src/ProductMetadata/ src/ProductMetadata/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/ProductMetadata/test/ProductMetadata/ test/ProductMetadata/
+
+sync_related:
+	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/RelatedItemsManagement/src/RelatedItemsManagement/ src/RelatedItemsManagement/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/RelatedItemsManagement/test/RelatedItemsManagement/ test/RelatedItemsManagement/
 
 sync_res:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ResolutionCaseManagement/src/ResolutionCaseManagement/ src/ResolutionCaseManagement/
@@ -121,6 +177,29 @@ sync_trade:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Trading/src/Trading/ src/Trading/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Trading/test/Trading/ test/Trading/
 
-sync_all: sync_bulk sync_bus sync_file sync_finding sync_half sync_merc sync_res sync_return sync_shop sync_trade
+sync_all: sync_account		\
+	  sync_analytics	\
+	  sync_browse		\
+	  sync_bulk		\
+	  sync_bus		\
+	  sync_feedback		\
+	  sync_file		\
+	  sync_finding		\
+	  sync_fulfillment	\
+	  sync_half		\
+	  sync_inventory	\
+	  sync_marketing	\
+          sync_merchand		\
+	  sync_merc		\
+	  sync_metadata		\
+	  sync_order		\
+	  sync_post		\
+	  sync_product		\
+	  sync_product_metadata	\
+          sync_related		\
+	  sync_res		\
+	  sync_return		\
+	  sync_shop		\
+	  sync_trade
 
 .PHONY: test

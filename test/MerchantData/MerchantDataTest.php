@@ -5,6 +5,8 @@ use DTS\eBaySDK\MerchantData\MerchantData;
 
 class MerchantDataTest extends \PHPUnit_Framework_TestCase
 {
+    private $merchantData;
+
     protected function setUp()
     {
         $this->merchantData = new MerchantData();

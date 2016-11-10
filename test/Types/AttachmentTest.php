@@ -7,6 +7,11 @@ use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
 class AttachmentTest extends \PHPUnit_Framework_TestCase
 {
+    private $httpHandler;
+    private $service;
+    private $request;
+    private $requestXml;
+
     protected function setUp()
     {
         /**

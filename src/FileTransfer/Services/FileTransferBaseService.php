@@ -7,14 +7,19 @@ namespace DTS\eBaySDK\FileTransfer\Services;
 class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. The API version your application supports.
      */
     const HDR_API_VERSION = 'X-EBAY-SOA-SERVICE-VERSION';
+
+    /**
+     * HTTP header constant. The Authentication Token that is used to validate the caller has permission to access the eBay servers.
+     */
     const HDR_AUTH_TOKEN = 'X-EBAY-SOA-SECURITY-TOKEN';
-    const HDR_CONTENT_TYPE = 'CONTENT-TYPE';
-    const HDR_MESSAGE_PROTOCOL = 'X-EBAY-SOA-MESSAGE-PROTOCOL';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-SOA-OPERATION-NAME';
-    const HDR_SERVICE_NAME = 'X-EBAY-SOA-SERVICE-NAME';
 
     /**
      * @param array $config Configuration option values.
@@ -24,6 +29,11 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
         parent::__construct('https://storage.ebay.com/FileTransferService', 'https://storage.sandbox.ebay.com/FileTransferService', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -44,22 +54,22 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
      * Sends an API request.
      *
      * This method overrides the parent so that it can modify
-     * the request object before is handled by the parent class.
+     * the request object before it is handled by the parent class.
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
     protected function callOperationAsync($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
         /**
-            Modify the request object to add xop:Include element.
+         * Modify the request object to add xop:Include element.
          */
         if ($name === 'uploadFile' && $request->hasAttachment()) {
             /**
-                Don't modify a request if the file attachment already exists.
+             * Don't modify a request if the file attachment already exists.
              */
             if (!isset($request->fileAttachment)) {
                 $request->fileAttachment = new \DTS\eBaySDK\FileTransfer\Types\FileAttachment();
@@ -83,7 +93,7 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *

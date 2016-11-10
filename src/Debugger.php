@@ -6,8 +6,14 @@ namespace DTS\eBaySDK;
  */
 class Debugger
 {
+    /**
+     * @var array $config. Debug configuration.
+     */
     private $config;
 
+    /**
+     * @var array $credentialsStrings. RegExp patterns to remove credentials from the debug info.
+     */
     private static $credentialsStrings = [
         '/^(X-EBAY-SOA-SECURITY-TOKEN:.*)?$/im' => 'X-EBAY-SOA-SECURITY-TOKEN: SECURITY-TOKEN',
         '/^(X-EBAY-SOA-SECURITY-APPNAME:.*)?$/im' => 'X-EBAY-SOA-SECURITY-APPNAME: SECURITY-APPNAME',
@@ -24,7 +30,7 @@ class Debugger
     /**
      * @param array $config Debug configuration.
      */
-    public function __construct($config)
+    public function __construct(array $config)
     {
         $this->config = $config + [
             'logfn' => function ($msg) {
@@ -37,6 +43,9 @@ class Debugger
         $this->config['scrub_strings'] += self::$credentialsStrings;
     }
 
+    /**
+     * @param string $info The debug information.
+     */
     public function __invoke($info)
     {
         if ($this->config['scrub_credentials']) {

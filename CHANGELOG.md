@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## 8.0.0 - 2017-01-26
+
+### Breaking changes
+
+* Support Shopping API version 983.
+* Support Trading API version 983.
+* SDK now uses HTTPS service endpoint when available.
+
+### Features
+
+* Allow object properties to be any type.
+* Support Account API version 1.
+* Support Analytics API version 1.
+* Support Browse API version 1.
+* Support Fulfillment API version 1.
+* Support Inventory API version 1.
+* Support Marketing API version 1.
+* Support Metadata API version 1.
+* Support Order API version 1.
+* Support Post Order API version 2.
+* Support Product API version 1.4.0.
+* Support Product Metadata API version 1.3.0.
+* Support Merchandising API version 1.5.0.
+* Support Feedback API version 1.2.2.
+* Support Related Items Management API version 1.0.0.
+* Configuration option httpOptions now supports http_errors.
+* Configuration option httpOptions now supports curl.
+* Oauth Token can be used with the Trading service.
+
 ## 7.0.0 - 2016-09-03
 
 ### Breaking changes

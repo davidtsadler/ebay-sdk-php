@@ -7,15 +7,38 @@ namespace DTS\eBaySDK\Trading\Services;
 class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
 {
     /**
-     * Constants for the various HTTP headers required by the API.
+     * HTTP header constant. The API version your application supports.
      */
     const HDR_API_VERSION = 'X-EBAY-API-COMPATIBILITY-LEVEL';
+
+    /**
+     * HTTP header constant. Your application ID.
+     */
     const HDR_APP_ID = 'X-EBAY-API-APP-NAME';
+
+    /**
+     * HTTP header constant. The OAUTH Authentication Token that is used to validate the caller has permission to access the eBay servers.
+     */
+    const HDR_AUTHORIZATION = 'X-EBAY-API-IAF-TOKEN';
+
+    /**
+     * HTTP header constant. Your certificate ID.
+     */
     const HDR_CERT_ID = 'X-EBAY-API-CERT-NAME';
-    const HDR_CONTENT_LENGTH = 'Content-Length';
-    const HDR_CONTENT_TYPE = 'Content-Type';
+
+    /**
+     * HTTP header constant. Your developer ID.
+     */
     const HDR_DEV_ID = 'X-EBAY-API-DEV-NAME';
+
+    /**
+     * HTTP header constant. The name of the operation you are calling.
+     */
     const HDR_OPERATION_NAME = 'X-EBAY-API-CALL-NAME';
+
+    /**
+     * HTTP header constant. The site ID of the eBay site the request is for.
+     */
     const HDR_SITE_ID = 'X-EBAY-API-SITEID';
 
     /**
@@ -26,6 +49,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         parent::__construct('https://api.ebay.com/ws/api.dll', 'https://api.sandbox.ebay.com/ws/api.dll', $config);
     }
 
+    /**
+     * Returns definitions for each configuration option that is supported.
+     *
+     * @return array An associative array of configuration definitions.
+     */
     public static function getConfigDefinitions()
     {
         $definitions = parent::getConfigDefinitions();
@@ -35,6 +63,9 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
                 'valid' => ['string'],
                 'default' => \DTS\eBaySDK\Trading\Services\TradingService::API_VERSION,
                 'required' => true
+            ],
+            'authorization' => [
+                'valid' => ['string']
             ],
             'authToken' => [
                 'valid' => ['string']
@@ -50,11 +81,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
      * Sends an API request.
      *
      * This method overrides the parent so that it can modify
-     * the request object before is handled by the parent class.
+     * the request object before it is handled by the parent class.
      *
      * @param string $name The name of the operation.
      * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
-     * @param string The name of the PHP class that will be created from the XML response.
+     * @param string $responseClass The name of the PHP class that will be created from the XML response.
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the XML response.
      */
@@ -63,7 +94,14 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         /**
          * Modify the request object to include the auth token that was set up in the configuration.
          */
-        if ($this->getConfig('authToken') !== null) {
+        if ($this->getConfig('authorization') !== null) {
+            /**
+             * Don't send requester credentials if oauth authentication needed.
+             */
+            if (isset($request->RequesterCredentials)) {
+                unset($request->RequesterCredentials);
+            }
+        } elseif ($this->getConfig('authToken') !== null) {
             /**
              * Don't modify a request if the token already exists.
              */
@@ -79,7 +117,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
     }
 
     /**
-     * Build the needed eBay HTTP headers.
+     * Builds the needed eBay HTTP headers.
      *
      * @param string $operationName The name of the operation been called.
      *
@@ -101,15 +139,19 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
 
         // Add optional headers.
         if ($appId) {
-            $headers[self::HDR_APP_ID] = $credentials->getAppId();
+            $headers[self::HDR_APP_ID] = $appId;
         }
 
         if ($certId) {
-            $headers[self::HDR_CERT_ID] = $credentials->getCertId();
+            $headers[self::HDR_CERT_ID] = $certId;
         }
 
         if ($devId) {
-            $headers[self::HDR_DEV_ID] = $credentials->getDevId();
+            $headers[self::HDR_DEV_ID] = $devId;
+        }
+
+        if ($this->getConfig('authorization')) {
+            $headers[self::HDR_AUTHORIZATION] = $this->getConfig('authorization');
         }
 
         return $headers;

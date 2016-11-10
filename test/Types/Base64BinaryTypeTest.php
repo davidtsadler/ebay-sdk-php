@@ -5,6 +5,8 @@ use DTS\eBaySDK\Types\Base64BinaryType;
 
 class Base64BinaryTypeTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new Base64BinaryType();

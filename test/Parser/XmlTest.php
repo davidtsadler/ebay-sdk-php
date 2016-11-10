@@ -5,31 +5,21 @@ use DTS\eBaySDK\Parser\XmlParser;
 
 class XmlTest extends \PHPUnit_Framework_TestCase
 {
-    protected function setUp()
-    {
-        $this->xmlParser = new XmlParser('\DTS\eBaySDK\Test\Mocks\ComplexClass');
-    }
-
-    public function testCanBeCreated()
-    {
-        $this->assertInstanceOf('\DTS\eBaySDK\Parser\XmlParser', $this->xmlParser);
-    }
-
     public function testCanParseXml()
     {
+        $xmlParser = new XmlParser('\DTS\eBaySDK\Test\Mocks\ComplexClass');
         $xml = file_get_contents(__DIR__.'/../Mocks/Response.xml');
         $xml = preg_replace('/[\n\r]/', '', $xml);
         $xml = preg_replace('/>\s+/', '>', $xml);
-        $obj = $this->xmlParser->parse($xml);
+        $obj = $xmlParser->parse($xml);
 
         $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $obj);
 
         // This is not in the XML and so should not be set.
-        $this->assertEquals(false, isset($this->obj->foo));
+        $this->assertEquals(false, isset($obj->foo));
 
         $this->assertEquals(123, $obj->integer);
         $this->assertEquals('<h1>Bits &amp; Bobs ©</h1><p>Just some &lt;stuff&gt; I found.&nbsp;&copy;</p>', $obj->string);
-        $this->assertEquals('foo', $obj->foo);
         $this->assertEquals(123.45, $obj->double);
         $this->assertEquals(true, $obj->booleanTrue);
         $this->assertEquals(false, $obj->booleanFalse);
@@ -72,19 +62,19 @@ class XmlTest extends \PHPUnit_Framework_TestCase
 
     public function testCanParseXmlWithNamespace()
     {
+        $xmlParser = new XmlParser('\DTS\eBaySDK\Test\Mocks\ComplexClass');
         $xml = file_get_contents(__DIR__.'/../Mocks/ResponseNS.xml');
         $xml = preg_replace('/[\n\r]/', '', $xml);
         $xml = preg_replace('/>\s+/', '>', $xml);
-        $obj = $this->xmlParser->parse($xml);
+        $obj = $xmlParser->parse($xml);
 
         $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $obj);
 
         // This is not in the XML and so should not be set.
-        $this->assertEquals(false, isset($this->obj->foo));
+        $this->assertEquals(false, isset($obj->foo));
 
         $this->assertEquals(123, $obj->integer);
         $this->assertEquals('a string', $obj->string);
-        $this->assertEquals('foo', $obj->foo);
         $this->assertEquals(123.45, $obj->double);
         $this->assertEquals(true, $obj->booleanTrue);
         $this->assertEquals(false, $obj->booleanFalse);

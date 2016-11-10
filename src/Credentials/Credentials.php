@@ -7,14 +7,25 @@ namespace DTS\eBaySDK\Credentials;
  */
 class Credentials implements \DTS\eBaySDK\Credentials\CredentialsInterface
 {
+    /**
+     * @var string $appId Application ID
+     */
     private $appId;
+
+    /**
+     * @var string $certId Certificate ID
+     */
     private $certId;
+
+    /**
+     * @var string $devId Developer ID
+     */
     private $devId;
 
     /**
-     * @param string $appId  Application ID
+     * @param string $appId Application ID
      * @param string $certId Certificate ID
-     * @param string $devId  Developer ID
+     * @param string $devId Developer ID
      */
     public function __construct($appId, $certId, $devId)
     {
@@ -23,16 +34,31 @@ class Credentials implements \DTS\eBaySDK\Credentials\CredentialsInterface
         $this->devId = trim($devId);
     }
 
+    /**
+     * Returns the application ID.
+     *
+     * @return string
+     */
     public function getAppId()
     {
         return $this->appId;
     }
 
+    /**
+     * Returns the certificate ID.
+     *
+     * @return string
+     */
     public function getCertId()
     {
         return $this->certId;
     }
 
+    /**
+     * Returns the developer ID.
+     *
+     * @return string
+     */
     public function getDevId()
     {
         return $this->devId;

@@ -7,6 +7,8 @@ use DTS\eBaySDK\Test\Mocks\ComplexClass;
 
 class ComplexClassTest extends \PHPUnit_Framework_TestCase
 {
+    private $obj;
+
     protected function setUp()
     {
         $this->obj = new ComplexClass();
@@ -111,5 +113,46 @@ class ComplexClassTest extends \PHPUnit_Framework_TestCase
         ];
 
         $this->assertXmlStringEqualsXmlFile(__DIR__ . '/../Mocks/ComplexClassXml.xml', $this->obj->toRequestXml());
+    }
+
+    public function testToJson()
+    {
+        $this->obj->foo = 'foo';
+        $this->obj->integer = 123;
+        $this->obj->string = '<h1>Bits &amp; Bobs</h1><p>Just some &lt;stuff&gt; I found.&nbsp;&copy;</p>';
+        $this->obj->double = 123.45;
+        $this->obj->DateTime = new \DateTime('2000-01-01', new \DateTimeZone("UTC"));
+        $this->obj->booleanTrue = true;
+        $this->obj->booleanFalse = false;
+
+        $simpleClass = new SimpleClass();
+        $simpleClass->integer = 321;
+        $simpleClass->string = 'another string';
+        $this->obj->SimpleClass = $simpleClass;
+
+        $amountClass = new AmountClass();
+        $amountClass->value = 543.21;
+        $amountClass->AttributeOne = 'one';
+        $this->obj->AmountClass = $amountClass;
+
+        $this->obj->strings = ['foo', 'bar'];
+        $this->obj->integers = [1,2,3,4,5];
+
+        $this->obj->simpleClasses = [
+            new SimpleClass(['integer' => 888]),
+            new SimpleClass(['integer' => 999])
+        ];
+
+        $this->obj->anyType = 1;
+        $this->obj->anyTypes[] = 1;
+        $this->obj->anyTypes[] = 'foo';
+        $this->obj->anyTypes[] = 1.23;
+        $this->obj->anyTypes[] = true;
+        $this->obj->anyTypes[] = false;
+        $date = new \DateTime('2000-01-01', new \DateTimeZone('UTC'));
+        $this->obj->anyTypes[] = $date;
+        $this->obj->anyTypes[] = [1, 2, 3];
+
+        $this->assertJsonStringEqualsJsonFile(__DIR__ . '/../Mocks/ComplexClassJson.json', json_encode($this->obj->toArray()));
     }
 }

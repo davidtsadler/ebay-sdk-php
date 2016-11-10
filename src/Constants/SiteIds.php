@@ -48,7 +48,7 @@ class SiteIds
     const MY = 207;
     // Canada (French)
     const FRCA = 210;
-    // Philippones
+    // Philippines
     const PH = 211;
     // Poland
     const PL = 212;

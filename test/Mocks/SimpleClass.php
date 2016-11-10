@@ -165,6 +165,18 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalTypeNegFloat'
+        ],
+        'anyType' => [
+            'type' => 'any',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'anyType'
+        ],
+        'anyTypes' => [
+            'type' => 'any',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'anyTypes'
         ]
     ];
 

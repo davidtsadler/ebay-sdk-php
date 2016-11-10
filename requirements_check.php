@@ -131,6 +131,6 @@ $check->check64Bit();
 
 $check->title('PHP information');
 
-$check->phpinfo();
+$check->phpInfo();
 
 $check->endCheck();
