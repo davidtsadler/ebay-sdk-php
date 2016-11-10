@@ -1,0 +1,46 @@
+{
+    "integer": 123,
+    "string": "<h1>Bits &amp; Bobs<\/h1><p>Just some &lt;stuff&gt; I found.&nbsp;&copy;<\/p>",
+    "double": 123.45,
+    "booleanTrue": true,
+    "booleanFalse": false,
+    "DateTime": "2000-01-01T00:00:00.000Z",
+    "SimpleClass": {
+        "integer": 321,
+        "string": "another string"
+    },
+    "strings": [
+        "foo",
+        "bar"
+    ],
+    "integers": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "foo": "foo",
+    "AmountClass": {
+        "value": 543.21,
+        "AttributeOne": "one"
+    },
+    "simpleClasses": [
+        {
+            "integer": 888
+        },
+        {
+            "integer": 999
+        }
+    ],
+    "anyType": 1,
+    "anyTypes": [
+      1,
+      "foo",
+      1.23,
+      true,
+      false,
+      "2000-01-01T00:00:00.000Z",
+      [1, 2, 3]
+    ]
+}

@@ -57,6 +57,11 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
             'decimalTypes' => [
                 ['value' => 1],
                 ['value' => 2.34]
+            ],
+            'anyType' => 1,
+            'anyTypes' => [
+                1,
+                'foo'
             ]
         ];
 
@@ -120,6 +125,11 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, $obj->decimalTypes[0]->value);
         $this->assertEquals(2.34, $obj->decimalTypes[1]->value);
         $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->strings);
+
+        $this->assertEquals(1, $obj->anyType);
+
+        $this->assertEquals(2, count($obj->anyTypes));
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->anyTypes);
     }
 
     public function testSettingInvalidPropertyViaCtor()
@@ -138,5 +148,31 @@ class ConstructTest extends \PHPUnit_Framework_TestCase
         $obj = new ComplexClass([
             'string' => 123
         ]);
+    }
+
+    /**
+     * This is to handle JSON responses such as
+     * {
+     *     "foo": [null],
+     *     "bar": null
+     * }
+     * The null object results in the SDK trying to pass null
+     * to the ctor of an object, which expects an array.
+     */
+    public function testNullValuesWillNotSetProperties()
+    {
+        $obj = new ComplexClass([
+            'foo' => null,
+            'strings' => [null, null],
+            'decimalTypes' => [null, null],
+            'simpleClasses' => [null, null, new SimpleClass()]
+        ]);
+
+        $this->assertEquals(false, isset($obj->foo));
+        $this->assertEquals(true, isset($obj->strings));
+        $this->assertEquals(0, count($obj->strings));
+        $this->assertEquals(false, isset($obj->decimalType));
+        $this->assertEquals(true, isset($obj->simpleClasses));
+        $this->assertEquals(1, count($obj->simpleClasses));
     }
 }

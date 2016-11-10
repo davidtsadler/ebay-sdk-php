@@ -263,8 +263,11 @@ class BaseType implements JmesPathableObjectInterface
     protected function setValues($class, array $values = [])
     {
         foreach ($values as $property => $value) {
-            $actualValue = self::determineActualValueToAssign($class, $property, $value);
-            $this->set($class, $property, $actualValue);
+            $value = self::removeNull($value);
+            if (!is_null($value)) {
+                $actualValue = self::determineActualValueToAssign($class, $property, $value);
+                $this->set($class, $property, $actualValue);
+            }
         }
     }
 
@@ -467,7 +470,7 @@ class BaseType implements JmesPathableObjectInterface
         $valid = explode('|', $info['type']);
 
         foreach ($valid as $check) {
-            if (\DTS\eBaySDK\checkPropertyType($check)) {
+            if ($check !== 'any' && \DTS\eBaySDK\checkPropertyType($check)) {
                 if ($check === $actualType || 'array' === $actualType) {
                     return;
                 }
@@ -637,6 +640,7 @@ class BaseType implements JmesPathableObjectInterface
                 case 'string':
                 case 'double':
                 case 'boolean':
+                case 'any':
                     return $value;
                 case 'DateTime':
                     return new \DateTime($value, new \DateTimeZone('UTC'));
@@ -644,5 +648,20 @@ class BaseType implements JmesPathableObjectInterface
                     return new $info['type']($value);
             }
         }
+    }
+
+    /**
+     * @param mixed $value Remove null elements if an array.
+     * @return mixed Original value if not an array or array without null elements.
+     */
+    private static function removeNull($value)
+    {
+        if (!is_array($value)) {
+            return $value;
+        }
+
+        return array_filter($value, function ($val) {
+            return !is_null($val);
+        });
     }
 }

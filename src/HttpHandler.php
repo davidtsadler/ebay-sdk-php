@@ -22,6 +22,7 @@ class HttpHandler
         'connect_timeout' => true,
         'debug'           => true,
         'delay'           => true,
+        'http_errors'     => true,
         'proxy'           => true,
         'timeout'         => true,
         'verify'          => true

@@ -164,7 +164,7 @@ class RepeatableType implements \ArrayAccess, \Countable, \Iterator, JmesPathabl
         $valid = explode('|', $this->expectedType);
         $isValid = false;
         foreach ($valid as $check) {
-            if (\DTS\eBaySDK\checkPropertyType($check)) {
+            if ($check !== 'any' && \DTS\eBaySDK\checkPropertyType($check)) {
                 if ($check === $actualType) {
                     return;
                 }

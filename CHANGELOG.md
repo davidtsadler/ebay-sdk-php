@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## Unreleased
+
+### Features
+
+* Allow object properties to be any type.
+* Support Account API version 1.
+* Support Analytics API version 1.
+* Support Browse API version 1.
+* Support Fulfillment API version 1.
+* Support Inventory API version 1.
+* Support Marketing API version 1.
+* Support Metadata API version 1.
+* Support Order API version 1.
+* Support Post Order API version 2.
+* Support Product API version 1.4.0.
+* Support Product Metadata API version 1.3.0.
+
 ## 7.0.0 - 2016-09-03
 
 ### Breaking changes
