@@ -55,11 +55,11 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
     protected function callOperationAsync($name, \DTS\eBaySDK\Types\BaseType $request, $responseClass)
     {
         /**
-            Modify the request object to add xop:Include element.
+         * Modify the request object to add xop:Include element.
          */
         if ($name === 'uploadFile' && $request->hasAttachment()) {
             /**
-                Don't modify a request if the file attachment already exists.
+             * Don't modify a request if the file attachment already exists.
              */
             if (!isset($request->fileAttachment)) {
                 $request->fileAttachment = new \DTS\eBaySDK\FileTransfer\Types\FileAttachment();
