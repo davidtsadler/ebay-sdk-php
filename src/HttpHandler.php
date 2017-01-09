@@ -20,6 +20,7 @@ class HttpHandler
      */
     private static $validOptions = [
         'connect_timeout' => true,
+        'curl'            => true,
         'debug'           => true,
         'delay'           => true,
         'http_errors'     => true,

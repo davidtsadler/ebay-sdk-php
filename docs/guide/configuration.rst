@@ -268,6 +268,30 @@ A float specifying the number of seconds to wait when trying to connect to the A
         ]
     ]);
 
+.. _http_options_curl:
+
+curl
+^^^^
+
+:Type: ``array``
+
+Depending on your project's requirments you may find that you need to set custom cURL options. This can be done by passing an associative array of `CURLOPT_XXX options <http://us1.php.net/curl_setopt>`_.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Finding\Services\FindingService;
+
+    $service = new FindingService([
+        'apiVersion'  => '1.13.0',
+        'globalId'    => 'EBAY-US',
+        'httpOptions' => [
+            'curl' => [
+                CURLOPT_VERBOSE   => true,
+                CURLOPT_INTERFACE => 'xxx.xxx.xxx.xxx'
+            ]
+        ]
+    ]);
+
 .. _http_options_debug:
 
 debug
@@ -285,6 +309,15 @@ delay
 :Type: ``int``
 
 The number of milliseconds to delay before sending the request.
+
+.. _http_options_http_errors:
+
+http_errors
+^^^^^^^^^^^
+
+:Type: ``bool``
+
+Set to false to disable throwing exceptions on an HTTP protocol errors (i.e., 4xx and 5xx responses). Exceptions are thrown by default when HTTP protocol errors are encountered.
 
 .. _http_options_proxy:
 
