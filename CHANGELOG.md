@@ -5,6 +5,7 @@
 ### Breaking changes
 
 * Support Shopping API version 983.
+* Support Trading API version 983.
 
 ### Features
 
