@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Breaking changes
+
+* Support Shopping API version 983.
+
 ### Features
 
 * Allow object properties to be any type.
