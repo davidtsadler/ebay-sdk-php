@@ -99,6 +99,10 @@ sync_bus:
 	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/src/BusinessPoliciesManagement/ src/BusinessPoliciesManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/test/BusinessPoliciesManagement/ test/BusinessPoliciesManagement/
 
+sync_feedback:
+	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Feedback/src/Feedback/ src/Feedback/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Feedback/test/Feedback/ test/Feedback/
+
 sync_file:
 	rsync -rtvu --delete --exclude *BaseService.php --exclude Data.php --exclude XopInclude.php ../ebay-api-sdk-php/dist/FileTransfer/src/FileTransfer/ src/FileTransfer/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/FileTransfer/test/FileTransfer/ test/FileTransfer/
@@ -174,6 +178,7 @@ sync_all: sync_account		\
 	  sync_browse		\
 	  sync_bulk		\
 	  sync_bus		\
+	  sync_feedback		\
 	  sync_file		\
 	  sync_finding		\
 	  sync_fulfillment	\

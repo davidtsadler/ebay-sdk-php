@@ -9,6 +9,7 @@ namespace DTS\eBaySDK;
  * @method \DTS\eBaySDK\Browse\Services\BrowseService createBrowse(array $args = [])
  * @method \DTS\eBaySDK\BulkDataExchange\Services\BulkDataExchangeService createBulkDataExchange(array $args = [])
  * @method \DTS\eBaySDK\BusinessPoliciesManagement\Services\BusinessPoliciesManagementService createBusinessPoliciesManagement(array $args = [])
+ * @method \DTS\eBaySDK\Feedback\Services\FeedbackService createFeedback(array $args = [])
  * @method \DTS\eBaySDK\FileTransfer\Services\FileTransferService createFileTransfer(array $args = [])
  * @method \DTS\eBaySDK\Finding\Services\FindingService createFinding(array $args = [])
  * @method \DTS\eBaySDK\Fulfillment\Services\FulfillmentService createFulfillment(array $args = [])
