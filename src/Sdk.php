@@ -22,6 +22,7 @@ namespace DTS\eBaySDK;
  * @method \DTS\eBaySDK\PostOrder\Services\PostOrderService createPostOrder(array $args = [])
  * @method \DTS\eBaySDK\Product\Services\ProductService createProduct(array $args = [])
  * @method \DTS\eBaySDK\ProductMetadata\Services\ProductMetadataService createProductMetadata(array $args = [])
+ * @method \DTS\eBaySDK\RelatedItemsManagement\Services\RelatedItemsManagementService createRelatedItemsManagement(array $args = [])
  * @method \DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementService createResolutionCaseManagement(array $args = [])
  * @method \DTS\eBaySDK\ReturnManagement\Services\ReturnManagementService createReturnManagement(array $args = [])
  * @method \DTS\eBaySDK\Shopping\Services\ShoppingService createShopping(array $args = [])

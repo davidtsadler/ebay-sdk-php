@@ -23,6 +23,7 @@
 * Support Product Metadata API version 1.3.0.
 * Support Merchandising API version 1.5.0.
 * Support Feedback API version 1.2.2.
+* Support Related Items Management API version 1.0.0.
 * Configuration option httpOptions now supports http_errors.
 * Configuration option httpOptions now supports curl.
 

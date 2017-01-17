@@ -157,6 +157,10 @@ sync_product_metadata:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ProductMetadata/src/ProductMetadata/ src/ProductMetadata/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/ProductMetadata/test/ProductMetadata/ test/ProductMetadata/
 
+sync_related:
+	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/RelatedItemsManagement/src/RelatedItemsManagement/ src/RelatedItemsManagement/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/RelatedItemsManagement/test/RelatedItemsManagement/ test/RelatedItemsManagement/
+
 sync_res:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/ResolutionCaseManagement/src/ResolutionCaseManagement/ src/ResolutionCaseManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/ResolutionCaseManagement/test/ResolutionCaseManagement/ test/ResolutionCaseManagement/
@@ -192,6 +196,7 @@ sync_all: sync_account		\
 	  sync_post		\
 	  sync_product		\
 	  sync_product_metadata	\
+          sync_related		\
 	  sync_res		\
 	  sync_return		\
 	  sync_shop		\

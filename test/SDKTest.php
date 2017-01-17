@@ -154,6 +154,11 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Services\ProductMetadataService', $this->sdk->createProductMetadata());
     }
 
+    public function testCanCreateRelatedItemsManagement()
+    {
+        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Services\RelatedItemsManagementService', $this->sdk->createRelatedItemsManagement());
+    }
+
     public function testCanCreateResolutionCaseManagement()
     {
         $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Services\ResolutionCaseManagementService', $this->sdk->createResolutionCaseManagement());
