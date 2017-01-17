@@ -15,6 +15,7 @@ namespace DTS\eBaySDK;
  * @method \DTS\eBaySDK\HalfFinding\Services\HalfFindingService createHalfFinding(array $args = [])
  * @method \DTS\eBaySDK\Inventory\Services\InventoryService createInventory(array $args = [])
  * @method \DTS\eBaySDK\Marketing\Services\MarketingService createMarketing(array $args = [])
+ * @method \DTS\eBaySDK\Merchandising\Services\MerchandisingService createMerchandising(array $args = [])
  * @method \DTS\eBaySDK\Metadata\Services\MetadataService createMetadata(array $args = [])
  * @method \DTS\eBaySDK\Order\Services\OrderService createOrder(array $args = [])
  * @method \DTS\eBaySDK\PostOrder\Services\PostOrderService createPostOrder(array $args = [])

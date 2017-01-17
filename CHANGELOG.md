@@ -21,6 +21,7 @@
 * Support Post Order API version 2.
 * Support Product API version 1.4.0.
 * Support Product Metadata API version 1.3.0.
+* Support Merchandising API version 1.5.0.
 * Configuration option httpOptions now supports http_errors.
 * Configuration option httpOptions now supports curl.
 

@@ -125,6 +125,10 @@ sync_marketing:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Marketing/src/Marketing/ src/Marketing/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Marketing/test/Marketing/ test/Marketing/
 
+sync_merchand:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Merchandising/src/Merchandising/ src/Merchandising/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Merchandising/test/Merchandising/ test/Merchandising/
+
 sync_merc:
 	rsync -rtvu --delete --exclude MerchantData.php ../ebay-api-sdk-php/dist/MerchantData/src/MerchantData/ src/MerchantData/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude MerchantDataTest.php ../ebay-api-sdk-php/dist/MerchantData/test/MerchantData/ test/MerchantData/
@@ -176,6 +180,7 @@ sync_all: sync_account		\
 	  sync_half		\
 	  sync_inventory	\
 	  sync_marketing	\
+          sync_merchand		\
 	  sync_merc		\
 	  sync_metadata		\
 	  sync_order		\
