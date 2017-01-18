@@ -31,7 +31,7 @@ class FindingBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     public function __construct(array $config)
     {
-        parent::__construct('http://svcs.ebay.com/services/search/FindingService/v1', 'http://svcs.sandbox.ebay.com/services/search/FindingService/v1', $config);
+        parent::__construct('https://svcs.ebay.com/services/search/FindingService/v1', 'https://svcs.sandbox.ebay.com/services/search/FindingService/v1', $config);
     }
 
     /**

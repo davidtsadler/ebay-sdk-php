@@ -6,6 +6,7 @@
 
 * Support Shopping API version 983.
 * Support Trading API version 983.
+* SDK now uses HTTPS service endpoint when available.
 
 ### Features
 

@@ -31,7 +31,7 @@ class BusinessPoliciesManagementBaseService extends \DTS\eBaySDK\Services\BaseSe
      */
     public function __construct(array $config)
     {
-        parent::__construct('https://svcs.ebay.com/services/selling/v1/SellerProfilesManagementService', 'http://svcs.sandbox.ebay.com/services/selling/v1/SellerProfilesManagementService', $config);
+        parent::__construct('https://svcs.ebay.com/services/selling/v1/SellerProfilesManagementService', 'https://svcs.sandbox.ebay.com/services/selling/v1/SellerProfilesManagementService', $config);
     }
 
     /**

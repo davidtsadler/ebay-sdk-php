@@ -31,7 +31,7 @@ class HalfFindingBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     public function __construct(array $config)
     {
-        parent::__construct('https://svcs.ebay.com/services/half/HalfFindingService/v1', 'http://svcs.ebay.com/services/half/HalfFindingService/v1', $config);
+        parent::__construct('https://svcs.ebay.com/services/half/HalfFindingService/v1', 'https://svcs.ebay.com/services/half/HalfFindingService/v1', $config);
     }
 
     /**
