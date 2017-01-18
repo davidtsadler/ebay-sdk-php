@@ -35,6 +35,7 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
      * HTTP header constant. The site ID of the eBay site the request is for.
      */
     const HDR_SITE_ID = 'X-EBAY-API-SITEID';
+	const HDR_API_TOKEN = 'X-EBAY-API-IAF-TOKEN';
 
     /**
      * @param array $config Configuration option values.
@@ -65,6 +66,9 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
             'siteId' => [
                 'valid' => ['int', 'string'],
                 'required' => true
+            ],
+            'authorization' => [
+	            'valid' => ['string']
             ]
         ];
     }
@@ -86,7 +90,16 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         /**
          * Modify the request object to include the auth token that was set up in the configuration.
          */
-        if ($this->getConfig('authToken') !== null) {
+	    if ($this->getConfig('authorization') !== null) {
+		    /**
+		     * Don't send requester credentials if oauth authentication needed.
+		     */
+		    if (isset($request->RequesterCredentials)) {
+			    unset($request->RequesterCredentials);
+		    }
+
+	    }
+        elseif ($this->getConfig('authToken') !== null) {
             /**
              * Don't modify a request if the token already exists.
              */
@@ -134,6 +147,11 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
         if ($devId) {
             $headers[self::HDR_DEV_ID] = $credentials->getDevId();
         }
+
+	    if ($this->getConfig('authorization') !== null)
+	    {
+		    $headers[self::HDR_API_TOKEN] = $this->getConfig('authorization');
+	    }
 
         return $headers;
     }
