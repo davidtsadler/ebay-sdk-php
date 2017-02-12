@@ -18,6 +18,7 @@ This is a personal project that has been developed by me, [David T. Sadler](http
   - [Examples](https://github.com/davidtsadler/ebay-sdk-examples) - Several examples of using the SDK.
   - [Google Group](https://groups.google.com/forum/#!forum/ebay-sdk-php) - Join for support with the SDK.
   - [@devbaydotnet](https://twitter.com/devbaydotnet) - Follow on Twitter for announcements of releases, important changes and so on.
+  - [RapidAPI](https://rapidapi.com/package/eBay/functions?utm_source=GitHubEbay&utm_medium=button) - Test out the API.
 
 ## Requirements
 
