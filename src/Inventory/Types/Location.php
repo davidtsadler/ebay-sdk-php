@@ -14,6 +14,7 @@ namespace DTS\eBaySDK\Inventory\Types;
  *
  * @property \DTS\eBaySDK\Inventory\Types\Address $address
  * @property \DTS\eBaySDK\Inventory\Types\GeoCoordinates $geoCoordinates
+ * @property string $locationId
  */
 class Location extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,6 +33,12 @@ class Location extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'geoCoordinates'
+        ],
+        'locationId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'locationId'
         ]
     ];
 

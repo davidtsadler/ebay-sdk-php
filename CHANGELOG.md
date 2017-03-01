@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 9.0.0 - 2017-03-01
+
+### Breaking changes
+
+* Correct production URL now used for Order service.
+* Support Inventory API version 1.1.0.
+* Support Order API version v1_beta.4.0
+* Support Trading API version 991.
+* Use correct string type for orderFulfillmentStatus and fulfillmentInstructionsType properties.
+
 ## 8.0.0 - 2017-01-26
 
 ### Breaking changes

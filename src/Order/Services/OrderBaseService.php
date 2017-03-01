@@ -11,7 +11,7 @@ class OrderBaseService extends \DTS\eBaySDK\Services\BaseRestService
      */
     protected static $endPoints = [
         'sandbox'    => 'https://api.sandbox.ebay.com/buy/order',
-        'production' => 'https://api.ebay.com/buy/order'
+        'production' => 'https://apix.ebay.com/buy/order'
     ];
 
     /**

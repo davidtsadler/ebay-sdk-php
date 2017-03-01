@@ -8,22 +8,22 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Test\Order\Types;
+namespace DTS\eBaySDK\Test\Trading\Types;
 
-use DTS\eBaySDK\Order\Types\LineItem_0;
+use DTS\eBaySDK\Trading\Types\GroupValidationRulesType;
 
-class LineItem_0Test extends \PHPUnit_Framework_TestCase
+class GroupValidationRulesTypeTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new LineItem_0();
+        $this->obj = new GroupValidationRulesType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\LineItem_0', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\GroupValidationRulesType', $this->obj);
     }
 
     public function testExtendsBaseType()

@@ -8,30 +8,30 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Order\Types;
+namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Order\Enums\CurrencyCodeEnum $currency
- * @property string $value
+ * @property \DTS\eBaySDK\Trading\Types\GroupValidationRulesType $ValidationRules
+ * @property \DTS\eBaySDK\Trading\Types\NameRecommendationType[] $NameRecommendation
  */
-class Amount_0 extends \DTS\eBaySDK\Types\BaseType
+class ProductIdentifiersType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'currency' => [
-            'type' => 'string',
+        'ValidationRules' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\GroupValidationRulesType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'currency'
+            'elementName' => 'ValidationRules'
         ],
-        'value' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'NameRecommendation' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\NameRecommendationType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'value'
+            'elementName' => 'NameRecommendation'
         ]
     ];
 
@@ -46,6 +46,10 @@ class Amount_0 extends \DTS\eBaySDK\Types\BaseType
 
         if (!array_key_exists(__CLASS__, self::$properties)) {
             self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        }
+
+        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         $this->setValues(__CLASS__, $childValues);

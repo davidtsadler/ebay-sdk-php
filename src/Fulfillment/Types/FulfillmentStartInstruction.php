@@ -14,7 +14,7 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  *
  * @property boolean $ebaySupportedFulfillment
  * @property \DTS\eBaySDK\Fulfillment\Types\Address $finalDestinationAddress
- * @property \DTS\eBaySDK\Fulfillment\Types\FulfillmentInstructionsType $fulfillmentInstructionsType
+ * @property \DTS\eBaySDK\Fulfillment\Enums\FulfillmentInstructionsType $fulfillmentInstructionsType
  * @property string $maxEstimatedDeliveryDate
  * @property string $minEstimatedDeliveryDate
  * @property \DTS\eBaySDK\Fulfillment\Types\ShippingStep $shippingStep
@@ -38,7 +38,7 @@ class FulfillmentStartInstruction extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'finalDestinationAddress'
         ],
         'fulfillmentInstructionsType' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\FulfillmentInstructionsType',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fulfillmentInstructionsType'

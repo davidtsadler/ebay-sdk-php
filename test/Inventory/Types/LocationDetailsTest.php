@@ -8,22 +8,22 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Test\Order\Types;
+namespace DTS\eBaySDK\Test\Inventory\Types;
 
-use DTS\eBaySDK\Order\Types\PricingSummary_0;
+use DTS\eBaySDK\Inventory\Types\LocationDetails;
 
-class PricingSummary_0Test extends \PHPUnit_Framework_TestCase
+class LocationDetailsTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new PricingSummary_0();
+        $this->obj = new LocationDetails();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\PricingSummary_0', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\LocationDetails', $this->obj);
     }
 
     public function testExtendsBaseType()

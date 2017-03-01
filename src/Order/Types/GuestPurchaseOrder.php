@@ -12,13 +12,13 @@ namespace DTS\eBaySDK\Order\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Order\Types\LineItem_0[] $lineItems
- * @property \DTS\eBaySDK\Order\Types\PricingSummary_0 $pricingSummary
+ * @property \DTS\eBaySDK\Order\Types\LineItem[] $lineItems
+ * @property \DTS\eBaySDK\Order\Types\PricingSummary $pricingSummary
  * @property string $purchaseOrderCreationDate
  * @property string $purchaseOrderId
  * @property \DTS\eBaySDK\Order\Enums\PurchaseOrderPaymentStatusEnum $purchaseOrderPaymentStatus
  * @property \DTS\eBaySDK\Order\Enums\PurchaseOrderStatusEnum $purchaseOrderStatus
- * @property \DTS\eBaySDK\Order\Types\Amount_0 $refundedAmount
+ * @property \DTS\eBaySDK\Order\Types\Amount $refundedAmount
  * @property \DTS\eBaySDK\Order\Types\ErrorDetailV3[] $warnings
  */
 class GuestPurchaseOrder extends \DTS\eBaySDK\Types\BaseType
@@ -28,13 +28,13 @@ class GuestPurchaseOrder extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'lineItems' => [
-            'type' => 'DTS\eBaySDK\Order\Types\LineItem_0',
+            'type' => 'DTS\eBaySDK\Order\Types\LineItem',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'lineItems'
         ],
         'pricingSummary' => [
-            'type' => 'DTS\eBaySDK\Order\Types\PricingSummary_0',
+            'type' => 'DTS\eBaySDK\Order\Types\PricingSummary',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pricingSummary'
@@ -64,7 +64,7 @@ class GuestPurchaseOrder extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'purchaseOrderStatus'
         ],
         'refundedAmount' => [
-            'type' => 'DTS\eBaySDK\Order\Types\Amount_0',
+            'type' => 'DTS\eBaySDK\Order\Types\Amount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundedAmount'

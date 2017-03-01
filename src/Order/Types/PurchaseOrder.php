@@ -12,15 +12,15 @@ namespace DTS\eBaySDK\Order\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Order\Types\LineItem_0[] $lineItems
+ * @property \DTS\eBaySDK\Order\Types\LineItem[] $lineItems
  * @property \DTS\eBaySDK\Order\Types\PaymentInstrument $paymentInstrument
- * @property \DTS\eBaySDK\Order\Types\PricingSummary_0 $pricingSummary
+ * @property \DTS\eBaySDK\Order\Types\PricingSummary $pricingSummary
  * @property string $purchaseOrderCreationDate
  * @property string $purchaseOrderId
  * @property \DTS\eBaySDK\Order\Enums\PurchaseOrderPaymentStatusEnum $purchaseOrderPaymentStatus
  * @property \DTS\eBaySDK\Order\Enums\PurchaseOrderStatusEnum $purchaseOrderStatus
- * @property \DTS\eBaySDK\Order\Types\Amount_0 $refundedAmount
- * @property \DTS\eBaySDK\Order\Types\ShippingAddress_0 $shippingAddress
+ * @property \DTS\eBaySDK\Order\Types\Amount $refundedAmount
+ * @property \DTS\eBaySDK\Order\Types\ShippingAddress $shippingAddress
  * @property \DTS\eBaySDK\Order\Types\ShippingFulfillment[] $shippingFulfillments
  * @property \DTS\eBaySDK\Order\Types\ErrorDetailV3[] $warnings
  */
@@ -31,7 +31,7 @@ class PurchaseOrder extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'lineItems' => [
-            'type' => 'DTS\eBaySDK\Order\Types\LineItem_0',
+            'type' => 'DTS\eBaySDK\Order\Types\LineItem',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'lineItems'
@@ -43,7 +43,7 @@ class PurchaseOrder extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'paymentInstrument'
         ],
         'pricingSummary' => [
-            'type' => 'DTS\eBaySDK\Order\Types\PricingSummary_0',
+            'type' => 'DTS\eBaySDK\Order\Types\PricingSummary',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pricingSummary'
@@ -73,13 +73,13 @@ class PurchaseOrder extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'purchaseOrderStatus'
         ],
         'refundedAmount' => [
-            'type' => 'DTS\eBaySDK\Order\Types\Amount_0',
+            'type' => 'DTS\eBaySDK\Order\Types\Amount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'refundedAmount'
         ],
         'shippingAddress' => [
-            'type' => 'DTS\eBaySDK\Order\Types\ShippingAddress_0',
+            'type' => 'DTS\eBaySDK\Order\Types\ShippingAddress',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingAddress'

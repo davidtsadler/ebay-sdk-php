@@ -20,7 +20,7 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  * @property \DTS\eBaySDK\Fulfillment\Types\FulfillmentStartInstruction[] $fulfillmentStartInstructions
  * @property string $lastModifiedDate
  * @property \DTS\eBaySDK\Fulfillment\Types\LineItem[] $lineItems
- * @property \DTS\eBaySDK\Fulfillment\Types\OrderFulfillmentStatus $orderFulfillmentStatus
+ * @property \DTS\eBaySDK\Fulfillment\Enums\OrderFulfillmentStatus $orderFulfillmentStatus
  * @property string $orderId
  * @property \DTS\eBaySDK\Fulfillment\Enums\OrderPaymentStatusEnum $orderPaymentStatus
  * @property \DTS\eBaySDK\Fulfillment\Types\PaymentSummary $paymentSummary
@@ -82,7 +82,7 @@ class Order extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'lineItems'
         ],
         'orderFulfillmentStatus' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\OrderFulfillmentStatus',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'orderFulfillmentStatus'

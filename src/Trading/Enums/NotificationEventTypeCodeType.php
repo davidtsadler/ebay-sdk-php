@@ -26,6 +26,7 @@ class NotificationEventTypeCodeType
     const C_BID_RECEIVED = 'BidReceived';
     const C_BULK_DATA_EXCHANGE_JOB_COMPLETED = 'BulkDataExchangeJobCompleted';
     const C_BUYER_CANCEL_REQUESTED = 'BuyerCancelRequested';
+    const C_BUYER_NO_SHOW = 'BuyerNoShow';
     const C_BUYER_RESPONSE_DISPUTE = 'BuyerResponseDispute';
     const C_CHECKOUT_BUYER_REQUESTS_TOTAL = 'CheckoutBuyerRequestsTotal';
     const C_COUNTER_OFFER_RECEIVED = 'CounterOfferReceived';
@@ -60,6 +61,8 @@ class NotificationEventTypeCodeType
     const C_ITEM_LOST = 'ItemLost';
     const C_ITEM_MARKED_PAID = 'ItemMarkedPaid';
     const C_ITEM_MARKED_SHIPPED = 'ItemMarkedShipped';
+    const C_ITEM_OUT_OF_STOCK = 'ItemOutOfStock';
+    const C_ITEM_READY_FOR_PICKUP = 'ItemReadyForPickup';
     const C_ITEM_REMOVED_FROM_WATCH_LIST = 'ItemRemovedFromWatchList';
     const C_ITEM_REVISED = 'ItemRevised';
     const C_ITEM_REVISED_ADD_CHARITY = 'ItemRevisedAddCharity';
@@ -75,6 +78,11 @@ class NotificationEventTypeCodeType
     const C_MY_MESSAGES_HIGH_PRIORITY_MESSAGE = 'MyMessagesHighPriorityMessage';
     const C_MY_MESSAGES_HIGH_PRIORITY_MESSAGE_HEADER = 'MyMessagesHighPriorityMessageHeader';
     const C_NONE = 'None';
+    const C_ORDER_INQUIRY_CLOSED = 'OrderInquiryClosed';
+    const C_ORDER_INQUIRY_ESCALATED_TO_CASE = 'OrderInquiryEscalatedToCase';
+    const C_ORDER_INQUIRY_OPENED = 'OrderInquiryOpened';
+    const C_ORDER_INQUIRY_PROVIDE_SHIPMENT_INFORMATION = 'OrderInquiryProvideShipmentInformation';
+    const C_ORDER_INQUIRY_REMINDER_FOR_ESCALATION = 'OrderInquiryReminderForEscalation';
     const C_OUT_BID = 'OutBid';
     const C_PASSWORD_CHANGED = 'PasswordChanged';
     const C_PASSWORD_HINT_CHANGED = 'PasswordHintChanged';
@@ -104,4 +112,5 @@ class NotificationEventTypeCodeType
     const C_UNMATCHED_PAYMENT_RECEIVED = 'UnmatchedPaymentReceived';
     const C_USERID_CHANGED = 'UserIDChanged';
     const C_WATCHED_ITEM_ENDING_SOON = 'WatchedItemEndingSoon';
+    const C_WEBNEXT_MOBILE_PHOTO_SYNC = 'WebnextMobilePhotoSync';
 }

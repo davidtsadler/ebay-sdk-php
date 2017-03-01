@@ -98,6 +98,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $RegularSubscription
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $PremiumSubscription
  * @property \DTS\eBaySDK\Trading\Enums\GeographicExposureCodeType $NonSubscription
+ * @property boolean $PayPalRequiredForStoreOwner
  * @property boolean $ReviseQuantityAllowed
  * @property boolean $RevisePriceAllowed
  * @property boolean $StoreOwnerExtendedListingDurationsEnabled
@@ -125,6 +126,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $UPCEnabled
  * @property integer $MaxGranularFitmentCount
  * @property string $CompatibleVehicleType
+ * @property \DTS\eBaySDK\Trading\Enums\PaymentOptionsGroupEnabledCodeType $PaymentOptionsGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $ShippingProfileCategoryGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $PaymentProfileCategoryGroup
  * @property \DTS\eBaySDK\Trading\Enums\ProfileCategoryGroupCodeType $ReturnPolicyProfileCategoryGroup
@@ -661,6 +663,12 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'NonSubscription'
         ],
+        'PayPalRequiredForStoreOwner' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PayPalRequiredForStoreOwner'
+        ],
         'ReviseQuantityAllowed' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -822,6 +830,12 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CompatibleVehicleType'
+        ],
+        'PaymentOptionsGroup' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'PaymentOptionsGroup'
         ],
         'ShippingProfileCategoryGroup' => [
             'type' => 'string',

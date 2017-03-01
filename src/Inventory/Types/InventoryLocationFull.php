@@ -12,7 +12,7 @@ namespace DTS\eBaySDK\Inventory\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Inventory\Types\Location $location
+ * @property \DTS\eBaySDK\Inventory\Types\LocationDetails $location
  * @property string $locationAdditionalInformation
  * @property string $locationInstructions
  * @property \DTS\eBaySDK\Inventory\Enums\StoreTypeEnum[] $locationTypes
@@ -30,7 +30,7 @@ class InventoryLocationFull extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'location' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\Location',
+            'type' => 'DTS\eBaySDK\Inventory\Types\LocationDetails',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'location'

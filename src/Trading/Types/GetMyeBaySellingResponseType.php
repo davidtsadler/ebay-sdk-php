@@ -18,7 +18,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $SoldList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $UnsoldList
  * @property \DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType $Summary
- * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $BidList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType $DeletedFromSoldList
  * @property \DTS\eBaySDK\Trading\Types\PaginatedItemArrayType $DeletedFromUnsoldList
  */
@@ -63,12 +62,6 @@ class GetMyeBaySellingResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRe
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Summary'
-        ],
-        'BidList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginatedItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BidList'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PaginatedOrderTransactionArrayType',

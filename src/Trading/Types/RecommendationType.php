@@ -12,11 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $FieldGroup
- * @property string $FieldName
- * @property string $RecommendationCode
- * @property string[] $RecommendedValue
- * @property string $Message
  */
 class RecommendationType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,36 +19,6 @@ class RecommendationType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'FieldGroup' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FieldGroup'
-        ],
-        'FieldName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FieldName'
-        ],
-        'RecommendationCode' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RecommendationCode'
-        ],
-        'RecommendedValue' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'RecommendedValue'
-        ],
-        'Message' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Message'
-        ]
     ];
 
     /**

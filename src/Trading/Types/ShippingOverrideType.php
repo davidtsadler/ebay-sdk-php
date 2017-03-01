@@ -8,31 +8,17 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Order\Types;
+namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Order\Types\Amount_0 $amount
- * @property string $label
  */
-class Adjustment_0 extends \DTS\eBaySDK\Types\BaseType
+class ShippingOverrideType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'amount' => [
-            'type' => 'DTS\eBaySDK\Order\Types\Amount_0',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'amount'
-        ],
-        'label' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'label'
-        ]
     ];
 
     /**
@@ -46,6 +32,10 @@ class Adjustment_0 extends \DTS\eBaySDK\Types\BaseType
 
         if (!array_key_exists(__CLASS__, self::$properties)) {
             self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        }
+
+        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         $this->setValues(__CLASS__, $childValues);

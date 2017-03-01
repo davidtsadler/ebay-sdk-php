@@ -8,22 +8,22 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Test\Fulfillment\Types;
+namespace DTS\eBaySDK\Test\Trading\Types;
 
-use DTS\eBaySDK\Fulfillment\Types\FulfillmentInstructionsType;
+use DTS\eBaySDK\Trading\Types\ShippingOverrideType;
 
-class FulfillmentInstructionsTypeTest extends \PHPUnit_Framework_TestCase
+class ShippingOverrideTypeTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new FulfillmentInstructionsType();
+        $this->obj = new ShippingOverrideType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\FulfillmentInstructionsType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ShippingOverrideType', $this->obj);
     }
 
     public function testExtendsBaseType()

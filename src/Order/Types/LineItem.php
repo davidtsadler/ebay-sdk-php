@@ -12,16 +12,15 @@ namespace DTS\eBaySDK\Order\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Order\Types\Amount $baseUnitPrice
  * @property \DTS\eBaySDK\Order\Types\Image $image
  * @property string $itemId
  * @property string $lineItemId
+ * @property \DTS\eBaySDK\Order\Enums\LineItemPaymentStatusEnum $lineItemPaymentStatus
+ * @property \DTS\eBaySDK\Order\Enums\LineItemStatusEnum $lineItemStatus
  * @property \DTS\eBaySDK\Order\Types\Amount $netPrice
- * @property \DTS\eBaySDK\Order\Types\Promotion[] $promotions
  * @property integer $quantity
  * @property \DTS\eBaySDK\Order\Types\Seller $seller
- * @property \DTS\eBaySDK\Order\Types\ShippingOption[] $shippingOptions
- * @property string $shortDescription
+ * @property \DTS\eBaySDK\Order\Types\ShippingDetail $shippingDetail
  * @property string $title
  */
 class LineItem extends \DTS\eBaySDK\Types\BaseType
@@ -30,12 +29,6 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'baseUnitPrice' => [
-            'type' => 'DTS\eBaySDK\Order\Types\Amount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'baseUnitPrice'
-        ],
         'image' => [
             'type' => 'DTS\eBaySDK\Order\Types\Image',
             'repeatable' => false,
@@ -54,17 +47,23 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'lineItemId'
         ],
+        'lineItemPaymentStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'lineItemPaymentStatus'
+        ],
+        'lineItemStatus' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'lineItemStatus'
+        ],
         'netPrice' => [
             'type' => 'DTS\eBaySDK\Order\Types\Amount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'netPrice'
-        ],
-        'promotions' => [
-            'type' => 'DTS\eBaySDK\Order\Types\Promotion',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'promotions'
         ],
         'quantity' => [
             'type' => 'integer',
@@ -78,17 +77,11 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'seller'
         ],
-        'shippingOptions' => [
-            'type' => 'DTS\eBaySDK\Order\Types\ShippingOption',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'shippingOptions'
-        ],
-        'shortDescription' => [
-            'type' => 'string',
+        'shippingDetail' => [
+            'type' => 'DTS\eBaySDK\Order\Types\ShippingDetail',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shortDescription'
+            'elementName' => 'shippingDetail'
         ],
         'title' => [
             'type' => 'string',
