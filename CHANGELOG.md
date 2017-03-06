@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 9.0.1 - 2017-03-06
 
 ### Fixes
 
