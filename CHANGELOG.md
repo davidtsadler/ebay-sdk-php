@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 9.0.1 - 2017-03-06
+
+### Fixes
+
+* Correct mapping between offer_Id and offerId for the UpdateOffer operation in the Inventory service.
+
 ## 9.0.0 - 2017-03-01
 
 ### Breaking changes
