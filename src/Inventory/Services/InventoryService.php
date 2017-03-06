@@ -255,7 +255,7 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
         ],
         'UpdateOffer' => [
             'method' => 'PUT',
-            'resource' => 'offer/{offer_Id}',
+            'resource' => 'offer/{offerId}',
             'responseClass' => '\DTS\eBaySDK\Inventory\Types\UpdateOfferRestResponse',
             'params' => [
                 'offerId' => [
