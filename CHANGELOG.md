@@ -4,7 +4,7 @@
 
 ### Fixes
 
-- Correct mapping between offer_Id and offerId for the UpdateOffer operation in the Inventory service.
+* Correct mapping between offer_Id and offerId for the UpdateOffer operation in the Inventory service.
 
 ## 9.0.0 - 2017-03-01
 
