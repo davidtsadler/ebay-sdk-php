@@ -13,7 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Enums\GalleryTypeCodeType $GalleryType
- * @property string $GalleryURL
  * @property \DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType $PhotoDisplay
  * @property string[] $PictureURL
  * @property \DTS\eBaySDK\Trading\Enums\PictureSourceCodeType $PictureSource
@@ -34,12 +33,6 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryType'
-        ],
-        'GalleryURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryURL'
         ],
         'PhotoDisplay' => [
             'type' => 'string',

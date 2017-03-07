@@ -25,7 +25,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $WarrantyType
  * @property string $WarrantyDurationOption
  * @property string $WarrantyDuration
- * @property string $EAN
  * @property string $ShippingCostPaidByOption
  * @property string $ShippingCostPaidBy
  * @property string $RestockingFeeValue
@@ -115,12 +114,6 @@ class ReturnPolicyType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WarrantyDuration'
-        ],
-        'EAN' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
         ],
         'ShippingCostPaidByOption' => [
             'type' => 'string',

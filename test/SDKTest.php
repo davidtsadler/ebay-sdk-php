@@ -16,6 +16,7 @@ class SdkTest extends \PHPUnit_Framework_TestCase
             'authorization' => '',
             'credentials' => ['appId' => '', 'certId' => '', 'devId' => ''],
             'globalId' => '',
+            'ruName' => '',
             'siteId' => 0
         ]);
     }
@@ -62,6 +63,11 @@ class SdkTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException('\BadMethodCallException', 'Unknown method: foo');
 
         $this->sdk->foo();
+    }
+
+    public function testCanCreateOAuth()
+    {
+        $this->assertInstanceOf('\DTS\eBaySDK\OAuth\Services\OAuthService', $this->sdk->createOAuth());
     }
 
     public function testCanCreateAccount()

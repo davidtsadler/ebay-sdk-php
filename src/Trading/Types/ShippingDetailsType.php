@@ -15,8 +15,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $GlobalShipping
  * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingRateType $CalculatedShippingRate
  * @property boolean $ChangePaymentInstructions
- * @property \DTS\eBaySDK\Trading\Types\AmountType $InsuranceFee
- * @property \DTS\eBaySDK\Trading\Enums\InsuranceOptionCodeType $InsuranceOption
  * @property boolean $InsuranceWanted
  * @property boolean $PaymentEdited
  * @property string $PaymentInstructions
@@ -70,18 +68,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ChangePaymentInstructions'
-        ],
-        'InsuranceFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceFee'
-        ],
-        'InsuranceOption' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceOption'
         ],
         'InsuranceWanted' => [
             'type' => 'boolean',

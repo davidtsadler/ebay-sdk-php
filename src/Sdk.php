@@ -30,7 +30,7 @@ namespace DTS\eBaySDK;
  */
 class Sdk
 {
-    const VERSION = '9.0.1';
+    const VERSION = '10.0.0';
 
     /**
      * @var bool Controls if the SDK should enforce strict types

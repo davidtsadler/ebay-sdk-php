@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 10.0.0 - 2017-03-17
+
+### Breaking changes
+
+* Support Trading API version 997.
+
+## Features
+
+* Can now use SDK to handle generation of OAUTH tokens for the RESTFul services.
+
 ## 9.0.1 - 2017-03-06
 
 ### Fixes

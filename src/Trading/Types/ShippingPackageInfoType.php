@@ -19,6 +19,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DateTime $ActualDeliveryTime
  * @property \DateTime $EstimatedDeliveryTimeMin
  * @property \DateTime $EstimatedDeliveryTimeMax
+ * @property \DateTime $HandleByTime
+ * @property \DateTime $MinNativeEstimatedDeliveryTime
+ * @property \DateTime $MaxNativeEstimatedDeliveryTime
  */
 class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -67,6 +70,24 @@ class ShippingPackageInfoType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EstimatedDeliveryTimeMax'
+        ],
+        'HandleByTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'HandleByTime'
+        ],
+        'MinNativeEstimatedDeliveryTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MinNativeEstimatedDeliveryTime'
+        ],
+        'MaxNativeEstimatedDeliveryTime' => [
+            'type' => 'DateTime',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'MaxNativeEstimatedDeliveryTime'
         ]
     ];
 

@@ -68,7 +68,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $DisableBuyerRequirements
  * @property \DTS\eBaySDK\Trading\Types\BestOfferDetailsType $BestOfferDetails
  * @property boolean $LocationDefaulted
- * @property boolean $ThirdPartyCheckout
  * @property boolean $UseTaxTable
  * @property boolean $BuyerResponsibleForShipping
  * @property string $eBayNotes
@@ -82,11 +81,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $SellerInventoryID
  * @property \DTS\eBaySDK\Trading\Types\PictureDetailsType $PictureDetails
  * @property integer $DispatchTimeMax
- * @property boolean $SkypeEnabled
- * @property string $SkypeID
- * @property \DTS\eBaySDK\Trading\Enums\SkypeContactOptionCodeType[] $SkypeContactOption
- * @property boolean $ThirdPartyCheckoutIntegration
- * @property \DTS\eBaySDK\Trading\Types\ListingCheckoutRedirectPreferenceType $ListingCheckoutRedirectPreference
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerContactDetails
  * @property integer $TotalQuestionCount
  * @property boolean $ProxyItem
@@ -118,9 +112,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property string $TaxCategory
  * @property \DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType $QuantityAvailableHint
  * @property integer $QuantityThreshold
- * @property boolean $PostCheckoutExperienceEnabled
  * @property \DTS\eBaySDK\Trading\Types\DiscountPriceInfoType $DiscountPriceInfo
- * @property boolean $UseRecommendedProduct
  * @property string $SellerProvidedTitle
  * @property string $VIN
  * @property string $VRM
@@ -493,12 +485,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'LocationDefaulted'
         ],
-        'ThirdPartyCheckout' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ThirdPartyCheckout'
-        ],
         'UseTaxTable' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -576,36 +562,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DispatchTimeMax'
-        ],
-        'SkypeEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SkypeEnabled'
-        ],
-        'SkypeID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SkypeID'
-        ],
-        'SkypeContactOption' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SkypeContactOption'
-        ],
-        'ThirdPartyCheckoutIntegration' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ThirdPartyCheckoutIntegration'
-        ],
-        'ListingCheckoutRedirectPreference' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingCheckoutRedirectPreferenceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingCheckoutRedirectPreference'
         ],
         'SellerContactDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
@@ -793,23 +749,11 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'QuantityThreshold'
         ],
-        'PostCheckoutExperienceEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PostCheckoutExperienceEnabled'
-        ],
         'DiscountPriceInfo' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DiscountPriceInfoType',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
-        ],
-        'UseRecommendedProduct' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UseRecommendedProduct'
         ],
         'SellerProvidedTitle' => [
             'type' => 'string',

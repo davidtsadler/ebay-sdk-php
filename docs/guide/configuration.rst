@@ -118,7 +118,7 @@ credentials
 ~~~~~~~~~~~
 
 :Type: ``array|DTS\eBaySDK\Credentials\CredentialsInterface|callable``
-:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``Feedback``, ``FileTransfer``, ``Finding``, ``HalfFinding``, ``Merchandising``, ``Product``, ``ProductMetadata``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Shopping``, ``Trading``.
+:Services: ``BulkDataExchange``, ``BusinessPoliciesManagement``, ``Feedback``, ``FileTransfer``, ``Finding``, ``HalfFinding``, ``Merchandising``, ``OAuth``, ``Product``, ``ProductMetadata``, ``RelatedItemsManagement``, ``ResolutionCaseManagement``, ``ReturnManagement``, ``Shopping``, ``Trading``.
 
 Provide your "Application ID", "Certificate ID", and "Developer ID" credentials that are required when using the eBay API. If you do not provide any credentials the SDK will attempt to load them in the following order:
 
@@ -439,6 +439,15 @@ responseLanguage
 :Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
 
 This configuration option will set the ``Accept-Language`` HTTP header for the request.
+
+ruName
+~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``OAuth``
+:Required: ``true``
+
+This is the eBay Redirect URL name. eBay assigns two unique RuName values to your application, one for the Sandbox and another for the Production environment.
 
 sandbox
 ~~~~~~~

@@ -12,8 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ProStoresStoreName
- * @property string $SellerThirdPartyUsername
  */
 class ListingCheckoutRedirectPreferenceType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,18 +19,6 @@ class ListingCheckoutRedirectPreferenceType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ProStoresStoreName' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProStoresStoreName'
-        ],
-        'SellerThirdPartyUsername' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerThirdPartyUsername'
-        ]
     ];
 
     /**
