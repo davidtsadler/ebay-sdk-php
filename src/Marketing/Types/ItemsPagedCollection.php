@@ -12,40 +12,61 @@ namespace DTS\eBaySDK\Marketing\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Marketing\Enums\InventoryCriterionEnum $inventoryCriterionType
- * @property \DTS\eBaySDK\Marketing\Types\InventoryItem[] $inventoryItems
- * @property string[] $listingIds
- * @property \DTS\eBaySDK\Marketing\Types\RuleCriteria $ruleCriteria
+ * @property string $href
+ * @property integer $limit
+ * @property \DTS\eBaySDK\Marketing\Types\ListingDetail[] $listings
+ * @property string $next
+ * @property integer $offset
+ * @property string $prev
+ * @property integer $total
  */
-class InventoryCriterion extends \DTS\eBaySDK\Types\BaseType
+class ItemsPagedCollection extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'inventoryCriterionType' => [
+        'href' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'inventoryCriterionType'
+            'elementName' => 'href'
         ],
-        'inventoryItems' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\InventoryItem',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'inventoryItems'
-        ],
-        'listingIds' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'listingIds'
-        ],
-        'ruleCriteria' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\RuleCriteria',
+        'limit' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ruleCriteria'
+            'elementName' => 'limit'
+        ],
+        'listings' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\ListingDetail',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'listings'
+        ],
+        'next' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'next'
+        ],
+        'offset' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'offset'
+        ],
+        'prev' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'prev'
+        ],
+        'total' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'total'
         ]
     ];
 

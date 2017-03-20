@@ -12,19 +12,47 @@ namespace DTS\eBaySDK\Marketing\Types;
 
 /**
  *
- * @property string $inventoryReferenceId
+ * @property string $promotion_id
+ * @property string $limit
+ * @property string $offset
+ * @property string $q
+ * @property string $sort
  */
-class InventoryItem extends \DTS\eBaySDK\Types\BaseType
+class GetListingsInSpecificPromotionRestRequest extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'inventoryReferenceId' => [
+        'promotion_id' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'inventoryReferenceId'
+            'elementName' => 'promotion_id'
+        ],
+        'limit' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'limit'
+        ],
+        'offset' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'offset'
+        ],
+        'q' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'q'
+        ],
+        'sort' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'sort'
         ]
     ];
 

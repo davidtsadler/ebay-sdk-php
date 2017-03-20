@@ -12,19 +12,33 @@ namespace DTS\eBaySDK\Marketing\Types;
 
 /**
  *
- * @property string $inventoryReferenceId
+ * @property \DTS\eBaySDK\Marketing\Types\InventoryItem[] $excludeInventoryItems
+ * @property string[] $excludeListingIds
+ * @property \DTS\eBaySDK\Marketing\Types\SelectionRule[] $selectionRules
  */
-class InventoryItem extends \DTS\eBaySDK\Types\BaseType
+class RuleCriteria extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'inventoryReferenceId' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'excludeInventoryItems' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\InventoryItem',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'inventoryReferenceId'
+            'elementName' => 'excludeInventoryItems'
+        ],
+        'excludeListingIds' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'excludeListingIds'
+        ],
+        'selectionRules' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\SelectionRule',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'selectionRules'
         ]
     ];
 

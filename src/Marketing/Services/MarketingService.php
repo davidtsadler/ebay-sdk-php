@@ -378,6 +378,28 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
                 ]
             ]
         ],
+        'GetListingsInSpecificPromotion' => [
+            'method' => 'GET',
+            'resource' => 'promotion/{promotion_id}/get_listing_set',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestResponse',
+            'params' => [
+                'promotion_id' => [
+                    'valid' => ['string']
+                ],
+                'limit' => [
+                    'valid' => ['string']
+                ],
+                'offset' => [
+                    'valid' => ['string']
+                ],
+                'q' => [
+                    'valid' => ['string']
+                ],
+                'sort' => [
+                    'valid' => ['string']
+                ]
+            ]
+        ],
         'GetPromotions' => [
             'method' => 'GET',
             'resource' => 'promotion',
@@ -966,6 +988,24 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
     public function updateItemPromotionAsync(\DTS\eBaySDK\Marketing\Types\UpdateItemPromotionRestRequest $request)
     {
         return $this->callOperationAsync('UpdateItemPromotion', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestResponse
+     */
+    public function getListingsInSpecificPromotion(\DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestRequest $request)
+    {
+        return $this->getListingsInSpecificPromotionAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getListingsInSpecificPromotionAsync(\DTS\eBaySDK\Marketing\Types\GetListingsInSpecificPromotionRestRequest $request)
+    {
+        return $this->callOperationAsync('GetListingsInSpecificPromotion', $request);
     }
 
     /**

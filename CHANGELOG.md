@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 11.0.0 - 2017-03-20
+
+### Breaking changes
+
+* Support Marketing API version 1.1.0.
+* Removed constant DTS\eBaySDK\Marketing\Enuns\InventoryCriterionEnum::C_INVALID.
+* Removed property inventoryReferenceType from DTS\eBaySDK\Marketing\TypesInventoryItem class.
+
 ## 10.0.0 - 2017-03-17
 
 ### Breaking changes

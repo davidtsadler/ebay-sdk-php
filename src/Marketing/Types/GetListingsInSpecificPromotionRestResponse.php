@@ -10,49 +10,43 @@
 
 namespace DTS\eBaySDK\Marketing\Types;
 
+use DTS\eBaySDK\StatusCodeTrait;
+use DTS\eBaySDK\HttpHeadersTrait;
+
 /**
  *
- * @property \DTS\eBaySDK\Marketing\Enums\InventoryCriterionEnum $inventoryCriterionType
- * @property \DTS\eBaySDK\Marketing\Types\InventoryItem[] $inventoryItems
- * @property string[] $listingIds
- * @property \DTS\eBaySDK\Marketing\Types\RuleCriteria $ruleCriteria
+ * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
+ * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
  */
-class InventoryCriterion extends \DTS\eBaySDK\Types\BaseType
+class GetListingsInSpecificPromotionRestResponse extends \DTS\eBaySDK\Marketing\Types\ItemsPagedCollection
 {
+    use StatusCodeTrait;
+    use HttpHeadersTrait;
+
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'inventoryCriterionType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'inventoryCriterionType'
-        ],
-        'inventoryItems' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\InventoryItem',
+        'errors' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'inventoryItems'
+            'elementName' => 'errors'
         ],
-        'listingIds' => [
-            'type' => 'string',
+        'warnings' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'listingIds'
-        ],
-        'ruleCriteria' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\RuleCriteria',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ruleCriteria'
+            'elementName' => 'warnings'
         ]
     ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
+     * @param int $statusCode Status code
+     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [])
+    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -63,5 +57,9 @@ class InventoryCriterion extends \DTS\eBaySDK\Types\BaseType
         }
 
         $this->setValues(__CLASS__, $childValues);
+
+        $this->statusCode = (int)$statusCode;
+
+        $this->setHeaders($headers);
     }
 }
