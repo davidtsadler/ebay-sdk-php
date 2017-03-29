@@ -193,7 +193,7 @@ The pre-version 1 SDK would throw a ``DTS\eBaySDK\Exceptions\UnknownConfiguratio
         'non-existent' => true
     ]);
 
-HttpClient paramter and method has been removed
+HttpClient parameter and method have been removed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Version 1 introduced the new :ref:`httpHandler <httpHandler>` configuration option which replaced both the ``httpClient`` parameter and method.
