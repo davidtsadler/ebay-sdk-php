@@ -36,13 +36,13 @@ class ItemEligibilityResult extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'failureReason'
         ],
         'itemId' => [
-            'type' => 'integer',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'transactionId' => [
-            'type' => 'integer',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
