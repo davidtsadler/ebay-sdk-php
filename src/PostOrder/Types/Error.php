@@ -39,6 +39,12 @@ class Error extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'domain'
         ],
+        'subdomain' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'subdomain'
+        ],
         'severity' => [
             'type' => 'string',
             'repeatable' => false,
