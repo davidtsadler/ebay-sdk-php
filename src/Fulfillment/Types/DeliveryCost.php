@@ -39,7 +39,14 @@ class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingIntermediationFee'
+        ],
+        'discountAmount' => [
+          'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+          'repeatable' => false,
+          'attribute' => false,
+          'elementName' => 'discountAmount'
         ]
+        
     ];
 
     /**
