@@ -14,6 +14,7 @@ namespace DTS\eBaySDK\PostOrder\Types;
  *
  * @property integer $errorId
  * @property string $domain
+ * @property string $subdomain
  * @property string $severity
  * @property string $category
  * @property string $message
@@ -38,6 +39,12 @@ class Error extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'domain'
+        ],
+        'subdomain' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'subdomain'
         ],
         'severity' => [
             'type' => 'string',

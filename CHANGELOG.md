@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 12.0.0 - 2017-05-23
+
+### Fixes
+
+* Renamed state to cancelState and status to cancelStatus.
+  This matches the properties returned by the API.
+* Changed type from integer to string for ItemEligibilityResult::itemId and ItemEligibilityResult::transactionId
+* Added missing subdomain property to PostOrder\Error.
+* Added missing discountAmount property to Fulfillment\DeliveryCost.
+
 ## 11.0.0 - 2017-03-20
 
 ### Breaking changes

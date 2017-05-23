@@ -15,6 +15,7 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $importCharges
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingCost
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingIntermediationFee
+ * @property \DTS\eBaySDK\Fulfillment\Types\Amount $discountAmount
  */
 class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,7 +40,13 @@ class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingIntermediationFee'
-        ]
+        ],
+        'discountAmount' => [
+            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'discountAmount'
+        ],
     ];
 
     /**
