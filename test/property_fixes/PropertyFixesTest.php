@@ -44,4 +44,12 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->subdomain = '123';
         $this->assertInternalType('string', $obj->subdomain);
     }
+
+    public function testDeliveryCost()
+    {
+        $obj = new Sdk\Fulfillment\Types\DeliveryCost();
+
+        $obj->discountAmount = new Sdk\Fulfillment\Types\Amount();
+        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\Amount', $obj->discountAmount);
+    }
 }
