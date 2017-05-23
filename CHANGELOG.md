@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Unreleased
+
+### Fixes
+
+* renamed state to cancelState and status to cancelStatus.
+  This matches the properties returned by the API.
+
 ## 11.0.0 - 2017-03-20
 
 ### Breaking changes
