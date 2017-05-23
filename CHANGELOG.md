@@ -7,6 +7,7 @@
 * Renamed state to cancelState and status to cancelStatus.
   This matches the properties returned by the API.
 * Changed type from integer to string for ItemEligibilityResult::itemId and ItemEligibilityResult::transactionId
+* Added missing subdomain property to PostOrder\Error.
 
 ## 11.0.0 - 2017-03-20
 

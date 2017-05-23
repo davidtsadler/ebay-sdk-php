@@ -36,4 +36,12 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->transactionId = '123';
         $this->assertInternalType('string', $obj->transactionId);
     }
+
+    public function testError()
+    {
+        $obj = new Sdk\PostOrder\Types\Error();
+
+        $obj->subdomain = '123';
+        $this->assertInternalType('string', $obj->subdomain);
+    }
 }
