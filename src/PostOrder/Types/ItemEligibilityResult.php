@@ -14,8 +14,8 @@ namespace DTS\eBaySDK\PostOrder\Types;
  *
  * @property boolean $eligible
  * @property \DTS\eBaySDK\PostOrder\Enums\EligibilityFailureReasonEnum[] $failureReason
- * @property integer $itemId
- * @property integer $transactionId
+ * @property string $itemId
+ * @property string $transactionId
  */
 class ItemEligibilityResult extends \DTS\eBaySDK\Types\BaseType
 {
@@ -36,13 +36,13 @@ class ItemEligibilityResult extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'failureReason'
         ],
         'itemId' => [
-            'type' => 'integer',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemId'
         ],
         'transactionId' => [
-            'type' => 'integer',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
