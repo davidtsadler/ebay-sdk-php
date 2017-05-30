@@ -10,6 +10,7 @@
 * Added missing refunds property to Fulfillment\Types\LineItem.
 * Added missing enums to Fulfillment\Enums\OrderPaymentStatusEnum.
 * Added missing enums to Fulfillment\Enums\PaymentMethodTypeEnum.
+* Added missing priceDiscount property to Fulfillment\Types\Pricingsummary.
 
 ## 12.0.0 - 2017-05-23
 
