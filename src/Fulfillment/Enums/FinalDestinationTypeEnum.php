@@ -10,10 +10,8 @@
 
 namespace DTS\eBaySDK\Fulfillment\Enums;
 
-class PaymentStatusEnum
+class FinalDestinationTypeEnum
 {
-    const C_FAILED = 'FAILED';
-    const C_NOT_APPLICABLE = 'NOT_APPLICABLE';
-    const C_PAID = 'PAID';
-    const C_PENDING = 'PENDING';
+    const C_BUYER_LOCATION = 'BUYER_LOCATION';
+    const C_BUYER_PICKUP_LOCATION = 'BUYER_PICKUP_LOCATION';
 }

@@ -12,40 +12,40 @@ namespace DTS\eBaySDK\Fulfillment\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $importCharges
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingCost
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingIntermediationFee
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $discountAmount
+ * @property boolean $guaranteedDelivery
+ * @property string $maxEstimatedDeliveryDate
+ * @property string $minEstimatedDeliveryDate
+ * @property string $shipByDate
  */
-class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
+class LineItemFulfillmentInstructions extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'importCharges' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'guaranteedDelivery' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'importCharges'
+            'elementName' => 'guaranteedDelivery'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'maxEstimatedDeliveryDate' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCost'
+            'elementName' => 'maxEstimatedDeliveryDate'
         ],
-        'shippingIntermediationFee' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'minEstimatedDeliveryDate' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingIntermediationFee'
+            'elementName' => 'minEstimatedDeliveryDate'
         ],
-        'discountAmount' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'shipByDate' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'discountAmount'
+            'elementName' => 'shipByDate'
         ]
     ];
 

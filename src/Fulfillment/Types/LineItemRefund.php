@@ -12,40 +12,33 @@ namespace DTS\eBaySDK\Fulfillment\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $importCharges
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingCost
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $shippingIntermediationFee
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $discountAmount
+ * @property \DTS\eBaySDK\Fulfillment\Types\Amount $amount
+ * @property string $refundDate
+ * @property string $refundReferenceId
  */
-class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
+class LineItemRefund extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'importCharges' => [
+        'amount' => [
             'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'importCharges'
+            'elementName' => 'amount'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'refundDate' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCost'
+            'elementName' => 'refundDate'
         ],
-        'shippingIntermediationFee' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+        'refundReferenceId' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingIntermediationFee'
-        ],
-        'discountAmount' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'discountAmount'
+            'elementName' => 'refundReferenceId'
         ]
     ];
 

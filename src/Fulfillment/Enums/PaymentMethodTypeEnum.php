@@ -12,6 +12,12 @@ namespace DTS\eBaySDK\Fulfillment\Enums;
 
 class PaymentMethodTypeEnum
 {
+    const C_BANK_TRANSFER = 'BANK_TRANSFER';
+    const C_CASH = 'CASH';
     const C_CREDIT_CARD = 'CREDIT_CARD';
+    const C_OFFICIAL_CHECK = 'OFFICIAL_CHECK';
+    const C_OTHER = 'OTHER';
+    const C_PAISAPAY = 'PAISAPAY';
     const C_PAYPAL = 'PAYPAL';
+    const C_PERSONAL_CHECK = 'PERSONAL_CHECK';
 }
