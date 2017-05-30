@@ -10,43 +10,56 @@
 
 namespace DTS\eBaySDK\Marketing\Types;
 
-use DTS\eBaySDK\StatusCodeTrait;
-use DTS\eBaySDK\HttpHeadersTrait;
-
 /**
  *
+ * @property \DTS\eBaySDK\Marketing\Types\AdReference[] $ads
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
+ * @property string $inventoryReferenceId
+ * @property \DTS\eBaySDK\Marketing\Enums\InventoryReferenceTypeEnum $inventoryReferenceType
+ * @property integer $statusCode
  */
-class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByInventoryReferenceResponse
+class CreateAdsByInventoryReferenceResponse extends \DTS\eBaySDK\Types\BaseType
 {
-    use StatusCodeTrait;
-    use HttpHeadersTrait;
-
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'ads' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\AdReference',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'ads'
+        ],
         'errors' => [
             'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'errors'
         ],
-        'warnings' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
-            'repeatable' => true,
+        'inventoryReferenceId' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'warnings'
+            'elementName' => 'inventoryReferenceId'
+        ],
+        'inventoryReferenceType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'inventoryReferenceType'
+        ],
+        'statusCode' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'statusCode'
         ]
     ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
-     * @param int $statusCode Status code
-     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -57,9 +70,5 @@ class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketi
         }
 
         $this->setValues(__CLASS__, $childValues);
-
-        $this->statusCode = (int)$statusCode;
-
-        $this->setHeaders($headers);
     }
 }

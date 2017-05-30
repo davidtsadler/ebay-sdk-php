@@ -10,43 +10,35 @@
 
 namespace DTS\eBaySDK\Marketing\Types;
 
-use DTS\eBaySDK\StatusCodeTrait;
-use DTS\eBaySDK\HttpHeadersTrait;
-
 /**
  *
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
+ * @property string[] $annotationKeys
+ * @property string $dimensionKey
  */
-class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByInventoryReferenceResponse
+class Dimension extends \DTS\eBaySDK\Types\BaseType
 {
-    use StatusCodeTrait;
-    use HttpHeadersTrait;
-
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'errors' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
+        'annotationKeys' => [
+            'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'errors'
+            'elementName' => 'annotationKeys'
         ],
-        'warnings' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
-            'repeatable' => true,
+        'dimensionKey' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'warnings'
+            'elementName' => 'dimensionKey'
         ]
     ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
-     * @param int $statusCode Status code
-     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -57,9 +49,5 @@ class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketi
         }
 
         $this->setValues(__CLASS__, $childValues);
-
-        $this->statusCode = (int)$statusCode;
-
-        $this->setHeaders($headers);
     }
 }

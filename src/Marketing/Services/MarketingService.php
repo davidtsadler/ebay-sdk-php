@@ -457,6 +457,80 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
                     'required' => true
                 ]
             ]
+        ],
+        'GetSpecificReport' => [
+            'method' => 'GET',
+            'resource' => 'ad_report/{report_id}',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetSpecificReportRestResponse',
+            'params' => [
+                'report_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
+        ],
+        'GetMetadataForAllReports' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_metadata',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestResponse',
+            'params' => [
+            ]
+        ],
+        'GetMetadataForAReportType' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_metadata/{report_type}',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestResponse',
+            'params' => [
+                'report_type' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
+        ],
+        'CreateReportTask' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_task',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\CreateReportTasktRestResponse',
+            'params' => [
+            ]
+        ],
+        'DeleteSpecificReportTask' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_task/{report_task_id}',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestResponse',
+            'params' => [
+                'report_task_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
+        ],
+        'GetReportTasks' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_task',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetReportTasksRestResponse',
+            'params' => [
+                'limit' => [
+                    'valid' => ['string']
+                ],
+                'offset' => [
+                    'valid' => ['string']
+                ],
+                'report_task_statuses' => [
+                    'valid' => ['string']
+                ]
+            ]
+        ],
+        'GetSpecificReportTask' => [
+            'method' => 'GET',
+            'resource' => 'ad_report_task/{report_task_id}',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestResponse',
+            'params' => [
+                'report_task_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
         ]
     ];
 
@@ -1078,5 +1152,131 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
     public function getPromotionSummaryReportAsync(\DTS\eBaySDK\Marketing\Types\GetPromotionSummaryReportRestRequest $request)
     {
         return $this->callOperationAsync('GetPromotionSummaryReport', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetSpecificReportRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetSpecificReportRestResponse
+     */
+    public function getSpecificReport(\DTS\eBaySDK\Marketing\Types\GetSpecificReportRestRequest $request)
+    {
+        return $this->getSpecificReportAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetSpecificReportRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSpecificReportAsync(\DTS\eBaySDK\Marketing\Types\GetSpecificReportRestRequest $request)
+    {
+        return $this->callOperationAsync('GetSpecificReport', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestResponse
+     */
+    public function getMetadataForAllReports(\DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestRequest $request)
+    {
+        return $this->getMetadataForAllReportsAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getMetadataForAllReportsAsync(\DTS\eBaySDK\Marketing\Types\GetMetadataForAllReportsRestRequest $request)
+    {
+        return $this->callOperationAsync('GetMetadataForAllReports', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestResponse
+     */
+    public function getMetadataForAReportType(\DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestRequest $request)
+    {
+        return $this->getMetadataForAReportTypeAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getMetadataForAReportTypeAsync(\DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestRequest $request)
+    {
+        return $this->callOperationAsync('GetMetadataForAReportType', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\CreateReportTasktRestResponse
+     */
+    public function createReportTask(\DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request)
+    {
+        return $this->createReportTaskAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createReportTaskAsync(\DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request)
+    {
+        return $this->callOperationAsync('CreateReportTask', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestResponse
+     */
+    public function deleteSpecificReportTask(\DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestRequest $request)
+    {
+        return $this->deleteSpecificReportTaskAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteSpecificReportTaskAsync(\DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestRequest $request)
+    {
+        return $this->callOperationAsync('DeleteSpecificReportTask', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetReportTasksRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetReportTasksRestResponse
+     */
+    public function getReportTasks(\DTS\eBaySDK\Marketing\Types\GetReportTasksRestRequest $request)
+    {
+        return $this->getReportTasksAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetReportTasksRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getReportTasksAsync(\DTS\eBaySDK\Marketing\Types\GetReportTasksRestRequest $request)
+    {
+        return $this->callOperationAsync('GetReportTasks', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestResponse
+     */
+    public function getSpecificReportTask(\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestRequest $request)
+    {
+        return $this->getSpecificReportTaskAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSpecificReportTaskAsync(\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestRequest $request)
+    {
+        return $this->callOperationAsync('GetSpecificReportTask', $request);
     }
 }
