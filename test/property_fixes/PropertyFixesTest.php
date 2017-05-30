@@ -64,4 +64,26 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->shippingServiceCode = 'foo';
         $this->assertInternalType('string', $obj->shippingServiceCode);
     }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/devzone/rest/api-ref/fulfillment/types/PricingSummary.html
+     * Issue discussed at https://groups.google.com/forum/?hl=en-GB#!topic/ebay-sdk-php/Pz1s0K5V9ZE
+     * Replace priceDiscountSubtotal with priceDiscount.
+     */
+    public function testPriceDiscount()
+    {
+        $obj = new Sdk\Fulfillment\Types\PricingSummary();
+
+        $obj->priceDiscount = new Sdk\Fulfillment\Types\Amount();
+        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\Amount', $obj->priceDiscount);
+    }
+
+    public function testPriceDiscountSubtotalDoesNotExist()
+    {
+        $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property');
+
+        $obj = new Sdk\Fulfillment\Types\PricingSummary();
+
+        $obj->priceDiscountSubtotal = new Sdk\Fulfillment\Types\Amount();
+    }
 }
