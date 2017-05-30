@@ -19,12 +19,14 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  * @property string $legacyItemId
  * @property string $legacyVariationId
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $lineItemCost
+ * @property \DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions $lineItemFulfillmentInstructions
  * @property \DTS\eBaySDK\Fulfillment\Enums\LineItemFulfillmentStatusEnum $lineItemFulfillmentStatus
  * @property string $lineItemId
  * @property \DTS\eBaySDK\Fulfillment\Enums\MarketplaceIdEnum $listingMarketplaceId
  * @property \DTS\eBaySDK\Fulfillment\Types\LineItemProperties $properties
  * @property \DTS\eBaySDK\Fulfillment\Enums\MarketplaceIdEnum $purchaseMarketplaceId
  * @property integer $quantity
+ * @property \DTS\eBaySDK\Fulfillment\Types\LineItemRefund[] $refunds
  * @property string $sku
  * @property \DTS\eBaySDK\Fulfillment\Enums\SoldFormatEnum $soldFormat
  * @property \DTS\eBaySDK\Fulfillment\Types\Tax[] $taxes
@@ -79,6 +81,12 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'lineItemCost'
         ],
+        'lineItemFulfillmentInstructions' => [
+            'type' => 'DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'lineItemFulfillmentInstructions'
+        ],
         'lineItemFulfillmentStatus' => [
             'type' => 'string',
             'repeatable' => false,
@@ -114,6 +122,12 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'quantity'
+        ],
+        'refunds' => [
+            'type' => 'DTS\eBaySDK\Fulfillment\Types\LineItemRefund',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'refunds'
         ],
         'sku' => [
             'type' => 'string',

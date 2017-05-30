@@ -52,4 +52,16 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->discountAmount = new Sdk\Fulfillment\Types\Amount();
         $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\Amount', $obj->discountAmount);
     }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/devzone/rest/api-ref/fulfillment/types/ShippingFulfillment.html
+     * Example of correct property names returned in the API https://developer.ebay.com/devzone/rest/api-ref/fulfillment/order-orderid_shipping_fulfillment__get.html#Samples
+     */
+    public function testShippingServiceCode()
+    {
+        $obj = new Sdk\Fulfillment\Types\ShippingFulfillment();
+
+        $obj->shippingServiceCode = 'foo';
+        $this->assertInternalType('string', $obj->shippingServiceCode);
+    }
 }

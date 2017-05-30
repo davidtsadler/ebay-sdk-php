@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Unreleased
+
+### Fixes
+
+* Added missing shippingServiceCode property to Fulfillment\Types\ShippingFulfillment.
+* Added missing paymentMode property to Fulfillment\Types\Payment.
+* Added missing lineItemFulfillmentInstructions property to Fulfillment\Types\LineItem.
+* Added missing refunds property to Fulfillment\Types\LineItem.
+* Added missing enums to Fulfillment\Enums\OrderPaymentStatusEnum.
+* Added missing enums to Fulfillment\Enums\PaymentMethodTypeEnum.
+
 ## 12.0.0 - 2017-05-23
 
 ### Fixes
