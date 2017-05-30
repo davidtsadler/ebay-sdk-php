@@ -18,7 +18,7 @@ use DTS\eBaySDK\HttpHeadersTrait;
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
  */
-class BulkCreateAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Types\BaseType
+class BulkCreateAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceResponse
 {
     use StatusCodeTrait;
     use HttpHeadersTrait;

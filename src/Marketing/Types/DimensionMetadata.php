@@ -10,43 +10,42 @@
 
 namespace DTS\eBaySDK\Marketing\Types;
 
-use DTS\eBaySDK\StatusCodeTrait;
-use DTS\eBaySDK\HttpHeadersTrait;
-
 /**
  *
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
+ * @property \DTS\eBaySDK\Marketing\Enums\DataTypeEnum $dataType
+ * @property string $dimensionKey
+ * @property \DTS\eBaySDK\Marketing\Types\DimensionKeyAnnotation[] $dimensionKeyAnnotations
  */
-class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByInventoryReferenceResponse
+class DimensionMetadata extends \DTS\eBaySDK\Types\BaseType
 {
-    use StatusCodeTrait;
-    use HttpHeadersTrait;
-
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'errors' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
-            'repeatable' => true,
+        'dataType' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'errors'
+            'elementName' => 'dataType'
         ],
-        'warnings' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
+        'dimensionKey' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'dimensionKey'
+        ],
+        'dimensionKeyAnnotations' => [
+            'type' => 'DTS\eBaySDK\Marketing\Types\DimensionKeyAnnotation',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'warnings'
+            'elementName' => 'dimensionKeyAnnotations'
         ]
     ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
-     * @param int $statusCode Status code
-     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -57,9 +56,5 @@ class BulkDeleteAdsByInventoryReferenceRestResponse extends \DTS\eBaySDK\Marketi
         }
 
         $this->setValues(__CLASS__, $childValues);
-
-        $this->statusCode = (int)$statusCode;
-
-        $this->setHeaders($headers);
     }
 }

@@ -26,8 +26,8 @@ class BulkDeleteAdsByInventoryReferenceRestResponseTest extends \PHPUnit_Framewo
         $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByInventoryReferenceRestResponse', $this->obj);
     }
 
-    public function testExtendsBaseType()
+    public function testExtendsBulkDeleteAdsByInventoryReferenceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByInventoryReferenceResponse', $this->obj);
     }
 }

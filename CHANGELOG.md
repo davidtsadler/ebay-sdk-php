@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Breaking changes
+
+* Support Marketing API version 1.2.0.
+
 ### Fixes
 
 * Added missing shippingServiceCode property to Fulfillment\Types\ShippingFulfillment.
