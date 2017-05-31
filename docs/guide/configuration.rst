@@ -77,7 +77,7 @@ authorization
 ~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Trading``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Trading``, ``Taxonomy``
 :Required: true, except for the Trading service.
 
 All eBay RESTful services use OAuth 2.0 access tokens for application authentication and user authorization. The token passed via ``authorization`` can be either an User or Application token. You must ensure that the token has the require scope for the operation that you are calling.
@@ -402,7 +402,7 @@ marketplaceId
 ~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 The string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value ``EBAY-UK`` to specify the eBay UK site.
 
@@ -428,7 +428,7 @@ requestLanguage
 ~~~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 This configuration option will set the ``Content-Language`` HTTP header for the request.
 
@@ -436,7 +436,7 @@ responseLanguage
 ~~~~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 This configuration option will set the ``Accept-Language`` HTTP header for the request.
 

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## Features
+
+* Support Taxonomy API version v1_beta.0.0
+
 ### Breaking changes
 
 * Support Marketing API version 1.2.0.
