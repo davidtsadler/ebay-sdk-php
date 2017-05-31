@@ -145,6 +145,10 @@ sync_order:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Order/src/Order/ src/Order/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Order/test/Order/ test/Order/
 
+sync_taxonomy:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Taxonomy/src/Taxonomy/ src/Taxonomy/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Taxonomy/test/Taxonomy/ test/Taxonomy/
+
 sync_post:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/PostOrder/src/PostOrder/ src/PostOrder/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/PostOrder/test/PostOrder/ test/PostOrder/
