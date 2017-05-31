@@ -23,7 +23,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\InsuranceSelectedCodeType $InsuranceType
  * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
- * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
  * @property string $BuyerID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
@@ -105,12 +104,6 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
-        ],
-        'ShippingAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingAddress'
         ],
         'BuyerID' => [
             'type' => 'string',

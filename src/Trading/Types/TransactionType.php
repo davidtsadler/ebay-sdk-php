@@ -51,6 +51,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyerGuaranteePrice
  * @property \DTS\eBaySDK\Trading\Types\VariationType $Variation
  * @property string $BuyerCheckoutMessage
+ * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalTransactionPrice
  * @property \DTS\eBaySDK\Trading\Types\TaxesType $Taxes
  * @property boolean $BundlePurchase
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ActualShippingCost
@@ -318,6 +319,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerCheckoutMessage'
+        ],
+        'TotalTransactionPrice' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'TotalTransactionPrice'
         ],
         'Taxes' => [
             'type' => 'DTS\eBaySDK\Trading\Types\TaxesType',
