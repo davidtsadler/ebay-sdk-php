@@ -12,40 +12,33 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property string $legacy_item_id
+ * @property string $legacy_variation_id
+ * @property string $legacy_variation_sku
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class GetItemByLegacyIdRestRequest extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'legacy_item_id' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'legacy_item_id'
         ],
-        'minEstimatedDeliveryDate' => [
+        'legacy_variation_id' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
+            'elementName' => 'legacy_variation_id'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCost'
-        ],
-        'shippingCostType' => [
+        'legacy_variation_sku' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'legacy_variation_sku'
         ]
     ];
 

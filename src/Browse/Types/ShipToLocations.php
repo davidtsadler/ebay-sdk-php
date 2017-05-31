@@ -12,33 +12,26 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $name
- * @property \DTS\eBaySDK\Browse\Enums\ValueTypeEnum $type
- * @property string $value
+ * @property \DTS\eBaySDK\Browse\Types\Region[] $regionExcluded
+ * @property \DTS\eBaySDK\Browse\Types\Region[] $regionIncluded
  */
-class TypedNameValue extends \DTS\eBaySDK\Types\BaseType
+class ShipToLocations extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'name' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'regionExcluded' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Region',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'name'
+            'elementName' => 'regionExcluded'
         ],
-        'type' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'regionIncluded' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Region',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'type'
-        ],
-        'value' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'value'
+            'elementName' => 'regionIncluded'
         ]
     ];
 

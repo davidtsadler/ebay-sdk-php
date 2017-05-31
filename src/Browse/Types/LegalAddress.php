@@ -12,75 +12,68 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $href
- * @property \DTS\eBaySDK\Browse\Types\ItemSummary[] $itemSummaries
- * @property integer $limit
- * @property string $next
- * @property integer $offset
- * @property string $prev
- * @property \DTS\eBaySDK\Browse\Types\Refinement $refinement
- * @property integer $total
- * @property \DTS\eBaySDK\Browse\Types\ErrorDetailV3[] $warnings
+ * @property string $addressLine1
+ * @property string $addressLine2
+ * @property string $city
+ * @property \DTS\eBaySDK\Browse\Enums\CountryCodeEnum $country
+ * @property string $countryName
+ * @property string $county
+ * @property string $postalCode
+ * @property string $stateOrProvince
  */
-class SearchPagedCollection extends \DTS\eBaySDK\Types\BaseType
+class LegalAddress extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'href' => [
+        'addressLine1' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'href'
+            'elementName' => 'addressLine1'
         ],
-        'itemSummaries' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ItemSummary',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'itemSummaries'
-        ],
-        'limit' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'limit'
-        ],
-        'next' => [
+        'addressLine2' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'next'
+            'elementName' => 'addressLine2'
         ],
-        'offset' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'offset'
-        ],
-        'prev' => [
+        'city' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'prev'
+            'elementName' => 'city'
         ],
-        'refinement' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Refinement',
+        'country' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'refinement'
+            'elementName' => 'country'
         ],
-        'total' => [
-            'type' => 'integer',
+        'countryName' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'total'
+            'elementName' => 'countryName'
         ],
-        'warnings' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ErrorDetailV3',
-            'repeatable' => true,
+        'county' => [
+            'type' => 'string',
+            'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'warnings'
+            'elementName' => 'county'
+        ],
+        'postalCode' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'postalCode'
+        ],
+        'stateOrProvince' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'stateOrProvince'
         ]
     ];
 

@@ -12,33 +12,26 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $name
- * @property \DTS\eBaySDK\Browse\Enums\ValueTypeEnum $type
- * @property string $value
+ * @property \DTS\eBaySDK\Browse\Types\CommonDescriptions[] $commonDescriptions
+ * @property \DTS\eBaySDK\Browse\Types\Item[] $items
  */
-class TypedNameValue extends \DTS\eBaySDK\Types\BaseType
+class Items extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'name' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'commonDescriptions' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\CommonDescriptions',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'name'
+            'elementName' => 'commonDescriptions'
         ],
-        'type' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'items' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Item',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'type'
-        ],
-        'value' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'value'
+            'elementName' => 'items'
         ]
     ];
 

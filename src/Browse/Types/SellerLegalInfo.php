@@ -12,75 +12,89 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $aspect_filter
- * @property string $category_ids
- * @property string $epid
- * @property string $fieldgroups
- * @property string $filter
- * @property string $limit
- * @property string $offset
- * @property string $q
- * @property string $sort
+ * @property string $email
+ * @property string $fax
+ * @property string $imprint
+ * @property string $legalContactFirstName
+ * @property string $legalContactLastName
+ * @property string $name
+ * @property string $phone
+ * @property string $registrationNumber
+ * @property \DTS\eBaySDK\Browse\Types\LegalAddress $sellerProvidedLegalAddress
+ * @property string $termsOfService
+ * @property \DTS\eBaySDK\Browse\Types\VatDetail[] $vatDetails
  */
-class SearchForItemsRestRequest extends \DTS\eBaySDK\Types\BaseType
+class SellerLegalInfo extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'aspect_filter' => [
+        'email' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'aspect_filter'
+            'elementName' => 'email'
         ],
-        'category_ids' => [
+        'fax' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'category_ids'
+            'elementName' => 'fax'
         ],
-        'epid' => [
+        'imprint' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'epid'
+            'elementName' => 'imprint'
         ],
-        'fieldgroups' => [
+        'legalContactFirstName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'fieldgroups'
+            'elementName' => 'legalContactFirstName'
         ],
-        'filter' => [
+        'legalContactLastName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'filter'
+            'elementName' => 'legalContactLastName'
         ],
-        'limit' => [
+        'name' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'limit'
+            'elementName' => 'name'
         ],
-        'offset' => [
+        'phone' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'offset'
+            'elementName' => 'phone'
         ],
-        'q' => [
+        'registrationNumber' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'q'
+            'elementName' => 'registrationNumber'
         ],
-        'sort' => [
+        'sellerProvidedLegalAddress' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\LegalAddress',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'sellerProvidedLegalAddress'
+        ],
+        'termsOfService' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'sort'
+            'elementName' => 'termsOfService'
+        ],
+        'vatDetails' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\VatDetail',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'vatDetails'
         ]
     ];
 

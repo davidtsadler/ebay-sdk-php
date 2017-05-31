@@ -12,40 +12,26 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property \DTS\eBaySDK\Browse\Types\AspectValueDistribution[] $aspectValueDistributions
+ * @property string $localizedAspectName
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class AspectDistribution extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'aspectValueDistributions' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\AspectValueDistribution',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'aspectValueDistributions'
+        ],
+        'localizedAspectName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
-        ],
-        'minEstimatedDeliveryDate' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
-        ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCost'
-        ],
-        'shippingCostType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'localizedAspectName'
         ]
     ];
 

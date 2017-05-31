@@ -8,6 +8,7 @@
 * Support Order API version v1_beta.6.0
 * Support Trading API version 1007.
 * Support Shopping API version 1007.
+* Support Browse API version v1_beta.6.0
 
 ### Fixes
 

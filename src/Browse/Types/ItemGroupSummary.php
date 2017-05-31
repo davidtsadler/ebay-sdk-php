@@ -12,40 +12,54 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property \DTS\eBaySDK\Browse\Types\Image[] $itemGroupAdditionalImages
+ * @property string $itemGroupHref
+ * @property string $itemGroupId
+ * @property \DTS\eBaySDK\Browse\Types\Image $itemGroupImage
+ * @property string $itemGroupTitle
+ * @property \DTS\eBaySDK\Browse\Enums\ItemGroupTypeEnum $itemGroupType
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class ItemGroupSummary extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'itemGroupAdditionalImages' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'itemGroupAdditionalImages'
+        ],
+        'itemGroupHref' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'itemGroupHref'
         ],
-        'minEstimatedDeliveryDate' => [
+        'itemGroupId' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
+            'elementName' => 'itemGroupId'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+        'itemGroupImage' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Image',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCost'
+            'elementName' => 'itemGroupImage'
         ],
-        'shippingCostType' => [
+        'itemGroupTitle' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'itemGroupTitle'
+        ],
+        'itemGroupType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemGroupType'
         ]
     ];
 
