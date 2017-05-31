@@ -15,7 +15,6 @@ namespace DTS\eBaySDK\Shopping\Types;
  * @property integer $ApproximatePages
  * @property boolean $MoreResults
  * @property \DTS\eBaySDK\Shopping\Types\DomainHistogramType $DomainHistogram
- * @property \DTS\eBaySDK\Shopping\Types\SimpleItemArrayType $ItemArray
  * @property integer $PageNumber
  * @property \DTS\eBaySDK\Shopping\Types\CatalogProductType[] $Product
  * @property integer $TotalProducts
@@ -44,12 +43,6 @@ class FindProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractRespo
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DomainHistogram'
-        ],
-        'ItemArray' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleItemArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemArray'
         ],
         'PageNumber' => [
             'type' => 'integer',
