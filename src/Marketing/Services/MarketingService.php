@@ -488,14 +488,14 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
             ]
         ],
         'CreateReportTask' => [
-            'method' => 'GET',
+            'method' => 'POST',
             'resource' => 'ad_report_task',
             'responseClass' => '\DTS\eBaySDK\Marketing\Types\CreateReportTasktRestResponse',
             'params' => [
             ]
         ],
         'DeleteSpecificReportTask' => [
-            'method' => 'GET',
+            'method' => 'DELETE',
             'resource' => 'ad_report_task/{report_task_id}',
             'responseClass' => '\DTS\eBaySDK\Marketing\Types\DeleteSpecificReportTaskRestResponse',
             'params' => [
