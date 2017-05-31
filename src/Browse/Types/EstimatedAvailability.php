@@ -12,40 +12,54 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property integer $availabilityThreshold
+ * @property \DTS\eBaySDK\Browse\Enums\AvailabilityThresholdEnum $availabilityThresholdType
+ * @property \DTS\eBaySDK\Browse\Enums\DeliveryOptionsEnum[] $deliveryOptions
+ * @property \DTS\eBaySDK\Browse\Enums\AvailabilityStatusEnum $estimatedAvailabilityStatus
+ * @property integer $estimatedAvailableQuantity
+ * @property integer $estimatedSoldQuantity
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class EstimatedAvailability extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'availabilityThreshold' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'availabilityThreshold'
+        ],
+        'availabilityThresholdType' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'availabilityThresholdType'
         ],
-        'minEstimatedDeliveryDate' => [
+        'deliveryOptions' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'deliveryOptions'
+        ],
+        'estimatedAvailabilityStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
+            'elementName' => 'estimatedAvailabilityStatus'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+        'estimatedAvailableQuantity' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCost'
+            'elementName' => 'estimatedAvailableQuantity'
         ],
-        'shippingCostType' => [
-            'type' => 'string',
+        'estimatedSoldQuantity' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'estimatedSoldQuantity'
         ]
     ];
 

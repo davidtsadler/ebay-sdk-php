@@ -12,34 +12,13 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $name
- * @property \DTS\eBaySDK\Browse\Enums\ValueTypeEnum $type
- * @property string $value
  */
-class TypedNameValue extends \DTS\eBaySDK\Types\BaseType
+class TaxType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'name' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'name'
-        ],
-        'type' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'type'
-        ],
-        'value' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'value'
-        ]
     ];
 
     /**

@@ -12,40 +12,40 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property string $condition
+ * @property string $conditionId
+ * @property integer $matchCount
+ * @property string $refinementHref
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class ConditionDistribution extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'condition' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'condition'
         ],
-        'minEstimatedDeliveryDate' => [
+        'conditionId' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
+            'elementName' => 'conditionId'
         ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+        'matchCount' => [
+            'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCost'
+            'elementName' => 'matchCount'
         ],
-        'shippingCostType' => [
+        'refinementHref' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'refinementHref'
         ]
     ];
 

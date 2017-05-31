@@ -10,42 +10,43 @@
 
 namespace DTS\eBaySDK\Browse\Types;
 
+use DTS\eBaySDK\StatusCodeTrait;
+use DTS\eBaySDK\HttpHeadersTrait;
+
 /**
  *
- * @property string $name
- * @property \DTS\eBaySDK\Browse\Enums\ValueTypeEnum $type
- * @property string $value
+ * @property \DTS\eBaySDK\Browse\Types\ErrorDetailV3[] $errors
+ * @property \DTS\eBaySDK\Browse\Types\ErrorDetailV3[] $warnings
  */
-class TypedNameValue extends \DTS\eBaySDK\Types\BaseType
+class GetItemsByItemGroupRestResponse extends \DTS\eBaySDK\Browse\Types\Items
 {
+    use StatusCodeTrait;
+    use HttpHeadersTrait;
+
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'name' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'errors' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\ErrorDetailV3',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'name'
+            'elementName' => 'errors'
         ],
-        'type' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'warnings' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\ErrorDetailV3',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'type'
-        ],
-        'value' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'value'
+            'elementName' => 'warnings'
         ]
     ];
 
     /**
      * @param array $values Optional properties and values to assign to the object.
+     * @param int $statusCode Status code
+     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [])
+    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -56,5 +57,9 @@ class TypedNameValue extends \DTS\eBaySDK\Types\BaseType
         }
 
         $this->setValues(__CLASS__, $childValues);
+
+        $this->statusCode = (int)$statusCode;
+
+        $this->setHeaders($headers);
     }
 }

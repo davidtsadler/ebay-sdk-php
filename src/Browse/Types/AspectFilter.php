@@ -12,40 +12,26 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property string $categoryId
+ * @property \DTS\eBaySDK\Browse\Types\FilterField[] $filters
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class AspectFilter extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'categoryId' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'categoryId'
         ],
-        'minEstimatedDeliveryDate' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'filters' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\FilterField',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
-        ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCost'
-        ],
-        'shippingCostType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'filters'
         ]
     ];
 

@@ -12,40 +12,47 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property string $maxEstimatedDeliveryDate
- * @property string $minEstimatedDeliveryDate
- * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
- * @property string $shippingCostType
+ * @property boolean $includedInPrice
+ * @property boolean $shippingAndHandlingTaxed
+ * @property \DTS\eBaySDK\Browse\Types\TaxJurisdiction $taxJurisdiction
+ * @property string $taxPercentage
+ * @property \DTS\eBaySDK\Browse\Types\TaxType $taxType
  */
-class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
+class Taxes extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'maxEstimatedDeliveryDate' => [
+        'includedInPrice' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'includedInPrice'
+        ],
+        'shippingAndHandlingTaxed' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'shippingAndHandlingTaxed'
+        ],
+        'taxJurisdiction' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\TaxJurisdiction',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'taxJurisdiction'
+        ],
+        'taxPercentage' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'maxEstimatedDeliveryDate'
+            'elementName' => 'taxPercentage'
         ],
-        'minEstimatedDeliveryDate' => [
-            'type' => 'string',
+        'taxType' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\TaxType',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'minEstimatedDeliveryDate'
-        ],
-        'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCost'
-        ],
-        'shippingCostType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'shippingCostType'
+            'elementName' => 'taxType'
         ]
     ];
 

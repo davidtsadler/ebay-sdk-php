@@ -15,6 +15,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $feedbackPercentage
  * @property integer $feedbackScore
  * @property string $sellerAccountType
+ * @property \DTS\eBaySDK\Browse\Types\SellerLegalInfo $sellerLegalInfo
  * @property string $username
  */
 class Seller extends \DTS\eBaySDK\Types\BaseType
@@ -40,6 +41,12 @@ class Seller extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerAccountType'
+        ],
+        'sellerLegalInfo' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\SellerLegalInfo',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'sellerLegalInfo'
         ],
         'username' => [
             'type' => 'string',
