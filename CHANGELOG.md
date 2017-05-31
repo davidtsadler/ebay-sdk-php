@@ -5,6 +5,7 @@
 ### Breaking changes
 
 * Support Marketing API version 1.2.0.
+* Support Order API version v1_beta.6.0
 
 ### Fixes
 
