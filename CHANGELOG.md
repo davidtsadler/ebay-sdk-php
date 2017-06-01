@@ -24,6 +24,7 @@
 * Added missing enums to Fulfillment\Enums\PaymentMethodTypeEnum.
 * Added missing priceDiscount property to Fulfillment\Types\Pricingsummary.
 * Added missing enums to PostOrder\Enums\CancelReasonEnum.
+* Added missing properties to PostOrder\Types\Error.
 
 ## 12.0.0 - 2017-05-23
 

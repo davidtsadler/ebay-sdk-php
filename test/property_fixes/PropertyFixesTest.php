@@ -37,12 +37,28 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $obj->transactionId);
     }
 
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/ErrorResponse.html#ErrorResponse
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/105
+     */
     public function testError()
     {
         $obj = new Sdk\PostOrder\Types\Error();
 
         $obj->subdomain = '123';
         $this->assertInternalType('string', $obj->subdomain);
+
+        $obj->errorName = '123';
+        $this->assertInternalType('string', $obj->errorName);
+
+        $obj->resolution = '123';
+        $this->assertInternalType('string', $obj->resolution);
+
+        $obj->organization = '123';
+        $this->assertInternalType('string', $obj->organization);
+
+        $obj->errorGroups = '123';
+        $this->assertInternalType('string', $obj->errorGroups);
     }
 
     public function testDeliveryCost()
