@@ -21,6 +21,10 @@ namespace DTS\eBaySDK\PostOrder\Types;
  * @property \DTS\eBaySDK\PostOrder\Types\ErrorParameter[] $parameter
  * @property string $longMessage
  * @property integer $httpStatusCode
+ * @property string $errorName
+ * @property string $resolution
+ * @property string $organization
+ * @property string $errorGroups
  */
 class Error extends \DTS\eBaySDK\Types\BaseType
 {
@@ -81,6 +85,30 @@ class Error extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'httpStatusCode'
+        ],
+        'errorName' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'errorName'
+        ],
+        'resolution' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'resolution'
+        ],
+        'organization' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'organization'
+        ],
+        'errorGroups' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'errorGroups'
         ]
     ];
 
