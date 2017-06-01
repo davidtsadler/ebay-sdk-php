@@ -12,6 +12,12 @@ class RestServiceTest extends \PHPUnit_Framework_TestCase
     {
         $d = BaseRestService::getConfigDefinitions();
 
+        $this->assertArrayHasKey('compressResponse', $d);
+        $this->assertEquals([
+            'valid'   => ['bool'],
+            'default' => false
+        ], $d['compressResponse']);
+
         $this->assertArrayHasKey('debug', $d);
         $this->assertEquals([
             'valid'   => ['bool', 'array'],
@@ -155,12 +161,14 @@ class RestServiceTest extends \PHPUnit_Framework_TestCase
         $h = new HttpRestHandler();
         $s = new RestService([
             'sandbox' => true,
+            'compressResponse' => true,
             'httpHandler' => $h,
             'httpOptions' => []
         ]);
 
         $this->assertEquals([
             'apiVersion' => 'v1',
+            'compressResponse' => true,
             'sandbox' => true,
             'debug' => false,
             'httpHandler' => $h,
@@ -169,10 +177,12 @@ class RestServiceTest extends \PHPUnit_Framework_TestCase
 
         $s->setConfig([
             'sandbox' => false,
+            'compressResponse' => false,
         ]);
 
         $this->assertEquals([
             'apiVersion' => 'v1',
+            'compressResponse' => false,
             'sandbox' => false,
             'debug' => false,
             'httpHandler' => $h,
@@ -191,5 +201,16 @@ class RestServiceTest extends \PHPUnit_Framework_TestCase
         ]);
 
         $s->setConfig(['sandbox' => -1]);
+    }
+
+    public function testAcceptEncodingHttpHeadersIsCreated()
+    {
+        $h = new HttpRestHandler();
+        $s = new RestService(['httpHandler' => $h, 'compressResponse' => true]);
+        $r = new ComplexClass();
+        $s->foo($r);
+
+        $this->assertArrayHasKey('Accept-Encoding', $h->headers);
+        $this->assertEquals('application/gzip', $h->headers['Accept-Encoding']);
     }
 }

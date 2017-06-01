@@ -5,6 +5,7 @@
 ## Features
 
 * Support Taxonomy API version v1_beta.0.0
+* Added compressResponse configuration option
 
 ### Breaking changes
 

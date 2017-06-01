@@ -114,6 +114,13 @@ The Trading service is different to other services in that the  Auth'n'auth toke
     $request->RequesterCredentials = new Types\CustomSecurityHeaderType();
     $request->RequesterCredentials->eBayAuthToken = '<AUTH TOKEN>';
 
+compressResponse
+~~~~~~~~~~~~~~~~
+
+:Type: ``bool``
+
+Some API responses can return a very large payload. Pass ``true`` to submit all requests with the HTTP header ``Accept-Encoding: application/gzip``. Note that not all API operations will return a gzip response.
+
 credentials
 ~~~~~~~~~~~
 

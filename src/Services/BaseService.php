@@ -19,6 +19,11 @@ abstract class BaseService
     const CRLF = "\r\n";
 
     /**
+     * HTTP header constant. Tells the server the encoding in which the client desires the response.
+     */
+    const HDR_RESPONSE_ENCODING = 'Accept-Encoding';
+
+    /**
      * @var \DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
      */
     private $resolver;
@@ -65,6 +70,10 @@ abstract class BaseService
             'profile' => [
                 'valid' => ['string'],
                 'fn'    => 'DTS\eBaySDK\applyProfile',
+            ],
+            'compressResponse' => [
+                'valid'   => ['bool'],
+                'default' => false
             ],
             'credentials' => [
                 'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
@@ -255,6 +264,10 @@ abstract class BaseService
             $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"';
         } else {
             $headers['Content-Type'] = 'text/xml';
+        }
+
+        if ($this->getConfig('compressResponse')) {
+            $headers[self::HDR_RESPONSE_ENCODING] = 'application/gzip';
         }
 
         $headers['Content-Length'] = strlen($body);
