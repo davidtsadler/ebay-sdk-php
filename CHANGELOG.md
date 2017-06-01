@@ -4,16 +4,17 @@
 
 ## Features
 
-* Support Taxonomy API version v1_beta.0.0
-* Added compressResponse configuration option
+* Support Taxonomy API version v1_beta.0.0.
+* Added compressResponse configuration option.
+* Added affiliateCampaignId, affiliateReferenceId and contextualLocation configuration options.
 
 ### Breaking changes
 
 * Support Marketing API version 1.2.0.
-* Support Order API version v1_beta.6.0
+* Support Order API version v1_beta.6.0.
 * Support Trading API version 1007.
 * Support Shopping API version 1007.
-* Support Browse API version v1_beta.6.0
+* Support Browse API version v1_beta.6.0.
 
 ### Fixes
 
