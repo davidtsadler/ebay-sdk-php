@@ -17,6 +17,12 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     {
         $d = BaseService::getConfigDefinitions();
 
+        $this->assertArrayHasKey('compressResponse', $d);
+        $this->assertEquals([
+            'valid'   => ['bool'],
+            'default' => false
+        ], $d['compressResponse']);
+
         $this->assertArrayHasKey('credentials', $d);
         $this->assertEquals([
             'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
@@ -248,6 +254,7 @@ EOT;
         $h = new HttpHandler();
         $s = new Service([
             'sandbox' => true,
+            'compressResponse' => true,
             'credentials' => [
                 'appId' => '111',
                 'certId' => '222',
@@ -259,6 +266,7 @@ EOT;
 
         $this->assertEquals([
             'sandbox' => true,
+            'compressResponse' => true,
             'credentials' => new Credentials('111', '222', '333'),
             'debug' => false,
             'httpHandler' => $h,
@@ -267,6 +275,7 @@ EOT;
 
         $s->setConfig([
             'sandbox' => false,
+            'compressResponse' => false,
             'credentials' => function () {
                 return new Credentials('444', '555', '666');
             }
@@ -274,6 +283,7 @@ EOT;
 
         $this->assertEquals([
             'sandbox' => false,
+            'compressResponse' => false,
             'credentials' => new Credentials('444', '555', '666'),
             'debug' => false,
             'httpHandler' => $h,
@@ -297,5 +307,16 @@ EOT;
         ]);
 
         $s->setConfig(['sandbox' => -1]);
+    }
+
+    public function testAcceptEncodingHttpHeadersIsCreated()
+    {
+        $h = new HttpHandler();
+        $s = new Service(['httpHandler' => $h, 'compressResponse' => true]);
+        $r = new ComplexClass();
+        $s->foo($r);
+
+        $this->assertArrayHasKey('Accept-Encoding', $h->headers);
+        $this->assertEquals('application/gzip', $h->headers['Accept-Encoding']);
     }
 }
