@@ -24,6 +24,22 @@ Refer to the :doc:`basic usage guide </getting-started/basic-usage>` for informa
 
     Some configuration options are only applicable to certain services. Where this is the case the services will be noted in the documentation for the configuration option.
 
+affiliateCampaignId
+~~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
+affiliateReferenceId
+~~~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
 affiliateUserId
 ~~~~~~~~~~~~~~~
 
@@ -120,6 +136,22 @@ compressResponse
 :Type: ``bool``
 
 Some API responses can return a very large payload. Pass ``true`` to submit all requests with the HTTP header ``Accept-Encoding: application/gzip``. Note that not all API operations will return a gzip response.
+
+contextualLocation
+~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Required by some operations in the Browse service. Increases the accuracy of the estimated delivery window information and is needed for the calculated shipping information. When using this header, you must include the country code and you also include the zip code if zip codes are used in that country.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Browse\Services\BrowseService;
+
+    $service = new BrowseService([
+      'contextualLocation' => 'country=US,zip=19406'
+    ]);
 
 credentials
 ~~~~~~~~~~~
