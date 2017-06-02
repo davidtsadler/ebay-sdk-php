@@ -28,6 +28,8 @@
 * Added missing priceDiscount property to Fulfillment\Types\Pricingsummary.
 * Added missing enums to PostOrder\Enums\CancelReasonEnum.
 * Added missing properties to PostOrder\Types\Error.
+* Added missing properties to PostOrder\Types\CancelDetail.
+* Added missing properties to PostOrder\Types\CancelActivityHistory.
 
 ## 12.0.0 - 2017-05-23
 

@@ -102,4 +102,30 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
 
         $obj->priceDiscountSubtotal = new Sdk\Fulfillment\Types\Amount();
     }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelDetail.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/107
+     */
+    public function testCancelDetail()
+    {
+        $obj = new Sdk\PostOrder\Types\CancelDetail();
+
+        $this->assertEquals(null, $obj->cancelState);
+        $this->assertEquals(null, $obj->cancelStatus);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelActivityHistory.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/107
+     */
+    public function testCancelActivityHistory()
+    {
+        $obj = new Sdk\PostOrder\Types\CancelActivityHistory();
+
+        $this->assertEquals(null, $obj->cancelStateFrom);
+        $this->assertEquals(null, $obj->cancelStateTo);
+        /** Yes this is because there is a typo in the actual response from the API! */
+        $this->assertEquals(null, $obj->cancelStatetateTo);
+    }
 }
