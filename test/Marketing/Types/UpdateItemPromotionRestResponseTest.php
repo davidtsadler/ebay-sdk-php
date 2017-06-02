@@ -26,8 +26,8 @@ class UpdateItemPromotionRestResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateItemPromotionRestResponse', $this->obj);
     }
 
-    public function testExtendsBaseType()
+    public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BaseResponse', $this->obj);
     }
 }

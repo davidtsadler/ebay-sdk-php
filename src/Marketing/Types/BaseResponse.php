@@ -10,29 +10,16 @@
 
 namespace DTS\eBaySDK\Marketing\Types;
 
-use DTS\eBaySDK\StatusCodeTrait;
-use DTS\eBaySDK\HttpHeadersTrait;
-
 /**
  *
- * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
  */
-class CreateItemPromotionRestResponse extends \DTS\eBaySDK\Marketing\Types\BaseResponse
+class BaseResponse extends \DTS\eBaySDK\Types\BaseType
 {
-    use StatusCodeTrait;
-    use HttpHeadersTrait;
-
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'errors' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'errors'
-        ],
         'warnings' => [
             'type' => 'DTS\eBaySDK\Marketing\Types\ErrorDetailV3',
             'repeatable' => true,
@@ -43,10 +30,8 @@ class CreateItemPromotionRestResponse extends \DTS\eBaySDK\Marketing\Types\BaseR
 
     /**
      * @param array $values Optional properties and values to assign to the object.
-     * @param int $statusCode Status code
-     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
+    public function __construct(array $values = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -57,9 +42,5 @@ class CreateItemPromotionRestResponse extends \DTS\eBaySDK\Marketing\Types\BaseR
         }
 
         $this->setValues(__CLASS__, $childValues);
-
-        $this->statusCode = (int)$statusCode;
-
-        $this->setHeaders($headers);
     }
 }
