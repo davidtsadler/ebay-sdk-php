@@ -18,7 +18,7 @@ use DTS\eBaySDK\HttpHeadersTrait;
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $errors
  * @property \DTS\eBaySDK\Marketing\Types\ErrorDetailV3[] $warnings
  */
-class UpdateItemPromotionRestResponse extends \DTS\eBaySDK\Types\BaseType
+class UpdateItemPromotionRestResponse extends \DTS\eBaySDK\Marketing\Types\BaseResponse
 {
     use StatusCodeTrait;
     use HttpHeadersTrait;

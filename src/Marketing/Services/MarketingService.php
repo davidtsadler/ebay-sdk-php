@@ -531,6 +531,29 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
                     'required' => true
                 ]
             ]
+        ],
+        'GetAPromotionReport' => [
+            'method' => 'GET',
+            'resource' => 'promotion_report',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestResponse',
+            'params' => [
+                'limit' => [
+                    'valid' => ['string']
+                ],
+                'marketplace_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ],
+                'offset' => [
+                    'valid' => ['string']
+                ],
+                'promotion_status' => [
+                    'valid' => ['string']
+                ],
+                'q' => [
+                    'valid' => ['string']
+                ]
+            ]
         ]
     ];
 
@@ -1278,5 +1301,23 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
     public function getSpecificReportTaskAsync(\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestRequest $request)
     {
         return $this->callOperationAsync('GetSpecificReportTask', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestRequest $request
+     * @return \DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestResponse
+     */
+    public function getAPromotionReport(\DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestRequest $request)
+    {
+        return $this->getAPromotionReportAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAPromotionReportAsync(\DTS\eBaySDK\Marketing\Types\GetAPromotionReportRestRequest $request)
+    {
+        return $this->callOperationAsync('GetAPromotionReport', $request);
     }
 }
