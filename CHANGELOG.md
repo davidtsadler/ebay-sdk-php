@@ -4,6 +4,7 @@
 
 ## Features
 
+* Support Feed API version v1_beta.0.0
 * Support Taxonomy API version v1_beta.0.0.
 * Added compressResponse configuration option.
 * Added affiliateCampaignId, affiliateReferenceId and contextualLocation configuration options.
