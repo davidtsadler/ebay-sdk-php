@@ -77,6 +77,9 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
                 'filter' => [
                     'valid' => ['string']
                 ],
+                'gtin' => [
+                    'valid' => ['string']
+                ],
                 'limit' => [
                     'valid' => ['string']
                 ],

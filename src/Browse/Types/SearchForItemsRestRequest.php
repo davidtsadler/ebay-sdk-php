@@ -17,6 +17,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $epid
  * @property string $fieldgroups
  * @property string $filter
+ * @property string $gtin
  * @property string $limit
  * @property string $offset
  * @property string $q
@@ -57,6 +58,12 @@ class SearchForItemsRestRequest extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'filter'
+        ],
+        'gtin' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'gtin'
         ],
         'limit' => [
             'type' => 'string',
