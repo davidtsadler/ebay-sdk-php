@@ -40,11 +40,11 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'PhotoDisplay'
         ],
-        'PictureURL' => [
+        'GalleryURL' => [
             'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'PictureURL'
+            'elementName' => 'GalleryURL'
         ],
         'PictureSource' => [
             'type' => 'string',
