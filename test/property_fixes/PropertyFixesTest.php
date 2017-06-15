@@ -13,6 +13,7 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
     /**
      * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelSummary.html
      * Example of correct property names returned in the API https://developer.ebay.com/Devzone/post-order/post-order_v2_cancellation_search__get.html#Output
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/108
      */
     public function testCancelSummary()
     {
@@ -20,6 +21,7 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(null, $obj->cancelState);
         $this->assertEquals(null, $obj->cancelStatus);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->lineItems);
     }
 
     /**
@@ -127,5 +129,25 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(null, $obj->cancelStateTo);
         /** Yes this is because there is a typo in the actual response from the API! */
         $this->assertEquals(null, $obj->cancelStatetateTo);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelSummary.html
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/OrderCancelLineItem.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/108
+     *
+     * This is a bit of an odd one. CancelSummary::lineItems does not exist. Yet the API is returning it.
+     * Adding this property means that is needs a lineItem class. Since I didn't want to create a new one
+     * I've re-used OrderCancelLineItem.
+     */
+    public function testOrderCancelLineItem()
+    {
+        $obj = new Sdk\PostOrder\Types\OrderCancelLineItem();
+
+        $obj->itemTitle = 'foo';
+        $this->assertInternalType('string', $obj->itemTitle);
+
+        $obj->cancelQuantity = 123;
+        $this->assertInternalType('integer', $obj->cancelQuantity);
     }
 }

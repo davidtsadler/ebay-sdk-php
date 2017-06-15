@@ -33,6 +33,8 @@
 * Added missing properties to PostOrder\Types\Error.
 * Added missing properties to PostOrder\Types\CancelDetail.
 * Added missing properties to PostOrder\Types\CancelActivityHistory.
+* Added missing property lineItems to PostOrder\Types\CancelSummary.
+* Added missing properties itemTitle, cancelQuantity to PostOrder\Types\OrderCancelLineItem.
 
 ## 12.0.1 - 2017-06-15
 

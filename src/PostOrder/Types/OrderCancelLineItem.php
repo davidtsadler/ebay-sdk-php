@@ -14,6 +14,8 @@ namespace DTS\eBaySDK\PostOrder\Types;
  *
  * @property string $itemId
  * @property string $transactionId
+ * @property string $itemTitle
+ * @property integer $cancelQuantity
  */
 class OrderCancelLineItem extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,6 +34,18 @@ class OrderCancelLineItem extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionId'
+        ],
+        'itemTitle' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemTitle'
+        ],
+        'cancelQuantity' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'cancelQuantity'
         ]
     ];
 
