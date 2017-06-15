@@ -1,0 +1,32 @@
+{
+    "unknown-property": "should not trigger an exception",
+    "integer": 123,
+    "string": "&lt;h1&gt;Bits &amp;amp; Bobs &#xA9;&lt;/h1&gt;&lt;p&gt;Just some &amp;lt;stuff&amp;gt; I found.&amp;nbsp;&amp;copy;&lt;/p&gt;",
+    "double": 123.45,
+    "booleanTrue": true,
+    "booleanFalse": false,
+    "DateTime": "2000-01-01T16:15:30.123Z",
+    "SimpleClass": {
+        "unknown-property": "should not trigger an exception",
+        "integer": 321,
+        "string": "another string"
+    },
+    "strings": ["foo", "bar"],
+    "integers": [1, 2, 3, 4, 5],
+    "simpleClasses": [{
+        "unknown-property": "should not trigger an exception",
+        "integer": 888
+    }, {
+        "unknown-property": "should not trigger an exception",
+        "integer": 999
+    }],
+    "anyType": 1,
+    "anyTypes": [
+      1,
+      "foo",
+      1.23,
+      true,
+      false,
+      [1, 2, 3]
+    ]
+}

@@ -33,6 +33,12 @@
 * Added missing properties to PostOrder\Types\CancelDetail.
 * Added missing properties to PostOrder\Types\CancelActivityHistory.
 
+## 12.0.1 - 2017-06-15
+
+## Fixes
+
+* SDK now ignores properties in the JSON response that would normally trigger an DTS\eBaySDK\Exceptions\UnknownPropertyException exception.
+
 ## 12.0.0 - 2017-05-23
 
 ### Fixes
