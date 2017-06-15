@@ -19,6 +19,7 @@ namespace DTS\eBaySDK\PostOrder\Types;
  * @property string $cancelReason
  * @property \DTS\eBaySDK\PostOrder\Types\DateTime $cancelRequestDate
  * @property string $legacyOrderId
+ * @property \DTS\eBaySDK\PostOrder\Types\OrderCancelLineItem[] $lineItems
  * @property \DTS\eBaySDK\PostOrder\Enums\MarketplaceIdEnum $marketplaceId
  * @property string $paymentStatus
  * @property string $requestorType
@@ -75,6 +76,12 @@ class CancelSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'legacyOrderId'
+        ],
+        'lineItems' => [
+            'type' => 'DTS\eBaySDK\PostOrder\Types\OrderCancelLineItem',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'lineItems'
         ],
         'marketplaceId' => [
             'type' => 'string',
