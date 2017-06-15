@@ -79,6 +79,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType $DigitalDeliverySelected
  * @property boolean $Gift
  * @property boolean $GuaranteedShipping
+ * @property boolean $GuaranteedDelivery
  */
 class TransactionType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -487,6 +488,12 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GuaranteedShipping'
+        ],
+        'GuaranteedDelivery' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'GuaranteedDelivery'
         ]
     ];
 
