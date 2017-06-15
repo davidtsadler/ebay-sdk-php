@@ -1,6 +1,7 @@
 <?php
 namespace DTS\eBaySDK\Services;
 
+use DTS\eBaySDK\Parser\JsonParser;
 use DTS\eBaySDK\ConfigurationResolver;
 use DTS\eBaySDK\UriResolver;
 use \DTS\eBaySDK as Functions;
@@ -163,11 +164,15 @@ abstract class BaseRestService
                     $this->debugResponse($json);
                 }
 
-                return new $responseClass(
-                    $json !== '' ? json_decode($json, true) : [],
+                $response =  new $responseClass(
+                    [],
                     $res->getStatusCode(),
                     $res->getHeaders()
                 );
+
+                JsonParser::parseAndAssignProperties($response, $json);
+
+                return $response;
             }
         );
     }
