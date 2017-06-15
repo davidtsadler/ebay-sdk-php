@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+## Fixes
+
+* SDK now ignores properties in the JSON response that would normally trigger an DTS\eBaySDK\Exceptions\UnknownPropertyException exception.
+
 ## 12.0.0 - 2017-05-23
 
 ### Fixes
