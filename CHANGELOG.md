@@ -35,6 +35,7 @@
 * Added missing properties to PostOrder\Types\CancelActivityHistory.
 * Added missing property lineItems to PostOrder\Types\CancelSummary.
 * Added missing properties itemTitle, cancelQuantity to PostOrder\Types\OrderCancelLineItem.
+* Added missing enum to Order\Enums\LineItemPaymentStatusEnum.
 
 ## 12.0.1 - 2017-06-15
 
