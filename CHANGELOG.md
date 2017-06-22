@@ -20,6 +20,8 @@
 * Support Shopping API version 1007.
 * Support Browse API version v1_beta.7.0.
 * Support Browse API version v1_beta.6.0.
+* Property subDomain changed to subdomain for the Metadata\Types\ErrorDetailV3 class.
+* Properties inputRefIds and outputRefIds are repeatable for the Metadata\Types\ErrorDetailV3 class.
 
 ### Fixes
 
