@@ -9,6 +9,7 @@
 * Added compressResponse configuration option.
 * Added affiliateCampaignId, affiliateReferenceId and contextualLocation configuration options.
 * Added Bulk Migrate Listings operation to the Inventory service.
+* Support Metadata API version 1.1.0.
 
 ### Breaking changes
 
