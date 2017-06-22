@@ -12,6 +12,7 @@
 * Support Metadata API version 1.1.0.
 * Added Get Shipping Rate Tables operation to the Account service. Note that eBay have not officaly released this
   operation so it may be subject to change.
+* Link to forum at https://forum.devbay.net/c/php-sdk
 
 ### Breaking changes
 
