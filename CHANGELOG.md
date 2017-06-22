@@ -8,6 +8,7 @@
 * Support Taxonomy API version v1_beta.0.0.
 * Added compressResponse configuration option.
 * Added affiliateCampaignId, affiliateReferenceId and contextualLocation configuration options.
+* Added Bulk Migrate Listings operation to the Inventory service.
 
 ### Breaking changes
 
