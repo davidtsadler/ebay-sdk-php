@@ -178,6 +178,16 @@ class AccountService extends \DTS\eBaySDK\Account\Services\AccountBaseService
             'params' => [
             ]
         ],
+        'GetShippingRateTables' => [
+            'method' => 'POST',
+            'resource' => 'rate_table',
+            'responseClass' => '\DTS\eBaySDK\Account\Types\GetShippingRateTablesRestResponse',
+            'params' => [
+                'country_code' => [
+                    'valid' => ['string']
+                ]
+            ]
+        ],
         'CreateAReturnPolicy' => [
             'method' => 'POST',
             'resource' => 'return_policy',
@@ -592,6 +602,24 @@ class AccountService extends \DTS\eBaySDK\Account\Services\AccountBaseService
     public function optOutOfProgramAsync(\DTS\eBaySDK\Account\Types\OptOutOfProgramRestRequest $request)
     {
         return $this->callOperationAsync('OptOutOfProgram', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Account\Types\GetShippingRateTablesRestRequest $request
+     * @return \DTS\eBaySDK\Account\Types\GetShippingRateTablesRestResponse
+     */
+    public function getShippingRateTables(\DTS\eBaySDK\Account\Types\GetShippingRateTablesRestRequest $request)
+    {
+        return $this->getShippingRateTablesAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Account\Types\GetShippingRateTablesRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getShippingRateTablesAsync(\DTS\eBaySDK\Account\Types\GetShippingRateTablesRestRequest $request)
+    {
+        return $this->callOperationAsync('GetShippingRateTables', $request);
     }
 
     /**
