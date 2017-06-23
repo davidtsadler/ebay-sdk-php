@@ -17,23 +17,26 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string[] $buyingOptions
  * @property \DTS\eBaySDK\Browse\Types\Category[] $categories
  * @property string $condition
- * @property \DTS\eBaySDK\Browse\Types\Amount_0 $currentBidPrice
+ * @property string $conditionId
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $currentBidPrice
  * @property \DTS\eBaySDK\Browse\Types\TargetLocation $distanceFromPickupLocation
  * @property string $energyEfficiencyClass
+ * @property string $epid
  * @property \DTS\eBaySDK\Browse\Types\Image $image
  * @property string $itemAffiliateWebUrl
  * @property string $itemGroupHref
+ * @property string $itemGroupType
+ * @property string $itemHref
  * @property string $itemId
  * @property \DTS\eBaySDK\Browse\Types\ItemLocationImpl $itemLocation
  * @property string $itemWebUrl
- * @property \DTS\eBaySDK\Browse\Types\MarketingPrice_0 $marketingPrice
+ * @property \DTS\eBaySDK\Browse\Types\MarketingPrice $marketingPrice
  * @property \DTS\eBaySDK\Browse\Types\PickupOptionSummary[] $pickupOptions
- * @property \DTS\eBaySDK\Browse\Types\Amount_0 $price
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $price
  * @property \DTS\eBaySDK\Browse\Types\Seller $seller
  * @property \DTS\eBaySDK\Browse\Types\ShippingOptionSummary[] $shippingOptions
  * @property \DTS\eBaySDK\Browse\Types\Image[] $thumbnailImages
  * @property string $title
- * @property boolean $topRatedBuyingExperience
  */
 class ItemSummary extends \DTS\eBaySDK\Types\BaseType
 {
@@ -71,8 +74,14 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'condition'
         ],
+        'conditionId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'conditionId'
+        ],
         'currentBidPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount_0',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'currentBidPrice'
@@ -88,6 +97,12 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'energyEfficiencyClass'
+        ],
+        'epid' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'epid'
         ],
         'image' => [
             'type' => 'DTS\eBaySDK\Browse\Types\Image',
@@ -106,6 +121,18 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemGroupHref'
+        ],
+        'itemGroupType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemGroupType'
+        ],
+        'itemHref' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemHref'
         ],
         'itemId' => [
             'type' => 'string',
@@ -126,7 +153,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemWebUrl'
         ],
         'marketingPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\MarketingPrice_0',
+            'type' => 'DTS\eBaySDK\Browse\Types\MarketingPrice',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'marketingPrice'
@@ -138,7 +165,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'pickupOptions'
         ],
         'price' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount_0',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
@@ -166,12 +193,6 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'title'
-        ],
-        'topRatedBuyingExperience' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'topRatedBuyingExperience'
         ]
     ];
 

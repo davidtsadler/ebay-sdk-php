@@ -18,6 +18,7 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $next
  * @property integer $offset
  * @property string $prev
+ * @property \DTS\eBaySDK\Browse\Types\Refinement $refinement
  * @property integer $total
  * @property \DTS\eBaySDK\Browse\Types\ErrorDetailV3[] $warnings
  */
@@ -62,6 +63,12 @@ class SearchPagedCollection extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'prev'
+        ],
+        'refinement' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Refinement',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'refinement'
         ],
         'total' => [
             'type' => 'integer',

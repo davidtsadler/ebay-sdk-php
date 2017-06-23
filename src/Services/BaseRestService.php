@@ -24,6 +24,11 @@ abstract class BaseRestService
     const HDR_RESPONSE_LANGUAGE = 'Accept-Language';
 
     /**
+     * HTTP header constant. Tells the server the encoding in which the client desires the response.
+     */
+    const HDR_RESPONSE_ENCODING = 'Accept-Encoding';
+
+    /**
      * @var \DTS\eBaySDK\ConfigurationResolver Resolves configuration options.
      */
     private $resolver;
@@ -56,6 +61,10 @@ abstract class BaseRestService
     public static function getConfigDefinitions()
     {
         return [
+            'compressResponse' => [
+                'valid'   => ['bool'],
+                'default' => false
+            ],
             'debug' => [
                 'valid'   => ['bool', 'array'],
                 'fn'      => 'DTS\eBaySDK\applyDebug',
@@ -221,6 +230,10 @@ abstract class BaseRestService
 
         if ($this->getConfig('responseLanguage')) {
             $headers[self::HDR_RESPONSE_LANGUAGE] = $this->getConfig('responseLanguage');
+        }
+
+        if ($this->getConfig('compressResponse')) {
+            $headers[self::HDR_RESPONSE_ENCODING] = 'application/gzip';
         }
 
         return $headers;

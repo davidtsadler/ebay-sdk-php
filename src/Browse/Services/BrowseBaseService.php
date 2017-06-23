@@ -25,6 +25,11 @@ class BrowseBaseService extends \DTS\eBaySDK\Services\BaseRestService
     const HDR_MARKETPLACE_ID = 'X-EBAY-C-MARKETPLACE-ID';
 
     /**
+     * HTTP header constant.
+     */
+    const HDR_END_USER_CTX = 'X-EBAY-C-ENDUSERCTX';
+
+    /**
      * @param array $config Configuration option values.
      */
     public function __construct(array $config)
@@ -42,6 +47,12 @@ class BrowseBaseService extends \DTS\eBaySDK\Services\BaseRestService
         $definitions = parent::getConfigDefinitions();
 
         return $definitions + [
+            'affiliateCampaignId' => [
+                'valid' => ['string']
+            ],
+            'affiliateReferenceId' => [
+                'valid' => ['string']
+            ],
             'apiVersion' => [
                 'valid' => ['string'],
                 'default' => \DTS\eBaySDK\Browse\Services\BrowseService::API_VERSION,
@@ -50,6 +61,9 @@ class BrowseBaseService extends \DTS\eBaySDK\Services\BaseRestService
             'authorization' => [
                 'valid' => ['string'],
                 'required' => true
+            ],
+            'contextualLocation' => [
+                'valid' => ['string']
             ],
             'marketplaceId' => [
                 'valid' => ['string']
@@ -72,6 +86,20 @@ class BrowseBaseService extends \DTS\eBaySDK\Services\BaseRestService
         // Add optional headers.
         if ($this->getConfig('marketplaceId')) {
             $headers[self::HDR_MARKETPLACE_ID] = $this->getConfig('marketplaceId');
+        }
+
+        $endUserCTX = [];
+        if ($this->getConfig('affiliateCampaignId')) {
+            $endUserCTX[ ] = 'affiliateCampaignId='.$this->getConfig('affiliateCampaignId');
+        }
+        if ($this->getConfig('affiliateReferenceId')) {
+            $endUserCTX[ ] = 'affiliateReferenceId='.$this->getConfig('affiliateReferenceId');
+        }
+        if ($this->getConfig('contextualLocation')) {
+            $endUserCTX[ ] = 'contextualLocation='.$this->getConfig('contextualLocation');
+        }
+        if (count($endUserCTX)) {
+            $headers[self::HDR_END_USER_CTX ] = implode(',', $endUserCTX);
         }
 
         return $headers;

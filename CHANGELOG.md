@@ -1,8 +1,55 @@
 # CHANGELOG
 
+## 13.0.0 - 2017-06-23
+
+### Features
+
+* Support Feed API version v1_beta.0.0
+* Support Taxonomy API version v1_beta.0.0.
+* Added compressResponse configuration option.
+* Added affiliateCampaignId, affiliateReferenceId and contextualLocation configuration options.
+* Added Bulk Migrate Listings operation to the Inventory service.
+* Support Metadata API version 1.1.0.
+* Added Get Shipping Rate Tables operation to the Account service. Note that eBay have not officaly released this
+  operation so it may be subject to change.
+* Link to forum at https://forum.devbay.net/c/php-sdk
+* Add GalleryURL to Trading\Types\PictureDetailsType.
+  GalleryURL was removed from the Trading API version 997. However it has been seen in the API response. If your project
+  makes use of GalleryURL be aware that eBay may stop returning this information!
+
+### Breaking changes
+
+* Support Marketing API version 1.3.0.
+* Support Marketing API version 1.2.0.
+* Support Order API version v1_beta.6.0.
+* Support Trading API version 1019.
+* Support Trading API version 1007.
+* Support Shopping API version 1007.
+* Support Browse API version v1_beta.7.0.
+* Support Browse API version v1_beta.6.0.
+* Property subDomain changed to subdomain for the Metadata\Types\ErrorDetailV3 class.
+* Properties inputRefIds and outputRefIds are repeatable for the Metadata\Types\ErrorDetailV3 class.
+
+### Fixes
+
+* Added missing shippingServiceCode property to Fulfillment\Types\ShippingFulfillment.
+* Added missing paymentMode property to Fulfillment\Types\Payment.
+* Added missing lineItemFulfillmentInstructions property to Fulfillment\Types\LineItem.
+* Added missing refunds property to Fulfillment\Types\LineItem.
+* Added missing enums to Fulfillment\Enums\OrderPaymentStatusEnum.
+* Added missing enums to Fulfillment\Enums\PaymentMethodTypeEnum.
+* Added missing priceDiscount property to Fulfillment\Types\Pricingsummary.
+* Added missing enums to PostOrder\Enums\CancelReasonEnum.
+* Added missing properties to PostOrder\Types\Error.
+* Added missing properties to PostOrder\Types\CancelDetail.
+* Added missing properties to PostOrder\Types\CancelActivityHistory.
+* Added missing property lineItems to PostOrder\Types\CancelSummary.
+* Added missing properties itemTitle, cancelQuantity to PostOrder\Types\OrderCancelLineItem.
+* Added missing enum to Order\Enums\LineItemPaymentStatusEnum.
+
 ## 12.0.1 - 2017-06-15
 
-## Fixes
+### Fixes
 
 * SDK now ignores properties in the JSON response that would normally trigger an DTS\eBaySDK\Exceptions\UnknownPropertyException exception.
 
@@ -30,7 +77,7 @@
 
 * Support Trading API version 997.
 
-## Features
+### Features
 
 * Can now use SDK to handle generation of OAUTH tokens for the RESTFul services.
 
@@ -104,7 +151,7 @@
 
 ## 5.0.0 - 2016-06-04
 
-## Doc
+### Doc
 
 * Fixed issue with JMS seriallizer. Documentation was incorrectly using @returns instead of @return.
 

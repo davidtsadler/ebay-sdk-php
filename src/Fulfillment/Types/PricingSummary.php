@@ -16,7 +16,7 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $deliveryCost
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $deliveryDiscount
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $fee
- * @property \DTS\eBaySDK\Fulfillment\Types\Amount $priceDiscountSubtotal
+ * @property \DTS\eBaySDK\Fulfillment\Types\Amount $priceDiscount
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $priceSubtotal
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $tax
  * @property \DTS\eBaySDK\Fulfillment\Types\Amount $total
@@ -51,11 +51,11 @@ class PricingSummary extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'fee'
         ],
-        'priceDiscountSubtotal' => [
+        'priceDiscount' => [
             'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'priceDiscountSubtotal'
+            'elementName' => 'priceDiscount'
         ],
         'priceSubtotal' => [
             'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',

@@ -24,6 +24,22 @@ Refer to the :doc:`basic usage guide </getting-started/basic-usage>` for informa
 
     Some configuration options are only applicable to certain services. Where this is the case the services will be noted in the documentation for the configuration option.
 
+affiliateCampaignId
+~~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
+affiliateReferenceId
+~~~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Affiliate parameter for applications that have registered on the `eBay Partner Network <https://www.ebaypartnernetwork.com/>`_.
+
 affiliateUserId
 ~~~~~~~~~~~~~~~
 
@@ -77,7 +93,7 @@ authorization
 ~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Trading``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Feed``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Trading``, ``Taxonomy``
 :Required: true, except for the Trading service.
 
 All eBay RESTful services use OAuth 2.0 access tokens for application authentication and user authorization. The token passed via ``authorization`` can be either an User or Application token. You must ensure that the token has the require scope for the operation that you are calling.
@@ -113,6 +129,29 @@ The Trading service is different to other services in that the  Auth'n'auth toke
      */
     $request->RequesterCredentials = new Types\CustomSecurityHeaderType();
     $request->RequesterCredentials->eBayAuthToken = '<AUTH TOKEN>';
+
+compressResponse
+~~~~~~~~~~~~~~~~
+
+:Type: ``bool``
+
+Some API responses can return a very large payload. Pass ``true`` to submit all requests with the HTTP header ``Accept-Encoding: application/gzip``. Note that not all API operations will return a gzip response.
+
+contextualLocation
+~~~~~~~~~~~~~~~~~~
+
+:Type: ``string``
+:Services: ``Browse``
+
+Required by some operations in the Browse service. Increases the accuracy of the estimated delivery window information and is needed for the calculated shipping information. When using this header, you must include the country code and you also include the zip code if zip codes are used in that country.
+
+.. code-block:: php
+
+    use DTS\eBaySDK\Browse\Services\BrowseService;
+
+    $service = new BrowseService([
+      'contextualLocation' => 'country=US,zip=19406'
+    ]);
 
 credentials
 ~~~~~~~~~~~
@@ -402,7 +441,7 @@ marketplaceId
 ~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Feed``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 The string identifier for the eBay site your API requests are to be sent to. For example, you would pass the value ``EBAY-UK`` to specify the eBay UK site.
 
@@ -428,7 +467,7 @@ requestLanguage
 ~~~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Feed``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 This configuration option will set the ``Content-Language`` HTTP header for the request.
 
@@ -436,7 +475,7 @@ responseLanguage
 ~~~~~~~~~~~~~~~~
 
 :Type: ``string``
-:Services: ``Account``, ``Analytics``, ``Browse``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``
+:Services: ``Account``, ``Analytics``, ``Browse``, ``Feed``, ``Fulfillment``, ``Inventory``, ``Marketing``, ``Metadata``, ``Order``, ``Taxonomy``
 
 This configuration option will set the ``Accept-Language`` HTTP header for the request.
 

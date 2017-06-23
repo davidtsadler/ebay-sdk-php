@@ -13,6 +13,7 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
     /**
      * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelSummary.html
      * Example of correct property names returned in the API https://developer.ebay.com/Devzone/post-order/post-order_v2_cancellation_search__get.html#Output
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/108
      */
     public function testCancelSummary()
     {
@@ -20,6 +21,7 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(null, $obj->cancelState);
         $this->assertEquals(null, $obj->cancelStatus);
+        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $obj->lineItems);
     }
 
     /**
@@ -37,12 +39,28 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $obj->transactionId);
     }
 
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/ErrorResponse.html#ErrorResponse
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/105
+     */
     public function testError()
     {
         $obj = new Sdk\PostOrder\Types\Error();
 
         $obj->subdomain = '123';
         $this->assertInternalType('string', $obj->subdomain);
+
+        $obj->errorName = '123';
+        $this->assertInternalType('string', $obj->errorName);
+
+        $obj->resolution = '123';
+        $this->assertInternalType('string', $obj->resolution);
+
+        $obj->organization = '123';
+        $this->assertInternalType('string', $obj->organization);
+
+        $obj->errorGroups = '123';
+        $this->assertInternalType('string', $obj->errorGroups);
     }
 
     public function testDeliveryCost()
@@ -51,5 +69,97 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
 
         $obj->discountAmount = new Sdk\Fulfillment\Types\Amount();
         $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\Amount', $obj->discountAmount);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/devzone/rest/api-ref/fulfillment/types/ShippingFulfillment.html
+     * Example of correct property names returned in the API https://developer.ebay.com/devzone/rest/api-ref/fulfillment/order-orderid_shipping_fulfillment__get.html#Samples
+     */
+    public function testShippingServiceCode()
+    {
+        $obj = new Sdk\Fulfillment\Types\ShippingFulfillment();
+
+        $obj->shippingServiceCode = 'foo';
+        $this->assertInternalType('string', $obj->shippingServiceCode);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/devzone/rest/api-ref/fulfillment/types/PricingSummary.html
+     * Issue discussed at https://groups.google.com/forum/?hl=en-GB#!topic/ebay-sdk-php/Pz1s0K5V9ZE
+     * Replace priceDiscountSubtotal with priceDiscount.
+     */
+    public function testPriceDiscount()
+    {
+        $obj = new Sdk\Fulfillment\Types\PricingSummary();
+
+        $obj->priceDiscount = new Sdk\Fulfillment\Types\Amount();
+        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\Amount', $obj->priceDiscount);
+    }
+
+    public function testPriceDiscountSubtotalDoesNotExist()
+    {
+        $this->setExpectedException('\DTS\eBaySDK\Exceptions\UnknownPropertyException', 'Unknown property');
+
+        $obj = new Sdk\Fulfillment\Types\PricingSummary();
+
+        $obj->priceDiscountSubtotal = new Sdk\Fulfillment\Types\Amount();
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelDetail.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/107
+     */
+    public function testCancelDetail()
+    {
+        $obj = new Sdk\PostOrder\Types\CancelDetail();
+
+        $this->assertEquals(null, $obj->cancelState);
+        $this->assertEquals(null, $obj->cancelStatus);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelActivityHistory.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/107
+     */
+    public function testCancelActivityHistory()
+    {
+        $obj = new Sdk\PostOrder\Types\CancelActivityHistory();
+
+        $this->assertEquals(null, $obj->cancelStateFrom);
+        $this->assertEquals(null, $obj->cancelStateTo);
+        /** Yes this is because there is a typo in the actual response from the API! */
+        $this->assertEquals(null, $obj->cancelStatetateTo);
+    }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/CancelSummary.html
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/OrderCancelLineItem.html
+     * Example of correct property names returned in the API https://github.com/davidtsadler/ebay-sdk-php/issues/108
+     *
+     * This is a bit of an odd one. CancelSummary::lineItems does not exist. Yet the API is returning it.
+     * Adding this property means that is needs a lineItem class. Since I didn't want to create a new one
+     * I've re-used OrderCancelLineItem.
+     */
+    public function testOrderCancelLineItem()
+    {
+        $obj = new Sdk\PostOrder\Types\OrderCancelLineItem();
+
+        $obj->itemTitle = 'foo';
+        $this->assertInternalType('string', $obj->itemTitle);
+
+        $obj->cancelQuantity = 123;
+        $this->assertInternalType('integer', $obj->cancelQuantity);
+    }
+
+    /**
+     * Even though the documentation says that GalleryURL is not a member of PictureDetailsType
+     * it is been returned in the API for various calls. E.g GetItem and GetMyeBaySelling.
+     */
+    public function testGaleryURL()
+    {
+        $obj = new Sdk\Trading\Types\PictureDetailsType();
+
+        $obj->GalleryURL = 'foo';
+        $this->assertInternalType('string', $obj->GalleryURL);
     }
 }

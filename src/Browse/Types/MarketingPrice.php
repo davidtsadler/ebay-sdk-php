@@ -12,9 +12,9 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Browse\Types\Amount $discountAmount
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $discountAmount
  * @property string $discountPercentage
- * @property \DTS\eBaySDK\Browse\Types\Amount $originalPrice
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $originalPrice
  */
 class MarketingPrice extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,7 +23,7 @@ class MarketingPrice extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'discountAmount' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'discountAmount'
@@ -35,7 +35,7 @@ class MarketingPrice extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'discountPercentage'
         ],
         'originalPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'originalPrice'

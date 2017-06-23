@@ -104,6 +104,13 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
                 ]
             ]
         ],
+        'BulkMigrateListings' => [
+            'method' => 'POST',
+            'resource' => 'bulk_migrate_listing',
+            'responseClass' => '\DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestResponse',
+            'params' => [
+            ]
+        ],
         'CreateInventoryLocation' => [
             'method' => 'POST',
             'resource' => 'location/{merchantLocationKey}',
@@ -449,6 +456,24 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
     public function getInventoryItemGroupAsync(\DTS\eBaySDK\Inventory\Types\GetInventoryItemGroupRestRequest $request)
     {
         return $this->callOperationAsync('GetInventoryItemGroup', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest $request
+     * @return \DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestResponse
+     */
+    public function bulkMigrateListings(\DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest $request)
+    {
+        return $this->bulkMigrateListingsAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkMigrateListingsAsync(\DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest $request)
+    {
+        return $this->callOperationAsync('BulkMigrateListings', $request);
     }
 
     /**

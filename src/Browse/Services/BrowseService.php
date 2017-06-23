@@ -18,7 +18,7 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
      * @property array $operations Associative array of operations provided by the service.
      */
     protected static $operations = [
-        'getItem' => [
+        'GetItem' => [
             'method' => 'GET',
             'resource' => 'item/{item_id}',
             'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemRestResponse',
@@ -29,29 +29,27 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
                 ]
             ]
         ],
-        'getItemFeed' => [
+        'GetItemByLegacyId' => [
             'method' => 'GET',
-            'resource' => 'item_feed',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemFeedRestResponse',
+            'resource' => 'item/get_item_by_legacy_id',
+            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse',
             'params' => [
-                'category_id' => [
+                'legacy_item_id' => [
                     'valid' => ['string'],
                     'required' => true
                 ],
-                'date' => [
-                    'valid' => ['string'],
-                    'required' => true
+                'legacy_variation_id' => [
+                    'valid' => ['string']
                 ],
-                'feed_type' => [
-                    'valid' => ['string'],
-                    'required' => true
+                'legacy_variation_sku' => [
+                    'valid' => ['string']
                 ]
             ]
         ],
-        'getItemGroup' => [
+        'GetItemsByItemGroup' => [
             'method' => 'GET',
-            'resource' => 'item_group/{item_group_id}',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemGroupRestResponse',
+            'resource' => 'item/get_items_by_item_group',
+            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse',
             'params' => [
                 'item_group_id' => [
                     'valid' => ['string'],
@@ -59,12 +57,27 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
                 ]
             ]
         ],
-        'searchForItems' => [
+        'SearchForItems' => [
             'method' => 'GET',
             'resource' => 'item_summary/search',
             'responseClass' => '\DTS\eBaySDK\Browse\Types\SearchForItemsRestResponse',
             'params' => [
+                'aspect_filter' => [
+                    'valid' => ['string']
+                ],
+                'category_ids' => [
+                    'valid' => ['string']
+                ],
+                'epid' => [
+                    'valid' => ['string']
+                ],
+                'fieldgroups' => [
+                    'valid' => ['string']
+                ],
                 'filter' => [
+                    'valid' => ['string']
+                ],
+                'gtin' => [
                     'valid' => ['string']
                 ],
                 'limit' => [
@@ -106,43 +119,43 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
      */
     public function getItemAsync(\DTS\eBaySDK\Browse\Types\GetItemRestRequest $request)
     {
-        return $this->callOperationAsync('getItem', $request);
+        return $this->callOperationAsync('GetItem', $request);
     }
 
     /**
-     * @param \DTS\eBaySDK\Browse\Types\GetItemFeedRestRequest $request
-     * @return \DTS\eBaySDK\Browse\Types\GetItemFeedRestResponse
+     * @param \DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestRequest $request
+     * @return \DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse
      */
-    public function getItemFeed(\DTS\eBaySDK\Browse\Types\GetItemFeedRestRequest $request)
+    public function getItemByLegacyId(\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestRequest $request)
     {
-        return $this->getItemFeedAsync($request)->wait();
+        return $this->getItemByLegacyIdAsync($request)->wait();
     }
 
     /**
-     * @param \DTS\eBaySDK\Browse\Types\GetItemFeedRestRequest $request
+     * @param \DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestRequest $request
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemFeedAsync(\DTS\eBaySDK\Browse\Types\GetItemFeedRestRequest $request)
+    public function getItemByLegacyIdAsync(\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestRequest $request)
     {
-        return $this->callOperationAsync('getItemFeed', $request);
+        return $this->callOperationAsync('GetItemByLegacyId', $request);
     }
 
     /**
-     * @param \DTS\eBaySDK\Browse\Types\GetItemGroupRestRequest $request
-     * @return \DTS\eBaySDK\Browse\Types\GetItemGroupRestResponse
+     * @param \DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestRequest $request
+     * @return \DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse
      */
-    public function getItemGroup(\DTS\eBaySDK\Browse\Types\GetItemGroupRestRequest $request)
+    public function getItemsByItemGroup(\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestRequest $request)
     {
-        return $this->getItemGroupAsync($request)->wait();
+        return $this->getItemsByItemGroupAsync($request)->wait();
     }
 
     /**
-     * @param \DTS\eBaySDK\Browse\Types\GetItemGroupRestRequest $request
+     * @param \DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestRequest $request
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getItemGroupAsync(\DTS\eBaySDK\Browse\Types\GetItemGroupRestRequest $request)
+    public function getItemsByItemGroupAsync(\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestRequest $request)
     {
-        return $this->callOperationAsync('getItemGroup', $request);
+        return $this->callOperationAsync('GetItemsByItemGroup', $request);
     }
 
     /**
@@ -160,6 +173,6 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
      */
     public function searchForItemsAsync(\DTS\eBaySDK\Browse\Types\SearchForItemsRestRequest $request)
     {
-        return $this->callOperationAsync('searchForItems', $request);
+        return $this->callOperationAsync('SearchForItems', $request);
     }
 }

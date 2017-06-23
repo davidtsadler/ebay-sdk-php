@@ -26,8 +26,8 @@ class BulkCreateAdsByInventoryReferenceRestResponseTest extends \PHPUnit_Framewo
         $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceRestResponse', $this->obj);
     }
 
-    public function testExtendsBaseType()
+    public function testExtendsBulkCreateAdsByInventoryReferenceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceResponse', $this->obj);
     }
 }

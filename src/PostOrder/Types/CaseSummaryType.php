@@ -14,7 +14,7 @@ namespace DTS\eBaySDK\PostOrder\Types;
  *
  * @property string $buyer
  * @property integer $caseId
- * @property \DTS\eBaySDK\PostOrder\Types\Rsp:CaseStatusEnum $caseStatusEnum
+ * @property \DTS\eBaySDK\PostOrder\Enums\CaseStatusEnum $caseStatusEnum
  * @property \DTS\eBaySDK\PostOrder\Types\Amount $claimAmount
  * @property \DTS\eBaySDK\PostOrder\Types\DateTime $creationDate
  * @property integer $itemId
@@ -42,7 +42,7 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'caseId'
         ],
         'caseStatusEnum' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\Rsp:CaseStatusEnum',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'caseStatusEnum'

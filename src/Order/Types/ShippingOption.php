@@ -17,9 +17,9 @@ namespace DTS\eBaySDK\Order\Types;
  * @property string $maxEstimatedDeliveryDate
  * @property string $minEstimatedDeliveryDate
  * @property boolean $selected
- * @property string $shippingCarrierName
+ * @property string $shippingCarrierCode
  * @property string $shippingOptionId
- * @property string $shippingServiceName
+ * @property string $shippingServiceCode
  */
 class ShippingOption extends \DTS\eBaySDK\Types\BaseType
 {
@@ -57,11 +57,11 @@ class ShippingOption extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'selected'
         ],
-        'shippingCarrierName' => [
+        'shippingCarrierCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCarrierName'
+            'elementName' => 'shippingCarrierCode'
         ],
         'shippingOptionId' => [
             'type' => 'string',
@@ -69,11 +69,11 @@ class ShippingOption extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippingOptionId'
         ],
-        'shippingServiceName' => [
+        'shippingServiceCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingServiceName'
+            'elementName' => 'shippingServiceCode'
         ]
     ];
 

@@ -13,7 +13,7 @@ The `eBay SDK for PHP <https://github.com/davidtsadler/ebay-sdk-php>`_ enables P
 External links: `API Docs <http://devbay.net/sdk/guides/api>`_
 | `GitHub <https://github.com/davidtsadler/ebay-sdk-php>`_
 | `Twitter <https://twitter.com/devbaydotnet>`_
-| `Support Group <https://groups.google.com/forum/#!forum/ebay-sdk-php>`_
+| `Forum <https://forum.devbay.net/c/php-sdk>`_
 | `Packagist <https://packagist.org/packages/dts/ebay-sdk-php>`_
 
 

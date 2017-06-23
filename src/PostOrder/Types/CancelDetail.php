@@ -28,8 +28,8 @@ namespace DTS\eBaySDK\PostOrder\Types;
  * @property \DTS\eBaySDK\PostOrder\Types\Amount $requestRefundAmount
  * @property \DTS\eBaySDK\PostOrder\Types\DateTime $sellerResponseDueDate
  * @property \DTS\eBaySDK\PostOrder\Types\DateTime $shipmentDate
- * @property string $state
- * @property string $status
+ * @property string $cancelState
+ * @property string $cancelStatus
  * @property string $transactionId
  */
 class CancelDetail extends \DTS\eBaySDK\Types\BaseType
@@ -134,17 +134,17 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shipmentDate'
         ],
-        'state' => [
+        'cancelState' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'state'
+            'elementName' => 'cancelState'
         ],
-        'status' => [
+        'cancelStatus' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'status'
+            'elementName' => 'cancelStatus'
         ],
         'transactionId' => [
             'type' => 'string',

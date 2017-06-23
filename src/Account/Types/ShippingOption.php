@@ -17,6 +17,7 @@ namespace DTS\eBaySDK\Account\Types;
  * @property boolean $insuranceOffered
  * @property \DTS\eBaySDK\Account\Enums\ShippingOptionTypeEnum $optionType
  * @property \DTS\eBaySDK\Account\Types\Amount $packageHandlingCost
+ * @property string $rateTableId
  * @property \DTS\eBaySDK\Account\Types\ShippingService[] $shippingServices
  */
 class ShippingOption extends \DTS\eBaySDK\Types\BaseType
@@ -54,6 +55,12 @@ class ShippingOption extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'packageHandlingCost'
+        ],
+        'rateTableId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'rateTableId'
         ],
         'shippingServices' => [
             'type' => 'DTS\eBaySDK\Account\Types\ShippingService',

@@ -13,6 +13,7 @@ namespace DTS\eBaySDK\Fulfillment\Enums;
 class PaymentStatusEnum
 {
     const C_FAILED = 'FAILED';
+    const C_NOT_APPLICABLE = 'NOT_APPLICABLE';
     const C_PAID = 'PAID';
     const C_PENDING = 'PENDING';
 }

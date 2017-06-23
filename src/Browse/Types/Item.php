@@ -14,16 +14,18 @@ namespace DTS\eBaySDK\Browse\Types;
  *
  * @property \DTS\eBaySDK\Browse\Types\Image[] $additionalImages
  * @property string $ageGroup
- * @property \DTS\eBaySDK\Browse\Enums\AvailabilityStatusEnum $availabilityStatusForShipToHome
  * @property integer $bidCount
  * @property string $brand
  * @property string[] $buyingOptions
  * @property string $categoryPath
  * @property string $color
  * @property string $condition
- * @property \DTS\eBaySDK\Browse\Types\Amount $currentBidPrice
+ * @property string $conditionId
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $currentBidPrice
  * @property string $description
  * @property string $energyEfficiencyClass
+ * @property string $epid
+ * @property \DTS\eBaySDK\Browse\Types\EstimatedAvailability[] $estimatedAvailabilities
  * @property string $gender
  * @property string $gtin
  * @property \DTS\eBaySDK\Browse\Types\Image $image
@@ -37,21 +39,22 @@ namespace DTS\eBaySDK\Browse\Types;
  * @property string $material
  * @property string $mpn
  * @property string $pattern
- * @property \DTS\eBaySDK\Browse\Types\Amount $price
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $price
  * @property \DTS\eBaySDK\Browse\Enums\PriceDisplayConditionEnum $priceDisplayCondition
- * @property string $primaryItemGroupHref
- * @property string $primaryItemGroupId
+ * @property \DTS\eBaySDK\Browse\Types\ItemGroupSummary $primaryItemGroup
  * @property \DTS\eBaySDK\Browse\Types\ReviewRating $primaryProductReviewRating
+ * @property string $productFicheWebUrl
  * @property integer $quantityLimitPerBuyer
- * @property integer $quantitySold
  * @property \DTS\eBaySDK\Browse\Types\ItemReturnTerms $returnTerms
  * @property \DTS\eBaySDK\Browse\Types\Seller $seller
  * @property \DTS\eBaySDK\Browse\Types\ShippingOption[] $shippingOptions
+ * @property \DTS\eBaySDK\Browse\Types\ShipToLocations $shipToLocations
  * @property string $shortDescription
  * @property string $size
  * @property string $sizeSystem
  * @property string $sizeType
  * @property string $subtitle
+ * @property \DTS\eBaySDK\Browse\Types\Taxes[] $taxes
  * @property string $title
  * @property boolean $topRatedBuyingExperience
  * @property integer $uniqueBidderCount
@@ -74,12 +77,6 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ageGroup'
-        ],
-        'availabilityStatusForShipToHome' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'availabilityStatusForShipToHome'
         ],
         'bidCount' => [
             'type' => 'integer',
@@ -117,8 +114,14 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'condition'
         ],
+        'conditionId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'conditionId'
+        ],
         'currentBidPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'currentBidPrice'
@@ -134,6 +137,18 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'energyEfficiencyClass'
+        ],
+        'epid' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'epid'
+        ],
+        'estimatedAvailabilities' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\EstimatedAvailability',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'estimatedAvailabilities'
         ],
         'gender' => [
             'type' => 'string',
@@ -214,7 +229,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'pattern'
         ],
         'price' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
@@ -225,17 +240,11 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'priceDisplayCondition'
         ],
-        'primaryItemGroupHref' => [
-            'type' => 'string',
+        'primaryItemGroup' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\ItemGroupSummary',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'primaryItemGroupHref'
-        ],
-        'primaryItemGroupId' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'primaryItemGroupId'
+            'elementName' => 'primaryItemGroup'
         ],
         'primaryProductReviewRating' => [
             'type' => 'DTS\eBaySDK\Browse\Types\ReviewRating',
@@ -243,17 +252,17 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'primaryProductReviewRating'
         ],
+        'productFicheWebUrl' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'productFicheWebUrl'
+        ],
         'quantityLimitPerBuyer' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'quantityLimitPerBuyer'
-        ],
-        'quantitySold' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'quantitySold'
         ],
         'returnTerms' => [
             'type' => 'DTS\eBaySDK\Browse\Types\ItemReturnTerms',
@@ -272,6 +281,12 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shippingOptions'
+        ],
+        'shipToLocations' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\ShipToLocations',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'shipToLocations'
         ],
         'shortDescription' => [
             'type' => 'string',
@@ -302,6 +317,12 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'subtitle'
+        ],
+        'taxes' => [
+            'type' => 'DTS\eBaySDK\Browse\Types\Taxes',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'taxes'
         ],
         'title' => [
             'type' => 'string',

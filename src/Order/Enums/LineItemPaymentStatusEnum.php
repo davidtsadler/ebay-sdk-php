@@ -13,6 +13,7 @@ namespace DTS\eBaySDK\Order\Enums;
 class LineItemPaymentStatusEnum
 {
     const C_FAILED = 'FAILED';
+    const C_NOT_PAID = 'NOT_PAID';
     const C_PAID = 'PAID';
     const C_PENDING = 'PENDING';
 }

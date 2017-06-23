@@ -12,7 +12,9 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Browse\Types\Amount_0 $shippingCost
+ * @property string $maxEstimatedDeliveryDate
+ * @property string $minEstimatedDeliveryDate
+ * @property \DTS\eBaySDK\Browse\Types\ConvertedAmount $shippingCost
  * @property string $shippingCostType
  */
 class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
@@ -21,8 +23,20 @@ class ShippingOptionSummary extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'maxEstimatedDeliveryDate' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'maxEstimatedDeliveryDate'
+        ],
+        'minEstimatedDeliveryDate' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'minEstimatedDeliveryDate'
+        ],
         'shippingCost' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Amount_0',
+            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'

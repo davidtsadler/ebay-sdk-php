@@ -19,8 +19,8 @@ namespace DTS\eBaySDK\Order\Types;
  * @property string $shipmentTrackingNumber
  * @property string $shipmentTrackingUrl
  * @property string $shippedDate
- * @property string $shippingCarrierName
- * @property string $shippingServiceName
+ * @property string $shippingCarrierCode
+ * @property string $shippingServiceCode
  */
 class ShippingFulfillment extends \DTS\eBaySDK\Types\BaseType
 {
@@ -70,17 +70,17 @@ class ShippingFulfillment extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'shippedDate'
         ],
-        'shippingCarrierName' => [
+        'shippingCarrierCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingCarrierName'
+            'elementName' => 'shippingCarrierCode'
         ],
-        'shippingServiceName' => [
+        'shippingServiceCode' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'shippingServiceName'
+            'elementName' => 'shippingServiceCode'
         ]
     ];
 

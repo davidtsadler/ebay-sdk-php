@@ -99,6 +99,10 @@ sync_bus:
 	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/src/BusinessPoliciesManagement/ src/BusinessPoliciesManagement/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/BusinessPoliciesManagement/test/BusinessPoliciesManagement/ test/BusinessPoliciesManagement/
 
+sync_feed:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Feed/src/Feed/ src/Feed/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Feed/test/Feed/ test/Feed/
+
 sync_feedback:
 	rsync -rtvu  --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Feedback/src/Feedback/ src/Feedback/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Feedback/test/Feedback/ test/Feedback/
@@ -144,6 +148,10 @@ sync_metadata:
 sync_order:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Order/src/Order/ src/Order/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Order/test/Order/ test/Order/
+
+sync_taxonomy:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Taxonomy/src/Taxonomy/ src/Taxonomy/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Taxonomy/test/Taxonomy/ test/Taxonomy/
 
 sync_post:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/PostOrder/src/PostOrder/ src/PostOrder/

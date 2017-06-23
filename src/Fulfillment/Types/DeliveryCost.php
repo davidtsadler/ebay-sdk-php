@@ -46,7 +46,7 @@ class DeliveryCost extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'discountAmount'
-        ],
+        ]
     ];
 
     /**

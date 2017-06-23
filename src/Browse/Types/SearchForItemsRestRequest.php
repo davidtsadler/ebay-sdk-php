@@ -12,7 +12,12 @@ namespace DTS\eBaySDK\Browse\Types;
 
 /**
  *
+ * @property string $aspect_filter
+ * @property string $category_ids
+ * @property string $epid
+ * @property string $fieldgroups
  * @property string $filter
+ * @property string $gtin
  * @property string $limit
  * @property string $offset
  * @property string $q
@@ -24,11 +29,41 @@ class SearchForItemsRestRequest extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'aspect_filter' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'aspect_filter'
+        ],
+        'category_ids' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'category_ids'
+        ],
+        'epid' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'epid'
+        ],
+        'fieldgroups' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'fieldgroups'
+        ],
         'filter' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'filter'
+        ],
+        'gtin' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'gtin'
         ],
         'limit' => [
             'type' => 'string',
