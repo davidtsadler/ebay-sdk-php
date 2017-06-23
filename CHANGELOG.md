@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## Features
+### Features
 
 * Support Feed API version v1_beta.0.0
 * Support Taxonomy API version v1_beta.0.0.
@@ -49,7 +49,7 @@
 
 ## 12.0.1 - 2017-06-15
 
-## Fixes
+### Fixes
 
 * SDK now ignores properties in the JSON response that would normally trigger an DTS\eBaySDK\Exceptions\UnknownPropertyException exception.
 
@@ -77,7 +77,7 @@
 
 * Support Trading API version 997.
 
-## Features
+### Features
 
 * Can now use SDK to handle generation of OAUTH tokens for the RESTFul services.
 
@@ -151,7 +151,7 @@
 
 ## 5.0.0 - 2016-06-04
 
-## Doc
+### Doc
 
 * Fixed issue with JMS seriallizer. Documentation was incorrectly using @returns instead of @return.
 
