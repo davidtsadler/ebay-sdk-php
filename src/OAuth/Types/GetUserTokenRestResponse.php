@@ -9,8 +9,8 @@ use DTS\eBaySDK\HttpHeadersTrait;
  * @property string $access_token
  * @property string $token_type
  * @property integer $expires_in
- * @property string $refesh_token
- * @property string $refesh_token_expires_in
+ * @property string $refresh_token
+ * @property string $refresh_token_expires_in
  * @property string $error
  * @property string $error_description
  * @property string $error_uri
