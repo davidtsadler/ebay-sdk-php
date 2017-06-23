@@ -150,4 +150,16 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->cancelQuantity = 123;
         $this->assertInternalType('integer', $obj->cancelQuantity);
     }
+
+    /**
+     * Even though the documentation says that GalleryURL is not a member of PictureDetailsType
+     * it is been returned in the API for various calls. E.g GetItem and GetMyeBaySelling.
+     */
+    public function testGaleryURL()
+    {
+        $obj = new Sdk\Trading\Types\PictureDetailsType();
+
+        $obj->GalleryURL = 'foo';
+        $this->assertInternalType('string', $obj->GalleryURL);
+    }
 }
