@@ -13,6 +13,9 @@
 * Added Get Shipping Rate Tables operation to the Account service. Note that eBay have not officaly released this
   operation so it may be subject to change.
 * Link to forum at https://forum.devbay.net/c/php-sdk
+* Add GalleryURL to Trading\Types\PictureDetailsType.
+  GalleryURL was removed from the Trading API version 997. However it has been seen in the API response. If your project
+  makes use of GalleryURL be aware that eBay may stop returning this information!
 
 ### Breaking changes
 
