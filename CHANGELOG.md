@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Fixes
+
+* Wrong HTTP method was been used for the processReturnRequest operation.
+
 ## 13.0.0 - 2017-06-23
 
 ### Features
