@@ -52,26 +52,26 @@ check_tag:
 # Creates a release but does not push it. This task updates the changelog
 # with the TAG environment variable, replaces the VERSION constant, ensures
 # that the source is still valid after updating, commits the changelog and
-# updated VERSION constant, creates an annotated git tag using chag, and
-# prints out a diff of the last commit.
+# updated VERSION constant, and prints out a diff of the last commit.
 tag: check_tag
 	@echo Tagging $(TAG)
 	chag update $(TAG)
 	sed -i -e "s/const VERSION = '.*'/const VERSION = '$(TAG)'/" src/Sdk.php
 	php -l src/Sdk.php
-	git commit -a -m '$(TAG) release'
-	chag tag
+	git commit -a -m 'update: bump version to $(TAG)'
 	@echo "Release has been created. Push using 'make release'"
 	@echo "Changes made in the release commit"
 	git diff HEAD~1 HEAD
 
 # Creates a release based on the master branch and latest tag. This task
-# pushes the latest tag, pushes master, creates a phar and zip, and creates
-# a Github release. Use "TAG=X.Y.Z make tag" to create a release, and use
+# creates an annotated git tag using chag, pushes the latest tag,
+# pushes master, creates a phar and zip, and creates Github release.
+# Use "TAG=X.Y.Z make tag" to create a release, and use
 # "make release" to push a release. This task requires that the
 # OAUTH_TOKEN environment variable is available and the token has permission
 # to push to the repository.
-release: check_tag package
+release: check_tag clean package
+	chag tag
 	git push origin master
 	git push origin $(TAG)
 	php build/gh-release.php $(TAG)

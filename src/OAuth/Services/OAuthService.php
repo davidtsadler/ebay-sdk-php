@@ -251,7 +251,7 @@ class OAuthService
      */
     public function getAppToken(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
     {
-        return $this->getAppTokenAsync()->wait();
+        return $this->getAppTokenAsync($request)->wait();
     }
 
     /**
