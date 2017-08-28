@@ -24,7 +24,7 @@ class UploadFileRequest extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'data' => [
             'type' => 'string',
-            'repeatable' => true,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'data'
         ],
