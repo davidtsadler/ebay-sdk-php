@@ -632,7 +632,7 @@ class PostOrderService extends \DTS\eBaySDK\PostOrder\Services\PostOrderBaseServ
         ],
         'ProcessReturnRequest' => [
             'method' => 'POST',
-            'resource' => 'RES',
+            'resource' => 'return/{returnId}/decide',
             'responseClass' => '\DTS\eBaySDK\PostOrder\Types\ProcessReturnRequestRestResponse',
             'params' => [
                 'returnId' => [
