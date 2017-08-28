@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 13.0.2 - 2017-08-28
 
 ## Fixes
 
