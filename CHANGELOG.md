@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 13.0.2 - 2017-08-28
+
+## Fixes
+
+- Pass through the request for grabbing the app token.
+- Update PostOrderServer to that correct response object is returned.
+
 ## 13.0.1 - 2017-08-23
 
 ### Fixes
