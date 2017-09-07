@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Unreleased
+
+## Fixes
+
+- It appears that PostOrder\Types\UploadFileRequest::data may be a string and not an array as
+ stated in the documentation.
+
 ## 13.0.2 - 2017-08-28
 
 ## Fixes

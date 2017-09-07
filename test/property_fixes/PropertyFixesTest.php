@@ -162,4 +162,18 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->GalleryURL = 'foo';
         $this->assertInternalType('string', $obj->GalleryURL);
     }
+
+    /**
+     * Incorrect documentation https://developer.ebay.com/Devzone/post-order/types/UploadFileRequest.html
+     * Issue: https://github.com/davidtsadler/ebay-sdk-php/issues/133
+     * PR: https://github.com/davidtsadler/ebay-sdk-php/pull/134
+     */
+    public function testUploadFileRequest()
+    {
+        $obj = new Sdk\PostOrder\Types\UploadFileRequest();
+
+        $obj->data = '';
+
+        $this->assertInternalType('string', $obj->data);
+    }
 }
