@@ -260,6 +260,17 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
                 ]
             ]
         ],
+        'WithdrawOffer' => [
+            'method' => 'POST',
+            'resource' => 'offer/{offerId}/withdraw',
+            'responseClass' => '\DTS\eBaySDK\Inventory\Types\WithdrawOfferRestResponse',
+            'params' => [
+                'offerId' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
+        ],
         'UpdateOffer' => [
             'method' => 'PUT',
             'resource' => 'offer/{offerId}',
@@ -708,6 +719,24 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
     public function publishOfferAsync(\DTS\eBaySDK\Inventory\Types\PublishOfferRestRequest $request)
     {
         return $this->callOperationAsync('PublishOffer', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\WithdrawOfferRestRequest $request
+     * @return \DTS\eBaySDK\Inventory\Types\WithdrawOfferRestResponse
+     */
+    public function withdrawOffer(\DTS\eBaySDK\Inventory\Types\WithdrawOfferRestRequest $request)
+    {
+        return $this->withdrawOfferAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\WithdrawOfferRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function withdrawOfferAsync(\DTS\eBaySDK\Inventory\Types\WithdrawOfferRestRequest $request)
+    {
+        return $this->callOperationAsync('WithdrawOffer', $request);
     }
 
     /**

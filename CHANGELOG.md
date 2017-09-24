@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 13.1.0 - 2017-09-24
+
+###
+
+* Added withdrawOffer to Inventory service.
+
 ## 13.0.3 - 2017-09-07
 
 ## Fixes
