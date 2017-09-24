@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+###
+
+* Added withdrawOffer to Inventory service.
+
+## 13.0.3 - 2017-09-07
+
 ## Fixes
 
 - It appears that PostOrder\Types\UploadFileRequest::data may be a string and not an array as
