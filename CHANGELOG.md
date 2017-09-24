@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 13.1.0 - 2017-09-24
 
 ###
 
