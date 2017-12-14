@@ -12,27 +12,13 @@ namespace DTS\eBaySDK\Inventory\Types;
 
 /**
  *
- * @property string $listingId
- * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $warnings
  */
-class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
+class PublishOfferByInventoryItemGroupRestRequest extends \DTS\eBaySDK\Inventory\Types\PublishByInventoryItemGroupRequest
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'listingId' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'listingId'
-        ],
-        'warnings' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'warnings'
-        ]
     ];
 
     /**

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Features
+
+* Support Inventory API version 1.5.0.
+
 ## 13.1.0 - 2017-09-24
 
 ###
