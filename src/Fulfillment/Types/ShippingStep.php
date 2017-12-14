@@ -15,6 +15,7 @@ namespace DTS\eBaySDK\Fulfillment\Types;
  * @property string $shippingCarrierCode
  * @property string $shippingServiceCode
  * @property \DTS\eBaySDK\Fulfillment\Types\Contact $shipTo
+ * @property string $shipToReferenceId
  */
 class ShippingStep extends \DTS\eBaySDK\Types\BaseType
 {
@@ -39,6 +40,12 @@ class ShippingStep extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shipTo'
+        ],
+        'shipToReferenceId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'shipToReferenceId'
         ]
     ];
 
