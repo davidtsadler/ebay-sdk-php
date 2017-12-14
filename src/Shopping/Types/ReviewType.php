@@ -12,12 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $URL
- * @property string $Title
- * @property integer $Rating
- * @property string $Text
- * @property string $UserID
- * @property \DateTime $CreationTime
  */
 class ReviewType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,42 +19,6 @@ class ReviewType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'URL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ],
-        'Title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ],
-        'Rating' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Rating'
-        ],
-        'Text' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Text'
-        ],
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ],
-        'CreationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
-        ]
     ];
 
     /**

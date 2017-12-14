@@ -12,17 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property integer $ReviewCount
- * @property integer $BuyingGuideCount
- * @property integer $ReviewerRank
- * @property integer $TotalHelpfulnessVotes
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
- * @property string $ReviewsAndGuidesURL
- * @property integer $PageNumber
- * @property integer $TotalPages
- * @property \DTS\eBaySDK\Shopping\Types\BuyingGuideDetailsType $BuyingGuideDetails
- * @property \DTS\eBaySDK\Shopping\Types\ReviewDetailsType $ReviewDetails
- * @property integer $PositiveHelpfulnessVotes
  */
 class FindReviewsAndGuidesResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -30,72 +19,6 @@ class FindReviewsAndGuidesResponseType extends \DTS\eBaySDK\Shopping\Types\Abstr
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ReviewCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewCount'
-        ],
-        'BuyingGuideCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingGuideCount'
-        ],
-        'ReviewerRank' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewerRank'
-        ],
-        'TotalHelpfulnessVotes' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalHelpfulnessVotes'
-        ],
-        'ProductID' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ],
-        'ReviewsAndGuidesURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewsAndGuidesURL'
-        ],
-        'PageNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ],
-        'TotalPages' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalPages'
-        ],
-        'BuyingGuideDetails' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\BuyingGuideDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingGuideDetails'
-        ],
-        'ReviewDetails' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ReviewDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewDetails'
-        ],
-        'PositiveHelpfulnessVotes' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PositiveHelpfulnessVotes'
-        ]
     ];
 
     /**

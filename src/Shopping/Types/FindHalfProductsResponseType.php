@@ -12,13 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\DomainHistogramType $DomainHistogram
- * @property integer $PageNumber
- * @property integer $ApproximatePages
- * @property boolean $MoreResults
- * @property integer $TotalProducts
- * @property \DTS\eBaySDK\Shopping\Types\HalfProductsType[] $Products
- * @property string $ProductSearchURL
  */
 class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractResponseType
 {
@@ -26,48 +19,6 @@ class FindHalfProductsResponseType extends \DTS\eBaySDK\Shopping\Types\AbstractR
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'DomainHistogram' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\DomainHistogramType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DomainHistogram'
-        ],
-        'PageNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ],
-        'ApproximatePages' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ApproximatePages'
-        ],
-        'MoreResults' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MoreResults'
-        ],
-        'TotalProducts' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalProducts'
-        ],
-        'Products' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\HalfProductsType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Products'
-        ],
-        'ProductSearchURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductSearchURL'
-        ]
     ];
 
     /**
