@@ -14,7 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $Name
  * @property integer $ItemCount
- * @property integer $FavoriteSearcheCount
  * @property integer $FavoriteSellerCount
  * @property \DTS\eBaySDK\Trading\Types\ItemArrayType $ItemArray
  * @property \DTS\eBaySDK\Trading\Types\MyeBayFavoriteSearchListType $FavoriteSearches
@@ -37,12 +36,6 @@ class UserDefinedListType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCount'
-        ],
-        'FavoriteSearcheCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FavoriteSearcheCount'
         ],
         'FavoriteSellerCount' => [
             'type' => 'integer',

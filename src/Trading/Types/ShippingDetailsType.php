@@ -27,9 +27,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $SellingManagerSalesRecordNumber
  * @property \DTS\eBaySDK\Trading\Types\TaxTableType $TaxTable
  * @property string $ShippingServiceUsed
- * @property \DTS\eBaySDK\Trading\Types\AmountType $DefaultShippingCost
- * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InsuranceDetails
- * @property \DTS\eBaySDK\Trading\Types\InsuranceDetailsType $InternationalInsuranceDetails
  * @property string $ShippingDiscountProfileID
  * @property \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType $FlatShippingDiscount
  * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
@@ -140,24 +137,6 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceUsed'
-        ],
-        'DefaultShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DefaultShippingCost'
-        ],
-        'InsuranceDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceDetails'
-        ],
-        'InternationalInsuranceDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InsuranceDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalInsuranceDetails'
         ],
         'ShippingDiscountProfileID' => [
             'type' => 'string',

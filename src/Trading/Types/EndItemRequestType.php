@@ -14,7 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Enums\EndReasonCodeType $EndingReason
- * @property string $SellerInventoryID
  */
 class EndItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -33,12 +32,6 @@ class EndItemRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndingReason'
-        ],
-        'SellerInventoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInventoryID'
         ]
     ];
 

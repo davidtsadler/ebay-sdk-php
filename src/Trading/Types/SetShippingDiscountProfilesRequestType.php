@@ -19,8 +19,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType $CalculatedShippingDiscount
  * @property \DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType $CalculatedHandlingDiscount
  * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
- * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $ShippingInsurance
- * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $InternationalShippingInsurance
  */
 class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
 {
@@ -69,18 +67,6 @@ class SetShippingDiscountProfilesRequestType extends \DTS\eBaySDK\Trading\Types\
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
-        ],
-        'ShippingInsurance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsurance'
-        ],
-        'InternationalShippingInsurance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingInsurance'
         ]
     ];
 

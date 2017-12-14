@@ -40,12 +40,8 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\FeedbackInfoType $FeedbackReceived
  * @property \DTS\eBaySDK\Trading\Types\OrderType $ContainingOrder
  * @property \DTS\eBaySDK\Trading\Types\AmountType $FinalValueFee
- * @property \DTS\eBaySDK\Trading\Types\ListingCheckoutRedirectPreferenceType $ListingCheckoutRedirectPreference
- * @property \DTS\eBaySDK\Trading\Types\RefundArrayType $RefundArray
  * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $TransactionSiteID
  * @property \DTS\eBaySDK\Trading\Enums\TransactionPlatformCodeType $Platform
- * @property string $CartID
- * @property boolean $SellerContactBuyerByEmail
  * @property string $PayPalEmailAddress
  * @property string $PaisaPayID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $BuyerGuaranteePrice
@@ -255,18 +251,6 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FinalValueFee'
         ],
-        'ListingCheckoutRedirectPreference' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingCheckoutRedirectPreferenceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ListingCheckoutRedirectPreference'
-        ],
-        'RefundArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RefundArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundArray'
-        ],
         'TransactionSiteID' => [
             'type' => 'string',
             'repeatable' => false,
@@ -278,18 +262,6 @@ class TransactionType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Platform'
-        ],
-        'CartID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CartID'
-        ],
-        'SellerContactBuyerByEmail' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerContactBuyerByEmail'
         ],
         'PayPalEmailAddress' => [
             'type' => 'string',

@@ -12,9 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ValueLiteral
- * @property string[] $SuggestedValueLiteral
- * @property integer $ValueID
  */
 class ValType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -22,24 +19,6 @@ class ValType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ValueLiteral' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ValueLiteral'
-        ],
-        'SuggestedValueLiteral' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SuggestedValueLiteral'
-        ],
-        'ValueID' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ValueID'
-        ]
     ];
 
     /**

@@ -10,20 +10,20 @@
 
 namespace DTS\eBaySDK\Test\Trading\Types;
 
-use DTS\eBaySDK\Trading\Types\ExternalProductIDType;
+use DTS\eBaySDK\Trading\Types\MembershipDetailType;
 
-class ExternalProductIDTypeTest extends \PHPUnit_Framework_TestCase
+class MembershipDetailTypeTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new ExternalProductIDType();
+        $this->obj = new MembershipDetailType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ExternalProductIDType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\MembershipDetailType', $this->obj);
     }
 
     public function testExtendsBaseType()

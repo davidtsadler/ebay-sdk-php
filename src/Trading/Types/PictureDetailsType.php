@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $GalleryURL
  * @property \DTS\eBaySDK\Trading\Enums\GalleryTypeCodeType $GalleryType
  * @property \DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType $PhotoDisplay
  * @property string[] $PictureURL
@@ -29,12 +28,6 @@ class PictureDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'GalleryURL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GalleryURL'
-        ],
         'GalleryType' => [
             'type' => 'string',
             'repeatable' => false,

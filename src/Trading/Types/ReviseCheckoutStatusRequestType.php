@@ -20,11 +20,9 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $CheckoutStatus
  * @property string $ShippingService
  * @property boolean $ShippingIncludedInTax
- * @property \DTS\eBaySDK\Trading\Enums\InsuranceSelectedCodeType $InsuranceType
  * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
  * @property \DTS\eBaySDK\Trading\Types\AmountType $AdjustmentAmount
  * @property string $BuyerID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingInsuranceCost
  * @property \DTS\eBaySDK\Trading\Types\AmountType $SalesTax
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingCost
  * @property string $EncryptedID
@@ -87,12 +85,6 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'attribute' => false,
             'elementName' => 'ShippingIncludedInTax'
         ],
-        'InsuranceType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InsuranceType'
-        ],
         'PaymentStatus' => [
             'type' => 'string',
             'repeatable' => false,
@@ -110,12 +102,6 @@ class ReviseCheckoutStatusRequestType extends \DTS\eBaySDK\Trading\Types\Abstrac
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerID'
-        ],
-        'ShippingInsuranceCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsuranceCost'
         ],
         'SalesTax' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',

@@ -16,7 +16,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $ActiveList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SoldList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $UnsoldList
- * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $BidList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromSoldList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $DeletedFromUnsoldList
  * @property \DTS\eBaySDK\Trading\Types\ItemListCustomizationType $SellingSummary
@@ -51,12 +50,6 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnsoldList'
-        ],
-        'BidList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BidList'
         ],
         'DeletedFromSoldList' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',

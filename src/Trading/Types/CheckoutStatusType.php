@@ -17,7 +17,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType $PaymentMethod
  * @property \DTS\eBaySDK\Trading\Enums\CompleteStatusCodeType $Status
  * @property boolean $IntegratedMerchantCreditCardEnabled
- * @property \DTS\eBaySDK\Trading\Types\EBayPaymentMismatchDetailsType $eBayPaymentMismatchDetails
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentInstrumentCodeType $PaymentInstrument
  */
 class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
@@ -55,12 +54,6 @@ class CheckoutStatusType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
-        ],
-        'eBayPaymentMismatchDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\EBayPaymentMismatchDetailsType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'eBayPaymentMismatchDetails'
         ],
         'PaymentInstrument' => [
             'type' => 'string',
