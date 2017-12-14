@@ -12,7 +12,7 @@ namespace DTS\eBaySDK\Shopping\Services;
 
 class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
 {
-    const API_VERSION = '1007';
+    const API_VERSION = '1027';
 
     /**
      * @param array $config Configuration option values.
@@ -20,28 +20,6 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
     public function __construct(array $config = [])
     {
         parent::__construct($config);
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindHalfProductsRequestType $request
-     * @return \DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType
-     */
-    public function findHalfProducts(\DTS\eBaySDK\Shopping\Types\FindHalfProductsRequestType $request)
-    {
-        return $this->findHalfProductsAsync($request)->wait();
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindHalfProductsRequestType $request
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function findHalfProductsAsync(\DTS\eBaySDK\Shopping\Types\FindHalfProductsRequestType $request)
-    {
-        return $this->callOperationAsync(
-            'FindHalfProducts',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType'
-        );
     }
 
     /**
@@ -63,28 +41,6 @@ class ShoppingService extends \DTS\eBaySDK\Shopping\Services\ShoppingBaseService
             'FindProducts',
             $request,
             '\DTS\eBaySDK\Shopping\Types\FindProductsResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesRequestType $request
-     * @return \DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesResponseType
-     */
-    public function findReviewsAndGuides(\DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesRequestType $request)
-    {
-        return $this->findReviewsAndGuidesAsync($request)->wait();
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesRequestType $request
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function findReviewsAndGuidesAsync(\DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesRequestType $request)
-    {
-        return $this->callOperationAsync(
-            'FindReviewsAndGuides',
-            $request,
-            '\DTS\eBaySDK\Shopping\Types\FindReviewsAndGuidesResponseType'
         );
     }
 

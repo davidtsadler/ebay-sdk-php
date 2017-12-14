@@ -12,13 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
- * @property string $UserID
- * @property string $CategoryID
- * @property integer $MaxResultsPerPage
- * @property integer $PageNumber
- * @property \DTS\eBaySDK\Shopping\Enums\ReviewSortCodeType $ReviewSort
- * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
  */
 class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -26,48 +19,6 @@ class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstra
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ProductID' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ],
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ],
-        'CategoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ],
-        'MaxResultsPerPage' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxResultsPerPage'
-        ],
-        'PageNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ],
-        'ReviewSort' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReviewSort'
-        ],
-        'SortOrder' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SortOrder'
-        ]
     ];
 
     /**
@@ -85,10 +36,6 @@ class FindReviewsAndGuidesRequestType extends \DTS\eBaySDK\Shopping\Types\Abstra
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
-        }
-
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'FindReviewsAndGuidesRequest';
         }
 
         $this->setValues(__CLASS__, $childValues);

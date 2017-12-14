@@ -82,7 +82,6 @@ namespace DTS\eBaySDK\Shopping\Types;
  * @property \DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType $ItemCompatibilityList
  * @property integer $QuantitySoldByPickupInStore
  * @property string $SKU
- * @property boolean $NewBestOffer
  * @property boolean $eBayNowEligible
  * @property boolean $eBayNowAvailable
  * @property boolean $IgnoreQuantity
@@ -514,12 +513,6 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SKU'
-        ],
-        'NewBestOffer' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NewBestOffer'
         ],
         'eBayNowEligible' => [
             'type' => 'boolean',

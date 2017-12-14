@@ -12,8 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property double $AverageRating
- * @property \DTS\eBaySDK\Shopping\Types\ReviewType[] $Review
  */
 class ReviewDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,18 +19,6 @@ class ReviewDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'AverageRating' => [
-            'type' => 'double',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AverageRating'
-        ],
-        'Review' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ReviewType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Review'
-        ]
     ];
 
     /**

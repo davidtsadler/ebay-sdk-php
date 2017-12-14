@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Types\HalfCatalogProductType[] $Product
  */
 class HalfProductsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -20,12 +19,6 @@ class HalfProductsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Product' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\HalfCatalogProductType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Product'
-        ]
     ];
 
     /**

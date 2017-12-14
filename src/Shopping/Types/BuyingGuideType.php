@@ -12,13 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $Name
- * @property string $URL
- * @property string $CategoryID
- * @property string $Title
- * @property string $Text
- * @property \DateTime $CreationTime
- * @property string $UserID
  */
 class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -26,48 +19,6 @@ class BuyingGuideType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Name' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Name'
-        ],
-        'URL' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'URL'
-        ],
-        'CategoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CategoryID'
-        ],
-        'Title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ],
-        'Text' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Text'
-        ],
-        'CreationTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CreationTime'
-        ],
-        'UserID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UserID'
-        ]
     ];
 
     /**
