@@ -10,22 +10,28 @@
 
 namespace DTS\eBaySDK\Inventory\Types;
 
+use DTS\eBaySDK\StatusCodeTrait;
+use DTS\eBaySDK\HttpHeadersTrait;
+
 /**
  *
- * @property string $listingId
+ * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $errors
  * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $warnings
  */
-class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
+class PublishOfferByInventoryItemGroupRestResponse extends \DTS\eBaySDK\Inventory\Types\PublishResponse
 {
+    use StatusCodeTrait;
+    use HttpHeadersTrait;
+
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'listingId' => [
-            'type' => 'string',
-            'repeatable' => false,
+        'errors' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'listingId'
+            'elementName' => 'errors'
         ],
         'warnings' => [
             'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
@@ -37,8 +43,10 @@ class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
 
     /**
      * @param array $values Optional properties and values to assign to the object.
+     * @param int $statusCode Status code
+     * @param array $headers HTTP Response headers.
      */
-    public function __construct(array $values = [])
+    public function __construct(array $values = [], $statusCode = 200, array $headers = [])
     {
         list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
 
@@ -49,5 +57,9 @@ class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
         }
 
         $this->setValues(__CLASS__, $childValues);
+
+        $this->statusCode = (int)$statusCode;
+
+        $this->setHeaders($headers);
     }
 }

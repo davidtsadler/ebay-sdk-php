@@ -314,6 +314,13 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
                     'required' => true
                 ]
             ]
+        ],
+        'PublishOfferByInventoryItemGroup' => [
+            'method' => 'POST',
+            'resource' => 'offer/publish_by_inventory_item_group',
+            'responseClass' => '\DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestResponse',
+            'params' => [
+            ]
         ]
     ];
 
@@ -809,5 +816,23 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
     public function getProductCompatibilityAsync(\DTS\eBaySDK\Inventory\Types\GetProductCompatibilityRestRequest $request)
     {
         return $this->callOperationAsync('GetProductCompatibility', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestRequest $request
+     * @return \DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestResponse
+     */
+    public function publishOfferByInventoryItemGroup(\DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestRequest $request)
+    {
+        return $this->publishOfferByInventoryItemGroupAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function publishOfferByInventoryItemGroupAsync(\DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestRequest $request)
+    {
+        return $this->callOperationAsync('PublishOfferByInventoryItemGroup', $request);
     }
 }
