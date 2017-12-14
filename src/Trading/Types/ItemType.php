@@ -13,7 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $ApplicationData
- * @property \DTS\eBaySDK\Trading\Types\AttributeArrayType $AttributeArray
  * @property boolean $AutoPay
  * @property \DTS\eBaySDK\Trading\Types\PaymentDetailsType $PaymentDetails
  * @property \DTS\eBaySDK\Trading\Types\BiddingDetailsType $BiddingDetails
@@ -26,8 +25,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
  * @property string $Description
  * @property \DTS\eBaySDK\Trading\Enums\DescriptionReviseModeCodeType $DescriptionReviseMode
- * @property integer $GiftIcon
- * @property \DTS\eBaySDK\Trading\Enums\GiftServicesCodeType[] $GiftServices
  * @property \DTS\eBaySDK\Trading\Enums\HitCounterCodeType $HitCounter
  * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\ListingDetailsType $ListingDetails
@@ -78,7 +75,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $CategoryBasedAttributesPrefill
  * @property string $PostalCode
  * @property boolean $ShippingTermsInDescription
- * @property string $SellerInventoryID
  * @property \DTS\eBaySDK\Trading\Types\PictureDetailsType $PictureDetails
  * @property integer $DispatchTimeMax
  * @property \DTS\eBaySDK\Trading\Types\AddressType $SellerContactDetails
@@ -142,6 +138,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $eBayPlus
  * @property boolean $eBayPlusEligible
  * @property boolean $eMailDeliveryAvailable
+ * @property boolean $IsSecureDescription
  */
 class ItemType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -154,12 +151,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ApplicationData'
-        ],
-        'AttributeArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AttributeArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AttributeArray'
         ],
         'AutoPay' => [
             'type' => 'boolean',
@@ -232,18 +223,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DescriptionReviseMode'
-        ],
-        'GiftIcon' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'GiftIcon'
-        ],
-        'GiftServices' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'GiftServices'
         ],
         'HitCounter' => [
             'type' => 'string',
@@ -544,12 +523,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingTermsInDescription'
-        ],
-        'SellerInventoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInventoryID'
         ],
         'PictureDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\PictureDetailsType',
@@ -928,6 +901,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'eMailDeliveryAvailable'
+        ],
+        'IsSecureDescription' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'IsSecureDescription'
         ]
     ];
 

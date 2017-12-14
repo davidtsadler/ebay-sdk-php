@@ -39,7 +39,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\PaymentHoldDetailType $PaymentHoldDetails
  * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
  * @property string $RefundStatus
- * @property \DTS\eBaySDK\Trading\Types\RefundArrayType $RefundArray
  * @property boolean $IsMultiLegShipping
  * @property \DTS\eBaySDK\Trading\Types\MultiLegShippingDetailsType $MultiLegShippingDetails
  * @property \DTS\eBaySDK\Trading\Types\PaymentsInformationType $MonetaryDetails
@@ -225,12 +224,6 @@ class OrderType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RefundStatus'
-        ],
-        'RefundArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RefundArrayType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundArray'
         ],
         'IsMultiLegShipping' => [
             'type' => 'boolean',

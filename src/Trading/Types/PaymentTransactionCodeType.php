@@ -12,14 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTransactionStatusCodeType $PaymentStatus
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payer
- * @property \DTS\eBaySDK\Trading\Types\UserIdentityType $Payee
- * @property \DateTime $PaymentTime
- * @property \DTS\eBaySDK\Trading\Types\AmountType $PaymentAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType $ReferenceID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $FeeOrCreditAmount
- * @property \DTS\eBaySDK\Trading\Types\TransactionReferenceType[] $PaymentReferenceID
  */
 class PaymentTransactionCodeType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -27,54 +19,6 @@ class PaymentTransactionCodeType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaymentStatus' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentStatus'
-        ],
-        'Payer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Payer'
-        ],
-        'Payee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserIdentityType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Payee'
-        ],
-        'PaymentTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentTime'
-        ],
-        'PaymentAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentAmount'
-        ],
-        'ReferenceID' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ReferenceID'
-        ],
-        'FeeOrCreditAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FeeOrCreditAmount'
-        ],
-        'PaymentReferenceID' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TransactionReferenceType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'PaymentReferenceID'
-        ]
     ];
 
     /**

@@ -39,7 +39,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountTypeCodeType $PayPalAccountType
  * @property \DTS\eBaySDK\Trading\Enums\PayPalAccountStatusCodeType $PayPalAccountStatus
  * @property \DTS\eBaySDK\Trading\Enums\EBaySubscriptionTypeCodeType[] $UserSubscription
- * @property string[] $SkypeID
  * @property boolean $eBayWikiReadOnly
  * @property integer $TUVLevel
  * @property string $VATID
@@ -52,6 +51,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $QualifiesForSelling
  * @property string $StaticAlias
  * @property \DTS\eBaySDK\Trading\Types\AddressType $ShippingAddress
+ * @property \DTS\eBaySDK\Trading\Types\MembershipDetailsType $Membership
  * @property string $UserFirstName
  * @property string $UserLastName
  */
@@ -223,12 +223,6 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'UserSubscription'
         ],
-        'SkypeID' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SkypeID'
-        ],
         'eBayWikiReadOnly' => [
             'type' => 'boolean',
             'repeatable' => false,
@@ -300,6 +294,12 @@ class UserType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
+        ],
+        'Membership' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MembershipDetailsType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Membership'
         ],
         'UserFirstName' => [
             'type' => 'string',

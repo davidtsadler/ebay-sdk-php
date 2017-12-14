@@ -15,6 +15,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\CountryDetailsType[] $CountryDetails
  * @property \DTS\eBaySDK\Trading\Types\CurrencyDetailsType[] $CurrencyDetails
  * @property \DTS\eBaySDK\Trading\Types\DispatchTimeMaxDetailsType[] $DispatchTimeMaxDetails
+ * @property \DTS\eBaySDK\Trading\Types\PaymentOptionDetailsType[] $PaymentOptionDetails
  * @property \DTS\eBaySDK\Trading\Types\RegionDetailsType[] $RegionDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingLocationDetailsType[] $ShippingLocationDetails
  * @property \DTS\eBaySDK\Trading\Types\ShippingServiceDetailsType[] $ShippingServiceDetails
@@ -60,6 +61,12 @@ class GeteBayDetailsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResp
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DispatchTimeMaxDetails'
+        ],
+        'PaymentOptionDetails' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\PaymentOptionDetailsType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'PaymentOptionDetails'
         ],
         'RegionDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\RegionDetailsType',

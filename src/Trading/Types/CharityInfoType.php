@@ -21,6 +21,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property integer $CharityRegion
  * @property integer[] $CharityDomain
  * @property string $LogoURLSelling
+ * @property boolean $DisplayLogoSelling
  * @property string $Description
  * @property string $ExternalID
  * @property integer $PopularityIndex
@@ -89,6 +90,12 @@ class CharityInfoType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LogoURLSelling'
+        ],
+        'DisplayLogoSelling' => [
+            'type' => 'boolean',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'DisplayLogoSelling'
         ],
         'Description' => [
             'type' => 'string',

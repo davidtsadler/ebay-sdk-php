@@ -12,11 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundFromSeller
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalRefundToBuyer
- * @property \DateTime $RefundTime
- * @property string $RefundID
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundAmount
  */
 class RefundType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -24,36 +19,6 @@ class RefundType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RefundFromSeller' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundFromSeller'
-        ],
-        'TotalRefundToBuyer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalRefundToBuyer'
-        ],
-        'RefundTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundTime'
-        ],
-        'RefundID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundID'
-        ],
-        'RefundAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'RefundAmount'
-        ]
     ];
 
     /**

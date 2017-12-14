@@ -8,6 +8,7 @@
 * Support Fulfillment API version 1.3.0.
 * Support Taxonomy API version v1_beta.1.0.
 * Support Shopping API version 1027.
+* Support Trading API version 1039.
 
 ## 13.1.0 - 2017-09-24
 

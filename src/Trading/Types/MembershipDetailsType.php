@@ -12,26 +12,19 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\AmountType $RefundFromSeller
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TotalRefundToBuyer
+ * @property \DTS\eBaySDK\Trading\Types\MembershipDetailType[] $Program
  */
-class IssueRefundResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
+class MembershipDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'RefundFromSeller' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
+        'Program' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MembershipDetailType',
+            'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'RefundFromSeller'
-        ],
-        'TotalRefundToBuyer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalRefundToBuyer'
+            'elementName' => 'Program'
         ]
     ];
 

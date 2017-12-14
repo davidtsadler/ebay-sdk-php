@@ -12,7 +12,7 @@ namespace DTS\eBaySDK\Trading\Services;
 
 class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
 {
-    const API_VERSION = '1019';
+    const API_VERSION = '1039';
 
     /**
      * @param array $config Configuration option values.
@@ -1475,28 +1475,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
     }
 
     /**
-     * @param \DTS\eBaySDK\Trading\Types\GetSellerPaymentsRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\GetSellerPaymentsResponseType
-     */
-    public function getSellerPayments(\DTS\eBaySDK\Trading\Types\GetSellerPaymentsRequestType $request)
-    {
-        return $this->getSellerPaymentsAsync($request)->wait();
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\GetSellerPaymentsRequestType $request
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getSellerPaymentsAsync(\DTS\eBaySDK\Trading\Types\GetSellerPaymentsRequestType $request)
-    {
-        return $this->callOperationAsync(
-            'GetSellerPayments',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\GetSellerPaymentsResponseType'
-        );
-    }
-
-    /**
      * @param \DTS\eBaySDK\Trading\Types\GetSellerTransactionsRequestType $request
      * @return \DTS\eBaySDK\Trading\Types\GetSellerTransactionsResponseType
      */
@@ -2109,28 +2087,6 @@ class TradingService extends \DTS\eBaySDK\Trading\Services\TradingBaseService
             'GeteBayOfficialTime',
             $request,
             '\DTS\eBaySDK\Trading\Types\GeteBayOfficialTimeResponseType'
-        );
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\IssueRefundRequestType $request
-     * @return \DTS\eBaySDK\Trading\Types\IssueRefundResponseType
-     */
-    public function issueRefund(\DTS\eBaySDK\Trading\Types\IssueRefundRequestType $request)
-    {
-        return $this->issueRefundAsync($request)->wait();
-    }
-
-    /**
-     * @param \DTS\eBaySDK\Trading\Types\IssueRefundRequestType $request
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function issueRefundAsync(\DTS\eBaySDK\Trading\Types\IssueRefundRequestType $request)
-    {
-        return $this->callOperationAsync(
-            'IssueRefund',
-            $request,
-            '\DTS\eBaySDK\Trading\Types\IssueRefundResponseType'
         );
     }
 
