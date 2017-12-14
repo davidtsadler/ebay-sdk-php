@@ -6,6 +6,7 @@
 
 * Support Inventory API version 1.5.0.
 * Support Fulfillment API version 1.3.0.
+* Support Taxonomy API version v1_beta.1.0.
 
 ## 13.1.0 - 2017-09-24
 

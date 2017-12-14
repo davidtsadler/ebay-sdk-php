@@ -69,6 +69,21 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
                     'required' => true
                 ]
             ]
+        ],
+        'GetItemAspectsForCategory' => [
+            'method' => 'GET',
+            'resource' => 'category_tree/{category_tree_id}/get_item_aspects_for_category',
+            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse',
+            'params' => [
+                'category_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ],
+                'category_tree_id' => [
+                    'valid' => ['string'],
+                    'required' => true
+                ]
+            ]
         ]
     ];
 
@@ -150,5 +165,23 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
     public function getSuggestedCategoriesAsync(\DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestRequest $request)
     {
         return $this->callOperationAsync('GetSuggestedCategories', $request);
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestRequest $request
+     * @return \DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse
+     */
+    public function getItemAspectsForCategory(\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestRequest $request)
+    {
+        return $this->getItemAspectsForCategoryAsync($request)->wait();
+    }
+
+    /**
+     * @param \DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestRequest $request
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getItemAspectsForCategoryAsync(\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestRequest $request)
+    {
+        return $this->callOperationAsync('GetItemAspectsForCategory', $request);
     }
 }
