@@ -5,6 +5,7 @@
 ### Features
 
 * Support Inventory API version 1.5.0.
+* Support Fulfillment API version 1.3.0.
 
 ## 13.1.0 - 2017-09-24
 
