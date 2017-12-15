@@ -185,6 +185,7 @@ User tokens
 ~~~~~~~~~~~
 
 Generating a user token requires your application to redirect a user to eBay where they will grant permission. The redirect url can be created via the ``redirectUrlForUser`` method.
+( If you retrieve your code direcly from the browser please make sure to use ``urldecode`` when passing the code. )
 
 .. code-block:: php
 
