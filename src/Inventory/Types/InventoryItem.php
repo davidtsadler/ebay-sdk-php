@@ -18,6 +18,7 @@ namespace DTS\eBaySDK\Inventory\Types;
  * @property \DTS\eBaySDK\Inventory\Types\PackageWeightAndSize $packageWeightAndSize
  * @property \DTS\eBaySDK\Inventory\Types\Product $product
  * @property string $sku
+ * @property string[] $groupIds
  */
 class InventoryItem extends \DTS\eBaySDK\Types\BaseType
 {
@@ -60,6 +61,12 @@ class InventoryItem extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sku'
+        ],
+        'groupIds' => [
+            'type' => 'string',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'groupIds'
         ]
     ];
 

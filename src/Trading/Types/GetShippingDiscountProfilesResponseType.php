@@ -18,8 +18,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $PromotionalShippingDiscount
  * @property \DTS\eBaySDK\Trading\Types\CalculatedHandlingDiscountType $CalculatedHandlingDiscount
  * @property \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType $PromotionalShippingDiscountDetails
- * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $ShippingInsurance
- * @property \DTS\eBaySDK\Trading\Types\ShippingInsuranceType $InternationalShippingInsurance
  * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedDuration
  */
 class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
@@ -63,18 +61,6 @@ class GetShippingDiscountProfilesResponseType extends \DTS\eBaySDK\Trading\Types
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
-        ],
-        'ShippingInsurance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingInsurance'
-        ],
-        'InternationalShippingInsurance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingInsuranceType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'InternationalShippingInsurance'
         ],
         'CombinedDuration' => [
             'type' => 'string',

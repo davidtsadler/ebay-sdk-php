@@ -13,11 +13,8 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property \DTS\eBaySDK\Trading\Types\MyMessagesFolderSummaryType[] $FolderSummary
- * @property integer $NewAlertCount
  * @property integer $NewMessageCount
- * @property integer $UnresolvedAlertCount
  * @property integer $FlaggedMessageCount
- * @property integer $TotalAlertCount
  * @property integer $TotalMessageCount
  * @property integer $NewHighPriorityCount
  * @property integer $TotalHighPriorityCount
@@ -34,35 +31,17 @@ class MyMessagesSummaryType extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'FolderSummary'
         ],
-        'NewAlertCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'NewAlertCount'
-        ],
         'NewMessageCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NewMessageCount'
         ],
-        'UnresolvedAlertCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UnresolvedAlertCount'
-        ],
         'FlaggedMessageCount' => [
             'type' => 'integer',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlaggedMessageCount'
-        ],
-        'TotalAlertCount' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TotalAlertCount'
         ],
         'TotalMessageCount' => [
             'type' => 'integer',

@@ -12,8 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\BuyingGuideType[] $BuyingGuide
- * @property string $BuyingGuideHub
  */
 class BuyingGuideDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -21,18 +19,6 @@ class BuyingGuideDetailsType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'BuyingGuide' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyingGuideType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'BuyingGuide'
-        ],
-        'BuyingGuideHub' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'BuyingGuideHub'
-        ]
     ];
 
     /**

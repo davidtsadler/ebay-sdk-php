@@ -155,7 +155,7 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
      * Even though the documentation says that GalleryURL is not a member of PictureDetailsType
      * it is been returned in the API for various calls. E.g GetItem and GetMyeBaySelling.
      */
-    public function testGaleryURL()
+    public function testGalleryURL()
     {
         $obj = new Sdk\Trading\Types\PictureDetailsType();
 
@@ -175,5 +175,24 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->data = '';
 
         $this->assertInternalType('string', $obj->data);
+    }
+
+    /**
+     * Even though the documentation does not say this exists
+     * someone did raise it as an issue and you can pass it via the explorer.
+     *
+     * https://github.com/davidtsadler/ebay-sdk-php/issues/154
+     */
+    public function testVerifyOnly()
+    {
+        $obj = new Sdk\Trading\Types\ReviseFixedPriceItemRequestType();
+
+        $obj->VerifyOnly = true;
+        $this->assertInternalType('boolean', $obj->VerifyOnly);
+
+        $obj = new Sdk\Trading\Types\ReviseFixedPriceItemResponseType();
+
+        $obj->VerifyOnly = true;
+        $this->assertInternalType('boolean', $obj->VerifyOnly);
     }
 }

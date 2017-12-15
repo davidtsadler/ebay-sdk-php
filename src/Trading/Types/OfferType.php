@@ -14,7 +14,6 @@ namespace DTS\eBaySDK\Trading\Types;
  *
  * @property \DTS\eBaySDK\Trading\Enums\BidActionCodeType $Action
  * @property \DTS\eBaySDK\Trading\Enums\CurrencyCodeType $Currency
- * @property string $ItemID
  * @property \DTS\eBaySDK\Trading\Types\AmountType $MaxBid
  * @property integer $Quantity
  * @property boolean $SecondChanceEnabled
@@ -22,7 +21,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DateTime $TimeBid
  * @property \DTS\eBaySDK\Trading\Types\AmountType $HighestBid
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ConvertedPrice
- * @property string $TransactionID
  * @property \DTS\eBaySDK\Trading\Types\UserType $User
  * @property boolean $UserConsent
  * @property string $Message
@@ -46,12 +44,6 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Currency'
-        ],
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
         ],
         'MaxBid' => [
             'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
@@ -94,12 +86,6 @@ class OfferType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConvertedPrice'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
         ],
         'User' => [
             'type' => 'DTS\eBaySDK\Trading\Types\UserType',

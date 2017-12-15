@@ -15,7 +15,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ListingDurationReferenceType[] $ListingDuration
  * @property boolean $ShippingTermsRequired
  * @property boolean $BestOfferEnabled
- * @property boolean $DutchBINEnabled
  * @property boolean $UserConsentRequired
  * @property boolean $HomePageFeaturedEnabled
  * @property boolean $ProPackEnabled
@@ -164,12 +163,6 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferEnabled'
-        ],
-        'DutchBINEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'DutchBINEnabled'
         ],
         'UserConsentRequired' => [
             'type' => 'boolean',

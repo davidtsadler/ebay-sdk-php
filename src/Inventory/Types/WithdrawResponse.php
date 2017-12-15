@@ -13,6 +13,7 @@ namespace DTS\eBaySDK\Inventory\Types;
 /**
  *
  * @property string $listingId
+ * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $warnings
  */
 class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
 {
@@ -25,6 +26,12 @@ class WithdrawResponse extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listingId'
+        ],
+        'warnings' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'warnings'
         ]
     ];
 

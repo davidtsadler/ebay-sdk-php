@@ -12,19 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ItemID
- * @property string $TransactionID
- * @property string $OrderID
- * @property string $SellerInventoryID
- * @property string $PrivateNotes
- * @property string $Title
- * @property \DTS\eBaySDK\Trading\Enums\PaymentTypeCodeType $PaymentType
- * @property \DTS\eBaySDK\Trading\Types\AmountType $TransactionPrice
- * @property \DTS\eBaySDK\Trading\Types\AmountType $ShippingReimbursement
- * @property \DTS\eBaySDK\Trading\Types\AmountType $Commission
- * @property \DTS\eBaySDK\Trading\Types\AmountType $AmountPaid
- * @property \DateTime $PaidTime
- * @property string $OrderLineItemID
  */
 class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -32,84 +19,6 @@ class SellerPaymentType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ItemID'
-        ],
-        'TransactionID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionID'
-        ],
-        'OrderID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderID'
-        ],
-        'SellerInventoryID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerInventoryID'
-        ],
-        'PrivateNotes' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PrivateNotes'
-        ],
-        'Title' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Title'
-        ],
-        'PaymentType' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentType'
-        ],
-        'TransactionPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'TransactionPrice'
-        ],
-        'ShippingReimbursement' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ShippingReimbursement'
-        ],
-        'Commission' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Commission'
-        ],
-        'AmountPaid' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AmountPaid'
-        ],
-        'PaidTime' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaidTime'
-        ],
-        'OrderLineItemID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'OrderLineItemID'
-        ]
     ];
 
     /**

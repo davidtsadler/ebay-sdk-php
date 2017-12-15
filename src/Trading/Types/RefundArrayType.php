@@ -12,7 +12,6 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\RefundType[] $Refund
  */
 class RefundArrayType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -20,12 +19,6 @@ class RefundArrayType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'Refund' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RefundType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'Refund'
-        ]
     ];
 
     /**

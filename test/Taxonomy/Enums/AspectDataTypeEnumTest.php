@@ -8,21 +8,21 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Test\Trading\Enums;
+namespace DTS\eBaySDK\Test\Taxonomy\Enums;
 
-use DTS\eBaySDK\Trading\Enums\GiftServicesCodeType;
+use DTS\eBaySDK\Taxonomy\Enums\AspectDataTypeEnum;
 
-class GiftServicesCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AspectDataTypeEnumTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new GiftServicesCodeType();
+        $this->obj = new AspectDataTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\GiftServicesCodeType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Enums\AspectDataTypeEnum', $this->obj);
     }
 }

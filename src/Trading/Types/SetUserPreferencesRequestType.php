@@ -21,7 +21,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $RequiredShipPhoneNumberPreference
  * @property \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType $UnpaidItemAssistancePreferences
  * @property \DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType $PurchaseReminderEmailPreferences
- * @property boolean $SellerThirdPartyCheckoutDisabled
  * @property \DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType $DispatchCutoffTimePreference
  * @property boolean $GlobalShippingProgramListingPreference
  * @property boolean $OverrideGSPserviceWithIntlService
@@ -86,12 +85,6 @@ class SetUserPreferencesRequestType extends \DTS\eBaySDK\Trading\Types\AbstractR
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PurchaseReminderEmailPreferences'
-        ],
-        'SellerThirdPartyCheckoutDisabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerThirdPartyCheckoutDisabled'
         ],
         'DispatchCutoffTimePreference' => [
             'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',

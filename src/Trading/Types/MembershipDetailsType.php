@@ -12,13 +12,20 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Trading\Types\MembershipDetailType[] $Program
  */
-class ExternalProductIDType extends \DTS\eBaySDK\Types\BaseType
+class MembershipDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'Program' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\MembershipDetailType',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'Program'
+        ]
     ];
 
     /**

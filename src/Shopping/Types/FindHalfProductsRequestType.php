@@ -12,16 +12,6 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
- * @property string $IncludeSelector
- * @property boolean $AvailableItemsOnly
- * @property string[] $DomainName
- * @property \DTS\eBaySDK\Shopping\Types\ProductIDType $ProductID
- * @property string $QueryKeywords
- * @property string $SellerID
- * @property \DTS\eBaySDK\Shopping\Enums\ProductSortCodeType $ProductSort
- * @property \DTS\eBaySDK\Shopping\Enums\SortOrderCodeType $SortOrder
- * @property integer $MaxEntries
- * @property integer $PageNumber
  */
 class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRequestType
 {
@@ -29,66 +19,6 @@ class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'IncludeSelector' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'IncludeSelector'
-        ],
-        'AvailableItemsOnly' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'AvailableItemsOnly'
-        ],
-        'DomainName' => [
-            'type' => 'string',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'DomainName'
-        ],
-        'ProductID' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductID'
-        ],
-        'QueryKeywords' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'QueryKeywords'
-        ],
-        'SellerID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SellerID'
-        ],
-        'ProductSort' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductSort'
-        ],
-        'SortOrder' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SortOrder'
-        ],
-        'MaxEntries' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'MaxEntries'
-        ],
-        'PageNumber' => [
-            'type' => 'integer',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PageNumber'
-        ]
     ];
 
     /**
@@ -106,10 +36,6 @@ class FindHalfProductsRequestType extends \DTS\eBaySDK\Shopping\Types\AbstractRe
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
-        }
-
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'FindHalfProductsRequest';
         }
 
         $this->setValues(__CLASS__, $childValues);

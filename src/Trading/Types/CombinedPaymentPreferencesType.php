@@ -12,10 +12,7 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType $CalculatedShippingPreferences
  * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentOptionCodeType $CombinedPaymentOption
- * @property \DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType $CombinedPaymentPeriod
- * @property \DTS\eBaySDK\Trading\Types\FlatShippingPreferencesType $FlatShippingPreferences
  */
 class CombinedPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -23,29 +20,11 @@ class CombinedPaymentPreferencesType extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'CalculatedShippingPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CalculatedShippingPreferences'
-        ],
         'CombinedPaymentOption' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentOption'
-        ],
-        'CombinedPaymentPeriod' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'CombinedPaymentPeriod'
-        ],
-        'FlatShippingPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingPreferencesType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'FlatShippingPreferences'
         ]
     ];
 

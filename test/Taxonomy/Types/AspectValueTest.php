@@ -8,22 +8,22 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Test\Trading\Types;
+namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
-use DTS\eBaySDK\Trading\Types\ExternalProductIDType;
+use DTS\eBaySDK\Taxonomy\Types\AspectValue;
 
-class ExternalProductIDTypeTest extends \PHPUnit_Framework_TestCase
+class AspectValueTest extends \PHPUnit_Framework_TestCase
 {
     private $obj;
 
     protected function setUp()
     {
-        $this->obj = new ExternalProductIDType();
+        $this->obj = new AspectValue();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ExternalProductIDType', $this->obj);
+        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\AspectValue', $this->obj);
     }
 
     public function testExtendsBaseType()

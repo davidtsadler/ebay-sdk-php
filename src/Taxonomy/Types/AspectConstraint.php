@@ -8,58 +8,58 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Trading\Types;
+namespace DTS\eBaySDK\Taxonomy\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Types\PaginationResultType $PaginationResult
- * @property boolean $HasMorePayments
- * @property \DTS\eBaySDK\Trading\Types\SellerPaymentType[] $SellerPayment
- * @property integer $PaymentsPerPage
- * @property integer $PageNumber
- * @property integer $ReturnedPaymentCountActual
+ * @property string $aspectDataType
+ * @property boolean $aspectEnabledForVariations
+ * @property string $aspectFormat
+ * @property string $aspectMode
+ * @property boolean $aspectRequired
+ * @property string $itemToAspectCardinality
  */
-class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractResponseType
+class AspectConstraint extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+        'aspectDataType' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaginationResult'
+            'elementName' => 'aspectDataType'
         ],
-        'HasMorePayments' => [
+        'aspectEnabledForVariations' => [
             'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'HasMorePayments'
+            'elementName' => 'aspectEnabledForVariations'
         ],
-        'SellerPayment' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'SellerPayment'
-        ],
-        'PaymentsPerPage' => [
-            'type' => 'integer',
+        'aspectFormat' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentsPerPage'
+            'elementName' => 'aspectFormat'
         ],
-        'PageNumber' => [
-            'type' => 'integer',
+        'aspectMode' => [
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PageNumber'
+            'elementName' => 'aspectMode'
         ],
-        'ReturnedPaymentCountActual' => [
-            'type' => 'integer',
+        'aspectRequired' => [
+            'type' => 'boolean',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'ReturnedPaymentCountActual'
+            'elementName' => 'aspectRequired'
+        ],
+        'itemToAspectCardinality' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'itemToAspectCardinality'
         ]
     ];
 
@@ -74,10 +74,6 @@ class GetSellerPaymentsResponseType extends \DTS\eBaySDK\Trading\Types\AbstractR
 
         if (!array_key_exists(__CLASS__, self::$properties)) {
             self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
-        }
-
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         $this->setValues(__CLASS__, $childValues);

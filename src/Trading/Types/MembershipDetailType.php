@@ -12,40 +12,33 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType $PaymentStatus
- * @property \DateTime $PaymentTimeFrom
- * @property \DateTime $PaymentTimeTo
- * @property \DTS\eBaySDK\Trading\Types\PaginationType $Pagination
+ * @property string $ProgramName
+ * @property \DTS\eBaySDK\Trading\Enums\SiteCodeType $Site
+ * @property \DateTime $ExpiryDate
  */
-class GetSellerPaymentsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestType
+class MembershipDetailType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'PaymentStatus' => [
+        'ProgramName' => [
             'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentStatus'
+            'elementName' => 'ProgramName'
         ],
-        'PaymentTimeFrom' => [
+        'Site' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Site'
+        ],
+        'ExpiryDate' => [
             'type' => 'DateTime',
             'repeatable' => false,
             'attribute' => false,
-            'elementName' => 'PaymentTimeFrom'
-        ],
-        'PaymentTimeTo' => [
-            'type' => 'DateTime',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PaymentTimeTo'
-        ],
-        'Pagination' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationType',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'Pagination'
+            'elementName' => 'ExpiryDate'
         ]
     ];
 
@@ -64,10 +57,6 @@ class GetSellerPaymentsRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRe
 
         if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
             self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
-        }
-
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'GetSellerPaymentsRequest';
         }
 
         $this->setValues(__CLASS__, $childValues);
