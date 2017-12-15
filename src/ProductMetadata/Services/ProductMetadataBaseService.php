@@ -31,7 +31,7 @@ class ProductMetadataBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     public function __construct(array $config)
     {
-        parent::__construct('https://svcs.ebay.com/services/marketplacecatalog/ProductMetadataService/v1', 'https://svcs.sandbox.ebay.com/services/marketplacecatalog/ProductService/v1', $config);
+        parent::__construct('https://svcs.ebay.com/services/marketplacecatalog/ProductMetadataService/v1', 'https://svcs.sandbox.ebay.com/services/marketplacecatalog/ProductMetadataService/v1', $config);
     }
 
     /**
