@@ -71,7 +71,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             'ruName'      => 'baz',
             'sandbox'     => true
         ]);
-        $url = 'https://signin.sandbox.ebay.com/authorize?client_id=foo&redirect_uri=baz&response_type=code&state=111&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account%20https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory';
+        $url = 'https://auth.sandbox.ebay.com/oauth2/authorize?client_id=foo&redirect_uri=baz&response_type=code&state=111&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account%20https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory';
 
         $this->assertEquals($url, $s->redirectUrlForUser([
             'state'  => '111',
@@ -92,7 +92,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
             ],
             'ruName'      => 'baz'
         ]);
-        $url = 'https://signin.ebay.com/authorize?client_id=foo&redirect_uri=baz&response_type=code&state=111&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account%20https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory';
+        $url = 'https://auth.ebay.com/oauth2/authorize?client_id=foo&redirect_uri=baz&response_type=code&state=111&scope=https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.account%20https%3A%2F%2Fapi.ebay.com%2Foauth%2Fapi_scope%2Fsell.inventory';
 
         $this->assertEquals($url, $s->redirectUrlForUser([
             'state'  => '111',
