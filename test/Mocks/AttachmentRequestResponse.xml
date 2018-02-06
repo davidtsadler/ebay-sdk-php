@@ -1,6 +1,7 @@
 --MIME_boundary
 Content-Type: application/xop+xml;charset=UTF-8;type="text/xml"
 Content-Transfer-Encoding: 8bit
+Content-Disposition: form-data; name="XML Payload"
 Content-ID: <request.xml@devbay.net>
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -9,6 +10,7 @@ Content-ID: <request.xml@devbay.net>
 <double>123.45</double></root>
 --MIME_boundary
 Content-Type: image/jpeg
+Content-Disposition: form-data; name="dummy"; filename="dummy"
 Content-Transfer-Encoding: binary
 Content-ID: <attachment.bin@devbay.net>
 
