@@ -218,10 +218,11 @@ abstract class BaseService
     private function buildXopDocument(\DTS\eBaySDK\Types\BaseType $request)
     {
         return sprintf(
-            '%s%s%s%s%s',
+            '%s%s%s%s%s%s',
             '--MIME_boundary'.self::CRLF,
             'Content-Type: application/xop+xml;charset=UTF-8;type="text/xml"'.self::CRLF,
             'Content-Transfer-Encoding: 8bit'.self::CRLF,
+            'Content-Disposition: form-data; name="XML Payload"' . self::CRLF,
             'Content-ID: <request.xml@devbay.net>'.self::CRLF.self::CRLF,
             $request->toRequestXml().self::CRLF
         );
@@ -237,9 +238,10 @@ abstract class BaseService
     private function buildAttachmentBody(array $attachment)
     {
         return sprintf(
-            '%s%s%s%s%s%s',
+            '%s%s%s%s%s%s%s',
             '--MIME_boundary'.self::CRLF,
             'Content-Type: '.$attachment['mimeType'].self::CRLF,
+            'Content-Disposition: form-data; name="dummy"; filename="dummy"'.self::CRLF,
             'Content-Transfer-Encoding: binary'.self::CRLF,
             'Content-ID: <attachment.bin@devbay.net>'.self::CRLF.self::CRLF,
             $attachment['data'].self::CRLF,
