@@ -1,6 +1,8 @@
 <?php
 namespace DTS\eBaySDK\Trading\Services;
 
+use DTS\eBaySDK\Trading\Types;
+
 /**
  * Base class for the Trading service.
  */
@@ -154,6 +156,29 @@ class TradingBaseService extends \DTS\eBaySDK\Services\BaseService
             $headers[self::HDR_AUTHORIZATION] = $this->getConfig('authorization');
         }
 
+        /**
+         * Note that we have no way of detecting that the actual request has an attachment.
+         */
+        if ($operationName === 'UploadSiteHostedPictures') {
+            $headers['Content-Type'] = 'multipart/form-data;boundary="boundary"';
+        }
+
         return $headers;
+    }
+
+    /**
+     * Builds the request body string.
+     *
+     * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
+     *
+     * @return string The request body.
+     */
+    protected function buildRequestBody(\DTS\eBaySDK\Types\BaseType $request)
+    {
+        if ($request->hasAttachment() && $request instanceof Types\UploadSiteHostedPicturesRequestType) {
+            return $this->buildMultipartFormDataXMLPayload($request).$this->buildMultipartFormDataFilePayload($request->PictureName, $request->attachment());
+        } else {
+            return parent::buildRequestBody($request);
+        }
     }
 }
