@@ -199,7 +199,7 @@ abstract class BaseService
      *
      * @return string The request body.
      */
-    private function buildRequestBody(\DTS\eBaySDK\Types\BaseType $request)
+    protected function buildRequestBody(\DTS\eBaySDK\Types\BaseType $request)
     {
         if (!$request->hasAttachment()) {
             return $request->toRequestXml();
@@ -230,7 +230,7 @@ abstract class BaseService
     /**
      * Builds the attachment part of the request body string.
      *
-     * @param array $attachment The attachement
+     * @param array $attachment The attachment
      *
      * @return string The attachment part of request body.
      */
@@ -248,6 +248,44 @@ abstract class BaseService
     }
 
     /**
+     * Builds the XML payload part of a multipart/form-data request body.
+     *
+     * @param \DTS\eBaySDK\Types\BaseType $request Request object containing the request information.
+     *
+     * @return string The XML payload part of a multipart/form-data request body.
+     */
+    protected function buildMultipartFormDataXMLPayload(\DTS\eBaySDK\Types\BaseType $request)
+    {
+        return sprintf(
+            '%s%s%s',
+            '--boundary'.self::CRLF,
+            'Content-Disposition: form-data; name="XML Payload"'.self::CRLF.self::CRLF,
+            $request->toRequestXml().self::CRLF
+        );
+    }
+
+
+    /**
+     * Builds the file part of a multipart/form-data request body.
+     *
+     * @param string $name
+     * @param array $attachment
+     *
+     * @return string The file part of a multipart/form-data request body.
+     */
+    protected function buildMultipartFormDataFilePayload($name, $attachment)
+    {
+        return sprintf(
+            '%s%s%s%s%s',
+            '--boundary'.self::CRLF,
+            'Content-Disposition: form-data; name="'.$name.'"; filename="picture"'.self::CRLF,
+            'Content-Type: '.$attachment['mimeType'].self::CRLF.self::CRLF,
+            $attachment['data'].self::CRLF,
+            '--boundary--'
+        );
+    }
+
+    /**
      * Helper function that builds the HTTP request headers.
      *
      * @param string $name The name of the operation.
@@ -258,7 +296,7 @@ abstract class BaseService
      */
     private function buildRequestHeaders($name, $request, $body)
     {
-        $headers = $this->getEbayHeaders($name);
+        $headers = [];
 
         if ($request->hasAttachment()) {
             $headers['Content-Type'] = 'multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"';
@@ -272,7 +310,7 @@ abstract class BaseService
 
         $headers['Content-Length'] = strlen($body);
 
-        return $headers;
+        return array_merge($headers, $this->getEbayHeaders($name));
     }
 
     /**
