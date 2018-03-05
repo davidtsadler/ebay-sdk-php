@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 15.0.0 - 2018-03-05
+
+### Fixes
+
+- Use multipart/form-data when uploading pictures via the Trading UploadSiteHostedPictures operation.
+
 ## 14.0.0 - 2017-12-15
 
 ### Features

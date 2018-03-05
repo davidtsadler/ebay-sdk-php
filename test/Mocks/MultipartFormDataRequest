@@ -1,0 +1,11 @@
+--boundary
+Content-Disposition: form-data; name="XML Payload"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<UploadSiteHostedPicturesRequest xmlns="urn:ebay:apis:eBLBaseComponents"><PictureName>Example Picture</PictureName></UploadSiteHostedPicturesRequest>
+--boundary
+Content-Disposition: form-data; name="Example Picture"; filename="picture"
+Content-Type: image/jpeg
+
+ABC123
+--boundary--
