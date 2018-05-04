@@ -115,6 +115,7 @@ class FeatureIDCodeType
     const C_PICKUP_DROP_OFF_ENABLED = 'PickupDropOffEnabled';
     const C_PREMIUM_SUBSCRIPTION = 'PremiumSubscription';
     const C_PRODUCT_CREATION_ENABLED = 'ProductCreationEnabled';
+    const C_PRODUCT_REQUIRED_ENABLED = 'ProductRequiredEnabled';
     const C_PRO_PACK = 'ProPack';
     const C_PRO_PACK_PLUS = 'ProPackPlus';
     const C_REGULAR_SUBSCRIPTION = 'RegularSubscription';
