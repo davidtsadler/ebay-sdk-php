@@ -112,6 +112,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ConditionValuesType $ConditionValues
  * @property boolean $ValueCategory
  * @property \DTS\eBaySDK\Trading\Enums\ProductCreationEnabledCodeType $ProductCreationEnabled
+ * @property \DTS\eBaySDK\Trading\Enums\ProductRequiredCodeType $ProductRequiredEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $EANEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $ISBNEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType $UPCEnabled
@@ -736,6 +737,12 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductCreationEnabled'
+        ],
+        'ProductRequiredEnabled' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductRequiredEnabled'
         ],
         'EANEnabled' => [
             'type' => 'string',
