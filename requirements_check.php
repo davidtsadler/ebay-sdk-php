@@ -97,7 +97,7 @@ class RequirementsCheck
         if (PHP_INT_MAX === 9223372036854775807) {
             $this->pass('You are running a 64-bit version of PHP');
         } else {
-            $this->fail('You are not running a 64-bit version of PHP. You may run into issues with integer values been to long for object properties.');
+            $this->fail('You are not running a 64-bit version of PHP. You may run into issues when handling object properties and assigning values to integers that are greater than the largest possible 32 bit integer value');
         }
     }
 
