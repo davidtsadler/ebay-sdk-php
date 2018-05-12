@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 16.0.0 - 2018-05-12
 
 ### Features
 
