@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 16.0.0 - 2018-05-12
+
+### Features
+
+* Support Trading API version 1057.
+* Add WatchCountDecreaseSort ENUM value for Finding API.
+
 ## 15.0.0 - 2018-03-05
 
 ### Fixes

@@ -13,7 +13,6 @@ namespace DTS\eBaySDK\Trading\Types;
 /**
  *
  * @property string $CategoryID
- * @property \DTS\eBaySDK\Trading\Types\ProductIdentifiersType[] $ProductIdentifiers
  * @property \DTS\eBaySDK\Trading\Types\NameRecommendationType[] $NameRecommendation
  * @property boolean $Updated
  */
@@ -28,12 +27,6 @@ class RecommendationsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CategoryID'
-        ],
-        'ProductIdentifiers' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductIdentifiersType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'ProductIdentifiers'
         ],
         'NameRecommendation' => [
             'type' => 'DTS\eBaySDK\Trading\Types\NameRecommendationType',

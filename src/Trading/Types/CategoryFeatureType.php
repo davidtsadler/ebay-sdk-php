@@ -31,8 +31,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property double $MinimumReservePrice
  * @property boolean $SellerContactDetailsEnabled
  * @property boolean $TransactionConfirmationRequestEnabled
- * @property boolean $SkypeMeTransactionalEnabled
- * @property boolean $SkypeMeNonTransactionalEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ClassifiedAdPaymentMethodEnabledCodeType $ClassifiedAdPaymentMethodEnabled
  * @property boolean $ClassifiedAdShippingMethodEnabled
  * @property \DTS\eBaySDK\Trading\Enums\ClassifiedAdBestOfferEnabledCodeType $ClassifiedAdBestOfferEnabled
@@ -130,6 +128,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $DigitalGoodDeliveryEnabled
  * @property boolean $EpidSupported
  * @property boolean $KTypeSupported
+ * @property \DTS\eBaySDK\Trading\Enums\ProductRequiredEnabledCodeType $ProductRequiredEnabled
  */
 class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -250,18 +249,6 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TransactionConfirmationRequestEnabled'
-        ],
-        'SkypeMeTransactionalEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SkypeMeTransactionalEnabled'
-        ],
-        'SkypeMeNonTransactionalEnabled' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'SkypeMeNonTransactionalEnabled'
         ],
         'ClassifiedAdPaymentMethodEnabled' => [
             'type' => 'string',
@@ -844,6 +831,12 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'KTypeSupported'
+        ],
+        'ProductRequiredEnabled' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductRequiredEnabled'
         ]
     ];
 

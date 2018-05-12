@@ -139,6 +139,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property boolean $DigitalGoodDeliveryEnabled
  * @property boolean $EpidSupported
  * @property boolean $KTypeSupported
+ * @property \DTS\eBaySDK\Trading\Enums\ProductRequiredEnabledCodeType $ProductRequiredEnabled
  */
 class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -907,6 +908,12 @@ class SiteDefaultsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'KTypeSupported'
+        ],
+        'ProductRequiredEnabled' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductRequiredEnabled'
         ]
     ];
 

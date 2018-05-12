@@ -12,41 +12,13 @@ namespace DTS\eBaySDK\Trading\Types;
 
 /**
  *
- * @property string $ISBN
- * @property string $UPC
- * @property string $EAN
- * @property string $ProductReferenceID
  */
-class VariationProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
+class ProductRequiredEnabledDefinitionType extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'ISBN' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ISBN'
-        ],
-        'UPC' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'UPC'
-        ],
-        'EAN' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'EAN'
-        ],
-        'ProductReferenceID' => [
-            'type' => 'string',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'ProductReferenceID'
-        ]
     ];
 
     /**

@@ -37,7 +37,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Enums\BuyerPaymentMethodCodeType[] $PaymentMethods
  * @property string $PayPalEmailAddress
  * @property \DTS\eBaySDK\Trading\Types\CategoryType $PrimaryCategory
- * @property boolean $PrivateListing
  * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
  * @property integer $Quantity
  * @property string $PrivateNotes
@@ -295,12 +294,6 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategory'
-        ],
-        'PrivateListing' => [
-            'type' => 'boolean',
-            'repeatable' => false,
-            'attribute' => false,
-            'elementName' => 'PrivateListing'
         ],
         'ProductListingDetails' => [
             'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
