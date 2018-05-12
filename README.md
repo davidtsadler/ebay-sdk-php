@@ -16,7 +16,7 @@ This is a personal project that has been developed by me, [David T. Sadler](http
 
   - [User Guides](http://devbay.net/sdk/guides/) - Getting started guide and in-depth information.
   - [Examples](https://github.com/davidtsadler/ebay-sdk-examples) - Several examples of using the SDK.
-  - [Forum](https://forum.devbay.net/c/php-sdk) - Join for support with the SDK.
+  - [Google Group](https://groups.google.com/forum/#!forum/ebay-sdk-php) - Join for support with the SDK.
   - [@devbaydotnet](https://twitter.com/devbaydotnet) - Follow on Twitter for announcements of releases, important changes and so on.
 
 ## Requirements
