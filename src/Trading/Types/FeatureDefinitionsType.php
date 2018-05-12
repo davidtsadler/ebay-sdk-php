@@ -132,6 +132,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\DigitalGoodDeliveryEnabledDefinitionType $DigitalGoodDeliveryEnabled
  * @property \DTS\eBaySDK\Trading\Types\EpidSupportedDefinitionType $EpidSupported
  * @property \DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType $KTypeSupported
+ * @property \DTS\eBaySDK\Trading\Types\ProductRequiredEnabledDefinitionType $ProductRequiredEnabled
  */
 class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -858,6 +859,12 @@ class FeatureDefinitionsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'KTypeSupported'
+        ],
+        'ProductRequiredEnabled' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\ProductRequiredEnabledDefinitionType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'ProductRequiredEnabled'
         ]
     ];
 

@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Features
+
+* Support Trading API version 1057.
+
+## 15.0.0 - 2018-03-05
+
 ### Fixes
 
 - Use multipart/form-data when uploading pictures via the Trading UploadSiteHostedPictures operation.

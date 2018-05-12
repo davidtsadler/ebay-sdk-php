@@ -25,7 +25,6 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\TicketListingDetailsType $TicketListingDetails
  * @property boolean $UseFirstProduct
  * @property boolean $IncludeeBayProductDetails
- * @property \DTS\eBaySDK\Trading\Types\NameValueListType[] $NameValueList
  */
 class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
 {
@@ -110,12 +109,6 @@ class ProductListingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IncludeeBayProductDetails'
-        ],
-        'NameValueList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListType',
-            'repeatable' => true,
-            'attribute' => false,
-            'elementName' => 'NameValueList'
         ]
     ];
 
