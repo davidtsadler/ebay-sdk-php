@@ -177,8 +177,8 @@ class OAuthService
         }
 
         $url = $this->getConfig('sandbox')
-            ? 'https://signin.sandbox.ebay.com/authorize?'
-            : 'https://signin.ebay.com/authorize?';
+            ? 'https://auth.sandbox.ebay.com/oauth2/authorize?'
+            : 'https://auth.ebay.com/oauth2/authorize?';
 
         $urlParams = [
             'client_id'     => $this->getConfig('credentials')->getAppId(),
