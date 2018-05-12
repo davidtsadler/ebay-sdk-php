@@ -23,4 +23,5 @@ class SortOrderType
     const C_PRICE_PLUS_SHIPPING_HIGHEST = 'PricePlusShippingHighest';
     const C_PRICE_PLUS_SHIPPING_LOWEST = 'PricePlusShippingLowest';
     const C_START_TIME_NEWEST = 'StartTimeNewest';
+    const C_WATCH_COUNT_DECREASE_SORT = 'WatchCountDecreaseSort';
 }
