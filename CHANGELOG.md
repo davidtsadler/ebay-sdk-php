@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Features
+
+* Support Catalog API version v1_beta.2.0.
+
 ## 16.0.0 - 2018-05-12
 
 ### Features
