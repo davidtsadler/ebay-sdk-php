@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Unreleased
+
+### Features
+
+* Support Compliance API version v1.1.0
+
 ## 17.0.0 - 2018-06-12
 
 ### Features
