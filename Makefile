@@ -103,6 +103,10 @@ sync_catalog:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Catalog/src/Catalog/ src/Catalog/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Catalog/test/Catalog/ test/Catalog/
 
+sync_compliance:
+	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Compliance/src/Compliance/ src/Compliance/
+	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Compliance/test/Compliance/ test/Compliance/
+
 sync_feed:
 	rsync -rtvu --delete --exclude *BaseService.php ../ebay-api-sdk-php/dist/Feed/src/Feed/ src/Feed/
 	rsync -rtvu --delete --exclude /Mocks/ --exclude /Services/ ../ebay-api-sdk-php/dist/Feed/test/Feed/ test/Feed/
@@ -195,6 +199,7 @@ sync_all: sync_account		\
 	  sync_bulk		\
 	  sync_bus		\
 	  sync_catalog		\
+	  sync_compliance	\
 	  sync_feedback		\
 	  sync_file		\
 	  sync_finding		\
