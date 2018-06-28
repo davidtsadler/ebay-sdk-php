@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 18.0.0 - 2018-06-28
+
+### Features
+
+* Support Compliance API version v1.1.0
+
+### Fixes
+
+* Ensure type attribute exist for ProductID.
+
 ## 17.0.0 - 2018-06-12
 
 ### Features

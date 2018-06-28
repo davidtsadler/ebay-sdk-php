@@ -8,23 +8,23 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Shopping\Types;
+namespace DTS\eBaySDK\Compliance\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Enums\ProductIDCodeType $type
+ * @property \DTS\eBaySDK\Compliance\Types\ProductRecommendation $productRecommendation
  */
-class ProductIDType extends \DTS\eBaySDK\Types\StringType
+class CorrectiveRecommendations extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'type' => [
-            'type' => 'string',
+        'productRecommendation' => [
+            'type' => 'DTS\eBaySDK\Compliance\Types\ProductRecommendation',
             'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'type'
+            'attribute' => false,
+            'elementName' => 'productRecommendation'
         ]
     ];
 
@@ -39,10 +39,6 @@ class ProductIDType extends \DTS\eBaySDK\Types\StringType
 
         if (!array_key_exists(__CLASS__, self::$properties)) {
             self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
-        }
-
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         $this->setValues(__CLASS__, $childValues);

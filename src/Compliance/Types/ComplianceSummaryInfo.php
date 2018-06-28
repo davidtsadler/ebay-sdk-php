@@ -8,23 +8,37 @@
  * is updated. You've been warned!
  */
 
-namespace DTS\eBaySDK\Shopping\Types;
+namespace DTS\eBaySDK\Compliance\Types;
 
 /**
  *
- * @property \DTS\eBaySDK\Shopping\Enums\ProductIDCodeType $type
+ * @property \DTS\eBaySDK\Compliance\Enums\ComplianceTypeEnum $complianceType
+ * @property \DTS\eBaySDK\Compliance\Enums\MarketplaceIdEnum $marketplaceId
+ * @property integer $listingCount
  */
-class ProductIDType extends \DTS\eBaySDK\Types\StringType
+class ComplianceSummaryInfo extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'type' => [
+        'complianceType' => [
             'type' => 'string',
             'repeatable' => false,
-            'attribute' => true,
-            'attributeName' => 'type'
+            'attribute' => false,
+            'elementName' => 'complianceType'
+        ],
+        'marketplaceId' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'marketplaceId'
+        ],
+        'listingCount' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'listingCount'
         ]
     ];
 
@@ -39,10 +53,6 @@ class ProductIDType extends \DTS\eBaySDK\Types\StringType
 
         if (!array_key_exists(__CLASS__, self::$properties)) {
             self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
-        }
-
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
         $this->setValues(__CLASS__, $childValues);
