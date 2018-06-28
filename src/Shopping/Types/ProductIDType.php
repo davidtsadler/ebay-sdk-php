@@ -12,6 +12,7 @@ namespace DTS\eBaySDK\Shopping\Types;
 
 /**
  *
+ * @property \DTS\eBaySDK\Shopping\Enums\ProductIDCodeType $type
  */
 class ProductIDType extends \DTS\eBaySDK\Types\StringType
 {
@@ -19,6 +20,12 @@ class ProductIDType extends \DTS\eBaySDK\Types\StringType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'type' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => true,
+            'attributeName' => 'type'
+        ]
     ];
 
     /**

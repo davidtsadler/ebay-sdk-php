@@ -195,4 +195,20 @@ class PropertyFixesTest extends \PHPUnit_Framework_TestCase
         $obj->VerifyOnly = true;
         $this->assertInternalType('boolean', $obj->VerifyOnly);
     }
+
+
+    /**
+     * Code generation is not including this attribute
+     * as the WSDL contains NoCalls.
+     * In future we won't be using the WSDLs so this will
+     * be less of an issue.
+     */
+    public function testProductIDTypeAttribute()
+    {
+        $obj = new Sdk\Shopping\Types\ProductIDType();
+
+        $obj->type = '';
+
+        $this->assertInternalType('string', $obj->type);
+    }
 }
