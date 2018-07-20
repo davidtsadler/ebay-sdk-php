@@ -490,7 +490,7 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
         'CreateReportTask' => [
             'method' => 'POST',
             'resource' => 'ad_report_task',
-            'responseClass' => '\DTS\eBaySDK\Marketing\Types\CreateReportTasktRestResponse',
+            'responseClass' => '\DTS\eBaySDK\Marketing\Types\CreateReportTaskRestResponse',
             'params' => [
             ]
         ],
@@ -1233,7 +1233,7 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
 
     /**
      * @param \DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request
-     * @return \DTS\eBaySDK\Marketing\Types\CreateReportTasktRestResponse
+     * @return \DTS\eBaySDK\Marketing\Types\CreateReportTaskRestResponse
      */
     public function createReportTask(\DTS\eBaySDK\Marketing\Types\CreateReportTaskRestRequest $request)
     {
