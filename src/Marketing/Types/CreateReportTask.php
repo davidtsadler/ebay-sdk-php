@@ -18,7 +18,7 @@ namespace DTS\eBaySDK\Marketing\Types;
  * @property \DTS\eBaySDK\Marketing\Types\Dimension[] $dimensions
  * @property \DTS\eBaySDK\Marketing\Types\InventoryReference[] $inventoryReferences
  * @property string[] $listingIds
- * @property \DTS\eBaySDK\Marketing\Types\Bas:MarketplaceIdEnum $marketplaceId
+ * @property string $marketplaceId
  * @property string[] $metricKeys
  * @property \DTS\eBaySDK\Marketing\Enums\ReportFormatEnum $reportFormat
  * @property \DTS\eBaySDK\Marketing\Enums\ReportTypeEnum $reportType
@@ -66,7 +66,7 @@ class CreateReportTask extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'listingIds'
         ],
         'marketplaceId' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Bas:MarketplaceIdEnum',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'marketplaceId'
