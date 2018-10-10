@@ -35,6 +35,12 @@ class Contact extends \DTS\eBaySDK\Types\BaseType
             'attribute' => false,
             'elementName' => 'contactAddress'
         ],
+        'email' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'email'
+        ],
         'fullName' => [
             'type' => 'string',
             'repeatable' => false,
