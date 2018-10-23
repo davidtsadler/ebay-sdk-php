@@ -1,8 +1,5 @@
 {
-    "name": "dts/ebay-sdk-php",
-    "description": "An eBay SDK for PHP. Use the eBay API in your PHP projects.",
-    "keywords": ["ebay", "api", "sdk"],
-    "homepage": "http://devbay.net/",
+    "name": "godscreature/ebay-sdk-php",
     "type": "library",
     "license": "(Apache-2.0 and MIT)",
     "authors": [
