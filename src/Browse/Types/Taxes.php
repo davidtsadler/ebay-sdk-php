@@ -49,7 +49,7 @@ class Taxes extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'taxPercentage'
         ],
         'taxType' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\TaxType',
+            'type' => 'string',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'taxType'
