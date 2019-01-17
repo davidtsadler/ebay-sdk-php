@@ -31,7 +31,7 @@ class MarketingService extends \DTS\eBaySDK\Marketing\Services\MarketingBaseServ
         ],
         'BulkCreateAdsByListingID' => [
             'method' => 'POST',
-            'resource' => 'campaign/{campaign_id}/bulk_create_ads_by_listing_id',
+            'resource' => 'ad_campaign/{campaign_id}/bulk_create_ads_by_listing_id',
             'responseClass' => '\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByListingIDRestResponse',
             'params' => [
                 'campaign_id' => [
