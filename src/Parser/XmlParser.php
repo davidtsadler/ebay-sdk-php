@@ -212,7 +212,7 @@ class XmlParser
                 case 'double':
                 case 'boolean':
                 case 'DateTime':
-                    continue;
+                    break;
                 default:
                     return $meta->phpType !== '' ? new $phpType() : null;
             }
