@@ -258,7 +258,7 @@ class XmlParser
                 case 'double':
                 case 'boolean':
                 case 'DateTime':
-                    continue;
+                    continue 2;
                 default:
                     return false;
             }
