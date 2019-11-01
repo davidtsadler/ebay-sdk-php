@@ -88,7 +88,13 @@ class ItemPromotion extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'startDate'
-        ]
+        ],
+        'promotionType' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'promotionType'
+        ]    
     ];
 
     /**
