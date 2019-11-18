@@ -42,7 +42,7 @@ class ItemPromotion extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'discountRules'
         ],
         'endDate' => [
-            'type' => 'string',
+            'type' => 'any',
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'endDate'
