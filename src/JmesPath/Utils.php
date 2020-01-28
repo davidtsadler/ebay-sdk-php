@@ -270,6 +270,6 @@ class Utils
             }
         }
 
-        return $type == 'string' ? implode($result, '') : $result;
+        return $type == 'string' ? implode('', $result) : $result;
     }
 }
