@@ -27,7 +27,7 @@ This is a personal project that has been developed by me, [David T. Sadler](http
 
 ## Installation
 
-The SDK can be installed with [Composer](http://getcomposer.org/). Please see the [Installation section of the User Guide](http://devbay.net/sdk/guides/getting-started/installation.html) to learn about installing through other means.
+The SDK can be installed with [Composer](http://getcomposer.org/). Please see the [Installation section of the User Guide](https://github.com/davidtsadler/ebay-sdk-php/wiki/Installation) to learn about installing through other means.
 
   1. Install Composer.
 
