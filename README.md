@@ -4,7 +4,7 @@
 
 This project enables PHP developers to use the [eBay API](https://go.developer.ebay.com/api-documentation) in their PHP code, and build software using services such as [Finding](http://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html), [Trading](http://developer.ebay.com/DevZone/guides/ebayfeatures/index.html), [Shopping](http://developer.ebay.com/Devzone/shopping/docs/Concepts/ShoppingAPIGuide.html), etc. You can get started by [installing the SDK via Composer](http://devbay.net/sdk/guides/getting-started/installation.html) and by following the [Basic Usage Guide](http://devbay.net/sdk/guides/getting-started/basic-usage.html).
 
-This is a personal project that has been developed by me, [David T. Sadler](http://twitter.com/davidtsadler). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
+This is a personal project that has been developed by me, [David T. Sadler](https://davidtsadler.com). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
 
 ## Features
 
@@ -14,11 +14,9 @@ This is a personal project that has been developed by me, [David T. Sadler](http
 
 ## Resources
 
-  - [User Guides](http://devbay.net/sdk/guides/) - Getting started guide and in-depth information.
+  - [User Guides](https://github.com/davidtsadler/ebay-sdk-php/wiki) - Getting started guide and in-depth information.
   - [Examples](https://github.com/davidtsadler/ebay-sdk-examples) - Several examples of using the SDK.
-  - [Google Group](https://groups.google.com/forum/#!forum/ebay-sdk-php) - Join for support with the SDK.
-  - [@devbaydotnet](https://twitter.com/devbaydotnet) - Follow on Twitter for announcements of releases, important changes and so on.
-
+ 
 ## Requirements
 
   - PHP 5.5 or greater with the following extensions:
@@ -73,13 +71,6 @@ $response = $service->geteBayTime($request);
 // Output the result of calling the service operation.
 printf("The official eBay time is: %s\n", $response->Timestamp->format('H:i (\G\M\T) \o\n l jS Y'));
 ```
-
-## Project Goals
-
-  - Be well maintained.
-  - Be [well documented](http://devbay.net/sdk/guides/).
-  - Be [well tested](https://github.com/davidtsadler/ebay-sdk-php/tree/master/test).
-  - Be well supported with [working examples](https://github.com/davidtsadler/ebay-sdk-examples).
 
 ## License
 
